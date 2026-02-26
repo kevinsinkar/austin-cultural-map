@@ -5,7 +5,7 @@ export default function AboutModal({ onClose }) {
         position: "fixed",
         inset: 0,
         background: "rgba(0,0,0,.45)",
-        zIndex: 100,
+        zIndex: 1100,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

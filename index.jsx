@@ -11,6 +11,9 @@ import {
   SOCIOECONOMIC,
   TIPPING_POINTS,
 } from "./data";
+
+// load markdown for agenda parsing
+import issuesText from "./ISSUES.md?raw";
 import { PLAY_YEARS } from "./data/constants";
 
 // Utils
@@ -19,6 +22,7 @@ import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
 // Components
 import Header from "./components/Header";
 import AboutModal from "./components/AboutModal";
+import AgendaModal from "./components/AgendaModal";
 import MapView from "./components/MapView";
 import ComparisonView from "./components/ComparisonView";
 import TimelineView from "./components/TimelineView";
@@ -40,6 +44,7 @@ export default function AustinCulturalMap() {
   const [compA, setCompA] = useState("East 11th/12th Street Corridor");
   const [compB, setCompB] = useState("Holly / Rainey Street");
   const [showAbout, setShowAbout] = useState(false);
+  const [showAgenda, setShowAgenda] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
   const [isMobile, setIsMobile] = useState(false);
   const [activeRegionId, setActiveRegionId] = useState(null);
@@ -125,6 +130,28 @@ export default function AustinCulturalMap() {
     [activeRegionName]
   );
 
+  // Agenda parsing
+  const agendaItems = useMemo(() => {
+    const lines = issuesText.split("\n");
+    const start = lines.findIndex((l) => l.startsWith("| Priority"));
+    if (start < 0) return [];
+    const items = [];
+    for (let i = start + 2; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line || !line.startsWith("|")) break;
+      const cols = line
+        .split("|")
+        .map((c) => c.trim())
+        .filter(Boolean);
+      if (cols.length >= 3) {
+        items.push(`${cols[0]} ${cols[1]} – ${cols[2]}`);
+      }
+    }
+    return items;
+  }, []);
+
+  const lastUpdate = useMemo(() => new Date().toLocaleString(), []);
+
   // Narrative callouts
   const narrativeCallouts = useMemo(() => {
     if (!activeRegionName) return [];
@@ -189,11 +216,20 @@ export default function AustinCulturalMap() {
         viewMode={viewMode}
         setViewMode={setViewMode}
         setShowAbout={setShowAbout}
+        setShowAgenda={setShowAgenda}
         isMobile={isMobile}
       />
 
       {/* About Modal */}
       {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
+      {/* Agenda Modal */}
+      {showAgenda && (
+        <AgendaModal
+          items={agendaItems}
+          lastUpdate={lastUpdate}
+          onClose={() => setShowAgenda(false)}
+        />
+      )}
 
       {/* Main Content */}
       <main id="main-content" style={{ maxWidth: 1400, margin: "0 auto", padding: isMobile ? "12px 16px 40px" : "16px 28px 40px" }}>
@@ -256,6 +292,9 @@ export default function AustinCulturalMap() {
       <footer style={{ borderTop: "1px solid #e8e5e0", padding: "16px 28px", textAlign: "center" }} role="contentinfo">
         <p style={{ fontSize: 11, color: "#a8a49c", margin: 0, lineHeight: 1.5 }}>
           Austin Cultural Displacement Map · Data compiled February 2026 · Sources: U.S. Census, ACS, TCAD, City of Austin, UT "Uprooted," community inventories
+        </p>
+        <p style={{ fontSize: 10, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
+          Last update: {lastUpdate}
         </p>
       </footer>
     </div>

@@ -1,4 +1,4 @@
-export default function Header({ viewMode, setViewMode, setShowAbout, isMobile }) {
+export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda, isMobile }) {
   return (
     <header
       style={{ borderBottom: "1px solid #d6d3cd", padding: isMobile ? "14px 16px" : "20px 28px 16px" }}
@@ -59,6 +59,23 @@ export default function Header({ viewMode, setViewMode, setShowAbout, isMobile }
                 </button>
               ))}
             </nav>
+            <button
+              onClick={() => setShowAgenda(true)}
+              style={{
+                padding: "5px 10px",
+                borderRadius: 6,
+                border: "1px solid #d6d3cd",
+                background: "#fffffe",
+                color: "#64615b",
+                fontSize: 11,
+                fontWeight: 500,
+                cursor: "pointer",
+                minHeight: 32,
+              }}
+              aria-label="View agenda"
+            >
+              Agenda
+            </button>
             <button
               onClick={() => setShowAbout(true)}
               style={{
