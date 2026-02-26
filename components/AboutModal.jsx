@@ -63,6 +63,28 @@ export default function AboutModal({ onClose }) {
             judgment. Higher values indicate faster change in the measured period.
           </p>
           <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
+            Policy Context
+          </h3>
+          <p style={{ margin: "0 0 4px" }}>
+            Austin's displacement patterns are rooted in the <strong>1928 Master Plan</strong>, which
+            institutionalized racial segregation by creating a designated district in East Austin. The
+            construction of I-35 in the 1960s reinforced this divide as a "concrete color line."
+          </p>
+          <p style={{ margin: "0 0 4px" }}>
+            The <strong>Smart Growth Initiative (1997)</strong> directed development toward East Austin
+            through $100M+ in bonds and density bonuses, inadvertently engineering "eco-gentrification"
+            that displaced low-income minority families. <strong>Chapter 380 megadeals</strong> with
+            Apple ($282.5M), Samsung ($17B), and others attracted a high-salaried tech workforce the
+            housing supply could not accommodate.
+          </p>
+          <p style={{ margin: "0 0 16px" }}>
+            Recent countermeasures include the <strong>HOME Initiative (2023–24)</strong> allowing 3-unit
+            infill housing, the <strong>Agent of Change principle (2024)</strong> requiring new
+            developments to soundproof near music venues, and the <strong>Cultural District Framework
+            (2024)</strong> enabling tax-increment financing and the Souly Austin program for legacy
+            business preservation.
+          </p>
+          <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
             Data Confidence
           </h3>
           <p style={{ margin: "0 0 4px" }}>
@@ -83,8 +105,10 @@ export default function AboutModal({ onClose }) {
           <p style={{ margin: "0 0 4px" }}>
             U.S. Census Bureau (decennial census, ACS) · Travis Central Appraisal District · City of
             Austin Neighborhood Housing & Community Development · UT Austin "Uprooted" gentrification
-            study · Six Square AACHD Cultural Plan · Community business inventories compiled February
-            2026.
+            study · Six Square AACHD Cultural Plan · Austin Legacy Business Closure Analysis ·
+            Policy-Driven Transformation of Austin (1990–2025) · Preservation Austin Legacy Business
+            Month · Chapter 380 Economic Development Agreements · HOME Amendments (AustinTexas.gov) ·
+            Community business inventories compiled February 2026.
           </p>
           <p
             style={{ margin: "16px 0 0", fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}

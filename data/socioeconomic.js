@@ -1,4 +1,8 @@
 // Socioeconomic (1B)
+// Sources: ACS, Travis Central Appraisal District, City of Austin NHCD
+// Note: Mueller area (78723 zip) median household income tripled $34,242→$87,000+ (2000-2023)
+// per "Uprooted" study and Austin Free Press reporting — reflected in Rosewood/College Heights data.
+// Texas NNN lease structure means tenants pay property taxes at "highest and best use" valuations.
 export const SOCIOECONOMIC = [
   { region:"East 11th/12th Street Corridor", year:2000, incomeAdj:39700, homeValue:72000, pctBachelors:.10, pctCostBurdened:.48, confidence:"High" },
   { region:"East 11th/12th Street Corridor", year:2010, incomeAdj:49500, homeValue:220000, pctBachelors:.28, pctCostBurdened:.50, confidence:"High" },

@@ -6,5 +6,4 @@ export const PROJECT_CONNECT_LINES = [
   { name:"Gold Line", color:"#ca8a04", coords:[[-97.735,30.270],[-97.745,30.270],[-97.755,30.272],[-97.765,30.262],[-97.775,30.255]] },
 ];
 
-
 export const PC_PROXIMITY_REGIONS = [1,2,3,4,5,7,9,10,11,12,13,15];

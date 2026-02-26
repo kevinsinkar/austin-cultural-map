@@ -1,4 +1,8 @@
 // Demographics (1A) — all 75 rows
+// Sources: U.S. Census Bureau decennial census (1990, 2000, 2010, 2020), ACS 5-year estimates (2023)
+// East Austin displacement confirmed by UT "Uprooted" study: 66% decrease in Black population,
+// 33% decrease in Latino population across East Austin 2000-2010.
+// SGI eco-gentrification drove 106% East Austin single-family home price increase 1999-2006.
 export const DEMOGRAPHICS = [
   { region:"East 11th/12th Street Corridor", year:1990, total:8200, pctWhite:.12, pctBlack:.58, pctHispanic:.27, pctAsian:.01, pctOther:.02, popBlack:4756, popHispanic:2214, popWhite:984 },
   { region:"East 11th/12th Street Corridor", year:2000, total:7850, pctWhite:.15, pctBlack:.50, pctHispanic:.30, pctAsian:.02, pctOther:.03, popBlack:3925, popHispanic:2355, popWhite:1178 },

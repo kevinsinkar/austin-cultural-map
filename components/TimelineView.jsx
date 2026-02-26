@@ -12,21 +12,32 @@ import { catColor } from "../utils/formatters";
 export default function TimelineView({ tlFilter, setTlFilter }) {
   // Infrastructure & Policy Timeline
   const timelineInfra = useMemo(() => [
+    { year: 1928, label: "1928 Master Plan institutionalizes segregation", cat: "policy" },
+    { year: 1991, label: "'Live Music Capital of the World' resolution adopted", cat: "cultural" },
     { year: 1996, label: "Victory Grill restored", cat: "cultural" },
+    { year: 1997, label: "Smart Growth Initiative launched (Mayor Watson)", cat: "policy" },
     { year: 1999, label: "SoCo tourism boom begins", cat: "economic" },
     { year: 2000, label: "SMART Housing Policy adopted", cat: "policy" },
+    { year: 2000, label: "'Keep Austin Weird' movement begins", cat: "cultural" },
     { year: 2004, label: "Rainey Street rezoned to CBD", cat: "policy" },
     { year: 2005, label: "Mueller redevelopment begins", cat: "development" },
     { year: 2007, label: "The Domain Phase 1 opens", cat: "development" },
     { year: 2010, label: "Oracle campus announced", cat: "economic" },
+    { year: 2012, label: "Apple $282.5M Chapter 380 deal", cat: "economic" },
     { year: 2012, label: "East Austin development boom", cat: "development" },
     { year: 2014, label: "CodeNEXT process begins", cat: "policy" },
     { year: 2015, label: "Jumpolin piñata store demolished", cat: "displacement" },
     { year: 2016, label: "Apple campus announced", cat: "economic" },
     { year: 2018, label: "Six Square AACHD plan adopted", cat: "policy" },
+    { year: 2018, label: "CodeNEXT scrapped after 6 years", cat: "policy" },
+    { year: 2019, label: "Homelessness camping decriminalized", cat: "policy" },
     { year: 2020, label: "Project Connect approved", cat: "transit" },
+    { year: 2021, label: "Prop B re-criminalizes public camping", cat: "policy" },
     { year: 2021, label: "Tesla Gigafactory opens", cat: "economic" },
+    { year: 2023, label: "HOME Phase 1: 3-unit allowance passed", cat: "policy" },
     { year: 2023, label: "Convention Center expansion approved", cat: "development" },
+    { year: 2024, label: "Agent of Change principle adopted for music venues", cat: "cultural" },
+    { year: 2024, label: "Cultural District Framework Policy enacted", cat: "policy" },
     { year: 2025, label: "Govalle Cultural District est.", cat: "cultural" },
   ], []);
 
@@ -69,12 +80,12 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
           Infrastructure & Policy Timeline
         </h3>
         <div style={{ position: "relative", overflowX: "auto", paddingBottom: 8 }}>
-          <div style={{ display: "flex", minWidth: Math.max(900, timelineInfra.length * 75), position: "relative", height: 120 }}>
+          <div style={{ display: "flex", minWidth: Math.max(1400, timelineInfra.length * 65), position: "relative", height: 120 }}>
             <div style={{ position: "absolute", top: 50, left: 0, right: 0, height: 2, background: "#e8e5e0" }} />
             {timelineInfra
               .filter((e) => tlFilter === "all" || e.cat === tlFilter)
               .map((evt, i) => {
-                const pct = ((evt.year - 1990) / 35) * 100;
+                const pct = ((evt.year - 1925) / 101) * 100;
                 return (
                   <div key={i} style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)", width: 90, textAlign: "center" }} role="listitem">
                     <div style={{ fontSize: 10, fontWeight: 700, color: catColor(evt.cat), marginBottom: 4 }}>{evt.year}</div>
@@ -97,8 +108,8 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
         <p style={{ fontSize: 10, color: "#a8a49c", margin: "0 0 12px" }}>Green = opened · Gray = closed/displaced</p>
         <div style={{ position: "relative", overflowX: "auto", paddingBottom: 8 }}>
           <div style={{ position: "relative", minWidth: 1200, height: Math.max(180, timelineBiz.filter((b) => tlFilter === "all" || (tlFilter === "displacement" && b.action === "closed") || (tlFilter === "cultural" && (b.culture === "African American" || b.culture === "Mexican American/Latino"))).length * 4 + 40) }}>
-            {[1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020].map((yr) => {
-              const pct = ((yr - 1945) / 80) * 100;
+            {[1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020].map((yr) => {
+              const pct = ((yr - 1925) / 101) * 100;
               return (
                 <div key={yr} style={{ position: "absolute", left: `${pct}%`, top: 0, bottom: 0, width: 1, background: "#e8e5e0" }}>
                   <span style={{ position: "absolute", top: -2, left: 4, fontSize: 9, color: "#a8a49c", fontWeight: 600 }}>{yr}</span>
@@ -108,7 +119,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
             {timelineBiz
               .filter((b) => tlFilter === "all" || (tlFilter === "displacement" && b.action === "closed") || (tlFilter === "cultural" && (b.culture === "African American" || b.culture === "Mexican American/Latino")) || (tlFilter === "economic" && b.culture === "General Austin"))
               .map((b, i) => {
-                const x = ((b.year - 1945) / 80) * 100;
+                const x = ((b.year - 1925) / 101) * 100;
                 const isClose = b.action === "closed";
                 return (
                   <div key={`${b.name}-${b.year}-${b.action}-${i}`} style={{ position: "absolute", left: `${x}%`, top: 20 + i * 3.5, display: "flex", alignItems: "center", gap: 4 }} title={`${b.name} ${b.action} ${b.year}${isClose ? ` — ${b.cause}` : ""}`}>
