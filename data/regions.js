@@ -1,3 +1,4 @@
+// FUTURE UPDATE: Include all CoA official boundaries (w/date) and incorporate them into the map
 // Region polygons (from City of Austin official boundaries)
 export const REGIONS_GEOJSON = {
   "type": "FeatureCollection",

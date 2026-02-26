@@ -20,12 +20,13 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
   // Business Timeline
   const timelineBiz = useMemo(() => {
     const items = [];
+    // copy full business info into each event so detail panel can show all keys
     LEGACY_OPERATING.forEach((b) =>
-      items.push({ year: b.est, name: b.name, action: "opened", culture: b.culture, region: b.region })
+      items.push({ year: b.est, action: "opened", ...b })
     );
     LEGACY_CLOSED.forEach((b) => {
-      items.push({ year: b.est, name: b.name, action: "opened", culture: b.culture, region: b.region });
-      items.push({ year: b.closed, name: b.name, action: "closed", culture: b.culture, region: b.region, cause: b.cause, replacedBy: b.replacedBy });
+      items.push({ year: b.est, action: "opened", ...b });
+      items.push({ year: b.closed, action: "closed", cause: b.cause, replacedBy: b.replacedBy, ...b });
     });
     return _.sortBy(items, "year");
   }, []);
@@ -59,7 +60,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
           Infrastructure & Policy Timeline
         </h3>
         <div style={{ position: "relative", overflowX: "auto", paddingBottom: 8 }}>
-          <div style={{ display: "flex", minWidth: Math.max(1400, TIMELINE_INFRA.length * 65), position: "relative", height: 120 }}>
+          <div style={{ display: "flex", minWidth: Math.max(1400, TIMELINE_INFRA.length * 40), position: "relative", height: 120 }}>
             <div style={{ position: "absolute", top: 50, left: 0, right: 0, height: 2, background: "#e8e5e0" }} />
             {TIMELINE_INFRA
               .filter((e) => tlFilter === "all" || e.cat === tlFilter)
@@ -70,13 +71,10 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                     key={i}
                     onMouseEnter={() => setHoveredInfra(evt)}
                     onMouseLeave={() => setHoveredInfra(null)}
-                    style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)", width: 90, textAlign: "center" }}
+                    style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)", width: 20, textAlign: "center" }}
                     role="listitem"
                   >
-                    <div style={{ fontSize: 10, fontWeight: 700, color: catColor(evt.cat), marginBottom: 4 }}>{evt.year}</div>
-                    <div style={{ width: 10, height: 10, borderRadius: "50%", background: catColor(evt.cat), margin: "0 auto 4px", border: "2px solid #fffffe", boxShadow: "0 0 0 1.5px " + catColor(evt.cat) }} />
-                    <div style={{ fontSize: 9.5, color: "#44403c", lineHeight: 1.35, fontWeight: 500 }}>{evt.label}</div>
-                    <div style={{ display: "inline-block", fontSize: 8, padding: "1px 5px", borderRadius: 3, background: catColor(evt.cat) + "18", color: catColor(evt.cat), fontWeight: 600, marginTop: 2, textTransform: "capitalize" }}>{evt.cat}</div>
+                    <div style={{ width: 10, height: 10, borderRadius: "50%", background: catColor(evt.cat), margin: "0 auto", border: "2px solid #fffffe", boxShadow: "0 0 0 1.5px " + catColor(evt.cat) }} />
                   </div>
                 );
               })}
@@ -117,7 +115,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
               .map((b, i) => {
                 const x = ((b.year - 1925) / 101) * 100;
                 const isClose = b.action === "closed";
-                const isHovered = hoveredBusiness === `${b.name}-${b.year}-${b.action}-${i}`;
+                const isHovered = hoveredBusiness === b;
                 const isSelected = selectedBusiness && selectedBusiness.name === b.name && selectedBusiness.year === b.year && selectedBusiness.action === b.action;
                 
                 return (
@@ -131,7 +129,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                       alignItems: "center", 
                       gap: 4 
                     }}
-                    onMouseEnter={() => setHoveredBusiness(`${b.name}-${b.year}-${b.action}-${i}`)}
+                    onMouseEnter={() => setHoveredBusiness(b)}
                     onMouseLeave={() => setHoveredBusiness(null)}
                   >
                     <div 
@@ -147,7 +145,6 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                         transition: "all 0.2s ease",
                         boxShadow: (isHovered || isSelected) ? "0 0 0 4px " + (isClose ? "#a8a49c" : "#4ade80") + "40" : "none",
                       }}
-                      title={`${b.name} ${b.action} ${b.year}${isClose ? ` — ${b.cause}` : ""}`}
                       role="button"
                       tabIndex={0}
                       onKeyPress={(e) => {
@@ -156,24 +153,6 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                         }
                       }}
                     />
-                    {isHovered && (
-                      <div style={{
-                        position: "absolute",
-                        left: 12,
-                        top: -8,
-                        background: "#1a1a1a",
-                        color: "#fffffe",
-                        padding: "4px 8px",
-                        borderRadius: 4,
-                        fontSize: 11,
-                        fontWeight: 600,
-                        whiteSpace: "nowrap",
-                        zIndex: 100,
-                        pointerEvents: "none",
-                      }}>
-                        {b.name}
-                      </div>
-                    )}
                   </div>
                 );
               })}
@@ -266,24 +245,38 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
               <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
                 <div style={{ fontSize: 16, fontWeight: 700, color: "#1a1a1a", marginBottom: 6 }}>{hoveredInfra.year}</div>
                 <div style={{ fontSize: 14, color: "#44403c", marginBottom: 8 }}>{hoveredInfra.label}</div>
-                <div style={{ display: "inline-block", fontSize: 10, padding: "2px 6px", borderRadius: 3, background: catColor(hoveredInfra.cat) + "18", color: catColor(hoveredInfra.cat), fontWeight: 600, textTransform: "capitalize" }}>{hoveredInfra.cat}</div>
+                <div style={{ display: "inline-block", fontSize: 10, padding: "2px 6px", borderRadius: 3, background: catColor(hoveredInfra.cat) + "18", color: catColor(hoveredInfra.cat), fontWeight: 600, textTransform: "capitalize", marginBottom: 8 }}>{hoveredInfra.cat}</div>
+                <div style={{ fontSize: 12, color: "#64615b" }}>{hoveredInfra.summary}</div>
               </div>
-            ) : selectedBusiness ? (
-              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
-                <h2 style={{ fontSize: 18, fontWeight: 600, margin: "0 0 8px" }}>{selectedBusiness.name}</h2>
-                <div style={{ fontSize: 14, color: "#64615b", marginBottom: 8 }}>{selectedBusiness.action === "closed" ? "Closed" : "Opened"} {selectedBusiness.year}</div>
-                {selectedBusiness.cause && (
-                  <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Cause:</strong> {selectedBusiness.cause}</div>
-                )}
-                <button onClick={() => setSelectedBusiness(null)} style={{ marginTop: 12, padding: "6px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fff", cursor: "pointer" }}>Close</button>
-              </div>
+            ) : ((hoveredBusiness || selectedBusiness) ? (
+              (() => {
+                const biz = hoveredBusiness || selectedBusiness;
+                return (
+                  <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
+                    <h2 style={{ fontSize: 18, fontWeight: 600, margin: "0 0 8px" }}>{biz.name}</h2>
+                    <div style={{ fontSize: 14, color: "#64615b", marginBottom: 8 }}>
+                      {biz.action === "closed" ? "Closed" : "Opened"} {biz.year}
+                    </div>
+                    {biz.region && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Region:</strong> {biz.region}</div>}
+                    {biz.address && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Address:</strong> {biz.address}</div>}
+                    {biz.type && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Type:</strong> {biz.type}</div>}
+                    {biz.culture && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Culture:</strong> {biz.culture}</div>}
+                    {biz.ownership && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Ownership:</strong> {biz.ownership}</div>}
+                    {biz.cause && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Cause:</strong> {biz.cause}</div>}
+                    {biz.notes && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Notes:</strong> {biz.notes}</div>}
+                    {selectedBusiness && (
+                      <button onClick={() => setSelectedBusiness(null)} style={{ marginTop: 12, padding: "6px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fff", cursor: "pointer" }}>Close</button>
+                    )}
+                  </div>
+                );
+              })()
             ) : (
               <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
                 <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">📅</div>
-                <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a business</div>
-              <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Click any dot on the timeline to explore a business's opening and closure information.</div>
-            </div>
-          )}
+                <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a timeline item</div>
+                <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Hover or click a dot on either timeline to view its details here.</div>
+              </div>
+            ))}
         </div>
       </div>
     </section>
