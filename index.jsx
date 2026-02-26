@@ -244,7 +244,7 @@ export default function AustinCulturalMap() {
       {/* Main Content */}
       <main id="main-content" style={{ maxWidth: 1400, margin: "0 auto", padding: isMobile ? "12px 16px 40px" : "16px 28px 40px" }}>
         {viewMode === "timeline" && (
-          <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
+          <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} isMobile={isMobile} />
         )}
 
         {viewMode === "compare" && (

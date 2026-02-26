@@ -4,46 +4,16 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { REGIONS_GEOJSON, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS } from "../data";
+import { REGIONS_GEOJSON, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, TIMELINE_INFRA } from "../data";
 import { DEMO_COLORS } from "../data/constants";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { catColor } from "../utils/formatters";
 import BusinessDetailPanel from "./BusinessDetailPanel";
 
-export default function TimelineView({ tlFilter, setTlFilter }) {
+export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [hoveredBusiness, setHoveredBusiness] = useState(null);
-  
-  // Infrastructure & Policy Timeline
-  const timelineInfra = useMemo(() => [
-    { year: 1928, label: "1928 Master Plan institutionalizes segregation", cat: "policy" },
-    { year: 1991, label: "'Live Music Capital of the World' resolution adopted", cat: "cultural" },
-    { year: 1996, label: "Victory Grill restored", cat: "cultural" },
-    { year: 1997, label: "Smart Growth Initiative launched (Mayor Watson)", cat: "policy" },
-    { year: 1999, label: "SoCo tourism boom begins", cat: "economic" },
-    { year: 2000, label: "SMART Housing Policy adopted", cat: "policy" },
-    { year: 2000, label: "'Keep Austin Weird' movement begins", cat: "cultural" },
-    { year: 2004, label: "Rainey Street rezoned to CBD", cat: "policy" },
-    { year: 2005, label: "Mueller redevelopment begins", cat: "development" },
-    { year: 2007, label: "The Domain Phase 1 opens", cat: "development" },
-    { year: 2010, label: "Oracle campus announced", cat: "economic" },
-    { year: 2012, label: "Apple $282.5M Chapter 380 deal", cat: "economic" },
-    { year: 2012, label: "East Austin development boom", cat: "development" },
-    { year: 2014, label: "CodeNEXT process begins", cat: "policy" },
-    { year: 2015, label: "Jumpolin piñata store demolished", cat: "displacement" },
-    { year: 2016, label: "Apple campus announced", cat: "economic" },
-    { year: 2018, label: "Six Square AACHD plan adopted", cat: "policy" },
-    { year: 2018, label: "CodeNEXT scrapped after 6 years", cat: "policy" },
-    { year: 2019, label: "Homelessness camping decriminalized", cat: "policy" },
-    { year: 2020, label: "Project Connect approved", cat: "transit" },
-    { year: 2021, label: "Prop B re-criminalizes public camping", cat: "policy" },
-    { year: 2021, label: "Tesla Gigafactory opens", cat: "economic" },
-    { year: 2023, label: "HOME Phase 1: 3-unit allowance passed", cat: "policy" },
-    { year: 2023, label: "Convention Center expansion approved", cat: "development" },
-    { year: 2024, label: "Agent of Change principle adopted for music venues", cat: "cultural" },
-    { year: 2024, label: "Cultural District Framework Policy enacted", cat: "policy" },
-    { year: 2025, label: "Govalle Cultural District est.", cat: "cultural" },
-  ], []);
+  const [bizActionFilter, setBizActionFilter] = useState("all");
 
   // Business Timeline
   const timelineBiz = useMemo(() => {
@@ -60,9 +30,12 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
 
   return (
     <section aria-label="Timeline view">
-      {/* Filter buttons */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 16, flexWrap: "wrap", alignItems: "center" }}>
-        <span style={{ fontSize: 12, fontWeight: 600, color: "#64615b" }}>Filter:</span>
+      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: isMobile ? "column" : "row" }}>
+        {/* ═══ LEFT: TIMELINE CONTENT ═══ */}
+        <div style={{ flex: "0 0 auto", width: isMobile ? "100%" : "calc(100% - 360px)", minWidth: 0 }}>
+          {/* Filter buttons for Infrastructure & Policy */}
+          <div style={{ display: "flex", gap: 8, marginBottom: 16, flexWrap: "wrap", alignItems: "center" }}>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#64615b" }}>Filter:</span>
         {[
           { key: "all", label: "All" },
           { key: "displacement", label: "Displacement" },
@@ -84,9 +57,9 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
           Infrastructure & Policy Timeline
         </h3>
         <div style={{ position: "relative", overflowX: "auto", paddingBottom: 8 }}>
-          <div style={{ display: "flex", minWidth: Math.max(1400, timelineInfra.length * 65), position: "relative", height: 120 }}>
+          <div style={{ display: "flex", minWidth: Math.max(1400, TIMELINE_INFRA.length * 65), position: "relative", height: 120 }}>
             <div style={{ position: "absolute", top: 50, left: 0, right: 0, height: 2, background: "#e8e5e0" }} />
-            {timelineInfra
+            {TIMELINE_INFRA
               .filter((e) => tlFilter === "all" || e.cat === tlFilter)
               .map((evt, i) => {
                 const pct = ((evt.year - 1925) / 101) * 100;
@@ -105,13 +78,24 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
 
       {/* Business Openings & Closures Track */}
       <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px", marginBottom: 12 }}>
-        <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 4px", display: "flex", alignItems: "center", gap: 6 }}>
+        <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px", display: "flex", alignItems: "center", gap: 6 }}>
           <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="4" width="10" height="7" rx="1" stroke="#64615b" strokeWidth="1.3" fill="none" /><path d="M5 4V3a2 2 0 014 0v1" stroke="#64615b" strokeWidth="1.3" fill="none" /></svg>
           Legacy Business Timeline
         </h3>
+        <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
+          {[
+            { key: "all", label: "All" },
+            { key: "opened", label: "Openings" },
+            { key: "closed", label: "Closures" },
+          ].map((f) => (
+            <button key={f.key} onClick={() => setBizActionFilter(f.key)} style={{ padding: "4px 12px", borderRadius: 20, fontSize: 10, fontWeight: bizActionFilter === f.key ? 600 : 400, border: bizActionFilter === f.key ? "1.5px solid #0f766e" : "1.5px solid #d6d3cd", background: bizActionFilter === f.key ? "#f0fdfa" : "#ffffte", color: bizActionFilter === f.key ? "#0f766e" : "#64615b", cursor: "pointer", minHeight: 28 }}>
+              {f.label}
+            </button>
+          ))}
+        </div>
         <p style={{ fontSize: 10, color: "#a8a49c", margin: "0 0 12px" }}>Green = opened · Gray = closed/displaced</p>
         <div style={{ position: "relative", overflowX: "auto", paddingBottom: 8 }}>
-          <div style={{ position: "relative", minWidth: 1200, height: Math.max(180, timelineBiz.filter((b) => tlFilter === "all" || (tlFilter === "displacement" && b.action === "closed") || (tlFilter === "cultural" && (b.culture === "African American" || b.culture === "Mexican American/Latino"))).length * 4 + 40) }}>
+          <div style={{ position: "relative", minWidth: 1200, height: Math.max(180, timelineBiz.filter((b) => (bizActionFilter === "all" || b.action === bizActionFilter) && (tlFilter === "all" || (tlFilter === "displacement" && b.action === "closed") || (tlFilter === "cultural" && (b.culture === "African American" || b.culture === "Mexican American/Latino")) || (tlFilter === "economic" && b.culture === "General Austin"))).length * 4 + 40) }}>
             {[1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020].map((yr) => {
               const pct = ((yr - 1925) / 101) * 100;
               return (
@@ -121,7 +105,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
               );
             })}
             {timelineBiz
-              .filter((b) => tlFilter === "all" || (tlFilter === "displacement" && b.action === "closed") || (tlFilter === "cultural" && (b.culture === "African American" || b.culture === "Mexican American/Latino")) || (tlFilter === "economic" && b.culture === "General Austin"))
+              .filter((b) => (bizActionFilter === "all" || b.action === bizActionFilter) && (tlFilter === "all" || (tlFilter === "displacement" && b.action === "closed") || (tlFilter === "cultural" && (b.culture === "African American" || b.culture === "Mexican American/Latino")) || (tlFilter === "economic" && b.culture === "General Austin")))
               .map((b, i) => {
                 const x = ((b.year - 1925) / 101) * 100;
                 const isClose = b.action === "closed";
@@ -261,11 +245,36 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
       <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "12px 4px" }}>
         Infrastructure events compiled from City of Austin records, news sources, and community timelines. Business dates from community inventories. Aggregate demographics sum all 15 tracked regions.
       </div>
+        </div>
 
-      <BusinessDetailPanel 
-        business={selectedBusiness} 
-        onClose={() => setSelectedBusiness(null)} 
-      />
+        {/* ═══ RIGHT: BUSINESS DETAIL PANEL ═══ */}
+        {selectedBusiness ? (
+          <div
+            className="detail-panel"
+            style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }}
+            role="region"
+            aria-label="Business detail panel"
+          >
+            <BusinessDetailPanel 
+              business={selectedBusiness} 
+              onClose={() => setSelectedBusiness(null)} 
+            />
+          </div>
+        ) : (
+          <div
+            className="detail-panel"
+            style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }}
+            role="region"
+            aria-label="Business detail panel"
+          >
+            <div style={{ background: "#ffffte", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
+              <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">📅</div>
+              <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a business</div>
+              <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Click any dot on the timeline to explore a business's opening and closure information.</div>
+            </div>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

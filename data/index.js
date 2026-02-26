@@ -7,6 +7,7 @@ export { DVI_RAW, DVI_LOOKUP } from "./dvi";
 export { MUSIC_NIGHTLIFE } from "./musicNightlife";
 export { PROPERTY_DATA } from "./propertyData";
 export { PROJECT_CONNECT_LINES, PC_PROXIMITY_REGIONS } from "./projectConnect";
+export { TIMELINE_INFRA } from "./timelineInfra";
 export {
   REGION_NAMES,
   TIMELINE_EVENTS,
