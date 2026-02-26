@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef, useCallback, useEffect } from "react";
 import _ from "lodash";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -14,6 +14,31 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
   const [hoveredBusiness, setHoveredBusiness] = useState(null);
   const [hoveredInfra, setHoveredInfra] = useState(null);
   const [bizActionFilter, setBizActionFilter] = useState("all");
+  const [zoomLevel, setZoomLevel] = useState(1); // 1=decade, 2=year, 3=quarter
+  const [pan, setPan] = useState(0);  // percentage offset of visible range
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState(null);
+  const timelineViewportRef = useRef(null);
+
+  // Year range configuration based on zoom level
+  const yearRangeConfig = useMemo(() => {
+    const configs = [
+      { span: 101, label: "1930-2025" }, // Zoom 1: full range
+      { span: 20, label: "20 years" },   // Zoom 2: 20 year window
+      { span: 5, label: "5 years" }      // Zoom 3: 5 year window
+    ];
+    return configs[zoomLevel - 1];
+  }, [zoomLevel]);
+
+  // Calculate visible year range based on pan position
+  const visibleYearRange = useMemo(() => {
+    const centerYear = 1977.5; // Middle of dataset
+    const halfSpan = yearRangeConfig.span / 2;
+    const panOffset = (pan / 100) * yearRangeConfig.span; // Pan as percentage
+    const startYear = Math.max(1925, centerYear - halfSpan + panOffset);
+    const endYear = Math.min(2026, centerYear + halfSpan + panOffset);
+    return { startYear, endYear, span: endYear - startYear };
+  }, [pan, yearRangeConfig]);
 
   // Business Timeline (include full business objects)
   const timelineBiz = useMemo(() => {
@@ -31,6 +56,57 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
     ...TIMELINE_INFRA.map((e) => ({ ...e, _kind: "infra" })),
     ...timelineBiz.map((b) => ({ ...b, _kind: "business" })),
   ], "year"), [timelineBiz]);
+
+
+
+  // Drag-based zoom handler (vertical)
+  const handleMouseDown = useCallback((e) => {
+    setIsDragging(true);
+    setDragStart(e.clientY);
+  }, []);
+
+  const handleMouseMove = useCallback((e) => {
+    if (!isDragging || dragStart === null) return;
+
+    const dragDistance = e.clientY - dragStart;
+    const sensitivity = 150; // pixels needed to change zoom level
+
+    // Positive drag (down) = zoom out, Negative drag (up) = zoom in
+    const dragZoomDelta = Math.round(dragDistance / sensitivity);
+    const newZoomLevel = Math.max(1, Math.min(3, zoomLevel - dragZoomDelta));
+
+    setZoomLevel(newZoomLevel);
+  }, [isDragging, dragStart, zoomLevel]);
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+    setDragStart(null);
+    setPan(0); // Reset pan on zoom change
+  }, []);
+
+  // Keyboard pan handler
+  const handleKeyDown = useCallback((e) => {
+    if (!timelineViewportRef.current) return;
+    const panStep = 5;
+    const maxPan = 50;
+    
+    if (e.key === "ArrowUp") {
+      setPan((prev) => Math.max(-maxPan, prev - panStep));
+      e.preventDefault();
+    } else if (e.key === "ArrowDown") {
+      setPan((prev) => Math.min(maxPan, prev + panStep));
+      e.preventDefault();
+    }
+  }, []);
+
+  // Attach keyboard listener to viewport
+  useEffect(() => {
+    const viewport = timelineViewportRef.current;
+    if (!viewport) return;
+    
+    viewport.addEventListener("keydown", handleKeyDown);
+    return () => viewport.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
 
   return (
     <section aria-label="Timeline view">
@@ -60,6 +136,9 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
             <h3 className="timeline-title">
               <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.5" stroke="#64615b" strokeWidth="1.5" fill="none" /></svg>
               Timeline (Infrastructure & Legacy Businesses)
+              <span style={{ marginLeft: "auto", fontSize: 11, color: "#a8a49c", fontWeight: 400, textTransform: "none", letterSpacing: "normal" }}>
+                Drag up/down to zoom (Zoom: {["Decade", "Year", "Quarter"][zoomLevel - 1]})
+              </span>
             </h3>
 
             <div className="timeline-controls">
@@ -75,29 +154,63 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
               ))}
             </div>
 
-            <div className="timeline-viewport">
-              <div className="timeline-track" style={{ minWidth: Math.max(1400, combinedEvents.length * 40), height: 220 }}>
+            <div className="timeline-viewport" ref={timelineViewportRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp} style={{cursor: isDragging ? "grabbing" : "grab"}} tabIndex={0}>
+              <div className="timeline-track" style={{ width: "100%", height: 600 }}>
                 <div className="timeline-ruler" />
 
-                { [1930,1940,1950,1960,1970,1980,1990,2000,2010,2020].map((yr) => {
-                  const pct = ((yr - 1925) / 101) * 100;
-                  return (
-                    <div key={yr} className="timeline-year-tick" style={{ left: `${pct}%` }}>
-                      <span className="timeline-year-label">{yr}</span>
-                    </div>
-                  );
-                })}
+                {zoomLevel === 1 ? (
+                  // Decade view - show ticks for full range
+                  [1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020].map((yr) => {
+                    const pct = ((yr - visibleYearRange.startYear) / visibleYearRange.span) * 100;
+                    // Only render if within visible range
+                    if (pct < -5 || pct > 105) return null;
+                    return (
+                      <div key={yr} className="timeline-year-tick" style={{ top: `${pct}%` }}>
+                        <span className="timeline-year-label">{yr}</span>
+                      </div>
+                    );
+                  })
+                ) : zoomLevel === 2 ? (
+                  // Year view - show every year
+                  Array.from({ length: 96 }, (_, i) => Math.ceil(visibleYearRange.startYear) + i).filter((yr) => yr <= Math.floor(visibleYearRange.endYear)).map((yr) => {
+                    if (yr % 5 !== 0) return null; // Show every 5 years
+                    const pct = ((yr - visibleYearRange.startYear) / visibleYearRange.span) * 100;
+                    if (pct < -5 || pct > 105) return null;
+                    return (
+                      <div key={yr} className="timeline-year-tick" style={{ top: `${pct}%` }}>
+                        <span className="timeline-year-label" style={{ fontSize: 8 }}>{yr}</span>
+                      </div>
+                    );
+                  })
+                ) : (
+                  // Quarter view - show every year
+                  Array.from({ length: 96 }, (_, i) => Math.ceil(visibleYearRange.startYear) + i).filter((yr) => yr <= Math.floor(visibleYearRange.endYear)).map((yr) => {
+                    const pct = ((yr - visibleYearRange.startYear) / visibleYearRange.span) * 100;
+                    if (pct < -5 || pct > 105) return null;
+                    return (
+                      <div key={yr} className="timeline-year-tick" style={{ top: `${pct}%` }}>
+                        <span className="timeline-year-label" style={{ fontSize: 7 }}>{yr}</span>
+                      </div>
+                    );
+                  })
+                )}
 
-                {combinedEvents.filter((ev) => {
+                {/* Render individual events only */}
+                {combinedEvents
+                  .filter((ev) => {
                     if (ev._kind === "infra") return tlFilter === "all" || ev.cat === tlFilter;
                     const bizMatchesAction = bizActionFilter === "all" || ev.action === bizActionFilter;
                     const bizMatchesTl = tlFilter === "all" || (tlFilter === "displacement" && ev.action === "closed") || (tlFilter === "cultural" && (ev.culture === "African American" || ev.culture === "Mexican American/Latino")) || (tlFilter === "economic" && ev.culture === "General Austin");
                     return ev._kind === "business" && bizMatchesAction && bizMatchesTl;
-                  }).map((ev, idx) => {
-                    const pct = ((ev.year - 1925) / 101) * 100;
+                  })
+                  .map((ev, idx) => {
+                    const pct = ((ev.year - visibleYearRange.startYear) / visibleYearRange.span) * 100;
+                    // don't render points outside view
+                    if (pct < -5 || pct > 105) return null;
+                    const leftOffset = `calc(50% + ${idx * 12}px)`; // stagger horizontally
                     if (ev._kind === "infra") {
                       return (
-                        <div key={`infra-${ev.year}-${idx}`} className="timeline-event timeline-event--infra" style={{ left: `${pct}%`, top: 60 }} onMouseEnter={() => { setHoveredInfra(ev); setHoveredBusiness(null); }} onMouseLeave={() => setHoveredInfra(null)}>
+                        <div key={`infra-${ev.year}-${idx}`} className="timeline-event timeline-event--infra" style={{ top: `${pct}%`, left: leftOffset }} onMouseEnter={() => { setHoveredInfra(ev); setHoveredBusiness(null); }} onMouseLeave={() => setHoveredInfra(null)}>
                           <div className="timeline-infra-dot" style={{ background: catColor(ev.cat), boxShadow: "0 0 0 1.5px " + catColor(ev.cat) }} />
                         </div>
                       );
@@ -106,7 +219,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                     const isHovered = hoveredBusiness === ev;
                     const isSelected = selectedBusiness && selectedBusiness.name === ev.name && selectedBusiness.year === ev.year && selectedBusiness.action === ev.action;
                     return (
-                      <div key={`biz-${ev.name}-${ev.year}-${idx}`} className="timeline-event timeline-event--biz" style={{ left: `${pct}%`, top: 120 + idx * 3.5 }} onMouseEnter={() => { setHoveredBusiness(ev); setHoveredInfra(null); }} onMouseLeave={() => setHoveredBusiness(null)}>
+                      <div key={`biz-${ev.name}-${ev.year}-${idx}`} className="timeline-event timeline-event--biz" style={{ top: `${pct}%`, left: leftOffset }} onMouseEnter={() => { setHoveredBusiness(ev); setHoveredInfra(null); }} onMouseLeave={() => setHoveredBusiness(null)}>
                         <div className="timeline-biz-dot" onClick={() => setSelectedBusiness(ev)} role="button" tabIndex={0} onKeyPress={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedBusiness(ev); }} style={{ width: isHovered || isSelected ? 10 : 8, height: isHovered || isSelected ? 10 : 8, background: isClose ? "#a8a49c" : "#4ade80", border: isClose ? "1.5px solid #78716c" : "1.5px solid #16a34a", boxShadow: (isHovered || isSelected) ? "0 0 0 4px " + (isClose ? "#a8a49c" : "#4ade80") + "40" : "none" }} />
                       </div>
                     );
@@ -198,7 +311,33 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
               <div style={{ display: "inline-block", fontSize: 10, padding: "2px 6px", borderRadius: 3, background: catColor(hoveredInfra.cat) + "18", color: catColor(hoveredInfra.cat), fontWeight: 600, textTransform: "capitalize", marginBottom: 8 }}>{hoveredInfra.cat}</div>
               <div style={{ fontSize: 12, color: "#64615b" }}>{hoveredInfra.summary}</div>
             </div>
-          ) : ((hoveredBusiness || selectedBusiness) ? (
+          ) : (hoveredBusiness?.isAggregate ? (
+            // Aggregate bubble detail
+            <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
+              <div style={{ fontSize: 16, fontWeight: 700, color: "#1a1a1a", marginBottom: 12 }}>
+                {hoveredBusiness.period}s Era
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
+                <div style={{ background: "#f0fdfa", borderRadius: 8, padding: 12 }}>
+                  <div style={{ fontSize: 11, color: "#0f766e", fontWeight: 600, marginBottom: 4 }}>Openings</div>
+                  <div style={{ fontSize: 20, fontWeight: 700, color: "#16a34a" }}>{hoveredBusiness.openCount}</div>
+                </div>
+                <div style={{ background: "#faf8f7", borderRadius: 8, padding: 12 }}>
+                  <div style={{ fontSize: 11, color: "#78716c", fontWeight: 600, marginBottom: 4 }}>Closures</div>
+                  <div style={{ fontSize: 20, fontWeight: 700, color: "#a8a49c" }}>{hoveredBusiness.closeCount}</div>
+                </div>
+              </div>
+              {hoveredBusiness.infraCount > 0 && (
+                <div style={{ background: "#f5f0ea", borderRadius: 8, padding: 12, marginBottom: 12 }}>
+                  <div style={{ fontSize: 11, color: "#92400e", fontWeight: 600, marginBottom: 4 }}>Infrastructure Events</div>
+                  <div style={{ fontSize: 18, fontWeight: 700, color: "#b45309" }}>{hoveredBusiness.infraCount}</div>
+                </div>
+              )}
+              <div style={{ fontSize: 12, color: "#64615b", lineHeight: 1.6 }}>
+                <strong>Scroll</strong> to zoom in and see individual businesses in this period.
+              </div>
+            </div>
+          ) : (hoveredBusiness || selectedBusiness) ? (
             (() => {
               const biz = hoveredBusiness || selectedBusiness;
               return (
@@ -222,7 +361,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
             <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
               <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">📅</div>
               <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a timeline item</div>
-              <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Hover or click a dot on the timeline to view its details here.</div>
+              <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Hover or click a dot to view details. Drag up/down to zoom. Use ↑/↓ arrows to pan.</div>
             </div>
           ))}
         </div>
