@@ -283,7 +283,8 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                 <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a business</div>
               <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Click any dot on the timeline to explore a business's opening and closure information.</div>
             </div>
-        )}
+        )
+      </div>
       </div>
     </section>
   );
