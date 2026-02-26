@@ -12,8 +12,8 @@ import {
   TIPPING_POINTS,
 } from "./data";
 
-// load markdown for agenda parsing
-import issuesText from "./ISSUES.md?raw";
+// agenda markdown will be fetched at runtime
+// the files live in public/ so fetch('/ISSUES.md') works
 import { PLAY_YEARS } from "./data/constants";
 
 // Utils
@@ -131,7 +131,17 @@ export default function AustinCulturalMap() {
   );
 
   // Agenda parsing
+  const [issuesText, setIssuesText] = useState("");
+
+  useEffect(() => {
+    fetch("/ISSUES.md")
+      .then((r) => r.text())
+      .then(setIssuesText)
+      .catch(() => setIssuesText("") );
+  }, []);
+
   const agendaItems = useMemo(() => {
+    if (!issuesText) return [];
     const lines = issuesText.split("\n");
     const start = lines.findIndex((l) => l.startsWith("| Priority"));
     if (start < 0) return [];
@@ -148,7 +158,7 @@ export default function AustinCulturalMap() {
       }
     }
     return items;
-  }, []);
+  }, [issuesText]);
 
   const lastUpdate = useMemo(() => new Date().toLocaleString(), []);
 
