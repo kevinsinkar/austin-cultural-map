@@ -8,11 +8,13 @@ import { REGIONS_GEOJSON, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, TIMELIN
 import { DEMO_COLORS } from "../data/constants";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { catColor } from "../utils/formatters";
-import BusinessDetailPanel from "./BusinessDetailPanel";
+// placeholder/detail card will be rendered inline
+
 
 export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [hoveredBusiness, setHoveredBusiness] = useState(null);
+  const [hoveredInfra, setHoveredInfra] = useState(null);
   const [bizActionFilter, setBizActionFilter] = useState("all");
 
   // Business Timeline
@@ -64,7 +66,13 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
               .map((evt, i) => {
                 const pct = ((evt.year - 1925) / 101) * 100;
                 return (
-                  <div key={i} style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)", width: 90, textAlign: "center" }} role="listitem">
+                  <div
+                    key={i}
+                    onMouseEnter={() => setHoveredInfra(evt)}
+                    onMouseLeave={() => setHoveredInfra(null)}
+                    style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)", width: 90, textAlign: "center" }}
+                    role="listitem"
+                  >
                     <div style={{ fontSize: 10, fontWeight: 700, color: catColor(evt.cat), marginBottom: 4 }}>{evt.year}</div>
                     <div style={{ width: 10, height: 10, borderRadius: "50%", background: catColor(evt.cat), margin: "0 auto 4px", border: "2px solid #fffffe", boxShadow: "0 0 0 1.5px " + catColor(evt.cat) }} />
                     <div style={{ fontSize: 9.5, color: "#44403c", lineHeight: 1.35, fontWeight: 500 }}>{evt.label}</div>
@@ -247,32 +255,34 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
       </div>
         </div>
 
-        {/* ═══ RIGHT: BUSINESS DETAIL PANEL ═══ */}
-        {selectedBusiness ? (
-          <div
+        {/* ═══ RIGHT: DETAIL CARD AREA ═══ */}
+        <div
             className="detail-panel"
             style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }}
             role="region"
-            aria-label="Business detail panel"
-          >
-            <BusinessDetailPanel 
-              business={selectedBusiness} 
-              onClose={() => setSelectedBusiness(null)} 
-            />
-          </div>
-        ) : (
-          <div
-            className="detail-panel"
-            style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }}
-            role="region"
-            aria-label="Business detail panel"
-          >
-            <div style={{ background: "#ffffte", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
-              <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">📅</div>
-              <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a business</div>
+            aria-label="Detail card"
+        >
+            {hoveredInfra ? (
+              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#1a1a1a", marginBottom: 6 }}>{hoveredInfra.year}</div>
+                <div style={{ fontSize: 14, color: "#44403c", marginBottom: 8 }}>{hoveredInfra.label}</div>
+                <div style={{ display: "inline-block", fontSize: 10, padding: "2px 6px", borderRadius: 3, background: catColor(hoveredInfra.cat) + "18", color: catColor(hoveredInfra.cat), fontWeight: 600, textTransform: "capitalize" }}>{hoveredInfra.cat}</div>
+              </div>
+            ) : selectedBusiness ? (
+              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
+                <h2 style={{ fontSize: 18, fontWeight: 600, margin: "0 0 8px" }}>{selectedBusiness.name}</h2>
+                <div style={{ fontSize: 14, color: "#64615b", marginBottom: 8 }}>{selectedBusiness.action === "closed" ? "Closed" : "Opened"} {selectedBusiness.year}</div>
+                {selectedBusiness.cause && (
+                  <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Cause:</strong> {selectedBusiness.cause}</div>
+                )}
+                <button onClick={() => setSelectedBusiness(null)} style={{ marginTop: 12, padding: "6px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fff", cursor: "pointer" }}>Close</button>
+              </div>
+            ) : (
+              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
+                <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">📅</div>
+                <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a business</div>
               <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Click any dot on the timeline to explore a business's opening and closure information.</div>
             </div>
-          </div>
         )}
       </div>
     </section>
