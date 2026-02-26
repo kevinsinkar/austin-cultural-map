@@ -253,7 +253,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                 const biz = hoveredBusiness || selectedBusiness;
                 return (
                   <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "20px", lineHeight: 1.4 }}>
-                    <h2 style={{ fontSize: 18, fontWeight: 600, margin: "0 0 8px" }}>{biz.name}</h2>
+                    <h2 style={{ fontSize: 18, fontWeight: 600, margin: "0 0 8px", color: "#000" }}>{biz.name}</h2>
                     <div style={{ fontSize: 14, color: "#64615b", marginBottom: 8 }}>
                       {biz.action === "closed" ? "Closed" : "Opened"} {biz.year}
                     </div>
@@ -265,7 +265,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                     {biz.cause && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Cause:</strong> {biz.cause}</div>}
                     {biz.notes && <div style={{ fontSize: 12, color: "#64615b", marginBottom: 4 }}><strong>Notes:</strong> {biz.notes}</div>}
                     {selectedBusiness && (
-                      <button onClick={() => setSelectedBusiness(null)} style={{ marginTop: 12, padding: "6px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fff", cursor: "pointer" }}>Close</button>
+                      <button onClick={() => setSelectedBusiness(null)} style={{ marginTop: 12, padding: "6px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#000000", cursor: "pointer" }}>Close</button>
                     )}
                   </div>
                 );
