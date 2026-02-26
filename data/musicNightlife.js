@@ -1,0 +1,20 @@
+// Music & Nightlife (4B)
+export const MUSIC_NIGHTLIFE = [
+  { region:"Red River Cultural District", year:2015, independent:12, corporate:1, closedSince2015:0, capacity:350 },
+  { region:"Red River Cultural District", year:2020, independent:9, corporate:1, closedSince2015:3, capacity:375 },
+  { region:"Red River Cultural District", year:2023, independent:8, corporate:1, closedSince2015:4, capacity:380 },
+  { region:"Red River Cultural District", year:2025, independent:7, corporate:1, closedSince2015:5, capacity:390 },
+  { region:"South Lamar Corridor", year:2015, independent:6, corporate:0, closedSince2015:0, capacity:250 },
+  { region:"South Lamar Corridor", year:2020, independent:4, corporate:0, closedSince2015:2, capacity:280 },
+  { region:"South Lamar Corridor", year:2023, independent:3, corporate:0, closedSince2015:3, capacity:300 },
+  { region:"East 11th/12th Street Corridor", year:2015, independent:3, corporate:0, closedSince2015:0, capacity:200 },
+  { region:"East 11th/12th Street Corridor", year:2020, independent:2, corporate:0, closedSince2015:1, capacity:180 },
+  { region:"East 11th/12th Street Corridor", year:2023, independent:2, corporate:0, closedSince2015:1, capacity:180 },
+  { region:"South Congress (SoCo)", year:2015, independent:3, corporate:0, closedSince2015:0, capacity:300 },
+  { region:"South Congress (SoCo)", year:2020, independent:2, corporate:0, closedSince2015:1, capacity:350 },
+  { region:"South Congress (SoCo)", year:2023, independent:2, corporate:0, closedSince2015:1, capacity:350 },
+  { region:"Downtown / West Campus", year:2015, independent:25, corporate:5, closedSince2015:0, capacity:400 },
+  { region:"Downtown / West Campus", year:2020, independent:18, corporate:5, closedSince2015:7, capacity:420 },
+  { region:"Downtown / West Campus", year:2023, independent:16, corporate:6, closedSince2015:9, capacity:440 },
+  { region:"Downtown / West Campus", year:2025, independent:14, corporate:7, closedSince2015:11, capacity:460 },
+];
