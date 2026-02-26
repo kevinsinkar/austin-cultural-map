@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import _ from "lodash";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -8,8 +8,12 @@ import { REGIONS_GEOJSON, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS } from "
 import { DEMO_COLORS } from "../data/constants";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { catColor } from "../utils/formatters";
+import BusinessDetailPanel from "./BusinessDetailPanel";
 
 export default function TimelineView({ tlFilter, setTlFilter }) {
+  const [selectedBusiness, setSelectedBusiness] = useState(null);
+  const [hoveredBusiness, setHoveredBusiness] = useState(null);
+  
   // Infrastructure & Policy Timeline
   const timelineInfra = useMemo(() => [
     { year: 1928, label: "1928 Master Plan institutionalizes segregation", cat: "policy" },
@@ -121,10 +125,63 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
               .map((b, i) => {
                 const x = ((b.year - 1925) / 101) * 100;
                 const isClose = b.action === "closed";
+                const isHovered = hoveredBusiness === `${b.name}-${b.year}-${b.action}-${i}`;
+                const isSelected = selectedBusiness && selectedBusiness.name === b.name && selectedBusiness.year === b.year && selectedBusiness.action === b.action;
+                
                 return (
-                  <div key={`${b.name}-${b.year}-${b.action}-${i}`} style={{ position: "absolute", left: `${x}%`, top: 20 + i * 3.5, display: "flex", alignItems: "center", gap: 4 }} title={`${b.name} ${b.action} ${b.year}${isClose ? ` — ${b.cause}` : ""}`}>
-                    <div style={{ width: 7, height: 7, borderRadius: "50%", background: isClose ? "#a8a49c" : "#4ade80", border: isClose ? "1.5px solid #78716c" : "1.5px solid #16a34a", flexShrink: 0 }} />
-                    <span style={{ fontSize: 8, color: isClose ? "#78716c" : "#16a34a", fontWeight: 600, whiteSpace: "nowrap", maxWidth: 100, overflow: "hidden", textOverflow: "ellipsis" }}>{b.name}</span>
+                  <div 
+                    key={`${b.name}-${b.year}-${b.action}-${i}`} 
+                    style={{ 
+                      position: "absolute", 
+                      left: `${x}%`, 
+                      top: 20 + i * 3.5, 
+                      display: "flex", 
+                      alignItems: "center", 
+                      gap: 4 
+                    }}
+                    onMouseEnter={() => setHoveredBusiness(`${b.name}-${b.year}-${b.action}-${i}`)}
+                    onMouseLeave={() => setHoveredBusiness(null)}
+                  >
+                    <div 
+                      onClick={() => setSelectedBusiness(b)}
+                      style={{ 
+                        width: isHovered || isSelected ? 10 : 7, 
+                        height: isHovered || isSelected ? 10 : 7, 
+                        borderRadius: "50%", 
+                        background: isClose ? "#a8a49c" : "#4ade80", 
+                        border: isClose ? "1.5px solid #78716c" : "1.5px solid #16a34a", 
+                        flexShrink: 0,
+                        cursor: "pointer",
+                        transition: "all 0.2s ease",
+                        boxShadow: (isHovered || isSelected) ? "0 0 0 4px " + (isClose ? "#a8a49c" : "#4ade80") + "40" : "none",
+                      }}
+                      title={`${b.name} ${b.action} ${b.year}${isClose ? ` — ${b.cause}` : ""}`}
+                      role="button"
+                      tabIndex={0}
+                      onKeyPress={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          setSelectedBusiness(b);
+                        }
+                      }}
+                    />
+                    {isHovered && (
+                      <div style={{
+                        position: "absolute",
+                        left: 12,
+                        top: -8,
+                        background: "#1a1a1a",
+                        color: "#fffffe",
+                        padding: "4px 8px",
+                        borderRadius: 4,
+                        fontSize: 11,
+                        fontWeight: 600,
+                        whiteSpace: "nowrap",
+                        zIndex: 100,
+                        pointerEvents: "none",
+                      }}>
+                        {b.name}
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -204,6 +261,11 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
       <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "12px 4px" }}>
         Infrastructure events compiled from City of Austin records, news sources, and community timelines. Business dates from community inventories. Aggregate demographics sum all 15 tracked regions.
       </div>
+
+      <BusinessDetailPanel 
+        business={selectedBusiness} 
+        onClose={() => setSelectedBusiness(null)} 
+      />
     </section>
   );
 }
