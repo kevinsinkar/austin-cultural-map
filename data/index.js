@@ -1,6 +1,8 @@
 export { REGIONS_GEOJSON } from "./final_updated_regions";
 export { REGION_INDEX } from "./regionIndex";
-export { REGION_SVGS } from "./regionSvgs";
+// REGION_SVGS was previously used for SVG overlays but has been
+// deprecated in favor of rendering REGIONS_GEOJSON with Leaflet's
+// native styling and event handling (see useAustinMap.js).
 export { LEGACY_OPERATING, LEGACY_CLOSED } from "./businesses";
 export { DEMOGRAPHICS } from "./interim_demographics";
 export { SOCIOECONOMIC } from "./interim_socioeconomic";

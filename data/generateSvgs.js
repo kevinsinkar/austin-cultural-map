@@ -2,6 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// NOTE: SVG generation is no longer required; the application
+// now renders REGIONS_GEOJSON directly with Leaflet and handles
+// hover/state styling natively. Running this script will simply
+// exit so we don't accidentally recreate regionSvgs.js.
+console.warn("generateSvgs.js is deprecated - skipping SVG file creation.");
+process.exit(0);
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
