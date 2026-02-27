@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { REGIONS_GEOJSON } from "./updated_regions";
+import { REGIONS_GEOJSON } from "./regions";
 
 // DVI Data
 export const DVI_RAW = [

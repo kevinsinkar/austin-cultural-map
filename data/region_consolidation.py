@@ -53,7 +53,7 @@ def clean_js_to_dict(filename):
 def load_all_data():
     print("🧹 Cleaning and loading Austin datasets...")
     # Map the files based on your specific filenames
-    regions_data = clean_js_to_dict('updated_regions.js')
+    regions_data = clean_js_to_dict('regions.js')
     demographics = clean_js_to_dict('demographics.js')
     properties = clean_js_to_dict('propertyData.js')
     

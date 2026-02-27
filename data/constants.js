@@ -1,4 +1,4 @@
-import { REGIONS_GEOJSON } from "./updated_regions";
+import { REGIONS_GEOJSON } from "./regions";
 
 export const REGION_NAMES = REGIONS_GEOJSON.features.map(f => f.properties.region_name);
 

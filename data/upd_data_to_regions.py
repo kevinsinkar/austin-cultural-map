@@ -83,7 +83,7 @@ def main():
             print(f"[{i}] Researching area near {centroid}...")
             region_info = research_area_with_gemini(props, centroid)
         
-        # Format for updated_regions.js
+        # Format for regions.js
         new_feature = {
             "type": "Feature",
             "properties": {
