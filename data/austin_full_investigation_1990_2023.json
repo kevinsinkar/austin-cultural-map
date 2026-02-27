@@ -1,1 +1,2179 @@
-[]
+[
+  {
+    "region": "Rosewood / College Heights",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 50000,
+        "total_population": 5500,
+        "pct_white": 0.1,
+        "pct_black": 0.62,
+        "pct_hispanic": 0.24,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 53000,
+        "total_population": 5470,
+        "pct_white": 0.103,
+        "pct_black": 0.613,
+        "pct_hispanic": 0.243,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 56000,
+        "total_population": 5440,
+        "pct_white": 0.106,
+        "pct_black": 0.606,
+        "pct_hispanic": 0.246,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 59000,
+        "total_population": 5410,
+        "pct_white": 0.109,
+        "pct_black": 0.599,
+        "pct_hispanic": 0.249,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 62000,
+        "total_population": 5380,
+        "pct_white": 0.112,
+        "pct_black": 0.592,
+        "pct_hispanic": 0.252,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 65000,
+        "total_population": 5350,
+        "pct_white": 0.115,
+        "pct_black": 0.585,
+        "pct_hispanic": 0.255,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 68000,
+        "total_population": 5320,
+        "pct_white": 0.118,
+        "pct_black": 0.578,
+        "pct_hispanic": 0.258,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 71000,
+        "total_population": 5290,
+        "pct_white": 0.121,
+        "pct_black": 0.571,
+        "pct_hispanic": 0.261,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 74000,
+        "total_population": 5260,
+        "pct_white": 0.124,
+        "pct_black": 0.564,
+        "pct_hispanic": 0.264,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 77000,
+        "total_population": 5230,
+        "pct_white": 0.127,
+        "pct_black": 0.557,
+        "pct_hispanic": 0.267,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 80000,
+        "total_population": 5200,
+        "pct_white": 0.13,
+        "pct_black": 0.55,
+        "pct_hispanic": 0.27,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 92000,
+        "total_population": 5260,
+        "pct_white": 0.142,
+        "pct_black": 0.533,
+        "pct_hispanic": 0.271,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 104000,
+        "total_population": 5320,
+        "pct_white": 0.154,
+        "pct_black": 0.516,
+        "pct_hispanic": 0.272,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 116000,
+        "total_population": 5380,
+        "pct_white": 0.166,
+        "pct_black": 0.499,
+        "pct_hispanic": 0.273,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 128000,
+        "total_population": 5440,
+        "pct_white": 0.178,
+        "pct_black": 0.482,
+        "pct_hispanic": 0.274,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 140000,
+        "total_population": 5500,
+        "pct_white": 0.19,
+        "pct_black": 0.465,
+        "pct_hispanic": 0.275,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 152000,
+        "total_population": 5560,
+        "pct_white": 0.202,
+        "pct_black": 0.448,
+        "pct_hispanic": 0.276,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 164000,
+        "total_population": 5620,
+        "pct_white": 0.214,
+        "pct_black": 0.431,
+        "pct_hispanic": 0.277,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 176000,
+        "total_population": 5680,
+        "pct_white": 0.226,
+        "pct_black": 0.414,
+        "pct_hispanic": 0.278,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 188000,
+        "total_population": 5740,
+        "pct_white": 0.238,
+        "pct_black": 0.397,
+        "pct_hispanic": 0.279,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 200000,
+        "total_population": 5800,
+        "pct_white": 0.25,
+        "pct_black": 0.38,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 235000,
+        "total_population": 5940,
+        "pct_white": 0.265,
+        "pct_black": 0.364,
+        "pct_hispanic": 0.276,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 270000,
+        "total_population": 6080,
+        "pct_white": 0.28,
+        "pct_black": 0.348,
+        "pct_hispanic": 0.272,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 305000,
+        "total_population": 6220,
+        "pct_white": 0.295,
+        "pct_black": 0.332,
+        "pct_hispanic": 0.268,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 340000,
+        "total_population": 6360,
+        "pct_white": 0.31,
+        "pct_black": 0.316,
+        "pct_hispanic": 0.264,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 375000,
+        "total_population": 6500,
+        "pct_white": 0.325,
+        "pct_black": 0.3,
+        "pct_hispanic": 0.26,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 410000,
+        "total_population": 6640,
+        "pct_white": 0.34,
+        "pct_black": 0.284,
+        "pct_hispanic": 0.256,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 445000,
+        "total_population": 6780,
+        "pct_white": 0.355,
+        "pct_black": 0.268,
+        "pct_hispanic": 0.252,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 480000,
+        "total_population": 6920,
+        "pct_white": 0.37,
+        "pct_black": 0.252,
+        "pct_hispanic": 0.248,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 515000,
+        "total_population": 7060,
+        "pct_white": 0.385,
+        "pct_black": 0.236,
+        "pct_hispanic": 0.244,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 550000,
+        "total_population": 7200,
+        "pct_white": 0.4,
+        "pct_black": 0.22,
+        "pct_hispanic": 0.24,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 600000,
+        "total_population": 7400,
+        "pct_white": 0.4133,
+        "pct_black": 0.2067,
+        "pct_hispanic": 0.2333,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 650000,
+        "total_population": 7600,
+        "pct_white": 0.4267,
+        "pct_black": 0.1933,
+        "pct_hispanic": 0.2267,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 700000,
+        "total_population": 7800,
+        "pct_white": 0.44,
+        "pct_black": 0.18,
+        "pct_hispanic": 0.22,
+        "displacement_risk": "Very High"
+      }
+    ]
+  },
+  {
+    "region": "Holly / Rainey Street",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 50000,
+        "total_population": 4500,
+        "pct_white": 0.12,
+        "pct_black": 0.1,
+        "pct_hispanic": 0.73,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 51667,
+        "total_population": 4430,
+        "pct_white": 0.126,
+        "pct_black": 0.098,
+        "pct_hispanic": 0.725,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 53333,
+        "total_population": 4360,
+        "pct_white": 0.132,
+        "pct_black": 0.096,
+        "pct_hispanic": 0.72,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 55000,
+        "total_population": 4290,
+        "pct_white": 0.138,
+        "pct_black": 0.094,
+        "pct_hispanic": 0.715,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 56667,
+        "total_population": 4220,
+        "pct_white": 0.144,
+        "pct_black": 0.092,
+        "pct_hispanic": 0.71,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 58333,
+        "total_population": 4150,
+        "pct_white": 0.15,
+        "pct_black": 0.09,
+        "pct_hispanic": 0.705,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 60000,
+        "total_population": 4080,
+        "pct_white": 0.156,
+        "pct_black": 0.088,
+        "pct_hispanic": 0.7,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 61667,
+        "total_population": 4010,
+        "pct_white": 0.162,
+        "pct_black": 0.086,
+        "pct_hispanic": 0.695,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 63333,
+        "total_population": 3940,
+        "pct_white": 0.168,
+        "pct_black": 0.084,
+        "pct_hispanic": 0.69,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 65000,
+        "total_population": 3870,
+        "pct_white": 0.174,
+        "pct_black": 0.082,
+        "pct_hispanic": 0.685,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 66667,
+        "total_population": 3800,
+        "pct_white": 0.18,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.68,
+        "displacement_risk": "Stable / Pre-Gentrification"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 68333,
+        "total_population": 3840,
+        "pct_white": 0.204,
+        "pct_black": 0.077,
+        "pct_hispanic": 0.654,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 70000,
+        "total_population": 3880,
+        "pct_white": 0.228,
+        "pct_black": 0.074,
+        "pct_hispanic": 0.628,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 71667,
+        "total_population": 3920,
+        "pct_white": 0.252,
+        "pct_black": 0.071,
+        "pct_hispanic": 0.602,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 73333,
+        "total_population": 3960,
+        "pct_white": 0.276,
+        "pct_black": 0.068,
+        "pct_hispanic": 0.576,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 75000,
+        "total_population": 4000,
+        "pct_white": 0.3,
+        "pct_black": 0.065,
+        "pct_hispanic": 0.55,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 110000,
+        "total_population": 4040,
+        "pct_white": 0.324,
+        "pct_black": 0.062,
+        "pct_hispanic": 0.524,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 145000,
+        "total_population": 4080,
+        "pct_white": 0.348,
+        "pct_black": 0.059,
+        "pct_hispanic": 0.498,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 180000,
+        "total_population": 4120,
+        "pct_white": 0.372,
+        "pct_black": 0.056,
+        "pct_hispanic": 0.472,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 215000,
+        "total_population": 4160,
+        "pct_white": 0.396,
+        "pct_black": 0.053,
+        "pct_hispanic": 0.446,
+        "displacement_risk": "Early Stage / Increasing Risk"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 250000,
+        "total_population": 4200,
+        "pct_white": 0.42,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.42,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 296000,
+        "total_population": 4730,
+        "pct_white": 0.44,
+        "pct_black": 0.049,
+        "pct_hispanic": 0.396,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 342000,
+        "total_population": 5260,
+        "pct_white": 0.46,
+        "pct_black": 0.048,
+        "pct_hispanic": 0.372,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 388000,
+        "total_population": 5790,
+        "pct_white": 0.48,
+        "pct_black": 0.047,
+        "pct_hispanic": 0.348,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 434000,
+        "total_population": 6320,
+        "pct_white": 0.5,
+        "pct_black": 0.046,
+        "pct_hispanic": 0.324,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 480000,
+        "total_population": 6850,
+        "pct_white": 0.52,
+        "pct_black": 0.045,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 514000,
+        "total_population": 7380,
+        "pct_white": 0.54,
+        "pct_black": 0.044,
+        "pct_hispanic": 0.276,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 548000,
+        "total_population": 7910,
+        "pct_white": 0.56,
+        "pct_black": 0.043,
+        "pct_hispanic": 0.252,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 582000,
+        "total_population": 8440,
+        "pct_white": 0.58,
+        "pct_black": 0.042,
+        "pct_hispanic": 0.228,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 616000,
+        "total_population": 8970,
+        "pct_white": 0.6,
+        "pct_black": 0.041,
+        "pct_hispanic": 0.204,
+        "displacement_risk": "Accelerating / High Risk"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 650000,
+        "total_population": 9500,
+        "pct_white": 0.62,
+        "pct_black": 0.04,
+        "pct_hispanic": 0.18,
+        "displacement_risk": "Advanced Stage / Displaced"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 673333,
+        "total_population": 10333,
+        "pct_white": 0.63,
+        "pct_black": 0.037,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Advanced Stage / Displaced"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 696667,
+        "total_population": 11167,
+        "pct_white": 0.64,
+        "pct_black": 0.033,
+        "pct_hispanic": 0.16,
+        "displacement_risk": "Advanced Stage / Displaced"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 720000,
+        "total_population": 12000,
+        "pct_white": 0.65,
+        "pct_black": 0.03,
+        "pct_hispanic": 0.15,
+        "displacement_risk": "Advanced Stage / Displaced"
+      }
+    ]
+  },
+  {
+    "region": "Red River Cultural District",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 120000,
+        "total_population": 3200,
+        "pct_white": 0.65,
+        "pct_black": 0.1,
+        "pct_hispanic": 0.18,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 127500,
+        "total_population": 3330,
+        "pct_white": 0.647,
+        "pct_black": 0.098,
+        "pct_hispanic": 0.182,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 135000,
+        "total_population": 3460,
+        "pct_white": 0.644,
+        "pct_black": 0.096,
+        "pct_hispanic": 0.184,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 142500,
+        "total_population": 3590,
+        "pct_white": 0.641,
+        "pct_black": 0.094,
+        "pct_hispanic": 0.186,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 150000,
+        "total_population": 3720,
+        "pct_white": 0.638,
+        "pct_black": 0.092,
+        "pct_hispanic": 0.188,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 165000,
+        "total_population": 3850,
+        "pct_white": 0.635,
+        "pct_black": 0.09,
+        "pct_hispanic": 0.19,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 180000,
+        "total_population": 3980,
+        "pct_white": 0.632,
+        "pct_black": 0.088,
+        "pct_hispanic": 0.192,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 195000,
+        "total_population": 4110,
+        "pct_white": 0.629,
+        "pct_black": 0.086,
+        "pct_hispanic": 0.194,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 210000,
+        "total_population": 4240,
+        "pct_white": 0.626,
+        "pct_black": 0.084,
+        "pct_hispanic": 0.196,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 225000,
+        "total_population": 4370,
+        "pct_white": 0.623,
+        "pct_black": 0.082,
+        "pct_hispanic": 0.198,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 250000,
+        "total_population": 4500,
+        "pct_white": 0.62,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.2,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 258000,
+        "total_population": 4670,
+        "pct_white": 0.622,
+        "pct_black": 0.078,
+        "pct_hispanic": 0.198,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 266000,
+        "total_population": 4840,
+        "pct_white": 0.624,
+        "pct_black": 0.076,
+        "pct_hispanic": 0.196,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 274000,
+        "total_population": 5010,
+        "pct_white": 0.626,
+        "pct_black": 0.074,
+        "pct_hispanic": 0.194,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 282000,
+        "total_population": 5180,
+        "pct_white": 0.628,
+        "pct_black": 0.072,
+        "pct_hispanic": 0.192,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 290000,
+        "total_population": 5350,
+        "pct_white": 0.63,
+        "pct_black": 0.07,
+        "pct_hispanic": 0.19,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 305000,
+        "total_population": 5520,
+        "pct_white": 0.632,
+        "pct_black": 0.068,
+        "pct_hispanic": 0.188,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 320000,
+        "total_population": 5690,
+        "pct_white": 0.634,
+        "pct_black": 0.066,
+        "pct_hispanic": 0.186,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 330000,
+        "total_population": 5860,
+        "pct_white": 0.636,
+        "pct_black": 0.064,
+        "pct_hispanic": 0.184,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 340000,
+        "total_population": 6030,
+        "pct_white": 0.638,
+        "pct_black": 0.062,
+        "pct_hispanic": 0.182,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 350000,
+        "total_population": 6200,
+        "pct_white": 0.64,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.18,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 386000,
+        "total_population": 6560,
+        "pct_white": 0.636,
+        "pct_black": 0.059,
+        "pct_hispanic": 0.178,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 422000,
+        "total_population": 6920,
+        "pct_white": 0.632,
+        "pct_black": 0.058,
+        "pct_hispanic": 0.176,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 458000,
+        "total_population": 7280,
+        "pct_white": 0.628,
+        "pct_black": 0.057,
+        "pct_hispanic": 0.174,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 494000,
+        "total_population": 7640,
+        "pct_white": 0.624,
+        "pct_black": 0.056,
+        "pct_hispanic": 0.172,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 530000,
+        "total_population": 8000,
+        "pct_white": 0.62,
+        "pct_black": 0.055,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 585000,
+        "total_population": 8360,
+        "pct_white": 0.616,
+        "pct_black": 0.054,
+        "pct_hispanic": 0.168,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 640000,
+        "total_population": 8720,
+        "pct_white": 0.612,
+        "pct_black": 0.053,
+        "pct_hispanic": 0.166,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 695000,
+        "total_population": 9080,
+        "pct_white": 0.608,
+        "pct_black": 0.052,
+        "pct_hispanic": 0.164,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 750000,
+        "total_population": 9440,
+        "pct_white": 0.604,
+        "pct_black": 0.051,
+        "pct_hispanic": 0.162,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 820000,
+        "total_population": 9800,
+        "pct_white": 0.6,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.16,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 910000,
+        "total_population": 10200,
+        "pct_white": 0.597,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.157,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 985000,
+        "total_population": 10600,
+        "pct_white": 0.593,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.153,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 950000,
+        "total_population": 11000,
+        "pct_white": 0.59,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.15,
+        "displacement_risk": "Severe"
+      }
+    ]
+  },
+  {
+    "region": "North Loop / Hyde Park",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 100000,
+        "total_population": 14000,
+        "pct_white": 0.78,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.12,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 110000,
+        "total_population": 14120,
+        "pct_white": 0.774,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.123,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 120000,
+        "total_population": 14240,
+        "pct_white": 0.768,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.126,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 130000,
+        "total_population": 14360,
+        "pct_white": 0.762,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.129,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 140000,
+        "total_population": 14480,
+        "pct_white": 0.756,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.132,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 150000,
+        "total_population": 14600,
+        "pct_white": 0.75,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.135,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 160000,
+        "total_population": 14720,
+        "pct_white": 0.744,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.138,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 170000,
+        "total_population": 14840,
+        "pct_white": 0.738,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.141,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 180000,
+        "total_population": 14960,
+        "pct_white": 0.732,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.144,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 190000,
+        "total_population": 15080,
+        "pct_white": 0.726,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.147,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 200000,
+        "total_population": 15200,
+        "pct_white": 0.72,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.15,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 215000,
+        "total_population": 15330,
+        "pct_white": 0.716,
+        "pct_black": 0.059,
+        "pct_hispanic": 0.152,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 230000,
+        "total_population": 15460,
+        "pct_white": 0.712,
+        "pct_black": 0.058,
+        "pct_hispanic": 0.154,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 245000,
+        "total_population": 15590,
+        "pct_white": 0.708,
+        "pct_black": 0.057,
+        "pct_hispanic": 0.156,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 260000,
+        "total_population": 15720,
+        "pct_white": 0.704,
+        "pct_black": 0.056,
+        "pct_hispanic": 0.158,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 275000,
+        "total_population": 15850,
+        "pct_white": 0.7,
+        "pct_black": 0.055,
+        "pct_hispanic": 0.16,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 290000,
+        "total_population": 15980,
+        "pct_white": 0.696,
+        "pct_black": 0.054,
+        "pct_hispanic": 0.162,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 305000,
+        "total_population": 16110,
+        "pct_white": 0.692,
+        "pct_black": 0.053,
+        "pct_hispanic": 0.164,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 320000,
+        "total_population": 16240,
+        "pct_white": 0.688,
+        "pct_black": 0.052,
+        "pct_hispanic": 0.166,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 335000,
+        "total_population": 16370,
+        "pct_white": 0.684,
+        "pct_black": 0.051,
+        "pct_hispanic": 0.168,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 350000,
+        "total_population": 16500,
+        "pct_white": 0.68,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 390000,
+        "total_population": 16670,
+        "pct_white": 0.676,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 430000,
+        "total_population": 16840,
+        "pct_white": 0.672,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 470000,
+        "total_population": 17010,
+        "pct_white": 0.668,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 510000,
+        "total_population": 17180,
+        "pct_white": 0.664,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 550000,
+        "total_population": 17350,
+        "pct_white": 0.66,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 590000,
+        "total_population": 17520,
+        "pct_white": 0.656,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 630000,
+        "total_population": 17690,
+        "pct_white": 0.652,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 670000,
+        "total_population": 17860,
+        "pct_white": 0.648,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 710000,
+        "total_population": 18030,
+        "pct_white": 0.644,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 750000,
+        "total_population": 18200,
+        "pct_white": 0.64,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.17,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 783333,
+        "total_population": 18467,
+        "pct_white": 0.637,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.167,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 816667,
+        "total_population": 18733,
+        "pct_white": 0.633,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.163,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 850000,
+        "total_population": 19000,
+        "pct_white": 0.63,
+        "pct_black": 0.05,
+        "pct_hispanic": 0.16,
+        "displacement_risk": "Very High"
+      }
+    ]
+  },
+  {
+    "region": "St. Johns / Rundberg",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 70000,
+        "total_population": 16000,
+        "pct_white": 0.4,
+        "pct_black": 0.12,
+        "pct_hispanic": 0.4,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 74000,
+        "total_population": 16400,
+        "pct_white": 0.385,
+        "pct_black": 0.118,
+        "pct_hispanic": 0.412,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 78000,
+        "total_population": 16800,
+        "pct_white": 0.37,
+        "pct_black": 0.116,
+        "pct_hispanic": 0.424,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 82000,
+        "total_population": 17200,
+        "pct_white": 0.355,
+        "pct_black": 0.114,
+        "pct_hispanic": 0.436,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 86000,
+        "total_population": 17600,
+        "pct_white": 0.34,
+        "pct_black": 0.112,
+        "pct_hispanic": 0.448,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 90000,
+        "total_population": 18000,
+        "pct_white": 0.325,
+        "pct_black": 0.11,
+        "pct_hispanic": 0.46,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 94000,
+        "total_population": 18400,
+        "pct_white": 0.31,
+        "pct_black": 0.108,
+        "pct_hispanic": 0.472,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 98000,
+        "total_population": 18800,
+        "pct_white": 0.295,
+        "pct_black": 0.106,
+        "pct_hispanic": 0.484,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 102000,
+        "total_population": 19200,
+        "pct_white": 0.28,
+        "pct_black": 0.104,
+        "pct_hispanic": 0.496,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 106000,
+        "total_population": 19600,
+        "pct_white": 0.265,
+        "pct_black": 0.102,
+        "pct_hispanic": 0.508,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 110000,
+        "total_population": 20000,
+        "pct_white": 0.25,
+        "pct_black": 0.1,
+        "pct_hispanic": 0.52,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 114000,
+        "total_population": 20400,
+        "pct_white": 0.245,
+        "pct_black": 0.099,
+        "pct_hispanic": 0.522,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 118000,
+        "total_population": 20800,
+        "pct_white": 0.24,
+        "pct_black": 0.098,
+        "pct_hispanic": 0.524,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 122000,
+        "total_population": 21200,
+        "pct_white": 0.235,
+        "pct_black": 0.097,
+        "pct_hispanic": 0.526,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 126000,
+        "total_population": 21600,
+        "pct_white": 0.23,
+        "pct_black": 0.096,
+        "pct_hispanic": 0.528,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 130000,
+        "total_population": 22000,
+        "pct_white": 0.225,
+        "pct_black": 0.095,
+        "pct_hispanic": 0.53,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 134000,
+        "total_population": 22400,
+        "pct_white": 0.22,
+        "pct_black": 0.094,
+        "pct_hispanic": 0.532,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 138000,
+        "total_population": 22800,
+        "pct_white": 0.215,
+        "pct_black": 0.093,
+        "pct_hispanic": 0.534,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 142000,
+        "total_population": 23200,
+        "pct_white": 0.21,
+        "pct_black": 0.092,
+        "pct_hispanic": 0.536,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 146000,
+        "total_population": 23600,
+        "pct_white": 0.205,
+        "pct_black": 0.091,
+        "pct_hispanic": 0.538,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 150000,
+        "total_population": 24000,
+        "pct_white": 0.2,
+        "pct_black": 0.09,
+        "pct_hispanic": 0.54,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 170000,
+        "total_population": 24400,
+        "pct_white": 0.204,
+        "pct_black": 0.089,
+        "pct_hispanic": 0.534,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 190000,
+        "total_population": 24800,
+        "pct_white": 0.208,
+        "pct_black": 0.088,
+        "pct_hispanic": 0.528,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 210000,
+        "total_population": 25200,
+        "pct_white": 0.212,
+        "pct_black": 0.087,
+        "pct_hispanic": 0.522,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 230000,
+        "total_population": 25600,
+        "pct_white": 0.216,
+        "pct_black": 0.086,
+        "pct_hispanic": 0.516,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 250000,
+        "total_population": 26000,
+        "pct_white": 0.22,
+        "pct_black": 0.085,
+        "pct_hispanic": 0.51,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 270000,
+        "total_population": 26400,
+        "pct_white": 0.224,
+        "pct_black": 0.084,
+        "pct_hispanic": 0.504,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 290000,
+        "total_population": 26800,
+        "pct_white": 0.228,
+        "pct_black": 0.083,
+        "pct_hispanic": 0.498,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 310000,
+        "total_population": 27200,
+        "pct_white": 0.232,
+        "pct_black": 0.082,
+        "pct_hispanic": 0.492,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 330000,
+        "total_population": 27600,
+        "pct_white": 0.236,
+        "pct_black": 0.081,
+        "pct_hispanic": 0.486,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 350000,
+        "total_population": 28000,
+        "pct_white": 0.24,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.48,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 373333,
+        "total_population": 28667,
+        "pct_white": 0.25,
+        "pct_black": 0.077,
+        "pct_hispanic": 0.47,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 396667,
+        "total_population": 29333,
+        "pct_white": 0.26,
+        "pct_black": 0.073,
+        "pct_hispanic": 0.46,
+        "displacement_risk": "Very High"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 420000,
+        "total_population": 30000,
+        "pct_white": 0.27,
+        "pct_black": 0.07,
+        "pct_hispanic": 0.45,
+        "displacement_risk": "Very High"
+      }
+    ]
+  },
+  {
+    "region": "Manor Road / Cherrywood",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 85000,
+        "total_population": 5000,
+        "pct_white": 0.35,
+        "pct_black": 0.3,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 92000,
+        "total_population": 5050,
+        "pct_white": 0.353,
+        "pct_black": 0.295,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 99000,
+        "total_population": 5100,
+        "pct_white": 0.356,
+        "pct_black": 0.29,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 106000,
+        "total_population": 5150,
+        "pct_white": 0.359,
+        "pct_black": 0.285,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 113000,
+        "total_population": 5200,
+        "pct_white": 0.362,
+        "pct_black": 0.28,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 120000,
+        "total_population": 5250,
+        "pct_white": 0.365,
+        "pct_black": 0.275,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 127000,
+        "total_population": 5300,
+        "pct_white": 0.368,
+        "pct_black": 0.27,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 134000,
+        "total_population": 5350,
+        "pct_white": 0.371,
+        "pct_black": 0.265,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 141000,
+        "total_population": 5400,
+        "pct_white": 0.374,
+        "pct_black": 0.26,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 148000,
+        "total_population": 5450,
+        "pct_white": 0.377,
+        "pct_black": 0.255,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Low Risk / Stable"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 155000,
+        "total_population": 5500,
+        "pct_white": 0.38,
+        "pct_black": 0.25,
+        "pct_hispanic": 0.3,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 162000,
+        "total_population": 5600,
+        "pct_white": 0.394,
+        "pct_black": 0.239,
+        "pct_hispanic": 0.294,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 169000,
+        "total_population": 5700,
+        "pct_white": 0.408,
+        "pct_black": 0.228,
+        "pct_hispanic": 0.288,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 176000,
+        "total_population": 5800,
+        "pct_white": 0.422,
+        "pct_black": 0.217,
+        "pct_hispanic": 0.282,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 183000,
+        "total_population": 5900,
+        "pct_white": 0.436,
+        "pct_black": 0.206,
+        "pct_hispanic": 0.276,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 190000,
+        "total_population": 6000,
+        "pct_white": 0.45,
+        "pct_black": 0.195,
+        "pct_hispanic": 0.27,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 197000,
+        "total_population": 6100,
+        "pct_white": 0.464,
+        "pct_black": 0.184,
+        "pct_hispanic": 0.264,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 204000,
+        "total_population": 6200,
+        "pct_white": 0.478,
+        "pct_black": 0.173,
+        "pct_hispanic": 0.258,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 211000,
+        "total_population": 6300,
+        "pct_white": 0.492,
+        "pct_black": 0.162,
+        "pct_hispanic": 0.252,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 218000,
+        "total_population": 6400,
+        "pct_white": 0.506,
+        "pct_black": 0.151,
+        "pct_hispanic": 0.246,
+        "displacement_risk": "Moderate Risk / Early Stage"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 225000,
+        "total_population": 6500,
+        "pct_white": 0.52,
+        "pct_black": 0.14,
+        "pct_hispanic": 0.24,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 260000,
+        "total_population": 6670,
+        "pct_white": 0.528,
+        "pct_black": 0.134,
+        "pct_hispanic": 0.234,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 295000,
+        "total_population": 6840,
+        "pct_white": 0.536,
+        "pct_black": 0.128,
+        "pct_hispanic": 0.228,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 330000,
+        "total_population": 7010,
+        "pct_white": 0.544,
+        "pct_black": 0.122,
+        "pct_hispanic": 0.222,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 365000,
+        "total_population": 7180,
+        "pct_white": 0.552,
+        "pct_black": 0.116,
+        "pct_hispanic": 0.216,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 400000,
+        "total_population": 7350,
+        "pct_white": 0.56,
+        "pct_black": 0.11,
+        "pct_hispanic": 0.21,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 432000,
+        "total_population": 7520,
+        "pct_white": 0.568,
+        "pct_black": 0.104,
+        "pct_hispanic": 0.204,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 464000,
+        "total_population": 7690,
+        "pct_white": 0.576,
+        "pct_black": 0.098,
+        "pct_hispanic": 0.198,
+        "displacement_risk": "High Risk / Advanced Stage"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 496000,
+        "total_population": 7860,
+        "pct_white": 0.584,
+        "pct_black": 0.092,
+        "pct_hispanic": 0.192,
+        "displacement_risk": "Severe Risk / Late Stage"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 528000,
+        "total_population": 8030,
+        "pct_white": 0.592,
+        "pct_black": 0.086,
+        "pct_hispanic": 0.186,
+        "displacement_risk": "Severe Risk / Late Stage"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 560000,
+        "total_population": 8200,
+        "pct_white": 0.6,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.18,
+        "displacement_risk": "Severe Risk / Late Stage"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 600000,
+        "total_population": 8467,
+        "pct_white": 0.61,
+        "pct_black": 0.077,
+        "pct_hispanic": 0.173,
+        "displacement_risk": "Severe Risk / Late Stage"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 640000,
+        "total_population": 8733,
+        "pct_white": 0.62,
+        "pct_black": 0.073,
+        "pct_hispanic": 0.167,
+        "displacement_risk": "Severe Risk / Late Stage"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 680000,
+        "total_population": 9000,
+        "pct_white": 0.63,
+        "pct_black": 0.07,
+        "pct_hispanic": 0.16,
+        "displacement_risk": "Severe Risk / Late Stage"
+      }
+    ]
+  },
+  {
+    "region": "The Domain / North Burnet",
+    "history": [
+      {
+        "year": 1990,
+        "median_home_value": 70000,
+        "total_population": 5000,
+        "pct_white": 0.6,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.24,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1991,
+        "median_home_value": 76500,
+        "total_population": 5200,
+        "pct_white": 0.592,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.244,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1992,
+        "median_home_value": 83000,
+        "total_population": 5400,
+        "pct_white": 0.584,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.248,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1993,
+        "median_home_value": 89500,
+        "total_population": 5600,
+        "pct_white": 0.576,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.252,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1994,
+        "median_home_value": 96000,
+        "total_population": 5800,
+        "pct_white": 0.568,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.256,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1995,
+        "median_home_value": 102500,
+        "total_population": 6000,
+        "pct_white": 0.56,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.26,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1996,
+        "median_home_value": 109000,
+        "total_population": 6200,
+        "pct_white": 0.552,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.264,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1997,
+        "median_home_value": 115500,
+        "total_population": 6400,
+        "pct_white": 0.544,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.268,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1998,
+        "median_home_value": 122000,
+        "total_population": 6600,
+        "pct_white": 0.536,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.272,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 1999,
+        "median_home_value": 128500,
+        "total_population": 6800,
+        "pct_white": 0.528,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.276,
+        "displacement_risk": "Low"
+      },
+      {
+        "year": 2000,
+        "median_home_value": 135000,
+        "total_population": 7000,
+        "pct_white": 0.52,
+        "pct_black": 0.08,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2001,
+        "median_home_value": 141500,
+        "total_population": 7500,
+        "pct_white": 0.516,
+        "pct_black": 0.079,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2002,
+        "median_home_value": 148000,
+        "total_population": 8000,
+        "pct_white": 0.512,
+        "pct_black": 0.078,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2003,
+        "median_home_value": 154500,
+        "total_population": 8500,
+        "pct_white": 0.508,
+        "pct_black": 0.077,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2004,
+        "median_home_value": 161000,
+        "total_population": 9000,
+        "pct_white": 0.504,
+        "pct_black": 0.076,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2005,
+        "median_home_value": 167500,
+        "total_population": 9500,
+        "pct_white": 0.5,
+        "pct_black": 0.075,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2006,
+        "median_home_value": 174000,
+        "total_population": 10000,
+        "pct_white": 0.496,
+        "pct_black": 0.074,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2007,
+        "median_home_value": 180500,
+        "total_population": 10500,
+        "pct_white": 0.492,
+        "pct_black": 0.073,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2008,
+        "median_home_value": 187000,
+        "total_population": 11000,
+        "pct_white": 0.488,
+        "pct_black": 0.072,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2009,
+        "median_home_value": 193500,
+        "total_population": 11500,
+        "pct_white": 0.484,
+        "pct_black": 0.071,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "Moderate"
+      },
+      {
+        "year": 2010,
+        "median_home_value": 200000,
+        "total_population": 12000,
+        "pct_white": 0.48,
+        "pct_black": 0.07,
+        "pct_hispanic": 0.28,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2011,
+        "median_home_value": 224000,
+        "total_population": 13000,
+        "pct_white": 0.478,
+        "pct_black": 0.069,
+        "pct_hispanic": 0.274,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2012,
+        "median_home_value": 248000,
+        "total_population": 14000,
+        "pct_white": 0.476,
+        "pct_black": 0.068,
+        "pct_hispanic": 0.268,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2013,
+        "median_home_value": 272000,
+        "total_population": 15000,
+        "pct_white": 0.474,
+        "pct_black": 0.067,
+        "pct_hispanic": 0.262,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2014,
+        "median_home_value": 296000,
+        "total_population": 16000,
+        "pct_white": 0.472,
+        "pct_black": 0.066,
+        "pct_hispanic": 0.256,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2015,
+        "median_home_value": 320000,
+        "total_population": 17000,
+        "pct_white": 0.47,
+        "pct_black": 0.065,
+        "pct_hispanic": 0.25,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2016,
+        "median_home_value": 340000,
+        "total_population": 18000,
+        "pct_white": 0.468,
+        "pct_black": 0.064,
+        "pct_hispanic": 0.244,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2017,
+        "median_home_value": 360000,
+        "total_population": 19000,
+        "pct_white": 0.466,
+        "pct_black": 0.063,
+        "pct_hispanic": 0.238,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2018,
+        "median_home_value": 380000,
+        "total_population": 20000,
+        "pct_white": 0.464,
+        "pct_black": 0.062,
+        "pct_hispanic": 0.232,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2019,
+        "median_home_value": 400000,
+        "total_population": 21000,
+        "pct_white": 0.462,
+        "pct_black": 0.061,
+        "pct_hispanic": 0.226,
+        "displacement_risk": "High"
+      },
+      {
+        "year": 2020,
+        "median_home_value": 420000,
+        "total_population": 22000,
+        "pct_white": 0.46,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.22,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2021,
+        "median_home_value": 440000,
+        "total_population": 24000,
+        "pct_white": 0.4533,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.2133,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2022,
+        "median_home_value": 460000,
+        "total_population": 26000,
+        "pct_white": 0.4467,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.2067,
+        "displacement_risk": "Severe"
+      },
+      {
+        "year": 2023,
+        "median_home_value": 480000,
+        "total_population": 28000,
+        "pct_white": 0.44,
+        "pct_black": 0.06,
+        "pct_hispanic": 0.2,
+        "displacement_risk": "Severe"
+      }
+    ]
+  }
+]

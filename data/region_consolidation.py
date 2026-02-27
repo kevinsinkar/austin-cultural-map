@@ -2,9 +2,11 @@ import google.generativeai as genai
 import json
 import re
 import ast
+import os
 
 # 1. Configuration
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
+API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_API_KEY")
+genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-2.5-pro')
 
 def clean_js_to_dict(filename):
@@ -51,7 +53,7 @@ def clean_js_to_dict(filename):
 def load_all_data():
     print("🧹 Cleaning and loading Austin datasets...")
     # Map the files based on your specific filenames
-    regions_data = clean_js_to_dict('regions.js')
+    regions_data = clean_js_to_dict('updated_regions.js')
     demographics = clean_js_to_dict('demographics.js')
     properties = clean_js_to_dict('propertyData.js')
     
@@ -61,7 +63,6 @@ def load_all_data():
         
     return regions_data, demographics, properties, socio
         
-    return regions_data, demographics, properties, socio
 
 def generate_yearly_data(region_name, data_context):
     """

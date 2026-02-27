@@ -1,4 +1,4 @@
-export { REGIONS_GEOJSON } from "./regions";
+export { REGIONS_GEOJSON } from "./updated_regions";
 export { LEGACY_OPERATING, LEGACY_CLOSED } from "./businesses";
 export { DEMOGRAPHICS } from "./demographics";
 export { SOCIOECONOMIC } from "./socioeconomic";
