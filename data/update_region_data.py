@@ -1,113 +1,153 @@
 import os
 import json
 import re
+import time
 import google.generativeai as genai
+from google.api_core import exceptions
 
 # --- CONFIGURATION ---
 API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_API_KEY")
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-2.5-pro')
 
-# File paths
+# Input File
 REGIONS_FILE = 'final_updated_regions.js'
-DEMO_FILE = 'demographics.js'
-PROP_FILE = 'propertyData.js'
-SOCIO_FILE = 'socioeconomic.js'
+
+# Separate Interim Output Files
+INTERIM_FILES = {
+    "demographics": "interim_demographics.json",
+    "property": "interim_property.json",
+    "socioeconomic": "interim_socioeconomic.json",
+    "progress": "generation_checkpoint.json" # Tracks completed region names
+}
+
+# --- RATE LIMIT SETTINGS ---
+# Increase this if you continue to hit daily limits early
+SECONDS_BETWEEN_REGIONS = 12 
+MAX_RETRIES = 3
 
 def extract_json_from_js(filepath, var_name):
-    """Extracts the JSON/List content assigned to a JS constant."""
+    """Extracts the JSON content assigned to a JS constant."""
+    if not os.path.exists(filepath):
+        return None
     with open(filepath, 'r') as f:
         content = f.read()
-    # Simple regex to find content after 'export const VAR_NAME = '
     match = re.search(rf'export const {var_name}\s*=\s*(.*);', content, re.DOTALL)
     if match:
         raw_data = match.group(1).strip()
-        # Note: This works best if the JS content is valid JSON-like (e.g. no functions)
-        # For complex JS objects, consider a proper JS parser if this fails.
         try:
             return json.loads(raw_data)
         except:
-            # If not valid JSON (e.g. uses single quotes), attempt simple cleanup
             raw_data = raw_data.replace("'", '"')
-            # Remove trailing commas before closing brackets/braces
             raw_data = re.sub(r',\s*([\]}])', r'\1', raw_data)
             return json.loads(raw_data)
     return None
 
-def save_to_js(filepath, var_name, data):
-    """Saves data back to JS file with export constant."""
-    with open(filepath, 'w') as f:
-        f.write(f"export const {var_name} = ")
+def load_interim_data(key):
+    """Loads existing data for a specific category from its interim file."""
+    filename = INTERIM_FILES[key]
+    if os.path.exists(filename):
+        with open(filename, 'r') as f:
+            return json.load(f)
+    return []
+
+def load_completed_list():
+    """Loads the list of regions already processed."""
+    if os.path.exists(INTERIM_FILES["progress"]):
+        with open(INTERIM_FILES["progress"], 'r') as f:
+            return json.load(f)
+    return []
+
+def save_interim_data(key, data):
+    """Saves a category's list to its specific interim file."""
+    with open(INTERIM_FILES[key], 'w') as f:
         json.dump(data, f, indent=2)
-        f.write(";\n")
+
+def save_completed_list(completed_regions):
+    """Saves the checkpoint list of completed region names."""
+    with open(INTERIM_FILES["progress"], 'w') as f:
+        json.dump(completed_regions, f, indent=2)
 
 def generate_region_updates(region_name, heritage):
-    """Calls Gemini to generate data entries for a specific region."""
+    """Calls Gemini with retry logic for 429 errors."""
     prompt = f"""
-    Act as a data analyst specializing in Austin, Texas urban development and demographics.
-    Generate historical and projected data for the region: "{region_name}".
-    Heritage description: {heritage}
-
-    Tasks:
-    1. Generate DEMOGRAPHICS entries for years: 1990, 2000, 2010, 2020, 2023, 2025.
-       Fields: total, pctWhite, pctBlack, pctHispanic, pctAsian, pctOther, popBlack, popHispanic, popWhite.
-    2. Generate PROPERTY_DATA entries for years: 2005, 2010, 2015, 2020, 2023, 2025.
-       Fields: value (median home), homestead (decimal), demos, newBuild, yoy (decimal).
-    3. Generate SOCIOECONOMIC entries for years: 2000, 2010, 2020, 2023, 2025.
-       Fields: incomeAdj, homeValue, pctBachelors, pctCostBurdened, confidence.
-
-    Ensure data trends are realistic based on the heritage description (e.g., gentrification patterns in Austin).
-    Return ONLY a valid JSON object with three keys: "demographics", "property", and "socioeconomic".
-    Do not include markdown formatting or backticks.
+    Generate historical and projected data for the Austin region: "{region_name}".
+    Heritage context: {heritage}
+    
+    Provide data for years 1990-2025.
+    Return ONLY a valid JSON object with these exact keys: "demographics", "property", "socioeconomic".
+    
+    IMPORTANT: Each item in the lists MUST be an object (dictionary).
+    Example format: 
+    "demographics": [{{ "year": 1990, "total": 5000, ... }}]
     """
     
-    response = model.generate_content(prompt)
-    try:
-        # Clean response text in case Gemini adds markdown code blocks
-        clean_text = re.sub(r'```json|```', '', response.text).strip()
-        return json.loads(clean_text)
-    except Exception as e:
-        print(f"Error parsing Gemini response for {region_name}: {e}")
-        return None
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = model.generate_content(prompt)
+            clean_text = re.sub(r'```json|```', '', response.text).strip()
+            return json.loads(clean_text)
+        except exceptions.ResourceExhausted:
+            # This handles your "Quota Exceeded" 429 error
+            wait_time = (attempt + 1) * 75 
+            print(f"!! Quota Exceeded. Sleeping {wait_time}s before retry {attempt+1}/{MAX_RETRIES}...")
+            time.sleep(wait_time)
+        except Exception as e:
+            print(f"Non-quota error for {region_name}: {e}")
+            break
+    return None
 
 def main():
-    # 1. Load regions
     regions_data = extract_json_from_js(REGIONS_FILE, 'REGIONS_GEOJSON')
     if not regions_data:
-        print("Failed to load regions.")
+        print("Error: Could not find REGIONS_GEOJSON in the specified file.")
         return
 
-    # 2. Extract existing data to append to
-    all_demographics = []
-    all_property = []
-    all_socio = []
-
-    # 3. Iterate through regions
+    # Load existing interim data to append to
+    all_data = {
+        "demographics": load_interim_data("demographics"),
+        "property": load_interim_data("property"),
+        "socioeconomic": load_interim_data("socioeconomic")
+    }
+    completed_regions = load_completed_list()
+    
     for feature in regions_data['features']:
-        props = feature['properties']
-        region_name = props['region_name']
-        heritage = props.get('heritage', 'N/A')
+        region_name = feature['properties']['region_name']
+        heritage = feature['properties'].get('heritage', 'N/A')
         
-        print(f"Processing data for: {region_name}...")
+        if region_name in completed_regions:
+            print(f"Skipping {region_name} (Checkpoint found).")
+            continue
         
+        print(f"Requesting data for: {region_name}...")
         updates = generate_region_updates(region_name, heritage)
+        
         if updates:
-            # Add region name to generated items and append
-            for item in updates['demographics']:
-                item['region'] = region_name
-                all_demographics.append(item)
-            for item in updates['property']:
-                item['region'] = region_name
-                all_property.append(item)
-            for item in updates['socioeconomic']:
-                item['region'] = region_name
-                all_socio.append(item)
+            for key in ["demographics", "property", "socioeconomic"]:
+                if key in updates and isinstance(updates[key], list):
+                    for entry in updates[key]:
+                        # Check if entry is a dictionary before assigning
+                        if isinstance(entry, dict):
+                            entry['region'] = region_name
+                        else:
+                            print(f"Warning: Expected dict in {key}, but got {type(entry)}: {entry}")
+                            continue 
+                    
+                    all_data[key].extend([e for e in updates[key] if isinstance(e, dict)])
+                    save_interim_data(key, all_data[key])
+            
+            # Update checkpoint
+            completed_regions.append(region_name)
+            save_completed_list(completed_regions)
+            
+            print(f"Saved {region_name} to interim files.")
+            time.sleep(SECONDS_BETWEEN_REGIONS)
+        else:
+            print(f"Failed to retrieve data for {region_name} after retries. Stopping script.")
+            break
 
-    # 4. Save results
-    save_to_js(DEMO_FILE, 'DEMOGRAPHICS', all_demographics)
-    save_to_js(PROP_FILE, 'PROPERTY_DATA', all_property)
-    save_to_js(SOCIO_FILE, 'SOCIOECONOMIC', all_socio)
-    print("Updates complete.")
+    print("\nProcessing complete.")
+    print(f"Data stored in: {list(INTERIM_FILES.values())}")
 
 if __name__ == "__main__":
     main()
