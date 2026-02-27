@@ -40,6 +40,18 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
     return { startYear, endYear, span: endYear - startYear };
   }, [pan, yearRangeConfig]);
 
+  // Group infrastructure events by category for swimlanes
+  const infraByCategory = useMemo(() => {
+    const infraEvents = TIMELINE_INFRA.filter((e) => tlFilter === "all" || e.cat === tlFilter);
+    const grouped = {};
+    
+    ["policy", "economic", "development", "cultural", "transit", "displacement"].forEach((cat) => {
+      grouped[cat] = infraEvents.filter((e) => e.cat === cat);
+    });
+    
+    return grouped;
+  }, [tlFilter]);
+
   // Business Timeline (include full business objects)
   const timelineBiz = useMemo(() => {
     const items = [];
@@ -155,7 +167,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
             </div>
 
             <div className="timeline-viewport" ref={timelineViewportRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp} style={{cursor: isDragging ? "grabbing" : "grab"}} tabIndex={0}>
-              <div className="timeline-track" style={{ width: "100%", height: 600 }}>
+              <div className="timeline-track" style={{ width: "100%", height: "auto", minHeight: 800, display: "flex", flexDirection: "column", gap: 8, padding: "16px 0" }}>
                 <div className="timeline-ruler" />
 
                 {zoomLevel === 1 ? (
@@ -195,26 +207,75 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                   })
                 )}
 
-                {/* Render individual events only */}
+                {/* Infrastructure Swimlanes */}
+                <div style={{ display: "flex", flexDirection: "column", width: "100%", gap: 2 }}>
+                  {["policy", "economic", "development", "cultural", "transit", "displacement"].map((cat) => {
+                    const events = infraByCategory[cat];
+                    if (events.length === 0) return null;
+
+                    return (
+                      <div key={`swimlane-${cat}`} style={{ display: "flex", alignItems: "center", gap: 8, width: "100%", minHeight: 40, background: "#f9f8f7", borderRadius: 4, paddingRight: 8 }}>
+                        {/* Category Label */}
+                        <div style={{ minWidth: 100, paddingLeft: 8, fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "capitalize", whiteSpace: "nowrap" }}>
+                          {cat}
+                        </div>
+
+                        {/* Track Area */}
+                        <div style={{ position: "relative", flex: 1, height: 30, background: "#fff" }}>
+                          {events.map((ev, idx) => {
+                            const pct = ((ev.year - visibleYearRange.startYear) / visibleYearRange.span) * 100;
+                            if (pct < -5 || pct > 105) return null;
+
+                            const isHovered = hoveredInfra === ev;
+
+                            return (
+                              <div
+                                key={`infra-${cat}-${ev.year}-${idx}`}
+                                className="timeline-event timeline-event--infra"
+                                style={{ top: "50%", left: `${pct}%`, transform: "translate(-50%, -50%)" }}
+                                onMouseEnter={() => { setHoveredInfra(ev); setHoveredBusiness(null); }}
+                                onMouseLeave={() => setHoveredInfra(null)}
+                              >
+                                <div
+                                  className="timeline-infra-dot"
+                                  style={{
+                                    width: isHovered ? 10 : 8,
+                                    height: isHovered ? 10 : 8,
+                                    background: catColor(ev.cat),
+                                    boxShadow: isHovered ? `0 0 0 3px ${catColor(ev.cat)}40` : `0 0 0 1.5px ${catColor(ev.cat)}`,
+                                    transition: "all 0.15s ease",
+                                    cursor: "pointer",
+                                  }}
+                                />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Business Events Section */}
+                <div style={{ borderTop: "2px solid #e8e5e0", paddingTop: 12, marginTop: 8 }} />
+                <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8 }}>
+                  Businesses (Openings ▲ / Closures ▼)
+                </div>
+
                 {combinedEvents
                   .filter((ev) => {
-                    if (ev._kind === "infra") return tlFilter === "all" || ev.cat === tlFilter;
+                    // Only render business events, skip infra (handled in swimlanes)
+                    if (ev._kind === "infra") return false;
                     const bizMatchesAction = bizActionFilter === "all" || ev.action === bizActionFilter;
                     const bizMatchesTl = tlFilter === "all" || (tlFilter === "displacement" && ev.action === "closed") || (tlFilter === "cultural" && (ev.culture === "African American" || ev.culture === "Mexican American/Latino")) || (tlFilter === "economic" && ev.culture === "General Austin");
-                    return ev._kind === "business" && bizMatchesAction && bizMatchesTl;
+                    return bizMatchesAction && bizMatchesTl;
                   })
                   .map((ev, idx) => {
                     const pct = ((ev.year - visibleYearRange.startYear) / visibleYearRange.span) * 100;
                     // don't render points outside view
                     if (pct < -5 || pct > 105) return null;
                     const leftOffset = `calc(50% + ${idx * 12}px)`; // stagger horizontally
-                    if (ev._kind === "infra") {
-                      return (
-                        <div key={`infra-${ev.year}-${idx}`} className="timeline-event timeline-event--infra" style={{ top: `${pct}%`, left: leftOffset }} onMouseEnter={() => { setHoveredInfra(ev); setHoveredBusiness(null); }} onMouseLeave={() => setHoveredInfra(null)}>
-                          <div className="timeline-infra-dot" style={{ background: catColor(ev.cat), boxShadow: "0 0 0 1.5px " + catColor(ev.cat) }} />
-                        </div>
-                      );
-                    }
+                    
                     const isClose = ev.action === "closed";
                     const isHovered = hoveredBusiness === ev;
                     const isSelected = selectedBusiness && selectedBusiness.name === ev.name && selectedBusiness.year === ev.year && selectedBusiness.action === ev.action;
