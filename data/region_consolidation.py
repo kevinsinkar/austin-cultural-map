@@ -54,8 +54,10 @@ def load_all_data():
     print("🧹 Cleaning and loading Austin datasets...")
     # Map the files based on your specific filenames
     regions_data = clean_js_to_dict('regions.js')
-    demographics = clean_js_to_dict('demographics.js')
-    properties = clean_js_to_dict('propertyData.js')
+    with open('interim_demographics.json', 'r', encoding='utf-8') as f:
+        demographics = json.load(f)
+    with open('interim_property.json', 'r', encoding='utf-8') as f:
+        properties = json.load(f)
     
     # socioeconomic.json is already standard JSON
     with open('socioeconomic.json', 'r', encoding='utf-8') as f:

@@ -9,10 +9,10 @@ genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 FILES = {
-    "demographics": "demographics.js",
+    "demographics": "interim_demographics.json",
     "dvi_raw": "dvi_raw.json",
     "geo_tracts": "udp_austin_dvi.geojson",
-    "regions": "updated_regions.js"
+    "regions": "final_updated_regions.js"
 }
 
 def robust_load_js(filepath, var_name):

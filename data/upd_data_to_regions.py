@@ -4,7 +4,7 @@ import os
 
 # --- CONFIGURATION ---
 INPUT_FILE = "udp_austin.geojson"
-OUTPUT_FILE = "updated_regions.js"
+OUTPUT_FILE = "final_updated_regions.js"
 
 API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_API_KEY")
 genai.configure(api_key=API_KEY)
