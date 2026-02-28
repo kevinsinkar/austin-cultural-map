@@ -16,6 +16,8 @@ export default function RegionDetailPanel({
   regionBizOpen,
   regionBizClosed,
   demoChartData,
+  propertyNow,
+  propertyPrev,
   socioNow,
   socioPrev,
   tippingPoint,
@@ -121,29 +123,58 @@ export default function RegionDetailPanel({
             if (!n) return null;
             return (
               <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
-                In <strong>{n.year}</strong>, total pop. was <strong>{n.total.toLocaleString()}</strong>.
-                Black: <strong style={{ color: DEMO_COLORS.Black }}>{n.popBlack.toLocaleString()}</strong>.
-                Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{n.popHispanic.toLocaleString()}</strong>.
-                White: <strong style={{ color: DEMO_COLORS.White }}>{n.popWhite.toLocaleString()}</strong>.
+                In <strong>{n.year}</strong>, total pop. was <strong>{n.total != null ? n.total.toLocaleString() : "N/A"}</strong>.
+                Black: <strong style={{ color: DEMO_COLORS.Black }}>{n.popBlack != null ? n.popBlack.toLocaleString() : "N/A"}</strong>.
+                Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{n.popHispanic != null ? n.popHispanic.toLocaleString() : "N/A"}</strong>.
+                White: <strong style={{ color: DEMO_COLORS.White }}>{n.popWhite != null ? n.popWhite.toLocaleString() : "N/A"}</strong>.
               </div>
             );
           })()}
         </div>
 
-        {/* Metrics */}
-        {socioNow && (
+        {/* Property & Socioeconomic Metrics */}
+        {(propertyNow || socioNow) && (
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-            {[
-              { label: "Median Income", value: socioNow.incomeAdj, fmt: (v) => "$" + (v / 1000).toFixed(0) + "k", prevVal: socioPrev?.incomeAdj, sub: "Adj. 2023$" },
-              { label: "Home Value", value: socioNow.homeValue, fmt: (v) => "$" + (v / 1000).toFixed(0) + "k", prevVal: socioPrev?.homeValue, sub: "Appraised" },
-              { label: "Bachelor's+", value: socioNow.pctBachelors, fmt: fmtPct, prevVal: socioPrev?.pctBachelors, sub: "Adults 25+" },
-              { label: "Cost-Burdened", value: socioNow.pctCostBurdened, fmt: fmtPct, prevVal: socioPrev?.pctCostBurdened, sub: "Rent >30%", inv: true },
+            {/* Property Metrics */}
+            {propertyNow && [
+              { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value, sub: "Appraised" },
+              { label: "Median Rent", value: propertyNow.median_rent_monthly, fmt: (v) => v != null ? "$" + v.toLocaleString() : "N/A", prevVal: propertyPrev?.median_rent_monthly, sub: "Monthly" },
+              { label: "Residential Units", value: propertyNow.residential_units, fmt: (v) => v != null ? v.toLocaleString() : "N/A", prevVal: propertyPrev?.residential_units, sub: "Units" },
+              { label: "Commercial Sqft", value: propertyNow.commercial_sqft, fmt: (v) => v != null ? v.toLocaleString() : "N/A", prevVal: propertyPrev?.commercial_sqft, sub: "Sqft" },
+            ].map((c, i) => {
+              const ch = c.prevVal != null ? fmtChange(c.value, c.prevVal) : null;
+              const up = ch?.dir === "up";
+              // For property, up is usually good except for rent
+              const bad = c.label === "Median Rent" ? up : !up;
+              return (
+                <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                  <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{c.fmt(c.value)}</span>
+                    {ch && (
+                      <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${propertyPrev?.year}`}>
+                        <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
+                        {Math.abs(ch.raw).toFixed(0)}%
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
+                    {c.sub}
+                    {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
+                  </div>
+                </div>
+              );
+            })}
+            {/* Socioeconomic Metrics */}
+            {socioNow && [
+              { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => "$" + (v / 1000).toFixed(0) + "k", prevVal: socioPrev?.median_household_income, sub: "Annual" },
+              { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: fmtPct, prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true },
             ].map((c, i) => {
               const ch = c.prevVal != null ? fmtChange(c.value, c.prevVal) : null;
               const up = ch?.dir === "up";
               const bad = c.inv ? up : !up;
               return (
-                <div key={i} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
+                <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
                   <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                     <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{c.fmt(c.value)}</span>
@@ -157,7 +188,6 @@ export default function RegionDetailPanel({
                   <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
                     {c.sub}
                     {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
-                    {socioNow.confidence === "Medium" && <span title="Derived from secondary source with some boundary approximation" style={{ cursor: "help", marginLeft: 3 }}>ⓘ</span>}
                   </div>
                 </div>
               );

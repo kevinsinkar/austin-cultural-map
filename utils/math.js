@@ -1,7 +1,8 @@
 import * as d3 from "d3";
 import _ from "lodash";
-import { DVI_LOOKUP } from "../data/dvi";
-import { SOCIOECONOMIC } from "../data/socioeconomic";
+import { DVI_LOOKUP } from "../data/dvi_generated.js";
+import { SOCIOECONOMIC } from "../data";
+import { NAME_TO_ID } from "../data/regionLookup";
 
 // ── DVI interpolation ──
 
@@ -18,8 +19,12 @@ export function lerp(pts, yr) {
   return 0;
 }
 
-export function interpolateDvi(n, yr) {
-  return lerp(DVI_LOOKUP[n], yr);
+/**
+ * Look up the interpolated DVI for a region at a given year.
+ * @param {number|string} regionId – numeric region_id (preferred) or region_name fallback
+ */
+export function interpolateDvi(regionId, yr) {
+  return lerp(DVI_LOOKUP[regionId], yr);
 }
 
 export function getDviColor(dvi, nd = false) {
@@ -45,17 +50,21 @@ export function getDviBandColor(d) {
   return "#dc2626";
 }
 
-export function getDviTimeSeries(regionName) {
+export function getDviTimeSeries(regionId) {
   return [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023].map((yr) => ({
     year: yr,
-    dvi: interpolateDvi(regionName, yr),
+    dvi: interpolateDvi(regionId, yr),
   }));
 }
 
 // ── Socioeconomic interpolation ──
 
 export function interpolateSocio(rn, ty) {
-  const rows = SOCIOECONOMIC.filter((s) => s.region === rn);
+  // Prefer region_id join; fall back to name
+  const rid = NAME_TO_ID.get(rn);
+  const rows = rid != null
+    ? SOCIOECONOMIC.filter((s) => s.region_id === rid)
+    : SOCIOECONOMIC.filter((s) => s.region === rn);
   if (!rows.length) return null;
   const sorted = _.sortBy(rows, "year");
   const ex = sorted.find((r) => r.year === ty);
@@ -82,6 +91,9 @@ export function interpolateSocio(rn, ty) {
 }
 
 export function findPriorSocio(rn, ty) {
-  const rows = SOCIOECONOMIC.filter((s) => s.region === rn && s.year < ty);
+  const rid = NAME_TO_ID.get(rn);
+  const rows = rid != null
+    ? SOCIOECONOMIC.filter((s) => s.region_id === rid && s.year < ty)
+    : SOCIOECONOMIC.filter((s) => s.region === rn && s.year < ty);
   return rows.length ? _.maxBy(rows, "year") : null;
 }

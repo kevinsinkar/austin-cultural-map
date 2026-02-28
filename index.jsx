@@ -24,6 +24,7 @@ import Header from "./components/Header";
 import AboutModal from "./components/AboutModal";
 import AgendaModal from "./components/AgendaModal";
 import MapView from "./components/MapView";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import ComparisonView from "./components/ComparisonView";
 import TimelineView from "./components/TimelineView";
 
@@ -84,7 +85,7 @@ export default function AustinCulturalMap() {
   const currentDvi = useMemo(() => {
     const m = {};
     REGIONS_GEOJSON.features.forEach((f) => {
-      m[f.properties.region_name] = interpolateDvi(f.properties.region_name, year);
+      m[f.properties.region_name] = interpolateDvi(f.properties.region_id, year);
     });
     return m;
   }, [year]);
@@ -258,43 +259,43 @@ export default function AustinCulturalMap() {
         )}
 
         {viewMode === "map" && (
-          <MapView
-            year={year}
-            setYear={setYear}
-            isPlaying={isPlaying}
-            setIsPlaying={setIsPlaying}
-            showHeritage={showHeritage}
-            setShowHeritage={setShowHeritage}
-            showPins={showPins}
-            setShowPins={setShowPins}
-            showProjectConnect={showProjectConnect}
-            setShowProjectConnect={setShowProjectConnect}
-            showMusicVenues={showMusicVenues}
-            setShowMusicVenues={setShowMusicVenues}
-            showDevPressure={showDevPressure}
-            setShowDevPressure={setShowDevPressure}
-            activeRegionId={activeRegionId}
-            setActiveRegionId={setActiveRegionId}
-            activeFeature={activeFeature}
-            setActiveFeature={setActiveFeature}
-            selectedRegion={selectedRegion}
-            setSelectedRegion={setSelectedRegion}
-            hoveredRegion={hoveredRegion}
-            setHoveredRegion={setHoveredRegion}
-            selectedBiz={selectedBiz}
-            setSelectedBiz={setSelectedBiz}
-            bizTab={bizTab}
-            setBizTab={setBizTab}
-            isMobile={isMobile}
-            currentDvi={currentDvi}
-            regionBizOpen={regionBizOpen}
-            regionBizClosed={regionBizClosed}
-            demoChartData={demoChartData}
-            socioNow={socioNow}
-            socioPrev={socioPrev}
-            tippingPoint={tippingPoint}
-            narrativeCallouts={narrativeCallouts}
-          />
+          <ErrorBoundary>
+            <MapView
+              year={year}
+              setYear={setYear}
+              isPlaying={isPlaying}
+              setIsPlaying={setIsPlaying}
+              showHeritage={showHeritage}
+              setShowHeritage={setShowHeritage}
+              showPins={showPins}
+              setShowPins={setShowPins}
+              showProjectConnect={showProjectConnect}
+              setShowProjectConnect={setShowProjectConnect}
+              showMusicVenues={showMusicVenues}
+              setShowMusicVenues={setShowMusicVenues}
+              showDevPressure={showDevPressure}
+              setShowDevPressure={setShowDevPressure}
+              activeRegionId={activeRegionId}
+              setActiveRegionId={setActiveRegionId}
+              activeFeature={activeFeature}
+              setActiveFeature={setActiveFeature}
+              selectedRegion={selectedRegion}
+              setSelectedRegion={setSelectedRegion}
+              hoveredRegion={hoveredRegion}
+              setHoveredRegion={setHoveredRegion}
+              selectedBiz={selectedBiz}
+              setSelectedBiz={setSelectedBiz}
+              bizTab={bizTab}
+              setBizTab={setBizTab}
+              isMobile={isMobile}
+              currentDvi={currentDvi}
+              regionBizOpen={regionBizOpen}
+              regionBizClosed={regionBizClosed}
+              demoChartData={demoChartData}
+              tippingPoint={tippingPoint}
+              narrativeCallouts={narrativeCallouts}
+            />
+          </ErrorBoundary>
         )}
       </main>
 

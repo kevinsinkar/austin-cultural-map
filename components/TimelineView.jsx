@@ -598,7 +598,8 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                   {REGIONS_GEOJSON.features.map((f) => {
                     const n = f.properties.region_name;
                     const nd = n === "The Domain / North Burnet";
-                    const vals = [interpolateDvi(n, 2010), interpolateDvi(n, 2020), interpolateDvi(n, 2023)];
+                    const rid = f.properties.region_id;
+                    const vals = [interpolateDvi(rid, 2010), interpolateDvi(rid, 2020), interpolateDvi(rid, 2023)];
                     return (
                       <tr key={n} style={{ borderBottom: "1px solid #f0ede8" }}>
                         <td style={{ padding: "5px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap", position: "sticky", left: 0, background: "#fffffe", zIndex: 1 }}>{f.properties.short_name}</td>

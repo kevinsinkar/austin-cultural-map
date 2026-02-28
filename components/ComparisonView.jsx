@@ -6,41 +6,46 @@ import {
 } from "recharts";
 import { REGIONS_GEOJSON, SOCIOECONOMIC, DEMOGRAPHICS } from "../data";
 import { REGION_NAMES } from "../data/constants";
+import { NAME_TO_ID } from "../data/regionLookup";
 import { interpolateDvi } from "../utils/math";
 import { fmtPct } from "../utils/formatters";
 
 export default function ComparisonView({ compA, setCompA, compB, setCompB, isMobile }) {
+  // Resolve region_ids from names once
+  const idA = NAME_TO_ID.get(compA);
+  const idB = NAME_TO_ID.get(compB);
+
   const compDviChart = useMemo(
     () => [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023].map((yr) => ({
       year: yr,
-      [compA]: interpolateDvi(compA, yr),
-      [compB]: interpolateDvi(compB, yr),
+      [compA]: interpolateDvi(idA, yr),
+      [compB]: interpolateDvi(idB, yr),
     })),
     [compA, compB]
   );
 
   const compHomeChart = useMemo(
     () => [2000, 2010, 2020, 2023].map((yr) => {
-      const a = SOCIOECONOMIC.find((s) => s.region === compA && s.year === yr);
-      const b = SOCIOECONOMIC.find((s) => s.region === compB && s.year === yr);
+      const a = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === yr);
+      const b = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === yr);
       return { year: yr, [compA]: a?.homeValue || 0, [compB]: b?.homeValue || 0 };
     }),
-    [compA, compB]
+    [compA, compB, idA, idB]
   );
 
   const compIncomeChart = useMemo(
     () => [2000, 2010, 2020, 2023].map((yr) => {
-      const a = SOCIOECONOMIC.find((s) => s.region === compA && s.year === yr);
-      const b = SOCIOECONOMIC.find((s) => s.region === compB && s.year === yr);
+      const a = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === yr);
+      const b = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === yr);
       return { year: yr, [compA]: a?.incomeAdj || 0, [compB]: b?.incomeAdj || 0 };
     }),
-    [compA, compB]
+    [compA, compB, idA, idB]
   );
 
   const compDemoChart = useMemo(
     () => [1990, 2000, 2010, 2020, 2023].map((yr) => {
-      const a = DEMOGRAPHICS.find((d) => d.region === compA && d.year === yr);
-      const b = DEMOGRAPHICS.find((d) => d.region === compB && d.year === yr);
+      const a = DEMOGRAPHICS.find((d) => d.region_id === idA && d.year === yr);
+      const b = DEMOGRAPHICS.find((d) => d.region_id === idB && d.year === yr);
       return {
         year: yr,
         [`${compA}_Black`]: a?.pctBlack || 0,
@@ -49,14 +54,14 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
         [`${compB}_Hispanic`]: b?.pctHispanic || 0,
       };
     }),
-    [compA, compB]
+    [compA, compB, idA, idB]
   );
 
   const compNarrative = useMemo(() => {
-    const dA = interpolateDvi(compA, 2020);
-    const dB = interpolateDvi(compB, 2020);
-    const sA = SOCIOECONOMIC.find((s) => s.region === compA && s.year === 2023);
-    const sB = SOCIOECONOMIC.find((s) => s.region === compB && s.year === 2023);
+    const dA = interpolateDvi(idA, 2020);
+    const dB = interpolateDvi(idB, 2020);
+    const sA = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === 2023);
+    const sB = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === 2023);
     let t = "";
     if (Math.abs(dA - dB) > 15) {
       const h = dA > dB ? compA : compB;
@@ -72,7 +77,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
       }
     }
     return t;
-  }, [compA, compB]);
+  }, [compA, compB, idA, idB]);
 
   const nameA = compA.split("/")[0].trim();
   const nameB = compB.split("/")[0].trim();
@@ -186,13 +191,13 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
             </thead>
             <tbody>
               {(() => {
-                const sA = SOCIOECONOMIC.find((s) => s.region === compA && s.year === 2023);
-                const sB = SOCIOECONOMIC.find((s) => s.region === compB && s.year === 2023);
-                const dA = DEMOGRAPHICS.find((d) => d.region === compA && d.year === 2023);
-                const dB = DEMOGRAPHICS.find((d) => d.region === compB && d.year === 2023);
+                const sA = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === 2023);
+                const sB = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === 2023);
+                const dA = DEMOGRAPHICS.find((d) => d.region_id === idA && d.year === 2023);
+                const dB = DEMOGRAPHICS.find((d) => d.region_id === idB && d.year === 2023);
                 if (!sA || !sB) return null;
                 return [
-                  { l: "DVI (2010–20)", a: interpolateDvi(compA, 2020).toFixed(1), b: interpolateDvi(compB, 2020).toFixed(1), d: (interpolateDvi(compA, 2020) - interpolateDvi(compB, 2020)).toFixed(1) },
+                  { l: "DVI (2010–20)", a: interpolateDvi(idA, 2020).toFixed(1), b: interpolateDvi(idB, 2020).toFixed(1), d: (interpolateDvi(idA, 2020) - interpolateDvi(idB, 2020)).toFixed(1) },
                   { l: "Income", a: `$${(sA.incomeAdj / 1000).toFixed(0)}k`, b: `$${(sB.incomeAdj / 1000).toFixed(0)}k`, d: `$${((sA.incomeAdj - sB.incomeAdj) / 1000).toFixed(0)}k` },
                   { l: "Home Value", a: `$${(sA.homeValue / 1000).toFixed(0)}k`, b: `$${(sB.homeValue / 1000).toFixed(0)}k`, d: `$${((sA.homeValue - sB.homeValue) / 1000).toFixed(0)}k` },
                   { l: "Bachelor's+", a: fmtPct(sA.pctBachelors), b: fmtPct(sB.pctBachelors), d: `${((sA.pctBachelors - sB.pctBachelors) * 100).toFixed(0)}pp` },
