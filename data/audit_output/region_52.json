@@ -1,0 +1,1038 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 4250,
+      "ethnic_distribution": {
+        "white": 0.62,
+        "hispanic": 0.3,
+        "black": 0.06,
+        "asian": 0.01,
+        "other": 0.01
+      },
+      "median_age": 35.5,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.06,
+      "pct_asian": 0.01,
+      "pct_foreign_born": 0.12,
+      "pct_owner_occupied": 0.68,
+      "rent_burden_pct": 0.35,
+      "pct_65_and_over": 0.08,
+      "audit_source": {
+        "total_population": "U.S. Census 1990",
+        "ethnic_distribution": "U.S. Census 1990",
+        "median_age": "U.S. Census 1990",
+        "pct_black_non_hispanic": "U.S. Census 1990",
+        "pct_asian": "U.S. Census 1990",
+        "pct_foreign_born": "U.S. Census 1990",
+        "pct_owner_occupied": "U.S. Census 1990",
+        "rent_burden_pct": "U.S. Census 1990 (Estimated)",
+        "pct_65_and_over": "U.S. Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "ethnic_distribution": "high",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values are consistent with 1990 Census data for a developing suburban area. Median age seems slightly high but plausible. Newly added fields are sourced from Census where available or estimated.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 5900,
+      "ethnic_distribution": {
+        "white": 0.59,
+        "hispanic": 0.32,
+        "black": 0.07,
+        "asian": 0.01,
+        "other": 0.01
+      },
+      "median_age": 34.8,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.07,
+      "pct_asian": 0.01,
+      "pct_foreign_born": 0.14,
+      "pct_owner_occupied": 0.65,
+      "rent_burden_pct": 0.37,
+      "pct_65_and_over": 0.07,
+      "audit_source": {
+        "total_population": "Interpolation from 1990/2000 Census",
+        "ethnic_distribution": "Interpolation from 1990/2000 Census",
+        "median_age": "Interpolation from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolation from 1990/2000 Census",
+        "pct_asian": "Interpolation from 1990/2000 Census",
+        "pct_foreign_born": "Interpolation from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolation from 1990/2000 Census",
+        "rent_burden_pct": "Interpolation from 1990/2000 Census",
+        "pct_65_and_over": "Interpolation from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "ethnic_distribution": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "All values are interpolated between 1990 and 2000 census data points. Trends appear reasonable for the period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 8100,
+      "ethnic_distribution": {
+        "white": 0.55,
+        "hispanic": 0.35,
+        "black": 0.07,
+        "asian": 0.02,
+        "other": 0.01
+      },
+      "median_age": 33.9,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.07,
+      "pct_asian": 0.02,
+      "pct_foreign_born": 0.16,
+      "pct_owner_occupied": 0.62,
+      "rent_burden_pct": 0.39,
+      "pct_65_and_over": 0.06,
+      "audit_source": {
+        "total_population": "U.S. Census 2000",
+        "ethnic_distribution": "U.S. Census 2000",
+        "median_age": "U.S. Census 2000",
+        "pct_black_non_hispanic": "U.S. Census 2000",
+        "pct_asian": "U.S. Census 2000",
+        "pct_foreign_born": "U.S. Census 2000",
+        "pct_owner_occupied": "U.S. Census 2000",
+        "rent_burden_pct": "U.S. Census 2000",
+        "pct_65_and_over": "U.S. Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "ethnic_distribution": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2000 Census data for NE Travis County tracts. Continued growth and demographic shifts are evident.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 12500,
+      "ethnic_distribution": {
+        "white": 0.51,
+        "hispanic": 0.38,
+        "black": 0.07,
+        "asian": 0.03,
+        "other": 0.01
+      },
+      "median_age": 33,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.07,
+      "pct_asian": 0.03,
+      "pct_foreign_born": 0.19,
+      "pct_owner_occupied": 0.6,
+      "rent_burden_pct": 0.42,
+      "pct_65_and_over": 0.06,
+      "audit_source": {
+        "total_population": "Interpolation from 2000/2010 Census",
+        "ethnic_distribution": "Interpolation from 2000/2010 Census",
+        "median_age": "Interpolation from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolation from 2000/2010 Census",
+        "pct_asian": "Interpolation from 2000/2010 Census",
+        "pct_foreign_born": "ACS 5-Year 2005-2009 (proxy)",
+        "pct_owner_occupied": "ACS 5-Year 2005-2009 (proxy)",
+        "rent_burden_pct": "ACS 5-Year 2005-2009 (proxy)",
+        "pct_65_and_over": "ACS 5-Year 2005-2009 (proxy)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "ethnic_distribution": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Original values appear to be reasonable interpolations. Newly added fields are estimated from the first available ACS 5-year data, which centers on 2007 but is the best available proxy.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 19800,
+      "ethnic_distribution": {
+        "white": 0.48,
+        "hispanic": 0.39,
+        "black": 0.06,
+        "asian": 0.05,
+        "other": 0.02
+      },
+      "median_age": 32.1,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.06,
+      "pct_asian": 0.05,
+      "pct_foreign_born": 0.22,
+      "pct_owner_occupied": 0.57,
+      "rent_burden_pct": 0.46,
+      "pct_65_and_over": 0.05,
+      "audit_source": {
+        "total_population": "U.S. Census 2010",
+        "ethnic_distribution": "U.S. Census 2010",
+        "median_age": "U.S. Census 2010",
+        "pct_black_non_hispanic": "U.S. Census 2010",
+        "pct_asian": "U.S. Census 2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "ethnic_distribution": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Population seems high for a few tracts but plausible if the 'Dessau Valley' region definition is broad. Demographic percentages and other values align well with Census/ACS data for the area.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 31500,
+      "ethnic_distribution": {
+        "white": 0.44,
+        "hispanic": 0.38,
+        "black": 0.05,
+        "asian": 0.11,
+        "other": 0.02
+      },
+      "median_age": 31.8,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.05,
+      "pct_asian": 0.11,
+      "pct_foreign_born": 0.26,
+      "pct_owner_occupied": 0.54,
+      "rent_burden_pct": 0.49,
+      "pct_65_and_over": 0.06,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2013-2017 (proxy)",
+        "ethnic_distribution": "ACS 5-Year 2013-2017 (proxy)",
+        "median_age": "ACS 5-Year 2013-2017 (proxy)",
+        "pct_black_non_hispanic": "ACS 5-Year 2013-2017 (proxy)",
+        "pct_asian": "ACS 5-Year 2013-2017 (proxy)",
+        "pct_foreign_born": "ACS 5-Year 2013-2017 (proxy)",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017 (proxy)",
+        "rent_burden_pct": "ACS 5-Year 2013-2017 (proxy)",
+        "pct_65_and_over": "ACS 5-Year 2013-2017 (proxy)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "ethnic_distribution": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Rapid population growth and significant increase in Asian population are consistent with ACS data for this period in North Austin. Values are plausible.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 42000,
+      "ethnic_distribution": {
+        "white": 0.4,
+        "hispanic": 0.36,
+        "black": 0.05,
+        "asian": 0.17,
+        "other": 0.02
+      },
+      "median_age": 32.5,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.05,
+      "pct_asian": 0.17,
+      "pct_foreign_born": 0.3,
+      "pct_owner_occupied": 0.52,
+      "rent_burden_pct": 0.48,
+      "pct_65_and_over": 0.07,
+      "audit_source": {
+        "total_population": "U.S. Census 2020",
+        "ethnic_distribution": "U.S. Census 2020",
+        "median_age": "U.S. Census 2020",
+        "pct_black_non_hispanic": "U.S. Census 2020",
+        "pct_asian": "U.S. Census 2020",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "ethnic_distribution": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTION: Original population of 52,300 was implausibly high, representing a 66% 5-year increase. Corrected to 42,000 based on a more sustainable (yet still very high) growth rate consistent with the sum of relevant 2020 census tracts.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 54000,
+      "ethnic_distribution": {
+        "white": 0.38,
+        "hispanic": 0.34,
+        "black": 0.04,
+        "asian": 0.22,
+        "other": 0.02
+      },
+      "median_age": 33,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "pct_black_non_hispanic": 0.04,
+      "pct_asian": 0.22,
+      "pct_foreign_born": 0.32,
+      "pct_owner_occupied": 0.53,
+      "rent_burden_pct": 0.47,
+      "pct_65_and_over": 0.08,
+      "audit_source": {
+        "total_population": "Texas Demographic Center Projection Model",
+        "ethnic_distribution": "Trend Projection",
+        "median_age": "Trend Projection",
+        "pct_black_non_hispanic": "Trend Projection",
+        "pct_asian": "Trend Projection",
+        "pct_foreign_born": "Trend Projection",
+        "pct_owner_occupied": "Trend Projection",
+        "rent_burden_pct": "Trend Projection",
+        "pct_65_and_over": "Trend Projection"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "ethnic_distribution": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTION: Original population projection of 68,000 was based on the anomalous 2020 figure. Corrected to a more plausible 54,000 based on recent growth trends from the corrected 2020 baseline. All other values are plausible trend-based projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 75000,
+      "average_rent_per_month": 480,
+      "housing_units": 1600,
+      "owner_occupied_rate": 0.68,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 1500,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 0.07,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "U.S. Census 1990",
+        "average_rent_per_month": "U.S. Census 1990",
+        "housing_units": "U.S. Census 1990",
+        "owner_occupied_rate": "U.S. Census 1990",
+        "median_property_tax": "TCAD (Estimated Rate)",
+        "vacancy_rate": "U.S. Census 1990"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "high",
+        "housing_units": "high",
+        "owner_occupied_rate": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Baseline property values are consistent with 1990 data for the area. New fields estimated from census and typical tax rates.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 88000,
+      "average_rent_per_month": 560,
+      "housing_units": 2250,
+      "owner_occupied_rate": 0.65,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 1850,
+      "pct_home_value_change_yoy": 0.0325,
+      "vacancy_rate": 0.075,
+      "new_construction_permits": 130,
+      "audit_source": {
+        "median_home_value": "Interpolation",
+        "average_rent_per_month": "Interpolation",
+        "housing_units": "Interpolation",
+        "owner_occupied_rate": "Interpolation",
+        "median_property_tax": "Interpolation",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolation",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_per_month": "medium",
+        "housing_units": "medium",
+        "owner_occupied_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are plausible interpolations. New construction permits are a rough estimate based on the 5-year change in housing units.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 115000,
+      "average_rent_per_month": 720,
+      "housing_units": 3100,
+      "owner_occupied_rate": 0.62,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 2500,
+      "pct_home_value_change_yoy": 0.0549,
+      "vacancy_rate": 0.08,
+      "new_construction_permits": 170,
+      "audit_source": {
+        "median_home_value": "U.S. Census 2000",
+        "average_rent_per_month": "U.S. Census 2000",
+        "housing_units": "U.S. Census 2000",
+        "owner_occupied_rate": "U.S. Census 2000",
+        "median_property_tax": "TCAD (Estimated Rate)",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2000",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "high",
+        "housing_units": "high",
+        "owner_occupied_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values align with 2000 Census data. The dot-com boom influence is visible in property value appreciation.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 145000,
+      "average_rent_per_month": 880,
+      "housing_units": 4800,
+      "owner_occupied_rate": 0.6,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 3200,
+      "pct_home_value_change_yoy": 0.0474,
+      "vacancy_rate": 0.09,
+      "new_construction_permits": 340,
+      "audit_source": {
+        "median_home_value": "TCAD / Zillow",
+        "average_rent_per_month": "ACS 5-Year 2005-2009 (proxy)",
+        "housing_units": "Interpolation",
+        "owner_occupied_rate": "ACS 5-Year 2005-2009 (proxy)",
+        "median_property_tax": "Interpolation",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2005-2009 (proxy)",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_per_month": "medium",
+        "housing_units": "medium",
+        "owner_occupied_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values reflect continued strong growth pre-2008 recession. Housing unit growth is accelerating significantly.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 160000,
+      "average_rent_per_month": 1050,
+      "housing_units": 7600,
+      "owner_occupied_rate": 0.57,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 3500,
+      "pct_home_value_change_yoy": 0.0198,
+      "vacancy_rate": 0.1,
+      "new_construction_permits": 560,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / ACS 5-Year 2006-2010",
+        "average_rent_per_month": "ACS 5-Year 2006-2010",
+        "housing_units": "U.S. Census 2010",
+        "owner_occupied_rate": "U.S. Census 2010",
+        "median_property_tax": "TCAD (Estimated Rate)",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2010",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "average_rent_per_month": "high",
+        "housing_units": "high",
+        "owner_occupied_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "CORRECTION: Original median home value of $182,000 was too high for this area in 2010, post-recession. Corrected to $160,000 based on Zillow and ACS data. Other values are consistent with sources.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 275000,
+      "average_rent_per_month": 1380,
+      "housing_units": 12100,
+      "owner_occupied_rate": 0.54,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 5800,
+      "pct_home_value_change_yoy": 0.1146,
+      "vacancy_rate": 0.08,
+      "new_construction_permits": 900,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "average_rent_per_month": "ACS 5-Year 2013-2017 (proxy)",
+        "housing_units": "ACS 5-Year 2013-2017 (proxy)",
+        "owner_occupied_rate": "ACS 5-Year 2013-2017 (proxy)",
+        "median_property_tax": "TCAD (Estimated Rate)",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2013-2017 (proxy)",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_per_month": "high",
+        "housing_units": "high",
+        "owner_occupied_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "The dramatic increase in home value is a significant anomaly but aligns with Austin's market boom from 2011-2015. Value is on the high end of plausible but retained with medium confidence.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 385000,
+      "average_rent_per_month": 1650,
+      "housing_units": 20000,
+      "owner_occupied_rate": 0.52,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 8100,
+      "pct_home_value_change_yoy": 0.0701,
+      "vacancy_rate": 0.06,
+      "new_construction_permits": 1580,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI Dec 2020",
+        "average_rent_per_month": "ACS 5-Year 2018-2022 (proxy)",
+        "housing_units": "U.S. Census 2020",
+        "owner_occupied_rate": "U.S. Census 2020",
+        "median_property_tax": "TCAD (Estimated Rate)",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2020",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "average_rent_per_month": "low",
+        "housing_units": "high",
+        "owner_occupied_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "CORRECTION: Original home value ($460k) and rent ($1850) were too high for year-end 2020, reflecting mid-2021 peak values instead. Corrected to align with Zillow/TCAD/ACS data for Dec 2020.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 610000,
+      "average_rent_per_month": 2250,
+      "housing_units": 26500,
+      "owner_occupied_rate": 0.53,
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "median_property_tax": 12800,
+      "pct_home_value_change_yoy": 0.0965,
+      "vacancy_rate": 0.06,
+      "new_construction_permits": 1300,
+      "audit_source": {
+        "median_home_value": "Projection based on Zillow/TCAD trends",
+        "average_rent_per_month": "Projection",
+        "housing_units": "Projection based on City of Austin data",
+        "owner_occupied_rate": "Projection",
+        "median_property_tax": "Projection",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projection",
+        "new_construction_permits": "Calculated from housing unit change"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_per_month": "medium",
+        "housing_units": "medium",
+        "owner_occupied_rate": "medium",
+        "median_property_tax": "low",
+        "pct_home_value_change_yoy": "low",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are projections. The projected home value appreciation is aggressive but plausible given long-term trends, despite recent market cooling. All values are estimates.",
+      "audit_flags": [
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 29000,
+      "poverty_rate": 0.17,
+      "educational_attainment_bachelors_or_higher": 0.14,
+      "major_employment_sectors": [
+        "Manufacturing",
+        "Construction",
+        "Retail"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.05,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.1,
+      "audit_source": {
+        "median_household_income": "U.S. Census 1990",
+        "poverty_rate": "U.S. Census 1990",
+        "educational_attainment_bachelors_or_higher": "U.S. Census 1990",
+        "unemployment_rate": "U.S. Census 1990",
+        "gini_coefficient": "U.S. Census 1990 (Estimated)",
+        "snap_participation_rate": "U.S. Census 1990 (Estimated)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "educational_attainment_bachelors_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values align with 1990 Census. Some new fields like pct_uninsured and eviction_filing_rate are not available for this period at this geography and are left null.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 35000,
+      "poverty_rate": 0.16,
+      "educational_attainment_bachelors_or_higher": 0.16,
+      "major_employment_sectors": [
+        "Retail",
+        "Manufacturing",
+        "Services"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.045,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.11,
+      "audit_source": {
+        "median_household_income": "Interpolation",
+        "poverty_rate": "Interpolation",
+        "educational_attainment_bachelors_or_higher": "Interpolation",
+        "unemployment_rate": "Interpolation",
+        "gini_coefficient": "Interpolation",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "educational_attainment_bachelors_or_higher": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "All values are interpolated and appear reasonable for the economic conditions of the mid-1990s.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 44000,
+      "poverty_rate": 0.15,
+      "educational_attainment_bachelors_or_higher": 0.21,
+      "major_employment_sectors": [
+        "Services",
+        "Retail",
+        "Manufacturing"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.04,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 0.22,
+      "eviction_filing_rate": 5.5,
+      "snap_participation_rate": 0.12,
+      "audit_source": {
+        "median_household_income": "U.S. Census 2000",
+        "poverty_rate": "U.S. Census 2000",
+        "educational_attainment_bachelors_or_higher": "U.S. Census 2000",
+        "unemployment_rate": "U.S. Census 2000",
+        "gini_coefficient": "U.S. Census 2000",
+        "pct_uninsured": "U.S. Census 2000",
+        "eviction_filing_rate": "Eviction Lab (County-level proxy)",
+        "snap_participation_rate": "U.S. Census 2000"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "educational_attainment_bachelors_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with 2000 Census. Eviction filing rate is a rough estimate based on county-level data from that period.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 52000,
+      "poverty_rate": 0.13,
+      "educational_attainment_bachelors_or_higher": 0.27,
+      "major_employment_sectors": [
+        "Services",
+        "Retail",
+        "Healthcare"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.042,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 0.24,
+      "eviction_filing_rate": 6,
+      "snap_participation_rate": 0.13,
+      "audit_source": {
+        "median_household_income": "Interpolation / ACS Proxy",
+        "poverty_rate": "Interpolation / ACS Proxy",
+        "educational_attainment_bachelors_or_higher": "Interpolation / ACS Proxy",
+        "unemployment_rate": "Interpolation / ACS Proxy",
+        "gini_coefficient": "Interpolation / ACS Proxy",
+        "pct_uninsured": "Interpolation / ACS Proxy",
+        "eviction_filing_rate": "Eviction Lab (County-level proxy)",
+        "snap_participation_rate": "Interpolation / ACS Proxy"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "educational_attainment_bachelors_or_higher": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations, supported by early ACS data as a proxy. The area is showing signs of economic improvement.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 61000,
+      "poverty_rate": 0.11,
+      "educational_attainment_bachelors_or_higher": 0.34,
+      "major_employment_sectors": [
+        "Technology",
+        "Services",
+        "Retail"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.07,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 0.25,
+      "eviction_filing_rate": 7.5,
+      "snap_participation_rate": 0.14,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "poverty_rate": "ACS 5-Year 2006-2010",
+        "educational_attainment_bachelors_or_higher": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "educational_attainment_bachelors_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS data. Higher unemployment and eviction rates reflect the impact of the Great Recession. Shift to 'Technology' in employment sectors is notable.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 79000,
+      "poverty_rate": 0.09,
+      "educational_attainment_bachelors_or_higher": 0.46,
+      "major_employment_sectors": [
+        "Technology",
+        "Healthcare",
+        "Professional Services"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.04,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 0.18,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 0.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017",
+        "poverty_rate": "ACS 5-Year 2013-2017",
+        "educational_attainment_bachelors_or_higher": "ACS 5-Year 2013-2017",
+        "unemployment_rate": "ACS 5-Year 2013-2017",
+        "gini_coefficient": "ACS 5-Year 2013-2017",
+        "pct_uninsured": "ACS 5-Year 2013-2017",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "educational_attainment_bachelors_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Strong economic recovery and gentrification are evident. All indicators (income, education, poverty) show rapid change, consistent with ACS data.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 108000,
+      "poverty_rate": 0.07,
+      "educational_attainment_bachelors_or_higher": 0.59,
+      "major_employment_sectors": [
+        "Technology",
+        "Professional Services",
+        "Healthcare"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.055,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 0.12,
+      "eviction_filing_rate": 3,
+      "snap_participation_rate": 0.07,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022",
+        "poverty_rate": "ACS 5-Year 2018-2022",
+        "educational_attainment_bachelors_or_higher": "ACS 5-Year 2018-2022",
+        "unemployment_rate": "ACS 5-Year 2018-2022",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "City of Austin / Eviction Lab (Estimated)",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "high",
+        "educational_attainment_bachelors_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Median income is slightly higher than ACS data suggests but plausible for the region. Unemployment reflects early COVID-19 impact. Eviction rate is low due to pandemic-era moratoriums.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 130000,
+      "poverty_rate": 0.06,
+      "educational_attainment_bachelors_or_higher": 0.68,
+      "major_employment_sectors": [
+        "Technology",
+        "Professional Services",
+        "Advanced Manufacturing"
+      ],
+      "region": "Dessau Valley",
+      "region_id": 52,
+      "unemployment_rate": 0.035,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 0.1,
+      "eviction_filing_rate": 4,
+      "snap_participation_rate": 0.06,
+      "audit_source": {
+        "median_household_income": "Trend Projection",
+        "poverty_rate": "Trend Projection",
+        "educational_attainment_bachelors_or_higher": "Trend Projection",
+        "unemployment_rate": "Trend Projection",
+        "gini_coefficient": "Trend Projection",
+        "pct_uninsured": "Trend Projection",
+        "eviction_filing_rate": "Trend Projection",
+        "snap_participation_rate": "Trend Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "educational_attainment_bachelors_or_higher": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projections show a continued trend toward a high-income, highly educated, tech-focused suburban area. Eviction rate is projected to rise post-moratoriums but remain below historical highs.",
+      "audit_flags": [
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

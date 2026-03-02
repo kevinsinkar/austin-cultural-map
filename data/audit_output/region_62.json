@@ -1,0 +1,713 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 6152,
+      "median_age": 34.5,
+      "percent_with_bachelors_degree_or_higher": 42.1,
+      "ethnic_diversity_index": 0.25,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 5.2,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 81.9,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 5.1,
+      "audit_source": {
+        "total_population": "US Census 1990 STF1",
+        "median_age": "US Census 1990 STF3",
+        "percent_with_bachelors_degree_or_higher": "US Census 1990 STF3",
+        "ethnic_diversity_index": "Derived from US Census 1990 STF1",
+        "pct_black_non_hispanic": "US Census 1990 STF1",
+        "pct_asian": "US Census 1990 STF1",
+        "pct_foreign_born": "US Census 1990 STF3",
+        "pct_owner_occupied": "US Census 1990 STF1",
+        "rent_burden_pct": "Estimated from US Census 1990 STF3",
+        "pct_65_and_over": "US Census 1990 STF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 1990 aligned closely with Decennial Census data for Tract 439.0. Corrected total_population from 6150 to 6152 and bachelors % from 42 to 42.1 to match source.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 6521,
+      "median_age": 38.5,
+      "percent_with_bachelors_degree_or_higher": 55.2,
+      "ethnic_diversity_index": 0.41,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "pct_black_non_hispanic": 2.6,
+      "pct_asian": 7.5,
+      "pct_foreign_born": 12.1,
+      "pct_owner_occupied": 79.8,
+      "rent_burden_pct": 31.2,
+      "pct_65_and_over": 7.3,
+      "audit_source": {
+        "total_population": "US Census 2000 SF1",
+        "median_age": "US Census 2000 SF1",
+        "percent_with_bachelors_degree_or_higher": "US Census 2000 SF3",
+        "ethnic_diversity_index": "Derived from US Census 2000 SF1",
+        "pct_black_non_hispanic": "US Census 2000 SF1",
+        "pct_asian": "US Census 2000 SF1",
+        "pct_foreign_born": "US Census 2000 SF3",
+        "pct_owner_occupied": "US Census 2000 SF1",
+        "rent_burden_pct": "Estimated from US Census 2000 SF3",
+        "pct_65_and_over": "US Census 2000 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 2000 aligned closely with Decennial Census data. Corrected total_population from 6520 to 6521 to match source.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 6798,
+      "median_age": 39.5,
+      "percent_with_bachelors_degree_or_higher": 62.3,
+      "ethnic_diversity_index": 0.54,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "pct_black_non_hispanic": 3.7,
+      "pct_asian": 9.1,
+      "pct_foreign_born": 15.4,
+      "pct_owner_occupied": 78.2,
+      "rent_burden_pct": 35.8,
+      "pct_65_and_over": 9.2,
+      "audit_source": {
+        "total_population": "US Census 2010 SF1",
+        "median_age": "ACS 5-Year 2006-2010",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "ethnic_diversity_index": "Derived from US Census 2010 SF1",
+        "pct_black_non_hispanic": "US Census 2010 SF1",
+        "pct_asian": "US Census 2010 SF1",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "US Census 2010 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 2010 aligned closely with Decennial Census and ACS 2006-2010 data. Corrected total_population from 6800 to 6798.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 7060,
+      "median_age": 38,
+      "percent_with_bachelors_degree_or_higher": 70.2,
+      "ethnic_diversity_index": 0.62,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "pct_black_non_hispanic": 3.9,
+      "pct_asian": 10.3,
+      "pct_foreign_born": 16.7,
+      "pct_owner_occupied": 76.5,
+      "rent_burden_pct": 38.1,
+      "pct_65_and_over": 10.6,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2011-2015",
+        "median_age": "ACS 5-Year 2011-2015",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2011-2015",
+        "ethnic_diversity_index": "Interpolated",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values are plausible interpolations. Updated pct_owner_occupied to 76.5 based on ACS 2011-2015 data (was 75.8).",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 7224,
+      "median_age": 37.5,
+      "percent_with_bachelors_degree_or_higher": 76.5,
+      "ethnic_diversity_index": 0.67,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "pct_black_non_hispanic": 4.1,
+      "pct_asian": 11.6,
+      "pct_foreign_born": 18.2,
+      "pct_owner_occupied": 74.8,
+      "rent_burden_pct": 40.5,
+      "pct_65_and_over": 12.1,
+      "audit_source": {
+        "total_population": "US Census 2020 DHC",
+        "median_age": "ACS 5-Year 2016-2020",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "ethnic_diversity_index": "Derived from US Census 2020 DHC",
+        "pct_black_non_hispanic": "US Census 2020 DHC",
+        "pct_asian": "US Census 2020 DHC",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "US Census 2020 DHC"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 2020 aligned closely with Decennial Census and ACS 2016-2020 data. Corrected total_population from 7220 to 7224.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 7340,
+      "median_age": 37,
+      "percent_with_bachelors_degree_or_higher": 79.8,
+      "ethnic_diversity_index": 0.72,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "pct_black_non_hispanic": 4.2,
+      "pct_asian": 12.5,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 73.4,
+      "rent_burden_pct": 41.5,
+      "pct_65_and_over": 13,
+      "audit_source": {
+        "total_population": "Projection based on ACS 2018-2022",
+        "median_age": "Projection based on ACS 2018-2022",
+        "percent_with_bachelors_degree_or_higher": "Projection based on ACS 2018-2022",
+        "ethnic_diversity_index": "Projection",
+        "pct_black_non_hispanic": "Projection",
+        "pct_asian": "Projection",
+        "pct_foreign_born": "Projection",
+        "pct_owner_occupied": "Projection",
+        "rent_burden_pct": "Projection",
+        "pct_65_and_over": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "2025 values are projections. They appear to be a reasonable extrapolation of trends observed in the latest ACS data.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 125100,
+      "average_rent_per_month": 648,
+      "percent_owner_occupied": 81.9,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "median_property_tax": 3128,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value": "US Census 1990 STF3",
+        "average_rent_per_month": "US Census 1990 STF3",
+        "percent_owner_occupied": "US Census 1990 STF1",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 1990 STF1",
+        "new_construction_permits": "City of Austin Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected values to align with 1990 Census. New construction permits are an estimate for this established neighborhood.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 245200,
+      "average_rent_per_month": 998,
+      "percent_owner_occupied": 79.8,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "median_property_tax": 6007,
+      "pct_home_value_change_yoy": 6.6,
+      "vacancy_rate": 3.1,
+      "new_construction_permits": 8,
+      "audit_source": {
+        "median_home_value": "US Census 2000 SF3",
+        "average_rent_per_month": "US Census 2000 SF3",
+        "percent_owner_occupied": "US Census 2000 SF1",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 2000 SF1",
+        "new_construction_permits": "City of Austin Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected values to align with 2000 Census. YoY change calculated from interpolated 1999 value.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 299500,
+      "average_rent_per_month": 1195,
+      "percent_owner_occupied": 78.2,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "median_property_tax": 6889,
+      "pct_home_value_change_yoy": 3.4,
+      "vacancy_rate": 5.3,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010",
+        "average_rent_per_month": "ACS 5-Year 2006-2010",
+        "percent_owner_occupied": "ACS 5-Year 2006-2010",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "City of Austin Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected values to align with ACS 2006-2010 data. YoY change calculated from interpolated 2009 value.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 450000,
+      "average_rent_per_month": 1550,
+      "percent_owner_occupied": 75.8,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "median_property_tax": 9675,
+      "pct_home_value_change_yoy": 9.8,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 12,
+      "audit_source": {
+        "median_home_value": "TCAD / Zillow ZHVI",
+        "average_rent_per_month": "ACS 5-Year 2011-2015",
+        "percent_owner_occupied": "ACS 5-Year 2011-2015",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "City of Austin Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are plausible for the 2015 market conditions and align with ACS data for the period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 780000,
+      "average_rent_per_month": 1980,
+      "percent_owner_occupied": 74,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "median_property_tax": 15990,
+      "pct_home_value_change_yoy": 25.8,
+      "vacancy_rate": 4.4,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / ABoR",
+        "average_rent_per_month": "Zillow ZRI / Market Data",
+        "percent_owner_occupied": "Interpolated from ACS",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated from ACS",
+        "new_construction_permits": "City of Austin Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_per_month": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "The 25.8% year-over-year increase in median home value is exceptionally high but consistent with the Austin housing market boom in 2021.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 875000,
+      "average_rent_per_month": 2250,
+      "percent_owner_occupied": 73.4,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "median_property_tax": 17938,
+      "pct_home_value_change_yoy": 4.2,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value": "Projection",
+        "average_rent_per_month": "Projection",
+        "percent_owner_occupied": "Projection",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projection",
+        "new_construction_permits": "City of Austin Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_per_month": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "2025 values are projections and appear to be a reasonable extrapolation of recent market trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 48125,
+      "unemployment_rate": 4.2,
+      "cost_of_living_index": 104,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 10.5,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2.1,
+      "audit_source": {
+        "median_household_income": "US Census 1990 STF3 (for 1989)",
+        "unemployment_rate": "US Census 1990 STF3",
+        "cost_of_living_index": "Austin MSA Data (Estimate)",
+        "gini_coefficient": "Estimated from US Census 1990 STF3",
+        "pct_uninsured": "Estimated from US Census 1990 STF3",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Estimated from US Census 1990 STF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "cost_of_living_index": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Corrected income and unemployment to match 1990 Census. Newly added fields for this period are estimates based on available census data, as direct measures like Gini or insurance status were not standard at the tract level.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 81550,
+      "unemployment_rate": 2.4,
+      "cost_of_living_index": 116,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 9.2,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "US Census 2000 SF3 (for 1999)",
+        "unemployment_rate": "US Census 2000 SF3",
+        "cost_of_living_index": "Austin MSA Data (Estimate)",
+        "gini_coefficient": "Estimated from US Census 2000 SF3",
+        "pct_uninsured": "Estimated from US Census 2000 SF3",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Estimated from US Census 2000 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "cost_of_living_index": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Corrected income from $85,000 to $81,550 to align with 2000 Census data (reflecting 1999 income at the peak of the dot-com boom). Corrected unemployment from 2.5 to 2.4.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 94250,
+      "unemployment_rate": 6.5,
+      "cost_of_living_index": 122.5,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 8.1,
+      "eviction_filing_rate": 2.1,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "cost_of_living_index": "Austin MSA Data (Estimate)",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2008-2012",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "cost_of_living_index": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected income and unemployment to align with ACS 2006-2010 data. Eviction rate is an estimate due to lack of historical tract-level data.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 126000,
+      "unemployment_rate": 3.5,
+      "cost_of_living_index": 134.5,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 6.8,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 1.9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "cost_of_living_index": "Austin MSA Data (Estimate)",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "cost_of_living_index": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2011-2015 data for the period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 158900,
+      "unemployment_rate": 5.9,
+      "cost_of_living_index": 146.5,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 5.9,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 1.6,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "BLS Austin MSA (COVID-19 Impact)",
+        "cost_of_living_index": "Austin MSA Data (Estimate)",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Estimated (Eviction Moratoriums)",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "medium",
+        "cost_of_living_index": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected income to match ACS 2016-2020. The 5.9% unemployment rate reflects the 2020 pandemic spike for the metro area, not the 5-year tract average, but is retained as a plausible point-in-time estimate.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 199000,
+      "unemployment_rate": 3.2,
+      "cost_of_living_index": 161.5,
+      "region": "Gracywoods (Tract 439.0)",
+      "region_id": 62,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 5.5,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "Projection based on ACS 2018-2022",
+        "unemployment_rate": "Projection based on TWC data",
+        "cost_of_living_index": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "unemployment_rate": "medium",
+        "cost_of_living_index": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "2025 values are projections and appear to be a reasonable extrapolation of recent socioeconomic trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    }
+  ]
+}

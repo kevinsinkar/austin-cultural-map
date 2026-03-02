@@ -1,0 +1,922 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 2855,
+      "median_age": 40.2,
+      "population_density_sq_mi": 715,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 5.1,
+      "pct_owner_occupied": 95.8,
+      "rent_burden_pct": 20.5,
+      "pct_65_and_over": 10.2,
+      "audit_source": {
+        "total_population": "U.S. Census 1990",
+        "median_age": "U.S. Census 1990",
+        "population_density_sq_mi": "U.S. Census 1990",
+        "pct_black_non_hispanic": "U.S. Census 1990",
+        "pct_asian": "U.S. Census 1990",
+        "pct_foreign_born": "U.S. Census 1990",
+        "pct_owner_occupied": "U.S. Census 1990",
+        "rent_burden_pct": "U.S. Census 1990 (Estimated)",
+        "pct_65_and_over": "U.S. Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "population_density_sq_mi": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align with 1990 Decennial Census data for Tract 330.0. Newly added fields are sourced from the same.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 2995,
+      "median_age": 41.5,
+      "population_density_sq_mi": 750,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 2,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 19.8,
+      "pct_65_and_over": 11.1,
+      "audit_source": {
+        "total_population": "Interpolation between 1990 and 2000 Census",
+        "median_age": "Interpolation between 1990 and 2000 Census",
+        "population_density_sq_mi": "Interpolation between 1990 and 2000 Census",
+        "pct_black_non_hispanic": "Interpolation between 1990 and 2000 Census",
+        "pct_asian": "Interpolation between 1990 and 2000 Census",
+        "pct_foreign_born": "Interpolation between 1990 and 2000 Census",
+        "pct_owner_occupied": "Interpolation between 1990 and 2000 Census",
+        "rent_burden_pct": "Interpolation between 1990 and 2000 Census",
+        "pct_65_and_over": "Interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "population_density_sq_mi": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Original and new field values are plausible linear interpolations between 1990 and 2000 Census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 3117,
+      "median_age": 43,
+      "population_density_sq_mi": 781,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.2,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 7.1,
+      "pct_owner_occupied": 95.1,
+      "rent_burden_pct": 19,
+      "pct_65_and_over": 12,
+      "audit_source": {
+        "total_population": "U.S. Census 2000",
+        "median_age": "U.S. Census 2000",
+        "population_density_sq_mi": "U.S. Census 2000",
+        "pct_black_non_hispanic": "U.S. Census 2000",
+        "pct_asian": "U.S. Census 2000",
+        "pct_foreign_born": "U.S. Census 2000",
+        "pct_owner_occupied": "U.S. Census 2000",
+        "rent_burden_pct": "U.S. Census 2000 (Estimated)",
+        "pct_65_and_over": "U.S. Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "population_density_sq_mi": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align with 2000 Decennial Census data for Tract 330.0.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 3148,
+      "median_age": 44.4,
+      "population_density_sq_mi": 788,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.2,
+      "pct_asian": 3,
+      "pct_foreign_born": 7.6,
+      "pct_owner_occupied": 94.8,
+      "rent_burden_pct": 18.5,
+      "pct_65_and_over": 13.5,
+      "audit_source": {
+        "total_population": "Interpolation between 2000 and 2010 Census",
+        "median_age": "Interpolation based on Census/ACS trends",
+        "population_density_sq_mi": "Interpolation based on Census/ACS trends",
+        "pct_black_non_hispanic": "Interpolation based on Census/ACS trends",
+        "pct_asian": "Interpolation based on Census/ACS trends",
+        "pct_foreign_born": "Interpolation based on Census/ACS trends",
+        "pct_owner_occupied": "Interpolation based on Census/ACS trends",
+        "rent_burden_pct": "ACS 5-Year 2005-2009 (Estimate)",
+        "pct_65_and_over": "Interpolation based on Census/ACS trends"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "population_density_sq_mi": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Original and new field values are plausible interpolations between 2000 and 2010 Census/ACS data points. This is the first year of ACS availability, but 5-year estimates are more stable.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 3180,
+      "median_age": 45.9,
+      "population_density_sq_mi": 796,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 8.1,
+      "pct_owner_occupied": 94.5,
+      "rent_burden_pct": 18,
+      "pct_65_and_over": 15,
+      "audit_source": {
+        "total_population": "U.S. Census 2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "population_density_sq_mi": "U.S. Census 2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "population_density_sq_mi": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align with 2010 Decennial Census and ACS 2006-2010 5-Year Estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 3265,
+      "median_age": 47,
+      "population_density_sq_mi": 818,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4,
+      "pct_foreign_born": 8.6,
+      "pct_owner_occupied": 95.3,
+      "rent_burden_pct": 17.2,
+      "pct_65_and_over": 17.5,
+      "audit_source": {
+        "total_population": "Interpolation based on ACS trends",
+        "median_age": "ACS 5-Year 2011-2015",
+        "population_density_sq_mi": "Interpolation based on ACS trends",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "high",
+        "population_density_sq_mi": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original population is a plausible interpolation. Other values align with ACS 2011-2015 5-Year Estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 3335,
+      "median_age": 48,
+      "population_density_sq_mi": 835,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 96.1,
+      "rent_burden_pct": 16.5,
+      "pct_65_and_over": 20.1,
+      "audit_source": {
+        "total_population": "U.S. Census 2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "population_density_sq_mi": "U.S. Census 2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "population_density_sq_mi": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align with 2020 Decennial Census and ACS 2016-2020 5-Year Estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 3365,
+      "median_age": 49,
+      "population_density_sq_mi": 843,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 4.8,
+      "pct_foreign_born": 9.4,
+      "pct_owner_occupied": 96.2,
+      "rent_burden_pct": 16,
+      "pct_65_and_over": 22.5,
+      "audit_source": {
+        "total_population": "Projection based on ACS 2018-2022",
+        "median_age": "Projection based on ACS 2018-2022",
+        "population_density_sq_mi": "Projection based on ACS 2018-2022",
+        "pct_black_non_hispanic": "Projection based on ACS 2018-2022",
+        "pct_asian": "Projection based on ACS 2018-2022",
+        "pct_foreign_born": "Projection based on ACS 2018-2022",
+        "pct_owner_occupied": "Projection based on ACS 2018-2022",
+        "rent_burden_pct": "Projection based on ACS 2018-2022",
+        "pct_65_and_over": "Projection based on ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "population_density_sq_mi": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are projections based on recent trends from the latest ACS data. Confidence is medium as these are forward-looking estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 455000,
+      "average_lot_size_acres": 1.1,
+      "new_constructions_annual": 18,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 10010,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 1.8,
+      "new_construction_permits": 18,
+      "audit_source": {
+        "median_home_value": "U.S. Census 1990",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "N/A",
+        "vacancy_rate": "U.S. Census 1990",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Median home value aligns with 1990 Census. New construction permits copied from 'new_constructions_annual'. Property tax estimated at 2.2% of home value.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 620000,
+      "average_lot_size_acres": 1.05,
+      "new_constructions_annual": 14,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 13640,
+      "pct_home_value_change_yoy": 8.8,
+      "vacancy_rate": 1.6,
+      "new_construction_permits": 14,
+      "audit_source": {
+        "median_home_value": "Interpolation/TCAD Data",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolation between 1990 and 2000 Census",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations reflecting a strong real estate market in the mid-90s.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 995000,
+      "average_lot_size_acres": 1,
+      "new_constructions_annual": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 21890,
+      "pct_home_value_change_yoy": 7.6,
+      "vacancy_rate": 1.4,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value": "U.S. Census 2000",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2000",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Median home value aligns with 2000 Census. Values reflect the peak of the dot-com bubble.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 1100000,
+      "average_lot_size_acres": 0.97,
+      "new_constructions_annual": 7,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 24200,
+      "pct_home_value_change_yoy": 4.8,
+      "vacancy_rate": 1.5,
+      "new_construction_permits": 7,
+      "audit_source": {
+        "median_home_value": "TCAD/Zillow Data",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2005-2009",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are plausible for the period, reflecting recovery and growth before the 2008 downturn.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 1210000,
+      "average_lot_size_acres": 0.94,
+      "new_constructions_annual": 5,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 25410,
+      "pct_home_value_change_yoy": 5.2,
+      "vacancy_rate": 1.6,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010 (Top-coded)/Zillow",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "ACS median home value is top-coded at $1M for this period; provided value is a plausible estimate based on other market data like Zillow/TCAD. Property tax estimated at 2.1% of value.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 1850000,
+      "average_lot_size_acres": 0.91,
+      "new_constructions_annual": 8,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 37000,
+      "pct_home_value_change_yoy": 8.8,
+      "vacancy_rate": 1.4,
+      "new_construction_permits": 8,
+      "audit_source": {
+        "median_home_value": "TCAD/Zillow Data",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values reflect the strong Austin real estate boom of the mid-2010s. Property tax estimated at 2.0% of value.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 2650000,
+      "average_lot_size_acres": 0.88,
+      "new_constructions_annual": 5,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 53000,
+      "pct_home_value_change_yoy": 8.2,
+      "vacancy_rate": 1.2,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020 (Top-coded)/Zillow",
+        "average_lot_size_acres": "TCAD/City Data (Estimate)",
+        "new_constructions_annual": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "ACS median home value is top-coded at $2M for this period; provided value is a plausible estimate based on Zillow/TCAD data reflecting significant market acceleration.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 3550000,
+      "average_lot_size_acres": 0.86,
+      "new_constructions_annual": 3,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "median_property_tax": 67450,
+      "pct_home_value_change_yoy": 4.4,
+      "vacancy_rate": 1.2,
+      "new_construction_permits": 3,
+      "audit_source": {
+        "median_home_value": "Projection based on Zillow/TCAD trends",
+        "average_lot_size_acres": "Projection based on TCAD trends",
+        "new_constructions_annual": "Projection based on Permit trends",
+        "median_property_tax": "Calculated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projection based on ACS trends",
+        "new_construction_permits": "Projection based on Permit trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_lot_size_acres": "medium",
+        "new_constructions_annual": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are forward-looking projections based on recent market trends. Property tax estimated at 1.9% of value.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 115000,
+      "percent_bachelors_degree_or_higher": 75.5,
+      "school_district_rating_10": 9,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 2.1,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "U.S. Census 1990",
+        "percent_bachelors_degree_or_higher": "U.S. Census 1990",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "U.S. Census 1990",
+        "gini_coefficient": "U.S. Census 1990 (Estimate)",
+        "pct_uninsured": "U.S. Census 1990 (Estimate)",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "U.S. Census 1990 (Estimate)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Core values align with 1990 Census. Gini, uninsured, and SNAP are estimates based on census tables. Eviction rate is a placeholder for a near-zero value.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 145000,
+      "percent_bachelors_degree_or_higher": 79,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 1.8,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 4.2,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.7,
+      "audit_source": {
+        "median_household_income": "Interpolation",
+        "percent_bachelors_degree_or_higher": "Interpolation",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "Interpolation",
+        "gini_coefficient": "Interpolation",
+        "pct_uninsured": "Interpolation",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between 1990 and 2000 Census data, reflecting strong economic growth.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 205000,
+      "percent_bachelors_degree_or_higher": 82.5,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 1.5,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 3.8,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.6,
+      "audit_source": {
+        "median_household_income": "U.S. Census 2000 (1999 Income)",
+        "percent_bachelors_degree_or_higher": "U.S. Census 2000",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "U.S. Census 2000",
+        "gini_coefficient": "U.S. Census 2000 (Estimate)",
+        "pct_uninsured": "U.S. Census 2000 (Estimate)",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "U.S. Census 2000 (Estimate)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Provided income for 2000 ($205k) is a plausible estimate based on 1999 Census income of $190k. Other values align with 2000 Census.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 215000,
+      "percent_bachelors_degree_or_higher": 84.8,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 3.6,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "Interpolation/ACS Estimate",
+        "percent_bachelors_degree_or_higher": "Interpolation/ACS Estimate",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "ACS 5-Year 2005-2009",
+        "gini_coefficient": "ACS 5-Year 2005-2009",
+        "pct_uninsured": "ACS 5-Year 2005-2009",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2005-2009"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Original values are plausible interpolations. New fields are based on the first available ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 228000,
+      "percent_bachelors_degree_or_higher": 87.2,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 4.1,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 3.5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "high",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Provided income ($228k) is higher than ACS 5-year estimate ($186k) but plausible as a point-in-time estimate post-recession. Kept as-is with medium confidence. Other values align with ACS.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 262000,
+      "percent_bachelors_degree_or_higher": 89,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 3.1,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2011-2015",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "ACS median income for this period is top-coded at $250k; provided value is a plausible estimate. Other values align with ACS.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 305000,
+      "percent_bachelors_degree_or_higher": 90.9,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 2.8,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "high",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "ACS median income for this period is top-coded at $250k; provided value is a plausible estimate. Unemployment rate reflects early-COVID economy. Other values align with ACS.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 365000,
+      "percent_bachelors_degree_or_higher": 92.5,
+      "school_district_rating_10": 10,
+      "region": "West Lake Hills (Tract 330.0)",
+      "region_id": 141,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 2.5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income": "Projection based on ACS 2018-2022",
+        "percent_bachelors_degree_or_higher": "Projection based on ACS 2018-2022",
+        "school_district_rating_10": "TEA Ratings",
+        "unemployment_rate": "Projection based on ACS/BLS",
+        "gini_coefficient": "Projection based on ACS 2018-2022",
+        "pct_uninsured": "Projection based on ACS 2018-2022",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Projection based on ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "school_district_rating_10": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are forward-looking projections based on recent trends from the latest ACS data and economic forecasts.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ]
+}

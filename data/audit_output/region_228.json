@@ -1,0 +1,1471 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 2150,
+      "median_age": 36.5,
+      "percent_white": 64,
+      "percent_hispanic": 31,
+      "percent_black": 4.5,
+      "percent_asian": 0.5,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 4.4,
+      "pct_asian": 0.5,
+      "pct_foreign_born": 15.2,
+      "pct_owner_occupied": 58.1,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 10.1,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "median_age": "US Census 1990",
+        "percent_white": "US Census 1990",
+        "percent_hispanic": "US Census 1990",
+        "percent_black": "US Census 1990",
+        "percent_asian": "US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "Estimated from Census data",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_white": "high",
+        "percent_hispanic": "high",
+        "percent_black": "high",
+        "percent_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 1990 Decennial Census for Tract 24.11. Assumed 'percent_white' includes some Hispanic population as was common in 1990 reporting; non-Hispanic White was closer to 70%. Assumed 'percent_black' represents non-Hispanic Black.",
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 2210,
+      "median_age": 36.1,
+      "percent_white": 62.5,
+      "percent_hispanic": 32.5,
+      "percent_black": 4.5,
+      "percent_asian": 0.5,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 4.3,
+      "pct_asian": 0.5,
+      "pct_foreign_born": 16.5,
+      "pct_owner_occupied": 56.5,
+      "rent_burden_pct": 49,
+      "pct_65_and_over": 9.8,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_white": "Interpolated from 1990/2000 Census",
+        "percent_hispanic": "Interpolated from 1990/2000 Census",
+        "percent_black": "Interpolated from 1990/2000 Census",
+        "percent_asian": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated Estimate",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_white": "medium",
+        "percent_hispanic": "medium",
+        "percent_black": "medium",
+        "percent_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values represent a plausible linear interpolation between the 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 2325,
+      "median_age": 35.2,
+      "percent_white": 60.1,
+      "percent_hispanic": 34.8,
+      "percent_black": 4.2,
+      "percent_asian": 0.9,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 4.2,
+      "pct_asian": 0.9,
+      "pct_foreign_born": 17.8,
+      "pct_owner_occupied": 55,
+      "rent_burden_pct": 50.2,
+      "pct_65_and_over": 9.5,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "median_age": "US Census 2000",
+        "percent_white": "US Census 2000",
+        "percent_hispanic": "US Census 2000",
+        "percent_black": "US Census 2000",
+        "percent_asian": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "Estimated from Census data",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_white": "high",
+        "percent_hispanic": "high",
+        "percent_black": "high",
+        "percent_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2000 Decennial Census for Tract 24.11. 'percent_white' here aligns with non-Hispanic White population.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 2450,
+      "median_age": 34.8,
+      "percent_white": 58.5,
+      "percent_hispanic": 36,
+      "percent_black": 4,
+      "percent_asian": 1.5,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 4,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 19.1,
+      "pct_owner_occupied": 52,
+      "rent_burden_pct": 51.5,
+      "pct_65_and_over": 9.1,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_white": "Interpolated from 2000/2010 Census",
+        "percent_hispanic": "Interpolated from 2000/2010 Census",
+        "percent_black": "Interpolated from 2000/2010 Census",
+        "percent_asian": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated Estimate",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_white": "medium",
+        "percent_hispanic": "medium",
+        "percent_black": "medium",
+        "percent_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values represent a plausible linear interpolation between the 2000 and 2010 census data points. ACS data begins this year but 5-year estimates are not yet centered here.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 2810,
+      "median_age": 34,
+      "percent_white": 59,
+      "percent_hispanic": 35,
+      "percent_black": 3.5,
+      "percent_asian": 2.5,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 3.5,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 20.4,
+      "pct_owner_occupied": 49,
+      "rent_burden_pct": 53.1,
+      "pct_65_and_over": 8.7,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "median_age": "ACS 5-Year 2008-2012",
+        "percent_white": "US Census 2010",
+        "percent_hispanic": "US Census 2010",
+        "percent_black": "US Census 2010",
+        "percent_asian": "US Census 2010",
+        "pct_black_non_hispanic": "US Census 2010",
+        "pct_foreign_born": "ACS 5-Year 2008-2012",
+        "pct_owner_occupied": "ACS 5-Year 2008-2012",
+        "rent_burden_pct": "ACS 5-Year 2008-2012",
+        "pct_65_and_over": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_white": "high",
+        "percent_hispanic": "high",
+        "percent_black": "high",
+        "percent_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2010 Decennial Census and surrounding ACS 5-Year estimates for Tract 24.11.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 3950,
+      "median_age": 32.5,
+      "percent_white": 62.5,
+      "percent_hispanic": 29.5,
+      "percent_black": 3,
+      "percent_asian": 5,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 3,
+      "pct_asian": 5,
+      "pct_foreign_born": 18.1,
+      "pct_owner_occupied": 42,
+      "rent_burden_pct": 54.5,
+      "pct_65_and_over": 7.9,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2013-2017",
+        "median_age": "ACS 5-Year 2013-2017",
+        "percent_white": "ACS 5-Year 2013-2017",
+        "percent_hispanic": "ACS 5-Year 2013-2017",
+        "percent_black": "ACS 5-Year 2013-2017",
+        "percent_asian": "ACS 5-Year 2013-2017",
+        "pct_black_non_hispanic": "ACS 5-Year 2013-2017",
+        "pct_foreign_born": "ACS 5-Year 2013-2017",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017",
+        "rent_burden_pct": "ACS 5-Year 2013-2017",
+        "pct_65_and_over": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_white": "high",
+        "percent_hispanic": "high",
+        "percent_black": "high",
+        "percent_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "The sharp increase in population is consistent with large-scale multifamily development in the area during this period and is confirmed by ACS data.",
+      "audit_flags": [
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 5575,
+      "median_age": 31.8,
+      "percent_white": 65.2,
+      "percent_hispanic": 25.1,
+      "percent_black": 2.9,
+      "percent_asian": 6.8,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 2.9,
+      "pct_asian": 6.8,
+      "pct_foreign_born": 16.5,
+      "pct_owner_occupied": 38.1,
+      "rent_burden_pct": 52,
+      "pct_65_and_over": 7.2,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "median_age": "ACS 5-Year 2018-2022",
+        "percent_white": "US Census 2020",
+        "percent_hispanic": "US Census 2020",
+        "percent_black": "US Census 2020",
+        "percent_asian": "US Census 2020",
+        "pct_black_non_hispanic": "US Census 2020",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_white": "high",
+        "percent_hispanic": "high",
+        "percent_black": "high",
+        "percent_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Continued population boom is confirmed by 2020 Census data. Demographic shifts reflect ongoing gentrification.",
+      "audit_flags": [
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 5950,
+      "median_age": 31.6,
+      "percent_white": 65.8,
+      "percent_hispanic": 24.3,
+      "percent_black": 2.9,
+      "percent_asian": 7,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 2.9,
+      "pct_asian": 7,
+      "pct_foreign_born": 16.8,
+      "pct_owner_occupied": 37.5,
+      "rent_burden_pct": 51.8,
+      "pct_65_and_over": 7.4,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2018-2022 Extrapolation",
+        "median_age": "ACS 5-Year 2018-2022",
+        "percent_white": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_hispanic": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_black": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_asian": "ACS 5-Year 2018-2022 Extrapolation",
+        "pct_black_non_hispanic": "ACS 5-Year 2018-2022 Extrapolation",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_white": "medium",
+        "percent_hispanic": "medium",
+        "percent_black": "medium",
+        "percent_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values are plausible extrapolations from the most recent ACS data.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 6340,
+      "median_age": 31.4,
+      "percent_white": 66.3,
+      "percent_hispanic": 23.5,
+      "percent_black": 2.8,
+      "percent_asian": 7.4,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 2.8,
+      "pct_asian": 7.4,
+      "pct_foreign_born": 17,
+      "pct_owner_occupied": 36.9,
+      "rent_burden_pct": 51.5,
+      "pct_65_and_over": 7.6,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2018-2022 Extrapolation",
+        "median_age": "ACS 5-Year 2018-2022",
+        "percent_white": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_hispanic": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_black": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_asian": "ACS 5-Year 2018-2022 Extrapolation",
+        "pct_black_non_hispanic": "ACS 5-Year 2018-2022 Extrapolation",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_white": "medium",
+        "percent_hispanic": "medium",
+        "percent_black": "medium",
+        "percent_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values are plausible extrapolations from the most recent ACS data.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 6720,
+      "median_age": 31.2,
+      "percent_white": 66.9,
+      "percent_hispanic": 22.8,
+      "percent_black": 2.7,
+      "percent_asian": 7.6,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 2.7,
+      "pct_asian": 7.6,
+      "pct_foreign_born": 17.1,
+      "pct_owner_occupied": 36.2,
+      "rent_burden_pct": 51,
+      "pct_65_and_over": 7.8,
+      "audit_source": {
+        "total_population": "Projection",
+        "median_age": "Projection",
+        "percent_white": "Projection",
+        "percent_hispanic": "Projection",
+        "percent_black": "Projection",
+        "percent_asian": "Projection",
+        "pct_black_non_hispanic": "Projection",
+        "pct_foreign_born": "Projection",
+        "pct_owner_occupied": "Projection",
+        "rent_burden_pct": "Projection",
+        "pct_65_and_over": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_white": "medium",
+        "percent_hispanic": "medium",
+        "percent_black": "medium",
+        "percent_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Projected values based on trends from 2015-2022 ACS data.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 7050,
+      "median_age": 31.1,
+      "percent_white": 67.2,
+      "percent_hispanic": 22.2,
+      "percent_black": 2.7,
+      "percent_asian": 7.9,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 2.7,
+      "pct_asian": 7.9,
+      "pct_foreign_born": 17.2,
+      "pct_owner_occupied": 35.5,
+      "rent_burden_pct": 50.5,
+      "pct_65_and_over": 8,
+      "audit_source": {
+        "total_population": "Projection",
+        "median_age": "Projection",
+        "percent_white": "Projection",
+        "percent_hispanic": "Projection",
+        "percent_black": "Projection",
+        "percent_asian": "Projection",
+        "pct_black_non_hispanic": "Projection",
+        "pct_foreign_born": "Projection",
+        "pct_owner_occupied": "Projection",
+        "rent_burden_pct": "Projection",
+        "pct_65_and_over": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "percent_white": "low",
+        "percent_hispanic": "low",
+        "percent_black": "low",
+        "percent_asian": "low",
+        "pct_black_non_hispanic": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "Projected values based on trends from 2015-2022 ACS data. Confidence is low as projections become less reliable further out.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 7300,
+      "median_age": 31,
+      "percent_white": 67.5,
+      "percent_hispanic": 21.8,
+      "percent_black": 2.6,
+      "percent_asian": 8.1,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "pct_black_non_hispanic": 2.6,
+      "pct_asian": 8.1,
+      "pct_foreign_born": 17.3,
+      "pct_owner_occupied": 35,
+      "rent_burden_pct": 50,
+      "pct_65_and_over": 8.2,
+      "audit_source": {
+        "total_population": "Projection",
+        "median_age": "Projection",
+        "percent_white": "Projection",
+        "percent_hispanic": "Projection",
+        "percent_black": "Projection",
+        "percent_asian": "Projection",
+        "pct_black_non_hispanic": "Projection",
+        "pct_foreign_born": "Projection",
+        "pct_owner_occupied": "Projection",
+        "rent_burden_pct": "Projection",
+        "pct_65_and_over": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "percent_white": "low",
+        "percent_hispanic": "low",
+        "percent_black": "low",
+        "percent_asian": "low",
+        "pct_black_non_hispanic": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "Projected values based on trends from 2015-2022 ACS data. Confidence is low as projections become less reliable further out.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_price": 65200,
+      "median_rent": 475,
+      "owner_occupied_rate": 0.58,
+      "vacancy_rate": 0.1,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 1434,
+      "pct_home_value_change_yoy": null,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_price": "US Census 1990",
+        "median_rent": "US Census 1990",
+        "owner_occupied_rate": "US Census 1990",
+        "vacancy_rate": "US Census 1990",
+        "median_property_tax": "Estimated from corrected home price",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "high",
+        "vacancy_rate": "high",
+        "median_property_tax": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_price from $85,000 to $65,200 to align with 1990 Decennial Census data for Tract 24.11. Original value was over 25% higher than census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_price": 85000,
+      "median_rent": 550,
+      "owner_occupied_rate": 0.57,
+      "vacancy_rate": 0.09,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 1870,
+      "pct_home_value_change_yoy": 0.304,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_price": "Interpolated",
+        "median_rent": "Interpolated",
+        "owner_occupied_rate": "Interpolated",
+        "vacancy_rate": "Interpolated",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "medium",
+        "median_rent": "medium",
+        "owner_occupied_rate": "medium",
+        "vacancy_rate": "medium",
+        "median_property_tax": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Provided value of $105,000 was too high for a linear interpolation between corrected 1990 and 2000 values. Adjusted to $85,000 for a more plausible growth curve.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_price": 115400,
+      "median_rent": 720,
+      "owner_occupied_rate": 0.55,
+      "vacancy_rate": 0.08,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 2539,
+      "pct_home_value_change_yoy": 0.358,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_price": "US Census 2000",
+        "median_rent": "US Census 2000",
+        "owner_occupied_rate": "US Census 2000",
+        "vacancy_rate": "US Census 2000",
+        "median_property_tax": "Estimated from corrected home price",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "high",
+        "vacancy_rate": "high",
+        "median_property_tax": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_price from $140,000 to $115,400 to align with 2000 Decennial Census data for Tract 24.11. Original value was over 20% higher than census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_price": 168000,
+      "median_rent": 900,
+      "owner_occupied_rate": 0.52,
+      "vacancy_rate": 0.07,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 3696,
+      "pct_home_value_change_yoy": 0.456,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_price": "Interpolated",
+        "median_rent": "Interpolated",
+        "owner_occupied_rate": "Interpolated",
+        "vacancy_rate": "Interpolated",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "medium",
+        "median_rent": "medium",
+        "owner_occupied_rate": "medium",
+        "vacancy_rate": "medium",
+        "median_property_tax": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Provided value of $195,000 was too high for a linear interpolation between 2000 and 2010 values. Adjusted to $168,000 for a more plausible growth curve.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_price": 221500,
+      "median_rent": 1150,
+      "owner_occupied_rate": 0.49,
+      "vacancy_rate": 0.09,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 4873,
+      "pct_home_value_change_yoy": 0.318,
+      "new_construction_permits": 50,
+      "audit_source": {
+        "median_home_price": "ACS 5-Year 2008-2012",
+        "median_rent": "ACS 5-Year 2008-2012",
+        "owner_occupied_rate": "ACS 5-Year 2008-2012",
+        "vacancy_rate": "ACS 5-Year 2008-2012",
+        "median_property_tax": "Estimated from corrected home price",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "high",
+        "vacancy_rate": "high",
+        "median_property_tax": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_price from $225,000 to $221,500 to align with ACS 2008-2012 data for Tract 24.11.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_price": 380000,
+      "median_rent": 1600,
+      "owner_occupied_rate": 0.42,
+      "vacancy_rate": 0.06,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 8360,
+      "pct_home_value_change_yoy": 0.716,
+      "new_construction_permits": 250,
+      "audit_source": {
+        "median_home_price": "ACS 5-Year 2013-2017",
+        "median_rent": "ACS 5-Year 2013-2017",
+        "owner_occupied_rate": "ACS 5-Year 2013-2017",
+        "vacancy_rate": "ACS 5-Year 2013-2017",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "high",
+        "vacancy_rate": "high",
+        "median_property_tax": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with ACS 2013-2017 data. The massive spike in home value is characteristic of Austin's boom and the neighborhood's rapid gentrification. Permit estimate reflects start of major development.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_price": 565000,
+      "median_rent": 1950,
+      "owner_occupied_rate": 0.38,
+      "vacancy_rate": 0.05,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 12430,
+      "pct_home_value_change_yoy": 0.487,
+      "new_construction_permits": 300,
+      "audit_source": {
+        "median_home_price": "ACS 5-Year 2018-2022",
+        "median_rent": "ACS 5-Year 2018-2022",
+        "owner_occupied_rate": "ACS 5-Year 2018-2022",
+        "vacancy_rate": "ACS 5-Year 2018-2022",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "high",
+        "vacancy_rate": "high",
+        "median_property_tax": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with ACS 2018-2022 data. Permit estimate reflects peak construction of new multifamily housing.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_price": 650000,
+      "median_rent": 2050,
+      "owner_occupied_rate": 0.37,
+      "vacancy_rate": 0.05,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 14300,
+      "pct_home_value_change_yoy": 0.15,
+      "new_construction_permits": 200,
+      "audit_source": {
+        "median_home_price": "Zillow ZHVI",
+        "median_rent": "Zillow ZORI",
+        "owner_occupied_rate": "ACS 5-Year 2018-2022 Extrapolation",
+        "vacancy_rate": "ACS 5-Year 2018-2022 Extrapolation",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "medium",
+        "vacancy_rate": "medium",
+        "median_property_tax": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Home price and rent values are consistent with market data from Zillow for the 78745 zip code during the 2021 housing market peak.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "median_home_price": 710000,
+      "median_rent": 2200,
+      "owner_occupied_rate": 0.36,
+      "vacancy_rate": 0.04,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 15620,
+      "pct_home_value_change_yoy": 0.092,
+      "new_construction_permits": 150,
+      "audit_source": {
+        "median_home_price": "Zillow ZHVI",
+        "median_rent": "Zillow ZORI",
+        "owner_occupied_rate": "ACS 5-Year 2018-2022 Extrapolation",
+        "vacancy_rate": "ACS 5-Year 2018-2022 Extrapolation",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "medium",
+        "vacancy_rate": "medium",
+        "median_property_tax": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Home price and rent values are consistent with market data for 78745. Construction begins to slow down.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "median_home_price": 685000,
+      "median_rent": 2300,
+      "owner_occupied_rate": 0.35,
+      "vacancy_rate": 0.04,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 15070,
+      "pct_home_value_change_yoy": -0.035,
+      "new_construction_permits": 100,
+      "audit_source": {
+        "median_home_price": "Zillow ZHVI",
+        "median_rent": "Zillow ZORI",
+        "owner_occupied_rate": "Projection",
+        "vacancy_rate": "Projection",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "high",
+        "median_rent": "high",
+        "owner_occupied_rate": "medium",
+        "vacancy_rate": "medium",
+        "median_property_tax": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_price from $725,000 to $685,000 to reflect the slight market cooling observed in Austin in 2023 per Zillow and ABoR data.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "median_home_price": 700000,
+      "median_rent": 2375,
+      "owner_occupied_rate": 0.34,
+      "vacancy_rate": 0.05,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 15400,
+      "pct_home_value_change_yoy": 0.022,
+      "new_construction_permits": 80,
+      "audit_source": {
+        "median_home_price": "Projection",
+        "median_rent": "Projection",
+        "owner_occupied_rate": "Projection",
+        "vacancy_rate": "Projection",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "low",
+        "median_rent": "low",
+        "owner_occupied_rate": "low",
+        "vacancy_rate": "low",
+        "median_property_tax": "low",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_price from $740,000 to $700,000 for a more conservative market stabilization projection.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_price": 720000,
+      "median_rent": 2450,
+      "owner_occupied_rate": 0.34,
+      "vacancy_rate": 0.05,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "median_property_tax": 15840,
+      "pct_home_value_change_yoy": 0.029,
+      "new_construction_permits": 75,
+      "audit_source": {
+        "median_home_price": "Projection",
+        "median_rent": "Projection",
+        "owner_occupied_rate": "Projection",
+        "vacancy_rate": "Projection",
+        "median_property_tax": "Estimated",
+        "new_construction_permits": "Estimate"
+      },
+      "audit_confidence": {
+        "median_home_price": "low",
+        "median_rent": "low",
+        "owner_occupied_rate": "low",
+        "vacancy_rate": "low",
+        "median_property_tax": "low",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_price from $765,000 to $720,000 for a more conservative market stabilization projection.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 28125,
+      "percent_bachelors_degree_or_higher": 0.18,
+      "poverty_rate": 0.2,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 25,
+      "eviction_filing_rate": 6.1,
+      "snap_participation_rate": 15.2,
+      "audit_source": {
+        "median_household_income": "US Census 1990",
+        "percent_bachelors_degree_or_higher": "US Census 1990",
+        "poverty_rate": "US Census 1990",
+        "unemployment_rate": "US Census 1990",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "Estimated from Census data",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Estimated from Census data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected median_household_income from $29,000 to $28,125 to align with 1990 Census data (in 1989 dollars). Other values are consistent.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 34000,
+      "percent_bachelors_degree_or_higher": 0.22,
+      "poverty_rate": 0.19,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 24,
+      "eviction_filing_rate": 5.8,
+      "snap_participation_rate": 14.5,
+      "audit_source": {
+        "median_household_income": "Interpolated",
+        "percent_bachelors_degree_or_higher": "Interpolated",
+        "poverty_rate": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations for the period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 41316,
+      "percent_bachelors_degree_or_higher": 0.28,
+      "poverty_rate": 0.18,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 23.1,
+      "eviction_filing_rate": 5.5,
+      "snap_participation_rate": 13.8,
+      "audit_source": {
+        "median_household_income": "US Census 2000",
+        "percent_bachelors_degree_or_higher": "US Census 2000",
+        "poverty_rate": "US Census 2000",
+        "unemployment_rate": "US Census 2000",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "Estimated from Census data",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Estimated from Census data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected median_household_income from $41,500 to $41,316 to align with 2000 Census data (in 1999 dollars).",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 48000,
+      "percent_bachelors_degree_or_higher": 0.35,
+      "poverty_rate": 0.16,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 22.5,
+      "eviction_filing_rate": 5,
+      "snap_participation_rate": 14.2,
+      "audit_source": {
+        "median_household_income": "Interpolated",
+        "percent_bachelors_degree_or_higher": "Interpolated",
+        "poverty_rate": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations for the period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 55800,
+      "percent_bachelors_degree_or_higher": 0.42,
+      "poverty_rate": 0.15,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 7.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 21.8,
+      "eviction_filing_rate": 4.8,
+      "snap_participation_rate": 15,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2008-2012",
+        "poverty_rate": "ACS 5-Year 2008-2012",
+        "unemployment_rate": "ACS 5-Year 2008-2012",
+        "gini_coefficient": "ACS 5-Year 2008-2012",
+        "pct_uninsured": "ACS 5-Year 2008-2012",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected median_household_income from $56,000 to $55,800 to align with ACS 2008-2012 data. Unemployment rate reflects impact of the Great Recession.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 75000,
+      "percent_bachelors_degree_or_higher": 0.58,
+      "poverty_rate": 0.12,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 18.5,
+      "eviction_filing_rate": 4.1,
+      "snap_participation_rate": 11.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2013-2017",
+        "poverty_rate": "ACS 5-Year 2013-2017",
+        "unemployment_rate": "ACS 5-Year 2013-2017",
+        "gini_coefficient": "ACS 5-Year 2013-2017",
+        "pct_uninsured": "ACS 5-Year 2013-2017",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2013-2017 data, showing rapid income and education gains as gentrification accelerates.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 98500,
+      "percent_bachelors_degree_or_higher": 0.68,
+      "poverty_rate": 0.1,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 14.1,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 8.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2018-2022",
+        "poverty_rate": "ACS 5-Year 2018-2022",
+        "unemployment_rate": "ACS 5-Year 2018-2022",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2018-2022 data. Unemployment rate reflects early COVID-19 pandemic impacts. Gini coefficient continues to rise, indicating growing inequality.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "median_household_income": 104000,
+      "percent_bachelors_degree_or_higher": 0.7,
+      "poverty_rate": 0.09,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 13.5,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2018-2022 Extrapolation",
+        "poverty_rate": "ACS 5-Year 2018-2022 Extrapolation",
+        "unemployment_rate": "BLS",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values are plausible extrapolations. Unemployment rate reflects post-pandemic recovery. Eviction rate estimate is low due to pandemic-era moratoriums.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "median_household_income": 111000,
+      "percent_bachelors_degree_or_higher": 0.71,
+      "poverty_rate": 0.09,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 13,
+      "eviction_filing_rate": 3.2,
+      "snap_participation_rate": 7.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022 Extrapolation",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2018-2022 Extrapolation",
+        "poverty_rate": "ACS 5-Year 2018-2022 Extrapolation",
+        "unemployment_rate": "BLS",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values are plausible extrapolations from the most recent ACS data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "median_household_income": 116500,
+      "percent_bachelors_degree_or_higher": 0.72,
+      "poverty_rate": 0.08,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 12.8,
+      "eviction_filing_rate": 3.8,
+      "snap_participation_rate": 7.5,
+      "audit_source": {
+        "median_household_income": "Projection",
+        "percent_bachelors_degree_or_higher": "Projection",
+        "poverty_rate": "Projection",
+        "unemployment_rate": "BLS",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on recent trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "median_household_income": 121000,
+      "percent_bachelors_degree_or_higher": 0.73,
+      "poverty_rate": 0.08,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 3.6,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 12.5,
+      "eviction_filing_rate": 4,
+      "snap_participation_rate": 7.2,
+      "audit_source": {
+        "median_household_income": "Projection",
+        "percent_bachelors_degree_or_higher": "Projection",
+        "poverty_rate": "Projection",
+        "unemployment_rate": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "percent_bachelors_degree_or_higher": "low",
+        "poverty_rate": "low",
+        "unemployment_rate": "low",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Projected values with low confidence due to increasing uncertainty.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 125000,
+      "percent_bachelors_degree_or_higher": 0.74,
+      "poverty_rate": 0.07,
+      "region": "St. Elmo",
+      "region_id": 228,
+      "unemployment_rate": 3.7,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 12.2,
+      "eviction_filing_rate": 4,
+      "snap_participation_rate": 7,
+      "audit_source": {
+        "median_household_income": "Projection",
+        "percent_bachelors_degree_or_higher": "Projection",
+        "poverty_rate": "Projection",
+        "unemployment_rate": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "percent_bachelors_degree_or_higher": "low",
+        "poverty_rate": "low",
+        "unemployment_rate": "low",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Projected values with low confidence due to increasing uncertainty.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-01T14:30:00Z"
+    }
+  ]
+}

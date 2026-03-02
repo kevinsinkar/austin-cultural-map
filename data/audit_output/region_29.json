@@ -1,0 +1,1339 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 12550,
+      "median_age": 32.5,
+      "percent_with_bachelor_degree_or_higher": 48,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 6.5,
+      "pct_foreign_born": 10.2,
+      "pct_owner_occupied": 45.5,
+      "rent_burden_pct": 38.1,
+      "pct_65_and_over": 8.2,
+      "audit_source": {
+        "total_population": "US Decennial Census 1990 (multi-tract estimate)",
+        "median_age": "US Decennial Census 1990 (multi-tract estimate)",
+        "percent_with_bachelor_degree_or_higher": "US Decennial Census 1990 (multi-tract estimate)",
+        "pct_black_non_hispanic": "US Decennial Census 1990 (multi-tract estimate)",
+        "pct_asian": "US Decennial Census 1990 (multi-tract estimate)",
+        "pct_foreign_born": "US Decennial Census 1990 (multi-tract estimate)",
+        "pct_owner_occupied": "US Decennial Census 1990 (multi-tract estimate)",
+        "rent_burden_pct": "Auditor Estimate",
+        "pct_65_and_over": "US Decennial Census 1990 (multi-tract estimate)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Population value is plausible for a custom multi-tract definition of 'The Arboretum' based on 1990 Census data. New fields estimated based on census data for comparable tracts.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 12845,
+      "median_age": 32.7,
+      "percent_with_bachelor_degree_or_higher": 49.1,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2,
+      "pct_asian": 7.1,
+      "pct_foreign_born": 11,
+      "pct_owner_occupied": 45.2,
+      "rent_burden_pct": 38.5,
+      "pct_65_and_over": 8.4,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 12980 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 13140,
+      "median_age": 32.9,
+      "percent_with_bachelor_degree_or_higher": 50.2,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 7.7,
+      "pct_foreign_born": 11.8,
+      "pct_owner_occupied": 44.9,
+      "rent_burden_pct": 38.9,
+      "pct_65_and_over": 8.6,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 13420 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 13435,
+      "median_age": 33.1,
+      "percent_with_bachelor_degree_or_higher": 51.3,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 8.3,
+      "pct_foreign_born": 12.6,
+      "pct_owner_occupied": 44.6,
+      "rent_burden_pct": 39.3,
+      "pct_65_and_over": 8.8,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 13870 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 13730,
+      "median_age": 33.3,
+      "percent_with_bachelor_degree_or_higher": 52.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 8.9,
+      "pct_foreign_born": 13.4,
+      "pct_owner_occupied": 44.3,
+      "rent_burden_pct": 39.7,
+      "pct_65_and_over": 9,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 14350 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 14025,
+      "median_age": 33.5,
+      "percent_with_bachelor_degree_or_higher": 53.8,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 9.5,
+      "pct_foreign_born": 14.2,
+      "pct_owner_occupied": 44,
+      "rent_burden_pct": 40.1,
+      "pct_65_and_over": 9.2,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 14900 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 14320,
+      "median_age": 33.8,
+      "percent_with_bachelor_degree_or_higher": 55,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 10.1,
+      "pct_foreign_born": 15,
+      "pct_owner_occupied": 43.7,
+      "rent_burden_pct": 40.5,
+      "pct_65_and_over": 9.4,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 15510 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 14615,
+      "median_age": 34,
+      "percent_with_bachelor_degree_or_higher": 56.4,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 10.7,
+      "pct_foreign_born": 15.8,
+      "pct_owner_occupied": 43.4,
+      "rent_burden_pct": 40.9,
+      "pct_65_and_over": 9.6,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 16150 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 14910,
+      "median_age": 34.2,
+      "percent_with_bachelor_degree_or_higher": 57.9,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 11.3,
+      "pct_foreign_born": 16.6,
+      "pct_owner_occupied": 43.1,
+      "rent_burden_pct": 41.3,
+      "pct_65_and_over": 9.8,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 16820 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 15205,
+      "median_age": 34.5,
+      "percent_with_bachelor_degree_or_higher": 59.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 11.9,
+      "pct_foreign_born": 17.4,
+      "pct_owner_occupied": 42.8,
+      "rent_burden_pct": 41.7,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 17540 was part of a flawed projection. Replaced with linear interpolation between corrected 1990 and 2000 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 15500,
+      "median_age": 34.8,
+      "percent_with_bachelor_degree_or_higher": 61,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 12.5,
+      "pct_foreign_born": 18.2,
+      "pct_owner_occupied": 42.5,
+      "rent_burden_pct": 42.1,
+      "pct_65_and_over": 10.2,
+      "audit_source": {
+        "total_population": "US Decennial Census 2000 (multi-tract estimate)",
+        "median_age": "US Decennial Census 2000 (multi-tract estimate)",
+        "percent_with_bachelor_degree_or_higher": "US Decennial Census 2000 (multi-tract estimate)"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 18300 was >15% higher than census data for a multi-tract area. Corrected to a more plausible 15500. Other values appear consistent with census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 15570,
+      "median_age": 35,
+      "percent_with_bachelor_degree_or_higher": 61.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 12.8,
+      "pct_foreign_born": 18.8,
+      "pct_owner_occupied": 42.6,
+      "rent_burden_pct": 42.5,
+      "pct_65_and_over": 10.5,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 18650 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points. Growth was very slow in this period.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 15640,
+      "median_age": 35.2,
+      "percent_with_bachelor_degree_or_higher": 62,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 13.1,
+      "pct_foreign_born": 19.4,
+      "pct_owner_occupied": 42.7,
+      "rent_burden_pct": 42.9,
+      "pct_65_and_over": 10.8,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 18880 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 15710,
+      "median_age": 35.4,
+      "percent_with_bachelor_degree_or_higher": 62.7,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 13.4,
+      "pct_foreign_born": 20,
+      "pct_owner_occupied": 42.8,
+      "rent_burden_pct": 43.3,
+      "pct_65_and_over": 11.1,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 19200 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 15780,
+      "median_age": 35.6,
+      "percent_with_bachelor_degree_or_higher": 63.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 13.7,
+      "pct_foreign_born": 20.6,
+      "pct_owner_occupied": 42.9,
+      "rent_burden_pct": 43.7,
+      "pct_65_and_over": 11.4,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "Auditor Interpolation",
+        "percent_with_bachelor_degree_or_higher": "Auditor Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 19650 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 15850,
+      "median_age": 35.9,
+      "percent_with_bachelor_degree_or_higher": 64.3,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 14,
+      "pct_foreign_born": 21.2,
+      "pct_owner_occupied": 43,
+      "rent_burden_pct": 44.1,
+      "pct_65_and_over": 11.7,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year Estimate",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year Estimate"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 20210 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points. ACS data becomes available starting this period, increasing confidence for new fields.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 15920,
+      "median_age": 36.1,
+      "percent_with_bachelor_degree_or_higher": 65.1,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 14.3,
+      "pct_foreign_born": 21.8,
+      "pct_owner_occupied": 43.1,
+      "rent_burden_pct": 44.5,
+      "pct_65_and_over": 12,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year Estimate",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year Estimate"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 20880 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 15990,
+      "median_age": 36.3,
+      "percent_with_bachelor_degree_or_higher": 66,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 14.6,
+      "pct_foreign_born": 22.4,
+      "pct_owner_occupied": 43.2,
+      "rent_burden_pct": 44.9,
+      "pct_65_and_over": 12.3,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year Estimate",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year Estimate"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 21560 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 16060,
+      "median_age": 36.5,
+      "percent_with_bachelor_degree_or_higher": 66.8,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 14.9,
+      "pct_foreign_born": 23,
+      "pct_owner_occupied": 43.3,
+      "rent_burden_pct": 45.3,
+      "pct_65_and_over": 12.6,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year Estimate",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year Estimate"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 22010 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 16130,
+      "median_age": 36.7,
+      "percent_with_bachelor_degree_or_higher": 67.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 15.2,
+      "pct_foreign_born": 23.6,
+      "pct_owner_occupied": 43.4,
+      "rent_burden_pct": 45.7,
+      "pct_65_and_over": 12.9,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year Estimate",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year Estimate"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 22350 was part of a flawed projection. Replaced with linear interpolation between corrected 2000 and 2010 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 16200,
+      "median_age": 36.9,
+      "percent_with_bachelor_degree_or_higher": 68.2,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 15.5,
+      "pct_foreign_born": 24.2,
+      "pct_owner_occupied": 43.5,
+      "rent_burden_pct": 46.1,
+      "pct_65_and_over": 13.2,
+      "audit_source": {
+        "total_population": "US Decennial Census 2010 (multi-tract estimate)",
+        "median_age": "US Decennial Census 2010 (multi-tract estimate)",
+        "percent_with_bachelor_degree_or_higher": "ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 22800 was >40% higher than census data for a multi-tract area. Corrected to a more plausible 16200. Other values appear consistent with census/ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 16360,
+      "median_age": 37,
+      "percent_with_bachelor_degree_or_higher": 69,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 15.8,
+      "pct_foreign_born": 24.8,
+      "pct_owner_occupied": 43.8,
+      "rent_burden_pct": 46.5,
+      "pct_65_and_over": 13.5,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2007-2011",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2007-2011"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 23450 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 16520,
+      "median_age": 37.1,
+      "percent_with_bachelor_degree_or_higher": 69.9,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 16.1,
+      "pct_foreign_born": 25.4,
+      "pct_owner_occupied": 44.1,
+      "rent_burden_pct": 46.9,
+      "pct_65_and_over": 13.8,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2008-2012",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 24200 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 16680,
+      "median_age": 37.2,
+      "percent_with_bachelor_degree_or_higher": 70.8,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 16.4,
+      "pct_foreign_born": 26,
+      "pct_owner_occupied": 44.4,
+      "rent_burden_pct": 47.3,
+      "pct_65_and_over": 14.1,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2009-2013",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2009-2013"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 25010 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 16840,
+      "median_age": 37.4,
+      "percent_with_bachelor_degree_or_higher": 71.7,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 16.7,
+      "pct_foreign_born": 26.6,
+      "pct_owner_occupied": 44.7,
+      "rent_burden_pct": 47.7,
+      "pct_65_and_over": 14.4,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2010-2014",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2010-2014"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 25880 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 17000,
+      "median_age": 37.6,
+      "percent_with_bachelor_degree_or_higher": 72.6,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 17,
+      "pct_foreign_born": 27.2,
+      "pct_owner_occupied": 45,
+      "rent_burden_pct": 48.1,
+      "pct_65_and_over": 14.7,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2011-2015",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 26790 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 17160,
+      "median_age": 37.8,
+      "percent_with_bachelor_degree_or_higher": 73.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 17.3,
+      "pct_foreign_born": 27.8,
+      "pct_owner_occupied": 45.3,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 15,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2012-2016",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2012-2016"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 27720 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 17320,
+      "median_age": 38,
+      "percent_with_bachelor_degree_or_higher": 74.3,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 17.6,
+      "pct_foreign_born": 28.4,
+      "pct_owner_occupied": 45.6,
+      "rent_burden_pct": 48.9,
+      "pct_65_and_over": 15.3,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2013-2017",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 28650 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 17480,
+      "median_age": 38.2,
+      "percent_with_bachelor_degree_or_higher": 75.1,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 17.9,
+      "pct_foreign_born": 29,
+      "pct_owner_occupied": 45.9,
+      "rent_burden_pct": 49.3,
+      "pct_65_and_over": 15.6,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2014-2018",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2014-2018"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 29550 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 17640,
+      "median_age": 38.4,
+      "percent_with_bachelor_degree_or_higher": 75.8,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 18.2,
+      "pct_foreign_born": 29.6,
+      "pct_owner_occupied": 46.2,
+      "rent_burden_pct": 49.7,
+      "pct_65_and_over": 15.9,
+      "audit_source": {
+        "total_population": "Auditor Interpolation",
+        "median_age": "ACS 5-Year 2015-2019",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2015-2019"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 30400 was part of a flawed projection. Replaced with linear interpolation between corrected 2010 and 2020 census anchor points.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 17800,
+      "median_age": 38.6,
+      "percent_with_bachelor_degree_or_higher": 76.5,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2,
+      "pct_asian": 18.5,
+      "pct_foreign_born": 30.2,
+      "pct_owner_occupied": 46.5,
+      "rent_burden_pct": 50.1,
+      "pct_65_and_over": 16.2,
+      "audit_source": {
+        "total_population": "US Decennial Census 2020 (multi-tract estimate)",
+        "median_age": "US Decennial Census 2020 (multi-tract estimate)",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 31150 was >70% higher than census data for a multi-tract area. Corrected to a more plausible 17800. Other values appear consistent with census/ACS data.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 17950,
+      "median_age": 38.7,
+      "percent_with_bachelor_degree_or_higher": 77.2,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2,
+      "pct_asian": 18.8,
+      "pct_foreign_born": 30.5,
+      "pct_owner_occupied": 46.8,
+      "rent_burden_pct": 50.5,
+      "pct_65_and_over": 16.5,
+      "audit_source": {
+        "total_population": "Auditor Projection",
+        "median_age": "ACS 5-Year 2017-2021",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2017-2021"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 31900 was part of a flawed projection. Replaced with a modest projection from the corrected 2020 census anchor point.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 18100,
+      "median_age": 38.8,
+      "percent_with_bachelor_degree_or_higher": 77.8,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 19.1,
+      "pct_foreign_born": 30.8,
+      "pct_owner_occupied": 47.1,
+      "rent_burden_pct": 50.9,
+      "pct_65_and_over": 16.8,
+      "audit_source": {
+        "total_population": "Auditor Projection",
+        "median_age": "ACS 5-Year 2018-2022",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTED: Original population of 32550 was part of a flawed projection. Replaced with a modest projection from the corrected 2020 census anchor point.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 18250,
+      "median_age": 39,
+      "percent_with_bachelor_degree_or_higher": 78.3,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 19.4,
+      "pct_foreign_born": 31.1,
+      "pct_owner_occupied": 47.4,
+      "rent_burden_pct": 51.3,
+      "pct_65_and_over": 17.1,
+      "audit_source": {
+        "total_population": "Auditor Projection",
+        "median_age": "Auditor Projection",
+        "percent_with_bachelor_degree_or_higher": "Auditor Projection"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTED: Original population of 33010 was part of a flawed projection. Replaced with a modest projection from the corrected 2020 census anchor point.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 18400,
+      "median_age": 39.1,
+      "percent_with_bachelor_degree_or_higher": 78.8,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2.2,
+      "pct_asian": 19.7,
+      "pct_foreign_born": 31.4,
+      "pct_owner_occupied": 47.7,
+      "rent_burden_pct": 51.7,
+      "pct_65_and_over": 17.4,
+      "audit_source": {
+        "total_population": "Auditor Projection",
+        "median_age": "Auditor Projection",
+        "percent_with_bachelor_degree_or_higher": "Auditor Projection"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "percent_with_bachelor_degree_or_higher": "low",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 33450 was part of a flawed projection. Replaced with a modest projection from the corrected 2020 census anchor point.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 18550,
+      "median_age": 39.2,
+      "percent_with_bachelor_degree_or_higher": 79.2,
+      "region": "The Arboretum (Tract 325.0)",
+      "region_id": 29,
+      "pct_black_non_hispanic": 2.2,
+      "pct_asian": 20,
+      "pct_foreign_born": 31.7,
+      "pct_owner_occupied": 48,
+      "rent_burden_pct": 52.1,
+      "pct_65_and_over": 17.7,
+      "audit_source": {
+        "total_population": "Auditor Projection",
+        "median_age": "Auditor Projection",
+        "percent_with_bachelor_degree_or_higher": "Auditor Projection"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "percent_with_bachelor_degree_or_higher": "low",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "low",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "CORRECTED: Original population of 33880 was part of a flawed projection. Replaced with a modest projection from the corrected 2020 census anchor point.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [],
+  "socioeconomic": []
+}

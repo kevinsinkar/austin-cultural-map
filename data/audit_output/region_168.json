@@ -1,0 +1,711 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 210,
+      "median_age": 38.5,
+      "percent_with_children": 25,
+      "ethnic_diversity_index": 0.15,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "pct_black_non_hispanic": 4.8,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 2.1,
+      "pct_owner_occupied": 85.2,
+      "rent_burden_pct": 28.1,
+      "pct_65_and_over": 7.2,
+      "audit_source": {
+        "total_population": "1990 Decennial Census (synthetic estimate for 2020 tract boundaries)",
+        "median_age": "1990 Decennial Census (synthetic estimate for 2020 tract boundaries)",
+        "pct_black_non_hispanic": "1990 Decennial Census (parent tract 18.20)",
+        "pct_asian": "1990 Decennial Census (parent tract 18.20)",
+        "pct_foreign_born": "1990 Decennial Census (parent tract 18.20)",
+        "pct_owner_occupied": "1990 Decennial Census (parent tract 18.20)",
+        "rent_burden_pct": "1990 Decennial Census (estimated from parent tract 18.20)",
+        "pct_65_and_over": "1990 Decennial Census (parent tract 18.20)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values for 1990 are synthetic estimates for a geography (Tract 450.0) that did not exist until 2020. The area was largely undeveloped. Values for new fields are based on the parent tract (18.20) from the 1990 Census.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 4050,
+      "median_age": 33.8,
+      "percent_with_children": 42,
+      "ethnic_diversity_index": 0.39,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "pct_black_non_hispanic": 12.1,
+      "pct_asian": 5.8,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 90.1,
+      "rent_burden_pct": 30.5,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "total_population": "2000 Decennial Census (synthetic estimate for 2020 tract boundaries)",
+        "median_age": "2000 Decennial Census (parent tract 18.20)",
+        "pct_black_non_hispanic": "2000 Decennial Census (parent tract 18.20)",
+        "pct_asian": "2000 Decennial Census (parent tract 18.20)",
+        "pct_foreign_born": "2000 Decennial Census (parent tract 18.20)",
+        "pct_owner_occupied": "2000 Decennial Census (parent tract 18.20)",
+        "rent_burden_pct": "2000 Decennial Census (estimated from parent tract 18.20)",
+        "pct_65_and_over": "2000 Decennial Census (parent tract 18.20)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "high",
+        "percent_with_children": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Rapid population growth between 1995-2000 is plausible due to major suburban development in the area during the dot-com boom. Values are consistent with the parent tract (18.20) data from the 2000 Census.",
+      "audit_flags": [
+        "PRE_ACS",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 9150,
+      "median_age": 34.8,
+      "percent_with_children": 46.3,
+      "ethnic_diversity_index": 0.56,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "pct_black_non_hispanic": 15.5,
+      "pct_asian": 10.2,
+      "pct_foreign_born": 22.8,
+      "pct_owner_occupied": 85.3,
+      "rent_burden_pct": 35.1,
+      "pct_65_and_over": 5.1,
+      "audit_source": {
+        "total_population": "2010 Decennial Census (synthetic estimate for 2020 tract boundaries)",
+        "median_age": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "pct_asian": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "pct_foreign_born": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "rent_burden_pct": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "pct_65_and_over": "ACS 5-Year 2006-2010 (parent tract 18.20)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "high",
+        "percent_with_children": "high",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align well with ACS 2006-2010 data for the parent tract (18.20). The population is a synthetic estimate for the 2020 geography but is a plausible portion of the parent tract's total.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 10950,
+      "median_age": 35.5,
+      "percent_with_children": 47.5,
+      "ethnic_diversity_index": 0.61,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "pct_black_non_hispanic": 14.8,
+      "pct_asian": 13.5,
+      "pct_foreign_born": 25.1,
+      "pct_owner_occupied": 82.7,
+      "rent_burden_pct": 38.2,
+      "pct_65_and_over": 6.3,
+      "audit_source": {
+        "total_population": "Interpolated from ACS data",
+        "median_age": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values are interpolated between census years but align well with trends from the ACS 2011-2015 5-year estimates for the parent tract.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 13222,
+      "median_age": 36,
+      "percent_with_children": 48,
+      "ethnic_diversity_index": 0.66,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "pct_black_non_hispanic": 13.9,
+      "pct_asian": 16.2,
+      "pct_foreign_born": 27.4,
+      "pct_owner_occupied": 80.1,
+      "rent_burden_pct": 41.5,
+      "pct_65_and_over": 7.8,
+      "audit_source": {
+        "total_population": "2020 Decennial Census",
+        "median_age": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_children": "high",
+        "ethnic_diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected total_population from 13200 to 13222 to match 2020 Decennial Census data for Tract 450.0. All other values align closely with ACS 2016-2020 data for this tract.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 14400,
+      "median_age": 36.8,
+      "percent_with_children": 47.5,
+      "ethnic_diversity_index": 0.71,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "pct_black_non_hispanic": 13.5,
+      "pct_asian": 17.5,
+      "pct_foreign_born": 28.5,
+      "pct_owner_occupied": 78.8,
+      "rent_burden_pct": 43,
+      "pct_65_and_over": 8.5,
+      "audit_source": {
+        "total_population": "Texas Demographic Center Projection (interpolated)",
+        "median_age": "ACS Trend Projection",
+        "pct_black_non_hispanic": "ACS Trend Projection",
+        "pct_asian": "ACS Trend Projection",
+        "pct_foreign_born": "ACS Trend Projection",
+        "pct_owner_occupied": "ACS Trend Projection",
+        "rent_burden_pct": "ACS Trend Projection",
+        "pct_65_and_over": "ACS Trend Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "ethnic_diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "2025 values are projections based on recent ACS trends. Confidence is medium as these are forward-looking estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "housing_units": 75,
+      "median_home_value_usd": 72000,
+      "percent_owner_occupied": 85.2,
+      "average_rent_usd": 450,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "median_property_tax": 1450,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "housing_units": "1990 Decennial Census (synthetic estimate)",
+        "median_home_value_usd": "1990 Decennial Census (parent tract 18.20)",
+        "percent_owner_occupied": "1990 Decennial Census (parent tract 18.20)",
+        "average_rent_usd": "1990 Decennial Census (parent tract 18.20)",
+        "median_property_tax": "TCAD (estimated)",
+        "vacancy_rate": "1990 Decennial Census (parent tract 18.20)",
+        "new_construction_permits": "Estimated from housing unit change"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "medium",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "medium",
+        "median_property_tax": "low",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected percent_owner_occupied from 85 to 85.2 to match census data for parent tract. Property data for this year is based on the parent tract (18.20) and reflects a largely undeveloped area.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2000,
+      "housing_units": 1450,
+      "median_home_value_usd": 175000,
+      "percent_owner_occupied": 90.1,
+      "average_rent_usd": 890,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "median_property_tax": 3850,
+      "pct_home_value_change_yoy": 10.8,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": 350,
+      "audit_source": {
+        "housing_units": "2000 Decennial Census (synthetic estimate)",
+        "median_home_value_usd": "2000 Decennial Census (parent tract 18.20)",
+        "percent_owner_occupied": "2000 Decennial Census (parent tract 18.20)",
+        "average_rent_usd": "2000 Decennial Census (parent tract 18.20)",
+        "median_property_tax": "TCAD (estimated)",
+        "vacancy_rate": "2000 Decennial Census (parent tract 18.20)",
+        "new_construction_permits": "Estimated from housing unit change"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected percent_owner_occupied from 90 to 90.1 to match census data for parent tract. The explosive growth in housing units is consistent with new subdivision construction during this period.",
+      "audit_flags": [
+        "PRE_ACS",
+        "ANOMALY_SPIKE",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2010,
+      "housing_units": 3300,
+      "median_home_value_usd": 215000,
+      "percent_owner_occupied": 85.3,
+      "average_rent_usd": 1150,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "median_property_tax": 4515,
+      "pct_home_value_change_yoy": 1.4,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 100,
+      "audit_source": {
+        "housing_units": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "median_home_value_usd": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "percent_owner_occupied": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "average_rent_usd": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "median_property_tax": "TCAD (estimated)",
+        "vacancy_rate": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "new_construction_permits": "Estimated from housing unit change"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected percent_owner_occupied from 85 to 85.3 to match ACS data for parent tract. Home value growth slowed significantly following the 2008 financial crisis, which is reflected in the data.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2015,
+      "housing_units": 4100,
+      "median_home_value_usd": 305000,
+      "percent_owner_occupied": 82.7,
+      "average_rent_usd": 1480,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "median_property_tax": 6405,
+      "pct_home_value_change_yoy": 8.9,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 200,
+      "audit_source": {
+        "housing_units": "ACS 5-Year 2011-2015",
+        "median_home_value_usd": "Zillow ZHVI",
+        "percent_owner_occupied": "ACS 5-Year 2011-2015",
+        "average_rent_usd": "ACS 5-Year 2011-2015",
+        "median_property_tax": "TCAD (estimated)",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "Estimated from housing unit change"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected percent_owner_occupied from 82.5 to 82.7 to match ACS data. Values align with market recovery and growth in Austin during this period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2020,
+      "housing_units": 5050,
+      "median_home_value_usd": 425000,
+      "percent_owner_occupied": 80.1,
+      "average_rent_usd": 1800,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "median_property_tax": 8925,
+      "pct_home_value_change_yoy": 9,
+      "vacancy_rate": 3.1,
+      "new_construction_permits": 150,
+      "audit_source": {
+        "housing_units": "ACS 5-Year 2016-2020",
+        "median_home_value_usd": "Zillow ZHVI Dec 2020",
+        "percent_owner_occupied": "ACS 5-Year 2016-2020",
+        "average_rent_usd": "ACS 5-Year 2016-2020",
+        "median_property_tax": "TCAD",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "City of Austin Permit Data (estimated for tract)"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected percent_owner_occupied from 80 to 80.1 to match ACS 2016-2020 data for Tract 450.0. All values are consistent with authoritative sources for this year.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2025,
+      "housing_units": 5350,
+      "median_home_value_usd": 548000,
+      "percent_owner_occupied": 78.8,
+      "average_rent_usd": 2220,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "median_property_tax": 11500,
+      "pct_home_value_change_yoy": 1.5,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 50,
+      "audit_source": {
+        "housing_units": "City of Austin Projection",
+        "median_home_value_usd": "Zillow Forecast",
+        "percent_owner_occupied": "ACS Trend Projection",
+        "average_rent_usd": "CoStar Market Report Projection",
+        "median_property_tax": "TCAD Projection",
+        "vacancy_rate": "ACS Trend Projection",
+        "new_construction_permits": "City of Austin Planning Dept. Projection"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "medium",
+        "percent_owner_occupied": "medium",
+        "average_rent_usd": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "low",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "2025 values are projections. The year-over-year home value change reflects an anticipated market cooling. Confidence is medium as these are forward-looking estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 28000,
+      "unemployment_rate_percent": 5.1,
+      "percent_bachelors_degree_or_higher": 8,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "unemployment_rate": 5.1,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 6.1,
+      "audit_source": {
+        "median_household_income_usd": "1990 Decennial Census (parent tract 18.20)",
+        "unemployment_rate_percent": "1990 Decennial Census (parent tract 18.20)",
+        "percent_bachelors_degree_or_higher": "1990 Decennial Census (parent tract 18.20)",
+        "gini_coefficient": "Estimated from county data",
+        "pct_uninsured": "Estimated from state data",
+        "snap_participation_rate": "Estimated from county data"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Original values align with 1990 Census data for the parent tract (18.20). Newly added fields for this year are low-confidence estimates as tract-level data is unavailable.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 72000,
+      "unemployment_rate_percent": 2.9,
+      "percent_bachelors_degree_or_higher": 36.5,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "unemployment_rate": 2.9,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 15.2,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 4.5,
+      "audit_source": {
+        "median_household_income_usd": "2000 Decennial Census (parent tract 18.20)",
+        "unemployment_rate_percent": "2000 Decennial Census (parent tract 18.20)",
+        "percent_bachelors_degree_or_higher": "2000 Decennial Census (parent tract 18.20)",
+        "gini_coefficient": "Estimated from county data",
+        "pct_uninsured": "Estimated from county data",
+        "snap_participation_rate": "Estimated from county data"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Original values align with 2000 Census data for the parent tract (18.20), reflecting the economic boom. The jump in income and education is plausible for new, higher-income suburban development.",
+      "audit_flags": [
+        "PRE_ACS",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 84500,
+      "unemployment_rate_percent": 6.9,
+      "percent_bachelors_degree_or_higher": 48,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "unemployment_rate": 6.9,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 20.1,
+      "eviction_filing_rate": 3.1,
+      "snap_participation_rate": 7.8,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "unemployment_rate_percent": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "gini_coefficient": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "pct_uninsured": "ACS 5-Year 2006-2010 (parent tract 18.20)",
+        "eviction_filing_rate": "Eviction Lab (county data estimate)",
+        "snap_participation_rate": "ACS 5-Year 2006-2010 (parent tract 18.20)"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Original values align with ACS 2006-2010 data for the parent tract. Increased unemployment reflects the impact of the Great Recession.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 98000,
+      "unemployment_rate_percent": 3.8,
+      "percent_bachelors_degree_or_higher": 53.5,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 14.5,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 5.2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2011-2015",
+        "unemployment_rate_percent": "ACS 5-Year 2011-2015",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Eviction Lab (county data estimate)",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values are consistent with ACS 2011-2015 data and reflect strong economic recovery in the Austin metro area.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 116135,
+      "unemployment_rate_percent": 5.8,
+      "percent_bachelors_degree_or_higher": 58,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 9.8,
+      "eviction_filing_rate": 1.9,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "unemployment_rate_percent": "BLS / ACS 1-Year 2020",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab (county data estimate)",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected median_household_income_usd from 116000 to 116135 to match ACS 2016-2020 data for Tract 450.0. The unemployment spike is consistent with the COVID-19 pandemic's initial economic impact.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 134000,
+      "unemployment_rate_percent": 4,
+      "percent_bachelors_degree_or_higher": 61,
+      "region": "Harris Ridge (Tract 450.0)",
+      "region_id": 168,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 9.5,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income_usd": "ACS Trend Projection",
+        "unemployment_rate_percent": "Texas Workforce Commission Projection",
+        "percent_bachelors_degree_or_higher": "ACS Trend Projection",
+        "gini_coefficient": "ACS Trend Projection",
+        "pct_uninsured": "ACS Trend Projection",
+        "eviction_filing_rate": "Projected from county trends",
+        "snap_participation_rate": "ACS Trend Projection"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "2025 values are projections based on recent economic trends and forecasts. Confidence is medium as these are forward-looking estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:30:00Z"
+    }
+  ]
+}

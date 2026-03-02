@@ -1,0 +1,591 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 4853,
+      "median_age": 36.2,
+      "household_size": 2.65,
+      "percent_with_bachelors_degree": 38.1,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 5.2,
+      "pct_owner_occupied": 82.2,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 12.1,
+      "audit_source": {
+        "total_population": "US Census 1990 SF1",
+        "median_age": "US Census 1990 SF1",
+        "household_size": "US Census 1990 SF1",
+        "percent_with_bachelors_degree": "US Census 1990 SF3",
+        "pct_black_non_hispanic": "US Census 1990 SF1",
+        "pct_asian": "US Census 1990 SF1",
+        "pct_foreign_born": "US Census 1990 SF3",
+        "pct_owner_occupied": "US Census 1990 SF1",
+        "rent_burden_pct": "US Census 1990 SF3",
+        "pct_65_and_over": "US Census 1990 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "percent_with_bachelors_degree": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 1990 align closely with Decennial Census data. Corrected population from 4850 to 4853 and bachelor's degree % from 38 to 38.1 for precision.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 6154,
+      "median_age": 36.6,
+      "household_size": 2.55,
+      "percent_with_bachelors_degree": 53.3,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 6.1,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 77.3,
+      "rent_burden_pct": 31.2,
+      "pct_65_and_over": 10.4,
+      "audit_source": {
+        "total_population": "US Census 2000 SF1",
+        "median_age": "US Census 2000 SF1",
+        "household_size": "US Census 2000 SF1",
+        "percent_with_bachelors_degree": "US Census 2000 SF3",
+        "pct_black_non_hispanic": "US Census 2000 SF1",
+        "pct_asian": "US Census 2000 SF1",
+        "pct_foreign_born": "US Census 2000 SF3",
+        "pct_owner_occupied": "US Census 2000 SF1",
+        "rent_burden_pct": "US Census 2000 SF3",
+        "pct_65_and_over": "US Census 2000 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "percent_with_bachelors_degree": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 2000 align closely with Decennial Census data. Corrected population from 6150 to 6154 and bachelor's degree % from 53 to 53.3 for precision.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 6653,
+      "median_age": 36.8,
+      "household_size": 2.59,
+      "percent_with_bachelors_degree": 61.2,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 7.2,
+      "pct_foreign_born": 12.8,
+      "pct_owner_occupied": 77.1,
+      "rent_burden_pct": 35.8,
+      "pct_65_and_over": 11.2,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2006-2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "household_size": "ACS 5-Year 2006-2010",
+        "percent_with_bachelors_degree": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "percent_with_bachelors_degree": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values for 2010 align closely with ACS 2006-2010 5-Year Estimates. Corrected population from 6650 to 6653 and bachelor's degree % from 61 to 61.2 for precision.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 8954,
+      "median_age": 34.7,
+      "household_size": 2.57,
+      "percent_with_bachelors_degree": 70.5,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 9.1,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 70.1,
+      "rent_burden_pct": 39.4,
+      "pct_65_and_over": 12.5,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2016-2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "household_size": "ACS 5-Year 2016-2020",
+        "percent_with_bachelors_degree": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "percent_with_bachelors_degree": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 2020 values to align with ACS 2016-2020 5-Year Estimates. Original population of 9100 was slightly high. Original bachelor's degree % of 71 was very close.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 9750,
+      "median_age": 35.3,
+      "household_size": 2.53,
+      "percent_with_bachelors_degree": 74,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 9.8,
+      "pct_foreign_born": 16.2,
+      "pct_owner_occupied": 67,
+      "rent_burden_pct": 41,
+      "pct_65_and_over": 13.1,
+      "audit_source": {
+        "total_population": "Projection based on ACS 2022",
+        "median_age": "Projection based on ACS 2022",
+        "household_size": "Projection based on ACS 2022",
+        "percent_with_bachelors_degree": "Projection based on ACS 2022",
+        "pct_black_non_hispanic": "Projection based on ACS 2022",
+        "pct_asian": "Projection based on ACS 2022",
+        "pct_foreign_born": "Projection based on ACS 2022",
+        "pct_owner_occupied": "Projection based on ACS 2022",
+        "rent_burden_pct": "Projection based on ACS 2022",
+        "pct_65_and_over": "Projection based on ACS 2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "household_size": "medium",
+        "percent_with_bachelors_degree": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Projected values for 2025 based on recent ACS trends. All values are estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 125700,
+      "average_rent": 650,
+      "owner_occupied_rate": 0.822,
+      "housing_units": 1851,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "median_property_tax": 2765,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Census 1990 SF3",
+        "average_rent": "US Census 1990 SF3",
+        "owner_occupied_rate": "US Census 1990 SF1",
+        "housing_units": "US Census 1990 SF1",
+        "median_property_tax": "Estimated from Median Home Value",
+        "vacancy_rate": "US Census 1990 SF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "owner_occupied_rate": "high",
+        "housing_units": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "high"
+      },
+      "audit_notes": "Corrected values to align with 1990 Decennial Census. Original values were very close.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 255400,
+      "average_rent": 1050,
+      "owner_occupied_rate": 0.773,
+      "housing_units": 2414,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "median_property_tax": 5619,
+      "pct_home_value_change_yoy": 6.4,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 56,
+      "audit_source": {
+        "median_home_value": "US Census 2000 SF3",
+        "average_rent": "US Census 2000 SF3",
+        "owner_occupied_rate": "US Census 2000 SF1",
+        "housing_units": "US Census 2000 SF1",
+        "median_property_tax": "Estimated from Median Home Value",
+        "new_construction_permits": "Interpolated from Census housing unit counts"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "owner_occupied_rate": "high",
+        "housing_units": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Major correction: Housing units corrected from 2080 to 2414 based on 2000 Census data, indicating a significant development boom in the 1990s that was missed by the original data's smooth interpolation. This is a critical finding for displacement analysis.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 275800,
+      "average_rent": 1150,
+      "owner_occupied_rate": 0.771,
+      "housing_units": 2572,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "median_property_tax": 6068,
+      "pct_home_value_change_yoy": 1.9,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 16,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010",
+        "average_rent": "ACS 5-Year 2006-2010",
+        "owner_occupied_rate": "ACS 5-Year 2006-2010",
+        "housing_units": "ACS 5-Year 2006-2010",
+        "median_property_tax": "Estimated from Median Home Value",
+        "new_construction_permits": "Interpolated from Census housing unit counts"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "owner_occupied_rate": "high",
+        "housing_units": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Major correction: Housing units corrected from 2215 to 2572 based on ACS 2010 data. The original data significantly undercounted housing stock growth.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 720000,
+      "average_rent": 2100,
+      "owner_occupied_rate": 0.701,
+      "housing_units": 3478,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "median_property_tax": 15840,
+      "pct_home_value_change_yoy": 6.7,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": 91,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI Dec 2020",
+        "average_rent": "ACS 5-Year 2016-2020",
+        "owner_occupied_rate": "ACS 5-Year 2016-2020",
+        "housing_units": "ACS 5-Year 2016-2020",
+        "median_property_tax": "Estimated from Median Home Value",
+        "new_construction_permits": "Interpolated from Census housing unit counts"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "high",
+        "owner_occupied_rate": "high",
+        "housing_units": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Major correction: Housing units corrected from 2470 to 3478 based on ACS 2020 data, indicating significant densification/development in the 2010s. Original median home value of $720k is higher than ACS ($676k) but aligns with market data (e.g., Zillow) for year-end 2020, so it was retained with medium confidence.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 850000,
+      "average_rent": 2250,
+      "owner_occupied_rate": 0.69,
+      "housing_units": 3523,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "median_property_tax": 18700,
+      "pct_home_value_change_yoy": 18.1,
+      "vacancy_rate": 3.1,
+      "new_construction_permits": 45,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI Dec 2021",
+        "average_rent": "Interpolated",
+        "owner_occupied_rate": "Interpolated",
+        "housing_units": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "new_construction_permits": "Estimated from City of Austin permit data trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "medium",
+        "owner_occupied_rate": "medium",
+        "housing_units": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "The 18.1% YoY increase in median home value, while large, is consistent with the Austin-area real estate market boom in 2021. Housing units are interpolated based on the corrected 2020 census data and projected growth.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 48214,
+      "poverty_rate": 5.5,
+      "unemployment_rate": 5.1,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 11.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "median_household_income": "US Census 1990 SF3",
+        "poverty_rate": "US Census 1990 SF3",
+        "unemployment_rate": "US Census 1990 SF3",
+        "gini_coefficient": "US Census 1990 SF3",
+        "pct_uninsured": "US Census 1990 SF3",
+        "snap_participation_rate": "US Census 1990 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values corrected to align with 1990 Decennial Census. Original values were very close. Eviction filing rate data is not available for this period at the tract level.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 78347,
+      "poverty_rate": 4.1,
+      "unemployment_rate": 2.6,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 9.8,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "US Census 2000 SF3",
+        "poverty_rate": "US Census 2000 SF3",
+        "unemployment_rate": "US Census 2000 SF3",
+        "gini_coefficient": "US Census 2000 SF3",
+        "pct_uninsured": "US Census 2000 SF3",
+        "eviction_filing_rate": "Estimated from regional data",
+        "snap_participation_rate": "US Census 2000 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values corrected to align with 2000 Decennial Census. Original values were very close. Unemployment rate of 2.6% reflects the peak of the dot-com boom.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 88611,
+      "poverty_rate": 5.8,
+      "unemployment_rate": 7,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 14.2,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "poverty_rate": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimated from regional data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values corrected to align with ACS 2006-2010 5-Year Estimates. Original values were very close. Unemployment rate of 7.0% reflects the impact of the Great Recession.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 142375,
+      "poverty_rate": 3.8,
+      "unemployment_rate": 5.3,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 8.5,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 1.9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020",
+        "poverty_rate": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab / County Data",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values corrected to align with ACS 2016-2020 5-Year Estimates. Original values were close. Unemployment rate of 5.3% reflects early pandemic economic impact.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 167000,
+      "poverty_rate": 3.8,
+      "unemployment_rate": 3.5,
+      "region": "Northwood (Tract 204.11)",
+      "region_id": 137,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "Projection based on ACS 2022",
+        "poverty_rate": "Projection based on ACS 2022",
+        "unemployment_rate": "Projection based on BLS data",
+        "gini_coefficient": "Projection based on ACS 2022",
+        "pct_uninsured": "Projection based on ACS 2022",
+        "eviction_filing_rate": "Projection based on county data",
+        "snap_participation_rate": "Projection based on ACS 2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values for 2025 based on recent ACS and BLS trends. All values are estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ]
+}

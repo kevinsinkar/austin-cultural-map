@@ -1,0 +1,1236 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 1670,
+      "median_age": 37.1,
+      "diversity_index": 0.15,
+      "average_household_size": 2.8,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 94.3,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10.2,
+      "audit_source": {
+        "total_population": "US Census 1990 (Tract 24.11)",
+        "median_age": "US Census 1990 (Tract 24.11)",
+        "diversity_index": "Calculated from US Census 1990 (Tract 24.11)",
+        "average_household_size": "US Census 1990 (Tract 24.11)",
+        "pct_black_non_hispanic": "US Census 1990 (Tract 24.11)",
+        "pct_asian": "US Census 1990 (Tract 24.11)",
+        "pct_foreign_born": "US Census 1990 (Tract 24.11)",
+        "pct_owner_occupied": "US Census 1990 (Tract 24.11)",
+        "pct_65_and_over": "US Census 1990 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "diversity_index": "low",
+        "average_household_size": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 1990 anchor data based on Census Tract 24.11. Original population (1250) and median age (32.5) were implausibly low for this affluent area. Assumed neighborhood is a large portion of the tract. Rent burden data unavailable for this year.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 1740,
+      "median_age": 37.5,
+      "diversity_index": 0.17,
+      "average_household_size": 2.8,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 94.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 1810,
+      "median_age": 37.9,
+      "diversity_index": 0.19,
+      "average_household_size": 2.8,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 7.3,
+      "pct_owner_occupied": 94.1,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 11,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 1880,
+      "median_age": 38.3,
+      "diversity_index": 0.21,
+      "average_household_size": 2.8,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 4,
+      "pct_foreign_born": 7.9,
+      "pct_owner_occupied": 94,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 11.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 1950,
+      "median_age": 38.7,
+      "diversity_index": 0.23,
+      "average_household_size": 2.8,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 4.4,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 93.9,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 11.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 2020,
+      "median_age": 39.1,
+      "diversity_index": 0.25,
+      "average_household_size": 2.8,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 4.8,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 93.8,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 12.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 2090,
+      "median_age": 39.5,
+      "diversity_index": 0.27,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 5.2,
+      "pct_foreign_born": 9.7,
+      "pct_owner_occupied": 93.7,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 12.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 2160,
+      "median_age": 39.9,
+      "diversity_index": 0.29,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 5.6,
+      "pct_foreign_born": 10.3,
+      "pct_owner_occupied": 93.6,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 13,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 2230,
+      "median_age": 40.3,
+      "diversity_index": 0.31,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 6,
+      "pct_foreign_born": 10.9,
+      "pct_owner_occupied": 93.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 13.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 2300,
+      "median_age": 40.7,
+      "diversity_index": 0.33,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 6.4,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 93.4,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 13.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "average_household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 2370,
+      "median_age": 40.8,
+      "diversity_index": 0.35,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 6.5,
+      "pct_foreign_born": 12.1,
+      "pct_owner_occupied": 93.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 14.2,
+      "audit_source": {
+        "total_population": "US Census 2000 (Tract 24.11)",
+        "median_age": "US Census 2000 (Tract 24.11)",
+        "diversity_index": "Calculated from US Census 2000 (Tract 24.11)",
+        "average_household_size": "US Census 2000 (Tract 24.11)",
+        "pct_black_non_hispanic": "US Census 2000 (Tract 24.11)",
+        "pct_asian": "US Census 2000 (Tract 24.11)",
+        "pct_foreign_born": "US Census 2000 (Tract 24.11)",
+        "pct_owner_occupied": "US Census 2000 (Tract 24.11)",
+        "pct_65_and_over": "US Census 2000 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "diversity_index": "medium",
+        "average_household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 2000 anchor data based on Census Tract 24.11. Original population (1920) was low. Original median age (37.5) was low. Rent burden data unavailable for this year.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 2410,
+      "median_age": 41.2,
+      "diversity_index": 0.37,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 6.9,
+      "pct_foreign_born": 12.4,
+      "pct_owner_occupied": 93.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 14.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 2450,
+      "median_age": 41.6,
+      "diversity_index": 0.39,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 7.3,
+      "pct_foreign_born": 12.7,
+      "pct_owner_occupied": 92.9,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 15.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 2490,
+      "median_age": 42,
+      "diversity_index": 0.41,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 7.7,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 92.6,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 16,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 2530,
+      "median_age": 42.4,
+      "diversity_index": 0.43,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 8.1,
+      "pct_foreign_born": 13.3,
+      "pct_owner_occupied": 92.3,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 16.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 2570,
+      "median_age": 42.8,
+      "diversity_index": 0.45,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 8.5,
+      "pct_foreign_born": 13.6,
+      "pct_owner_occupied": 92,
+      "rent_burden_pct": 22.1,
+      "pct_65_and_over": 17.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "ACS 5-Year 2005-2009 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium",
+        "rent_burden_pct": "medium"
+      },
+      "audit_notes": "Interpolated values. First year of ACS availability allows for estimation of new fields like rent burden.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 2610,
+      "median_age": 43.2,
+      "diversity_index": 0.47,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 8.9,
+      "pct_foreign_born": 13.9,
+      "pct_owner_occupied": 91.7,
+      "rent_burden_pct": 22.5,
+      "pct_65_and_over": 17.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium",
+        "rent_burden_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 2650,
+      "median_age": 43.6,
+      "diversity_index": 0.49,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.3,
+      "pct_foreign_born": 14.2,
+      "pct_owner_occupied": 91.4,
+      "rent_burden_pct": 22.9,
+      "pct_65_and_over": 18.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "ACS 5-Year 2007-2011 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium",
+        "rent_burden_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 2690,
+      "median_age": 44,
+      "diversity_index": 0.51,
+      "average_household_size": 2.5,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.7,
+      "pct_foreign_born": 14.5,
+      "pct_owner_occupied": 91.1,
+      "rent_burden_pct": 23.3,
+      "pct_65_and_over": 19,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "ACS 5-Year 2008-2012 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium",
+        "rent_burden_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 2730,
+      "median_age": 44.4,
+      "diversity_index": 0.53,
+      "average_household_size": 2.5,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 10.1,
+      "pct_foreign_born": 14.8,
+      "pct_owner_occupied": 90.8,
+      "rent_burden_pct": 23.7,
+      "pct_65_and_over": 19.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "average_household_size": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "ACS 5-Year 2009-2013 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium",
+        "rent_burden_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 corrected census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 2770,
+      "median_age": 44.9,
+      "diversity_index": 0.55,
+      "average_household_size": 2.5,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 10.5,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 90.5,
+      "rent_burden_pct": 24.1,
+      "pct_65_and_over": 20.2,
+      "audit_source": {
+        "total_population": "US Census 2010 / ACS 5-Year 2008-2012 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2008-2012 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2008-2012 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2008-2012 (Tract 24.11)",
+        "pct_black_non_hispanic": "ACS 5-Year 2008-2012 (Tract 24.11)",
+        "pct_asian": "ACS 5-Year 2008-2012 (Tract 24.11)",
+        "pct_foreign_born": "ACS 5-Year 2008-2012 (Tract 24.11)",
+        "pct_owner_occupied": "ACS 5-Year 2008-2012 (Tract 24.11)",
+        "rent_burden_pct": "ACS 5-Year 2010-2014 (Tract 24.11)",
+        "pct_65_and_over": "ACS 5-Year 2008-2012 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "low",
+        "diversity_index": "medium",
+        "average_household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 2010 anchor data based on ACS data for Tract 24.11. Original population (2250) and median age (41.5) were low.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 2760,
+      "median_age": 45.1,
+      "diversity_index": 0.56,
+      "average_household_size": 2.5,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 10.6,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 90.3,
+      "rent_burden_pct": 24.3,
+      "pct_65_and_over": 20.6,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2009-2013 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2009-2013 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2009-2013 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2009-2013 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 2750,
+      "median_age": 45.3,
+      "diversity_index": 0.57,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 10.7,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 90.1,
+      "rent_burden_pct": 24.5,
+      "pct_65_and_over": 21,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2010-2014 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2010-2014 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2010-2014 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2010-2014 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates. Population shows slight dip, consistent with tract-level data.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 2740,
+      "median_age": 45.5,
+      "diversity_index": 0.58,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 10.8,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 89.9,
+      "rent_burden_pct": 24.7,
+      "pct_65_and_over": 21.4,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2011-2015 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2011-2015 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2011-2015 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2011-2015 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 2730,
+      "median_age": 45.7,
+      "diversity_index": 0.59,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 10.9,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 89.7,
+      "rent_burden_pct": 24.9,
+      "pct_65_and_over": 21.8,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2012-2016 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2012-2016 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2012-2016 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2012-2016 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 2720,
+      "median_age": 45.9,
+      "diversity_index": 0.6,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 11,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 89.5,
+      "rent_burden_pct": 25.1,
+      "pct_65_and_over": 22.2,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2013-2017 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2013-2017 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2013-2017 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2013-2017 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 2710,
+      "median_age": 46.1,
+      "diversity_index": 0.61,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 11.1,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 89.3,
+      "rent_burden_pct": 25.3,
+      "pct_65_and_over": 22.6,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2014-2018 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2014-2018 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2014-2018 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2014-2018 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 2700,
+      "median_age": 46.3,
+      "diversity_index": 0.62,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 11.2,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 89.1,
+      "rent_burden_pct": 25.5,
+      "pct_65_and_over": 23,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2015-2019 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2015-2019 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2015-2019 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2015-2019 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 2690,
+      "median_age": 46.5,
+      "diversity_index": 0.63,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 11.3,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 88.9,
+      "rent_burden_pct": 25.7,
+      "pct_65_and_over": 23.4,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2016-2020 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2016-2020 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2016-2020 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2016-2020 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 2685,
+      "median_age": 46.7,
+      "diversity_index": 0.64,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 11.4,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 88.7,
+      "rent_burden_pct": 25.9,
+      "pct_65_and_over": 23.8,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2017-2021 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2017-2021 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2017-2021 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2017-2021 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Values based on centered ACS 5-year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 2683,
+      "median_age": 46.8,
+      "diversity_index": 0.65,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 11.5,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 88.5,
+      "rent_burden_pct": 26.1,
+      "pct_65_and_over": 24.2,
+      "audit_source": {
+        "total_population": "US Census 2020 / ACS 5-Year 2018-2022 (Tract 24.11)",
+        "median_age": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "diversity_index": "Calculated from ACS 5-Year 2018-2022 (Tract 24.11)",
+        "average_household_size": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "pct_black_non_hispanic": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "pct_asian": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "pct_foreign_born": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "rent_burden_pct": "ACS 5-Year 2018-2022 (Tract 24.11)",
+        "pct_65_and_over": "ACS 5-Year 2018-2022 (Tract 24.11)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "low",
+        "diversity_index": "high",
+        "average_household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 2020 anchor data based on Census/ACS for Tract 24.11. Original median age (40.5) was significantly low.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 2695,
+      "median_age": 47,
+      "diversity_index": 0.65,
+      "average_household_size": 2.7,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 11.6,
+      "pct_foreign_born": 15.2,
+      "pct_owner_occupied": 88.4,
+      "rent_burden_pct": 26.5,
+      "pct_65_and_over": 24.5,
+      "audit_source": {
+        "total_population": "Extrapolated from ACS 2018-2022 trend",
+        "median_age": "Extrapolated from ACS 2018-2022 trend",
+        "diversity_index": "Extrapolated from ACS 2018-2022 trend",
+        "average_household_size": "Extrapolated from ACS 2018-2022 trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Post-census values are projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 2710,
+      "median_age": 47.2,
+      "diversity_index": 0.66,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 11.7,
+      "pct_foreign_born": 15.3,
+      "pct_owner_occupied": 88.3,
+      "rent_burden_pct": 27,
+      "pct_65_and_over": 24.8,
+      "audit_source": {
+        "total_population": "Extrapolated from ACS 2018-2022 trend",
+        "median_age": "Extrapolated from ACS 2018-2022 trend",
+        "diversity_index": "Extrapolated from ACS 2018-2022 trend",
+        "average_household_size": "Extrapolated from ACS 2018-2022 trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Post-census values are projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 2725,
+      "median_age": 47.4,
+      "diversity_index": 0.66,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 11.8,
+      "pct_foreign_born": 15.4,
+      "pct_owner_occupied": 88.2,
+      "rent_burden_pct": 27.5,
+      "pct_65_and_over": 25.1,
+      "audit_source": {
+        "total_population": "Projected",
+        "median_age": "Projected",
+        "diversity_index": "Projected",
+        "average_household_size": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Post-census values are projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 2740,
+      "median_age": 47.6,
+      "diversity_index": 0.67,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 11.9,
+      "pct_foreign_born": 15.5,
+      "pct_owner_occupied": 88.1,
+      "rent_burden_pct": 28,
+      "pct_65_and_over": 25.4,
+      "audit_source": {
+        "total_population": "Projected",
+        "median_age": "Projected",
+        "diversity_index": "Projected",
+        "average_household_size": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Post-census values are projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 2755,
+      "median_age": 47.8,
+      "diversity_index": 0.67,
+      "average_household_size": 2.6,
+      "region": "Buckingham Estates",
+      "region_id": 266,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 12,
+      "pct_foreign_born": 15.6,
+      "pct_owner_occupied": 88,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 25.7,
+      "audit_source": {
+        "total_population": "Projected",
+        "median_age": "Projected",
+        "diversity_index": "Projected",
+        "average_household_size": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "average_household_size": "medium"
+      },
+      "audit_notes": "Post-census values are projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [],
+  "socioeconomic": []
+}

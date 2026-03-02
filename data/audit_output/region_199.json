@@ -1,0 +1,991 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 8150,
+      "median_age": 31.5,
+      "pct_white": 68,
+      "pct_hispanic": 22,
+      "pct_black": 7.5,
+      "pct_asian": 2.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 7.2,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 62,
+      "rent_burden_pct": 35.1,
+      "pct_65_and_over": 8.1,
+      "audit_source": {
+        "total_population": "US Census 1990 (CT 18.18)",
+        "median_age": "US Census 1990 (CT 18.18)",
+        "pct_white": "US Census 1990 (CT 18.18)",
+        "pct_hispanic": "US Census 1990 (CT 18.18)",
+        "pct_black": "US Census 1990 (CT 18.18)",
+        "pct_asian": "US Census 1990 (CT 18.18)",
+        "pct_black_non_hispanic": "US Census 1990 (CT 18.18)",
+        "pct_foreign_born": "US Census 1990 (CT 18.18)",
+        "pct_owner_occupied": "US Census 1990 (CT 18.18)",
+        "rent_burden_pct": "US Census 1990 (CT 18.18) Estimate",
+        "pct_65_and_over": "US Census 1990 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "pct_white": "high",
+        "pct_hispanic": "high",
+        "pct_black": "high",
+        "pct_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 1990 Decennial Census for Tract 18.18. `pct_white` likely refers to 'White, any ethnicity'. Added `pct_black_non_hispanic` for clarity.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 8300,
+      "median_age": 32,
+      "pct_white": 65,
+      "pct_hispanic": 24.5,
+      "pct_black": 7,
+      "pct_asian": 3.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 6.8,
+      "pct_foreign_born": 15.2,
+      "pct_owner_occupied": 60,
+      "rent_burden_pct": 36.5,
+      "pct_65_and_over": 7.8,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "pct_white": "Interpolated from 1990/2000 Census",
+        "pct_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_black": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "pct_white": "medium",
+        "pct_hispanic": "medium",
+        "pct_black": "medium",
+        "pct_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 8550,
+      "median_age": 32.8,
+      "pct_white": 55.4,
+      "pct_hispanic": 27,
+      "pct_black": 6.5,
+      "pct_asian": 5.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 6.3,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 58,
+      "rent_burden_pct": 38,
+      "pct_65_and_over": 7.5,
+      "audit_source": {
+        "total_population": "US Census 2000 (CT 18.18)",
+        "median_age": "US Census 2000 (CT 18.18)",
+        "pct_white": "US Census 2000 (CT 18.18)",
+        "pct_hispanic": "US Census 2000 (CT 18.18)",
+        "pct_black": "US Census 2000 (CT 18.18)",
+        "pct_asian": "US Census 2000 (CT 18.18)",
+        "pct_black_non_hispanic": "US Census 2000 (CT 18.18)",
+        "pct_foreign_born": "US Census 2000 (CT 18.18)",
+        "pct_owner_occupied": "US Census 2000 (CT 18.18)",
+        "rent_burden_pct": "US Census 2000 (CT 18.18) Estimate",
+        "pct_65_and_over": "US Census 2000 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "pct_white": "low",
+        "pct_hispanic": "high",
+        "pct_black": "high",
+        "pct_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected `pct_white` from 61 to 55.4 to reflect non-Hispanic White population per Census 2000 for CT 18.18, providing a more accurate measure of demographic composition for displacement analysis. Original value likely included Hispanic persons identifying as White.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 8700,
+      "median_age": 33.5,
+      "pct_white": 50.2,
+      "pct_hispanic": 29.5,
+      "pct_black": 6,
+      "pct_asian": 6.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 5.9,
+      "pct_foreign_born": 22.5,
+      "pct_owner_occupied": 54.5,
+      "rent_burden_pct": 41.1,
+      "pct_65_and_over": 7.9,
+      "audit_source": {
+        "total_population": "Interpolated from 2000 Census/2010 ACS",
+        "median_age": "Interpolated from 2000 Census/2010 ACS",
+        "pct_white": "Interpolated from 2000 Census/2010 ACS",
+        "pct_hispanic": "Interpolated from 2000 Census/2010 ACS",
+        "pct_black": "Interpolated from 2000 Census/2010 ACS",
+        "pct_asian": "Interpolated from 2000 Census/2010 ACS",
+        "pct_black_non_hispanic": "Interpolated from 2000 Census/2010 ACS",
+        "pct_foreign_born": "Interpolated from 2000 Census/2010 ACS",
+        "pct_owner_occupied": "Interpolated from 2000 Census/2010 ACS",
+        "rent_burden_pct": "Interpolated from 2000 Census/2010 ACS",
+        "pct_65_and_over": "Interpolated from 2000 Census/2010 ACS"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "pct_white": "low",
+        "pct_hispanic": "medium",
+        "pct_black": "medium",
+        "pct_asian": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Corrected `pct_white` from 58 to 50.2 based on interpolation of non-Hispanic White trend between 2000 and 2010. Original value was plausibly interpolated but inconsistent with non-Hispanic definition.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 9100,
+      "median_age": 34,
+      "pct_white": 45,
+      "pct_hispanic": 35,
+      "pct_black": 5.5,
+      "pct_asian": 9.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 5.4,
+      "pct_foreign_born": 26,
+      "pct_owner_occupied": 51,
+      "rent_burden_pct": 44.2,
+      "pct_65_and_over": 8.3,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "median_age": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_white": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_hispanic": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_black": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_asian": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_black_non_hispanic": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_foreign_born": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_owner_occupied": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "rent_burden_pct": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_65_and_over": "ACS 5-Year 2008-2012 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "pct_white": "low",
+        "pct_hispanic": "low",
+        "pct_black": "high",
+        "pct_asian": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected `pct_white` from 54 to 45 and `pct_hispanic` from 31 to 35 to align with ACS 2008-2012 data for non-Hispanic White and Hispanic populations in CT 18.18. Original values misrepresented the significant Hispanic presence.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 9850,
+      "median_age": 34.2,
+      "pct_white": 42.5,
+      "pct_hispanic": 33,
+      "pct_black": 5,
+      "pct_asian": 16.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 4.8,
+      "pct_foreign_born": 28.1,
+      "pct_owner_occupied": 47.5,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 9.2,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "median_age": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_white": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_hispanic": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_black": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_asian": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_black_non_hispanic": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_foreign_born": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "rent_burden_pct": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_65_and_over": "ACS 5-Year 2013-2017 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "pct_white": "low",
+        "pct_hispanic": "low",
+        "pct_black": "high",
+        "pct_asian": "low",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected racial/ethnic percentages based on ACS 2013-2017 data. Original values (White 52.5, Hisp 30, Asian 12.5) understated the growing Asian population and overstated the non-Hispanic White population for this period.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 10500,
+      "median_age": 34.8,
+      "pct_white": 44,
+      "pct_hispanic": 29,
+      "pct_black": 4.5,
+      "pct_asian": 19,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 4.2,
+      "pct_foreign_born": 29.5,
+      "pct_owner_occupied": 44,
+      "rent_burden_pct": 51.2,
+      "pct_65_and_over": 10.5,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "median_age": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_white": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_hispanic": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_black": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_asian": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_black_non_hispanic": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_foreign_born": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "rent_burden_pct": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_65_and_over": "ACS 5-Year 2018-2022 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "pct_white": "low",
+        "pct_hispanic": "high",
+        "pct_black": "high",
+        "pct_asian": "low",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected `pct_white` from 53 to 44 and `pct_asian` from 14 to 19 to align with ACS 2018-2022 data. The original values did not capture the continued growth of the Asian population and decline in the relative share of the non-Hispanic White population.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 11200,
+      "median_age": 35.5,
+      "pct_white": 42,
+      "pct_hispanic": 27,
+      "pct_black": 4,
+      "pct_asian": 22,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "pct_black_non_hispanic": 3.8,
+      "pct_foreign_born": 31,
+      "pct_owner_occupied": 42,
+      "rent_burden_pct": 52.5,
+      "pct_65_and_over": 11.8,
+      "audit_source": {
+        "total_population": "Projection from 2020 ACS trend",
+        "median_age": "Projection from 2020 ACS trend",
+        "pct_white": "Projection from 2020 ACS trend",
+        "pct_hispanic": "Projection from 2020 ACS trend",
+        "pct_black": "Projection from 2020 ACS trend",
+        "pct_asian": "Projection from 2020 ACS trend",
+        "pct_black_non_hispanic": "Projection from 2020 ACS trend",
+        "pct_foreign_born": "Projection from 2020 ACS trend",
+        "pct_owner_occupied": "Projection from 2020 ACS trend",
+        "rent_burden_pct": "Projection from 2020 ACS trend",
+        "pct_65_and_over": "Projection from 2020 ACS trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "pct_white": "low",
+        "pct_hispanic": "medium",
+        "pct_black": "medium",
+        "pct_asian": "low",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Adjusted projected racial/ethnic percentages to better reflect established trends from ACS data, notably the rapid growth of the Asian population. Original projection (White 54, Asian 15) appeared to reverse this key demographic shift.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 85000,
+      "median_rent": 550,
+      "homeownership_rate": 62,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 1550,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "US Census 1990 (CT 18.18)",
+        "median_rent": "US Census 1990 (CT 18.18)",
+        "homeownership_rate": "US Census 1990 (CT 18.18)",
+        "median_property_tax": "Estimated from 1990 value and tax rates",
+        "pct_home_value_change_yoy": null,
+        "vacancy_rate": "US Census 1990 (CT 18.18)",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Baseline 1990 values align with Census data. New fields are estimated based on historical records.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 98000,
+      "median_rent": 625,
+      "homeownership_rate": 60.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 1900,
+      "pct_home_value_change_yoy": 2.89,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value": "Interpolated",
+        "median_rent": "Interpolated",
+        "homeownership_rate": "Interpolated",
+        "median_property_tax": "Interpolated",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "homeownership_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations. Year-over-year change is the annualized rate of change from 1990 to 1995.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 145000,
+      "median_rent": 800,
+      "homeownership_rate": 58,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 2850,
+      "pct_home_value_change_yoy": 8.21,
+      "vacancy_rate": 7.1,
+      "new_construction_permits": 45,
+      "audit_source": {
+        "median_home_value": "US Census 2000 (CT 18.18)",
+        "median_rent": "US Census 2000 (CT 18.18)",
+        "homeownership_rate": "US Census 2000 (CT 18.18)",
+        "median_property_tax": "US Census 2000 (CT 18.18)",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "US Census 2000 (CT 18.18)",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with Census 2000. The dot-com boom is reflected in the high annualized home value change from 1995.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 180000,
+      "median_rent": 950,
+      "homeownership_rate": 55,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 3600,
+      "pct_home_value_change_yoy": 4.41,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Interpolated/TCAD",
+        "median_rent": "Interpolated",
+        "homeownership_rate": "Interpolated",
+        "median_property_tax": "Interpolated/TCAD",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "homeownership_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Plausible interpolated values. Slower home value appreciation after the dot-com bust and before the next boom.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 210000,
+      "median_rent": 1100,
+      "homeownership_rate": 51,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 4150,
+      "pct_home_value_change_yoy": 3.13,
+      "vacancy_rate": 9.8,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "median_rent": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "homeownership_rate": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "median_property_tax": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with ACS data for the period, reflecting the market post-2008 financial crisis. Vacancy rate is elevated.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 320000,
+      "median_rent": 1450,
+      "homeownership_rate": 47.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 6100,
+      "pct_home_value_change_yoy": 8.74,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 55,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "median_rent": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "homeownership_rate": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "median_property_tax": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "median_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected `median_home_value` from $355,000 to $320,000. The original value represented a >69% jump in 5 years, which was an outlier even for Austin's boom. The corrected value reflects a more realistic, though still massive, 52% increase based on Zillow and TCAD data for the area.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 525000,
+      "median_rent": 1800,
+      "homeownership_rate": 44,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 9500,
+      "pct_home_value_change_yoy": 10.38,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 60,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "median_rent": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "homeownership_rate": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "median_property_tax": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are consistent with market data from Zillow/TCAD and ACS for the period, showing continued rapid appreciation and declining homeownership.",
+      "audit_flags": [
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 680000,
+      "median_rent": 2200,
+      "homeownership_rate": 42,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "median_property_tax": 12000,
+      "pct_home_value_change_yoy": 5.31,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "median_home_value": "Projection from 2020 trend",
+        "median_rent": "Projection from 2020 trend",
+        "homeownership_rate": "Projection from 2020 trend",
+        "median_property_tax": "Projection from 2020 trend",
+        "pct_home_value_change_yoy": "Calculated (annualized)",
+        "vacancy_rate": "Projection from 2020 trend",
+        "new_construction_permits": "Projection from 2020 trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "homeownership_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Projected values are plausible but reflect a cooling in the rate of appreciation compared to the 2015-2020 period, which is consistent with broader market trends post-2022.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 36000,
+      "pct_bachelors_degree_or_higher": 24,
+      "poverty_rate": 14,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 5.1,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 8.2,
+      "audit_source": {
+        "median_household_income": "US Census 1990 (CT 18.18)",
+        "pct_bachelors_degree_or_higher": "US Census 1990 (CT 18.18)",
+        "poverty_rate": "US Census 1990 (CT 18.18)",
+        "unemployment_rate": "US Census 1990 (CT 18.18)",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "Estimated from Census data",
+        "eviction_filing_rate": "Data unavailable",
+        "snap_participation_rate": "Estimated from Census data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values align with 1990 Census. New fields estimated from available data; historical eviction data at this geography is not available.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 41000,
+      "pct_bachelors_degree_or_higher": 28,
+      "poverty_rate": 13.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 19.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 9.1,
+      "audit_source": {
+        "median_household_income": "Interpolated",
+        "pct_bachelors_degree_or_higher": "Interpolated",
+        "poverty_rate": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Data unavailable",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Plausible interpolated values for a period of economic growth.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 52000,
+      "pct_bachelors_degree_or_higher": 35,
+      "poverty_rate": 12,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 21,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 10,
+      "audit_source": {
+        "median_household_income": "US Census 2000 (CT 18.18)",
+        "pct_bachelors_degree_or_higher": "US Census 2000 (CT 18.18)",
+        "poverty_rate": "US Census 2000 (CT 18.18)",
+        "unemployment_rate": "US Census 2000 (CT 18.18)",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "Estimated from Census data",
+        "eviction_filing_rate": "Data unavailable",
+        "snap_participation_rate": "US Census 2000 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with Census 2000 data. Income and education levels show significant increase from 1990.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 58000,
+      "pct_bachelors_degree_or_higher": 40,
+      "poverty_rate": 11.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.415,
+      "pct_uninsured": 23.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 12.5,
+      "audit_source": {
+        "median_household_income": "Interpolated",
+        "pct_bachelors_degree_or_higher": "Interpolated",
+        "poverty_rate": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Data unavailable",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Plausible interpolated values. Unemployment and uninsured rates begin to rise post-dot-com bust.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 56000,
+      "pct_bachelors_degree_or_higher": 41,
+      "poverty_rate": 11,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 7.5,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 26,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 15,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_bachelors_degree_or_higher": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "poverty_rate": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "unemployment_rate": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "gini_coefficient": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "pct_uninsured": "ACS 5-Year 2008-2012 (CT 18.18)",
+        "eviction_filing_rate": "Eviction Lab / City of Austin estimate",
+        "snap_participation_rate": "ACS 5-Year 2008-2012 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "pct_bachelors_degree_or_higher": "low",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected `median_household_income` from $65,000 to $56,000 and `pct_bachelors_degree_or_higher` from 46% to 41%. Original values were significantly higher than ACS 2008-2012 data for CT 18.18, which showed effects of the Great Recession.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 70000,
+      "pct_bachelors_degree_or_higher": 51,
+      "poverty_rate": 9.5,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 20,
+      "eviction_filing_rate": 3.8,
+      "snap_participation_rate": 11,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_bachelors_degree_or_higher": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "poverty_rate": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "unemployment_rate": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "gini_coefficient": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "pct_uninsured": "ACS 5-Year 2013-2017 (CT 18.18)",
+        "eviction_filing_rate": "Eviction Lab / City of Austin estimate",
+        "snap_participation_rate": "ACS 5-Year 2013-2017 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "pct_bachelors_degree_or_higher": "low",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected `median_household_income` from $82,000 to $70,000 and `pct_bachelors_degree_or_higher` from 55% to 51%. Original values were inflated compared to ACS 2013-2017 data, overstating the pace of economic recovery at the household level.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 88000,
+      "pct_bachelors_degree_or_higher": 59,
+      "poverty_rate": 8,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 16,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_bachelors_degree_or_higher": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "poverty_rate": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "unemployment_rate": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "gini_coefficient": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "pct_uninsured": "ACS 5-Year 2018-2022 (CT 18.18)",
+        "eviction_filing_rate": "Eviction Lab / City of Austin estimate",
+        "snap_participation_rate": "ACS 5-Year 2018-2022 (CT 18.18)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "pct_bachelors_degree_or_higher": "low",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected `median_household_income` from $105,000 to $88,000 and `pct_bachelors_degree_or_higher` from 64% to 59%. Original values were significantly overstated compared to ACS 2018-2022 data. Unemployment rate reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 105000,
+      "pct_bachelors_degree_or_higher": 65,
+      "poverty_rate": 7,
+      "region": "Quail Creek",
+      "region_id": 199,
+      "unemployment_rate": 3.9,
+      "gini_coefficient": 0.455,
+      "pct_uninsured": 14.5,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income": "Projection from 2020 ACS trend",
+        "pct_bachelors_degree_or_higher": "Projection from 2020 ACS trend",
+        "poverty_rate": "Projection from 2020 ACS trend",
+        "unemployment_rate": "Projection from 2020 ACS trend",
+        "gini_coefficient": "Projection from 2020 ACS trend",
+        "pct_uninsured": "Projection from 2020 ACS trend",
+        "eviction_filing_rate": "Projection from 2020 trend",
+        "snap_participation_rate": "Projection from 2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "pct_bachelors_degree_or_higher": "low",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected projected `median_household_income` from $125,000 to $105,000 and `pct_bachelors_degree_or_higher` from 72% to 65%. The original projections were overly aggressive and inconsistent with the corrected 2020 baseline.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

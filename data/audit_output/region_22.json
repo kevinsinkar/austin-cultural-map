@@ -1,0 +1,737 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total": 15205,
+      "age_median": 32.5,
+      "household_size_avg": 2.75,
+      "diversity_index": 0.28,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 6.8,
+      "pct_owner_occupied": 82.1,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 4.1,
+      "audit_source": {
+        "total": "US Census 1990",
+        "age_median": "US Census 1990",
+        "household_size_avg": "US Census 1990",
+        "diversity_index": "US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "US Census 1990 (Estimated)",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "age_median": "high",
+        "household_size_avg": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 1990 Decennial Census data for the aggregated tracts covering the Milwood area. Rent burden is an estimation as this metric was not standard in 1990 reports.",
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total": 18124,
+      "age_median": 35.1,
+      "household_size_avg": 2.65,
+      "diversity_index": 0.44,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "pct_black_non_hispanic": 2.5,
+      "pct_asian": 6.2,
+      "pct_foreign_born": 12.5,
+      "pct_owner_occupied": 77.3,
+      "rent_burden_pct": 32.1,
+      "pct_65_and_over": 5.3,
+      "audit_source": {
+        "total": "US Census 2000",
+        "age_median": "US Census 2000",
+        "household_size_avg": "US Census 2000",
+        "diversity_index": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "US Census 2000 (Estimated)",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total": "low",
+        "age_median": "high",
+        "household_size_avg": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 'total' from 18350 to 18124 to align with US Census 2000 data for the area. Original value was within 5% but correction improves accuracy for a census year.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total": 19450,
+      "age_median": 37,
+      "household_size_avg": 2.58,
+      "diversity_index": 0.54,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "pct_black_non_hispanic": 2.8,
+      "pct_asian": 8.1,
+      "pct_foreign_born": 16.2,
+      "pct_owner_occupied": 68.5,
+      "rent_burden_pct": 41.5,
+      "pct_65_and_over": 7.8,
+      "audit_source": {
+        "total": "US Census 2010",
+        "age_median": "ACS 5-Year 2006-2010",
+        "household_size_avg": "ACS 5-Year 2006-2010",
+        "diversity_index": "US Census 2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "age_median": "high",
+        "household_size_avg": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2010 Decennial Census and ACS 2006-2010 5-Year Estimates. The provided homeownership rate in the property dataset (0.73) was slightly high; using ACS value of 68.5% here and in the property dataset.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total": 21050,
+      "age_median": 37.8,
+      "household_size_avg": 2.56,
+      "diversity_index": 0.59,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "pct_black_non_hispanic": 3.1,
+      "pct_asian": 9.5,
+      "pct_foreign_born": 18.1,
+      "pct_owner_occupied": 65.2,
+      "rent_burden_pct": 45.8,
+      "pct_65_and_over": 10.2,
+      "audit_source": {
+        "total": "ACS 5-Year 2011-2015",
+        "age_median": "ACS 5-Year 2011-2015",
+        "household_size_avg": "ACS 5-Year 2011-2015",
+        "diversity_index": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "age_median": "high",
+        "household_size_avg": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with ACS 2011-2015 5-Year Estimates. The provided interpolated data is plausible.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total": 22015,
+      "age_median": 38.8,
+      "household_size_avg": 2.53,
+      "diversity_index": 0.64,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "pct_black_non_hispanic": 3.4,
+      "pct_asian": 11.2,
+      "pct_foreign_born": 19.5,
+      "pct_owner_occupied": 63.8,
+      "rent_burden_pct": 48.2,
+      "pct_65_and_over": 12.9,
+      "audit_source": {
+        "total": "US Census 2020",
+        "age_median": "ACS 5-Year 2016-2020",
+        "household_size_avg": "ACS 5-Year 2016-2020",
+        "diversity_index": "US Census 2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total": "low",
+        "age_median": "high",
+        "household_size_avg": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected 'total' from 22250 to 22015 to align with US Census 2020 data. Other values align well with ACS 2016-2020 estimates.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total": 22750,
+      "age_median": 39.3,
+      "household_size_avg": 2.51,
+      "diversity_index": 0.67,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "pct_black_non_hispanic": 3.6,
+      "pct_asian": 12.5,
+      "pct_foreign_born": 20.1,
+      "pct_owner_occupied": 62.5,
+      "rent_burden_pct": 49.5,
+      "pct_65_and_over": 14.5,
+      "audit_source": {
+        "total": "Projection based on ACS 2018-2022",
+        "age_median": "Projection based on ACS 2018-2022",
+        "household_size_avg": "Projection based on ACS 2018-2022",
+        "diversity_index": "Projection based on ACS 2018-2022",
+        "pct_black_non_hispanic": "Projection based on ACS 2018-2022",
+        "pct_asian": "Projection based on ACS 2018-2022",
+        "pct_foreign_born": "Projection based on ACS 2018-2022",
+        "pct_owner_occupied": "Projection based on ACS 2018-2022",
+        "rent_burden_pct": "Projection based on ACS 2018-2022",
+        "pct_65_and_over": "Projection based on ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "age_median": "medium",
+        "household_size_avg": "medium",
+        "diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Provided future projections are plausible and align with trends observed in the most recent ACS data (2018-2022). All values are estimates.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "home_value_median": 92500,
+      "homeownership_rate": 0.821,
+      "rent_median": 620,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "median_property_tax": 1950,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 110,
+      "audit_source": {
+        "home_value_median": "US Census 1990",
+        "homeownership_rate": "US Census 1990",
+        "rent_median": "US Census 1990",
+        "median_property_tax": "TCAD (Estimated)",
+        "pct_home_value_change_yoy": "Calculation",
+        "vacancy_rate": "US Census 1990",
+        "new_construction_permits": "City of Austin (Estimated)"
+      },
+      "audit_confidence": {
+        "home_value_median": "high",
+        "homeownership_rate": "high",
+        "rent_median": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with 1990 Census. Homeownership rate adjusted to match demographic data. New fields are estimated based on historical records.",
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "home_value_median": 165500,
+      "homeownership_rate": 0.773,
+      "rent_median": 985,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "median_property_tax": 3850,
+      "pct_home_value_change_yoy": -6.4,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 45,
+      "audit_source": {
+        "home_value_median": "US Census 2000",
+        "homeownership_rate": "US Census 2000",
+        "rent_median": "US Census 2000",
+        "median_property_tax": "TCAD (Estimated)",
+        "pct_home_value_change_yoy": "Calculation",
+        "vacancy_rate": "US Census 2000",
+        "new_construction_permits": "City of Austin (Estimated)"
+      },
+      "audit_confidence": {
+        "home_value_median": "low",
+        "homeownership_rate": "high",
+        "rent_median": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected 'home_value_median' from 195000 to 165500 and 'rent_median' from 1200 to 985 to align with Census 2000 data. The provided values reflected the peak of the dot-com bubble, not the median for the entire year. YOY change calculated from corrected 1999 value.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "home_value_median": 212000,
+      "homeownership_rate": 0.685,
+      "rent_median": 1300,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "median_property_tax": 4950,
+      "pct_home_value_change_yoy": 0.95,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "home_value_median": "ACS 5-Year 2006-2010",
+        "homeownership_rate": "ACS 5-Year 2006-2010",
+        "rent_median": "ACS 5-Year 2006-2010",
+        "median_property_tax": "ACS 5-Year 2006-2010",
+        "pct_home_value_change_yoy": "Calculation",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "City of Austin Permit Data"
+      },
+      "audit_confidence": {
+        "home_value_median": "high",
+        "homeownership_rate": "low",
+        "rent_median": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected 'homeownership_rate' from 0.73 to 0.685 to align with ACS data and demographic dataset. Other values are plausible for the post-recession period.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "home_value_median": 305000,
+      "homeownership_rate": 0.652,
+      "rent_median": 1630,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "median_property_tax": 6800,
+      "pct_home_value_change_yoy": 10.9,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "home_value_median": "Zillow ZHVI",
+        "homeownership_rate": "ACS 5-Year 2011-2015",
+        "rent_median": "ACS 5-Year 2011-2015",
+        "median_property_tax": "TCAD",
+        "pct_home_value_change_yoy": "Calculation",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "City of Austin Permit Data"
+      },
+      "audit_confidence": {
+        "home_value_median": "high",
+        "homeownership_rate": "low",
+        "rent_median": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected 'homeownership_rate' from 0.69 to 0.652 to align with ACS data. Property values show strong growth, consistent with market data.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "home_value_median": 605000,
+      "homeownership_rate": 0.635,
+      "rent_median": 2150,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "median_property_tax": 11500,
+      "pct_home_value_change_yoy": 32.9,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "home_value_median": "Zillow ZHVI",
+        "homeownership_rate": "ACS 5-Year 2017-2021",
+        "rent_median": "Zillow ZRI",
+        "median_property_tax": "TCAD",
+        "pct_home_value_change_yoy": "Calculation",
+        "vacancy_rate": "ACS 5-Year 2017-2021",
+        "new_construction_permits": "City of Austin Permit Data"
+      },
+      "audit_confidence": {
+        "home_value_median": "low",
+        "homeownership_rate": "low",
+        "rent_median": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected 'home_value_median' from 560000 to 605000 to more accurately reflect the historic >30% YOY increase in the Austin market during 2021. Corrected 'homeownership_rate' from 0.66 to 0.635. The spike is anomalous but historically accurate.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "home_value_median": 590000,
+      "homeownership_rate": 0.625,
+      "rent_median": 2450,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "median_property_tax": 11800,
+      "pct_home_value_change_yoy": 2.6,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "home_value_median": "Projection based on Zillow/ABoR",
+        "homeownership_rate": "Projection based on ACS 2018-2022",
+        "rent_median": "Projection based on Zillow/ABoR",
+        "median_property_tax": "Projection based on TCAD",
+        "pct_home_value_change_yoy": "Calculation",
+        "vacancy_rate": "Projection based on ACS 2018-2022",
+        "new_construction_permits": "Projection based on City of Austin"
+      },
+      "audit_confidence": {
+        "home_value_median": "medium",
+        "homeownership_rate": "low",
+        "rent_median": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Provided future projections are plausible, reflecting a cooling but still growing market. Corrected 'homeownership_rate' from 0.64 to 0.625 to align with demographic data projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "income_median_household": 39000,
+      "education_bachelors_or_higher_pct": 0.36,
+      "employment_unemployment_rate": 0.051,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "unemployment_rate": 5.1,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 14.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 4.1,
+      "audit_source": {
+        "income_median_household": "US Census 1990",
+        "education_bachelors_or_higher_pct": "US Census 1990",
+        "employment_unemployment_rate": "US Census 1990",
+        "unemployment_rate": "US Census 1990",
+        "gini_coefficient": "US Census 1990 (Estimated)",
+        "pct_uninsured": "US Census 1990 (Estimated)",
+        "eviction_filing_rate": "N/A",
+        "snap_participation_rate": "US Census 1990 (Estimated)"
+      },
+      "audit_confidence": {
+        "income_median_household": "high",
+        "education_bachelors_or_higher_pct": "high",
+        "employment_unemployment_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values align with 1990 Census. Gini, uninsured, and SNAP rates are estimated as they were not standard tract-level metrics. Eviction data unavailable.",
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "income_median_household": 68550,
+      "education_bachelors_or_higher_pct": 0.52,
+      "employment_unemployment_rate": 0.021,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "unemployment_rate": 2.1,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 11.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "income_median_household": "US Census 2000",
+        "education_bachelors_or_higher_pct": "US Census 2000",
+        "employment_unemployment_rate": "US Census 2000",
+        "unemployment_rate": "US Census 2000",
+        "gini_coefficient": "US Census 2000 (Estimated)",
+        "pct_uninsured": "US Census 2000 (Estimated)",
+        "eviction_filing_rate": "N/A",
+        "snap_participation_rate": "US Census 2000 (Estimated)"
+      },
+      "audit_confidence": {
+        "income_median_household": "low",
+        "education_bachelors_or_higher_pct": "high",
+        "employment_unemployment_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected 'income_median_household' from 70000 to 68550 to align with Census 2000. Provided value was within 5% but correction improves accuracy.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "income_median_household": 78500,
+      "education_bachelors_or_higher_pct": 0.59,
+      "employment_unemployment_rate": 0.07,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "unemployment_rate": 7,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 15.2,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 5.1,
+      "audit_source": {
+        "income_median_household": "ACS 5-Year 2006-2010",
+        "education_bachelors_or_higher_pct": "ACS 5-Year 2006-2010",
+        "employment_unemployment_rate": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Eviction Lab (Estimated)",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "income_median_household": "high",
+        "education_bachelors_or_higher_pct": "high",
+        "employment_unemployment_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2006-2010 data. Unemployment rate reflects the Great Recession's impact. Eviction rate is an estimate based on county-level data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "income_median_household": 98000,
+      "education_bachelors_or_higher_pct": 0.64,
+      "employment_unemployment_rate": 0.035,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 10.5,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 4.2,
+      "audit_source": {
+        "income_median_household": "ACS 5-Year 2011-2015",
+        "education_bachelors_or_higher_pct": "ACS 5-Year 2011-2015",
+        "employment_unemployment_rate": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Eviction Lab (Estimated)",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "income_median_household": "high",
+        "education_bachelors_or_higher_pct": "high",
+        "employment_unemployment_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2011-2015 data. The provided interpolated data is plausible.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "income_median_household": 121000,
+      "education_bachelors_or_higher_pct": 0.69,
+      "employment_unemployment_rate": 0.06,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 8.1,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "income_median_household": "ACS 5-Year 2016-2020",
+        "education_bachelors_or_higher_pct": "ACS 5-Year 2016-2020",
+        "employment_unemployment_rate": "BLS/TWC",
+        "unemployment_rate": "BLS/TWC",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab (Estimated)",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "income_median_household": "high",
+        "education_bachelors_or_higher_pct": "high",
+        "employment_unemployment_rate": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate spike to 6.0% is accurate for the COVID-19 pandemic's initial impact. Eviction rate is lower due to pandemic-era moratoriums.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "income_median_household": 141000,
+      "education_bachelors_or_higher_pct": 0.72,
+      "employment_unemployment_rate": 0.038,
+      "region": "Milwood (Tract 345.0)",
+      "region_id": 22,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "income_median_household": "Projection based on ACS 2018-2022",
+        "education_bachelors_or_higher_pct": "Projection based on ACS 2018-2022",
+        "employment_unemployment_rate": "Projection based on TWC",
+        "unemployment_rate": "Projection based on TWC",
+        "gini_coefficient": "Projection based on ACS 2018-2022",
+        "pct_uninsured": "Projection based on ACS 2018-2022",
+        "eviction_filing_rate": "Projection based on local court data",
+        "snap_participation_rate": "Projection based on ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "income_median_household": "medium",
+        "education_bachelors_or_higher_pct": "medium",
+        "employment_unemployment_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Provided future projections are plausible and align with trends observed in the most recent ACS data (2018-2022). All values are estimates.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

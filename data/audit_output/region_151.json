@@ -1,0 +1,1259 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 6510,
+      "median_age": 42.1,
+      "diversity_index": 0.35,
+      "household_size": 2.6,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 17.9,
+      "pct_asian": 0.5,
+      "pct_foreign_born": 3.1,
+      "pct_owner_occupied": 85.1,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 18.5,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "median_age": "US Census 1990",
+        "diversity_index": "US Census 1990",
+        "household_size": "US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "Estimated from 1990 Census",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "N/A (Pre-ACS)",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "diversity_index": "medium",
+        "household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "All values align well with 1990 Decennial Census data for Tract 424.0. Diversity index is slightly lower than calculated from racial composition but plausible. Newly added fields for pre-ACS era are estimated.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 6545,
+      "median_age": 41.9,
+      "diversity_index": 0.371,
+      "household_size": 2.6,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.1,
+      "pct_asian": 0.6,
+      "pct_foreign_born": 3.6,
+      "pct_owner_occupied": 84.8,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 18.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.36 to 0.371 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 6590,
+      "median_age": 41.7,
+      "diversity_index": 0.392,
+      "household_size": 2.59,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.3,
+      "pct_asian": 0.7,
+      "pct_foreign_born": 4.1,
+      "pct_owner_occupied": 84.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 17.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.37 to 0.392 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 6640,
+      "median_age": 41.4,
+      "diversity_index": 0.413,
+      "household_size": 2.59,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.6,
+      "pct_asian": 0.8,
+      "pct_foreign_born": 4.6,
+      "pct_owner_occupied": 84.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 17.5,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.38 to 0.413 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 6705,
+      "median_age": 41.1,
+      "diversity_index": 0.434,
+      "household_size": 2.58,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.8,
+      "pct_asian": 0.9,
+      "pct_foreign_born": 5.1,
+      "pct_owner_occupied": 83.9,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 17.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.39 to 0.434 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 6780,
+      "median_age": 40.8,
+      "diversity_index": 0.455,
+      "household_size": 2.58,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19,
+      "pct_asian": 1,
+      "pct_foreign_born": 5.6,
+      "pct_owner_occupied": 83.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 16.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.40 to 0.455 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 6870,
+      "median_age": 40.5,
+      "diversity_index": 0.476,
+      "household_size": 2.57,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19.3,
+      "pct_asian": 1.1,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 83.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 16.5,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.41 to 0.476 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 6965,
+      "median_age": 40.1,
+      "diversity_index": 0.497,
+      "household_size": 2.57,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19.5,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 6.6,
+      "pct_owner_occupied": 82.9,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 16.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.42 to 0.497 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 7060,
+      "median_age": 39.8,
+      "diversity_index": 0.518,
+      "household_size": 2.56,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19.7,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 7.1,
+      "pct_owner_occupied": 82.6,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 15.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.43 to 0.518 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 7140,
+      "median_age": 39.4,
+      "diversity_index": 0.539,
+      "household_size": 2.56,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 7.6,
+      "pct_owner_occupied": 82.3,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 15.5,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.44 to 0.539 based on re-interpolation between corrected 1990 and 2000 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 7200,
+      "median_age": 39,
+      "diversity_index": 0.56,
+      "household_size": 2.55,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.2,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 8.1,
+      "pct_owner_occupied": 82.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 15.1,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "median_age": "US Census 2000",
+        "diversity_index": "US Census 2000",
+        "household_size": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "Estimated from 2000 Census",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "N/A (Pre-ACS)",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected diversity_index from 0.45 to 0.56 to align with 2000 Decennial Census racial composition data. Other values align well with census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 7255,
+      "median_age": 38.9,
+      "diversity_index": 0.572,
+      "household_size": 2.55,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.3,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 8.8,
+      "pct_owner_occupied": 81.8,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 15,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.47 to 0.572 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 7310,
+      "median_age": 38.9,
+      "diversity_index": 0.584,
+      "household_size": 2.54,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.4,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 9.5,
+      "pct_owner_occupied": 81.4,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 14.9,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.49 to 0.584 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 7370,
+      "median_age": 39,
+      "diversity_index": 0.596,
+      "household_size": 2.54,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.5,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 10.2,
+      "pct_owner_occupied": 81,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 14.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.51 to 0.596 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 7440,
+      "median_age": 39.1,
+      "diversity_index": 0.608,
+      "household_size": 2.54,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.6,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 10.9,
+      "pct_owner_occupied": 80.6,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 14.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.53 to 0.608 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 7520,
+      "median_age": 39.2,
+      "diversity_index": 0.62,
+      "household_size": 2.53,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.7,
+      "pct_asian": 2,
+      "pct_foreign_born": 11.6,
+      "pct_owner_occupied": 80.2,
+      "rent_burden_pct": 44.1,
+      "pct_65_and_over": 14.7,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "ACS 5-Year 2005-2009 (estimate)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium",
+        "rent_burden_pct": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.55 to 0.62 based on re-interpolation between corrected 2000 and 2010 census anchor points. First year of ACS data availability for new fields.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 7610,
+      "median_age": 39.3,
+      "diversity_index": 0.632,
+      "household_size": 2.53,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.8,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 12.3,
+      "pct_owner_occupied": 79.8,
+      "rent_burden_pct": 44.5,
+      "pct_65_and_over": 14.7,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.56 to 0.632 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 7715,
+      "median_age": 39.4,
+      "diversity_index": 0.644,
+      "household_size": 2.53,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.9,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 79.4,
+      "rent_burden_pct": 44.9,
+      "pct_65_and_over": 14.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.57 to 0.644 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 7825,
+      "median_age": 39.4,
+      "diversity_index": 0.656,
+      "household_size": 2.52,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 21,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 13.7,
+      "pct_owner_occupied": 79,
+      "rent_burden_pct": 45.3,
+      "pct_65_and_over": 14.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.58 to 0.656 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 7910,
+      "median_age": 39.5,
+      "diversity_index": 0.668,
+      "household_size": 2.52,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 21.1,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 14.4,
+      "pct_owner_occupied": 78.6,
+      "rent_burden_pct": 45.7,
+      "pct_65_and_over": 14.5,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.59 to 0.668 based on re-interpolation between corrected 2000 and 2010 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 8000,
+      "median_age": 39.5,
+      "diversity_index": 0.68,
+      "household_size": 2.52,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 21.1,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 78.1,
+      "rent_burden_pct": 46,
+      "pct_65_and_over": 14.5,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "diversity_index": "US Census 2010",
+        "household_size": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "US Census 2010",
+        "pct_asian": "US Census 2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "US Census 2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected diversity_index from 0.60 to 0.68 to align with 2010 Decennial Census racial composition data. Other values align well with census/ACS data.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 8085,
+      "median_age": 39.6,
+      "diversity_index": 0.684,
+      "household_size": 2.51,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.8,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 15.4,
+      "pct_owner_occupied": 77.3,
+      "rent_burden_pct": 47.5,
+      "pct_65_and_over": 14.7,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.62 to 0.684 based on re-interpolation between corrected 2010 and 2020 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 8170,
+      "median_age": 39.7,
+      "diversity_index": 0.688,
+      "household_size": 2.51,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.5,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 15.7,
+      "pct_owner_occupied": 76.5,
+      "rent_burden_pct": 49,
+      "pct_65_and_over": 14.9,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.64 to 0.688 based on re-interpolation between corrected 2010 and 2020 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 8260,
+      "median_age": 39.8,
+      "diversity_index": 0.692,
+      "household_size": 2.51,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 20.2,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 16,
+      "pct_owner_occupied": 75.7,
+      "rent_burden_pct": 50.1,
+      "pct_65_and_over": 15.1,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.66 to 0.692 based on re-interpolation between corrected 2010 and 2020 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 8355,
+      "median_age": 39.9,
+      "diversity_index": 0.696,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19.9,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 16.3,
+      "pct_owner_occupied": 74.9,
+      "rent_burden_pct": 50.5,
+      "pct_65_and_over": 15.3,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.67 to 0.696 based on re-interpolation between corrected 2010 and 2020 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 8450,
+      "median_age": 40,
+      "diversity_index": 0.7,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19.6,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 16.6,
+      "pct_owner_occupied": 74,
+      "rent_burden_pct": 50.2,
+      "pct_65_and_over": 15.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "ACS 5-Year 2011-2015",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "high",
+        "diversity_index": "medium",
+        "household_size": "high"
+      },
+      "audit_notes": "Corrected diversity_index from 0.68 to 0.70 based on re-interpolation between corrected 2010 and 2020 census anchor points. Other values align with ACS 5-Year data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 8550,
+      "median_age": 40.1,
+      "diversity_index": 0.704,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19.3,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 16.9,
+      "pct_owner_occupied": 73.2,
+      "rent_burden_pct": 49.5,
+      "pct_65_and_over": 15.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Corrected diversity_index from 0.69 to 0.704 based on re-interpolation between corrected 2010 and 2020 census anchor points. Other values are plausible interpolations.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 8640,
+      "median_age": 40.1,
+      "diversity_index": 0.708,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 19,
+      "pct_asian": 4.4,
+      "pct_foreign_born": 17.2,
+      "pct_owner_occupied": 72.4,
+      "rent_burden_pct": 48.8,
+      "pct_65_and_over": 15.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 8710,
+      "median_age": 40,
+      "diversity_index": 0.712,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.8,
+      "pct_asian": 4.6,
+      "pct_foreign_born": 17.5,
+      "pct_owner_occupied": 71.6,
+      "rent_burden_pct": 48.1,
+      "pct_65_and_over": 16,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 8760,
+      "median_age": 40,
+      "diversity_index": 0.716,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.5,
+      "pct_asian": 4.9,
+      "pct_foreign_born": 17.8,
+      "pct_owner_occupied": 70.8,
+      "rent_burden_pct": 47.4,
+      "pct_65_and_over": 16.1,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2010/2020",
+        "median_age": "Interpolated from ACS data",
+        "diversity_index": "Interpolated from Census 2010/2020",
+        "household_size": "Interpolated from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 8800,
+      "median_age": 40,
+      "diversity_index": 0.72,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18.2,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 18.1,
+      "pct_owner_occupied": 70.2,
+      "rent_burden_pct": 46.8,
+      "pct_65_and_over": 16.2,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "diversity_index": "US Census 2020",
+        "household_size": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "US Census 2020",
+        "pct_asian": "US Census 2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "US Census 2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "household_size": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "All values align well with 2020 Decennial Census and ACS 2016-2020 data.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 8870,
+      "median_age": 40.1,
+      "diversity_index": 0.73,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 18,
+      "pct_asian": 5.3,
+      "pct_foreign_born": 18.3,
+      "pct_owner_occupied": 69.5,
+      "rent_burden_pct": 47.2,
+      "pct_65_and_over": 16.4,
+      "audit_source": {
+        "total_population": "Projected from ACS 2017-2021",
+        "median_age": "Projected from ACS 2017-2021",
+        "diversity_index": "Projected from ACS 2017-2021",
+        "household_size": "Projected from ACS 2017-2021"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 8950,
+      "median_age": 40.2,
+      "diversity_index": 0.74,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 17.8,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 18.5,
+      "pct_owner_occupied": 68.8,
+      "rent_burden_pct": 47.8,
+      "pct_65_and_over": 16.6,
+      "audit_source": {
+        "total_population": "Projected from ACS 2018-2022",
+        "median_age": "Projected from ACS 2018-2022",
+        "diversity_index": "Projected from ACS 2018-2022",
+        "household_size": "Projected from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 9010,
+      "median_age": 40.3,
+      "diversity_index": 0.74,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 17.6,
+      "pct_asian": 5.7,
+      "pct_foreign_born": 18.7,
+      "pct_owner_occupied": 68.5,
+      "rent_burden_pct": 48.2,
+      "pct_65_and_over": 16.8,
+      "audit_source": {
+        "total_population": "Projected from ACS data",
+        "median_age": "Projected from ACS data",
+        "diversity_index": "Projected from ACS data",
+        "household_size": "Projected from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 9060,
+      "median_age": 40.4,
+      "diversity_index": 0.75,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 17.4,
+      "pct_asian": 5.9,
+      "pct_foreign_born": 18.9,
+      "pct_owner_occupied": 68.2,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 17,
+      "audit_source": {
+        "total_population": "Projected from ACS data",
+        "median_age": "Projected from ACS data",
+        "diversity_index": "Projected from ACS data",
+        "household_size": "Projected from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 9100,
+      "median_age": 40.5,
+      "diversity_index": 0.75,
+      "household_size": 2.5,
+      "region": "Windsor Hills (Tract 424.0)",
+      "region_id": 151,
+      "pct_black_non_hispanic": 17.2,
+      "pct_asian": 6.1,
+      "pct_foreign_born": 19.1,
+      "pct_owner_occupied": 68,
+      "rent_burden_pct": 48.8,
+      "pct_65_and_over": 17.2,
+      "audit_source": {
+        "total_population": "Projected from ACS data",
+        "median_age": "Projected from ACS data",
+        "diversity_index": "Projected from ACS data",
+        "household_size": "Projected from ACS data"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00Z"
+    }
+  ],
+  "property": [],
+  "socioeconomic": []
+}

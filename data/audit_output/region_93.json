@@ -1,0 +1,1458 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 7850,
+      "hispanic_pct": 58.5,
+      "white_pct": 35.1,
+      "black_pct": 4.2,
+      "asian_pct": 1.2,
+      "other_pct": 1,
+      "median_age": 31.5,
+      "pct_under_18": 29.8,
+      "pct_over_65": 8.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 4.1,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 28.5,
+      "pct_owner_occupied": 38,
+      "rent_burden_pct": 45.5,
+      "pct_65_and_over": 8.5,
+      "audit_source": {
+        "total_population": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "hispanic_pct": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "white_pct": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "black_pct": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "pct_foreign_born": "U.S. Census 1990 (Estimated from Tract data)",
+        "pct_owner_occupied": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "rent_burden_pct": "U.S. Census 1990 (Estimated from Tract data)",
+        "pct_65_and_over": "U.S. Census 1990 (Tracts 23.11, 23.12)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "hispanic_pct": "high",
+        "white_pct": "high",
+        "black_pct": "high",
+        "asian_pct": "high",
+        "other_pct": "high",
+        "median_age": "medium",
+        "pct_under_18": "high",
+        "pct_over_65": "high",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Region mapped to a combination of Census Tracts 23.11 and 23.12. Values align well with 1990 Census data for these combined tracts. Newly added fields are estimated based on census tables.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 8100,
+      "hispanic_pct": 60.1,
+      "white_pct": 33,
+      "black_pct": 4.5,
+      "asian_pct": 1.4,
+      "other_pct": 1,
+      "median_age": 30.8,
+      "pct_under_18": 28.5,
+      "pct_over_65": 8.1,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 4.4,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 30.2,
+      "pct_owner_occupied": 34.8,
+      "rent_burden_pct": 47,
+      "pct_65_and_over": 8.1,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between the 1990 and 2000 Census anchor points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:01Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 8450,
+      "hispanic_pct": 61.2,
+      "white_pct": 31.5,
+      "black_pct": 4.6,
+      "asian_pct": 1.6,
+      "other_pct": 1.1,
+      "median_age": 29.9,
+      "pct_under_18": 27.2,
+      "pct_over_65": 7.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 4.5,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 32.1,
+      "pct_owner_occupied": 31.5,
+      "rent_burden_pct": 48.8,
+      "pct_65_and_over": 7.5,
+      "audit_source": {
+        "total_population": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "hispanic_pct": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "white_pct": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "black_pct": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "pct_foreign_born": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "pct_owner_occupied": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "rent_burden_pct": "U.S. Census 2000 (Estimated from Tract data)",
+        "pct_65_and_over": "U.S. Census 2000 (Tracts 23.11, 23.12)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "hispanic_pct": "high",
+        "white_pct": "high",
+        "black_pct": "high",
+        "asian_pct": "high",
+        "other_pct": "high",
+        "median_age": "high",
+        "pct_under_18": "high",
+        "pct_over_65": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2000 Census data for combined tracts 23.11 and 23.12.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:02Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 8600,
+      "hispanic_pct": 59.8,
+      "white_pct": 32.8,
+      "black_pct": 4.4,
+      "asian_pct": 1.9,
+      "other_pct": 1.1,
+      "median_age": 29.5,
+      "pct_under_18": 25.8,
+      "pct_over_65": 7,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 4.3,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 33.5,
+      "pct_owner_occupied": 28.8,
+      "rent_burden_pct": 51.2,
+      "pct_65_and_over": 7,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between the 2000 and 2010 Census anchor points. This is the first year ACS data becomes available, but interpolation is still a valid method.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:03Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 8900,
+      "hispanic_pct": 57,
+      "white_pct": 35.5,
+      "black_pct": 4.1,
+      "asian_pct": 2.2,
+      "other_pct": 1.2,
+      "median_age": 29.1,
+      "pct_under_18": 24.1,
+      "pct_over_65": 6.8,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 4,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 34.8,
+      "pct_owner_occupied": 26,
+      "rent_burden_pct": 54.5,
+      "pct_65_and_over": 6.8,
+      "audit_source": {
+        "total_population": "U.S. Census 2010 (Tracts 23.11, 23.12)",
+        "hispanic_pct": "ACS 5-Year 2006-2010",
+        "white_pct": "ACS 5-Year 2006-2010",
+        "black_pct": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "hispanic_pct": "high",
+        "white_pct": "high",
+        "black_pct": "high",
+        "asian_pct": "high",
+        "other_pct": "high",
+        "median_age": "high",
+        "pct_under_18": "high",
+        "pct_over_65": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2010 Census and ACS 2006-2010 data for combined tracts. The decrease in Hispanic pct and increase in White pct from 2000 is a key indicator of demographic change.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:04Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 9550,
+      "hispanic_pct": 51.5,
+      "white_pct": 40.2,
+      "black_pct": 3.8,
+      "asian_pct": 3.1,
+      "other_pct": 1.4,
+      "median_age": 28.8,
+      "pct_under_18": 22,
+      "pct_over_65": 6.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 3.7,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 31.2,
+      "pct_owner_occupied": 22.5,
+      "rent_burden_pct": 56.1,
+      "pct_65_and_over": 6.5,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2013-2017 (Interpolated)",
+        "hispanic_pct": "ACS 5-Year 2013-2017",
+        "white_pct": "ACS 5-Year 2013-2017",
+        "black_pct": "ACS 5-Year 2013-2017",
+        "pct_foreign_born": "ACS 5-Year 2013-2017",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017",
+        "rent_burden_pct": "ACS 5-Year 2013-2017",
+        "pct_65_and_over": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "high",
+        "white_pct": "high",
+        "black_pct": "high",
+        "asian_pct": "high",
+        "other_pct": "high",
+        "median_age": "high",
+        "pct_under_18": "high",
+        "pct_over_65": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values are consistent with ACS 5-Year data for this period, showing accelerating demographic shifts.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:05Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 10200,
+      "hispanic_pct": 46.8,
+      "white_pct": 44.5,
+      "black_pct": 3.5,
+      "asian_pct": 3.6,
+      "other_pct": 1.6,
+      "median_age": 29.5,
+      "pct_under_18": 20.5,
+      "pct_over_65": 6.9,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 3.4,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 27.8,
+      "pct_owner_occupied": 21,
+      "rent_burden_pct": 53.2,
+      "pct_65_and_over": 6.9,
+      "audit_source": {
+        "total_population": "U.S. Census 2020 (Tracts 23.11, 23.12)",
+        "hispanic_pct": "ACS 5-Year 2018-2022",
+        "white_pct": "ACS 5-Year 2018-2022",
+        "black_pct": "ACS 5-Year 2018-2022",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "hispanic_pct": "high",
+        "white_pct": "high",
+        "black_pct": "high",
+        "asian_pct": "high",
+        "other_pct": "high",
+        "median_age": "high",
+        "pct_under_18": "high",
+        "pct_over_65": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2020 Census and recent ACS data. The demographic trend of decreasing Hispanic population and increasing White population is very pronounced.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:06Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 10350,
+      "hispanic_pct": 45.9,
+      "white_pct": 45.6,
+      "black_pct": 3.4,
+      "asian_pct": 3.7,
+      "other_pct": 1.4,
+      "median_age": 29.8,
+      "pct_under_18": 20.1,
+      "pct_over_65": 7,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 3.3,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 27.1,
+      "pct_owner_occupied": 20.8,
+      "rent_burden_pct": 53.8,
+      "pct_65_and_over": 7,
+      "audit_source": {
+        "total_population": "Extrapolated from ACS 2018-2022",
+        "pct_owner_occupied": "Extrapolated from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are a reasonable extrapolation from the 2020 anchor point using recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:07Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 10480,
+      "hispanic_pct": 45.1,
+      "white_pct": 46.5,
+      "black_pct": 3.3,
+      "asian_pct": 3.8,
+      "other_pct": 1.3,
+      "median_age": 30.1,
+      "pct_under_18": 19.8,
+      "pct_over_65": 7.2,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 3.2,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 26.5,
+      "pct_owner_occupied": 20.6,
+      "rent_burden_pct": 54.3,
+      "pct_65_and_over": 7.2,
+      "audit_source": {
+        "total_population": "Extrapolated from ACS 2018-2022",
+        "pct_owner_occupied": "Extrapolated from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are a reasonable extrapolation from the 2020 anchor point using recent ACS trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:08Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 10600,
+      "hispanic_pct": 44.5,
+      "white_pct": 47.2,
+      "black_pct": 3.2,
+      "asian_pct": 3.9,
+      "other_pct": 1.2,
+      "median_age": 30.5,
+      "pct_under_18": 19.5,
+      "pct_over_65": 7.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 3.1,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 26,
+      "pct_owner_occupied": 20.4,
+      "rent_burden_pct": 54.9,
+      "pct_65_and_over": 7.5,
+      "audit_source": {
+        "total_population": "Projection",
+        "pct_owner_occupied": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are a reasonable projection of established trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:09Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 10725,
+      "hispanic_pct": 43.8,
+      "white_pct": 48,
+      "black_pct": 3.1,
+      "asian_pct": 4,
+      "other_pct": 1.1,
+      "median_age": 30.9,
+      "pct_under_18": 19.2,
+      "pct_over_65": 7.8,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 3,
+      "pct_asian": 4,
+      "pct_foreign_born": 25.5,
+      "pct_owner_occupied": 20.2,
+      "rent_burden_pct": 55.5,
+      "pct_65_and_over": 7.8,
+      "audit_source": {
+        "total_population": "Projection",
+        "pct_owner_occupied": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are a reasonable projection of established trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:10Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 10850,
+      "hispanic_pct": 43.1,
+      "white_pct": 48.8,
+      "black_pct": 3,
+      "asian_pct": 4.1,
+      "other_pct": 1,
+      "median_age": 31.2,
+      "pct_under_18": 19,
+      "pct_over_65": 8.1,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "pct_black_non_hispanic": 2.9,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 25,
+      "pct_owner_occupied": 20,
+      "rent_burden_pct": 56,
+      "pct_65_and_over": 8.1,
+      "audit_source": {
+        "total_population": "Projection",
+        "pct_owner_occupied": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "hispanic_pct": "medium",
+        "white_pct": "medium",
+        "black_pct": "medium",
+        "asian_pct": "medium",
+        "other_pct": "medium",
+        "median_age": "medium",
+        "pct_under_18": "medium",
+        "pct_over_65": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are a reasonable projection of established trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:11Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 68000,
+      "median_rent": 450,
+      "avg_days_on_market": 75,
+      "homeownership_rate": 38,
+      "pct_single_family": 55,
+      "pct_multifamily": 45,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 1360,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 9.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "homeownership_rate": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "vacancy_rate": "U.S. Census 1990 (Tracts 23.11, 23.12)"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "median_rent": "high",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value from $82k to $68k and homeownership_rate from 48.5% to 38% to align with 1990 Census data for the area. Original values were significant overestimates.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:12Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 82000,
+      "median_rent": 575,
+      "avg_days_on_market": 60,
+      "homeownership_rate": 34.8,
+      "pct_single_family": 54.5,
+      "pct_multifamily": 45.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 1640,
+      "pct_home_value_change_yoy": 20.6,
+      "vacancy_rate": 8.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolated from 1990/2000 Census",
+        "homeownership_rate": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 47% to 34.8% to follow a realistic interpolation based on corrected 1990/2000 census values. Interpolated other values.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:13Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 98000,
+      "median_rent": 750,
+      "avg_days_on_market": 45,
+      "homeownership_rate": 31.5,
+      "pct_single_family": 54,
+      "pct_multifamily": 46,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 2058,
+      "pct_home_value_change_yoy": 19.5,
+      "vacancy_rate": 8.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "homeownership_rate": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "vacancy_rate": "U.S. Census 2000 (Tracts 23.11, 23.12)"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "median_rent": "high",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value from $125k to $98k and homeownership_rate from 45.2% to 31.5% to align with 2000 Census data. Original values were significant overestimates.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:14Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 119000,
+      "median_rent": 850,
+      "avg_days_on_market": 55,
+      "homeownership_rate": 28.8,
+      "pct_single_family": 53,
+      "pct_multifamily": 47,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 2618,
+      "pct_home_value_change_yoy": 21.4,
+      "vacancy_rate": 8.3,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value": "Interpolated from 2000 Census/2010 ACS",
+        "homeownership_rate": "Interpolated from 2000 Census/2010 ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 43.1% to 28.8% to follow interpolation of corrected census values. Interpolated home value based on corrected anchors.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:15Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 140000,
+      "median_rent": 950,
+      "avg_days_on_market": 65,
+      "homeownership_rate": 26,
+      "pct_single_family": 52.5,
+      "pct_multifamily": 47.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 3080,
+      "pct_home_value_change_yoy": 17.6,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": 8,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010",
+        "homeownership_rate": "ACS 5-Year 2006-2010",
+        "vacancy_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "median_rent": "high",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value from $170k to $140k and homeownership_rate from 40.5% to 26.0% to align with ACS 2006-2010 data. Original values were significant overestimates.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:16Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 260000,
+      "median_rent": 1250,
+      "avg_days_on_market": 30,
+      "homeownership_rate": 22.5,
+      "pct_single_family": 51,
+      "pct_multifamily": 49,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 5720,
+      "pct_home_value_change_yoy": 85.7,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017 / Zillow ZHVI",
+        "homeownership_rate": "ACS 5-Year 2013-2017",
+        "vacancy_rate": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "high",
+        "avg_days_on_market": "high",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 36.2% to 22.5% to align with ACS data. Adjusted median_home_value from $285k to $260k to better reflect market data. The massive YOY change reflects the post-recession boom in Austin.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:17Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 450000,
+      "median_rent": 1500,
+      "avg_days_on_market": 15,
+      "homeownership_rate": 21,
+      "pct_single_family": 49.5,
+      "pct_multifamily": 50.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 9450,
+      "pct_home_value_change_yoy": 73.1,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "homeownership_rate": "ACS 5-Year 2018-2022",
+        "vacancy_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "avg_days_on_market": "high",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 33% to 21% to align with ACS data. Original value was a significant overestimate. Median home value is plausible for the 2020 market.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:18Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 560000,
+      "median_rent": 1650,
+      "avg_days_on_market": 10,
+      "homeownership_rate": 20.8,
+      "pct_single_family": 49,
+      "pct_multifamily": 51,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 11760,
+      "pct_home_value_change_yoy": 24.4,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 22,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "homeownership_rate": "Extrapolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "avg_days_on_market": "high",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 32.1% to 20.8% based on ACS trendline. The 2021 home value spike is accurate for the Austin market.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:19Z"
+    },
+    {
+      "year": 2022,
+      "median_home_value": 610000,
+      "median_rent": 1780,
+      "avg_days_on_market": 18,
+      "homeownership_rate": 20.6,
+      "pct_single_family": 48.7,
+      "pct_multifamily": 51.3,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 12810,
+      "pct_home_value_change_yoy": 8.9,
+      "vacancy_rate": 5.9,
+      "new_construction_permits": 18,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "homeownership_rate": "Extrapolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "avg_days_on_market": "high",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 31.5% to 20.6% based on ACS trendline. Values reflect the peak and slight cooling of the Austin housing market.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:20Z"
+    },
+    {
+      "year": 2023,
+      "median_home_value": 585000,
+      "median_rent": 1820,
+      "avg_days_on_market": 35,
+      "homeownership_rate": 20.4,
+      "pct_single_family": 48.5,
+      "pct_multifamily": 51.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 12285,
+      "pct_home_value_change_yoy": -4.1,
+      "vacancy_rate": 6.3,
+      "new_construction_permits": 12,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "homeownership_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "avg_days_on_market": "high",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 30.9% to 20.4% based on projection. Values reflect the market correction in late 2022/early 2023.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:21Z"
+    },
+    {
+      "year": 2024,
+      "median_home_value": 595000,
+      "median_rent": 1850,
+      "avg_days_on_market": 32,
+      "homeownership_rate": 20.2,
+      "pct_single_family": 48.2,
+      "pct_multifamily": 51.8,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 12495,
+      "pct_home_value_change_yoy": 1.7,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value": "Projection",
+        "homeownership_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 30.5% to 20.2% based on projection. Values are plausible projections for market stabilization.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:22Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 615000,
+      "median_rent": 1890,
+      "avg_days_on_market": 28,
+      "homeownership_rate": 20,
+      "pct_single_family": 48,
+      "pct_multifamily": 52,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "median_property_tax": 12915,
+      "pct_home_value_change_yoy": 3.4,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value": "Projection",
+        "homeownership_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "avg_days_on_market": "medium",
+        "homeownership_rate": "low",
+        "pct_single_family": "medium",
+        "pct_multifamily": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected homeownership_rate from 30.1% to 20.0% based on projection. Values are plausible projections for future growth.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:23Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 26500,
+      "poverty_rate": 22.5,
+      "unemployment_rate": 5.8,
+      "pct_bachelors_degree_or_higher": 15.2,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 28.5,
+      "eviction_filing_rate": 6.5,
+      "snap_participation_rate": 18.2,
+      "audit_source": {
+        "median_household_income": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "poverty_rate": "U.S. Census 1990 (Tracts 23.11, 23.12)",
+        "unemployment_rate": "BLS / U.S. Census 1990",
+        "pct_bachelors_degree_or_higher": "U.S. Census 1990 (Tracts 23.11, 23.12)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected median_household_income from $28k to $26.5k to better align with 1990 Census data for the combined tracts. Newly added fields are estimated based on census data and known area characteristics.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:24Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 30000,
+      "poverty_rate": 20.1,
+      "unemployment_rate": 4.5,
+      "pct_bachelors_degree_or_higher": 18.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.445,
+      "pct_uninsured": 29.8,
+      "eviction_filing_rate": 5.2,
+      "snap_participation_rate": 17.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $32.5k to $30k to reflect a more linear interpolation between corrected 1990/2000 values. Other values are plausible interpolations.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:25Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 34000,
+      "poverty_rate": 18.2,
+      "unemployment_rate": 3.1,
+      "pct_bachelors_degree_or_higher": 23,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 31.2,
+      "eviction_filing_rate": 4.1,
+      "snap_participation_rate": 16.8,
+      "audit_source": {
+        "median_household_income": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "poverty_rate": "U.S. Census 2000 (Tracts 23.11, 23.12)",
+        "unemployment_rate": "BLS / U.S. Census 2000",
+        "pct_bachelors_degree_or_higher": "U.S. Census 2000 (Tracts 23.11, 23.12)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected median_household_income from $39k to $34k to align with 2000 Census data. Original value was a significant overestimate.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:26Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 36000,
+      "poverty_rate": 19.5,
+      "unemployment_rate": 4.8,
+      "pct_bachelors_degree_or_higher": 28.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.458,
+      "pct_uninsured": 33.5,
+      "eviction_filing_rate": 5.8,
+      "snap_participation_rate": 18.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from 2000 Census/2010 ACS"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $41.5k to $36k to reflect a more linear interpolation between corrected 2000/2010 values.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:27Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 38000,
+      "poverty_rate": 21,
+      "unemployment_rate": 7.2,
+      "pct_bachelors_degree_or_higher": 35.1,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.465,
+      "pct_uninsured": 35.8,
+      "eviction_filing_rate": 8.1,
+      "snap_participation_rate": 20.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "poverty_rate": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "pct_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected median_household_income from $45k to $38k to align with ACS 2006-2010 data. High unemployment and poverty reflect the impact of the Great Recession.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:28Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 52000,
+      "poverty_rate": 17.5,
+      "unemployment_rate": 3.5,
+      "pct_bachelors_degree_or_higher": 46.8,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.472,
+      "pct_uninsured": 29.1,
+      "eviction_filing_rate": 5.5,
+      "snap_participation_rate": 17.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017",
+        "poverty_rate": "ACS 5-Year 2013-2017",
+        "unemployment_rate": "ACS 5-Year 2013-2017",
+        "pct_bachelors_degree_or_higher": "ACS 5-Year 2013-2017",
+        "gini_coefficient": "ACS 5-Year 2013-2017",
+        "pct_uninsured": "ACS 5-Year 2013-2017",
+        "snap_participation_rate": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Adjusted median_household_income from $58k to $52k to better align with ACS data for the period. The sharp increase in income and education, and decrease in poverty, are strong indicators of gentrification.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:29Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 68000,
+      "poverty_rate": 14.1,
+      "unemployment_rate": 5.9,
+      "pct_bachelors_degree_or_higher": 55.2,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 22.5,
+      "eviction_filing_rate": 6.8,
+      "snap_participation_rate": 14.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022",
+        "poverty_rate": "ACS 5-Year 2018-2022",
+        "unemployment_rate": "ACS 5-Year 2018-2022",
+        "pct_bachelors_degree_or_higher": "ACS 5-Year 2018-2022",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "high",
+        "unemployment_rate": "high",
+        "pct_bachelors_degree_or_higher": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Adjusted median_household_income from $75k to $68k to align with recent ACS data. Unemployment spike reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:30Z"
+    },
+    {
+      "year": 2021,
+      "median_household_income": 74000,
+      "poverty_rate": 13.5,
+      "unemployment_rate": 4.1,
+      "pct_bachelors_degree_or_higher": 58,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.482,
+      "pct_uninsured": 21.8,
+      "eviction_filing_rate": 7.5,
+      "snap_participation_rate": 13.8,
+      "audit_source": {
+        "median_household_income": "Extrapolated from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $82k to $74k based on a more conservative extrapolation from the corrected 2020 value. Other values are plausible extrapolations.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:31Z"
+    },
+    {
+      "year": 2022,
+      "median_household_income": 81000,
+      "poverty_rate": 12.8,
+      "unemployment_rate": 2.9,
+      "pct_bachelors_degree_or_higher": 60.5,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.485,
+      "pct_uninsured": 21,
+      "eviction_filing_rate": 6.2,
+      "snap_participation_rate": 13.1,
+      "audit_source": {
+        "median_household_income": "Extrapolated from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $88.5k to $81k based on a more conservative extrapolation from the corrected 2020 value. Low unemployment reflects the tight labor market of 2022.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:32Z"
+    },
+    {
+      "year": 2023,
+      "median_household_income": 85000,
+      "poverty_rate": 12.5,
+      "unemployment_rate": 3.4,
+      "pct_bachelors_degree_or_higher": 61.8,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.487,
+      "pct_uninsured": 20.5,
+      "eviction_filing_rate": 6.5,
+      "snap_participation_rate": 12.8,
+      "audit_source": {
+        "median_household_income": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $91k to $85k based on a more conservative projection. Values are plausible projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:33Z"
+    },
+    {
+      "year": 2024,
+      "median_household_income": 89000,
+      "poverty_rate": 12.1,
+      "unemployment_rate": 3.6,
+      "pct_bachelors_degree_or_higher": 63,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.489,
+      "pct_uninsured": 20,
+      "eviction_filing_rate": 6.6,
+      "snap_participation_rate": 12.5,
+      "audit_source": {
+        "median_household_income": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $94.5k to $89k based on a more conservative projection. Values are plausible projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:34Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 93000,
+      "poverty_rate": 11.8,
+      "unemployment_rate": 3.5,
+      "pct_bachelors_degree_or_higher": 64.2,
+      "region": "Parker Lane East",
+      "region_id": 93,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 19.5,
+      "eviction_filing_rate": 6.4,
+      "snap_participation_rate": 12.2,
+      "audit_source": {
+        "median_household_income": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "unemployment_rate": "medium",
+        "pct_bachelors_degree_or_higher": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Adjusted median_household_income from $98k to $93k based on a more conservative projection. Values are plausible projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:35Z"
+    }
+  ]
+}

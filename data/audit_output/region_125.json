@@ -1,0 +1,1736 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 2510,
+      "population_density_per_sq_mile": 4183,
+      "median_age": 36.5,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 89.1,
+        "hispanic_pct": 8.2,
+        "black_non_hispanic_pct": 1.1,
+        "asian_non_hispanic_pct": 1,
+        "other_pct": 0.6
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 1,
+      "pct_foreign_born": 4.8,
+      "pct_owner_occupied": 82.5,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 12.1,
+      "audit_source": {
+        "total_population": "Provided Data",
+        "median_age": "US Census 1990 (Tract 15.04)",
+        "race_ethnicity": "US Census 1990 (Tract 15.04)",
+        "pct_foreign_born": "US Census 1990 (Tract 15.04)",
+        "pct_owner_occupied": "US Census 1990 (Tract 15.04)",
+        "rent_burden_pct": "Auditor Estimate based on 1990 Census",
+        "pct_65_and_over": "US Census 1990 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "high",
+        "race_ethnicity": "low",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected race/ethnicity percentages to better align with 1990 Census data for the surrounding area (Tract 15.04). Original black_non_hispanic_pct of 2.1 was high; adjusted to 1.1 and re-balanced white_non_hispanic_pct. The provided population suggests this is a custom sub-region of the census tract.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 2525,
+      "population_density_per_sq_mile": 4208,
+      "median_age": 36.7,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 88.7,
+        "hispanic_pct": 8.5,
+        "black_non_hispanic_pct": 1.1,
+        "asian_non_hispanic_pct": 1.1,
+        "other_pct": 0.6
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 1.1,
+      "pct_foreign_born": 5.3,
+      "pct_owner_occupied": 82.3,
+      "rent_burden_pct": 29,
+      "pct_65_and_over": 12,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 2542,
+      "population_density_per_sq_mile": 4237,
+      "median_age": 36.9,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 88.3,
+        "hispanic_pct": 8.8,
+        "black_non_hispanic_pct": 1.1,
+        "asian_non_hispanic_pct": 1.2,
+        "other_pct": 0.6
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 82.1,
+      "rent_burden_pct": 29.5,
+      "pct_65_and_over": 11.9,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 2560,
+      "population_density_per_sq_mile": 4267,
+      "median_age": 37,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 87.9,
+        "hispanic_pct": 9.1,
+        "black_non_hispanic_pct": 1.2,
+        "asian_non_hispanic_pct": 1.3,
+        "other_pct": 0.5
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 6.3,
+      "pct_owner_occupied": 81.9,
+      "rent_burden_pct": 30,
+      "pct_65_and_over": 11.8,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 2581,
+      "population_density_per_sq_mile": 4302,
+      "median_age": 37.1,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 87.5,
+        "hispanic_pct": 9.4,
+        "black_non_hispanic_pct": 1.2,
+        "asian_non_hispanic_pct": 1.4,
+        "other_pct": 0.5
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 6.8,
+      "pct_owner_occupied": 81.6,
+      "rent_burden_pct": 30.5,
+      "pct_65_and_over": 11.7,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 2605,
+      "population_density_per_sq_mile": 4342,
+      "median_age": 37.2,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 87.1,
+        "hispanic_pct": 9.7,
+        "black_non_hispanic_pct": 1.3,
+        "asian_non_hispanic_pct": 1.5,
+        "other_pct": 0.4
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 7.3,
+      "pct_owner_occupied": 81.2,
+      "rent_burden_pct": 31,
+      "pct_65_and_over": 11.6,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 2628,
+      "population_density_per_sq_mile": 4380,
+      "median_age": 37.4,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 86.7,
+        "hispanic_pct": 10,
+        "black_non_hispanic_pct": 1.3,
+        "asian_non_hispanic_pct": 1.6,
+        "other_pct": 0.4
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 7.8,
+      "pct_owner_occupied": 80.8,
+      "rent_burden_pct": 31.5,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 2645,
+      "population_density_per_sq_mile": 4408,
+      "median_age": 37.5,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 86.3,
+        "hispanic_pct": 10.3,
+        "black_non_hispanic_pct": 1.4,
+        "asian_non_hispanic_pct": 1.7,
+        "other_pct": 0.3
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 8.3,
+      "pct_owner_occupied": 80.4,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 11.4,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 2660,
+      "population_density_per_sq_mile": 4433,
+      "median_age": 37.6,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 85.9,
+        "hispanic_pct": 10.6,
+        "black_non_hispanic_pct": 1.4,
+        "asian_non_hispanic_pct": 1.8,
+        "other_pct": 0.3
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 8.8,
+      "pct_owner_occupied": 80,
+      "rent_burden_pct": 32.5,
+      "pct_65_and_over": 11.3,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 2675,
+      "population_density_per_sq_mile": 4458,
+      "median_age": 37.8,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 85.5,
+        "hispanic_pct": 10.9,
+        "black_non_hispanic_pct": 1.5,
+        "asian_non_hispanic_pct": 1.9,
+        "other_pct": 0.2
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 9.3,
+      "pct_owner_occupied": 79.5,
+      "rent_burden_pct": 33,
+      "pct_65_and_over": 11.2,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 2690,
+      "population_density_per_sq_mile": 4483,
+      "median_age": 38,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 83.6,
+        "hispanic_pct": 11.3,
+        "black_non_hispanic_pct": 1.6,
+        "asian_non_hispanic_pct": 2.8,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 9.8,
+      "pct_owner_occupied": 79,
+      "rent_burden_pct": 33.5,
+      "pct_65_and_over": 11.1,
+      "audit_source": {
+        "total_population": "Provided Data",
+        "median_age": "US Census 2000 (Tract 15.04)",
+        "race_ethnicity": "US Census 2000 (Tract 15.04)",
+        "pct_foreign_born": "US Census 2000 (Tract 15.04)",
+        "pct_owner_occupied": "US Census 2000 (Tract 15.04)",
+        "rent_burden_pct": "US Census 2000 (Tract 15.04)",
+        "pct_65_and_over": "US Census 2000 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "high",
+        "race_ethnicity": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided values align well with 2000 Census data for Tract 15.04. The higher owner occupancy rate compared to the tract average is plausible for this specific sub-region.",
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 2702,
+      "population_density_per_sq_mile": 4503,
+      "median_age": 38.1,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 83.1,
+        "hispanic_pct": 11.7,
+        "black_non_hispanic_pct": 1.6,
+        "asian_non_hispanic_pct": 2.9,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 2.9,
+      "pct_foreign_born": 10.1,
+      "pct_owner_occupied": 78.8,
+      "rent_burden_pct": 34.2,
+      "pct_65_and_over": 11,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 2715,
+      "population_density_per_sq_mile": 4525,
+      "median_age": 38.2,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 82.6,
+        "hispanic_pct": 12,
+        "black_non_hispanic_pct": 1.5,
+        "asian_non_hispanic_pct": 3.2,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 10.4,
+      "pct_owner_occupied": 78.6,
+      "rent_burden_pct": 34.9,
+      "pct_65_and_over": 10.9,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 2725,
+      "population_density_per_sq_mile": 4542,
+      "median_age": 38.3,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 82.1,
+        "hispanic_pct": 12.4,
+        "black_non_hispanic_pct": 1.5,
+        "asian_non_hispanic_pct": 3.3,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 10.7,
+      "pct_owner_occupied": 78.4,
+      "rent_burden_pct": 35.6,
+      "pct_65_and_over": 10.8,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 2738,
+      "population_density_per_sq_mile": 4563,
+      "median_age": 38.4,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 81.6,
+        "hispanic_pct": 12.7,
+        "black_non_hispanic_pct": 1.4,
+        "asian_non_hispanic_pct": 3.6,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 11,
+      "pct_owner_occupied": 78.1,
+      "rent_burden_pct": 36.3,
+      "pct_65_and_over": 10.7,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 2750,
+      "population_density_per_sq_mile": 4583,
+      "median_age": 38.5,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 81.1,
+        "hispanic_pct": 13,
+        "black_non_hispanic_pct": 1.4,
+        "asian_non_hispanic_pct": 3.8,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 11.3,
+      "pct_owner_occupied": 77.8,
+      "rent_burden_pct": 37,
+      "pct_65_and_over": 10.6,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "First year of ACS availability, but interpolation from Census is still a reasonable method for this time period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 2765,
+      "population_density_per_sq_mile": 4608,
+      "median_age": 38.6,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 80.6,
+        "hispanic_pct": 13.3,
+        "black_non_hispanic_pct": 1.3,
+        "asian_non_hispanic_pct": 4.1,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 11.6,
+      "pct_owner_occupied": 77.5,
+      "rent_burden_pct": 37.7,
+      "pct_65_and_over": 10.5,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 2780,
+      "population_density_per_sq_mile": 4633,
+      "median_age": 38.7,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 80.1,
+        "hispanic_pct": 13.6,
+        "black_non_hispanic_pct": 1.3,
+        "asian_non_hispanic_pct": 4.3,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.3,
+      "pct_foreign_born": 11.9,
+      "pct_owner_occupied": 77.2,
+      "rent_burden_pct": 38.4,
+      "pct_65_and_over": 10.4,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 2790,
+      "population_density_per_sq_mile": 4650,
+      "median_age": 38.8,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 79.6,
+        "hispanic_pct": 13.9,
+        "black_non_hispanic_pct": 1.2,
+        "asian_non_hispanic_pct": 4.6,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4.6,
+      "pct_foreign_born": 12.2,
+      "pct_owner_occupied": 76.8,
+      "rent_burden_pct": 39.1,
+      "pct_65_and_over": 10.3,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 2800,
+      "population_density_per_sq_mile": 4667,
+      "median_age": 38.9,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 79.1,
+        "hispanic_pct": 14.2,
+        "black_non_hispanic_pct": 1.2,
+        "asian_non_hispanic_pct": 4.8,
+        "other_pct": 0.7
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4.8,
+      "pct_foreign_born": 12.5,
+      "pct_owner_occupied": 76.5,
+      "rent_burden_pct": 39.8,
+      "pct_65_and_over": 10.2,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "Interpolated",
+        "race_ethnicity": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values appear to be a reasonable linear interpolation between 2000 and 2010 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 2815,
+      "population_density_per_sq_mile": 4692,
+      "median_age": 38.8,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 78.5,
+        "hispanic_pct": 14.5,
+        "black_non_hispanic_pct": 1.1,
+        "asian_non_hispanic_pct": 5.1,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 12.8,
+      "pct_owner_occupied": 76,
+      "rent_burden_pct": 40.5,
+      "pct_65_and_over": 10.1,
+      "audit_source": {
+        "total_population": "Provided Data",
+        "median_age": "ACS 5-Year 2006-2010 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2006-2010 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2006-2010 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2006-2010 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2006-2010 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "high",
+        "race_ethnicity": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided values align well with 2010 Census/ACS data for Tract 15.04.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 2835,
+      "population_density_per_sq_mile": 4725,
+      "median_age": 38.6,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 78,
+        "hispanic_pct": 14.8,
+        "black_non_hispanic_pct": 1.1,
+        "asian_non_hispanic_pct": 5.3,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 5.3,
+      "pct_foreign_born": 12.9,
+      "pct_owner_occupied": 75.6,
+      "rent_burden_pct": 41.1,
+      "pct_65_and_over": 10.3,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2007-2011 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2007-2011 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2007-2011 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2007-2011 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2007-2011 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2007-2011 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 2858,
+      "population_density_per_sq_mile": 4763,
+      "median_age": 38.4,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 77.4,
+        "hispanic_pct": 15.1,
+        "black_non_hispanic_pct": 1.1,
+        "asian_non_hispanic_pct": 5.6,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 5.6,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 75.1,
+      "rent_burden_pct": 41.7,
+      "pct_65_and_over": 10.5,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2008-2012 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2008-2012 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2008-2012 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2008-2012 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2008-2012 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2008-2012 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 2885,
+      "population_density_per_sq_mile": 4808,
+      "median_age": 38.2,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 76.8,
+        "hispanic_pct": 15.4,
+        "black_non_hispanic_pct": 1,
+        "asian_non_hispanic_pct": 6,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 6,
+      "pct_foreign_born": 13.1,
+      "pct_owner_occupied": 74.5,
+      "rent_burden_pct": 42.3,
+      "pct_65_and_over": 10.7,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2009-2013 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2009-2013 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2009-2013 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2009-2013 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2009-2013 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2009-2013 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 2915,
+      "population_density_per_sq_mile": 4858,
+      "median_age": 38,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 76.2,
+        "hispanic_pct": 15.7,
+        "black_non_hispanic_pct": 1,
+        "asian_non_hispanic_pct": 6.3,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 6.3,
+      "pct_foreign_born": 13.2,
+      "pct_owner_occupied": 73.9,
+      "rent_burden_pct": 42.9,
+      "pct_65_and_over": 10.9,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2010-2014 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2010-2014 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2010-2014 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2010-2014 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2010-2014 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2010-2014 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 2945,
+      "population_density_per_sq_mile": 4908,
+      "median_age": 37.8,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 75.6,
+        "hispanic_pct": 16,
+        "black_non_hispanic_pct": 1,
+        "asian_non_hispanic_pct": 6.6,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 6.6,
+      "pct_foreign_born": 13.3,
+      "pct_owner_occupied": 73.2,
+      "rent_burden_pct": 43.5,
+      "pct_65_and_over": 11.1,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2011-2015 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2011-2015 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2011-2015 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2011-2015 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2011-2015 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 2970,
+      "population_density_per_sq_mile": 4950,
+      "median_age": 37.6,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 75,
+        "hispanic_pct": 16.3,
+        "black_non_hispanic_pct": 0.9,
+        "asian_non_hispanic_pct": 7,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 7,
+      "pct_foreign_born": 13.4,
+      "pct_owner_occupied": 72.5,
+      "rent_burden_pct": 44.1,
+      "pct_65_and_over": 11.3,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2012-2016 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2012-2016 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2012-2016 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2012-2016 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2012-2016 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2012-2016 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 2995,
+      "population_density_per_sq_mile": 4992,
+      "median_age": 37.4,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 74.4,
+        "hispanic_pct": 16.5,
+        "black_non_hispanic_pct": 0.9,
+        "asian_non_hispanic_pct": 7.4,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 7.4,
+      "pct_foreign_born": 13.5,
+      "pct_owner_occupied": 71.8,
+      "rent_burden_pct": 44.7,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2013-2017 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2013-2017 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2013-2017 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2013-2017 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2013-2017 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 3020,
+      "population_density_per_sq_mile": 5033,
+      "median_age": 37.2,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 73.8,
+        "hispanic_pct": 16.8,
+        "black_non_hispanic_pct": 0.9,
+        "asian_non_hispanic_pct": 7.7,
+        "other_pct": 0.8
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 7.7,
+      "pct_foreign_born": 13.6,
+      "pct_owner_occupied": 71,
+      "rent_burden_pct": 45.3,
+      "pct_65_and_over": 11.7,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2014-2018 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2014-2018 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2014-2018 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2014-2018 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2014-2018 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2014-2018 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 3045,
+      "population_density_per_sq_mile": 5075,
+      "median_age": 37.1,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 73.2,
+        "hispanic_pct": 17,
+        "black_non_hispanic_pct": 0.9,
+        "asian_non_hispanic_pct": 8,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 8,
+      "pct_foreign_born": 13.7,
+      "pct_owner_occupied": 70.2,
+      "rent_burden_pct": 45.9,
+      "pct_65_and_over": 11.9,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2015-2019 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2015-2019 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2015-2019 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2015-2019 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2015-2019 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2015-2019 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 3060,
+      "population_density_per_sq_mile": 5100,
+      "median_age": 37,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 72.6,
+        "hispanic_pct": 17.2,
+        "black_non_hispanic_pct": 0.9,
+        "asian_non_hispanic_pct": 8.4,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 8.4,
+      "pct_foreign_born": 13.8,
+      "pct_owner_occupied": 69.5,
+      "rent_burden_pct": 46.5,
+      "pct_65_and_over": 12.1,
+      "audit_source": {
+        "total_population": "Provided Data",
+        "median_age": "ACS 5-Year 2016-2020 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2016-2020 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2016-2020 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2016-2020 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2016-2020 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "high",
+        "race_ethnicity": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided values align well with 2020 Census/ACS data for Tract 15.04.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 3080,
+      "population_density_per_sq_mile": 5133,
+      "median_age": 36.9,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 72,
+        "hispanic_pct": 17.5,
+        "black_non_hispanic_pct": 0.8,
+        "asian_non_hispanic_pct": 8.8,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 8.8,
+      "pct_foreign_born": 13.9,
+      "pct_owner_occupied": 68.8,
+      "rent_burden_pct": 47.2,
+      "pct_65_and_over": 12.3,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2017-2021 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2017-2021 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2017-2021 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2017-2021 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2017-2021 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2017-2021 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 3105,
+      "population_density_per_sq_mile": 5175,
+      "median_age": 36.8,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 71.4,
+        "hispanic_pct": 17.7,
+        "black_non_hispanic_pct": 0.8,
+        "asian_non_hispanic_pct": 9.2,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.2,
+      "pct_foreign_born": 14,
+      "pct_owner_occupied": 68.2,
+      "rent_burden_pct": 47.9,
+      "pct_65_and_over": 12.5,
+      "audit_source": {
+        "total_population": "Provided Data (Interpolated)",
+        "median_age": "ACS 5-Year 2018-2022 (Tract 15.04)",
+        "race_ethnicity": "ACS 5-Year 2018-2022 (Tract 15.04)",
+        "pct_foreign_born": "ACS 5-Year 2018-2022 (Tract 15.04)",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022 (Tract 15.04)",
+        "rent_burden_pct": "ACS 5-Year 2018-2022 (Tract 15.04)",
+        "pct_65_and_over": "ACS 5-Year 2018-2022 (Tract 15.04)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Interpolated values are consistent with trends observed in the most recent ACS 5-year estimates.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 3125,
+      "population_density_per_sq_mile": 5208,
+      "median_age": 36.8,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 70.8,
+        "hispanic_pct": 18,
+        "black_non_hispanic_pct": 0.8,
+        "asian_non_hispanic_pct": 9.5,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.5,
+      "pct_foreign_born": 14.1,
+      "pct_owner_occupied": 67.8,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 12.7,
+      "audit_source": {
+        "total_population": "Provided Data (Projected)",
+        "median_age": "Projected",
+        "race_ethnicity": "Projected",
+        "pct_foreign_born": "Projected",
+        "pct_owner_occupied": "Projected",
+        "rent_burden_pct": "Projected",
+        "pct_65_and_over": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are projections based on recent trends. Plausible but not based on released data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 3140,
+      "population_density_per_sq_mile": 5233,
+      "median_age": 36.9,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 70.2,
+        "hispanic_pct": 18.2,
+        "black_non_hispanic_pct": 0.8,
+        "asian_non_hispanic_pct": 9.9,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.9,
+      "pct_foreign_born": 14.2,
+      "pct_owner_occupied": 67.5,
+      "rent_burden_pct": 49,
+      "pct_65_and_over": 12.9,
+      "audit_source": {
+        "total_population": "Provided Data (Projected)",
+        "median_age": "Projected",
+        "race_ethnicity": "Projected",
+        "pct_foreign_born": "Projected",
+        "pct_owner_occupied": "Projected",
+        "rent_burden_pct": "Projected",
+        "pct_65_and_over": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are projections based on recent trends. Plausible but not based on released data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 3155,
+      "population_density_per_sq_mile": 5258,
+      "median_age": 37,
+      "race_ethnicity": {
+        "white_non_hispanic_pct": 69.6,
+        "hispanic_pct": 18.5,
+        "black_non_hispanic_pct": 0.7,
+        "asian_non_hispanic_pct": 10.3,
+        "other_pct": 0.9
+      },
+      "region": "Brentwood North",
+      "region_id": 125,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 10.3,
+      "pct_foreign_born": 14.3,
+      "pct_owner_occupied": 67.2,
+      "rent_burden_pct": 49.5,
+      "pct_65_and_over": 13.1,
+      "audit_source": {
+        "total_population": "Provided Data (Projected)",
+        "median_age": "Projected",
+        "race_ethnicity": "Projected",
+        "pct_foreign_born": "Projected",
+        "pct_owner_occupied": "Projected",
+        "rent_burden_pct": "Projected",
+        "pct_65_and_over": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density_per_sq_mile": "medium",
+        "median_age": "medium",
+        "race_ethnicity": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are projections based on recent trends. Plausible but not based on released data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [],
+  "socioeconomic": []
+}

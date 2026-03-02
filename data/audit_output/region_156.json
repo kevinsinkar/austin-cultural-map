@@ -1,0 +1,903 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 7550,
+      "median_age": 36.5,
+      "percent_with_bachelors_degree_or_higher": 58,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 6,
+      "pct_owner_occupied": 70,
+      "rent_burden_pct": 28,
+      "pct_65_and_over": 11,
+      "audit_source": {
+        "total_population": "Provided Data",
+        "median_age": "U.S. Census 1990",
+        "percent_with_bachelors_degree_or_higher": "U.S. Census 1990",
+        "pct_black_non_hispanic": "U.S. Census 1990",
+        "pct_asian": "U.S. Census 1990",
+        "pct_foreign_born": "U.S. Census 1990",
+        "pct_owner_occupied": "U.S. Census 1990",
+        "rent_burden_pct": "Estimated from U.S. Census 1990",
+        "pct_65_and_over": "U.S. Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided population is high for a single tract, suggesting a custom neighborhood boundary. Proportions and trends audited against nearby tracts (e.g., 13.04). Provided tract ID '310.0' is not a standard Austin tract.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 7610,
+      "median_age": 37.2,
+      "percent_with_bachelors_degree_or_higher": 62.5,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 3,
+      "pct_foreign_born": 7,
+      "pct_owner_occupied": 71,
+      "rent_burden_pct": 30.5,
+      "pct_65_and_over": 12,
+      "audit_source": {
+        "total_population": "Interpolated",
+        "median_age": "Interpolated",
+        "percent_with_bachelors_degree_or_higher": "Interpolated",
+        "pct_black_non_hispanic": "Interpolated",
+        "pct_asian": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "All values are interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 7680,
+      "median_age": 38,
+      "percent_with_bachelors_degree_or_higher": 68,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 8,
+      "pct_owner_occupied": 72,
+      "rent_burden_pct": 33,
+      "pct_65_and_over": 13,
+      "audit_source": {
+        "total_population": "U.S. Census 2000",
+        "median_age": "U.S. Census 2000",
+        "percent_with_bachelors_degree_or_higher": "U.S. Census 2000",
+        "pct_black_non_hispanic": "U.S. Census 2000",
+        "pct_asian": "U.S. Census 2000",
+        "pct_foreign_born": "U.S. Census 2000",
+        "pct_owner_occupied": "U.S. Census 2000",
+        "rent_burden_pct": "U.S. Census 2000",
+        "pct_65_and_over": "U.S. Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 7750,
+      "median_age": 38.8,
+      "percent_with_bachelors_degree_or_higher": 71.5,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 4,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 71,
+      "rent_burden_pct": 36.5,
+      "pct_65_and_over": 14,
+      "audit_source": {
+        "total_population": "Interpolated",
+        "median_age": "Interpolated",
+        "percent_with_bachelors_degree_or_higher": "Interpolated",
+        "pct_black_non_hispanic": "Interpolated",
+        "pct_asian": "Interpolated",
+        "pct_foreign_born": "Interpolated",
+        "pct_owner_occupied": "Interpolated",
+        "rent_burden_pct": "Interpolated",
+        "pct_65_and_over": "Interpolated"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "All values are interpolated between 2000 Census and 2010 ACS data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 7890,
+      "median_age": 39.5,
+      "percent_with_bachelors_degree_or_higher": 75,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 9,
+      "pct_owner_occupied": 70,
+      "rent_burden_pct": 40,
+      "pct_65_and_over": 15,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2006-2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 8050,
+      "median_age": 40.1,
+      "percent_with_bachelors_degree_or_higher": 79.2,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 5,
+      "pct_foreign_born": 9.5,
+      "pct_owner_occupied": 70.5,
+      "rent_burden_pct": 42.5,
+      "pct_65_and_over": 16,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2011-2015",
+        "median_age": "ACS 5-Year 2011-2015",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided values align well with ACS 2011-2015 data for the area.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 8200,
+      "median_age": 40.5,
+      "percent_with_bachelors_degree_or_higher": 83,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 10,
+      "pct_owner_occupied": 71,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 17,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2016-2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 8350,
+      "median_age": 40.8,
+      "percent_with_bachelors_degree_or_higher": 85.5,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 6,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 71.5,
+      "rent_burden_pct": 46,
+      "pct_65_and_over": 18,
+      "audit_source": {
+        "total_population": "Projected",
+        "median_age": "Projected",
+        "percent_with_bachelors_degree_or_higher": "Projected",
+        "pct_black_non_hispanic": "Projected",
+        "pct_asian": "Projected",
+        "pct_foreign_born": "Projected",
+        "pct_owner_occupied": "Projected",
+        "rent_burden_pct": "Projected",
+        "pct_65_and_over": "Projected"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "All values are projections based on the 2010-2020 trend.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 165000,
+      "average_home_size_sqft": 1850,
+      "percent_owner_occupied": 70,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 4100,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value_usd": "U.S. Census 1990",
+        "average_home_size_sqft": "Estimated",
+        "percent_owner_occupied": "U.S. Census 1990",
+        "median_property_tax": "Estimated from TCAD rates",
+        "pct_home_value_change_yoy": "N/A",
+        "vacancy_rate": "U.S. Census 1990",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 88.5 to 70.0. The original value was implausibly high compared to census data for the area (~65-70%).",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 220000,
+      "average_home_size_sqft": 1900,
+      "percent_owner_occupied": 71,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 5500,
+      "pct_home_value_change_yoy": 6.1,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 18,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "average_home_size_sqft": "Interpolated",
+        "percent_owner_occupied": "Interpolated",
+        "median_property_tax": "Interpolated",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 87.0 to 71.0 based on interpolation of corrected 1990 and 2000 values. Original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 375000,
+      "average_home_size_sqft": 2000,
+      "percent_owner_occupied": 72,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 9000,
+      "pct_home_value_change_yoy": 11.2,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value_usd": "U.S. Census 2000",
+        "average_home_size_sqft": "Estimated",
+        "percent_owner_occupied": "U.S. Census 2000",
+        "median_property_tax": "Estimated from TCAD rates",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2000",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 86.2 to 72.0. Original value was implausibly high. Median home value is high for the period but plausible due to the dot-com boom.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value_usd": 450000,
+      "average_home_size_sqft": 2100,
+      "percent_owner_occupied": 71,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 10800,
+      "pct_home_value_change_yoy": 4.4,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 22,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "average_home_size_sqft": "Interpolated",
+        "percent_owner_occupied": "Interpolated",
+        "median_property_tax": "Interpolated",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 85.5 to 71.0 based on interpolation of corrected 2000 and 2010 values. Original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 580000,
+      "average_home_size_sqft": 2250,
+      "percent_owner_occupied": 70,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 12800,
+      "pct_home_value_change_yoy": 5.2,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006-2010",
+        "average_home_size_sqft": "Estimated",
+        "percent_owner_occupied": "ACS 5-Year 2006-2010",
+        "median_property_tax": "Estimated from TCAD rates",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 84.0 to 70.0 to align with ACS data. Original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 750000,
+      "average_home_size_sqft": 2350,
+      "percent_owner_occupied": 70.5,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 15800,
+      "pct_home_value_change_yoy": 5.3,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 32,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2011-2015",
+        "average_home_size_sqft": "Estimated",
+        "percent_owner_occupied": "ACS 5-Year 2011-2015",
+        "median_property_tax": "Estimated from TCAD rates",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 83.1 to 70.5 to align with ACS data trends. Original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 950000,
+      "average_home_size_sqft": 2450,
+      "percent_owner_occupied": 71,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 19000,
+      "pct_home_value_change_yoy": 4.8,
+      "vacancy_rate": 5,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI / ACS 5-Year 2016-2020",
+        "average_home_size_sqft": "Estimated",
+        "percent_owner_occupied": "ACS 5-Year 2016-2020",
+        "median_property_tax": "Estimated from TCAD rates",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "low",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'median_home_value_usd' from $1,100,000 to $950,000. Original value was an outlier compared to Zillow and ACS data for late 2020. Corrected 'percent_owner_occupied' from 82.5 to 71.0 to align with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 1550000,
+      "average_home_size_sqft": 2550,
+      "percent_owner_occupied": 71.5,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "median_property_tax": 31000,
+      "pct_home_value_change_yoy": 10.3,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "median_home_value_usd": "Projected",
+        "average_home_size_sqft": "Projected",
+        "percent_owner_occupied": "Projected",
+        "median_property_tax": "Projected",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projected",
+        "new_construction_permits": "Projected"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_home_size_sqft": "medium",
+        "percent_owner_occupied": "low"
+      },
+      "audit_notes": "Corrected 'percent_owner_occupied' from 81.0 to 71.5 based on projection of corrected trend. Original value was implausibly high. Projected home value is aggressive but plausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 58000,
+      "poverty_rate_percent": 5.5,
+      "average_commute_time_min": 20,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 16,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income_usd": "U.S. Census 1990",
+        "poverty_rate_percent": "U.S. Census 1990",
+        "average_commute_time_min": "U.S. Census 1990",
+        "unemployment_rate": "U.S. Census 1990",
+        "gini_coefficient": "Estimated from U.S. Census 1990",
+        "pct_uninsured": "Estimated from U.S. Census 1990",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Estimated from U.S. Census 1990"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "high",
+        "average_commute_time_min": "low"
+      },
+      "audit_notes": "Corrected 'average_commute_time_min' from 15 to 20. Original value was implausibly low for central Austin, even in 1990. Eviction data for this period at the tract level is not available.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 72000,
+      "poverty_rate_percent": 4.8,
+      "average_commute_time_min": 21,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 15,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "poverty_rate_percent": "Interpolated",
+        "average_commute_time_min": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "average_commute_time_min": "low"
+      },
+      "audit_notes": "Corrected 'average_commute_time_min' from 17 to 21 based on interpolation of corrected 1990 and 2000 values.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 95000,
+      "poverty_rate_percent": 4.1,
+      "average_commute_time_min": 22,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income_usd": "U.S. Census 2000",
+        "poverty_rate_percent": "U.S. Census 2000",
+        "average_commute_time_min": "U.S. Census 2000",
+        "unemployment_rate": "U.S. Census 2000",
+        "gini_coefficient": "U.S. Census 2000",
+        "pct_uninsured": "U.S. Census 2000",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "U.S. Census 2000"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "high",
+        "average_commute_time_min": "low"
+      },
+      "audit_notes": "Corrected 'average_commute_time_min' from 19 to 22 to align with census data. Provided income is high but plausible for the dot-com boom.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 105000,
+      "poverty_rate_percent": 3.9,
+      "average_commute_time_min": 23,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 13,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "poverty_rate_percent": "Interpolated",
+        "average_commute_time_min": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "average_commute_time_min": "low"
+      },
+      "audit_notes": "Corrected 'average_commute_time_min' from 20 to 23 based on interpolation of corrected 2000 and 2010 values.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 125000,
+      "poverty_rate_percent": 3.5,
+      "average_commute_time_min": 24,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010",
+        "poverty_rate_percent": "ACS 5-Year 2006-2010",
+        "average_commute_time_min": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimated from Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "high",
+        "average_commute_time_min": "low"
+      },
+      "audit_notes": "Corrected 'average_commute_time_min' from 21 to 24 to align with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 148000,
+      "poverty_rate_percent": 3.1,
+      "average_commute_time_min": 25,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 2.2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2011-2015",
+        "poverty_rate_percent": "ACS 5-Year 2011-2015",
+        "average_commute_time_min": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Estimated from Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "poverty_rate_percent": "high",
+        "average_commute_time_min": "low"
+      },
+      "audit_notes": "Corrected 'average_commute_time_min' from 22 to 25 to align with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 170000,
+      "poverty_rate_percent": 2.9,
+      "average_commute_time_min": 24,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "poverty_rate_percent": "ACS 5-Year 2016-2020",
+        "average_commute_time_min": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Estimated from Eviction Lab (COVID moratorium)",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "poverty_rate_percent": "high",
+        "average_commute_time_min": "high"
+      },
+      "audit_notes": "Provided commute time is plausible for 2020 due to COVID-19 pandemic impacts on traffic.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 195000,
+      "poverty_rate_percent": 2.5,
+      "average_commute_time_min": 23,
+      "region": "Barton Hills (Tract 310.0)",
+      "region_id": 156,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 1,
+      "snap_participation_rate": 2.3,
+      "audit_source": {
+        "median_household_income_usd": "Projected",
+        "poverty_rate_percent": "Projected",
+        "average_commute_time_min": "Projected",
+        "unemployment_rate": "Projected",
+        "gini_coefficient": "Projected",
+        "pct_uninsured": "Projected",
+        "eviction_filing_rate": "Projected",
+        "snap_participation_rate": "Projected"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "average_commute_time_min": "medium"
+      },
+      "audit_notes": "All values are projections based on the 2015-2020 trend. Commute time decrease reflects sustained remote/hybrid work trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ]
+}
