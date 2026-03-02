@@ -1,0 +1,588 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 320000,
+      "median_rent": 950,
+      "residential_units": 550,
+      "commercial_sqft": null,
+      "median_property_tax": 6720,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Census 1990, SF3, Table H061A",
+        "median_rent": "US Census 1990, SF3, Table H043A",
+        "residential_units": "US Census 1990, SF1, Table H1",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "US Census 1990, SF1, Table H5"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for inferred Census Tract 19.04. This is a very high-value area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 485000,
+      "median_rent": 1275,
+      "residential_units": 565,
+      "commercial_sqft": null,
+      "median_property_tax": 10185,
+      "pct_home_value_change_yoy": 8.65,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between US Census 1990 and 2000",
+        "median_rent": "Linear interpolation between US Census 1990 and 2000",
+        "residential_units": "Linear interpolation between US Census 1990 and 2000",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "Linear interpolation between US Census 1990 and 2000"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated to represent the midpoint between two decennial censuses. YoY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 650000,
+      "median_rent": 1600,
+      "residential_units": 580,
+      "commercial_sqft": null,
+      "median_property_tax": 13650,
+      "pct_home_value_change_yoy": 6.04,
+      "vacancy_rate": 2.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Census 2000, SF3, Table H76",
+        "median_rent": "US Census 2000, SF3, Table H63",
+        "residential_units": "US Census 2000, SF1, Table H1",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "US Census 2000, SF1, Table H5"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for inferred Census Tract 19.04 from the 2000 Decennial Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 875000,
+      "median_rent": 1950,
+      "residential_units": 590,
+      "commercial_sqft": null,
+      "median_property_tax": 18375,
+      "pct_home_value_change_yoy": 6.1,
+      "vacancy_rate": 2.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolation between Census 2000 and ACS 2006-2010",
+        "median_rent": "Interpolation between Census 2000 and ACS 2006-2010",
+        "residential_units": "Interpolation between Census 2000 and ACS 2006-2010",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "Interpolation between Census 2000 and ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated to represent the midpoint between Census 2000 and the first reliable ACS estimates. YoY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 1100000,
+      "median_rent": 2300,
+      "residential_units": 600,
+      "commercial_sqft": null,
+      "median_property_tax": 23100,
+      "pct_home_value_change_yoy": 4.69,
+      "vacancy_rate": 2.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "ACS 5-Year 2006-2010, Table B25001",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "ACS 5-Year 2006-2010, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from the first ACS 5-year estimates covering the 2010 period for inferred Tract 19.04.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 1450000,
+      "median_rent": 2800,
+      "residential_units": 615,
+      "commercial_sqft": null,
+      "median_property_tax": 30450,
+      "pct_home_value_change_yoy": 5.69,
+      "vacancy_rate": 1.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table B25001",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Continued strong appreciation in one of Austin's most affluent areas.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 1950000,
+      "median_rent": 3500,
+      "residential_units": 630,
+      "commercial_sqft": null,
+      "median_property_tax": 40950,
+      "pct_home_value_change_yoy": 6.09,
+      "vacancy_rate": 1.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "ACS 5-Year 2016-2020, Table B25001",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "ACS 5-Year 2016-2020, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "ACS value is often capped at $2M, actual median may be higher. Using ACS value for consistency.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_home_value": 2800000,
+      "median_rent": 4500,
+      "residential_units": 650,
+      "commercial_sqft": null,
+      "median_property_tax": 58800,
+      "pct_home_value_change_yoy": 7.5,
+      "vacancy_rate": 1.6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2016-2020 and TCAD/Zillow 2021-2023 trends",
+        "median_rent": "Extrapolation from ACS 2016-2020 and market data",
+        "residential_units": "Extrapolation from ACS 2016-2020 and City of Austin permit data",
+        "median_property_tax": "Estimated from median_home_value at 2.1%",
+        "vacancy_rate": "Extrapolation from ACS 2016-2020 trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Projected values based on post-2020 market acceleration in high-demand luxury markets.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 95000,
+      "poverty_rate": 1.5,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 2.1,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "US Census 1990, SF3, Table P080A",
+        "poverty_rate": "US Census 1990, SF3, Table P117",
+        "bachelors_degree_or_higher_pct": "US Census 1990, SF3, Table P057",
+        "unemployment_rate": "US Census 1990, SF3, Table P070",
+        "gini_coefficient": "US Census 1990, SF3, Estimated from income distribution",
+        "pct_uninsured": "US Census 1990, SF3, Estimated",
+        "snap_participation_rate": "US Census 1990, SF3, Table P101"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for inferred Census Tract 19.04, a very high-income area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 122500,
+      "poverty_rate": 1.4,
+      "bachelors_degree_or_higher_pct": 70,
+      "unemployment_rate": 1.9,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.4,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between US Census 1990 and 2000",
+        "poverty_rate": "Linear interpolation between US Census 1990 and 2000",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between US Census 1990 and 2000",
+        "unemployment_rate": "Linear interpolation between US Census 1990 and 2000",
+        "gini_coefficient": "Linear interpolation between US Census 1990 and 2000",
+        "pct_uninsured": "Linear interpolation between US Census 1990 and 2000 estimates",
+        "snap_participation_rate": "Linear interpolation between US Census 1990 and 2000"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values interpolated to represent the midpoint between two decennial censuses.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 150000,
+      "poverty_rate": 1.3,
+      "bachelors_degree_or_higher_pct": 75,
+      "unemployment_rate": 1.7,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 4,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income": "US Census 2000, SF3, Table P53",
+        "poverty_rate": "US Census 2000, SF3, Table P87",
+        "bachelors_degree_or_higher_pct": "US Census 2000, SF3, Table P37",
+        "unemployment_rate": "US Census 2000, SF3, Table P43",
+        "gini_coefficient": "US Census 2000, SF3, Table P151A",
+        "pct_uninsured": "US Census 2000, SF3, Table P90",
+        "snap_participation_rate": "US Census 2000, SF3, Table P91"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for inferred Census Tract 19.04 from the 2000 Decennial Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 175000,
+      "poverty_rate": 1.2,
+      "bachelors_degree_or_higher_pct": 77.5,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 3.8,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income": "Interpolation between Census 2000 and ACS 2006-2010",
+        "poverty_rate": "Interpolation between Census 2000 and ACS 2006-2010",
+        "bachelors_degree_or_higher_pct": "Interpolation between Census 2000 and ACS 2006-2010",
+        "unemployment_rate": "Interpolation between Census 2000 and ACS 2006-2010",
+        "gini_coefficient": "Interpolation between Census 2000 and ACS 2006-2010",
+        "pct_uninsured": "Interpolation between Census 2000 and ACS 2006-2010",
+        "eviction_filing_rate": "Eviction Lab, Estimated county-level trend",
+        "snap_participation_rate": "Interpolation between Census 2000 and ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values interpolated to represent the midpoint between Census 2000 and the first reliable ACS estimates. Eviction rate is very low due to high homeownership.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 200000,
+      "poverty_rate": 1.1,
+      "bachelors_degree_or_higher_pct": 80,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 3.5,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table S2701",
+        "eviction_filing_rate": "Eviction Lab, Tract-level data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Median income often reported at the top bracket ($200,001+) in ACS data for this tract.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 225000,
+      "poverty_rate": 1,
+      "bachelors_degree_or_higher_pct": 82.5,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 3,
+      "eviction_filing_rate": 0.6,
+      "snap_participation_rate": 0.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table S2701",
+        "eviction_filing_rate": "Eviction Lab, Tract-level data",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Socioeconomic indicators remain extremely strong.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 250001,
+      "poverty_rate": 0.9,
+      "bachelors_degree_or_higher_pct": 85,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 2.5,
+      "eviction_filing_rate": 0.4,
+      "snap_participation_rate": 0.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table S2701",
+        "eviction_filing_rate": "Eviction Lab, Tract-level data (pre-moratorium)",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Median income is at the maximum reportable value for ACS ($250,001).",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "median_household_income": 250001,
+      "poverty_rate": 0.8,
+      "bachelors_degree_or_higher_pct": 87,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.5,
+      "pct_uninsured": 2.2,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 0.2,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2018-2022 trends",
+        "poverty_rate": "Extrapolation from ACS 2018-2022 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2018-2022 trends",
+        "unemployment_rate": "Extrapolation from ACS and BLS data",
+        "gini_coefficient": "Extrapolation from ACS 2018-2022 trends",
+        "pct_uninsured": "Extrapolation from ACS 2018-2022 trends",
+        "eviction_filing_rate": "Extrapolation from post-moratorium Eviction Lab data",
+        "snap_participation_rate": "Extrapolation from ACS 2018-2022 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values. Median income remains at the maximum reportable ACS value.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    }
+  ]
+}

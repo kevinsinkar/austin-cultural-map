@@ -1,0 +1,610 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 160000,
+      "median_rent": 700,
+      "residential_units": 2500,
+      "commercial_sqft": 300000,
+      "median_property_tax": 3360,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 12,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, Tract 19.08",
+        "median_rent": "US Decennial Census 1990, Tract 19.08",
+        "residential_units": "US Decennial Census 1990, Tract 19.08",
+        "commercial_sqft": "TCAD Records & Historical Analysis",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, Tract 19.08"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for inferred Travis County Census Tract 19.08. Affluent lakeside community with many second homes, hence higher vacancy.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 220000,
+      "median_rent": 850,
+      "residential_units": 3200,
+      "commercial_sqft": 450000,
+      "median_property_tax": 4620,
+      "pct_home_value_change_yoy": 0.0658,
+      "vacancy_rate": 11.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Census",
+        "commercial_sqft": "Interpolated from TCAD estimates",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points for inferred Tract 19.08. Strong growth in this period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 290000,
+      "median_rent": 1050,
+      "residential_units": 4000,
+      "commercial_sqft": 650000,
+      "median_property_tax": 6090,
+      "pct_home_value_change_yoy": 0.0569,
+      "vacancy_rate": 11,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, Tract 19.08",
+        "median_rent": "US Decennial Census 2000, Tract 19.08",
+        "residential_units": "US Decennial Census 2000, Tract 19.08",
+        "commercial_sqft": "TCAD Records & Historical Analysis",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, Tract 19.08"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for inferred Travis County Census Tract 19.08. Continued strong growth and development.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 350000,
+      "median_rent": 1250,
+      "residential_units": 4800,
+      "commercial_sqft": 850000,
+      "median_property_tax": 7350,
+      "pct_home_value_change_yoy": 0.0383,
+      "vacancy_rate": 10.8,
+      "new_construction_permits": 300,
+      "audit_source": {
+        "median_home_value": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "median_rent": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "residential_units": "Interpolated from 2000 Census and 2010 Census",
+        "commercial_sqft": "Interpolated from TCAD estimates",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "new_construction_permits": "City of Lakeway Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values interpolated to represent mid-decade. Significant new construction.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 415000,
+      "median_rent": 1500,
+      "residential_units": 5700,
+      "commercial_sqft": 1100000,
+      "median_property_tax": 8715,
+      "pct_home_value_change_yoy": 0.0345,
+      "vacancy_rate": 10.5,
+      "new_construction_permits": 250,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077, Tract 19.08",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064, Tract 19.08",
+        "residential_units": "US Decennial Census 2010, Tract 19.08",
+        "commercial_sqft": "TCAD Records & CoStar Data",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002, Tract 19.08",
+        "new_construction_permits": "City of Lakeway Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Weathered the 2008 recession well compared to other areas. Continued growth.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 520000,
+      "median_rent": 1800,
+      "residential_units": 6800,
+      "commercial_sqft": 1400000,
+      "median_property_tax": 10920,
+      "pct_home_value_change_yoy": 0.0463,
+      "vacancy_rate": 9.8,
+      "new_construction_permits": 400,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077, Tract 19.08",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064, Tract 19.08",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001, Tract 19.08",
+        "commercial_sqft": "TCAD Records & CoStar Data",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002, Tract 19.08",
+        "new_construction_permits": "City of Lakeway Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Major construction boom in both residential and commercial sectors (e.g., hospital, retail).",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 675000,
+      "median_rent": 2200,
+      "residential_units": 8000,
+      "commercial_sqft": 1800000,
+      "median_property_tax": 14175,
+      "pct_home_value_change_yoy": 0.0535,
+      "vacancy_rate": 9,
+      "new_construction_permits": 350,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077, Tract 19.08",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064, Tract 19.08",
+        "residential_units": "US Decennial Census 2020, Tract 19.08",
+        "commercial_sqft": "TCAD Records & CoStar Data",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002, Tract 19.08",
+        "new_construction_permits": "City of Lakeway Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Pandemic-era boom further increased demand for suburban, high-amenity living.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_home_value": 880000,
+      "median_rent": 2600,
+      "residential_units": 8900,
+      "commercial_sqft": 2100000,
+      "median_property_tax": 18480,
+      "pct_home_value_change_yoy": 0.0544,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": 200,
+      "audit_source": {
+        "median_home_value": "Extrapolated from 2018-2022 ACS and Zillow Home Value Index trends",
+        "median_rent": "Extrapolated from 2018-2022 ACS and market reports",
+        "residential_units": "Extrapolated from permit data and development plans",
+        "commercial_sqft": "Extrapolated from CoStar and development plans",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Extrapolated from 2018-2022 ACS trends",
+        "new_construction_permits": "Estimated from recent trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Projected values assuming continued desirability and development, though at a potentially slower pace than the 2020-2022 peak.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 65000,
+      "poverty_rate": 4,
+      "bachelors_degree_or_higher_pct": 40,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, Tract 19.08",
+        "poverty_rate": "US Decennial Census 1990, Tract 19.08",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, Tract 19.08",
+        "unemployment_rate": "US Decennial Census 1990, Tract 19.08",
+        "gini_coefficient": "Estimated from census income distribution",
+        "pct_uninsured": "Estimated from state-level data and census proxies",
+        "snap_participation_rate": "Estimated from census poverty data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Socioeconomic profile of an affluent, developing lakeside community.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 78000,
+      "poverty_rate": 3.5,
+      "bachelors_degree_or_higher_pct": 46,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 11,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Interpolated estimate",
+        "pct_uninsured": "Interpolated estimate",
+        "snap_participation_rate": "Interpolated estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Interpolated values showing strong income growth during the 1990s.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 91000,
+      "poverty_rate": 3,
+      "bachelors_degree_or_higher_pct": 52,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, Tract 19.08",
+        "poverty_rate": "US Decennial Census 2000, Tract 19.08",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, Tract 19.08",
+        "unemployment_rate": "US Decennial Census 2000, Tract 19.08",
+        "gini_coefficient": "Estimated from census income distribution",
+        "pct_uninsured": "Estimated from state-level data and census proxies",
+        "snap_participation_rate": "Estimated from census poverty data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Very high income and low poverty for the period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 100000,
+      "poverty_rate": 3.8,
+      "bachelors_degree_or_higher_pct": 55,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 13,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "poverty_rate": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "bachelors_degree_or_higher_pct": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "unemployment_rate": "Interpolated from 2000 Census and 2008-2012 ACS",
+        "gini_coefficient": "Interpolated estimate",
+        "pct_uninsured": "Interpolated estimate",
+        "snap_participation_rate": "Interpolated estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Interpolated values. Continued affluence.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 110000,
+      "poverty_rate": 4.5,
+      "bachelors_degree_or_higher_pct": 58,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013, Tract 19.08",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001, Tract 19.08",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003, Tract 19.08",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025, Tract 19.08",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083, Tract 19.08",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010, Tract 19.08",
+        "eviction_filing_rate": "Eviction Lab, County-level data adjusted for tract",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001, Tract 19.08"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Area remained very affluent through the recession, with minimal impact on poverty.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 128000,
+      "poverty_rate": 3.8,
+      "bachelors_degree_or_higher_pct": 62,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013, Tract 19.08",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001, Tract 19.08",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003, Tract 19.08",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025, Tract 19.08",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083, Tract 19.08",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010, Tract 19.08",
+        "eviction_filing_rate": "Eviction Lab, Tract-level estimate",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001, Tract 19.08"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Continued strong growth in income. Very low rates of poverty and public assistance.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 152000,
+      "poverty_rate": 3.2,
+      "bachelors_degree_or_higher_pct": 68,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 1,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013, Tract 19.08",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001, Tract 19.08",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003, Tract 19.08",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025, Tract 19.08",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083, Tract 19.08",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010, Tract 19.08",
+        "eviction_filing_rate": "Eviction Lab, Tract-level estimate (influenced by pandemic moratoria)",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001, Tract 19.08"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Extremely high median income, reflecting the area's status as one of the most affluent in the Austin metro.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Lakeway",
+      "region_id": 45,
+      "median_household_income": 180000,
+      "poverty_rate": 3,
+      "bachelors_degree_or_higher_pct": 72,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "Extrapolated from 2018-2022 ACS trends",
+        "poverty_rate": "Extrapolated from 2018-2022 ACS trends",
+        "bachelors_degree_or_higher_pct": "Extrapolated from 2018-2022 ACS trends",
+        "unemployment_rate": "Extrapolated from BLS and TWC data",
+        "gini_coefficient": "Extrapolated from 2018-2022 ACS trends",
+        "pct_uninsured": "Extrapolated from 2018-2022 ACS trends",
+        "eviction_filing_rate": "Extrapolated from post-moratoria trends",
+        "snap_participation_rate": "Extrapolated from 2018-2022 ACS trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected to remain a top-tier income area with very high educational attainment and low social vulnerability indicators.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ]
+}

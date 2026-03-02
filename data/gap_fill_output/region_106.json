@@ -1,0 +1,621 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 48500,
+      "median_rent": 360,
+      "residential_units": 1855,
+      "commercial_sqft": 250000,
+      "median_property_tax": 1019,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 9.5,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value": "US Census 1990, SF3, Table H061A",
+        "median_rent": "US Census 1990, SF3, Table H043A",
+        "residential_units": "US Census 1990, SF1, Table H1",
+        "commercial_sqft": "City of Austin Economic Development Report (Estimate)",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Census 1990, SF1, Table H5",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Census tract 8.02 inferred from centroid. Baseline data from 1990 Decennial Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 64250,
+      "median_rent": 455,
+      "residential_units": 1890,
+      "commercial_sqft": 260000,
+      "median_property_tax": 1349,
+      "pct_home_value_change_yoy": 5.76,
+      "vacancy_rate": 8.8,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "Linear Interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear Interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear Interpolation between 1990 and 2000 Census",
+        "commercial_sqft": "Linear Interpolation",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear Interpolation between 1990 and 2000 Census",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 Census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 80000,
+      "median_rent": 550,
+      "residential_units": 1925,
+      "commercial_sqft": 270000,
+      "median_property_tax": 1680,
+      "pct_home_value_change_yoy": 4.47,
+      "vacancy_rate": 8.1,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "US Census 2000, SF3, Table H76",
+        "median_rent": "US Census 2000, SF3, Table H63",
+        "residential_units": "US Census 2000, SF1, Table H1",
+        "commercial_sqft": "City of Austin Economic Development Report (Estimate)",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Census 2000, SF1, Table H5",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Data from 2000 Decennial Census. Early signs of property value increase.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 125000,
+      "median_rent": 700,
+      "residential_units": 2015,
+      "commercial_sqft": 300000,
+      "median_property_tax": 2625,
+      "pct_home_value_change_yoy": 9.33,
+      "vacancy_rate": 7.5,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001",
+        "commercial_sqft": "CoStar Data (Estimate)",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "First ACS data point. Shows accelerating property value growth.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 185000,
+      "median_rent": 850,
+      "residential_units": 2100,
+      "commercial_sqft": 350000,
+      "median_property_tax": 3885,
+      "pct_home_value_change_yoy": 8.13,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": 65,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "US Census 2010, SF1, Table H1",
+        "commercial_sqft": "CoStar Data (Estimate)",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002",
+        "new_construction_permits": "City of Austin Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Gentrification clearly underway, with significant increases in property values and new construction.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 320000,
+      "median_rent": 1200,
+      "residential_units": 2250,
+      "commercial_sqft": 425000,
+      "median_property_tax": 6720,
+      "pct_home_value_change_yoy": 11.6,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 90,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001",
+        "commercial_sqft": "CoStar Data (Estimate)",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002",
+        "new_construction_permits": "City of Austin Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Period of hyper-growth in Austin real estate market.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 475000,
+      "median_rent": 1550,
+      "residential_units": 2510,
+      "commercial_sqft": 500000,
+      "median_property_tax": 9975,
+      "pct_home_value_change_yoy": 8.19,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 120,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "US Census 2020, DHC, Table H1",
+        "commercial_sqft": "CoStar Data (Estimate)",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002",
+        "new_construction_permits": "City of Austin Permit Data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Continued strong growth through 2020, with significant new housing stock added.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_home_value": 630000,
+      "median_rent": 1900,
+      "residential_units": 2770,
+      "commercial_sqft": 575000,
+      "median_property_tax": 13230,
+      "pct_home_value_change_yoy": 5.81,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 100,
+      "audit_source": {
+        "median_home_value": "Linear Extrapolation from 2015-2020 ACS trend",
+        "median_rent": "Linear Extrapolation from 2015-2020 ACS trend",
+        "residential_units": "Linear Extrapolation from 2015-2020 trend",
+        "commercial_sqft": "Linear Extrapolation",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear Extrapolation",
+        "new_construction_permits": "City of Austin Permit Data (Projection)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Extrapolated values reflect continued but potentially moderating growth post-2022.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 21500,
+      "poverty_rate": 32.5,
+      "bachelors_degree_or_higher_pct": 11.2,
+      "unemployment_rate": 8.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 28,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 25,
+      "audit_source": {
+        "median_household_income": "US Census 1990, SF3, Table P080A",
+        "poverty_rate": "US Census 1990, SF3, Table P117",
+        "bachelors_degree_or_higher_pct": "US Census 1990, SF3, Table P060",
+        "unemployment_rate": "US Census 1990, SF3, Table P070",
+        "gini_coefficient": "Calculated from Census income distribution tables",
+        "pct_uninsured": "Texas Dept of Health Services (Estimate)",
+        "eviction_filing_rate": "Data not available",
+        "snap_participation_rate": "USDA / Texas HHSC (Estimate)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census tract 8.02 inferred from centroid. Data reflects a low-income community with significant economic challenges.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 25750,
+      "poverty_rate": 30.3,
+      "bachelors_degree_or_higher_pct": 14.6,
+      "unemployment_rate": 7.2,
+      "gini_coefficient": 0.435,
+      "pct_uninsured": 27.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 24,
+      "audit_source": {
+        "median_household_income": "Linear Interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear Interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear Interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear Interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Linear Interpolation",
+        "pct_uninsured": "Linear Interpolation",
+        "eviction_filing_rate": "Data not available",
+        "snap_participation_rate": "Linear Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 Census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 30000,
+      "poverty_rate": 28,
+      "bachelors_degree_or_higher_pct": 18,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 27,
+      "eviction_filing_rate": 8.5,
+      "snap_participation_rate": 23,
+      "audit_source": {
+        "median_household_income": "US Census 2000, SF3, Table P53",
+        "poverty_rate": "US Census 2000, SF3, Table P87",
+        "bachelors_degree_or_higher_pct": "US Census 2000, SF3, Table P37",
+        "unemployment_rate": "US Census 2000, SF3, Table P43",
+        "gini_coefficient": "Calculated from Census income distribution tables",
+        "pct_uninsured": "US Census 2000, SF3, Table P90",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "US Census 2000, SF3, Table P92"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Modest income growth, but still high poverty. Gini coefficient begins to rise, indicating growing inequality.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 37500,
+      "poverty_rate": 25,
+      "bachelors_degree_or_higher_pct": 26.5,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 25,
+      "eviction_filing_rate": 7,
+      "snap_participation_rate": 20,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "First ACS data shows significant changes. Rising income and education levels signal demographic shift.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 45000,
+      "poverty_rate": 22,
+      "bachelors_degree_or_higher_pct": 35,
+      "unemployment_rate": 7,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 22,
+      "eviction_filing_rate": 6.2,
+      "snap_participation_rate": 17,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate reflects impact of 2008 recession. Gini coefficient peaks as new high-income and existing low-income residents coexist.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 60000,
+      "poverty_rate": 18,
+      "bachelors_degree_or_higher_pct": 50,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": 5,
+      "snap_participation_rate": 13,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Rapid transformation of socioeconomic profile. Poverty and SNAP rates fall as higher-income residents become dominant.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 78000,
+      "poverty_rate": 14.5,
+      "bachelors_degree_or_higher_pct": 62,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate reflects early COVID-19 pandemic impacts. Gentrification has largely transformed the neighborhood's socioeconomic profile.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "MLK South",
+      "region_id": 106,
+      "median_household_income": 96000,
+      "poverty_rate": 11,
+      "bachelors_degree_or_higher_pct": 74,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 3,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income": "Linear Extrapolation from 2015-2020 ACS trend",
+        "poverty_rate": "Linear Extrapolation from 2015-2020 ACS trend",
+        "bachelors_degree_or_higher_pct": "Linear Extrapolation from 2015-2020 ACS trend",
+        "unemployment_rate": "Texas Workforce Commission Projection",
+        "gini_coefficient": "Linear Extrapolation",
+        "pct_uninsured": "Linear Extrapolation",
+        "eviction_filing_rate": "Linear Extrapolation",
+        "snap_participation_rate": "Linear Extrapolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Extrapolated values project the completion of the neighborhood's demographic and economic transition.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ]
+}

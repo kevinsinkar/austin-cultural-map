@@ -1,0 +1,646 @@
+[
+  {
+    "region_id": 5,
+    "region": "Windsor Hills",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 6,
+    "region": "North Shoal Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 7,
+    "region": "Barton Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 10,
+    "region": "Circle C Ranch",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 13,
+    "region": "Northwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 17,
+    "region": "Dessau",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 19,
+    "region": "North Austin",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 28,
+    "region": "Milwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 29,
+    "region": "The Arboretum",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 34,
+    "region": "North Burnet",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 36,
+    "region": "Northwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 39,
+    "region": "North Shoal Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 41,
+    "region": "Gracywoods",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 42,
+    "region": "North Shoal Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 45,
+    "region": "Lakeway",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 46,
+    "region": "Cat Mountain",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 47,
+    "region": "Montopolis",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 49,
+    "region": "Oak Hill",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 51,
+    "region": "Harris Ridge",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 54,
+    "region": "Wells Branch",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 55,
+    "region": "Cherry Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 57,
+    "region": "North Shoal Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 63,
+    "region": "Barton Creek West",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 66,
+    "region": "Montopolis",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 73,
+    "region": "Windsor Hills",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 79,
+    "region": "Blackland",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 82,
+    "region": "Eastview",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 83,
+    "region": "Rosewood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 87,
+    "region": "Old West Austin- Tarrytown East",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 89,
+    "region": "Oakmont Heights*",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 90,
+    "region": "Parker Lane West",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 95,
+    "region": "Tarrytown West",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 97,
+    "region": "Akins",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 98,
+    "region": "East Riverside - Pleasant Valley",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 99,
+    "region": "Dawson",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 101,
+    "region": "East Boggy Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 102,
+    "region": "Johnston Terrace",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 103,
+    "region": "Windsor Park West",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 104,
+    "region": "Windsor Park East",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 106,
+    "region": "MLK South",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 110,
+    "region": "Davenport Ranch",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 111,
+    "region": "East Austin",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 112,
+    "region": "East Cesar Chavez -Holly",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 117,
+    "region": "Colorado Foothills*",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 118,
+    "region": "Ridgetop",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 125,
+    "region": "Brentwood North",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 126,
+    "region": "Allandale North",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 128,
+    "region": "South Manchaca",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 129,
+    "region": "Lakehills Plaza",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 130,
+    "region": "Rob Roy",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 132,
+    "region": "River Place",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 134,
+    "region": "Northwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 136,
+    "region": "Milwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 143,
+    "region": "Rollingwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 145,
+    "region": "Arboretum Area",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 146,
+    "region": "Allandale",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 151,
+    "region": "Windsor Hills",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 158,
+    "region": "Northwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 159,
+    "region": "Oak Hill",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 162,
+    "region": "West Campus",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 173,
+    "region": "Oak Hill",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 174,
+    "region": "River Place",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 179,
+    "region": "West Lake Hills",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 185,
+    "region": "Montopolis",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 189,
+    "region": "Bee Cave",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 190,
+    "region": "Canyon Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 195,
+    "region": "Westlake",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 200,
+    "region": "North Shoal Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 207,
+    "region": "North Shoal Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 213,
+    "region": "Westlake Hills",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 219,
+    "region": "Circle C Ranch",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 221,
+    "region": "Westlake Hills",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 222,
+    "region": "Northwood",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 224,
+    "region": "Cherry Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 227,
+    "region": "Montopolis",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 229,
+    "region": "Wells Branch",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 231,
+    "region": "Gracywoods",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 232,
+    "region": "River Place",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 233,
+    "region": "Redbud",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 234,
+    "region": "Regents",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 235,
+    "region": "Yarabee Bend",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 237,
+    "region": "Montopolis",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 238,
+    "region": "Lost Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 241,
+    "region": "Brentwood South",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 243,
+    "region": "Eanes Creek",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 251,
+    "region": "University Hills West",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 252,
+    "region": "University Hills East",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 257,
+    "region": "East Riverside - Heritage Oaks",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 259,
+    "region": "Garrison Park East",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 261,
+    "region": "Franklin Park West",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 263,
+    "region": "Frankline Park East",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  },
+  {
+    "region_id": 266,
+    "region": "Buckingham Estates",
+    "status": "OK",
+    "property_rows": 8,
+    "socioeconomic_rows": 8
+  }
+]

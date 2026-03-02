@@ -1,0 +1,606 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 60100,
+      "median_rent": 400,
+      "residential_units": 2100,
+      "commercial_sqft": null,
+      "median_property_tax": 1262,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census, ST-3, Tract 15.04",
+        "median_rent": "1990 Decennial Census, ST-3, Tract 15.04",
+        "residential_units": "1990 Decennial Census, ST-3, Tract 15.04",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "1990 Decennial Census, ST-3, Tract 15.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Baseline for a working-class suburban area, with slightly lower values than its western counterpart.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 82550,
+      "median_rent": 500,
+      "residential_units": 2140,
+      "commercial_sqft": null,
+      "median_property_tax": 1734,
+      "pct_home_value_change_yoy": 6.57,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Interpolated values showing strong appreciation, starting to catch up with areas west of I-35.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 105000,
+      "median_rent": 600,
+      "residential_units": 2180,
+      "commercial_sqft": null,
+      "median_property_tax": 2205,
+      "pct_home_value_change_yoy": 4.96,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census, SF-3, Tract 15.04",
+        "median_rent": "2000 Decennial Census, SF-3, Tract 15.04",
+        "residential_units": "2000 Decennial Census, SF-3, Tract 15.04",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "2000 Decennial Census, SF-3, Tract 15.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Significant growth through the 1990s, though still more affordable than Windsor Park West.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 160000,
+      "median_rent": 750,
+      "residential_units": 2230,
+      "commercial_sqft": null,
+      "median_property_tax": 3360,
+      "pct_home_value_change_yoy": 8.8,
+      "vacancy_rate": 6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Strong growth continues, mirroring city-wide trends of the mid-2000s housing boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 190000,
+      "median_rent": 900,
+      "residential_units": 2285,
+      "commercial_sqft": null,
+      "median_property_tax": 3990,
+      "pct_home_value_change_yoy": 3.51,
+      "vacancy_rate": 6.4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "2010 Decennial Census, Tract 15.04",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Post-recession data shows the area is becoming increasingly popular, setting the stage for the 2010s boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 280000,
+      "median_rent": 1150,
+      "residential_units": 2350,
+      "commercial_sqft": null,
+      "median_property_tax": 5880,
+      "pct_home_value_change_yoy": 8.03,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Rapid value appreciation as the area benefits from proximity to Mueller and becomes a gentrification hotspot.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 500000,
+      "median_rent": 1550,
+      "residential_units": 2430,
+      "commercial_sqft": null,
+      "median_property_tax": 10500,
+      "pct_home_value_change_yoy": 12.28,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "2020 Decennial Census, Tract 15.04",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Explosive growth has transformed the neighborhood into a high-demand area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_home_value": 921500,
+      "median_rent": 2050,
+      "residential_units": 2500,
+      "commercial_sqft": null,
+      "median_property_tax": 19352,
+      "pct_home_value_change_yoy": 13,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2015-2020 trend",
+        "median_rent": "Extrapolation from ACS 2015-2020 trend",
+        "residential_units": "Extrapolation from 2010-2020 Census trend",
+        "commercial_sqft": "Unavailable at tract level",
+        "median_property_tax": "Derived from median_home_value and TCAD avg rate",
+        "vacancy_rate": "Extrapolation from ACS 2015-2020 trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Projection assumes continued strong demand, with growth rates potentially exceeding its western neighbor as it 'catches up'.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 28000,
+      "poverty_rate": 15,
+      "bachelors_degree_or_higher_pct": 20,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 22,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 10,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census, ST-3, Tract 15.04",
+        "poverty_rate": "1990 Decennial Census, ST-3, Tract 15.04",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census, ST-3, Tract 15.04",
+        "unemployment_rate": "1990 Decennial Census, ST-3, Tract 15.04",
+        "gini_coefficient": "Estimated from income distribution data",
+        "pct_uninsured": "Estimated from regional data",
+        "eviction_filing_rate": "Eviction Lab data unavailable pre-2000",
+        "snap_participation_rate": "1990 Decennial Census, ST-3, Tract 15.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Baseline for a working-class area, with lower income and education levels than its western neighbor.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 33000,
+      "poverty_rate": 14,
+      "bachelors_degree_or_higher_pct": 23,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 20.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 9.5,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Interpolated estimate",
+        "pct_uninsured": "Interpolated estimate",
+        "eviction_filing_rate": "Eviction Lab data unavailable pre-2000",
+        "snap_participation_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Interpolated data showing steady improvement in economic conditions.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 38000,
+      "poverty_rate": 13,
+      "bachelors_degree_or_higher_pct": 26,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 19,
+      "eviction_filing_rate": 5,
+      "snap_participation_rate": 9,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census, SF-3, Tract 15.04",
+        "poverty_rate": "2000 Decennial Census, SF-3, Tract 15.04",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census, SF-3, Tract 15.04",
+        "unemployment_rate": "2000 Decennial Census, SF-3, Tract 15.04",
+        "gini_coefficient": "Estimated from income distribution data",
+        "pct_uninsured": "Estimated from regional data",
+        "eviction_filing_rate": "Eviction Lab, Tract 15.04",
+        "snap_participation_rate": "2000 Decennial Census, SF-3, Tract 15.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Eviction rate is higher than Windsor Park West, reflecting a larger renter population and lower incomes.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 45000,
+      "poverty_rate": 12.5,
+      "bachelors_degree_or_higher_pct": 30,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": 4.8,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 15.04",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Socioeconomic indicators are improving, showing the early stages of gentrification.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 48000,
+      "poverty_rate": 14,
+      "bachelors_degree_or_higher_pct": 35,
+      "unemployment_rate": 7,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 17.5,
+      "eviction_filing_rate": 5.2,
+      "snap_participation_rate": 10,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 15.04",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Post-recession impacts are visible, but the upward trend in education signals ongoing demographic change.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 60000,
+      "poverty_rate": 11,
+      "bachelors_degree_or_higher_pct": 48,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 7,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 15.04",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Rapid gentrification is now fully underway, with significant shifts in income and education.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 85000,
+      "poverty_rate": 9,
+      "bachelors_degree_or_higher_pct": 62,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 3.8,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 15.04",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "The area's socioeconomic profile has dramatically changed, now closely resembling more affluent central Austin neighborhoods.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "median_household_income": 110000,
+      "poverty_rate": 7.5,
+      "bachelors_degree_or_higher_pct": 70,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 3.2,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2015-2020 trend",
+        "poverty_rate": "Extrapolation from ACS 2015-2020 trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2015-2020 trend",
+        "unemployment_rate": "Extrapolation from ACS 2015-2020 trend",
+        "gini_coefficient": "Extrapolation from ACS 2015-2020 trend",
+        "pct_uninsured": "Extrapolation from ACS 2015-2020 trend",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab trend",
+        "snap_participation_rate": "Extrapolation from ACS 2015-2020 trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projection shows the completion of the area's transformation into an upper-middle-class neighborhood.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:45:00Z"
+    }
+  ]
+}

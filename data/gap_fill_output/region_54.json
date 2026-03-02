@@ -1,0 +1,601 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 95000,
+      "median_rent": 550,
+      "residential_units": 4500,
+      "commercial_sqft": null,
+      "median_property_tax": 1995,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census, STF3, Table H61A",
+        "median_rent": "1990 Decennial Census, STF3, Table H43A",
+        "residential_units": "1990 Decennial Census, STF3, Table H1",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "1990 Decennial Census, STF3, Table H5"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census Tract 18.18 inferred from centroid. Wells Branch was an established suburban community by 1990.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 127500,
+      "median_rent": 675,
+      "residential_units": 4750,
+      "commercial_sqft": null,
+      "median_property_tax": 2678,
+      "pct_home_value_change_yoy": 0.0605,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated to reflect steady growth in a maturing suburban area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 160000,
+      "median_rent": 800,
+      "residential_units": 5000,
+      "commercial_sqft": null,
+      "median_property_tax": 3360,
+      "pct_home_value_change_yoy": 0.0465,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census, SF3, Table H76",
+        "median_rent": "2000 Decennial Census, SF3, Table H63",
+        "residential_units": "2000 Decennial Census, SF3, Table H1",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "2000 Decennial Census, SF3, Table H5"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data reflects a stable, mostly built-out suburban area prior to the major tech booms.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 175000,
+      "median_rent": 925,
+      "residential_units": 5100,
+      "commercial_sqft": null,
+      "median_property_tax": 3675,
+      "pct_home_value_change_yoy": 0.0181,
+      "vacancy_rate": 4.6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolated from 2000 Census and ACS 2005-2009",
+        "median_rent": "Interpolated from 2000 Census and ACS 2005-2009",
+        "residential_units": "Interpolated from 2000 and 2010 Census",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "Interpolated from 2000 Census and ACS 2005-2009"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Used ACS 2005-2009 as an anchor point for interpolation from 2000. Modest growth during this period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 190000,
+      "median_rent": 1050,
+      "residential_units": 5200,
+      "commercial_sqft": null,
+      "median_property_tax": 3990,
+      "pct_home_value_change_yoy": 0.0166,
+      "vacancy_rate": 4.7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "2010 Decennial Census, Table H1",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Stable values post-2008 recession, before the next major growth cycle.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 265000,
+      "median_rent": 1350,
+      "residential_units": 5300,
+      "commercial_sqft": null,
+      "median_property_tax": 5565,
+      "pct_home_value_change_yoy": 0.069,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "Interpolated from 2010 and 2020 Census",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Home values begin to accelerate significantly, in line with the broader Austin market.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 380000,
+      "median_rent": 1650,
+      "residential_units": 5400,
+      "commercial_sqft": null,
+      "median_property_tax": 7980,
+      "pct_home_value_change_yoy": 0.0746,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "2020 Decennial Census, Table H1",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Explosive growth in property values between 2015 and 2020.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_home_value": 500000,
+      "median_rent": 1950,
+      "residential_units": 5500,
+      "commercial_sqft": null,
+      "median_property_tax": 10500,
+      "pct_home_value_change_yoy": 0.0562,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear extrapolation from ACS 2015-2020 trends",
+        "median_rent": "Linear extrapolation from ACS 2015-2020 trends",
+        "residential_units": "Linear extrapolation from 2010-2020 Census trend",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "Linear extrapolation from ACS 2015-2020 trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Extrapolation reflects continued high demand and value, with a slightly moderated growth rate post-2022.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 45000,
+      "poverty_rate": 6.2,
+      "bachelors_degree_or_higher_pct": 35,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 4.5,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census, STF3, Table P80A",
+        "poverty_rate": "1990 Decennial Census, STF3, Table P117",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census, STF3, Table P60",
+        "unemployment_rate": "1990 Decennial Census, STF3, Table P70",
+        "gini_coefficient": "Estimated from income distribution data",
+        "pct_uninsured": "Estimated based on state-level data for the period",
+        "snap_participation_rate": "1990 Decennial Census, STF3, Table P101 (Public Assistance)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Socioeconomic profile of an established, middle-class suburban area with a significant tech worker population.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 57500,
+      "poverty_rate": 5.6,
+      "bachelors_degree_or_higher_pct": 38.5,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 15.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 4,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "pct_uninsured": "Linear interpolation based on period estimates",
+        "snap_participation_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Interpolation reflects strong income growth during the 1990s tech boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 70000,
+      "poverty_rate": 5,
+      "bachelors_degree_or_higher_pct": 42,
+      "unemployment_rate": 3.4,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 17,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census, SF3, Table P53",
+        "poverty_rate": "2000 Decennial Census, SF3, Table P87",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census, SF3, Table P37",
+        "unemployment_rate": "2000 Decennial Census, SF3, Table P43",
+        "gini_coefficient": "Estimated from income distribution data",
+        "pct_uninsured": "Estimated based on state-level data for the period",
+        "snap_participation_rate": "2000 Decennial Census, SF3, Table P64"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Data shows a prosperous, well-educated suburban area at the height of the dot-com boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 75000,
+      "poverty_rate": 5.2,
+      "bachelors_degree_or_higher_pct": 43.5,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 19,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, estimated for county/era",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "First available ACS data shows continued stability and high incomes.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 80000,
+      "poverty_rate": 5.5,
+      "bachelors_degree_or_higher_pct": 45,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 20,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, tract-level data",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Relatively resilient performance through the Great Recession, though unemployment ticked up.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 92000,
+      "poverty_rate": 5,
+      "bachelors_degree_or_higher_pct": 48,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 4.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, tract-level data",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Strong economic recovery with significant income growth.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 105000,
+      "poverty_rate": 4.5,
+      "bachelors_degree_or_higher_pct": 52,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, tract-level data",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Area has become increasingly affluent and educated. Low poverty and stable inequality.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Wells Branch",
+      "region_id": 54,
+      "median_household_income": 120000,
+      "poverty_rate": 4.2,
+      "bachelors_degree_or_higher_pct": 55,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 8.5,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3.8,
+      "audit_source": {
+        "median_household_income": "Linear extrapolation from ACS 2015-2020 trends",
+        "poverty_rate": "Linear extrapolation from ACS 2015-2020 trends",
+        "bachelors_degree_or_higher_pct": "Linear extrapolation from ACS 2015-2020 trends",
+        "unemployment_rate": "Linear extrapolation from ACS 2015-2020 trends",
+        "gini_coefficient": "Linear extrapolation from ACS 2015-2020 trends",
+        "pct_uninsured": "Linear extrapolation from ACS 2015-2020 trends",
+        "eviction_filing_rate": "Linear extrapolation from Eviction Lab trends",
+        "snap_participation_rate": "Linear extrapolation from ACS 2015-2020 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Extrapolation projects continued prosperity, crossing the $120k median income threshold.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ]
+}

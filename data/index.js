@@ -9,6 +9,7 @@ export { DEMOGRAPHICS } from "./interim_demographics";
 export { SOCIOECONOMIC } from "./interim_socioeconomic";
 export { TIPPING_POINTS } from "./tippingPoints";
 export { DVI_RAW, DVI_LOOKUP } from "./dvi";
+export { AUDITED_DVI_LOOKUP } from "./auditedDvi";
 export { MUSIC_NIGHTLIFE } from "./musicNightlife";
 export { PROPERTY_DATA } from "./interim_property";
 export { PROJECT_CONNECT_LINES, PC_PROXIMITY_REGIONS } from "./projectConnect";

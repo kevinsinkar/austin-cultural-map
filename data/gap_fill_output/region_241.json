@@ -1,0 +1,576 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 85000,
+      "median_rent": 520,
+      "residential_units": 3200,
+      "commercial_sqft": null,
+      "median_property_tax": 1785,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census, STF3, Tract 3.04",
+        "median_rent": "1990 Decennial Census, STF3, Tract 3.04",
+        "residential_units": "1990 Decennial Census, STF3, Tract 3.04",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "1990 Decennial Census, STF3, Tract 3.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Baseline data from 1990 Decennial Census for Travis County Tract 3.04, inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 122500,
+      "median_rent": 660,
+      "residential_units": 3225,
+      "commercial_sqft": null,
+      "median_property_tax": 2573,
+      "pct_home_value_change_yoy": 7.58,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 160000,
+      "median_rent": 800,
+      "residential_units": 3250,
+      "commercial_sqft": null,
+      "median_property_tax": 3360,
+      "pct_home_value_change_yoy": 5.51,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census, SF3, Tract 3.04",
+        "median_rent": "2000 Decennial Census, SF3, Tract 3.04",
+        "residential_units": "2000 Decennial Census, SF3, Tract 3.04",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "2000 Decennial Census, SF3, Tract 3.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from 2000 Decennial Census for Travis County Tract 3.04.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 235000,
+      "median_rent": 975,
+      "residential_units": 3300,
+      "commercial_sqft": null,
+      "median_property_tax": 4935,
+      "pct_home_value_change_yoy": 8,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "median_rent": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "residential_units": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Interpolation between 2000 Census and 2005-2009 ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 2000 census and first ACS estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 310000,
+      "median_rent": 1150,
+      "residential_units": 3350,
+      "commercial_sqft": null,
+      "median_property_tax": 6510,
+      "pct_home_value_change_yoy": 5.7,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "ACS 5-Year 2006-2010, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2006-2010, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2010 5-Year estimates for Tract 3.04.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 450000,
+      "median_rent": 1400,
+      "residential_units": 3420,
+      "commercial_sqft": null,
+      "median_property_tax": 9450,
+      "pct_home_value_change_yoy": 7.75,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2015 5-Year estimates for Tract 3.04.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 680000,
+      "median_rent": 1750,
+      "residential_units": 3500,
+      "commercial_sqft": null,
+      "median_property_tax": 14280,
+      "pct_home_value_change_yoy": 8.62,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "ACS 5-Year 2016-2020, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2016-2020, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2020 5-Year estimates for Tract 3.04.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_home_value": 950000,
+      "median_rent": 2200,
+      "residential_units": 3650,
+      "commercial_sqft": null,
+      "median_property_tax": 19950,
+      "pct_home_value_change_yoy": 6.93,
+      "vacancy_rate": 4.3,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from 2015-2020 ACS trend and TCAD/Zillow data",
+        "median_rent": "Extrapolation from 2015-2020 ACS trend",
+        "residential_units": "Extrapolation from 2015-2020 ACS trend",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Projected values based on 2015-2020 growth trends for central Austin neighborhoods.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 32000,
+      "poverty_rate": 12,
+      "bachelors_degree_or_higher_pct": 35,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census, STF3, Tract 3.04",
+        "poverty_rate": "1990 Decennial Census, STF3, Tract 3.04",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census, STF3, Tract 3.04",
+        "unemployment_rate": "1990 Decennial Census, STF3, Tract 3.04",
+        "gini_coefficient": "County-level estimate for 1990"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low"
+      },
+      "audit_notes": "Baseline data from 1990 Census for inferred Tract 3.04.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 40000,
+      "poverty_rate": 11.25,
+      "bachelors_degree_or_higher_pct": 40,
+      "unemployment_rate": 4.4,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Interpolated county-level estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 48000,
+      "poverty_rate": 10.5,
+      "bachelors_degree_or_higher_pct": 45,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": null,
+      "eviction_filing_rate": 5.1,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census, SF3, Tract 3.04",
+        "poverty_rate": "2000 Decennial Census, SF3, Tract 3.04",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census, SF3, Tract 3.04",
+        "unemployment_rate": "2000 Decennial Census, SF3, Tract 3.04",
+        "gini_coefficient": "County-level estimate for 2000",
+        "eviction_filing_rate": "Eviction Lab estimate for Travis County"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "eviction_filing_rate": "low"
+      },
+      "audit_notes": "Data from 2000 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 56500,
+      "poverty_rate": 9.75,
+      "bachelors_degree_or_higher_pct": 51.5,
+      "unemployment_rate": 4.65,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 20,
+      "eviction_filing_rate": 4.8,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "poverty_rate": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "bachelors_degree_or_higher_pct": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "unemployment_rate": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Interpolated values for core metrics; ACS data used for newer metrics.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 65000,
+      "poverty_rate": 9,
+      "bachelors_degree_or_higher_pct": 58,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 18.5,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 7.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2006-2010, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2010 5-Year estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 78000,
+      "poverty_rate": 8,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 15.1,
+      "eviction_filing_rate": 3.8,
+      "snap_participation_rate": 6,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2015 5-Year estimates. Gentrification is evident in rising income and education levels.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 95000,
+      "poverty_rate": 7.5,
+      "bachelors_degree_or_higher_pct": 72,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 10.5,
+      "eviction_filing_rate": 2.9,
+      "snap_participation_rate": 4.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2020 5-Year estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "median_household_income": 120000,
+      "poverty_rate": 6.5,
+      "bachelors_degree_or_higher_pct": 78,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 3.1,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income": "Extrapolation from 2015-2020 ACS trend",
+        "poverty_rate": "Extrapolation from 2015-2020 ACS trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from 2015-2020 ACS trend",
+        "unemployment_rate": "Extrapolation from 2015-2020 ACS trend",
+        "gini_coefficient": "Extrapolation from 2015-2020 ACS trend",
+        "pct_uninsured": "Extrapolation from 2015-2020 ACS trend",
+        "eviction_filing_rate": "Extrapolation from recent trends",
+        "snap_participation_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on 2015-2020 trends for a rapidly appreciating central Austin neighborhood.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ]
+}

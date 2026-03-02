@@ -1,0 +1,606 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 88500,
+      "median_rent": 520,
+      "residential_units": 1255,
+      "commercial_sqft": null,
+      "median_property_tax": 1859,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, STF3",
+        "median_rent": "US Decennial Census 1990, STF3",
+        "residential_units": "US Decennial Census 1990, STF3",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, STF3"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census Tract 15.04 inferred from centroid. Baseline data from 1990 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 119250,
+      "median_rent": 635,
+      "residential_units": 1290,
+      "commercial_sqft": null,
+      "median_property_tax": 2504,
+      "pct_home_value_change_yoy": 6.18,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Census",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values are interpolated. Annualized YOY change calculated for the 5-year period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 150000,
+      "median_rent": 750,
+      "residential_units": 1325,
+      "commercial_sqft": null,
+      "median_property_tax": 3150,
+      "pct_home_value_change_yoy": 4.71,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3",
+        "median_rent": "US Decennial Census 2000, SF3",
+        "residential_units": "US Decennial Census 2000, SF3",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF3"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census Tract 15.04 inferred from centroid. Baseline data from 2000 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 215000,
+      "median_rent": 925,
+      "residential_units": 1350,
+      "commercial_sqft": null,
+      "median_property_tax": 4515,
+      "pct_home_value_change_yoy": 7.46,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from inaugural ACS 5-year estimates, centered on 2007 but used as proxy for 2005.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 285000,
+      "median_rent": 1100,
+      "residential_units": 1375,
+      "commercial_sqft": null,
+      "median_property_tax": 5985,
+      "pct_home_value_change_yoy": 5.85,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "US Decennial Census 2010",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Economic data from ACS centered on 2010. Unit count from 2010 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 450000,
+      "median_rent": 1450,
+      "residential_units": 1410,
+      "commercial_sqft": null,
+      "median_property_tax": 9450,
+      "pct_home_value_change_yoy": 9.56,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data reflects rapid post-recession appreciation in Central Austin.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 680000,
+      "median_rent": 1850,
+      "residential_units": 1455,
+      "commercial_sqft": null,
+      "median_property_tax": 14280,
+      "pct_home_value_change_yoy": 8.61,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "US Decennial Census 2020",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Economic data from ACS centered on 2020. Unit count from 2020 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_home_value": 850000,
+      "median_rent": 2200,
+      "residential_units": 1480,
+      "commercial_sqft": null,
+      "median_property_tax": 17850,
+      "pct_home_value_change_yoy": 4.56,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from 2015-2020 ACS trend and Zillow Home Value Index (ZHVI)",
+        "median_rent": "Extrapolation from 2015-2020 ACS trend",
+        "residential_units": "Extrapolation from 2010-2020 Census trend",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Projected values based on recent trends, assuming a moderation in growth post-2022.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 35500,
+      "poverty_rate": 8.5,
+      "bachelors_degree_or_higher_pct": 35.2,
+      "unemployment_rate": 4.1,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, STF3",
+        "poverty_rate": "US Decennial Census 1990, STF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, STF3",
+        "unemployment_rate": "US Decennial Census 1990, STF3",
+        "gini_coefficient": "Estimated from income distribution tables, US Decennial Census 1990",
+        "pct_uninsured": "Not available in 1990 Census",
+        "eviction_filing_rate": "Not available for this period",
+        "snap_participation_rate": "Not available in 1990 Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census Tract 15.04 inferred from centroid. Baseline data from 1990 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 42750,
+      "poverty_rate": 7.9,
+      "bachelors_degree_or_higher_pct": 40.1,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Linear interpolation between 1990 and 2000 Census",
+        "pct_uninsured": "Not available for this period",
+        "eviction_filing_rate": "Not available for this period",
+        "snap_participation_rate": "Not available for this period"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Values are interpolated based on 1990 and 2000 Census data.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 50000,
+      "poverty_rate": 7.3,
+      "bachelors_degree_or_higher_pct": 45,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3",
+        "poverty_rate": "US Decennial Census 2000, SF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3",
+        "unemployment_rate": "US Decennial Census 2000, SF3",
+        "gini_coefficient": "Estimated from income distribution tables, US Decennial Census 2000",
+        "pct_uninsured": "Not available in 2000 Census",
+        "eviction_filing_rate": "Not available for this period",
+        "snap_participation_rate": "Not available in 2000 Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census Tract 15.04 inferred from centroid. Baseline data from 2000 Census.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 57500,
+      "poverty_rate": 9,
+      "bachelors_degree_or_higher_pct": 48.5,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 6,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Not available for this period",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from inaugural ACS 5-year estimates, centered on 2007 but used as proxy for 2005.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 65000,
+      "poverty_rate": 10.2,
+      "bachelors_degree_or_higher_pct": 52,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 16.5,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 7.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Princeton University",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Economic data from ACS centered on 2010. Unemployment reflects Great Recession impact.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 80000,
+      "poverty_rate": 8,
+      "bachelors_degree_or_higher_pct": 58.5,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 12.1,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 5.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Princeton University",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data reflects strong economic recovery and increasing affluence in the area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 98000,
+      "poverty_rate": 6.5,
+      "bachelors_degree_or_higher_pct": 65.1,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 8.5,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 4.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Princeton University",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Economic data from ACS centered on 2020. Reflects a highly educated, high-income population.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Brentwood North",
+      "region_id": 125,
+      "median_household_income": 115000,
+      "poverty_rate": 6,
+      "bachelors_degree_or_higher_pct": 68,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income": "Extrapolation from 2015-2020 ACS trend",
+        "poverty_rate": "Extrapolation from 2015-2020 ACS trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from 2015-2020 ACS trend",
+        "unemployment_rate": "Extrapolation from 2015-2020 ACS trend",
+        "gini_coefficient": "Extrapolation from 2015-2020 ACS trend",
+        "pct_uninsured": "Extrapolation from 2015-2020 ACS trend",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab data",
+        "snap_participation_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on recent trends. Eviction rate increase reflects end of pandemic-era moratoriums.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ]
+}

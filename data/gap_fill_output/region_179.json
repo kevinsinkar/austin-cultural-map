@@ -1,0 +1,568 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 310000,
+      "median_rent": 1050,
+      "residential_units": 1050,
+      "commercial_sqft": null,
+      "median_property_tax": 6510,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census STF3, Table H61A",
+        "median_rent": "1990 Decennial Census STF3, Table H43A",
+        "residential_units": "1990 Decennial Census STF3, Table H1",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "1990 Decennial Census STF3, Table H5"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2. Property tax is an estimate based on typical Travis County rates.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 455000,
+      "median_rent": 1275,
+      "residential_units": 1125,
+      "commercial_sqft": null,
+      "median_property_tax": 9555,
+      "pct_home_value_change_yoy": 7.98,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 census data points. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 600000,
+      "median_rent": 1500,
+      "residential_units": 1200,
+      "commercial_sqft": null,
+      "median_property_tax": 12600,
+      "pct_home_value_change_yoy": 5.69,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census SF3, Table H76",
+        "median_rent": "2000 Decennial Census SF3, Table H63",
+        "residential_units": "2000 Decennial Census SF3, Table H1",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "2000 Decennial Census SF3, Table H5"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 750000,
+      "median_rent": 1750,
+      "residential_units": 1240,
+      "commercial_sqft": null,
+      "median_property_tax": 15750,
+      "pct_home_value_change_yoy": 4.56,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2, using earliest available ACS 5-year estimates as a proxy for 2005. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 900000,
+      "median_rent": 2000,
+      "residential_units": 1280,
+      "commercial_sqft": null,
+      "median_property_tax": 18900,
+      "pct_home_value_change_yoy": 3.71,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "ACS 5-Year 2008-2012, Table B25001",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 1150000,
+      "median_rent": 2400,
+      "residential_units": 1310,
+      "commercial_sqft": null,
+      "median_property_tax": 24150,
+      "pct_home_value_change_yoy": 5.02,
+      "vacancy_rate": 3.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 1550000,
+      "median_rent": 3000,
+      "residential_units": 1350,
+      "commercial_sqft": null,
+      "median_property_tax": 32550,
+      "pct_home_value_change_yoy": 6.13,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "ACS 5-Year 2018-2022, Table B25001",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_home_value": 2200000,
+      "median_rent": 4000,
+      "residential_units": 1370,
+      "commercial_sqft": null,
+      "median_property_tax": 46200,
+      "pct_home_value_change_yoy": 7.26,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2018-2022 and Zillow Home Value Index (ZHVI) trends",
+        "median_rent": "Extrapolation from ACS 2018-2022 and market trends",
+        "residential_units": "Extrapolation from ACS 2018-2022 trends",
+        "median_property_tax": "Estimated from median_home_value (2.1%)",
+        "vacancy_rate": "Extrapolation from ACS 2018-2022 trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Values are extrapolated based on 2015-2020 trends and post-2020 market data, accounting for the 2021-2022 spike. YOY change is annualized over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 85000,
+      "poverty_rate": 2.1,
+      "bachelors_degree_or_higher_pct": 62,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census STF3, Table P80A",
+        "poverty_rate": "1990 Decennial Census STF3, Table P117",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census STF3, Table P60",
+        "unemployment_rate": "1990 Decennial Census STF3, Table P70",
+        "gini_coefficient": "Estimated from income distribution tables",
+        "pct_uninsured": "Estimated from regional data",
+        "snap_participation_rate": "Estimated from regional data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 19.2. Gini, uninsured, and SNAP rates are estimates as direct data is unavailable for 1990.",
+      "audit_flags": [
+        "GAP_FILL",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 117500,
+      "poverty_rate": 1.8,
+      "bachelors_degree_or_higher_pct": 68.5,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Linear interpolation",
+        "pct_uninsured": "Linear interpolation",
+        "snap_participation_rate": "Linear interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 150000,
+      "poverty_rate": 1.5,
+      "bachelors_degree_or_higher_pct": 75,
+      "unemployment_rate": 1.9,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 4,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census SF3, Table P53",
+        "poverty_rate": "2000 Decennial Census SF3, Table P87",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census SF3, Table P37",
+        "unemployment_rate": "2000 Decennial Census SF3, Table P43",
+        "gini_coefficient": "Estimated from income distribution tables",
+        "pct_uninsured": "Estimated from regional data",
+        "snap_participation_rate": "Estimated from regional data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 19.2. Gini, uninsured, and SNAP rates are estimates as direct data is unavailable for 2000.",
+      "audit_flags": [
+        "GAP_FILL",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 165000,
+      "poverty_rate": 2,
+      "bachelors_degree_or_higher_pct": 77.2,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 3.8,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab / Estimated from regional data",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2, using earliest available ACS 5-year estimates as a proxy for 2005.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 180000,
+      "poverty_rate": 2.5,
+      "bachelors_degree_or_higher_pct": 79.5,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 3.5,
+      "eviction_filing_rate": 0.6,
+      "snap_participation_rate": 0.7,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab / Estimated from regional data",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 205000,
+      "poverty_rate": 2.2,
+      "bachelors_degree_or_higher_pct": 81,
+      "unemployment_rate": 2.9,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 3,
+      "eviction_filing_rate": 0.4,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 230000,
+      "poverty_rate": 2,
+      "bachelors_degree_or_higher_pct": 83.5,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.5,
+      "pct_uninsured": 2.8,
+      "eviction_filing_rate": 0.3,
+      "snap_participation_rate": 0.4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 19.2. Unemployment rate reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "West Lake Hills",
+      "region_id": 179,
+      "median_household_income": 250000,
+      "poverty_rate": 1.9,
+      "bachelors_degree_or_higher_pct": 85,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 2.5,
+      "eviction_filing_rate": 0.4,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2018-2022 trends (note: ACS top-codes income at $200,001+)",
+        "poverty_rate": "Extrapolation from ACS 2018-2022 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2018-2022 trends",
+        "unemployment_rate": "Extrapolation from ACS and BLS data",
+        "gini_coefficient": "Extrapolation from ACS 2018-2022 trends",
+        "pct_uninsured": "Extrapolation from ACS 2018-2022 trends",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab data",
+        "snap_participation_rate": "Extrapolation from ACS 2018-2022 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are extrapolated based on 2015-2020 trends. Median income is an estimate as it exceeds the highest ACS reporting bracket.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-06-05T18:00:00Z"
+    }
+  ]
+}

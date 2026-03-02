@@ -4,21 +4,172 @@
  * Loads the audited output datasets (demographics, property, socioeconomic)
  * and pre-indexes them by region_id for fast lookups when a region is selected.
  *
- * These datasets are the authoritative source for the right-panel detail view
- * and react to the year slider.
+ * The audited JSON files have inconsistent field names across regions
+ * (e.g. median_rent vs average_rent vs median_rent_usd).  We normalise
+ * every row on import so the rest of the app can rely on canonical names.
  */
 
 import AUDITED_DEMO from "./audit_output/audited_demographics.json";
 import AUDITED_PROP from "./audit_output/audited_property.json";
 import AUDITED_SOCIO from "./audit_output/audited_socioeconomic.json";
 
+// ── Field-name normalisation ────────────────────────────────────────────
+
+/**
+ * Return the first non-null/non-undefined value found for any of `keys`
+ * on the given object, or `fallback` if none found.
+ */
+function pick(obj, keys, fallback = null) {
+  for (const k of keys) {
+    if (obj[k] !== undefined && obj[k] !== null) return obj[k];
+  }
+  return fallback;
+}
+
+/**
+ * Some audited rows store race data inside nested objects such as
+ * `racial_composition`, `race_ethnicity`, `ethnic_distribution`, etc.
+ * Flatten those into top-level `_pct`-style keys before pick() runs.
+ * `ethnic_distribution` sometimes uses 0–1 fractions instead of 0–100.
+ */
+function flattenNested(r) {
+  const obj =
+    r.racial_composition || r.race_ethnicity ||
+    r.race_ethnicity_distribution || r.ethnic_distribution;
+  if (!obj || typeof obj !== "object") return r;
+
+  // ethnic_distribution often stores 0–1 fractions; detect and scale
+  const vals = Object.values(obj).filter((v) => typeof v === "number");
+  const maxVal = Math.max(...vals, 0);
+  const scale = maxVal <= 1 ? 100 : 1; // convert fractions → percentages
+
+  const flat = { ...r };
+  for (const [k, v] of Object.entries(obj)) {
+    if (typeof v !== "number") continue;
+    // Only set if `r` doesn't already have the key
+    if (flat[k] == null) flat[k] = v * scale;
+  }
+  return flat;
+}
+
+/** Normalise a raw audited demographic row to canonical field names. */
+function normDemo(raw) {
+  const r = flattenNested(raw);
+  return {
+    ...r,
+    // canonical race/ethnicity fields — covers all observed field name variants
+    pct_white_non_hispanic: pick(r, [
+      "pct_white_non_hispanic", "pct_white",
+      "percent_white_non_hispanic", "percent_white", "percent_caucasian",
+      "white_non_hispanic_pct", "white_pct", "white_percent", "white_percentage",
+      "ethnicity_white_pct", "ethnicity_white_percent",
+      "population_white_pct", "population_white_percent",
+      "race_white_pct", "race_white_percentage",
+    ]),
+    pct_black_non_hispanic: pick(r, [
+      "pct_black_non_hispanic", "pct_black", "pct_african_american",
+      "percent_black_non_hispanic", "percent_black", "percent_african_american",
+      "black_non_hispanic_pct", "black_pct", "black_percent", "black_percentage",
+      "african_american_pct",
+      "ethnicity_black_pct", "ethnicity_black_percent",
+      "population_black_pct", "population_black_percent",
+      "race_black_pct", "race_black_percentage",
+    ]),
+    pct_hispanic: pick(r, [
+      "pct_hispanic",
+      "percent_hispanic",
+      "hispanic_pct", "hispanic_percent", "hispanic_percentage",
+      "hispanic_latino_pct",
+      "ethnicity_hispanic_pct", "ethnicity_hispanic_percent",
+      "population_hispanic_pct", "population_hispanic_percent",
+      "race_hispanic_pct", "race_hispanic_percentage",
+    ]),
+    pct_asian: pick(r, [
+      "pct_asian",
+      "percent_asian", "percent_asian_non_hispanic",
+      "asian_pct", "asian_percent", "asian_percentage",
+      "asian_non_hispanic_pct",
+      "ethnicity_asian_pct", "ethnicity_asian_percent",
+      "population_asian_pct", "population_asian_percent",
+      "race_asian_pct", "race_asian_percentage",
+    ]),
+    pct_foreign_born: pick(r, [
+      "pct_foreign_born", "foreign_born_pct", "foreign_born_percent",
+    ]),
+    rent_burden_pct: pick(r, [
+      "rent_burden_pct",
+    ]),
+    pct_bachelors_degree_or_higher: pick(r, [
+      "pct_bachelors_degree_or_higher", "pct_bachelors_or_higher",
+      "bachelors_degree_or_higher_pct",
+      "percent_bachelors_degree_or_higher", "percent_with_bachelors_degree_or_higher",
+      "percent_with_bachelors_degree", "percent_with_bachelor_degree_or_higher",
+      "percent_bachelor_degree_or_higher",
+    ]),
+    total_population: pick(r, [
+      "total_population", "population_total", "population",
+    ]),
+  };
+}
+
+/** Normalise a raw audited property row to canonical field names. */
+function normProp(r) {
+  return {
+    ...r,
+    // canonical fields the panel reads
+    median_home_value: pick(r, [
+      "median_home_value", "median_home_value_usd", "median_home_price", "home_value_median",
+    ]),
+    median_rent_monthly: pick(r, [
+      "median_rent_monthly", "median_rent", "median_rent_usd",
+      "median_rental_rate_monthly", "rent_median",
+      "average_rent", "average_rent_usd", "average_rent_monthly",
+      "average_rent_per_month", "average_rent_per_month_usd",
+      "avg_rent", "avg_rent_monthly",
+    ]),
+    residential_units: pick(r, [
+      "residential_units", "housing_units", "total_housing_units",
+    ]),
+    commercial_sqft: pick(r, [
+      "commercial_sqft", "total_office_space_sqft", "total_retail_space_sqft",
+    ]),
+    vacancy_rate: pick(r, [
+      "vacancy_rate", "vacancy_rate_percent",
+      "commercial_vacancy_rate", "commercial_vacancy_rate_percent", "commercial_vacancy_rate_pct",
+    ]),
+    new_construction_permits: pick(r, [
+      "new_construction_permits", "new_housing_units_built",
+      "new_constructions", "new_constructions_annual", "new_units_built", "units_built",
+    ]),
+  };
+}
+
+/** Normalise a raw audited socioeconomic row to canonical field names. */
+function normSocio(r) {
+  return {
+    ...r,
+    median_household_income: pick(r, [
+      "median_household_income", "median_household_income_usd", "income_median_household",
+    ]),
+    poverty_rate: pick(r, [
+      "poverty_rate", "poverty_rate_pct", "poverty_rate_percent",
+      "poverty_rate_percentage", "pct_poverty",
+    ]),
+    unemployment_rate: pick(r, [
+      "unemployment_rate", "unemployment_rate_pct", "unemployment_rate_percent",
+      "unemployment_rate_percentage", "employment_unemployment_rate",
+    ]),
+  };
+}
+
 // ── Build region_id → rows[] indexes ─────────────────────────────────────
 
-function buildIndex(rows) {
+function buildIndex(rows, normFn) {
   const idx = new Map();
-  for (const row of rows) {
-    const id = row.region_id;
+  for (const raw of rows) {
+    const id = raw.region_id;
     if (id == null) continue;
+    const row = normFn ? normFn(raw) : raw;
     if (!idx.has(id)) idx.set(id, []);
     idx.get(id).push(row);
   }
@@ -29,14 +180,14 @@ function buildIndex(rows) {
   return idx;
 }
 
-/** Map<region_id, auditedDemographicRow[]> */
-export const AUDITED_DEMO_BY_ID = buildIndex(AUDITED_DEMO);
+/** Map<region_id, auditedDemographicRow[]>  (normalised) */
+export const AUDITED_DEMO_BY_ID = buildIndex(AUDITED_DEMO, normDemo);
 
-/** Map<region_id, auditedPropertyRow[]> */
-export const AUDITED_PROP_BY_ID = buildIndex(AUDITED_PROP);
+/** Map<region_id, auditedPropertyRow[]>  (normalised) */
+export const AUDITED_PROP_BY_ID = buildIndex(AUDITED_PROP, normProp);
 
-/** Map<region_id, auditedSocioeconomicRow[]> */
-export const AUDITED_SOCIO_BY_ID = buildIndex(AUDITED_SOCIO);
+/** Map<region_id, auditedSocioeconomicRow[]>  (normalised) */
+export const AUDITED_SOCIO_BY_ID = buildIndex(AUDITED_SOCIO, normSocio);
 
 // ── Helpers ──────────────────────────────────────────────────────────────
 

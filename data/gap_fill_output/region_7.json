@@ -1,0 +1,589 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 350000,
+      "median_rent": 1200,
+      "residential_units": 1500,
+      "commercial_sqft": null,
+      "median_property_tax": 7350,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, SF3",
+        "median_rent": "US Decennial Census 1990, SF3",
+        "residential_units": "US Decennial Census 1990, SF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, SF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census Tract 24.11 inferred from provided centroid coordinates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 475000,
+      "median_rent": 1450,
+      "residential_units": 1800,
+      "commercial_sqft": null,
+      "median_property_tax": 9975,
+      "pct_home_value_change_yoy": 6.29,
+      "vacancy_rate": 8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Census",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between decennial census data points. YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 600000,
+      "median_rent": 1700,
+      "residential_units": 2100,
+      "commercial_sqft": null,
+      "median_property_tax": 12600,
+      "pct_home_value_change_yoy": 4.78,
+      "vacancy_rate": 7.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3",
+        "median_rent": "US Decennial Census 2000, SF3",
+        "residential_units": "US Decennial Census 2000, SF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 725000,
+      "median_rent": 1900,
+      "residential_units": 2350,
+      "commercial_sqft": null,
+      "median_property_tax": 15225,
+      "pct_home_value_change_yoy": 3.88,
+      "vacancy_rate": 9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolation between 2000 Census and ACS 2006-2010",
+        "median_rent": "Interpolation between 2000 Census and ACS 2006-2010",
+        "residential_units": "Interpolation between 2000 Census and ACS 2006-2010",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Interpolation between 2000 Census and ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 850000,
+      "median_rent": 2100,
+      "residential_units": 2600,
+      "commercial_sqft": null,
+      "median_property_tax": 17850,
+      "pct_home_value_change_yoy": 3.24,
+      "vacancy_rate": 10.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "ACS 5-Year 2006-2010, Table B25001",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2006-2010, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 1100000,
+      "median_rent": 2500,
+      "residential_units": 2800,
+      "commercial_sqft": null,
+      "median_property_tax": 23100,
+      "pct_home_value_change_yoy": 5.29,
+      "vacancy_rate": 9.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table B25001",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 1600000,
+      "median_rent": 3000,
+      "residential_units": 3000,
+      "commercial_sqft": null,
+      "median_property_tax": 33600,
+      "pct_home_value_change_yoy": 7.78,
+      "vacancy_rate": 9.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "ACS 5-Year 2016-2020, Table B25001",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2016-2020, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_home_value": 2200000,
+      "median_rent": 3500,
+      "residential_units": 3150,
+      "commercial_sqft": null,
+      "median_property_tax": 46200,
+      "pct_home_value_change_yoy": 6.58,
+      "vacancy_rate": 9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2016-2020 and TCAD/Zillow trends",
+        "median_rent": "Extrapolation from ACS 2016-2020 trends",
+        "residential_units": "Extrapolation from ACS 2016-2020 trends",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Extrapolation from ACS 2016-2020 trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Values projected from 2020 data, reflecting post-2022 market stabilization. YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 105000,
+      "poverty_rate": 2.1,
+      "bachelors_degree_or_higher_pct": 65.2,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": 5.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, SF3",
+        "poverty_rate": "US Decennial Census 1990, SF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, SF3",
+        "unemployment_rate": "US Decennial Census 1990, SF3",
+        "gini_coefficient": "Estimated from 1990 Census income distribution",
+        "pct_uninsured": "Estimated based on state-level data for the period",
+        "snap_participation_rate": "US Decennial Census 1990, SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Census Tract 24.11 inferred from centroid. Pre-ACS data for Gini and uninsured rates are estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 127500,
+      "poverty_rate": 1.9,
+      "bachelors_degree_or_higher_pct": 68.1,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 5.2,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Linear interpolation between 1990 and 2000 Census",
+        "pct_uninsured": "Linear interpolation between 1990 and 2000 Census",
+        "snap_participation_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between decennial census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 150000,
+      "poverty_rate": 1.7,
+      "bachelors_degree_or_higher_pct": 71,
+      "unemployment_rate": 1.9,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.6,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3",
+        "poverty_rate": "US Decennial Census 2000, SF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3",
+        "unemployment_rate": "US Decennial Census 2000, SF3",
+        "gini_coefficient": "US Decennial Census 2000, SF3",
+        "pct_uninsured": "US Decennial Census 2000, SF3",
+        "snap_participation_rate": "US Decennial Census 2000, SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Eviction data not available for this period at tract level.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 165000,
+      "poverty_rate": 2,
+      "bachelors_degree_or_higher_pct": 72.5,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 5.8,
+      "eviction_filing_rate": 1,
+      "snap_participation_rate": 0.7,
+      "audit_source": {
+        "median_household_income": "Interpolation between 2000 Census and ACS 2006-2010",
+        "poverty_rate": "Interpolation between 2000 Census and ACS 2006-2010",
+        "bachelors_degree_or_higher_pct": "Interpolation between 2000 Census and ACS 2006-2010",
+        "unemployment_rate": "Interpolation between 2000 Census and ACS 2006-2010",
+        "gini_coefficient": "Interpolation between 2000 Census and ACS 2006-2010",
+        "pct_uninsured": "Interpolation between 2000 Census and ACS 2006-2010",
+        "eviction_filing_rate": "Estimated based on Eviction Lab county-level trends",
+        "snap_participation_rate": "Interpolation between 2000 Census and ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "First year of ACS data is 2005-2009; this is an interpolation.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 180000,
+      "poverty_rate": 2.2,
+      "bachelors_degree_or_higher_pct": 74,
+      "unemployment_rate": 3.6,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 6.5,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2006-2010, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, county-level data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 200000,
+      "poverty_rate": 2.5,
+      "bachelors_degree_or_higher_pct": 76.5,
+      "unemployment_rate": 2.9,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 5.1,
+      "eviction_filing_rate": 1,
+      "snap_participation_rate": 0.9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, county-level data",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Median income often exceeds ACS upper limit in this tract.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 250001,
+      "poverty_rate": 2.8,
+      "bachelors_degree_or_higher_pct": 79.2,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 4.2,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 1.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, county-level data",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Median income is at the maximum reportable value for ACS. Unemployment rate reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Barton Creek",
+      "region_id": 7,
+      "median_household_income": 280000,
+      "poverty_rate": 2.5,
+      "bachelors_degree_or_higher_pct": 81,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 3.8,
+      "eviction_filing_rate": 0.9,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2016-2020 trends",
+        "poverty_rate": "Extrapolation from ACS 2016-2020 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2016-2020 trends",
+        "unemployment_rate": "Extrapolation based on post-pandemic recovery",
+        "gini_coefficient": "Extrapolation from ACS 2016-2020 trends",
+        "pct_uninsured": "Extrapolation from ACS 2016-2020 trends",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab trends",
+        "snap_participation_rate": "Extrapolation from ACS 2016-2020 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "low",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values projected from 2020 data. Actual median income likely higher than ACS cap.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ]
+}
