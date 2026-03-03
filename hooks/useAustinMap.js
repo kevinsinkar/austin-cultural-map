@@ -28,6 +28,15 @@ export default function useAustinMap({
   const musicLayer = useRef(null);
   const businessLayerRef = useRef({ operating: null, closed: null });
 
+  // Keep a mutable ref to activeRegionId so GeoJSON event handlers
+  // (created once in the init useEffect) always see the latest value.
+  const activeRegionIdRef = useRef(activeRegionId);
+  activeRegionIdRef.current = activeRegionId;
+
+  // Same for year so mouseout can recompute the correct fill.
+  const yearRef = useRef(year);
+  yearRef.current = year;
+
 
   // utility: round coordinates in GeoJSON to reduce precision
   function simplifyGeojsonPrecision(geojson, decimals = 6) {
@@ -64,7 +73,7 @@ export default function useAustinMap({
       style: () => ({
         color: "#a8a49c",
         weight: 1,
-        fillOpacity: 0.7,
+        fillOpacity: 0.25,
         fillColor: "#e0ddd7",
       }),
       onEachFeature: (feature, layer) => {
@@ -72,13 +81,30 @@ export default function useAustinMap({
         layer.on({
           mouseover: (e) => {
             const l = e.target;
-            l.setStyle({ weight: 3, color: "#666", fillOpacity: 0.7 });
-            l.bringToFront();
-            setHoveredRegion(feature.properties.region_id);
+            const rid = feature.properties.region_id;
+            const isActive = activeRegionIdRef.current === rid;
+            // Hover: outline only, transparent fill, stay behind business markers
+            if (!isActive) {
+              l.setStyle({ weight: 2.5, color: "#444", fillOpacity: 0 });
+            }
+            // Do NOT bringToFront — keep regions behind business pins
+            setHoveredRegion(rid);
             l.openTooltip();
           },
           mouseout: (e) => {
-            geojsonLayer.resetStyle(e.target);
+            // Re-apply the computed style instead of resetStyle so that
+            // the active-region highlight is preserved.
+            const rid = feature.properties.region_id;
+            const yr = yearRef.current;
+            const dvi = interpolateDvi(rid, yr);
+            const fill = yr < 1993 ? "#e0ddd7" : getDviColor(dvi, false);
+            const isActive = activeRegionIdRef.current === rid;
+            e.target.setStyle({
+              fillColor: fill,
+              fillOpacity: 0.25,
+              color: isActive ? "#1a1a1a" : "#a8a49c",
+              weight: isActive ? 3 : 1,
+            });
             setHoveredRegion(null);
           },
           click: (e) => {
@@ -138,7 +164,7 @@ export default function useAustinMap({
 
       return {
         fillColor: fill,
-        fillOpacity: isActive ? 0.95 : 0.7,
+        fillOpacity: 0.25,
         color: isActive ? "#1a1a1a" : "#a8a49c",
         weight: isActive ? 3 : 1,
       };
@@ -254,13 +280,25 @@ export default function useAustinMap({
         const strokeW = Math.max(0.0002, closest.yoy * 0.0001);
         layer.setStyle({ weight: strokeW, color: getDevPressureColor(region.region_name, year) });
       });
-    } else if (geojsonLayerRef.current) {
-      // clear any previously-applied dev-pressure styling
+    }
+    // When dev-pressure is off (or after any overlay update), re-apply the
+    // correct DVI + active-region styling so that the highlighting effect
+    // and this effect don't fight each other.
+    if (!showDevPressure && geojsonLayerRef.current) {
       geojsonLayerRef.current.eachLayer((layer) => {
-        geojsonLayerRef.current.resetStyle(layer);
+        const regionId = layer.feature.properties.region_id;
+        const dvi = interpolateDvi(regionId, year);
+        const fill = year < 1993 ? "#e0ddd7" : getDviColor(dvi, false);
+        const isActive = activeRegionId === regionId;
+        layer.setStyle({
+          fillColor: fill,
+          fillOpacity: 0.25,
+          color: isActive ? "#1a1a1a" : "#a8a49c",
+          weight: isActive ? 3 : 1,
+        });
       });
     }
-  }, [year, showPins, showMusicVenues, showProjectConnect, showDevPressure]);
+  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure]);
 
   // ── Clear active feature when selectedRegion is cleared ──
   useEffect(() => {

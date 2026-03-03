@@ -1,0 +1,1347 @@
+[
+  {
+    "region": "Census Tract 24.47",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 407.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 3.09",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Census Tract 22.14",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "Census Tract 419.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 411.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 367.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 440.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 437.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 368.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 415.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 22.13",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 324.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 410.0",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 13.12",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Census Tract 23.2",
+    "period": "2018-2022",
+    "dvi": 88.9
+  },
+  {
+    "region": "Census Tract 449.0",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 24.53",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 416.0",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 400.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 23.27",
+    "period": "2018-2022",
+    "dvi": 48.6
+  },
+  {
+    "region": "Census Tract 345.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 321.0",
+    "period": "2018-2022",
+    "dvi": 23.2
+  },
+  {
+    "region": "Census Tract 23.25",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 338.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 301.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 308.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 316.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 325.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 456.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 342.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 413.0",
+    "period": "2018-2022",
+    "dvi": 23.2
+  },
+  {
+    "region": "Census Tract 432.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 420.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 451.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 414.0",
+    "period": "2018-2022",
+    "dvi": 69.5
+  },
+  {
+    "region": "Census Tract 431.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 464.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 402.0",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 339.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 452.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 422.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 300.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 438.0",
+    "period": "2018-2022",
+    "dvi": 29.2
+  },
+  {
+    "region": "Census Tract 305.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 328.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.49",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 13.11",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Census Tract 313.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 358.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 457.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 429.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 319.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 446.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 332.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.45",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 433.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 465.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 441.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 24.39",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 421.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 439.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 335.0",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Census Tract 24.4",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.46",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.42",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 356.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 22.19",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 205.17",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 203.33",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 341.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 24.52",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 22.22",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 3.08",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Census Tract 346.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 23.21",
+    "period": "2018-2022",
+    "dvi": 54.1
+  },
+  {
+    "region": "Census Tract 22.15",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 23.26",
+    "period": "2018-2022",
+    "dvi": 48.6
+  },
+  {
+    "region": "Blackland (Tract 4.02)",
+    "period": "2018-2022",
+    "dvi": 100.0
+  },
+  {
+    "region": "North University (Tract 5.0)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 6.01",
+    "period": "2018-2022",
+    "dvi": 16.2
+  },
+  {
+    "region": "Eastview (Tract 8.01)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Rosewood (Tract 8.02)",
+    "period": "2018-2022",
+    "dvi": 100.0
+  },
+  {
+    "region": "Chestnut (Tract 8.03)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Foster Heights (Tract 8.04)",
+    "period": "2018-2022",
+    "dvi": 100.0
+  },
+  {
+    "region": "Central East Austin (Tract 9.01)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Old West Austin- Tarrytown East (Tract 16.03)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Old Enfield - Central West Austin (Tract 16.05)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Oakmont Heights* (Tract 16.06)",
+    "period": "2018-2022",
+    "dvi": 0.0
+  },
+  {
+    "region": "Parker Lane West (Tract 23.07)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "West Congress (Tract 20.03)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Allandale South-Rosedale (Tract 1.01)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Parker Lane East (Tract 23.13)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Northside (Tract 7.0)",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Tarrytown West (Tract 16.04)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Treemont (Tract 19.1)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Akins (Tract 24.07)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "East Riverside - Pleasant Valley (Tract 23.15)",
+    "period": "2018-2022",
+    "dvi": 48.6
+  },
+  {
+    "region": "Dawson (Tract 13.08)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Bartons Bluff (Tract 19.11)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "East Boggy Creek (Tract 21.1)",
+    "period": "2018-2022",
+    "dvi": 59.5
+  },
+  {
+    "region": "Johnston Terrace (Tract 21.11)",
+    "period": "2018-2022",
+    "dvi": 100.0
+  },
+  {
+    "region": "Windsor Park West (Tract 21.05)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Windsor Park East (Tract 21.06)",
+    "period": "2018-2022",
+    "dvi": 79.5
+  },
+  {
+    "region": "MLK North (Tract 21.07)",
+    "period": "2018-2022",
+    "dvi": 79.5
+  },
+  {
+    "region": "MLK South (Tract 21.09)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "West University (Tract 2.04)",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Riverside - I35 (Tract 14.03)",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "East MLK (Tract 21.08)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Davenport Ranch (Tract 19.13)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "East Austin (Tract 9.02)",
+    "period": "2018-2022",
+    "dvi": 100.0
+  },
+  {
+    "region": "East Cesar Chavez -Holly (Tract 10.0)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Clarksville (Tract 12.0)",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Zilker-Bouldin (Tract 13.04)",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Galindo (Tract 13.07)",
+    "period": "2018-2022",
+    "dvi": 59.5
+  },
+  {
+    "region": "Travis Heights East (Tract 14.01)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Colorado Foothills* (Tract 1.02)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Ridgetop (Tract 21.04)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Triangle State (Tract 2.03)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Hyde Park South (Tract 3.02)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Hancock (Tract 4.01)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Highland South (Tract 15.03)",
+    "period": "2018-2022",
+    "dvi": 34.6
+  },
+  {
+    "region": "Travis Heights West (Tract 14.02)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Crestview (Tract 15.04)",
+    "period": "2018-2022",
+    "dvi": 23.2
+  },
+  {
+    "region": "Brentwood North (Tract 15.05)",
+    "period": "2018-2022",
+    "dvi": 34.6
+  },
+  {
+    "region": "Allandale North (Tract 15.01)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Deep Eddy (Tract 16.02)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "South Manchaca (Tract 20.02)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Lakehills Plaza (Tract 20.04)",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "Rob Roy (Tract 19.12)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 204.1",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 204.03",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 204.04",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 204.05",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 204.06",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 205.03",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 204.11",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 205.08",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 340.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 19.23",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 330.0",
+    "period": "2018-2022",
+    "dvi": 23.2
+  },
+  {
+    "region": "Census Tract 13.09",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Census Tract 366.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 307.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 302.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 322.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 323.0",
+    "period": "2018-2022",
+    "dvi": 23.8
+  },
+  {
+    "region": "Census Tract 318.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 320.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 435.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 424.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 403.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 436.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 23.22",
+    "period": "2018-2022",
+    "dvi": 54.1
+  },
+  {
+    "region": "Census Tract 317.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 310.0",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Census Tract 23.23",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "Census Tract 306.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.38",
+    "period": "2018-2022",
+    "dvi": 29.2
+  },
+  {
+    "region": "Census Tract 6.08",
+    "period": "2018-2022",
+    "dvi": 48.6
+  },
+  {
+    "region": "Census Tract 6.06",
+    "period": "2018-2022",
+    "dvi": 10.8
+  },
+  {
+    "region": "Census Tract 6.07",
+    "period": "2018-2022",
+    "dvi": 3.2
+  },
+  {
+    "region": "Census Tract 11.01",
+    "period": "2018-2022",
+    "dvi": 3.2
+  },
+  {
+    "region": "Census Tract 13.1",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 11.02",
+    "period": "2018-2022",
+    "dvi": 69.5
+  },
+  {
+    "region": "Census Tract 333.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 309.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 450.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 22.21",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 20.06",
+    "period": "2018-2022",
+    "dvi": 100.0
+  },
+  {
+    "region": "Census Tract 6.05",
+    "period": "2018-2022",
+    "dvi": 16.2
+  },
+  {
+    "region": "Census Tract 20.07",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Census Tract 348.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 349.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 312.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 454.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 453.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 404.0",
+    "period": "2018-2022",
+    "dvi": 23.2
+  },
+  {
+    "region": "Census Tract 19.2",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 205.16",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 23.24",
+    "period": "2018-2022",
+    "dvi": 21.6
+  },
+  {
+    "region": "Census Tract 412.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 22.17",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 447.0",
+    "period": "2018-2022",
+    "dvi": 0.0
+  },
+  {
+    "region": "Census Tract 24.5",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 22.2",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 205.13",
+    "period": "2018-2022",
+    "dvi": 54.1
+  },
+  {
+    "region": "Census Tract 203.47",
+    "period": "2018-2022",
+    "dvi": 23.2
+  },
+  {
+    "region": "Census Tract 109.12",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 203.34",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 203.56",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 109.23",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 24.51",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Census Tract 405.0",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "Census Tract 311.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 314.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 357.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 408.0",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 401.0",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 418.0",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 417.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 24.43",
+    "period": "2018-2022",
+    "dvi": 69.5
+  },
+  {
+    "region": "Census Tract 347.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 372.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.44",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Census Tract 409.0",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "Census Tract 406.0",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "Census Tract 334.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 19.22",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 11.03",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 351.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 303.0",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "Census Tract 304.0",
+    "period": "2018-2022",
+    "dvi": 69.5
+  },
+  {
+    "region": "Census Tract 343.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 344.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 337.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 327.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 329.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 371.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 443.0",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 19.21",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Census Tract 326.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 434.0",
+    "period": "2018-2022",
+    "dvi": 81.9
+  },
+  {
+    "region": "Census Tract 24.37",
+    "period": "2018-2022",
+    "dvi": 23.8
+  },
+  {
+    "region": "Census Tract 24.41",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 350.0",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 22.16",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 24.48",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 442.0",
+    "period": "2018-2022",
+    "dvi": 17.8
+  },
+  {
+    "region": "Census Tract 204.09",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "Census Tract 205.09",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 19.16",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Redbud (Tract 19.18)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Regents (Tract 19.14)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Yarabee Bend (Tract 24.3)",
+    "period": "2018-2022",
+    "dvi": 37.8
+  },
+  {
+    "region": "Hyde Park East (Tract 3.04)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 23.19",
+    "period": "2018-2022",
+    "dvi": 0.0
+  },
+  {
+    "region": "Lost Creek (Tract 19.17)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Rosedale (Tract 2.06)",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Hyde Park West (Tract 3.05)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Brentwood South (Tract 2.05)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Cherrywood (Tract 3.07)",
+    "period": "2018-2022",
+    "dvi": 21.1
+  },
+  {
+    "region": "Eanes Creek (Tract 19.19)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 203.11",
+    "period": "2018-2022",
+    "dvi": 61.1
+  },
+  {
+    "region": "Census Tract 204.08",
+    "period": "2018-2022",
+    "dvi": 12.4
+  },
+  {
+    "region": "St. Andrews (Tract 19.15)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Census Tract 24.34",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Thunderbird (Tract 22.11)",
+    "period": "2018-2022",
+    "dvi": 88.9
+  },
+  {
+    "region": "Raintree Estates (Tract 25.0)",
+    "period": "2018-2022",
+    "dvi": 4.9
+  },
+  {
+    "region": "Pilot Knob (Tract 24.32)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "University Hills West (Tract 21.12)",
+    "period": "2018-2022",
+    "dvi": 72.4
+  },
+  {
+    "region": "University Hills East (Tract 21.13)",
+    "period": "2018-2022",
+    "dvi": 69.5
+  },
+  {
+    "region": "Walnut Bend (Tract 22.01)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Census Tract 9800",
+    "period": "2018-2022",
+    "dvi": 0.0
+  },
+  {
+    "region": "Riverside (Tract 23.04)",
+    "period": "2018-2022",
+    "dvi": 85.7
+  },
+  {
+    "region": "East Riverside - Oltorf (Tract 23.14)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "East Riverside - Heritage Oaks (Tract 23.16)",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "East Congress (Tract 24.03)",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Garrison Park East (Tract 24.09)",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Armadillo Park (Tract 24.1)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Franklin Park West (Tract 24.11)",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "William Cannon (Tract 24.12)",
+    "period": "2018-2022",
+    "dvi": 70.3
+  },
+  {
+    "region": "Frankline Park East (Tract 24.13)",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Comal Bluff (Tract 24.19)",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Parkridge Gardens (Tract 24.22)",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Buckingham Estates (Tract 24.23)",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Elmwood Estates (Tract 24.24)",
+    "period": "2018-2022",
+    "dvi": 63.2
+  },
+  {
+    "region": "Census Tract 23.1",
+    "period": "2018-2022",
+    "dvi": 53.5
+  },
+  {
+    "region": "Census Tract 9503.03",
+    "period": "2018-2022",
+    "dvi": 12.4
+  }
+]

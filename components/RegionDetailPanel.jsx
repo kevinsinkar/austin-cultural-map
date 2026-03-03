@@ -62,7 +62,7 @@ export default function RegionDetailPanel({
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
             <div>
-              <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 20, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 }}>{activeFeature.properties.region_name}</h2>
+              <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 20, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 }}>{activeFeature.properties.region_name} <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}>[id. {activeFeature.properties.region_id}]</span></h2>
               {activeFeature.properties.heritage && (
                 <span style={{ display: "inline-block", fontSize: 10, color: "#7c6f5e", padding: "2px 8px", background: "#f5f0ea", borderRadius: 3, fontWeight: 500, marginTop: 4 }}>
                   {activeFeature.properties.heritage}
@@ -139,8 +139,6 @@ export default function RegionDetailPanel({
             {propertyNow && [
               { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value, sub: "Appraised" },
               { label: "Median Rent", value: propertyNow.median_rent_monthly, fmt: (v) => v != null ? "$" + v.toLocaleString() : "N/A", prevVal: propertyPrev?.median_rent_monthly, sub: "Monthly" },
-              { label: "Residential Units", value: propertyNow.residential_units, fmt: (v) => v != null ? v.toLocaleString() : "N/A", prevVal: propertyPrev?.residential_units, sub: "Units" },
-              { label: "Commercial Sqft", value: propertyNow.commercial_sqft, fmt: (v) => v != null ? v.toLocaleString() : "N/A", prevVal: propertyPrev?.commercial_sqft, sub: "Sqft" },
             ].map((c, i) => {
               const ch = c.prevVal != null ? fmtChange(c.value, c.prevVal) : null;
               const up = ch?.dir === "up";
@@ -167,8 +165,8 @@ export default function RegionDetailPanel({
             })}
             {/* Socioeconomic Metrics */}
             {socioNow && [
-              { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => "$" + (v / 1000).toFixed(0) + "k", prevVal: socioPrev?.median_household_income, sub: "Annual" },
-              { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: fmtPct, prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true },
+              { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: socioPrev?.median_household_income, sub: "Annual" },
+              { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: (v) => v != null ? v.toFixed(1) + "%" : "N/A", prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true },
             ].map((c, i) => {
               const ch = c.prevVal != null ? fmtChange(c.value, c.prevVal) : null;
               const up = ch?.dir === "up";

@@ -12,6 +12,8 @@
  *   MODEL            — Gemini model (default: gemini-2.5-pro)
  *   OUTPUT_DIR       — where to write results (default: ./audit_output)
  *   RATE_LIMIT_MS    — ms between API calls (default: 4000)
+ *   RETRY_FAILED     — "true" to only re-process failed + empty regions
+ *   DRY_RUN          — "true" to list targets without calling the API
  */
 
 import fs from "fs";
@@ -19,12 +21,15 @@ import path from "path";
 
 // ── Config ─────────────────────────────────────────────────────────────
 const API_KEY = process.env.GEMINI_API_KEY;
-if (!API_KEY) throw new Error("Set GEMINI_API_KEY env var");
 
 const MODEL = process.env.MODEL || "gemini-2.5-pro";
 const START_ID = parseInt(process.env.START_REGION_ID || "1", 10);
 const OUTPUT_DIR = process.env.OUTPUT_DIR || "./audit_output";
 const RATE_LIMIT_MS = parseInt(process.env.RATE_LIMIT_MS || "4000", 10);
+const RETRY_FAILED = process.env.RETRY_FAILED === "true";
+const DRY_RUN = process.env.DRY_RUN === "true";
+
+if (!API_KEY && !DRY_RUN) throw new Error("Set GEMINI_API_KEY env var");
 
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
@@ -162,16 +167,97 @@ async function main() {
   const auditLog = [];
 
   const sortedRegions = [...regionIndex.entries()].sort((a, b) => a[0] - b[0]);
-  const regionsToProcess = sortedRegions.filter(([id]) => id >= START_ID);
+
+  // ── Retry-failed mode: find failed + empty regions ───────────────────
+  let retrySet = null; // null = normal mode, Set = retry mode
+
+  if (RETRY_FAILED) {
+    retrySet = new Set();
+
+    // 1) Collect IDs that failed in the audit log
+    const logPath = path.join(OUTPUT_DIR, "audit_log.json");
+    if (fs.existsSync(logPath)) {
+      const log = JSON.parse(fs.readFileSync(logPath, "utf-8"));
+      for (const entry of log) {
+        if (entry.status === "FAILED") {
+          // Only retry if the file doesn't exist yet or is empty/corrupt
+          const regionFile = path.join(
+            OUTPUT_DIR,
+            `region_${entry.region_id}.json`
+          );
+          if (!fs.existsSync(regionFile)) {
+            retrySet.add(entry.region_id);
+          } else {
+            try {
+              const data = JSON.parse(fs.readFileSync(regionFile, "utf-8"));
+              const totalRows =
+                (data.demographics || []).length +
+                (data.property || []).length +
+                (data.socioeconomic || []).length;
+              if (totalRows === 0) retrySet.add(entry.region_id);
+              // else: file exists with data — skip (already recovered)
+            } catch {
+              retrySet.add(entry.region_id); // corrupt → retry
+            }
+          }
+        }
+      }
+    }
+
+    // 2) Collect IDs whose files exist but are empty (0 data rows)
+    for (const [regionId] of sortedRegions) {
+      const regionFile = path.join(OUTPUT_DIR, `region_${regionId}.json`);
+      if (fs.existsSync(regionFile)) {
+        try {
+          const data = JSON.parse(fs.readFileSync(regionFile, "utf-8"));
+          const totalRows =
+            (data.demographics || []).length +
+            (data.property || []).length +
+            (data.socioeconomic || []).length;
+          if (totalRows === 0) retrySet.add(regionId);
+        } catch {
+          retrySet.add(regionId); // corrupt JSON → retry
+        }
+      }
+    }
+
+    // 3) Delete the empty/corrupt files so they get regenerated
+    for (const id of retrySet) {
+      const regionFile = path.join(OUTPUT_DIR, `region_${id}.json`);
+      if (fs.existsSync(regionFile)) {
+        fs.unlinkSync(regionFile);
+        console.log(`  🗑  Deleted empty/corrupt file: region_${id}.json`);
+      }
+    }
+
+    console.log(
+      `\nRETRY_FAILED mode — targeting ${retrySet.size} regions: ${[...retrySet].sort((a, b) => a - b).join(", ")}\n`
+    );
+
+    if (DRY_RUN) {
+      console.log("DRY_RUN=true — listing targets only, no API calls.");
+      for (const id of [...retrySet].sort((a, b) => a - b)) {
+        const name = regionIndex.get(id) || "unknown";
+        console.log(`  → Region ${id}: "${name}"`);
+      }
+      return;
+    }
+  }
+
+  const regionsToProcess =
+    retrySet !== null
+      ? sortedRegions.filter(([id]) => retrySet.has(id))
+      : sortedRegions.filter(([id]) => id >= START_ID);
 
   console.log(
-    `Starting audit of ${regionsToProcess.length} regions (from id ${START_ID})...`
+    `Starting audit of ${regionsToProcess.length} regions${retrySet ? " (retry-failed mode)" : ` (from id ${START_ID})`}...`
   );
   console.log(
     `Model: ${MODEL} | Rate limit: ${RATE_LIMIT_MS}ms between calls\n`
   );
 
   for (const [regionId, regionName] of regionsToProcess) {
+   try {
     const regionFile = path.join(OUTPUT_DIR, `region_${regionId}.json`);
 
     // Skip if already audited (resume support)
@@ -192,7 +278,7 @@ async function main() {
 
     let result;
     let attempts = 0;
-    const MAX_RETRIES = 3;
+    const MAX_RETRIES = 5;
 
     while (attempts < MAX_RETRIES) {
       try {
@@ -213,7 +299,7 @@ async function main() {
           );
           result = null;
         } else {
-          await sleep(RATE_LIMIT_MS * 2 * attempts); // exponential backoff
+          await sleep(RATE_LIMIT_MS * 3 * attempts); // exponential backoff
         }
       }
     }
@@ -255,6 +341,17 @@ async function main() {
 
     // Rate limit
     await sleep(RATE_LIMIT_MS);
+   } catch (outerErr) {
+    console.error(
+      `     💥 Unexpected error on region ${regionId}: ${outerErr.message}`
+    );
+    auditLog.push({
+      region_id: regionId,
+      region: regionName,
+      status: "FAILED",
+      error: `Unexpected: ${outerErr.message}`,
+    });
+   }
   }
 
   // ── Write combined output files ──────────────────────────────────────
@@ -263,24 +360,78 @@ async function main() {
   const outSocio = path.join(OUTPUT_DIR, "audited_socioeconomic.json");
   const outLog = path.join(OUTPUT_DIR, "audit_log.json");
 
-  fs.writeFileSync(outDemo, JSON.stringify(allDemographics, null, 2));
-  fs.writeFileSync(outProp, JSON.stringify(allProperty, null, 2));
-  fs.writeFileSync(outSocio, JSON.stringify(allSocioeconomic, null, 2));
-  fs.writeFileSync(outLog, JSON.stringify(auditLog, null, 2));
+  // In retry mode, merge new results with existing data from all region files
+  if (retrySet !== null) {
+    // Re-read all region files to build complete combined output
+    const mergedDemo = [];
+    const mergedProp = [];
+    const mergedSocio = [];
 
-  // ── Summary ──────────────────────────────────────────────────────────
-  const failed = auditLog.filter((l) => l.status === "FAILED").length;
-  const totalCorrections = auditLog
-    .filter((l) => l.status === "OK")
-    .reduce((sum, l) => sum + l.corrections, 0);
+    for (const [regionId] of sortedRegions) {
+      const regionFile = path.join(OUTPUT_DIR, `region_${regionId}.json`);
+      if (fs.existsSync(regionFile)) {
+        try {
+          const data = JSON.parse(fs.readFileSync(regionFile, "utf-8"));
+          mergedDemo.push(...(data.demographics || []));
+          mergedProp.push(...(data.property || []));
+          mergedSocio.push(...(data.socioeconomic || []));
+        } catch {
+          /* skip corrupt files */
+        }
+      }
+    }
 
-  console.log(`\n${"═".repeat(60)}`);
-  console.log(`AUDIT COMPLETE`);
-  console.log(`  Regions processed: ${auditLog.length}`);
-  console.log(`  Failures:          ${failed}`);
-  console.log(`  Total corrections: ${totalCorrections}`);
-  console.log(`  Output:            ${OUTPUT_DIR}/`);
-  console.log(`${"═".repeat(60)}`);
+    // Merge audit log: keep existing non-retried entries, add new ones
+    const logPath = path.join(OUTPUT_DIR, "audit_log.json");
+    let existingLog = [];
+    if (fs.existsSync(logPath)) {
+      existingLog = JSON.parse(fs.readFileSync(logPath, "utf-8"));
+    }
+    const retriedIds = new Set(auditLog.map((e) => e.region_id));
+    const keptEntries = existingLog.filter(
+      (e) => !retriedIds.has(e.region_id)
+    );
+    const mergedLog = [...keptEntries, ...auditLog].sort(
+      (a, b) => a.region_id - b.region_id
+    );
+
+    fs.writeFileSync(outDemo, JSON.stringify(mergedDemo, null, 2));
+    fs.writeFileSync(outProp, JSON.stringify(mergedProp, null, 2));
+    fs.writeFileSync(outSocio, JSON.stringify(mergedSocio, null, 2));
+    fs.writeFileSync(outLog, JSON.stringify(mergedLog, null, 2));
+
+    const stillFailed = mergedLog.filter((l) => l.status === "FAILED").length;
+    const retryOk = auditLog.filter((l) => l.status === "OK").length;
+    const retryFailed = auditLog.filter((l) => l.status === "FAILED").length;
+
+    console.log(`\n${"═".repeat(60)}`);
+    console.log(`RETRY COMPLETE`);
+    console.log(`  Retried:         ${auditLog.length} regions`);
+    console.log(`  Succeeded:       ${retryOk}`);
+    console.log(`  Still failing:   ${retryFailed}`);
+    console.log(`  Total failures:  ${stillFailed} (across all regions)`);
+    console.log(`  Output:          ${OUTPUT_DIR}/`);
+    console.log(`${"═".repeat(60)}`);
+  } else {
+    fs.writeFileSync(outDemo, JSON.stringify(allDemographics, null, 2));
+    fs.writeFileSync(outProp, JSON.stringify(allProperty, null, 2));
+    fs.writeFileSync(outSocio, JSON.stringify(allSocioeconomic, null, 2));
+    fs.writeFileSync(outLog, JSON.stringify(auditLog, null, 2));
+
+    // ── Summary ──────────────────────────────────────────────────────────
+    const failed = auditLog.filter((l) => l.status === "FAILED").length;
+    const totalCorrections = auditLog
+      .filter((l) => l.status === "OK")
+      .reduce((sum, l) => sum + l.corrections, 0);
+
+    console.log(`\n${"═".repeat(60)}`);
+    console.log(`AUDIT COMPLETE`);
+    console.log(`  Regions processed: ${auditLog.length}`);
+    console.log(`  Failures:          ${failed}`);
+    console.log(`  Total corrections: ${totalCorrections}`);
+    console.log(`  Output:            ${OUTPUT_DIR}/`);
+    console.log(`${"═".repeat(60)}`);
+  }
 }
 
 main().catch(console.error);

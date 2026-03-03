@@ -1,8 +1,14 @@
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import useAustinMap from "../hooks/useAustinMap";
 import RegionDetailPanel from "./RegionDetailPanel";
 import { SNAP_YEARS, PLAY_YEARS, TIMELINE_EVENTS } from "../data/constants";
-import { DEMOGRAPHICS, PROPERTY_DATA, SOCIOECONOMIC } from "../data";
+import {
+  AUDITED_PROP_BY_ID,
+  AUDITED_SOCIO_BY_ID,
+  closestRow,
+  priorRow,
+  toDemoChartData,
+} from "../data/auditedData";
 
 export default function MapView({
   year,
@@ -36,8 +42,6 @@ export default function MapView({
   currentDvi,
   regionBizOpen,
   regionBizClosed,
-  // demoChartData will be computed below
-  // socioNow and socioPrev are computed below
   tippingPoint,
   narrativeCallouts,
 }) {
@@ -61,28 +65,31 @@ export default function MapView({
 
   const activeRegionName = activeFeature?.properties?.region_name;
 
-  // Compute demoChartData from interim demographics for the selected region
-  let demoChartData = [];
-  if (activeRegionId != null) {
-    demoChartData = DEMOGRAPHICS.filter(d => d.region_id === activeRegionId)
-      .sort((a, b) => a.year - b.year);
-  }
+  // Compute demoChartData from audited demographics for the selected region
+  const demoChartData = useMemo(
+    () => (activeRegionId != null ? toDemoChartData(activeRegionId) : []),
+    [activeRegionId]
+  );
 
-  // Compute property values for the selected region and year
-  let propertyNow = null, propertyPrev = null;
-  if (activeRegionId != null) {
-    const props = PROPERTY_DATA.filter(p => p.region_id === activeRegionId).sort((a, b) => a.year - b.year);
-    propertyNow = props.reduce((a, b) => Math.abs(b.year - year) < Math.abs(a.year - year) ? b : a, props[0]);
-    propertyPrev = props.filter(p => p.year < year).reduce((a, b) => Math.abs(b.year - (year - 5)) < Math.abs(a.year - (year - 5)) ? b : a, props[0]);
-  }
+  // Compute property values from audited property data for the selected region and year
+  const { propertyNow, propertyPrev } = useMemo(() => {
+    if (activeRegionId == null) return { propertyNow: null, propertyPrev: null };
+    const rows = AUDITED_PROP_BY_ID.get(activeRegionId);
+    return {
+      propertyNow: closestRow(rows, year),
+      propertyPrev: priorRow(rows, year),
+    };
+  }, [activeRegionId, year]);
 
-  // Compute socioeconomic values for the selected region and year
-  let socioNow = null, socioPrev = null;
-  if (activeRegionId != null) {
-    const socs = SOCIOECONOMIC.filter(s => s.region_id === activeRegionId).sort((a, b) => a.year - b.year);
-    socioNow = socs.reduce((a, b) => Math.abs(b.year - year) < Math.abs(a.year - year) ? b : a, socs[0]);
-    socioPrev = socs.filter(s => s.year < year).reduce((a, b) => Math.abs(b.year - (year - 5)) < Math.abs(a.year - (year - 5)) ? b : a, socs[0]);
-  }
+  // Compute socioeconomic values from audited socioeconomic data for the selected region and year
+  const { socioNow, socioPrev } = useMemo(() => {
+    if (activeRegionId == null) return { socioNow: null, socioPrev: null };
+    const rows = AUDITED_SOCIO_BY_ID.get(activeRegionId);
+    return {
+      socioNow: closestRow(rows, year),
+      socioPrev: priorRow(rows, year),
+    };
+  }, [activeRegionId, year]);
 
   const handleSliderChange = (e) => setYear(parseInt(e.target.value));
 

@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import _ from "lodash";
-import { DVI_LOOKUP } from "../data/dvi_generated.js";
+import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi.js";
 import { SOCIOECONOMIC } from "../data";
 import { NAME_TO_ID } from "../data/regionLookup";
 
@@ -24,7 +24,7 @@ export function lerp(pts, yr) {
  * @param {number|string} regionId – numeric region_id (preferred) or region_name fallback
  */
 export function interpolateDvi(regionId, yr) {
-  return lerp(DVI_LOOKUP[regionId], yr);
+  return lerp(AUDITED_DVI_LOOKUP[regionId], yr);
 }
 
 export function getDviColor(dvi, nd = false) {

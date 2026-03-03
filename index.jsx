@@ -99,25 +99,6 @@ export default function AustinCulturalMap() {
     [activeRegionName]
   );
 
-  const demoChartData = useMemo(
-    () =>
-      !activeRegionName
-        ? []
-        : DEMOGRAPHICS.filter((d) => d.region === activeRegionName).map((d) => ({
-            year: d.year,
-            White: d.pctWhite,
-            Black: d.pctBlack,
-            Hispanic: d.pctHispanic,
-            Asian: d.pctAsian,
-            Other: d.pctOther,
-            total: d.total,
-            popBlack: d.popBlack,
-            popHispanic: d.popHispanic,
-            popWhite: d.popWhite,
-          })),
-    [activeRegionName]
-  );
-
   const socioNow = useMemo(
     () => (activeRegionName ? interpolateSocio(activeRegionName, year) : null),
     [activeRegionName, year]
@@ -291,7 +272,6 @@ export default function AustinCulturalMap() {
               currentDvi={currentDvi}
               regionBizOpen={regionBizOpen}
               regionBizClosed={regionBizClosed}
-              demoChartData={demoChartData}
               tippingPoint={tippingPoint}
               narrativeCallouts={narrativeCallouts}
             />
