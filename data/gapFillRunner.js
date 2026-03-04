@@ -85,40 +85,30 @@ function buildUserMessage(regions) {
     );
     parts.push(`GENERATE DATA FOR YEARS: ${targetYears.join(", ")}`);
 
-    // Include demographic context if available
+    // Include demographic context if available (compact JSON to save tokens)
     const demoRows = demoByRegion.get(r.region_id) || [];
     if (demoRows.length > 0) {
-      // Provide a sample of demographic rows at key years for context
-      const contextYears = [1990, 2000, 2010, 2020, 2025];
+      const contextYears = [1990, 2000, 2010, 2020];
       const contextRows = contextYears
         .map((y) => demoRows.find((d) => d.year === y))
         .filter(Boolean)
         .map((d) => ({
-          year: d.year,
-          total_population: d.total_population,
-          pct_white: d.pct_white,
-          pct_black: d.pct_black,
-          pct_hispanic: d.pct_hispanic,
-          pct_foreign_born: d.pct_foreign_born,
-          pct_owner_occupied: d.pct_owner_occupied,
-          rent_burden_pct: d.rent_burden_pct,
-          median_age: d.median_age,
+          y: d.year,
+          pop: d.total_population,
+          w: d.pct_white,
+          b: d.pct_black,
+          h: d.pct_hispanic,
+          own: d.pct_owner_occupied,
+          rb: d.rent_burden_pct,
         }));
-      parts.push(`\nDEMOGRAPHIC CONTEXT (for consistency):`);
-      parts.push(JSON.stringify(contextRows, null, 2));
-    } else {
-      parts.push(`\nNO DEMOGRAPHIC DATA AVAILABLE — research this area from scratch.`);
+      parts.push(`DEMO CONTEXT (y=year,pop=population,w=white%,b=black%,h=hispanic%,own=owner_occ%,rb=rent_burden%): ${JSON.stringify(contextRows)}`);
     }
 
     parts.push("");
   }
 
-  parts.push(`\nReturn a single JSON object with the combined results:`);
-  parts.push(`{`);
-  parts.push(`  "property": [ ...all property rows for all regions above... ],`);
-  parts.push(`  "socioeconomic": [ ...all socioeconomic rows for all regions above... ]`);
-  parts.push(`}`);
-  parts.push(`\nEach row MUST include region_id and year. Use the EXACT field names from the system prompt.`);
+  parts.push(`\nReturn a single JSON object: {"property":[...],"socioeconomic":[...]}`);
+  parts.push(`Include ONLY the fields listed in the system prompt. Keep output minimal.`);
 
   return parts.join("\n");
 }
@@ -307,8 +297,11 @@ async function main() {
       .readdirSync(OUTPUT_DIR)
       .filter((f) => f.startsWith("region_") && f.endsWith(".json"));
 
-    const processedIds = new Set(
-      allProperty.map((r) => r.region_id).concat(allSocioeconomic.map((r) => r.region_id))
+    const processedPropIds = new Set(
+      allProperty.map((r) => r.region_id)
+    );
+    const processedSocioIds = new Set(
+      allSocioeconomic.map((r) => r.region_id)
     );
 
     for (const f of existingFiles) {
@@ -316,16 +309,17 @@ async function main() {
         fs.readFileSync(path.join(OUTPUT_DIR, f), "utf-8")
       );
       for (const row of data.property || []) {
-        if (!processedIds.has(row.region_id)) {
+        if (!processedPropIds.has(row.region_id)) {
           allProperty.push(row);
-          processedIds.add(row.region_id);
         }
       }
+      if (data.property?.length) processedPropIds.add(data.property[0].region_id);
       for (const row of data.socioeconomic || []) {
-        if (!processedIds.has(row.region_id)) {
+        if (!processedSocioIds.has(row.region_id)) {
           allSocioeconomic.push(row);
         }
       }
+      if (data.socioeconomic?.length) processedSocioIds.add(data.socioeconomic[0].region_id);
     }
   }
 

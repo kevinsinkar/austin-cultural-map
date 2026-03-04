@@ -693,8 +693,9 @@
   {
     "region_id": 102,
     "region": "Johnston Terrace",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 103,
@@ -706,8 +707,9 @@
   {
     "region_id": 104,
     "region": "Windsor Park East",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 105,
@@ -719,8 +721,9 @@
   {
     "region_id": 106,
     "region": "MLK South",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 107,
@@ -802,8 +805,9 @@
   {
     "region_id": 118,
     "region": "Ridgetop",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 119,
@@ -885,8 +889,9 @@
   {
     "region_id": 130,
     "region": "Rob Roy",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 12,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 131,
@@ -926,8 +931,9 @@
   {
     "region_id": 136,
     "region": "Milwood (Tract 205.03)",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 33,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 137,
@@ -974,8 +980,9 @@
   {
     "region_id": 143,
     "region": "Rollingwood",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 144,
@@ -994,8 +1001,9 @@
   {
     "region_id": 146,
     "region": "Allandale",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 37,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 147,
@@ -1294,8 +1302,9 @@
   {
     "region_id": 189,
     "region": "Bee Cave",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 63,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 190,
@@ -1335,8 +1344,9 @@
   {
     "region_id": 195,
     "region": "Westlake",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 196,
@@ -1369,8 +1379,9 @@
   {
     "region_id": 200,
     "region": "North Shoal Creek (Tract 418.0)",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 201,
@@ -1459,8 +1470,9 @@
   {
     "region_id": 213,
     "region": "Westlake Hills (Tract 304.0)",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 214,
@@ -1500,8 +1512,9 @@
   {
     "region_id": 219,
     "region": "Circle C Ranch (Tract 371.0)",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 220,
@@ -1513,14 +1526,16 @@
   {
     "region_id": 221,
     "region": "Westlake Hills (Tract 19.21)",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 222,
     "region": "Northwood (Tract 326.0)",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 223,
@@ -1595,8 +1610,9 @@
   {
     "region_id": 233,
     "region": "Redbud",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 234,
@@ -1650,8 +1666,9 @@
   {
     "region_id": 241,
     "region": "Brentwood South",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 0,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 242,
@@ -1719,8 +1736,9 @@
   {
     "region_id": 251,
     "region": "University Hills West",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 10,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 252,
@@ -1802,8 +1820,9 @@
   {
     "region_id": 263,
     "region": "Frankline Park East",
-    "status": "FAILED",
-    "error": "fetch failed"
+    "status": "OK",
+    "corrections": 7,
+    "low_confidence_rows": 0
   },
   {
     "region_id": 264,

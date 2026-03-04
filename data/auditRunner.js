@@ -22,10 +22,10 @@ import path from "path";
 // ── Config ─────────────────────────────────────────────────────────────
 const API_KEY = process.env.GEMINI_API_KEY;
 
-const MODEL = process.env.MODEL || "gemini-2.5-pro";
+const MODEL = process.env.MODEL || "gemini-2.5-flash";
 const START_ID = parseInt(process.env.START_REGION_ID || "1", 10);
 const OUTPUT_DIR = process.env.OUTPUT_DIR || "./audit_output";
-const RATE_LIMIT_MS = parseInt(process.env.RATE_LIMIT_MS || "4000", 10);
+const RATE_LIMIT_MS = parseInt(process.env.RATE_LIMIT_MS || "10000", 10);
 const RETRY_FAILED = process.env.RETRY_FAILED === "true";
 const DRY_RUN = process.env.DRY_RUN === "true";
 
@@ -87,21 +87,19 @@ function buildUserMessage(regionId, regionName) {
   const tract = extractTractHint(regionName);
 
   return [
-    `Audit the following data for region_id: ${regionId} ("${regionName}").`,
-    ``,
-    `This region maps to Austin census tract(s): ${tract}`,
+    `Audit region_id: ${regionId} ("${regionName}"), tract: ${tract}`,
     ``,
     `== DEMOGRAPHICS ==`,
-    JSON.stringify(demoRows, null, 2),
+    JSON.stringify(demoRows),
     ``,
     `== PROPERTY ==`,
-    JSON.stringify(propRows, null, 2),
+    JSON.stringify(propRows),
     ``,
     `== SOCIOECONOMIC ==`,
-    JSON.stringify(socioRows, null, 2),
+    JSON.stringify(socioRows),
     ``,
-    `Return the audited JSON with all original fields preserved, new fields added,`,
-    `and audit metadata attached to every row.`,
+    `Return audited JSON with original fields preserved, new fields added,`,
+    `and COMPACT audit metadata (confidence + audit_flags only — no per-field audit_source/audit_confidence, no audit_notes, no audit_timestamp).`,
   ].join("\n");
 }
 
@@ -140,9 +138,23 @@ async function callGemini(regionId, regionName) {
 
   const data = await res.json();
 
+  // Check for truncated response
+  const finishReason = data.candidates?.[0]?.finishReason;
+  if (finishReason === "MAX_TOKENS") {
+    throw new Error(
+      "Response truncated (MAX_TOKENS) — model ran out of output tokens"
+    );
+  }
+
   // Extract text from response
   const text =
     data.candidates?.[0]?.content?.parts?.map((p) => p.text).join("") || "";
+
+  if (!text) {
+    throw new Error(
+      `Empty response from Gemini (finishReason: ${finishReason || "unknown"})`
+    );
+  }
 
   // Parse JSON (strip markdown fences if present despite mime type setting)
   const cleaned = text
@@ -204,10 +216,12 @@ async function main() {
       }
     }
 
-    // 2) Collect IDs whose files exist but are empty (0 data rows)
+    // 2) Collect IDs whose files exist but are empty/corrupt, OR are missing entirely
     for (const [regionId] of sortedRegions) {
       const regionFile = path.join(OUTPUT_DIR, `region_${regionId}.json`);
-      if (fs.existsSync(regionFile)) {
+      if (!fs.existsSync(regionFile)) {
+        retrySet.add(regionId); // file missing → retry
+      } else {
         try {
           const data = JSON.parse(fs.readFileSync(regionFile, "utf-8"));
           const totalRows =

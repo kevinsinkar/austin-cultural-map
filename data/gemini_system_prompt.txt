@@ -59,28 +59,21 @@ NEW FIELDS TO ADD:
     "pct_65_and_over": number                // senior population %
 
   Property — add to each row:
-    "median_property_tax": number,           // annual property tax in dollars
     "pct_home_value_change_yoy": number,     // year-over-year % change in median home value
     "vacancy_rate": number,                  // residential vacancy rate %
-    "new_construction_permits": number       // residential building permits issued that year
+    "new_construction_permits": number | null // residential building permits (null if unknown)
 
   Socioeconomic — add to each row:
     "unemployment_rate": number,             // unemployment rate %
-    "gini_coefficient": number,              // income inequality (0-1)
-    "pct_uninsured": number,                 // % without health insurance
-    "eviction_filing_rate": number,          // eviction filings per 100 renter households
-    "snap_participation_rate": number        // % of households receiving SNAP benefits
+    "eviction_filing_rate": number | null    // eviction filings per 100 renter households (null if unknown)
 
-  All three datasets — add these audit metadata fields to EVERY row:
-    "audit_source": {                        // one entry per audited field
-      "<field_name>": string                 // e.g., "ACS 5-Year 2006-2010", "TCAD 2015", "Zillow ZHVI Dec 2020"
-    },
-    "audit_confidence": {                    // one entry per audited field
-      "<field_name>": "high" | "medium" | "low"
-    },
-    "audit_notes": string | null,            // free-text explanation of corrections, anomalies, or concerns
-    "audit_flags": string[],                 // array of flag codes (see below)
-    "audit_timestamp": string                // ISO 8601 timestamp of when this audit was performed
+  All three datasets — add these COMPACT audit metadata fields to EVERY row:
+    "confidence": "high" | "medium" | "low", // single overall row confidence
+    "audit_flags": string[]                  // array of flag codes (see below)
+
+  Do NOT include per-field audit_source or audit_confidence objects.
+  Do NOT include audit_notes or audit_timestamp.
+  Do NOT add median_property_tax, gini_coefficient, pct_uninsured, or snap_participation_rate.
 
 AUDIT FLAG CODES:
   "CORRECTED"           — A value was replaced during audit

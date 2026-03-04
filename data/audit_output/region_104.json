@@ -1,0 +1,2021 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 7520,
+      "population_density_sq_mi": 4178,
+      "median_age": 32.5,
+      "race_white_pct": 38.5,
+      "race_black_pct": 18.2,
+      "race_hispanic_pct": 41.1,
+      "race_asian_pct": 1.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 18.2,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 11,
+      "pct_owner_occupied": 65.2,
+      "rent_burden_pct": 28,
+      "pct_65_and_over": 9,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "total_population": 7535,
+      "population_density_sq_mi": 4186,
+      "median_age": 32.6,
+      "race_white_pct": 38.8,
+      "race_black_pct": 18,
+      "race_hispanic_pct": 41,
+      "race_asian_pct": 1.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 18,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 65,
+      "rent_burden_pct": 28.8,
+      "pct_65_and_over": 9.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 7552,
+      "population_density_sq_mi": 4196,
+      "median_age": 32.7,
+      "race_white_pct": 39.1,
+      "race_black_pct": 17.8,
+      "race_hispanic_pct": 40.9,
+      "race_asian_pct": 1.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 17.8,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 12,
+      "pct_owner_occupied": 64.8,
+      "rent_burden_pct": 29.6,
+      "pct_65_and_over": 9.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 7580,
+      "population_density_sq_mi": 4211,
+      "median_age": 32.8,
+      "race_white_pct": 39.5,
+      "race_black_pct": 17.6,
+      "race_hispanic_pct": 40.7,
+      "race_asian_pct": 1.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 17.6,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 12.5,
+      "pct_owner_occupied": 64.5,
+      "rent_burden_pct": 30.4,
+      "pct_65_and_over": 9.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 7615,
+      "population_density_sq_mi": 4231,
+      "median_age": 32.9,
+      "race_white_pct": 40,
+      "race_black_pct": 17.3,
+      "race_hispanic_pct": 40.5,
+      "race_asian_pct": 1.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 17.3,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 64.1,
+      "rent_burden_pct": 31.2,
+      "pct_65_and_over": 9.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 7660,
+      "population_density_sq_mi": 4256,
+      "median_age": 33,
+      "race_white_pct": 40.5,
+      "race_black_pct": 17,
+      "race_hispanic_pct": 40.2,
+      "race_asian_pct": 1.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 17,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 13.5,
+      "pct_owner_occupied": 63.8,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 9.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 7710,
+      "population_density_sq_mi": 4283,
+      "median_age": 33.1,
+      "race_white_pct": 41.1,
+      "race_black_pct": 16.7,
+      "race_hispanic_pct": 39.9,
+      "race_asian_pct": 1.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 16.7,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 14,
+      "pct_owner_occupied": 63.5,
+      "rent_burden_pct": 32.8,
+      "pct_65_and_over": 9.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 7755,
+      "population_density_sq_mi": 4308,
+      "median_age": 33.2,
+      "race_white_pct": 41.8,
+      "race_black_pct": 16.4,
+      "race_hispanic_pct": 39.5,
+      "race_asian_pct": 1.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 16.4,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 14.5,
+      "pct_owner_occupied": 63,
+      "rent_burden_pct": 33.6,
+      "pct_65_and_over": 9.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 7800,
+      "population_density_sq_mi": 4333,
+      "median_age": 33.1,
+      "race_white_pct": 42.5,
+      "race_black_pct": 16.1,
+      "race_hispanic_pct": 39,
+      "race_asian_pct": 1.4,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 16.1,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 15,
+      "pct_owner_occupied": 62.6,
+      "rent_burden_pct": 34.4,
+      "pct_65_and_over": 9.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 7860,
+      "population_density_sq_mi": 4367,
+      "median_age": 33,
+      "race_white_pct": 43.2,
+      "race_black_pct": 15.8,
+      "race_hispanic_pct": 38.5,
+      "race_asian_pct": 1.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 15.8,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 15.5,
+      "pct_owner_occupied": 62.1,
+      "rent_burden_pct": 35.2,
+      "pct_65_and_over": 9.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 7930,
+      "population_density_sq_mi": 4406,
+      "median_age": 32.8,
+      "race_white_pct": 44,
+      "race_black_pct": 15.5,
+      "race_hispanic_pct": 38,
+      "race_asian_pct": 1.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 15.5,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 16,
+      "pct_owner_occupied": 61.5,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 10,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "total_population": 7985,
+      "population_density_sq_mi": 4436,
+      "median_age": 32.7,
+      "race_white_pct": 44.8,
+      "race_black_pct": 15.2,
+      "race_hispanic_pct": 37.4,
+      "race_asian_pct": 1.6,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 15.2,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 16.6,
+      "pct_owner_occupied": 61,
+      "rent_burden_pct": 33,
+      "pct_65_and_over": 10.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 8040,
+      "population_density_sq_mi": 4467,
+      "median_age": 32.6,
+      "race_white_pct": 45.7,
+      "race_black_pct": 14.9,
+      "race_hispanic_pct": 36.8,
+      "race_asian_pct": 1.6,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 14.9,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 17.2,
+      "pct_owner_occupied": 60.7,
+      "rent_burden_pct": 34,
+      "pct_65_and_over": 10.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 8100,
+      "population_density_sq_mi": 4500,
+      "median_age": 32.5,
+      "race_white_pct": 46.6,
+      "race_black_pct": 14.6,
+      "race_hispanic_pct": 36.1,
+      "race_asian_pct": 1.7,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 14.6,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 17.8,
+      "pct_owner_occupied": 60.2,
+      "rent_burden_pct": 35,
+      "pct_65_and_over": 10.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 8170,
+      "population_density_sq_mi": 4539,
+      "median_age": 32.4,
+      "race_white_pct": 47.5,
+      "race_black_pct": 14.2,
+      "race_hispanic_pct": 35.5,
+      "race_asian_pct": 1.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 14.2,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 18.4,
+      "pct_owner_occupied": 59.8,
+      "rent_burden_pct": 36,
+      "pct_65_and_over": 10.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 8250,
+      "population_density_sq_mi": 4583,
+      "median_age": 32.3,
+      "race_white_pct": 48.5,
+      "race_black_pct": 13.8,
+      "race_hispanic_pct": 34.8,
+      "race_asian_pct": 1.9,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 13.8,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 59.1,
+      "rent_burden_pct": 37,
+      "pct_65_and_over": 10.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 8340,
+      "population_density_sq_mi": 4633,
+      "median_age": 32.2,
+      "race_white_pct": 49.8,
+      "race_black_pct": 13.3,
+      "race_hispanic_pct": 33.9,
+      "race_asian_pct": 2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 13.3,
+      "pct_asian": 2,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 58.5,
+      "rent_burden_pct": 38,
+      "pct_65_and_over": 10.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 8435,
+      "population_density_sq_mi": 4686,
+      "median_age": 32.1,
+      "race_white_pct": 51.2,
+      "race_black_pct": 12.8,
+      "race_hispanic_pct": 33,
+      "race_asian_pct": 2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 12.8,
+      "pct_asian": 2,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 58,
+      "rent_burden_pct": 39,
+      "pct_65_and_over": 10.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 8520,
+      "population_density_sq_mi": 4733,
+      "median_age": 32.2,
+      "race_white_pct": 52.6,
+      "race_black_pct": 12.3,
+      "race_hispanic_pct": 32.1,
+      "race_asian_pct": 2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 12.3,
+      "pct_asian": 2,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 57.7,
+      "rent_burden_pct": 40,
+      "pct_65_and_over": 10.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 8610,
+      "population_density_sq_mi": 4783,
+      "median_age": 32.3,
+      "race_white_pct": 54,
+      "race_black_pct": 11.8,
+      "race_hispanic_pct": 31.1,
+      "race_asian_pct": 2.1,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 11.8,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 57.2,
+      "rent_burden_pct": 41,
+      "pct_65_and_over": 10.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 8750,
+      "population_density_sq_mi": 4861,
+      "median_age": 32.5,
+      "race_white_pct": 55.5,
+      "race_black_pct": 11.3,
+      "race_hispanic_pct": 30,
+      "race_asian_pct": 2.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 11.3,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 56.8,
+      "rent_burden_pct": 42,
+      "pct_65_and_over": 11,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "total_population": 8890,
+      "population_density_sq_mi": 4939,
+      "median_age": 32.7,
+      "race_white_pct": 57,
+      "race_black_pct": 10.8,
+      "race_hispanic_pct": 29,
+      "race_asian_pct": 2.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 10.8,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 18.8,
+      "pct_owner_occupied": 56.1,
+      "rent_burden_pct": 43.2,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 9040,
+      "population_density_sq_mi": 5022,
+      "median_age": 32.9,
+      "race_white_pct": 58.6,
+      "race_black_pct": 10.3,
+      "race_hispanic_pct": 27.8,
+      "race_asian_pct": 2.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 10.3,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 18.6,
+      "pct_owner_occupied": 55.5,
+      "rent_burden_pct": 44.4,
+      "pct_65_and_over": 11.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 9200,
+      "population_density_sq_mi": 5111,
+      "median_age": 33.1,
+      "race_white_pct": 60.1,
+      "race_black_pct": 9.8,
+      "race_hispanic_pct": 26.7,
+      "race_asian_pct": 2.4,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 9.8,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 18.4,
+      "pct_owner_occupied": 54.9,
+      "rent_burden_pct": 45.6,
+      "pct_65_and_over": 12.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 9380,
+      "population_density_sq_mi": 5211,
+      "median_age": 33.4,
+      "race_white_pct": 61.5,
+      "race_black_pct": 9.4,
+      "race_hispanic_pct": 25.6,
+      "race_asian_pct": 2.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 9.4,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 18.2,
+      "pct_owner_occupied": 54.2,
+      "rent_burden_pct": 46.8,
+      "pct_65_and_over": 12.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 9570,
+      "population_density_sq_mi": 5317,
+      "median_age": 33.7,
+      "race_white_pct": 62.8,
+      "race_black_pct": 9,
+      "race_hispanic_pct": 24.6,
+      "race_asian_pct": 2.6,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 9,
+      "pct_asian": 2.6,
+      "pct_foreign_born": 18,
+      "pct_owner_occupied": 53.8,
+      "rent_burden_pct": 48,
+      "pct_65_and_over": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total_population": 9780,
+      "population_density_sq_mi": 5433,
+      "median_age": 34,
+      "race_white_pct": 64,
+      "race_black_pct": 8.6,
+      "race_hispanic_pct": 23.7,
+      "race_asian_pct": 2.7,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 8.6,
+      "pct_asian": 2.7,
+      "pct_foreign_born": 17.9,
+      "pct_owner_occupied": 53.5,
+      "rent_burden_pct": 47.8,
+      "pct_65_and_over": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 10010,
+      "population_density_sq_mi": 5561,
+      "median_age": 34.3,
+      "race_white_pct": 65.1,
+      "race_black_pct": 8.2,
+      "race_hispanic_pct": 22.9,
+      "race_asian_pct": 2.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 8.2,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 17.8,
+      "pct_owner_occupied": 53.1,
+      "rent_burden_pct": 47.6,
+      "pct_65_and_over": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 10250,
+      "population_density_sq_mi": 5694,
+      "median_age": 34.6,
+      "race_white_pct": 66.2,
+      "race_black_pct": 7.8,
+      "race_hispanic_pct": 22.1,
+      "race_asian_pct": 2.9,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 7.8,
+      "pct_asian": 2.9,
+      "pct_foreign_born": 17.7,
+      "pct_owner_occupied": 52.9,
+      "rent_burden_pct": 47.4,
+      "pct_65_and_over": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 10490,
+      "population_density_sq_mi": 5828,
+      "median_age": 34.9,
+      "race_white_pct": 67.1,
+      "race_black_pct": 7.5,
+      "race_hispanic_pct": 21.4,
+      "race_asian_pct": 3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 7.5,
+      "pct_asian": 3,
+      "pct_foreign_born": 17.6,
+      "pct_owner_occupied": 52.7,
+      "rent_burden_pct": 47.2,
+      "pct_65_and_over": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 10730,
+      "population_density_sq_mi": 5961,
+      "median_age": 35.1,
+      "race_white_pct": 68,
+      "race_black_pct": 7.2,
+      "race_hispanic_pct": 20.8,
+      "race_asian_pct": 3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 7.2,
+      "pct_asian": 3,
+      "pct_foreign_born": 18,
+      "pct_owner_occupied": 53,
+      "rent_burden_pct": 48,
+      "pct_65_and_over": 13,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "total_population": 10920,
+      "population_density_sq_mi": 6067,
+      "median_age": 35.3,
+      "race_white_pct": 68.6,
+      "race_black_pct": 7,
+      "race_hispanic_pct": 20.3,
+      "race_asian_pct": 3.1,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 7,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 18.2,
+      "pct_owner_occupied": 53.2,
+      "rent_burden_pct": 48.2,
+      "pct_65_and_over": 13.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 11080,
+      "population_density_sq_mi": 6156,
+      "median_age": 35.5,
+      "race_white_pct": 69.1,
+      "race_black_pct": 6.8,
+      "race_hispanic_pct": 19.9,
+      "race_asian_pct": 3.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 6.8,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 18.4,
+      "pct_owner_occupied": 53.4,
+      "rent_burden_pct": 48.4,
+      "pct_65_and_over": 13.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total_population": 11210,
+      "population_density_sq_mi": 6228,
+      "median_age": 35.7,
+      "race_white_pct": 69.5,
+      "race_black_pct": 6.6,
+      "race_hispanic_pct": 19.6,
+      "race_asian_pct": 3.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 6.6,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 18.6,
+      "pct_owner_occupied": 53.6,
+      "rent_burden_pct": 48.6,
+      "pct_65_and_over": 13.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 11320,
+      "population_density_sq_mi": 6289,
+      "median_age": 35.9,
+      "race_white_pct": 69.9,
+      "race_black_pct": 6.4,
+      "race_hispanic_pct": 19.3,
+      "race_asian_pct": 3.4,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 6.4,
+      "pct_asian": 3.4,
+      "pct_foreign_born": 18.8,
+      "pct_owner_occupied": 53.8,
+      "rent_burden_pct": 48.8,
+      "pct_65_and_over": 13.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 11410,
+      "population_density_sq_mi": 6339,
+      "median_age": 36,
+      "race_white_pct": 70.2,
+      "race_black_pct": 6.2,
+      "race_hispanic_pct": 19.1,
+      "race_asian_pct": 3.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_black_non_hispanic": 6.2,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 54,
+      "rent_burden_pct": 49,
+      "pct_65_and_over": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 85500,
+      "median_rent_usd": 450,
+      "owner_occupied_pct": 65.2,
+      "avg_days_on_market": 95,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 7,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value_usd": 86000,
+      "median_rent_usd": 455,
+      "owner_occupied_pct": 65,
+      "avg_days_on_market": 98,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 0.58,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value_usd": 87200,
+      "median_rent_usd": 460,
+      "owner_occupied_pct": 64.8,
+      "avg_days_on_market": 92,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 1.4,
+      "vacancy_rate": 6.6,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value_usd": 89000,
+      "median_rent_usd": 470,
+      "owner_occupied_pct": 64.5,
+      "avg_days_on_market": 88,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 2.06,
+      "vacancy_rate": 6.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value_usd": 92500,
+      "median_rent_usd": 485,
+      "owner_occupied_pct": 64.1,
+      "avg_days_on_market": 85,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 3.93,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 98000,
+      "median_rent_usd": 500,
+      "owner_occupied_pct": 63.8,
+      "avg_days_on_market": 80,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 5.95,
+      "vacancy_rate": 6,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value_usd": 105000,
+      "median_rent_usd": 525,
+      "owner_occupied_pct": 63.5,
+      "avg_days_on_market": 75,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 7.14,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value_usd": 115000,
+      "median_rent_usd": 550,
+      "owner_occupied_pct": 63,
+      "avg_days_on_market": 70,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 9.52,
+      "vacancy_rate": 5.6,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value_usd": 128000,
+      "median_rent_usd": 580,
+      "owner_occupied_pct": 62.6,
+      "avg_days_on_market": 65,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 11.3,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value_usd": 142000,
+      "median_rent_usd": 615,
+      "owner_occupied_pct": 62.1,
+      "avg_days_on_market": 60,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 10.94,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 155000,
+      "median_rent_usd": 650,
+      "owner_occupied_pct": 61.5,
+      "avg_days_on_market": 58,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 9.15,
+      "vacancy_rate": 6,
+      "new_construction_permits": 5,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value_usd": 161000,
+      "median_rent_usd": 670,
+      "owner_occupied_pct": 61,
+      "avg_days_on_market": 62,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 3.87,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": 7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value_usd": 164000,
+      "median_rent_usd": 680,
+      "owner_occupied_pct": 60.7,
+      "avg_days_on_market": 68,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 1.86,
+      "vacancy_rate": 6.4,
+      "new_construction_permits": 8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value_usd": 168000,
+      "median_rent_usd": 700,
+      "owner_occupied_pct": 60.2,
+      "avg_days_on_market": 65,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 2.44,
+      "vacancy_rate": 6.6,
+      "new_construction_permits": 9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value_usd": 175000,
+      "median_rent_usd": 725,
+      "owner_occupied_pct": 59.8,
+      "avg_days_on_market": 60,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 4.17,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": 10,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_home_value_usd": 188000,
+      "median_rent_usd": 760,
+      "owner_occupied_pct": 59.1,
+      "avg_days_on_market": 55,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 7.43,
+      "vacancy_rate": 7,
+      "new_construction_permits": 12,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value_usd": 210000,
+      "median_rent_usd": 810,
+      "owner_occupied_pct": 58.5,
+      "avg_days_on_market": 50,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 11.7,
+      "vacancy_rate": 7.4,
+      "new_construction_permits": 15,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value_usd": 225000,
+      "median_rent_usd": 850,
+      "owner_occupied_pct": 58,
+      "avg_days_on_market": 52,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 7.14,
+      "vacancy_rate": 7.8,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value_usd": 220000,
+      "median_rent_usd": 870,
+      "owner_occupied_pct": 57.7,
+      "avg_days_on_market": 65,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": -2.22,
+      "vacancy_rate": 8.2,
+      "new_construction_permits": 10,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value_usd": 215000,
+      "median_rent_usd": 890,
+      "owner_occupied_pct": 57.2,
+      "avg_days_on_market": 70,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": -2.27,
+      "vacancy_rate": 8.6,
+      "new_construction_permits": 8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 230000,
+      "median_rent_usd": 920,
+      "owner_occupied_pct": 56.8,
+      "avg_days_on_market": 60,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 6.98,
+      "vacancy_rate": 9,
+      "new_construction_permits": 10,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_home_value_usd": 255000,
+      "median_rent_usd": 980,
+      "owner_occupied_pct": 56.1,
+      "avg_days_on_market": 50,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 10.87,
+      "vacancy_rate": 8.4,
+      "new_construction_permits": 15,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value_usd": 290000,
+      "median_rent_usd": 1050,
+      "owner_occupied_pct": 55.5,
+      "avg_days_on_market": 42,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 13.73,
+      "vacancy_rate": 7.8,
+      "new_construction_permits": 20,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value_usd": 340000,
+      "median_rent_usd": 1150,
+      "owner_occupied_pct": 54.9,
+      "avg_days_on_market": 35,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 17.24,
+      "vacancy_rate": 7.2,
+      "new_construction_permits": 25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value_usd": 395000,
+      "median_rent_usd": 1280,
+      "owner_occupied_pct": 54.2,
+      "avg_days_on_market": 30,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 16.18,
+      "vacancy_rate": 6.6,
+      "new_construction_permits": 28,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 450000,
+      "median_rent_usd": 1400,
+      "owner_occupied_pct": 53.8,
+      "avg_days_on_market": 25,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 13.92,
+      "vacancy_rate": 6,
+      "new_construction_permits": 30,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value_usd": 510000,
+      "median_rent_usd": 1550,
+      "owner_occupied_pct": 53.5,
+      "avg_days_on_market": 22,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 13.33,
+      "vacancy_rate": 6,
+      "new_construction_permits": 32,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value_usd": 565000,
+      "median_rent_usd": 1680,
+      "owner_occupied_pct": 53.1,
+      "avg_days_on_market": 20,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 10.78,
+      "vacancy_rate": 6,
+      "new_construction_permits": 35,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value_usd": 610000,
+      "median_rent_usd": 1790,
+      "owner_occupied_pct": 52.9,
+      "avg_days_on_market": 24,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 7.96,
+      "vacancy_rate": 6,
+      "new_construction_permits": 30,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value_usd": 645000,
+      "median_rent_usd": 1880,
+      "owner_occupied_pct": 52.7,
+      "avg_days_on_market": 28,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 5.74,
+      "vacancy_rate": 6,
+      "new_construction_permits": 28,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 720000,
+      "median_rent_usd": 1950,
+      "owner_occupied_pct": 53,
+      "avg_days_on_market": 20,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 11.63,
+      "vacancy_rate": 6,
+      "new_construction_permits": 30,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_home_value_usd": 850000,
+      "median_rent_usd": 2100,
+      "owner_occupied_pct": 53.2,
+      "avg_days_on_market": 15,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 18.06,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 35,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value_usd": 890000,
+      "median_rent_usd": 2250,
+      "owner_occupied_pct": 53.4,
+      "avg_days_on_market": 30,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 4.71,
+      "vacancy_rate": 5.6,
+      "new_construction_permits": 30,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value_usd": 875000,
+      "median_rent_usd": 2280,
+      "owner_occupied_pct": 53.6,
+      "avg_days_on_market": 40,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": -1.69,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": 25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value_usd": 885000,
+      "median_rent_usd": 2310,
+      "owner_occupied_pct": 53.8,
+      "avg_days_on_market": 38,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 1.14,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 28,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 905000,
+      "median_rent_usd": 2350,
+      "owner_occupied_pct": 54,
+      "avg_days_on_market": 35,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "pct_home_value_change_yoy": 2.26,
+      "vacancy_rate": 5,
+      "new_construction_permits": 30,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 28500,
+      "poverty_rate_pct": 22.5,
+      "bachelors_degree_or_higher_pct": 15.1,
+      "unemployment_rate_pct": 6.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income_usd": 28800,
+      "poverty_rate_pct": 22.8,
+      "bachelors_degree_or_higher_pct": 15.5,
+      "unemployment_rate_pct": 6.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income_usd": 29200,
+      "poverty_rate_pct": 22.4,
+      "bachelors_degree_or_higher_pct": 16,
+      "unemployment_rate_pct": 6.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income_usd": 30100,
+      "poverty_rate_pct": 21.9,
+      "bachelors_degree_or_higher_pct": 16.8,
+      "unemployment_rate_pct": 5.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income_usd": 31500,
+      "poverty_rate_pct": 21.2,
+      "bachelors_degree_or_higher_pct": 17.5,
+      "unemployment_rate_pct": 5.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 33000,
+      "poverty_rate_pct": 20.5,
+      "bachelors_degree_or_higher_pct": 18.5,
+      "unemployment_rate_pct": 4.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income_usd": 34800,
+      "poverty_rate_pct": 19.8,
+      "bachelors_degree_or_higher_pct": 19.8,
+      "unemployment_rate_pct": 4.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income_usd": 36900,
+      "poverty_rate_pct": 19,
+      "bachelors_degree_or_higher_pct": 21.5,
+      "unemployment_rate_pct": 4.1,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income_usd": 39500,
+      "poverty_rate_pct": 18.2,
+      "bachelors_degree_or_higher_pct": 23.8,
+      "unemployment_rate_pct": 3.7,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income_usd": 42100,
+      "poverty_rate_pct": 17.5,
+      "bachelors_degree_or_higher_pct": 26,
+      "unemployment_rate_pct": 3.3,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 44000,
+      "poverty_rate_pct": 16.9,
+      "bachelors_degree_or_higher_pct": 28.5,
+      "unemployment_rate_pct": 3.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income_usd": 44500,
+      "poverty_rate_pct": 17.2,
+      "bachelors_degree_or_higher_pct": 30.1,
+      "unemployment_rate_pct": 4.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income_usd": 44800,
+      "poverty_rate_pct": 17.8,
+      "bachelors_degree_or_higher_pct": 31.5,
+      "unemployment_rate_pct": 5.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income_usd": 45200,
+      "poverty_rate_pct": 17.5,
+      "bachelors_degree_or_higher_pct": 33.2,
+      "unemployment_rate_pct": 5.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income_usd": 46500,
+      "poverty_rate_pct": 17,
+      "bachelors_degree_or_higher_pct": 35.1,
+      "unemployment_rate_pct": 5.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 48200,
+      "poverty_rate_pct": 16.4,
+      "bachelors_degree_or_higher_pct": 37.5,
+      "unemployment_rate_pct": 4.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income_usd": 51000,
+      "poverty_rate_pct": 15.8,
+      "bachelors_degree_or_higher_pct": 40.2,
+      "unemployment_rate_pct": 4.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income_usd": 54500,
+      "poverty_rate_pct": 15.1,
+      "bachelors_degree_or_higher_pct": 43.1,
+      "unemployment_rate_pct": 4.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income_usd": 55100,
+      "poverty_rate_pct": 15.5,
+      "bachelors_degree_or_higher_pct": 45.5,
+      "unemployment_rate_pct": 5.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income_usd": 54300,
+      "poverty_rate_pct": 16,
+      "bachelors_degree_or_higher_pct": 47.2,
+      "unemployment_rate_pct": 7.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 56000,
+      "poverty_rate_pct": 15.2,
+      "bachelors_degree_or_higher_pct": 49,
+      "unemployment_rate_pct": 6.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 2,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income_usd": 58500,
+      "poverty_rate_pct": 14.5,
+      "bachelors_degree_or_higher_pct": 51.5,
+      "unemployment_rate_pct": 6.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 2.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income_usd": 62000,
+      "poverty_rate_pct": 13.8,
+      "bachelors_degree_or_higher_pct": 54.1,
+      "unemployment_rate_pct": 5.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 2.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income_usd": 66500,
+      "poverty_rate_pct": 13,
+      "bachelors_degree_or_higher_pct": 57,
+      "unemployment_rate_pct": 5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 2.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income_usd": 72000,
+      "poverty_rate_pct": 12.1,
+      "bachelors_degree_or_higher_pct": 59.8,
+      "unemployment_rate_pct": 4.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 2.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 78000,
+      "poverty_rate_pct": 11.2,
+      "bachelors_degree_or_higher_pct": 62.5,
+      "unemployment_rate_pct": 4,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income_usd": 85000,
+      "poverty_rate_pct": 10.4,
+      "bachelors_degree_or_higher_pct": 65.1,
+      "unemployment_rate_pct": 3.7,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income_usd": 92500,
+      "poverty_rate_pct": 9.6,
+      "bachelors_degree_or_higher_pct": 67.8,
+      "unemployment_rate_pct": 3.4,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income_usd": 101000,
+      "poverty_rate_pct": 8.8,
+      "bachelors_degree_or_higher_pct": 70.2,
+      "unemployment_rate_pct": 3.1,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income_usd": 109000,
+      "poverty_rate_pct": 8.1,
+      "bachelors_degree_or_higher_pct": 72.5,
+      "unemployment_rate_pct": 2.9,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 112000,
+      "poverty_rate_pct": 8.5,
+      "bachelors_degree_or_higher_pct": 74,
+      "unemployment_rate_pct": 5.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 1.5,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_household_income_usd": 118000,
+      "poverty_rate_pct": 7.9,
+      "bachelors_degree_or_higher_pct": 75.6,
+      "unemployment_rate_pct": 4.2,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 2.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income_usd": 124000,
+      "poverty_rate_pct": 7.4,
+      "bachelors_degree_or_higher_pct": 76.8,
+      "unemployment_rate_pct": 3.5,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income_usd": 129000,
+      "poverty_rate_pct": 7.1,
+      "bachelors_degree_or_higher_pct": 77.5,
+      "unemployment_rate_pct": 3.8,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income_usd": 133000,
+      "poverty_rate_pct": 6.9,
+      "bachelors_degree_or_higher_pct": 78.1,
+      "unemployment_rate_pct": 3.9,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 137000,
+      "poverty_rate_pct": 6.7,
+      "bachelors_degree_or_higher_pct": 78.6,
+      "unemployment_rate_pct": 3.7,
+      "region": "Windsor Park East",
+      "region_id": 104,
+      "eviction_filing_rate": 3.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

@@ -79,68 +79,42 @@ IMPORTANT DATA CONSIDERATIONS:
   - 2020-2025: Continued growth with some stabilization after 2022
 
 ═══════════════════════════════════════════════════════════════════════════════════
-REQUIRED FIELD NAMES — USE EXACTLY THESE
+REQUIRED FIELDS — ONLY INCLUDE THESE (keep output compact)
 ═══════════════════════════════════════════════════════════════════════════════════
 
-Each property row MUST contain:
-  {
-    "year": number,
-    "region": string,             // exact region name as provided
-    "region_id": number,          // exact region_id as provided
-    "median_home_value": number,  // in nominal USD
-    "median_rent": number,        // monthly gross rent in nominal USD
-    "residential_units": number,  // total housing units
-    "commercial_sqft": number,    // commercial square footage (estimate, use null if unknown)
-    "median_property_tax": number,           // annual property tax in USD
-    "pct_home_value_change_yoy": number | null,  // null for first year only
-    "vacancy_rate": number,                  // residential vacancy %
-    "new_construction_permits": number | null,    // can be null if unknown
-    "audit_source": { ... },
-    "audit_confidence": { ... },
-    "audit_notes": string | null,
-    "audit_flags": string[],
-    "audit_timestamp": string     // use current ISO 8601 timestamp
-  }
+Do NOT add extra fields. Do NOT include per-field audit_source or audit_confidence
+objects, audit_notes, or audit_timestamp. Keep output as small as possible.
 
-Each socioeconomic row MUST contain:
+Each property row MUST contain EXACTLY these fields:
   {
     "year": number,
     "region": string,
     "region_id": number,
-    "median_household_income": number,       // in nominal USD
-    "poverty_rate": number,                  // poverty rate %
-    "bachelors_degree_or_higher_pct": number,
-    "unemployment_rate": number,             // %
-    "gini_coefficient": number,              // 0-1
-    "pct_uninsured": number,                 // %
-    "eviction_filing_rate": number | null,   // per 100 renter households
-    "snap_participation_rate": number,       // %
-    "audit_source": { ... },
-    "audit_confidence": { ... },
-    "audit_notes": string | null,
-    "audit_flags": string[],
-    "audit_timestamp": string
+    "median_home_value": number,
+    "median_rent": number,
+    "residential_units": number,
+    "commercial_sqft": number | null,
+    "pct_home_value_change_yoy": number | null,
+    "vacancy_rate": number,
+    "new_construction_permits": number | null,
+    "confidence": "high" | "medium" | "low",
+    "audit_flags": string[]
   }
 
-═══════════════════════════════════════════════════════════════════════════════════
-AUDIT METADATA
-═══════════════════════════════════════════════════════════════════════════════════
-
-For every field in every row:
-  "audit_source": {
-    "<field>": "Source name and year, e.g. 'ACS 5-Year 2017-2021, Table B25077'"
+Each socioeconomic row MUST contain EXACTLY these fields:
+  {
+    "year": number,
+    "region": string,
+    "region_id": number,
+    "median_household_income": number,
+    "poverty_rate": number,
+    "unemployment_rate": number,
+    "eviction_filing_rate": number | null,
+    "confidence": "high" | "medium" | "low",
+    "audit_flags": string[]
   }
-  "audit_confidence": {
-    "<field>": "high" | "medium" | "low"
-  }
 
-AUDIT FLAG CODES:
-  "GAP_FILL"            — This record was generated to fill a data gap
-  "INTERPOLATED"        — Value interpolated between known data points
-  "EXTRAPOLATED"        — Value projected beyond latest known data
-  "PRE_ACS"             — Year before ACS coverage; less precise
-  "TRACT_INFERRED"      — Census tract was inferred from coordinates/name
-  "NEW_FIELD_ESTIMATED" — Field estimated from indirect sources
+Audit flag codes: "GAP_FILL", "INTERPOLATED", "EXTRAPOLATED", "PRE_ACS", "TRACT_INFERRED"
 
 ═══════════════════════════════════════════════════════════════════════════════════
 OUTPUT FORMAT
@@ -149,18 +123,11 @@ OUTPUT FORMAT
 Return ONLY valid JSON — no markdown fences, no commentary outside the JSON.
 Return an object with two keys:
 {
-  "property": [ ... array of property rows ... ],
-  "socioeconomic": [ ... array of socioeconomic rows ... ]
+  "property": [ ... ],
+  "socioeconomic": [ ... ]
 }
 
-Each array should contain one row per year requested.
-
-IMPORTANT:
-- Use the EXACT region name and region_id provided in the input.
-- If you cannot determine a value with any reasonable confidence, use null.
-- For the DVI project's mission, erring toward catching displacement pressure
-  is preferable to undercounting it.
-- Property tax can be estimated as ~2.1% of median home value for Travis County.
-- pct_home_value_change_yoy should be null for the earliest year, then calculated
-  from the previous year's median_home_value.
-- Eviction filing rates are hard to find pre-2000; use null and flag appropriately.
+One row per year requested. Use the EXACT region name and region_id from the input.
+- pct_home_value_change_yoy: null for first year, then YoY change from prior year.
+- Eviction filing rates: use null pre-2000 and flag appropriately.
+- If a value cannot be determined, use null.

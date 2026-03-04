@@ -1,0 +1,1877 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total": 15205,
+      "age_median": 32.5,
+      "household_size_avg": 2.75,
+      "diversity_index": 0.28,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.066,
+      "pct_foreign_born": 0.066,
+      "pct_owner_occupied": 0.82,
+      "rent_burden_pct": 0.25,
+      "pct_65_and_over": 0.066,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1991,
+      "total": 15380,
+      "age_median": 32.7,
+      "household_size_avg": 2.74,
+      "diversity_index": 0.29,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.071,
+      "pct_foreign_born": 0.071,
+      "pct_owner_occupied": 0.82,
+      "rent_burden_pct": 0.255,
+      "pct_65_and_over": 0.068,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1992,
+      "total": 15590,
+      "age_median": 32.9,
+      "household_size_avg": 2.73,
+      "diversity_index": 0.3,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.077,
+      "pct_foreign_born": 0.077,
+      "pct_owner_occupied": 0.81,
+      "rent_burden_pct": 0.26,
+      "pct_65_and_over": 0.07,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1993,
+      "total": 15815,
+      "age_median": 33.1,
+      "household_size_avg": 2.72,
+      "diversity_index": 0.31,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.082,
+      "pct_foreign_born": 0.082,
+      "pct_owner_occupied": 0.81,
+      "rent_burden_pct": 0.265,
+      "pct_65_and_over": 0.072,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1994,
+      "total": 16050,
+      "age_median": 33.3,
+      "household_size_avg": 2.71,
+      "diversity_index": 0.32,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.088,
+      "pct_foreign_born": 0.088,
+      "pct_owner_occupied": 0.8,
+      "rent_burden_pct": 0.27,
+      "pct_65_and_over": 0.074,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1995,
+      "total": 16350,
+      "age_median": 33.6,
+      "household_size_avg": 2.7,
+      "diversity_index": 0.34,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.093,
+      "pct_foreign_born": 0.093,
+      "pct_owner_occupied": 0.8,
+      "rent_burden_pct": 0.275,
+      "pct_65_and_over": 0.076,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1996,
+      "total": 16700,
+      "age_median": 33.9,
+      "household_size_avg": 2.69,
+      "diversity_index": 0.36,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.099,
+      "pct_foreign_born": 0.099,
+      "pct_owner_occupied": 0.79,
+      "rent_burden_pct": 0.28,
+      "pct_65_and_over": 0.078,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1997,
+      "total": 17100,
+      "age_median": 34.2,
+      "household_size_avg": 2.68,
+      "diversity_index": 0.38,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.104,
+      "pct_foreign_born": 0.104,
+      "pct_owner_occupied": 0.79,
+      "rent_burden_pct": 0.285,
+      "pct_65_and_over": 0.08,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1998,
+      "total": 17550,
+      "age_median": 34.5,
+      "household_size_avg": 2.67,
+      "diversity_index": 0.4,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.109,
+      "pct_foreign_born": 0.109,
+      "pct_owner_occupied": 0.78,
+      "rent_burden_pct": 0.29,
+      "pct_65_and_over": 0.081,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1999,
+      "total": 17980,
+      "age_median": 34.8,
+      "household_size_avg": 2.66,
+      "diversity_index": 0.42,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.109,
+      "pct_foreign_born": 0.109,
+      "pct_owner_occupied": 0.78,
+      "rent_burden_pct": 0.295,
+      "pct_65_and_over": 0.082,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2000,
+      "total": 18350,
+      "age_median": 35,
+      "household_size_avg": 2.65,
+      "diversity_index": 0.44,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.109,
+      "pct_foreign_born": 0.109,
+      "pct_owner_occupied": 0.77,
+      "rent_burden_pct": 0.3,
+      "pct_65_and_over": 0.082,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2001,
+      "total": 18450,
+      "age_median": 35.2,
+      "household_size_avg": 2.65,
+      "diversity_index": 0.45,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.033,
+      "pct_asian": 0.114,
+      "pct_foreign_born": 0.114,
+      "pct_owner_occupied": 0.77,
+      "rent_burden_pct": 0.305,
+      "pct_65_and_over": 0.085,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2002,
+      "total": 18520,
+      "age_median": 35.4,
+      "household_size_avg": 2.64,
+      "diversity_index": 0.46,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.034,
+      "pct_asian": 0.119,
+      "pct_foreign_born": 0.119,
+      "pct_owner_occupied": 0.76,
+      "rent_burden_pct": 0.31,
+      "pct_65_and_over": 0.088,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2003,
+      "total": 18600,
+      "age_median": 35.6,
+      "household_size_avg": 2.64,
+      "diversity_index": 0.47,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.034,
+      "pct_asian": 0.124,
+      "pct_foreign_born": 0.124,
+      "pct_owner_occupied": 0.76,
+      "rent_burden_pct": 0.315,
+      "pct_65_and_over": 0.091,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2004,
+      "total": 18710,
+      "age_median": 35.8,
+      "household_size_avg": 2.63,
+      "diversity_index": 0.48,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.034,
+      "pct_asian": 0.129,
+      "pct_foreign_born": 0.129,
+      "pct_owner_occupied": 0.76,
+      "rent_burden_pct": 0.32,
+      "pct_65_and_over": 0.094,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2005,
+      "total": 18850,
+      "age_median": 36,
+      "household_size_avg": 2.62,
+      "diversity_index": 0.49,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.034,
+      "pct_asian": 0.134,
+      "pct_foreign_born": 0.134,
+      "pct_owner_occupied": 0.75,
+      "rent_burden_pct": 0.325,
+      "pct_65_and_over": 0.097,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total": 19010,
+      "age_median": 36.2,
+      "household_size_avg": 2.61,
+      "diversity_index": 0.5,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.035,
+      "pct_asian": 0.139,
+      "pct_foreign_born": 0.139,
+      "pct_owner_occupied": 0.75,
+      "rent_burden_pct": 0.33,
+      "pct_65_and_over": 0.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total": 19180,
+      "age_median": 36.4,
+      "household_size_avg": 2.6,
+      "diversity_index": 0.51,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.035,
+      "pct_asian": 0.144,
+      "pct_foreign_born": 0.144,
+      "pct_owner_occupied": 0.74,
+      "rent_burden_pct": 0.335,
+      "pct_65_and_over": 0.101,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total": 19250,
+      "age_median": 36.6,
+      "household_size_avg": 2.6,
+      "diversity_index": 0.52,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.035,
+      "pct_asian": 0.149,
+      "pct_foreign_born": 0.149,
+      "pct_owner_occupied": 0.74,
+      "rent_burden_pct": 0.34,
+      "pct_65_and_over": 0.102,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total": 19300,
+      "age_median": 36.8,
+      "household_size_avg": 2.59,
+      "diversity_index": 0.53,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.154,
+      "pct_foreign_born": 0.154,
+      "pct_owner_occupied": 0.73,
+      "rent_burden_pct": 0.345,
+      "pct_65_and_over": 0.103,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total": 19450,
+      "age_median": 37,
+      "household_size_avg": 2.58,
+      "diversity_index": 0.54,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.154,
+      "pct_foreign_born": 0.154,
+      "pct_owner_occupied": 0.73,
+      "rent_burden_pct": 0.35,
+      "pct_65_and_over": 0.103,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "total": 19680,
+      "age_median": 37.1,
+      "household_size_avg": 2.58,
+      "diversity_index": 0.55,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.163,
+      "pct_foreign_born": 0.163,
+      "pct_owner_occupied": 0.72,
+      "rent_burden_pct": 0.36,
+      "pct_65_and_over": 0.108,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total": 20000,
+      "age_median": 37.2,
+      "household_size_avg": 2.57,
+      "diversity_index": 0.56,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.172,
+      "pct_foreign_born": 0.172,
+      "pct_owner_occupied": 0.72,
+      "rent_burden_pct": 0.37,
+      "pct_65_and_over": 0.113,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total": 20350,
+      "age_median": 37.4,
+      "household_size_avg": 2.57,
+      "diversity_index": 0.57,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.181,
+      "pct_foreign_born": 0.181,
+      "pct_owner_occupied": 0.71,
+      "rent_burden_pct": 0.38,
+      "pct_65_and_over": 0.118,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total": 20700,
+      "age_median": 37.6,
+      "household_size_avg": 2.56,
+      "diversity_index": 0.58,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.19,
+      "pct_foreign_born": 0.19,
+      "pct_owner_occupied": 0.7,
+      "rent_burden_pct": 0.39,
+      "pct_65_and_over": 0.123,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total": 21050,
+      "age_median": 37.8,
+      "household_size_avg": 2.56,
+      "diversity_index": 0.59,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.199,
+      "pct_foreign_born": 0.199,
+      "pct_owner_occupied": 0.69,
+      "rent_burden_pct": 0.4,
+      "pct_65_and_over": 0.128,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total": 21380,
+      "age_median": 38,
+      "household_size_avg": 2.55,
+      "diversity_index": 0.6,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.202,
+      "pct_foreign_born": 0.202,
+      "pct_owner_occupied": 0.69,
+      "rent_burden_pct": 0.41,
+      "pct_65_and_over": 0.13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total": 21650,
+      "age_median": 38.2,
+      "household_size_avg": 2.55,
+      "diversity_index": 0.61,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.202,
+      "pct_foreign_born": 0.202,
+      "pct_owner_occupied": 0.68,
+      "rent_burden_pct": 0.42,
+      "pct_65_and_over": 0.132,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total": 21890,
+      "age_median": 38.4,
+      "household_size_avg": 2.54,
+      "diversity_index": 0.62,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.202,
+      "pct_foreign_born": 0.213,
+      "pct_owner_occupied": 0.68,
+      "rent_burden_pct": 0.43,
+      "pct_65_and_over": 0.133,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total": 22100,
+      "age_median": 38.6,
+      "household_size_avg": 2.54,
+      "diversity_index": 0.63,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.202,
+      "pct_foreign_born": 0.219,
+      "pct_owner_occupied": 0.67,
+      "rent_burden_pct": 0.44,
+      "pct_65_and_over": 0.134,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total": 22250,
+      "age_median": 38.8,
+      "household_size_avg": 2.53,
+      "diversity_index": 0.64,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.202,
+      "pct_foreign_born": 0.225,
+      "pct_owner_occupied": 0.67,
+      "rent_burden_pct": 0.45,
+      "pct_65_and_over": 0.135,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "total": 22400,
+      "age_median": 38.9,
+      "household_size_avg": 2.53,
+      "diversity_index": 0.65,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.206,
+      "pct_foreign_born": 0.228,
+      "pct_owner_occupied": 0.66,
+      "rent_burden_pct": 0.46,
+      "pct_65_and_over": 0.136,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total": 22510,
+      "age_median": 39,
+      "household_size_avg": 2.52,
+      "diversity_index": 0.66,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.21,
+      "pct_foreign_born": 0.231,
+      "pct_owner_occupied": 0.65,
+      "rent_burden_pct": 0.47,
+      "pct_65_and_over": 0.137,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total": 22600,
+      "age_median": 39.1,
+      "household_size_avg": 2.52,
+      "diversity_index": 0.66,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.214,
+      "pct_foreign_born": 0.234,
+      "pct_owner_occupied": 0.65,
+      "rent_burden_pct": 0.48,
+      "pct_65_and_over": 0.138,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total": 22680,
+      "age_median": 39.2,
+      "household_size_avg": 2.51,
+      "diversity_index": 0.67,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.218,
+      "pct_foreign_born": 0.237,
+      "pct_owner_occupied": 0.64,
+      "rent_burden_pct": 0.49,
+      "pct_65_and_over": 0.139,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total": 22750,
+      "age_median": 39.3,
+      "household_size_avg": 2.51,
+      "diversity_index": 0.67,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_black_non_hispanic": 0.036,
+      "pct_asian": 0.222,
+      "pct_foreign_born": 0.24,
+      "pct_owner_occupied": 0.64,
+      "rent_burden_pct": 0.5,
+      "pct_65_and_over": 0.14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "home_value_median": 92500,
+      "homeownership_rate": 0.82,
+      "rent_median": 620,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 0.036,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1991,
+      "home_value_median": 94000,
+      "homeownership_rate": 0.82,
+      "rent_median": 635,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 1.62,
+      "vacancy_rate": 0.037,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1992,
+      "home_value_median": 96500,
+      "homeownership_rate": 0.81,
+      "rent_median": 650,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 2.66,
+      "vacancy_rate": 0.038,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1993,
+      "home_value_median": 99000,
+      "homeownership_rate": 0.81,
+      "rent_median": 670,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 2.59,
+      "vacancy_rate": 0.039,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1994,
+      "home_value_median": 103000,
+      "homeownership_rate": 0.8,
+      "rent_median": 700,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 4.04,
+      "vacancy_rate": 0.04,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1995,
+      "home_value_median": 110000,
+      "homeownership_rate": 0.8,
+      "rent_median": 740,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 6.8,
+      "vacancy_rate": 0.041,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1996,
+      "home_value_median": 122000,
+      "homeownership_rate": 0.79,
+      "rent_median": 800,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 10.91,
+      "vacancy_rate": 0.042,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1997,
+      "home_value_median": 135000,
+      "homeownership_rate": 0.79,
+      "rent_median": 880,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 10.66,
+      "vacancy_rate": 0.043,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1998,
+      "home_value_median": 155000,
+      "homeownership_rate": 0.78,
+      "rent_median": 990,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 14.81,
+      "vacancy_rate": 0.044,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1999,
+      "home_value_median": 178000,
+      "homeownership_rate": 0.78,
+      "rent_median": 1100,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 14.84,
+      "vacancy_rate": 0.045,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2000,
+      "home_value_median": 195000,
+      "homeownership_rate": 0.77,
+      "rent_median": 1200,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 9.55,
+      "vacancy_rate": 0.046,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2001,
+      "home_value_median": 190000,
+      "homeownership_rate": 0.77,
+      "rent_median": 1150,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": -2.56,
+      "vacancy_rate": 0.047,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2002,
+      "home_value_median": 188000,
+      "homeownership_rate": 0.76,
+      "rent_median": 1120,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": -1.05,
+      "vacancy_rate": 0.048,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2003,
+      "home_value_median": 189500,
+      "homeownership_rate": 0.76,
+      "rent_median": 1130,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 0.8,
+      "vacancy_rate": 0.049,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2004,
+      "home_value_median": 195000,
+      "homeownership_rate": 0.76,
+      "rent_median": 1160,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 2.9,
+      "vacancy_rate": 0.05,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2005,
+      "home_value_median": 205000,
+      "homeownership_rate": 0.75,
+      "rent_median": 1210,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 5.13,
+      "vacancy_rate": 0.051,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "home_value_median": 218000,
+      "homeownership_rate": 0.75,
+      "rent_median": 1280,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 6.34,
+      "vacancy_rate": 0.052,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "home_value_median": 225000,
+      "homeownership_rate": 0.74,
+      "rent_median": 1350,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 3.21,
+      "vacancy_rate": 0.053,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "home_value_median": 215000,
+      "homeownership_rate": 0.74,
+      "rent_median": 1320,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": -4.44,
+      "vacancy_rate": 0.054,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "home_value_median": 210000,
+      "homeownership_rate": 0.73,
+      "rent_median": 1290,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": -2.33,
+      "vacancy_rate": 0.055,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "home_value_median": 212000,
+      "homeownership_rate": 0.73,
+      "rent_median": 1300,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 0.95,
+      "vacancy_rate": 0.058,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "home_value_median": 215000,
+      "homeownership_rate": 0.72,
+      "rent_median": 1340,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 1.42,
+      "vacancy_rate": 0.062,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "home_value_median": 228000,
+      "homeownership_rate": 0.72,
+      "rent_median": 1400,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 6.05,
+      "vacancy_rate": 0.066,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "home_value_median": 250000,
+      "homeownership_rate": 0.71,
+      "rent_median": 1480,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 9.65,
+      "vacancy_rate": 0.07,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "home_value_median": 275000,
+      "homeownership_rate": 0.7,
+      "rent_median": 1550,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 10,
+      "vacancy_rate": 0.074,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "home_value_median": 305000,
+      "homeownership_rate": 0.69,
+      "rent_median": 1630,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 10.91,
+      "vacancy_rate": 0.078,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "home_value_median": 335000,
+      "homeownership_rate": 0.69,
+      "rent_median": 1710,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 9.84,
+      "vacancy_rate": 0.08,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "home_value_median": 360000,
+      "homeownership_rate": 0.68,
+      "rent_median": 1780,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 7.46,
+      "vacancy_rate": 0.081,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "home_value_median": 385000,
+      "homeownership_rate": 0.68,
+      "rent_median": 1850,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 6.94,
+      "vacancy_rate": 0.083,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "home_value_median": 410000,
+      "homeownership_rate": 0.67,
+      "rent_median": 1920,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 6.49,
+      "vacancy_rate": 0.084,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "home_value_median": 455000,
+      "homeownership_rate": 0.67,
+      "rent_median": 2000,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 10.98,
+      "vacancy_rate": 0.085,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "home_value_median": 560000,
+      "homeownership_rate": 0.66,
+      "rent_median": 2150,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 23.08,
+      "vacancy_rate": 0.086,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "home_value_median": 595000,
+      "homeownership_rate": 0.65,
+      "rent_median": 2280,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 6.25,
+      "vacancy_rate": 0.087,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "home_value_median": 565000,
+      "homeownership_rate": 0.65,
+      "rent_median": 2320,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": -5.04,
+      "vacancy_rate": 0.088,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "home_value_median": 575000,
+      "homeownership_rate": 0.64,
+      "rent_median": 2380,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 1.77,
+      "vacancy_rate": 0.089,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "home_value_median": 590000,
+      "homeownership_rate": 0.64,
+      "rent_median": 2450,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "pct_home_value_change_yoy": 2.61,
+      "vacancy_rate": 0.09,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "income_median_household": 39000,
+      "education_bachelors_or_higher_pct": 0.36,
+      "employment_unemployment_rate": 0.051,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.051,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1991,
+      "income_median_household": 39500,
+      "education_bachelors_or_higher_pct": 0.37,
+      "employment_unemployment_rate": 0.055,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.055,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1992,
+      "income_median_household": 41000,
+      "education_bachelors_or_higher_pct": 0.38,
+      "employment_unemployment_rate": 0.052,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.052,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1993,
+      "income_median_household": 42500,
+      "education_bachelors_or_higher_pct": 0.39,
+      "employment_unemployment_rate": 0.048,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.048,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1994,
+      "income_median_household": 45000,
+      "education_bachelors_or_higher_pct": 0.4,
+      "employment_unemployment_rate": 0.045,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.045,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1995,
+      "income_median_household": 48000,
+      "education_bachelors_or_higher_pct": 0.42,
+      "employment_unemployment_rate": 0.041,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.041,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1996,
+      "income_median_household": 52000,
+      "education_bachelors_or_higher_pct": 0.44,
+      "employment_unemployment_rate": 0.035,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.035,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1997,
+      "income_median_household": 56500,
+      "education_bachelors_or_higher_pct": 0.46,
+      "employment_unemployment_rate": 0.03,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.03,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1998,
+      "income_median_household": 61000,
+      "education_bachelors_or_higher_pct": 0.48,
+      "employment_unemployment_rate": 0.026,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.026,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1999,
+      "income_median_household": 66000,
+      "education_bachelors_or_higher_pct": 0.5,
+      "employment_unemployment_rate": 0.022,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.022,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2000,
+      "income_median_household": 70000,
+      "education_bachelors_or_higher_pct": 0.52,
+      "employment_unemployment_rate": 0.021,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.021,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2001,
+      "income_median_household": 68000,
+      "education_bachelors_or_higher_pct": 0.52,
+      "employment_unemployment_rate": 0.04,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.04,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2002,
+      "income_median_household": 67500,
+      "education_bachelors_or_higher_pct": 0.53,
+      "employment_unemployment_rate": 0.055,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.055,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2003,
+      "income_median_household": 68500,
+      "education_bachelors_or_higher_pct": 0.53,
+      "employment_unemployment_rate": 0.06,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.06,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2004,
+      "income_median_household": 70000,
+      "education_bachelors_or_higher_pct": 0.54,
+      "employment_unemployment_rate": 0.05,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.05,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2005,
+      "income_median_household": 72500,
+      "education_bachelors_or_higher_pct": 0.55,
+      "employment_unemployment_rate": 0.045,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.045,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "income_median_household": 76000,
+      "education_bachelors_or_higher_pct": 0.56,
+      "employment_unemployment_rate": 0.04,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.04,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "income_median_household": 79000,
+      "education_bachelors_or_higher_pct": 0.57,
+      "employment_unemployment_rate": 0.038,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.038,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "income_median_household": 78000,
+      "education_bachelors_or_higher_pct": 0.58,
+      "employment_unemployment_rate": 0.055,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.055,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "income_median_household": 77000,
+      "education_bachelors_or_higher_pct": 0.58,
+      "employment_unemployment_rate": 0.075,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.075,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "income_median_household": 78500,
+      "education_bachelors_or_higher_pct": 0.59,
+      "employment_unemployment_rate": 0.07,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.07,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "income_median_household": 81000,
+      "education_bachelors_or_higher_pct": 0.6,
+      "employment_unemployment_rate": 0.065,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.065,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "income_median_household": 85000,
+      "education_bachelors_or_higher_pct": 0.61,
+      "employment_unemployment_rate": 0.055,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.055,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "income_median_household": 89000,
+      "education_bachelors_or_higher_pct": 0.62,
+      "employment_unemployment_rate": 0.05,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.05,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "income_median_household": 93000,
+      "education_bachelors_or_higher_pct": 0.63,
+      "employment_unemployment_rate": 0.042,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.042,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "income_median_household": 98000,
+      "education_bachelors_or_higher_pct": 0.64,
+      "employment_unemployment_rate": 0.035,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.035,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "income_median_household": 103000,
+      "education_bachelors_or_higher_pct": 0.65,
+      "employment_unemployment_rate": 0.033,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.033,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "income_median_household": 108000,
+      "education_bachelors_or_higher_pct": 0.66,
+      "employment_unemployment_rate": 0.03,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.03,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "income_median_household": 113000,
+      "education_bachelors_or_higher_pct": 0.67,
+      "employment_unemployment_rate": 0.028,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.028,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "income_median_household": 118000,
+      "education_bachelors_or_higher_pct": 0.68,
+      "employment_unemployment_rate": 0.026,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.026,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "income_median_household": 121000,
+      "education_bachelors_or_higher_pct": 0.69,
+      "employment_unemployment_rate": 0.06,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.06,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "income_median_household": 126000,
+      "education_bachelors_or_higher_pct": 0.7,
+      "employment_unemployment_rate": 0.04,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.04,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "income_median_household": 132000,
+      "education_bachelors_or_higher_pct": 0.71,
+      "employment_unemployment_rate": 0.03,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.03,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "income_median_household": 135000,
+      "education_bachelors_or_higher_pct": 0.71,
+      "employment_unemployment_rate": 0.035,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.035,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "income_median_household": 138000,
+      "education_bachelors_or_higher_pct": 0.72,
+      "employment_unemployment_rate": 0.036,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.036,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "income_median_household": 141000,
+      "education_bachelors_or_higher_pct": 0.72,
+      "employment_unemployment_rate": 0.038,
+      "region": "Milwood (Tract 316.0)",
+      "region_id": 28,
+      "unemployment_rate": 0.038,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

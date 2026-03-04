@@ -1,0 +1,1752 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 1349,
+      "households": 521,
+      "median_age": 38.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 5,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 10.5,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 1991,
+      "total_population": 1355,
+      "households": 524,
+      "median_age": 38.7,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.18,
+      "pct_foreign_born": 4.89,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 10.66,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 1361,
+      "households": 527,
+      "median_age": 38.9,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.26,
+      "pct_foreign_born": 4.78,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 10.82,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 1368,
+      "households": 530,
+      "median_age": 39.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.34,
+      "pct_foreign_born": 4.67,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 10.98,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 1375,
+      "households": 534,
+      "median_age": 39.3,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.42,
+      "pct_foreign_born": 4.56,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 11.14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 1381,
+      "households": 538,
+      "median_age": 39.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 4.45,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 11.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 1386,
+      "households": 540,
+      "median_age": 39.7,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.58,
+      "pct_foreign_born": 4.34,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 11.46,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 1391,
+      "households": 542,
+      "median_age": 39.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.66,
+      "pct_foreign_born": 4.23,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 11.62,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 1396,
+      "households": 543,
+      "median_age": 39.9,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.74,
+      "pct_foreign_born": 4.12,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 11.78,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 1401,
+      "households": 544,
+      "median_age": 40,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.82,
+      "pct_foreign_born": 4.01,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 11.94,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 1403,
+      "households": 545,
+      "median_age": 40.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.1,
+      "pct_asian": 2.9,
+      "pct_foreign_born": 3.9,
+      "pct_owner_occupied": 95.4,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 12.1,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "total_population": 1405,
+      "households": 546,
+      "median_age": 40.3,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.08,
+      "pct_asian": 3,
+      "pct_foreign_born": 3.92,
+      "pct_owner_occupied": 95.41,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 12.31,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 1406,
+      "households": 547,
+      "median_age": 40.6,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.06,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 3.94,
+      "pct_owner_occupied": 95.42,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 12.52,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 1407,
+      "households": 548,
+      "median_age": 40.9,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.04,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 3.96,
+      "pct_owner_occupied": 95.43,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 12.73,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 1408,
+      "households": 548,
+      "median_age": 41.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0.02,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 3.98,
+      "pct_owner_occupied": 95.44,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 12.94,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 1409,
+      "households": 549,
+      "median_age": 41.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 3.4,
+      "pct_foreign_born": 4,
+      "pct_owner_occupied": 95.45,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 13.15,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 1410,
+      "households": 549,
+      "median_age": 41.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 4.02,
+      "pct_owner_occupied": 95.46,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 13.36,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 1411,
+      "households": 549,
+      "median_age": 42.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 4.04,
+      "pct_owner_occupied": 95.47,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 13.57,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 1411,
+      "households": 550,
+      "median_age": 42.3,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 4.06,
+      "pct_owner_occupied": 95.48,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 13.78,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 1412,
+      "households": 550,
+      "median_age": 42.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 4.08,
+      "pct_owner_occupied": 95.49,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 13.99,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 1412,
+      "households": 550,
+      "median_age": 42.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 4.1,
+      "pct_owner_occupied": 95.5,
+      "rent_burden_pct": 5,
+      "pct_65_and_over": 14.2,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "total_population": 1415,
+      "households": 552,
+      "median_age": 42.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 4.06,
+      "pct_foreign_born": 4.13,
+      "pct_owner_occupied": 95.51,
+      "rent_burden_pct": 4.6,
+      "pct_65_and_over": 14.42,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 1419,
+      "households": 554,
+      "median_age": 43.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 4.22,
+      "pct_foreign_born": 4.16,
+      "pct_owner_occupied": 95.52,
+      "rent_burden_pct": 4.2,
+      "pct_65_and_over": 14.64,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 1424,
+      "households": 556,
+      "median_age": 43.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 4.38,
+      "pct_foreign_born": 4.19,
+      "pct_owner_occupied": 95.53,
+      "rent_burden_pct": 3.8,
+      "pct_65_and_over": 14.86,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 1430,
+      "households": 558,
+      "median_age": 43.7,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 4.54,
+      "pct_foreign_born": 4.22,
+      "pct_owner_occupied": 95.54,
+      "rent_burden_pct": 3.4,
+      "pct_65_and_over": 15.08,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 1437,
+      "households": 560,
+      "median_age": 44,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 4.7,
+      "pct_foreign_born": 4.25,
+      "pct_owner_occupied": 95.55,
+      "rent_burden_pct": 3,
+      "pct_65_and_over": 15.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total_population": 1445,
+      "households": 562,
+      "median_age": 44.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 4.86,
+      "pct_foreign_born": 4.28,
+      "pct_owner_occupied": 95.56,
+      "rent_burden_pct": 2.9,
+      "pct_65_and_over": 15.52,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 1452,
+      "households": 563,
+      "median_age": 44.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 5.02,
+      "pct_foreign_born": 4.31,
+      "pct_owner_occupied": 95.57,
+      "rent_burden_pct": 2.8,
+      "pct_65_and_over": 15.74,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 1458,
+      "households": 564,
+      "median_age": 44.6,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 5.18,
+      "pct_foreign_born": 4.34,
+      "pct_owner_occupied": 95.58,
+      "rent_burden_pct": 2.7,
+      "pct_65_and_over": 15.96,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 1463,
+      "households": 565,
+      "median_age": 44.7,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 5.34,
+      "pct_foreign_born": 4.37,
+      "pct_owner_occupied": 95.59,
+      "rent_burden_pct": 2.6,
+      "pct_65_and_over": 16.18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 1466,
+      "households": 565,
+      "median_age": 44.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 4.4,
+      "pct_owner_occupied": 95.6,
+      "rent_burden_pct": 2.5,
+      "pct_65_and_over": 16.4,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2021,
+      "total_population": 1475,
+      "households": 568,
+      "median_age": 45,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 5.95,
+      "pct_foreign_born": 4.55,
+      "pct_owner_occupied": 95.95,
+      "rent_burden_pct": 2.5,
+      "pct_65_and_over": 16.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 1483,
+      "households": 571,
+      "median_age": 45.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 6.4,
+      "pct_foreign_born": 4.7,
+      "pct_owner_occupied": 96.3,
+      "rent_burden_pct": 2.5,
+      "pct_65_and_over": 16.8,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2023,
+      "total_population": 1490,
+      "households": 574,
+      "median_age": 45.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 6.5,
+      "pct_foreign_born": 4.76,
+      "pct_owner_occupied": 96.36,
+      "rent_burden_pct": 2.5,
+      "pct_65_and_over": 16.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 1496,
+      "households": 577,
+      "median_age": 45.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 6.6,
+      "pct_foreign_born": 4.83,
+      "pct_owner_occupied": 96.43,
+      "rent_burden_pct": 2.5,
+      "pct_65_and_over": 17,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 1502,
+      "households": 580,
+      "median_age": 45.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_black_non_hispanic": 0,
+      "pct_asian": 6.7,
+      "pct_foreign_born": 4.9,
+      "pct_owner_occupied": 96.5,
+      "rent_burden_pct": 2.5,
+      "pct_65_and_over": 17.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 285000,
+      "average_days_on_market": 75,
+      "housing_units": 535,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 2.62,
+      "new_construction_permits": 1,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value": 298000,
+      "average_days_on_market": 72,
+      "housing_units": 537,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 4.56,
+      "vacancy_rate": 2.42,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value": 315000,
+      "average_days_on_market": 68,
+      "housing_units": 539,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 5.7,
+      "vacancy_rate": 2.23,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value": 330000,
+      "average_days_on_market": 65,
+      "housing_units": 542,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 4.76,
+      "vacancy_rate": 2.04,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value": 355000,
+      "average_days_on_market": 62,
+      "housing_units": 545,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 7.58,
+      "vacancy_rate": 1.85,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value": 390000,
+      "average_days_on_market": 58,
+      "housing_units": 548,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 9.86,
+      "vacancy_rate": 1.66,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value": 430000,
+      "average_days_on_market": 51,
+      "housing_units": 550,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 10.26,
+      "vacancy_rate": 1.47,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value": 485000,
+      "average_days_on_market": 45,
+      "housing_units": 552,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 12.79,
+      "vacancy_rate": 1.28,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value": 525000,
+      "average_days_on_market": 42,
+      "housing_units": 554,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.25,
+      "vacancy_rate": 1.09,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value": 570000,
+      "average_days_on_market": 38,
+      "housing_units": 556,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.57,
+      "vacancy_rate": 0.9,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value": 610000,
+      "average_days_on_market": 40,
+      "housing_units": 558,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 7.02,
+      "vacancy_rate": 2.33,
+      "new_construction_permits": 1,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value": 595000,
+      "average_days_on_market": 65,
+      "housing_units": 560,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": -2.46,
+      "vacancy_rate": 2.37,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value": 580000,
+      "average_days_on_market": 80,
+      "housing_units": 561,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": -2.52,
+      "vacancy_rate": 2.41,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value": 605000,
+      "average_days_on_market": 70,
+      "housing_units": 562,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 4.31,
+      "vacancy_rate": 2.45,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value": 640000,
+      "average_days_on_market": 65,
+      "housing_units": 563,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 5.79,
+      "vacancy_rate": 2.49,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_home_value": 695000,
+      "average_days_on_market": 60,
+      "housing_units": 564,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.59,
+      "vacancy_rate": 2.53,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value": 760000,
+      "average_days_on_market": 55,
+      "housing_units": 565,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 9.35,
+      "vacancy_rate": 2.57,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value": 810000,
+      "average_days_on_market": 60,
+      "housing_units": 566,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 6.58,
+      "vacancy_rate": 2.61,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value": 765000,
+      "average_days_on_market": 85,
+      "housing_units": 567,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": -5.56,
+      "vacancy_rate": 2.65,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value": 740000,
+      "average_days_on_market": 95,
+      "housing_units": 568,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": -3.14,
+      "vacancy_rate": 2.69,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value": 775000,
+      "average_days_on_market": 80,
+      "housing_units": 569,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 4.73,
+      "vacancy_rate": 3.34,
+      "new_construction_permits": 1,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_home_value": 840000,
+      "average_days_on_market": 70,
+      "housing_units": 571,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.39,
+      "vacancy_rate": 3.28,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value": 925000,
+      "average_days_on_market": 55,
+      "housing_units": 572,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 10.12,
+      "vacancy_rate": 3.22,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value": 1050000,
+      "average_days_on_market": 45,
+      "housing_units": 574,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 13.51,
+      "vacancy_rate": 3.16,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value": 1180000,
+      "average_days_on_market": 40,
+      "housing_units": 575,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 12.38,
+      "vacancy_rate": 3.1,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value": 1290000,
+      "average_days_on_market": 35,
+      "housing_units": 576,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 9.32,
+      "vacancy_rate": 3.04,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value": 1400000,
+      "average_days_on_market": 32,
+      "housing_units": 578,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.53,
+      "vacancy_rate": 2.98,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value": 1550000,
+      "average_days_on_market": 30,
+      "housing_units": 580,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 10.71,
+      "vacancy_rate": 2.92,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value": 1680000,
+      "average_days_on_market": 28,
+      "housing_units": 581,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.39,
+      "vacancy_rate": 2.86,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value": 1790000,
+      "average_days_on_market": 26,
+      "housing_units": 582,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 6.55,
+      "vacancy_rate": 2.8,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value": 1950000,
+      "average_days_on_market": 22,
+      "housing_units": 583,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 8.94,
+      "vacancy_rate": 3.09,
+      "new_construction_permits": 1,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_home_value": 2350000,
+      "average_days_on_market": 16,
+      "housing_units": 585,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 20.51,
+      "vacancy_rate": 2.98,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value": 2500000,
+      "average_days_on_market": 25,
+      "housing_units": 587,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 6.38,
+      "vacancy_rate": 2.73,
+      "new_construction_permits": 1,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value": 2420000,
+      "average_days_on_market": 45,
+      "housing_units": 588,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": -3.2,
+      "vacancy_rate": 2.67,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value": 2480000,
+      "average_days_on_market": 40,
+      "housing_units": 589,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 2.48,
+      "vacancy_rate": 2.61,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value": 2550000,
+      "average_days_on_market": 38,
+      "housing_units": 590,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "pct_home_value_change_yoy": 2.82,
+      "vacancy_rate": 2.54,
+      "new_construction_permits": 1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 95000,
+      "bachelors_degree_or_higher_pct": 72,
+      "unemployment_rate": 2.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income": 98500,
+      "bachelors_degree_or_higher_pct": 72.8,
+      "unemployment_rate": 2.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income": 102000,
+      "bachelors_degree_or_higher_pct": 73.6,
+      "unemployment_rate": 2.6,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income": 106000,
+      "bachelors_degree_or_higher_pct": 74.4,
+      "unemployment_rate": 2.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income": 111000,
+      "bachelors_degree_or_higher_pct": 75.2,
+      "unemployment_rate": 2.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income": 118000,
+      "bachelors_degree_or_higher_pct": 76,
+      "unemployment_rate": 2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income": 126000,
+      "bachelors_degree_or_higher_pct": 76.8,
+      "unemployment_rate": 1.9,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income": 135000,
+      "bachelors_degree_or_higher_pct": 77.6,
+      "unemployment_rate": 1.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income": 145000,
+      "bachelors_degree_or_higher_pct": 78.2,
+      "unemployment_rate": 1.7,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income": 155000,
+      "bachelors_degree_or_higher_pct": 78.8,
+      "unemployment_rate": 1.6,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income": 162000,
+      "bachelors_degree_or_higher_pct": 79.5,
+      "unemployment_rate": 1.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income": 158000,
+      "bachelors_degree_or_higher_pct": 80,
+      "unemployment_rate": 2.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income": 155000,
+      "bachelors_degree_or_higher_pct": 80.5,
+      "unemployment_rate": 3.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income": 160000,
+      "bachelors_degree_or_higher_pct": 81,
+      "unemployment_rate": 3,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income": 166000,
+      "bachelors_degree_or_higher_pct": 81.5,
+      "unemployment_rate": 2.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income": 174000,
+      "bachelors_degree_or_higher_pct": 82,
+      "unemployment_rate": 2.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income": 182000,
+      "bachelors_degree_or_higher_pct": 82.5,
+      "unemployment_rate": 2.3,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income": 190000,
+      "bachelors_degree_or_higher_pct": 83,
+      "unemployment_rate": 2.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income": 185000,
+      "bachelors_degree_or_higher_pct": 83.5,
+      "unemployment_rate": 3.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income": 181000,
+      "bachelors_degree_or_higher_pct": 84,
+      "unemployment_rate": 4.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income": 188000,
+      "bachelors_degree_or_higher_pct": 84.5,
+      "unemployment_rate": 3.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income": 195000,
+      "bachelors_degree_or_higher_pct": 85,
+      "unemployment_rate": 3.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income": 204000,
+      "bachelors_degree_or_higher_pct": 85.5,
+      "unemployment_rate": 2.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income": 212000,
+      "bachelors_degree_or_higher_pct": 86,
+      "unemployment_rate": 2.6,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income": 220000,
+      "bachelors_degree_or_higher_pct": 86.5,
+      "unemployment_rate": 2.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income": 228000,
+      "bachelors_degree_or_higher_pct": 87,
+      "unemployment_rate": 2.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income": 237000,
+      "bachelors_degree_or_higher_pct": 87.5,
+      "unemployment_rate": 2.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income": 248000,
+      "bachelors_degree_or_higher_pct": 88,
+      "unemployment_rate": 2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income": 260000,
+      "bachelors_degree_or_higher_pct": 88.4,
+      "unemployment_rate": 1.9,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income": 272000,
+      "bachelors_degree_or_higher_pct": 88.8,
+      "unemployment_rate": 1.8,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income": 275000,
+      "bachelors_degree_or_higher_pct": 89.1,
+      "unemployment_rate": 3.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_household_income": 288000,
+      "bachelors_degree_or_higher_pct": 89.5,
+      "unemployment_rate": 2.5,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income": 305000,
+      "bachelors_degree_or_higher_pct": 89.8,
+      "unemployment_rate": 2.1,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income": 315000,
+      "bachelors_degree_or_higher_pct": 90.1,
+      "unemployment_rate": 2.4,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income": 325000,
+      "bachelors_degree_or_higher_pct": 90.4,
+      "unemployment_rate": 2.3,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income": 335000,
+      "bachelors_degree_or_higher_pct": 90.7,
+      "unemployment_rate": 2.2,
+      "region": "Rollingwood",
+      "region_id": 143,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

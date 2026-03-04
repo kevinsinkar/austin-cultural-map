@@ -1,0 +1,1906 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 7250,
+      "median_age": 40.5,
+      "household_size": 2.2,
+      "diversity_index": 0.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 5.2,
+      "pct_owner_occupied": 82.5,
+      "rent_burden_pct": 25,
+      "pct_65_and_over": 17.5,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1991,
+      "total_population": 7280,
+      "median_age": 40.4,
+      "household_size": 2.2,
+      "diversity_index": 0.21,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 5.4,
+      "pct_owner_occupied": 82.7,
+      "rent_burden_pct": 25.3,
+      "pct_65_and_over": 17.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 7315,
+      "median_age": 40.3,
+      "household_size": 2.2,
+      "diversity_index": 0.21,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 5.6,
+      "pct_owner_occupied": 82.9,
+      "rent_burden_pct": 25.7,
+      "pct_65_and_over": 17.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 7350,
+      "median_age": 40.2,
+      "household_size": 2.1,
+      "diversity_index": 0.22,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.6,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 83.1,
+      "rent_burden_pct": 26,
+      "pct_65_and_over": 17.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 7390,
+      "median_age": 40.1,
+      "household_size": 2.1,
+      "diversity_index": 0.23,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 6,
+      "pct_owner_occupied": 83.3,
+      "rent_burden_pct": 26.3,
+      "pct_65_and_over": 17.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 7435,
+      "median_age": 40,
+      "household_size": 2.1,
+      "diversity_index": 0.24,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.9,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 83.5,
+      "rent_burden_pct": 26.7,
+      "pct_65_and_over": 17.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 7480,
+      "median_age": 39.8,
+      "household_size": 2.1,
+      "diversity_index": 0.25,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 3,
+      "pct_foreign_born": 6.2,
+      "pct_owner_occupied": 83.7,
+      "rent_burden_pct": 27,
+      "pct_65_and_over": 17.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 7530,
+      "median_age": 39.6,
+      "household_size": 2.2,
+      "diversity_index": 0.26,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3,
+      "pct_foreign_born": 6.3,
+      "pct_owner_occupied": 83.9,
+      "rent_burden_pct": 27.3,
+      "pct_65_and_over": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 7590,
+      "median_age": 39.4,
+      "household_size": 2.2,
+      "diversity_index": 0.27,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 84,
+      "rent_burden_pct": 27.7,
+      "pct_65_and_over": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 7650,
+      "median_age": 39.2,
+      "household_size": 2.2,
+      "diversity_index": 0.28,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 84.1,
+      "rent_burden_pct": 27.8,
+      "pct_65_and_over": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 7710,
+      "median_age": 39,
+      "household_size": 2.2,
+      "diversity_index": 0.29,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 84.2,
+      "rent_burden_pct": 28,
+      "pct_65_and_over": 18,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2001,
+      "total_population": 7745,
+      "median_age": 38.9,
+      "household_size": 2.2,
+      "diversity_index": 0.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 83.8,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 18.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 7760,
+      "median_age": 38.8,
+      "household_size": 2.2,
+      "diversity_index": 0.31,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.4,
+      "pct_foreign_born": 6.9,
+      "pct_owner_occupied": 83.4,
+      "rent_burden_pct": 29,
+      "pct_65_and_over": 18.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 7785,
+      "median_age": 38.7,
+      "household_size": 2.2,
+      "diversity_index": 0.32,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 7.1,
+      "pct_owner_occupied": 83,
+      "rent_burden_pct": 29.5,
+      "pct_65_and_over": 18.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 7820,
+      "median_age": 38.6,
+      "household_size": 2.3,
+      "diversity_index": 0.32,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 7.3,
+      "pct_owner_occupied": 82.7,
+      "rent_burden_pct": 30,
+      "pct_65_and_over": 18.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 7860,
+      "median_age": 38.5,
+      "household_size": 2.3,
+      "diversity_index": 0.33,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 7.5,
+      "pct_owner_occupied": 82.5,
+      "rent_burden_pct": 30.5,
+      "pct_65_and_over": 18.5,
+      "confidence": "high",
+      "audit_flags": [
+        "CORRECTED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 7910,
+      "median_age": 38.5,
+      "household_size": 2.3,
+      "diversity_index": 0.34,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 7.6,
+      "pct_owner_occupied": 82.6,
+      "rent_burden_pct": 30.9,
+      "pct_65_and_over": 18.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 7955,
+      "median_age": 38.6,
+      "household_size": 2.3,
+      "diversity_index": 0.35,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4,
+      "pct_foreign_born": 7.8,
+      "pct_owner_occupied": 82.7,
+      "rent_burden_pct": 31.2,
+      "pct_65_and_over": 18.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 7980,
+      "median_age": 38.7,
+      "household_size": 2.3,
+      "diversity_index": 0.36,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 7.9,
+      "pct_owner_occupied": 82.7,
+      "rent_burden_pct": 31.6,
+      "pct_65_and_over": 18.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 7995,
+      "median_age": 38.8,
+      "household_size": 2.2,
+      "diversity_index": 0.37,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.2,
+      "pct_foreign_born": 8,
+      "pct_owner_occupied": 82.8,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 19,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 8010,
+      "median_age": 39,
+      "household_size": 2.2,
+      "diversity_index": 0.38,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.2,
+      "pct_foreign_born": 8,
+      "pct_owner_occupied": 82.8,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 19,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2011,
+      "total_population": 8040,
+      "median_age": 39.1,
+      "household_size": 2.2,
+      "diversity_index": 0.38,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.3,
+      "pct_foreign_born": 8.1,
+      "pct_owner_occupied": 83.1,
+      "rent_burden_pct": 32.6,
+      "pct_65_and_over": 19.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 8080,
+      "median_age": 39.2,
+      "household_size": 2.2,
+      "diversity_index": 0.39,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 4.4,
+      "pct_foreign_born": 8.2,
+      "pct_owner_occupied": 83.3,
+      "rent_burden_pct": 33,
+      "pct_65_and_over": 19.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 8130,
+      "median_age": 39.4,
+      "household_size": 2.2,
+      "diversity_index": 0.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 4.6,
+      "pct_foreign_born": 8.3,
+      "pct_owner_occupied": 83.6,
+      "rent_burden_pct": 33.5,
+      "pct_65_and_over": 19.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 8190,
+      "median_age": 39.6,
+      "household_size": 2.3,
+      "diversity_index": 0.41,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 4.7,
+      "pct_foreign_born": 8.4,
+      "pct_owner_occupied": 83.8,
+      "rent_burden_pct": 33.8,
+      "pct_65_and_over": 19.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 8250,
+      "median_age": 39.8,
+      "household_size": 2.3,
+      "diversity_index": 0.42,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 4.8,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 83.9,
+      "rent_burden_pct": 34,
+      "pct_65_and_over": 19.5,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2016,
+      "total_population": 8310,
+      "median_age": 40,
+      "household_size": 2.3,
+      "diversity_index": 0.43,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 5,
+      "pct_foreign_born": 8.6,
+      "pct_owner_occupied": 84.1,
+      "rent_burden_pct": 34.6,
+      "pct_65_and_over": 19.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 8360,
+      "median_age": 40.2,
+      "household_size": 2.3,
+      "diversity_index": 0.44,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 8.7,
+      "pct_owner_occupied": 84.3,
+      "rent_burden_pct": 35,
+      "pct_65_and_over": 19.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 8400,
+      "median_age": 40.5,
+      "household_size": 2.3,
+      "diversity_index": 0.45,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 5.3,
+      "pct_foreign_born": 8.9,
+      "pct_owner_occupied": 84.5,
+      "rent_burden_pct": 35.5,
+      "pct_65_and_over": 19.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 8430,
+      "median_age": 40.8,
+      "household_size": 2.3,
+      "diversity_index": 0.46,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 5.4,
+      "pct_foreign_born": 9,
+      "pct_owner_occupied": 84.7,
+      "rent_burden_pct": 35.8,
+      "pct_65_and_over": 19.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 8450,
+      "median_age": 41,
+      "household_size": 2.4,
+      "diversity_index": 0.47,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 9,
+      "pct_owner_occupied": 84.8,
+      "rent_burden_pct": 36,
+      "pct_65_and_over": 20,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2021,
+      "total_population": 8480,
+      "median_age": 41.2,
+      "household_size": 2.4,
+      "diversity_index": 0.48,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 5.6,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 84.7,
+      "rent_burden_pct": 36.2,
+      "pct_65_and_over": 20.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 8500,
+      "median_age": 41.3,
+      "household_size": 2.4,
+      "diversity_index": 0.49,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 5.7,
+      "pct_foreign_born": 9.2,
+      "pct_owner_occupied": 84.5,
+      "rent_burden_pct": 36.4,
+      "pct_65_and_over": 20.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total_population": 8520,
+      "median_age": 41.5,
+      "household_size": 2.4,
+      "diversity_index": 0.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 5.8,
+      "pct_foreign_born": 9.3,
+      "pct_owner_occupied": 84.3,
+      "rent_burden_pct": 36.6,
+      "pct_65_and_over": 20.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 8545,
+      "median_age": 41.6,
+      "household_size": 2.4,
+      "diversity_index": 0.51,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 5.9,
+      "pct_foreign_born": 9.4,
+      "pct_owner_occupied": 84.2,
+      "rent_burden_pct": 36.8,
+      "pct_65_and_over": 20.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 8560,
+      "median_age": 41.8,
+      "household_size": 2.4,
+      "diversity_index": 0.52,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 6,
+      "pct_foreign_born": 9.5,
+      "pct_owner_occupied": 84,
+      "rent_burden_pct": 37,
+      "pct_65_and_over": 21,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 155000,
+      "average_rent": 815,
+      "homeownership_rate": 82.5,
+      "percent_mid_century_homes": 90,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 0,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value": 161000,
+      "average_rent": 840,
+      "homeownership_rate": 82.7,
+      "percent_mid_century_homes": 89.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 3.87,
+      "vacancy_rate": 4.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value": 168000,
+      "average_rent": 870,
+      "homeownership_rate": 82.9,
+      "percent_mid_century_homes": 89,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 4.35,
+      "vacancy_rate": 4.3,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value": 175000,
+      "average_rent": 900,
+      "homeownership_rate": 83.1,
+      "percent_mid_century_homes": 88.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 4.17,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value": 184000,
+      "average_rent": 930,
+      "homeownership_rate": 83.3,
+      "percent_mid_century_homes": 88,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 5.14,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value": 195000,
+      "average_rent": 960,
+      "homeownership_rate": 83.5,
+      "percent_mid_century_homes": 87.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 5.98,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value": 208000,
+      "average_rent": 990,
+      "homeownership_rate": 83.7,
+      "percent_mid_century_homes": 87,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 6.67,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value": 225000,
+      "average_rent": 1020,
+      "homeownership_rate": 83.9,
+      "percent_mid_century_homes": 86.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 8.17,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value": 245000,
+      "average_rent": 1050,
+      "homeownership_rate": 84,
+      "percent_mid_century_homes": 85.8,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 8.89,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value": 270000,
+      "average_rent": 1080,
+      "homeownership_rate": 84.1,
+      "percent_mid_century_homes": 85.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 10.2,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value": 295000,
+      "average_rent": 1100,
+      "homeownership_rate": 84.2,
+      "percent_mid_century_homes": 84.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 9.26,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value": 290000,
+      "average_rent": 1130,
+      "homeownership_rate": 83.8,
+      "percent_mid_century_homes": 83.9,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": -1.69,
+      "vacancy_rate": 4.3,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value": 285000,
+      "average_rent": 1160,
+      "homeownership_rate": 83.4,
+      "percent_mid_century_homes": 83.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": -1.72,
+      "vacancy_rate": 4.6,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value": 292000,
+      "average_rent": 1200,
+      "homeownership_rate": 83,
+      "percent_mid_century_homes": 82.6,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 2.46,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value": 310000,
+      "average_rent": 1240,
+      "homeownership_rate": 82.7,
+      "percent_mid_century_homes": 82,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 6.16,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_home_value": 335000,
+      "average_rent": 1350,
+      "homeownership_rate": 82.5,
+      "percent_mid_century_homes": 81.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 8.06,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value": 360000,
+      "average_rent": 1390,
+      "homeownership_rate": 82.6,
+      "percent_mid_century_homes": 80.6,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 7.46,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value": 380000,
+      "average_rent": 1430,
+      "homeownership_rate": 82.7,
+      "percent_mid_century_homes": 79.9,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 5.56,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value": 375000,
+      "average_rent": 1470,
+      "homeownership_rate": 82.7,
+      "percent_mid_century_homes": 79.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": -1.32,
+      "vacancy_rate": 6.3,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value": 370000,
+      "average_rent": 1510,
+      "homeownership_rate": 82.8,
+      "percent_mid_century_homes": 78.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": -1.33,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value": 378000,
+      "average_rent": 1560,
+      "homeownership_rate": 82.8,
+      "percent_mid_century_homes": 77.8,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 2.16,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_home_value": 395000,
+      "average_rent": 1600,
+      "homeownership_rate": 83.1,
+      "percent_mid_century_homes": 77,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 4.5,
+      "vacancy_rate": 6.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value": 440000,
+      "average_rent": 1650,
+      "homeownership_rate": 83.3,
+      "percent_mid_century_homes": 76.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 11.39,
+      "vacancy_rate": 6.3,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value": 495000,
+      "average_rent": 1710,
+      "homeownership_rate": 83.6,
+      "percent_mid_century_homes": 75.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 12.5,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value": 550000,
+      "average_rent": 1770,
+      "homeownership_rate": 83.8,
+      "percent_mid_century_homes": 74.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 11.11,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value": 610000,
+      "average_rent": 1980,
+      "homeownership_rate": 83.9,
+      "percent_mid_century_homes": 73.6,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 10.91,
+      "vacancy_rate": 6,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value": 670000,
+      "average_rent": 2030,
+      "homeownership_rate": 84.1,
+      "percent_mid_century_homes": 72.7,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 9.84,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value": 730000,
+      "average_rent": 2080,
+      "homeownership_rate": 84.3,
+      "percent_mid_century_homes": 71.8,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 8.96,
+      "vacancy_rate": 5.6,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value": 780000,
+      "average_rent": 2130,
+      "homeownership_rate": 84.5,
+      "percent_mid_century_homes": 70.9,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 6.85,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value": 825000,
+      "average_rent": 2180,
+      "homeownership_rate": 84.7,
+      "percent_mid_century_homes": 70,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 5.77,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value": 950000,
+      "average_rent": 2220,
+      "homeownership_rate": 84.8,
+      "percent_mid_century_homes": 69.1,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 15.15,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_home_value": 1150000,
+      "average_rent": 2400,
+      "homeownership_rate": 84.7,
+      "percent_mid_century_homes": 68.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 21.05,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value": 1250000,
+      "average_rent": 2600,
+      "homeownership_rate": 84.5,
+      "percent_mid_century_homes": 67.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 8.7,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value": 1220000,
+      "average_rent": 2700,
+      "homeownership_rate": 84.3,
+      "percent_mid_century_homes": 66.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": -2.4,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value": 1260000,
+      "average_rent": 2800,
+      "homeownership_rate": 84.2,
+      "percent_mid_century_homes": 65.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 3.28,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value": 1300000,
+      "average_rent": 2900,
+      "homeownership_rate": 84,
+      "percent_mid_century_homes": 64.6,
+      "region": "Allandale",
+      "region_id": 146,
+      "pct_home_value_change_yoy": 3.17,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 48000,
+      "bachelors_degree_or_higher_pct": 55.2,
+      "unemployment_rate": 4.5,
+      "community_engagement_index": 8,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income": 49500,
+      "bachelors_degree_or_higher_pct": 56,
+      "unemployment_rate": 5.1,
+      "community_engagement_index": 8.1,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income": 51000,
+      "bachelors_degree_or_higher_pct": 56.8,
+      "unemployment_rate": 4.8,
+      "community_engagement_index": 8.1,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income": 53000,
+      "bachelors_degree_or_higher_pct": 57.5,
+      "unemployment_rate": 4.2,
+      "community_engagement_index": 8.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income": 55500,
+      "bachelors_degree_or_higher_pct": 58.3,
+      "unemployment_rate": 3.8,
+      "community_engagement_index": 8.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income": 58000,
+      "bachelors_degree_or_higher_pct": 59.2,
+      "unemployment_rate": 3.5,
+      "community_engagement_index": 8.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income": 61000,
+      "bachelors_degree_or_higher_pct": 60.1,
+      "unemployment_rate": 3.2,
+      "community_engagement_index": 8.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income": 64500,
+      "bachelors_degree_or_higher_pct": 61.2,
+      "unemployment_rate": 2.9,
+      "community_engagement_index": 8.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income": 68000,
+      "bachelors_degree_or_higher_pct": 62.5,
+      "unemployment_rate": 2.7,
+      "community_engagement_index": 8.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income": 72000,
+      "bachelors_degree_or_higher_pct": 63.8,
+      "unemployment_rate": 2.5,
+      "community_engagement_index": 8.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income": 75000,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 2.8,
+      "community_engagement_index": 8.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income": 74500,
+      "bachelors_degree_or_higher_pct": 65.8,
+      "unemployment_rate": 5.5,
+      "community_engagement_index": 8.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income": 74800,
+      "bachelors_degree_or_higher_pct": 66.5,
+      "unemployment_rate": 6.2,
+      "community_engagement_index": 8.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income": 76000,
+      "bachelors_degree_or_higher_pct": 67.1,
+      "unemployment_rate": 5.8,
+      "community_engagement_index": 8.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income": 79000,
+      "bachelors_degree_or_higher_pct": 67.9,
+      "unemployment_rate": 5,
+      "community_engagement_index": 8.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income": 83000,
+      "bachelors_degree_or_higher_pct": 68.8,
+      "unemployment_rate": 4.5,
+      "community_engagement_index": 8.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income": 88000,
+      "bachelors_degree_or_higher_pct": 69.7,
+      "unemployment_rate": 4.1,
+      "community_engagement_index": 8.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income": 93000,
+      "bachelors_degree_or_higher_pct": 70.6,
+      "unemployment_rate": 3.8,
+      "community_engagement_index": 8.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income": 94000,
+      "bachelors_degree_or_higher_pct": 71.5,
+      "unemployment_rate": 5,
+      "community_engagement_index": 8.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income": 92500,
+      "bachelors_degree_or_higher_pct": 72.3,
+      "unemployment_rate": 7.2,
+      "community_engagement_index": 8.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income": 95000,
+      "bachelors_degree_or_higher_pct": 73,
+      "unemployment_rate": 6.8,
+      "community_engagement_index": 8.3,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income": 98000,
+      "bachelors_degree_or_higher_pct": 73.8,
+      "unemployment_rate": 6,
+      "community_engagement_index": 8.4,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income": 104000,
+      "bachelors_degree_or_higher_pct": 74.6,
+      "unemployment_rate": 5.2,
+      "community_engagement_index": 8.5,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income": 110000,
+      "bachelors_degree_or_higher_pct": 75.5,
+      "unemployment_rate": 4.8,
+      "community_engagement_index": 8.6,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income": 117000,
+      "bachelors_degree_or_higher_pct": 76.4,
+      "unemployment_rate": 4.1,
+      "community_engagement_index": 8.6,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income": 125000,
+      "bachelors_degree_or_higher_pct": 77.3,
+      "unemployment_rate": 3.5,
+      "community_engagement_index": 8.7,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income": 133000,
+      "bachelors_degree_or_higher_pct": 78.2,
+      "unemployment_rate": 3.2,
+      "community_engagement_index": 8.7,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income": 141000,
+      "bachelors_degree_or_higher_pct": 79.1,
+      "unemployment_rate": 3,
+      "community_engagement_index": 8.8,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income": 148000,
+      "bachelors_degree_or_higher_pct": 80,
+      "unemployment_rate": 2.8,
+      "community_engagement_index": 8.8,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income": 155000,
+      "bachelors_degree_or_higher_pct": 80.8,
+      "unemployment_rate": 2.6,
+      "community_engagement_index": 8.9,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income": 158000,
+      "bachelors_degree_or_higher_pct": 81.5,
+      "unemployment_rate": 7.5,
+      "community_engagement_index": 9.2,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_household_income": 165000,
+      "bachelors_degree_or_higher_pct": 82.2,
+      "unemployment_rate": 4.5,
+      "community_engagement_index": 9.1,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income": 175000,
+      "bachelors_degree_or_higher_pct": 82.9,
+      "unemployment_rate": 3.2,
+      "community_engagement_index": 9,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income": 180000,
+      "bachelors_degree_or_higher_pct": 83.5,
+      "unemployment_rate": 3.8,
+      "community_engagement_index": 8.9,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income": 186000,
+      "bachelors_degree_or_higher_pct": 84.1,
+      "unemployment_rate": 3.6,
+      "community_engagement_index": 8.9,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income": 192000,
+      "bachelors_degree_or_higher_pct": 84.7,
+      "unemployment_rate": 3.5,
+      "community_engagement_index": 9,
+      "region": "Allandale",
+      "region_id": 146,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

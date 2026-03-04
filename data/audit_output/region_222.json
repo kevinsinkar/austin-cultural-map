@@ -1,0 +1,1874 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 4850,
+      "median_age": 36.2,
+      "household_size": 2.65,
+      "percent_with_bachelors_degree": 38,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 0.4,
+      "pct_foreign_born": 5.5,
+      "pct_owner_occupied": 82,
+      "rent_burden_pct": 20,
+      "pct_65_and_over": 11.5,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "total_population": 4895,
+      "median_age": 36.4,
+      "household_size": 2.65,
+      "percent_with_bachelors_degree": 39,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 2.08,
+      "pct_asian": 0.73,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 82,
+      "rent_burden_pct": 20.5,
+      "pct_65_and_over": 11.55,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 4940,
+      "median_age": 36.6,
+      "household_size": 2.64,
+      "percent_with_bachelors_degree": 40,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 2.06,
+      "pct_asian": 1.06,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 81,
+      "rent_burden_pct": 21,
+      "pct_65_and_over": 11.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 5010,
+      "median_age": 36.8,
+      "household_size": 2.63,
+      "percent_with_bachelors_degree": 41,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 2.04,
+      "pct_asian": 1.39,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 81,
+      "rent_burden_pct": 21.5,
+      "pct_65_and_over": 11.65,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 5100,
+      "median_age": 37,
+      "household_size": 2.62,
+      "percent_with_bachelors_degree": 42,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 2.02,
+      "pct_asian": 1.72,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 80,
+      "rent_burden_pct": 22,
+      "pct_65_and_over": 11.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 5250,
+      "median_age": 37.1,
+      "household_size": 2.6,
+      "percent_with_bachelors_degree": 44,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 2,
+      "pct_asian": 2.05,
+      "pct_foreign_born": 7,
+      "pct_owner_occupied": 80,
+      "rent_burden_pct": 22.5,
+      "pct_65_and_over": 11.75,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 5410,
+      "median_age": 37.2,
+      "household_size": 2.58,
+      "percent_with_bachelors_degree": 46,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.98,
+      "pct_asian": 2.38,
+      "pct_foreign_born": 7.3,
+      "pct_owner_occupied": 79,
+      "rent_burden_pct": 23,
+      "pct_65_and_over": 11.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 5600,
+      "median_age": 37,
+      "household_size": 2.57,
+      "percent_with_bachelors_degree": 48,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.96,
+      "pct_asian": 2.71,
+      "pct_foreign_born": 7.6,
+      "pct_owner_occupied": 79,
+      "rent_burden_pct": 23.5,
+      "pct_65_and_over": 11.85,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 5820,
+      "median_age": 36.8,
+      "household_size": 2.55,
+      "percent_with_bachelors_degree": 50,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.94,
+      "pct_asian": 3.04,
+      "pct_foreign_born": 7.9,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 24,
+      "pct_65_and_over": 11.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 6050,
+      "median_age": 36.5,
+      "household_size": 2.54,
+      "percent_with_bachelors_degree": 52,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.92,
+      "pct_asian": 3.37,
+      "pct_foreign_born": 8.2,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 24.5,
+      "pct_65_and_over": 11.95,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 6150,
+      "median_age": 36.6,
+      "household_size": 2.55,
+      "percent_with_bachelors_degree": 53,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 4.7,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 25,
+      "pct_65_and_over": 12,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "total_population": 6100,
+      "median_age": 36.8,
+      "household_size": 2.56,
+      "percent_with_bachelors_degree": 54,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 5.08,
+      "pct_foreign_born": 8.83,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 25.7,
+      "pct_65_and_over": 11.96,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 6075,
+      "median_age": 37.1,
+      "household_size": 2.57,
+      "percent_with_bachelors_degree": 54,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 5.46,
+      "pct_foreign_born": 9.16,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 26.4,
+      "pct_65_and_over": 11.92,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 6120,
+      "median_age": 37.4,
+      "household_size": 2.58,
+      "percent_with_bachelors_degree": 55,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 5.84,
+      "pct_foreign_born": 9.49,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 27.1,
+      "pct_65_and_over": 11.88,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 6200,
+      "median_age": 37.6,
+      "household_size": 2.57,
+      "percent_with_bachelors_degree": 56,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 6.22,
+      "pct_foreign_born": 9.82,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 27.8,
+      "pct_65_and_over": 11.84,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 6310,
+      "median_age": 37.5,
+      "household_size": 2.56,
+      "percent_with_bachelors_degree": 57,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 6.6,
+      "pct_foreign_born": 10.15,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 11.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 6450,
+      "median_age": 37.3,
+      "household_size": 2.55,
+      "percent_with_bachelors_degree": 58,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 6.8,
+      "pct_foreign_born": 10.36,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 28.64,
+      "pct_65_and_over": 11.76,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 6580,
+      "median_age": 37.1,
+      "household_size": 2.55,
+      "percent_with_bachelors_degree": 59,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 7,
+      "pct_foreign_born": 10.57,
+      "pct_owner_occupied": 76,
+      "rent_burden_pct": 28.78,
+      "pct_65_and_over": 11.72,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 6620,
+      "median_age": 37,
+      "household_size": 2.56,
+      "percent_with_bachelors_degree": 60,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 7.2,
+      "pct_foreign_born": 10.78,
+      "pct_owner_occupied": 76,
+      "rent_burden_pct": 28.92,
+      "pct_65_and_over": 11.68,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 6590,
+      "median_age": 36.9,
+      "household_size": 2.58,
+      "percent_with_bachelors_degree": 60,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 7.4,
+      "pct_foreign_born": 10.99,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 29.06,
+      "pct_65_and_over": 11.64,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 6650,
+      "median_age": 36.8,
+      "household_size": 2.59,
+      "percent_with_bachelors_degree": 61,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 7.5,
+      "pct_foreign_born": 10.8,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 11.8,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "total_population": 6800,
+      "median_age": 36.5,
+      "household_size": 2.6,
+      "percent_with_bachelors_degree": 62,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.78,
+      "pct_asian": 8.04,
+      "pct_foreign_born": 11.04,
+      "pct_owner_occupied": 76,
+      "rent_burden_pct": 29.14,
+      "pct_65_and_over": 11.66,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 7050,
+      "median_age": 36.2,
+      "household_size": 2.61,
+      "percent_with_bachelors_degree": 63,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.76,
+      "pct_asian": 8.58,
+      "pct_foreign_born": 11.28,
+      "pct_owner_occupied": 75,
+      "rent_burden_pct": 29.78,
+      "pct_65_and_over": 11.52,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 7300,
+      "median_age": 35.9,
+      "household_size": 2.62,
+      "percent_with_bachelors_degree": 64,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.74,
+      "pct_asian": 9.12,
+      "pct_foreign_born": 11.52,
+      "pct_owner_occupied": 75,
+      "rent_burden_pct": 30.42,
+      "pct_65_and_over": 11.38,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 7580,
+      "median_age": 35.6,
+      "household_size": 2.62,
+      "percent_with_bachelors_degree": 65,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.72,
+      "pct_asian": 9.66,
+      "pct_foreign_born": 11.76,
+      "pct_owner_occupied": 74,
+      "rent_burden_pct": 31.06,
+      "pct_65_and_over": 11.24,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 7890,
+      "median_age": 35.4,
+      "household_size": 2.61,
+      "percent_with_bachelors_degree": 66,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 10.2,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 73,
+      "rent_burden_pct": 31.2,
+      "pct_65_and_over": 11,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total_population": 8200,
+      "median_age": 35.2,
+      "household_size": 2.6,
+      "percent_with_bachelors_degree": 67,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.68,
+      "pct_asian": 10.8,
+      "pct_foreign_born": 12,
+      "pct_owner_occupied": 73,
+      "rent_burden_pct": 31.96,
+      "pct_65_and_over": 10.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 8450,
+      "median_age": 35,
+      "household_size": 2.59,
+      "percent_with_bachelors_degree": 68,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.66,
+      "pct_asian": 11.4,
+      "pct_foreign_born": 12.5,
+      "pct_owner_occupied": 72,
+      "rent_burden_pct": 32.72,
+      "pct_65_and_over": 10.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 8700,
+      "median_age": 34.8,
+      "household_size": 2.58,
+      "percent_with_bachelors_degree": 69,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.64,
+      "pct_asian": 12,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 71,
+      "rent_burden_pct": 33.48,
+      "pct_65_and_over": 10.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 8950,
+      "median_age": 34.7,
+      "household_size": 2.57,
+      "percent_with_bachelors_degree": 70,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.62,
+      "pct_asian": 12.6,
+      "pct_foreign_born": 13.5,
+      "pct_owner_occupied": 70,
+      "rent_burden_pct": 34.24,
+      "pct_65_and_over": 10.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 9100,
+      "median_age": 34.8,
+      "household_size": 2.56,
+      "percent_with_bachelors_degree": 71,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 13.2,
+      "pct_foreign_born": 13.5,
+      "pct_owner_occupied": 70,
+      "rent_burden_pct": 34.5,
+      "pct_65_and_over": 10.5,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "total_population": 9350,
+      "median_age": 34.9,
+      "household_size": 2.55,
+      "percent_with_bachelors_degree": 72,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.58,
+      "pct_asian": 13.5,
+      "pct_foreign_born": 13.6,
+      "pct_owner_occupied": 69,
+      "rent_burden_pct": 34.6,
+      "pct_65_and_over": 10.52,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 9500,
+      "median_age": 35,
+      "household_size": 2.54,
+      "percent_with_bachelors_degree": 73,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.56,
+      "pct_asian": 13.8,
+      "pct_foreign_born": 13.7,
+      "pct_owner_occupied": 68,
+      "rent_burden_pct": 34.7,
+      "pct_65_and_over": 10.54,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total_population": 9600,
+      "median_age": 35.1,
+      "household_size": 2.54,
+      "percent_with_bachelors_degree": 73,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.54,
+      "pct_asian": 14.1,
+      "pct_foreign_born": 13.8,
+      "pct_owner_occupied": 68,
+      "rent_burden_pct": 34.8,
+      "pct_65_and_over": 10.56,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 9680,
+      "median_age": 35.2,
+      "household_size": 2.53,
+      "percent_with_bachelors_degree": 74,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.52,
+      "pct_asian": 14.4,
+      "pct_foreign_born": 13.9,
+      "pct_owner_occupied": 67,
+      "rent_burden_pct": 34.9,
+      "pct_65_and_over": 10.58,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 9750,
+      "median_age": 35.3,
+      "household_size": 2.53,
+      "percent_with_bachelors_degree": 74,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 14.7,
+      "pct_foreign_born": 14,
+      "pct_owner_occupied": 67,
+      "rent_burden_pct": 35,
+      "pct_65_and_over": 10.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 125000,
+      "average_rent": 650,
+      "owner_occupied_rate": 0.82,
+      "housing_units": 1850,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": 23,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value": 128000,
+      "average_rent": 665,
+      "owner_occupied_rate": 0.82,
+      "housing_units": 1860,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 2.4,
+      "vacancy_rate": 5.29,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value": 132000,
+      "average_rent": 680,
+      "owner_occupied_rate": 0.81,
+      "housing_units": 1870,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 3.13,
+      "vacancy_rate": 5.18,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value": 138000,
+      "average_rent": 700,
+      "owner_occupied_rate": 0.81,
+      "housing_units": 1885,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 4.55,
+      "vacancy_rate": 5.07,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value": 145000,
+      "average_rent": 725,
+      "owner_occupied_rate": 0.8,
+      "housing_units": 1900,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 5.07,
+      "vacancy_rate": 4.96,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value": 155000,
+      "average_rent": 760,
+      "owner_occupied_rate": 0.8,
+      "housing_units": 1925,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 6.9,
+      "vacancy_rate": 4.85,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value": 168000,
+      "average_rent": 800,
+      "owner_occupied_rate": 0.79,
+      "housing_units": 1950,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 8.39,
+      "vacancy_rate": 4.74,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value": 185000,
+      "average_rent": 850,
+      "owner_occupied_rate": 0.79,
+      "housing_units": 1980,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 10.12,
+      "vacancy_rate": 4.63,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value": 210000,
+      "average_rent": 910,
+      "owner_occupied_rate": 0.78,
+      "housing_units": 2020,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 13.51,
+      "vacancy_rate": 4.52,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value": 240000,
+      "average_rent": 980,
+      "owner_occupied_rate": 0.78,
+      "housing_units": 2060,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 14.29,
+      "vacancy_rate": 4.41,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value": 255000,
+      "average_rent": 1050,
+      "owner_occupied_rate": 0.77,
+      "housing_units": 2080,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 6.25,
+      "vacancy_rate": 4.3,
+      "new_construction_permits": 23,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value": 250000,
+      "average_rent": 1020,
+      "owner_occupied_rate": 0.77,
+      "housing_units": 2090,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": -1.96,
+      "vacancy_rate": 4.32,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value": 245000,
+      "average_rent": 990,
+      "owner_occupied_rate": 0.78,
+      "housing_units": 2100,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": -2,
+      "vacancy_rate": 4.34,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value": 248000,
+      "average_rent": 1000,
+      "owner_occupied_rate": 0.78,
+      "housing_units": 2110,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 1.22,
+      "vacancy_rate": 4.36,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value": 255000,
+      "average_rent": 1030,
+      "owner_occupied_rate": 0.78,
+      "housing_units": 2125,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 2.82,
+      "vacancy_rate": 4.38,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_home_value": 268000,
+      "average_rent": 1070,
+      "owner_occupied_rate": 0.77,
+      "housing_units": 2145,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 5.1,
+      "vacancy_rate": 4.4,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value": 285000,
+      "average_rent": 1120,
+      "owner_occupied_rate": 0.77,
+      "housing_units": 2170,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 6.34,
+      "vacancy_rate": 4.42,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value": 295000,
+      "average_rent": 1180,
+      "owner_occupied_rate": 0.76,
+      "housing_units": 2190,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 3.51,
+      "vacancy_rate": 4.44,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value": 280000,
+      "average_rent": 1150,
+      "owner_occupied_rate": 0.76,
+      "housing_units": 2200,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": -5.1,
+      "vacancy_rate": 4.46,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value": 270000,
+      "average_rent": 1130,
+      "owner_occupied_rate": 0.77,
+      "housing_units": 2205,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": -3.57,
+      "vacancy_rate": 4.48,
+      "new_construction_permits": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value": 275000,
+      "average_rent": 1150,
+      "owner_occupied_rate": 0.77,
+      "housing_units": 2215,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 1.85,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 14,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_home_value": 290000,
+      "average_rent": 1200,
+      "owner_occupied_rate": 0.76,
+      "housing_units": 2230,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 5.45,
+      "vacancy_rate": 4.38,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value": 325000,
+      "average_rent": 1280,
+      "owner_occupied_rate": 0.75,
+      "housing_units": 2250,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 12.07,
+      "vacancy_rate": 4.26,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value": 370000,
+      "average_rent": 1390,
+      "owner_occupied_rate": 0.75,
+      "housing_units": 2275,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 13.85,
+      "vacancy_rate": 4.14,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value": 420000,
+      "average_rent": 1500,
+      "owner_occupied_rate": 0.74,
+      "housing_units": 2300,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 13.51,
+      "vacancy_rate": 4.02,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value": 480000,
+      "average_rent": 1620,
+      "owner_occupied_rate": 0.73,
+      "housing_units": 2330,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 14.29,
+      "vacancy_rate": 4,
+      "new_construction_permits": 26,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value": 540000,
+      "average_rent": 1750,
+      "owner_occupied_rate": 0.73,
+      "housing_units": 2360,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 12.5,
+      "vacancy_rate": 3.96,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value": 595000,
+      "average_rent": 1850,
+      "owner_occupied_rate": 0.72,
+      "housing_units": 2390,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 10.19,
+      "vacancy_rate": 3.92,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value": 640000,
+      "average_rent": 1950,
+      "owner_occupied_rate": 0.71,
+      "housing_units": 2420,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 7.56,
+      "vacancy_rate": 3.88,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value": 675000,
+      "average_rent": 2050,
+      "owner_occupied_rate": 0.7,
+      "housing_units": 2450,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 5.47,
+      "vacancy_rate": 3.84,
+      "new_construction_permits": 26,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value": 720000,
+      "average_rent": 2100,
+      "owner_occupied_rate": 0.7,
+      "housing_units": 2470,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 6.67,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 26,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_home_value": 850000,
+      "average_rent": 2250,
+      "owner_occupied_rate": 0.69,
+      "housing_units": 2490,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 18.06,
+      "vacancy_rate": 3.76,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value": 910000,
+      "average_rent": 2400,
+      "owner_occupied_rate": 0.68,
+      "housing_units": 2510,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 7.06,
+      "vacancy_rate": 3.72,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value": 885000,
+      "average_rent": 2350,
+      "owner_occupied_rate": 0.68,
+      "housing_units": 2525,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": -2.75,
+      "vacancy_rate": 3.68,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value": 895000,
+      "average_rent": 2380,
+      "owner_occupied_rate": 0.67,
+      "housing_units": 2535,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 1.13,
+      "vacancy_rate": 3.64,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value": 915000,
+      "average_rent": 2420,
+      "owner_occupied_rate": 0.67,
+      "housing_units": 2545,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "pct_home_value_change_yoy": 2.23,
+      "vacancy_rate": 3.6,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 48000,
+      "poverty_rate": 5.5,
+      "unemployment_rate": 5.1,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income": 49500,
+      "poverty_rate": 5.8,
+      "unemployment_rate": 5.6,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income": 51000,
+      "poverty_rate": 5.7,
+      "unemployment_rate": 5.4,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income": 53000,
+      "poverty_rate": 5.5,
+      "unemployment_rate": 5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income": 55500,
+      "poverty_rate": 5.2,
+      "unemployment_rate": 4.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income": 58000,
+      "poverty_rate": 5,
+      "unemployment_rate": 4.1,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income": 61000,
+      "poverty_rate": 4.8,
+      "unemployment_rate": 3.6,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income": 65000,
+      "poverty_rate": 4.5,
+      "unemployment_rate": 3.1,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income": 70000,
+      "poverty_rate": 4.2,
+      "unemployment_rate": 2.7,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income": 75000,
+      "poverty_rate": 4,
+      "unemployment_rate": 2.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income": 78000,
+      "poverty_rate": 4.1,
+      "unemployment_rate": 2.6,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income": 76000,
+      "poverty_rate": 4.8,
+      "unemployment_rate": 4.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income": 75000,
+      "poverty_rate": 5.2,
+      "unemployment_rate": 6,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income": 75500,
+      "poverty_rate": 5.5,
+      "unemployment_rate": 6.2,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income": 77000,
+      "poverty_rate": 5.3,
+      "unemployment_rate": 5.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income": 80000,
+      "poverty_rate": 5.1,
+      "unemployment_rate": 4.8,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income": 84000,
+      "poverty_rate": 4.9,
+      "unemployment_rate": 4.2,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income": 88000,
+      "poverty_rate": 4.8,
+      "unemployment_rate": 4,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income": 89000,
+      "poverty_rate": 5.5,
+      "unemployment_rate": 5.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income": 87000,
+      "poverty_rate": 6,
+      "unemployment_rate": 7.2,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income": 88500,
+      "poverty_rate": 5.8,
+      "unemployment_rate": 7,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income": 92000,
+      "poverty_rate": 5.5,
+      "unemployment_rate": 6.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income": 97000,
+      "poverty_rate": 5.2,
+      "unemployment_rate": 5.8,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income": 103000,
+      "poverty_rate": 5,
+      "unemployment_rate": 5.1,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income": 109000,
+      "poverty_rate": 4.8,
+      "unemployment_rate": 4.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income": 116000,
+      "poverty_rate": 4.5,
+      "unemployment_rate": 3.8,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income": 122000,
+      "poverty_rate": 4.3,
+      "unemployment_rate": 3.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income": 128000,
+      "poverty_rate": 4.1,
+      "unemployment_rate": 3.2,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income": 135000,
+      "poverty_rate": 3.9,
+      "unemployment_rate": 3,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income": 142000,
+      "poverty_rate": 3.8,
+      "unemployment_rate": 2.8,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income": 145000,
+      "poverty_rate": 4.2,
+      "unemployment_rate": 5.3,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_household_income": 152000,
+      "poverty_rate": 4,
+      "unemployment_rate": 4.1,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income": 158000,
+      "poverty_rate": 3.9,
+      "unemployment_rate": 3.1,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income": 161000,
+      "poverty_rate": 4,
+      "unemployment_rate": 3.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income": 164000,
+      "poverty_rate": 3.9,
+      "unemployment_rate": 3.6,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income": 167000,
+      "poverty_rate": 3.8,
+      "unemployment_rate": 3.5,
+      "region": "Northwood (Tract 326.0)",
+      "region_id": 222,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1960 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 3150,
+      "median_age": 34.5,
+      "percent_white": 88.1,
+      "percent_hispanic": 8.5,
+      "percent_black": 1.2,
+      "percent_asian": 1.5,
+      "percent_other": 0.7,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 5.7,
+      "pct_owner_occupied": 65.2,
+      "rent_burden_pct": 28,
+      "pct_65_and_over": 11.4,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "total_population": 3155,
+      "median_age": 34.7,
+      "percent_white": 87.9,
+      "percent_hispanic": 8.8,
+      "percent_black": 1.1,
+      "percent_asian": 1.5,
+      "percent_other": 0.7,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 6.02,
+      "pct_owner_occupied": 65.5,
+      "rent_burden_pct": 28.4,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 3162,
+      "median_age": 34.9,
+      "percent_white": 87.7,
+      "percent_hispanic": 9.1,
+      "percent_black": 1.1,
+      "percent_asian": 1.4,
+      "percent_other": 0.7,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 6.34,
+      "pct_owner_occupied": 65.8,
+      "rent_burden_pct": 28.8,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 3170,
+      "median_age": 35.1,
+      "percent_white": 87.4,
+      "percent_hispanic": 9.4,
+      "percent_black": 1,
+      "percent_asian": 1.5,
+      "percent_other": 0.7,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 6.66,
+      "pct_owner_occupied": 66.1,
+      "rent_burden_pct": 29.2,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 3185,
+      "median_age": 35.3,
+      "percent_white": 87,
+      "percent_hispanic": 9.8,
+      "percent_black": 1,
+      "percent_asian": 1.5,
+      "percent_other": 0.7,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 6.98,
+      "pct_owner_occupied": 66.4,
+      "rent_burden_pct": 29.6,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 3205,
+      "median_age": 35.5,
+      "percent_white": 86.5,
+      "percent_hispanic": 10.2,
+      "percent_black": 0.9,
+      "percent_asian": 1.6,
+      "percent_other": 0.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 7.3,
+      "pct_owner_occupied": 66.8,
+      "rent_burden_pct": 30,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 3220,
+      "median_age": 35.6,
+      "percent_white": 85.9,
+      "percent_hispanic": 10.7,
+      "percent_black": 0.9,
+      "percent_asian": 1.7,
+      "percent_other": 0.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 7.62,
+      "pct_owner_occupied": 67.2,
+      "rent_burden_pct": 30.4,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 3240,
+      "median_age": 35.7,
+      "percent_white": 85.2,
+      "percent_hispanic": 11.3,
+      "percent_black": 0.8,
+      "percent_asian": 1.9,
+      "percent_other": 0.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 7.94,
+      "pct_owner_occupied": 67.5,
+      "rent_burden_pct": 30.8,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 3265,
+      "median_age": 35.8,
+      "percent_white": 84.5,
+      "percent_hispanic": 11.9,
+      "percent_black": 0.8,
+      "percent_asian": 2,
+      "percent_other": 0.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 2,
+      "pct_foreign_born": 8.26,
+      "pct_owner_occupied": 67.8,
+      "rent_burden_pct": 31.2,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 3290,
+      "median_age": 35.9,
+      "percent_white": 83.8,
+      "percent_hispanic": 12.5,
+      "percent_black": 0.7,
+      "percent_asian": 2.1,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 8.58,
+      "pct_owner_occupied": 68,
+      "rent_burden_pct": 31.6,
+      "pct_65_and_over": 11.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 3310,
+      "median_age": 36,
+      "percent_white": 83,
+      "percent_hispanic": 13.2,
+      "percent_black": 0.7,
+      "percent_asian": 2.2,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 8.9,
+      "pct_owner_occupied": 68.5,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 11.4,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "total_population": 3315,
+      "median_age": 36.2,
+      "percent_white": 82.5,
+      "percent_hispanic": 13.7,
+      "percent_black": 0.6,
+      "percent_asian": 2.3,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 68.2,
+      "rent_burden_pct": 32.64,
+      "pct_65_and_over": 11.57,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 3320,
+      "median_age": 36.4,
+      "percent_white": 82,
+      "percent_hispanic": 14.1,
+      "percent_black": 0.6,
+      "percent_asian": 2.4,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 9.3,
+      "pct_owner_occupied": 67.9,
+      "rent_burden_pct": 33.28,
+      "pct_65_and_over": 11.74,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 3328,
+      "median_age": 36.6,
+      "percent_white": 81.5,
+      "percent_hispanic": 14.5,
+      "percent_black": 0.6,
+      "percent_asian": 2.5,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 9.5,
+      "pct_owner_occupied": 67.5,
+      "rent_burden_pct": 33.92,
+      "pct_65_and_over": 11.91,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 3340,
+      "median_age": 36.8,
+      "percent_white": 81,
+      "percent_hispanic": 15,
+      "percent_black": 0.5,
+      "percent_asian": 2.6,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.6,
+      "pct_foreign_born": 9.7,
+      "pct_owner_occupied": 67,
+      "rent_burden_pct": 34.56,
+      "pct_65_and_over": 12.08,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 3355,
+      "median_age": 37,
+      "percent_white": 80.4,
+      "percent_hispanic": 15.5,
+      "percent_black": 0.5,
+      "percent_asian": 2.7,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.7,
+      "pct_foreign_born": 9.9,
+      "pct_owner_occupied": 66.5,
+      "rent_burden_pct": 35.2,
+      "pct_65_and_over": 12.25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 3375,
+      "median_age": 37.1,
+      "percent_white": 79.8,
+      "percent_hispanic": 16,
+      "percent_black": 0.5,
+      "percent_asian": 2.8,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 10.1,
+      "pct_owner_occupied": 66,
+      "rent_burden_pct": 35.84,
+      "pct_65_and_over": 12.42,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 3400,
+      "median_age": 37.2,
+      "percent_white": 79.2,
+      "percent_hispanic": 16.5,
+      "percent_black": 0.5,
+      "percent_asian": 2.9,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.9,
+      "pct_foreign_born": 10.3,
+      "pct_owner_occupied": 65.5,
+      "rent_burden_pct": 36.48,
+      "pct_65_and_over": 12.59,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 3410,
+      "median_age": 37.3,
+      "percent_white": 78.6,
+      "percent_hispanic": 17,
+      "percent_black": 0.5,
+      "percent_asian": 3,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 3,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 65,
+      "rent_burden_pct": 37.12,
+      "pct_65_and_over": 12.76,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 3415,
+      "median_age": 37.4,
+      "percent_white": 78,
+      "percent_hispanic": 17.5,
+      "percent_black": 0.5,
+      "percent_asian": 3.1,
+      "percent_other": 0.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 10.7,
+      "pct_owner_occupied": 64.5,
+      "rent_burden_pct": 37.76,
+      "pct_65_and_over": 12.93,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 3430,
+      "median_age": 37.5,
+      "percent_white": 77.5,
+      "percent_hispanic": 18,
+      "percent_black": 0.5,
+      "percent_asian": 3,
+      "percent_other": 1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 3,
+      "pct_foreign_born": 10.9,
+      "pct_owner_occupied": 64,
+      "rent_burden_pct": 38.4,
+      "pct_65_and_over": 13.1,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2011,
+      "total_population": 3460,
+      "median_age": 37.3,
+      "percent_white": 76.9,
+      "percent_hispanic": 18.5,
+      "percent_black": 0.5,
+      "percent_asian": 3.1,
+      "percent_other": 1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 11.09,
+      "pct_owner_occupied": 63.5,
+      "rent_burden_pct": 37.83,
+      "pct_65_and_over": 13.27,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 3500,
+      "median_age": 37.1,
+      "percent_white": 76.2,
+      "percent_hispanic": 19.1,
+      "percent_black": 0.4,
+      "percent_asian": 3.2,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 11.28,
+      "pct_owner_occupied": 63,
+      "rent_burden_pct": 37.26,
+      "pct_65_and_over": 13.44,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 3545,
+      "median_age": 36.9,
+      "percent_white": 75.5,
+      "percent_hispanic": 19.7,
+      "percent_black": 0.4,
+      "percent_asian": 3.3,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 11.47,
+      "pct_owner_occupied": 62.5,
+      "rent_burden_pct": 36.69,
+      "pct_65_and_over": 13.61,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 3590,
+      "median_age": 36.7,
+      "percent_white": 74.8,
+      "percent_hispanic": 20.3,
+      "percent_black": 0.4,
+      "percent_asian": 3.4,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.4,
+      "pct_foreign_born": 11.66,
+      "pct_owner_occupied": 62,
+      "rent_burden_pct": 36.12,
+      "pct_65_and_over": 13.78,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 3640,
+      "median_age": 36.5,
+      "percent_white": 74,
+      "percent_hispanic": 21,
+      "percent_black": 0.4,
+      "percent_asian": 3.5,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 11.85,
+      "pct_owner_occupied": 61.5,
+      "rent_burden_pct": 35.55,
+      "pct_65_and_over": 13.95,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total_population": 3690,
+      "median_age": 36.3,
+      "percent_white": 73.2,
+      "percent_hispanic": 21.7,
+      "percent_black": 0.4,
+      "percent_asian": 3.6,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.6,
+      "pct_foreign_born": 12.04,
+      "pct_owner_occupied": 61,
+      "rent_burden_pct": 34.98,
+      "pct_65_and_over": 14.12,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 3735,
+      "median_age": 36.1,
+      "percent_white": 72.4,
+      "percent_hispanic": 22.4,
+      "percent_black": 0.4,
+      "percent_asian": 3.7,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 12.23,
+      "pct_owner_occupied": 60.5,
+      "rent_burden_pct": 34.41,
+      "pct_65_and_over": 14.29,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 3780,
+      "median_age": 36,
+      "percent_white": 71.6,
+      "percent_hispanic": 23.1,
+      "percent_black": 0.4,
+      "percent_asian": 3.8,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 12.42,
+      "pct_owner_occupied": 60,
+      "rent_burden_pct": 33.84,
+      "pct_65_and_over": 14.46,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 3820,
+      "median_age": 35.9,
+      "percent_white": 70.8,
+      "percent_hispanic": 23.8,
+      "percent_black": 0.4,
+      "percent_asian": 3.9,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 12.61,
+      "pct_owner_occupied": 59.5,
+      "rent_burden_pct": 33.27,
+      "pct_65_and_over": 14.63,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 3850,
+      "median_age": 35.8,
+      "percent_white": 70,
+      "percent_hispanic": 24.5,
+      "percent_black": 0.4,
+      "percent_asian": 4,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4,
+      "pct_foreign_born": 12.8,
+      "pct_owner_occupied": 59,
+      "rent_burden_pct": 32.7,
+      "pct_65_and_over": 14.8,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2021,
+      "total_population": 3875,
+      "median_age": 35.7,
+      "percent_white": 69.4,
+      "percent_hispanic": 25,
+      "percent_black": 0.4,
+      "percent_asian": 4.1,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 12.99,
+      "pct_owner_occupied": 58.5,
+      "rent_burden_pct": 32.13,
+      "pct_65_and_over": 14.97,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 3900,
+      "median_age": 35.6,
+      "percent_white": 68.8,
+      "percent_hispanic": 25.5,
+      "percent_black": 0.4,
+      "percent_asian": 4.2,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4.2,
+      "pct_foreign_born": 13.18,
+      "pct_owner_occupied": 58,
+      "rent_burden_pct": 31.56,
+      "pct_65_and_over": 15.14,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total_population": 3920,
+      "median_age": 35.5,
+      "percent_white": 68.2,
+      "percent_hispanic": 26,
+      "percent_black": 0.4,
+      "percent_asian": 4.3,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4.3,
+      "pct_foreign_born": 13.37,
+      "pct_owner_occupied": 57.8,
+      "rent_burden_pct": 30.99,
+      "pct_65_and_over": 15.31,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 3940,
+      "median_age": 35.4,
+      "percent_white": 67.6,
+      "percent_hispanic": 26.5,
+      "percent_black": 0.4,
+      "percent_asian": 4.4,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4.4,
+      "pct_foreign_born": 13.56,
+      "pct_owner_occupied": 57.6,
+      "rent_burden_pct": 30.42,
+      "pct_65_and_over": 15.48,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 3960,
+      "median_age": 35.3,
+      "percent_white": 67,
+      "percent_hispanic": 27,
+      "percent_black": 0.4,
+      "percent_asian": 4.5,
+      "percent_other": 1.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 13.75,
+      "pct_owner_occupied": 57.5,
+      "rent_burden_pct": 29.85,
+      "pct_65_and_over": 15.65,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 85000,
+      "median_rent": 550,
+      "percent_owner_occupied": 65.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 0,
+      "vacancy_rate": 12.5,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value": 88000,
+      "median_rent": 560,
+      "percent_owner_occupied": 65.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 3.53,
+      "vacancy_rate": 12.02,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value": 92000,
+      "median_rent": 575,
+      "percent_owner_occupied": 65.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 4.55,
+      "vacancy_rate": 11.54,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value": 97500,
+      "median_rent": 590,
+      "percent_owner_occupied": 66.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 5.98,
+      "vacancy_rate": 11.06,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value": 105000,
+      "median_rent": 610,
+      "percent_owner_occupied": 66.4,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 7.69,
+      "vacancy_rate": 10.58,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value": 115000,
+      "median_rent": 635,
+      "percent_owner_occupied": 66.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 9.52,
+      "vacancy_rate": 10.1,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value": 126000,
+      "median_rent": 660,
+      "percent_owner_occupied": 67.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 9.57,
+      "vacancy_rate": 9.62,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value": 140000,
+      "median_rent": 690,
+      "percent_owner_occupied": 67.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 11.11,
+      "vacancy_rate": 9.14,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value": 155000,
+      "median_rent": 725,
+      "percent_owner_occupied": 67.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 10.71,
+      "vacancy_rate": 8.66,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value": 175000,
+      "median_rent": 760,
+      "percent_owner_occupied": 68,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 12.9,
+      "vacancy_rate": 8.18,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value": 190000,
+      "median_rent": 800,
+      "percent_owner_occupied": 68.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 8.57,
+      "vacancy_rate": 7.75,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value": 205000,
+      "median_rent": 830,
+      "percent_owner_occupied": 68.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 7.89,
+      "vacancy_rate": 7.68,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value": 210000,
+      "median_rent": 845,
+      "percent_owner_occupied": 67.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 2.44,
+      "vacancy_rate": 7.61,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value": 215000,
+      "median_rent": 850,
+      "percent_owner_occupied": 67.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 2.38,
+      "vacancy_rate": 7.54,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value": 225000,
+      "median_rent": 870,
+      "percent_owner_occupied": 67,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 4.65,
+      "vacancy_rate": 7.47,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_home_value": 240000,
+      "median_rent": 900,
+      "percent_owner_occupied": 66.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 6.67,
+      "vacancy_rate": 7.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value": 260000,
+      "median_rent": 940,
+      "percent_owner_occupied": 66,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 8.33,
+      "vacancy_rate": 7.33,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value": 275000,
+      "median_rent": 980,
+      "percent_owner_occupied": 65.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 5.77,
+      "vacancy_rate": 7.26,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value": 270000,
+      "median_rent": 1000,
+      "percent_owner_occupied": 65,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": -1.82,
+      "vacancy_rate": 7.19,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value": 265000,
+      "median_rent": 1010,
+      "percent_owner_occupied": 64.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": -1.85,
+      "vacancy_rate": 7.12,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value": 275000,
+      "median_rent": 1050,
+      "percent_owner_occupied": 64,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 3.77,
+      "vacancy_rate": 7.05,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2011,
+      "median_home_value": 290000,
+      "median_rent": 1100,
+      "percent_owner_occupied": 63.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 5.45,
+      "vacancy_rate": 6.88,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value": 325000,
+      "median_rent": 1175,
+      "percent_owner_occupied": 63,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 12.07,
+      "vacancy_rate": 6.71,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value": 370000,
+      "median_rent": 1250,
+      "percent_owner_occupied": 62.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 13.85,
+      "vacancy_rate": 6.54,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value": 420000,
+      "median_rent": 1320,
+      "percent_owner_occupied": 62,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 13.51,
+      "vacancy_rate": 6.37,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value": 480000,
+      "median_rent": 1400,
+      "percent_owner_occupied": 61.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 14.29,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value": 540000,
+      "median_rent": 1480,
+      "percent_owner_occupied": 61,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 12.5,
+      "vacancy_rate": 6.03,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value": 595000,
+      "median_rent": 1550,
+      "percent_owner_occupied": 60.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 10.19,
+      "vacancy_rate": 5.86,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value": 640000,
+      "median_rent": 1620,
+      "percent_owner_occupied": 60,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 7.56,
+      "vacancy_rate": 5.69,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value": 675000,
+      "median_rent": 1680,
+      "percent_owner_occupied": 59.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 5.47,
+      "vacancy_rate": 5.52,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value": 725000,
+      "median_rent": 1720,
+      "percent_owner_occupied": 59,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 7.41,
+      "vacancy_rate": 5.39,
+      "new_construction_permits": null,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2021,
+      "median_home_value": 850000,
+      "median_rent": 1800,
+      "percent_owner_occupied": 58.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 17.24,
+      "vacancy_rate": 5.224,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value": 925000,
+      "median_rent": 1950,
+      "percent_owner_occupied": 58,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 8.82,
+      "vacancy_rate": 5.058,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value": 910000,
+      "median_rent": 2000,
+      "percent_owner_occupied": 57.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": -1.62,
+      "vacancy_rate": 4.892,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value": 940000,
+      "median_rent": 2050,
+      "percent_owner_occupied": 57.6,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 3.3,
+      "vacancy_rate": 4.726,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value": 975000,
+      "median_rent": 2100,
+      "percent_owner_occupied": 57.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "pct_home_value_change_yoy": 3.72,
+      "vacancy_rate": 4.56,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 35000,
+      "poverty_rate": 12.5,
+      "percent_bachelors_degree_or_higher": 40.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 5.47,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income": 36100,
+      "poverty_rate": 12.2,
+      "percent_bachelors_degree_or_higher": 41,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 5.191,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income": 37500,
+      "poverty_rate": 11.9,
+      "percent_bachelors_degree_or_higher": 41.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.912,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income": 39000,
+      "poverty_rate": 11.5,
+      "percent_bachelors_degree_or_higher": 42.6,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.633,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income": 41000,
+      "poverty_rate": 11.1,
+      "percent_bachelors_degree_or_higher": 43.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.354,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income": 43500,
+      "poverty_rate": 10.6,
+      "percent_bachelors_degree_or_higher": 44.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.075,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income": 46000,
+      "poverty_rate": 10.2,
+      "percent_bachelors_degree_or_higher": 45.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.796,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income": 49000,
+      "poverty_rate": 9.8,
+      "percent_bachelors_degree_or_higher": 47.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.517,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income": 52500,
+      "poverty_rate": 9.4,
+      "percent_bachelors_degree_or_higher": 48.9,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.238,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income": 56000,
+      "poverty_rate": 9,
+      "percent_bachelors_degree_or_higher": 50.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 2.959,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income": 58000,
+      "poverty_rate": 8.8,
+      "percent_bachelors_degree_or_higher": 52.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 2.76,
+      "eviction_filing_rate": null,
+      "confidence": "high",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income": 59000,
+      "poverty_rate": 9.1,
+      "percent_bachelors_degree_or_higher": 53,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.003,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income": 59500,
+      "poverty_rate": 9.3,
+      "percent_bachelors_degree_or_higher": 53.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.246,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income": 60000,
+      "poverty_rate": 9.5,
+      "percent_bachelors_degree_or_higher": 54.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.489,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income": 61500,
+      "poverty_rate": 9.2,
+      "percent_bachelors_degree_or_higher": 55.3,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.732,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income": 63500,
+      "poverty_rate": 8.9,
+      "percent_bachelors_degree_or_higher": 56.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.975,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income": 66000,
+      "poverty_rate": 8.6,
+      "percent_bachelors_degree_or_higher": 57.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.218,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income": 69000,
+      "poverty_rate": 8.3,
+      "percent_bachelors_degree_or_higher": 58.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.461,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income": 70000,
+      "poverty_rate": 8.5,
+      "percent_bachelors_degree_or_higher": 60,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.704,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income": 69500,
+      "poverty_rate": 8.8,
+      "percent_bachelors_degree_or_higher": 61.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.947,
+      "eviction_filing_rate": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income": 71000,
+      "poverty_rate": 8.5,
+      "percent_bachelors_degree_or_higher": 62.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 5.19,
+      "eviction_filing_rate": 0.1,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income": 74000,
+      "poverty_rate": 8.2,
+      "percent_bachelors_degree_or_higher": 63.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.94,
+      "eviction_filing_rate": 0.12,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income": 78000,
+      "poverty_rate": 7.9,
+      "percent_bachelors_degree_or_higher": 65.1,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.69,
+      "eviction_filing_rate": 0.14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income": 83000,
+      "poverty_rate": 7.6,
+      "percent_bachelors_degree_or_higher": 66.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.44,
+      "eviction_filing_rate": 0.16,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income": 88000,
+      "poverty_rate": 7.2,
+      "percent_bachelors_degree_or_higher": 68,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 4.19,
+      "eviction_filing_rate": 0.18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income": 94000,
+      "poverty_rate": 6.8,
+      "percent_bachelors_degree_or_higher": 69.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.94,
+      "eviction_filing_rate": 0.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income": 101000,
+      "poverty_rate": 6.4,
+      "percent_bachelors_degree_or_higher": 71,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.69,
+      "eviction_filing_rate": 0.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income": 108000,
+      "poverty_rate": 6,
+      "percent_bachelors_degree_or_higher": 72.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.44,
+      "eviction_filing_rate": 0.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income": 115000,
+      "poverty_rate": 5.6,
+      "percent_bachelors_degree_or_higher": 74,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 3.19,
+      "eviction_filing_rate": 0.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income": 122000,
+      "poverty_rate": 5.2,
+      "percent_bachelors_degree_or_higher": 75.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 2.94,
+      "eviction_filing_rate": 0.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income": 128000,
+      "poverty_rate": 5,
+      "percent_bachelors_degree_or_higher": 76.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 2.69,
+      "eviction_filing_rate": 0.5,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2021,
+      "median_household_income": 135000,
+      "poverty_rate": 4.8,
+      "percent_bachelors_degree_or_higher": 78,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 2.44,
+      "eviction_filing_rate": 0.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income": 142000,
+      "poverty_rate": 4.6,
+      "percent_bachelors_degree_or_higher": 79.2,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 2.19,
+      "eviction_filing_rate": 0.35,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income": 147000,
+      "poverty_rate": 4.5,
+      "percent_bachelors_degree_or_higher": 80,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 1.94,
+      "eviction_filing_rate": 0.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income": 152000,
+      "poverty_rate": 4.4,
+      "percent_bachelors_degree_or_higher": 80.8,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 1.69,
+      "eviction_filing_rate": 0.25,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income": 157000,
+      "poverty_rate": 4.3,
+      "percent_bachelors_degree_or_higher": 81.5,
+      "region": "Brentwood South",
+      "region_id": 241,
+      "unemployment_rate": 1.44,
+      "eviction_filing_rate": 0.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}
