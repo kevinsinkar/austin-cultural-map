@@ -6,6 +6,7 @@ import {
 import { DEMO_COLORS } from "../data/constants";
 import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge } from "../utils/math";
 import { fmtPct, fmtChange, pressureColor, pressureDots } from "../utils/formatters";
+import { adjustForInflation } from "../utils/cpi";
 import ChartTooltip from "./ChartTooltip";
 
 export default function RegionDetailPanel({
@@ -152,18 +153,30 @@ export default function RegionDetailPanel({
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
             {/* Property Metrics */}
             {propertyNow && [
-              { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value, sub: "Appraised" },
-              { label: "Median Rent", value: propertyNow.median_rent_monthly, fmt: (v) => v != null ? "$" + v.toLocaleString() : "N/A", prevVal: propertyPrev?.median_rent_monthly, sub: "Monthly" },
+              { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value },
+              { label: "Median Rent", value: propertyNow.median_rent_monthly, fmt: (v) => v != null ? "$" + v.toLocaleString() : "N/A", prevVal: propertyPrev?.median_rent_monthly },
             ].map((c, i) => {
-              const ch = c.prevVal != null ? fmtChange(c.value, c.prevVal) : null;
+              const valueAdj = c.value != null ? adjustForInflation(c.value, propertyNow.year) : null;
+              const prevValAdj = c.prevVal != null && propertyPrev?.year != null
+                ? adjustForInflation(c.prevVal, propertyPrev.year)
+                : null;
+
+              const ch = valueAdj != null && prevValAdj != null ? fmtChange(valueAdj, prevValAdj) : null;
               const up = ch?.dir === "up";
               // For property, up is usually good except for rent
               const bad = c.label === "Median Rent" ? up : !up;
+
+              const nominalFmt = c.fmt(c.value);
+              const adjustedFmt = c.fmt(valueAdj);
+
               return (
                 <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
                   <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{c.fmt(c.value)}</span>
+                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
+                      {nominalFmt}
+                      {valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
+                    </span>
                     {ch && (
                       <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${propertyPrev?.year}`}>
                         <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
@@ -172,7 +185,7 @@ export default function RegionDetailPanel({
                     )}
                   </div>
                   <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
-                    {c.sub}
+                    (nominal / 2023$)
                     {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
                   </div>
                 </div>
@@ -180,17 +193,32 @@ export default function RegionDetailPanel({
             })}
             {/* Socioeconomic Metrics */}
             {socioNow && [
-              { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: socioPrev?.median_household_income, sub: "Annual" },
-              { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: (v) => v != null ? v.toFixed(1) + "%" : "N/A", prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true },
+              { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: socioPrev?.median_household_income, sub: "Annual", isCurrency: true },
+              { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: (v) => v != null ? v.toFixed(1) + "%" : "N/A", prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true, isCurrency: false },
             ].map((c, i) => {
-              const ch = c.prevVal != null ? fmtChange(c.value, c.prevVal) : null;
+              const valueAdj = c.isCurrency && c.value != null ? adjustForInflation(c.value, socioNow.year) : null;
+              const prevValAdj = c.isCurrency && c.prevVal != null && socioPrev?.year != null
+                ? adjustForInflation(c.prevVal, socioPrev.year)
+                : null;
+
+              const ch = c.isCurrency
+                ? (valueAdj != null && prevValAdj != null ? fmtChange(valueAdj, prevValAdj) : null)
+                : (c.prevVal != null ? fmtChange(c.value, c.prevVal) : null);
+              
               const up = ch?.dir === "up";
               const bad = c.inv ? up : !up;
+
+              const nominalFmt = c.fmt(c.value);
+              const adjustedFmt = c.fmt(valueAdj);
+
               return (
                 <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
                   <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{c.fmt(c.value)}</span>
+                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
+                      {nominalFmt}
+                      {c.isCurrency && valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
+                    </span>
                     {ch && (
                       <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${socioPrev?.year}`}>
                         <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
@@ -199,7 +227,7 @@ export default function RegionDetailPanel({
                     )}
                   </div>
                   <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
-                    {c.sub}
+                    {c.isCurrency ? "(nominal / 2023$)" : c.sub}
                     {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
                   </div>
                 </div>
