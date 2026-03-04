@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 import { DEMO_COLORS } from "../data/constants";
-import { getDviColor, getDviBand, getDviBandColor } from "../utils/math";
+import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge } from "../utils/math";
 import { fmtPct, fmtChange, pressureColor, pressureDots } from "../utils/formatters";
 import ChartTooltip from "./ChartTooltip";
 
@@ -85,6 +85,21 @@ export default function RegionDetailPanel({
               <div style={{ fontSize: 13, fontWeight: 600, color: nd ? "#7c6f5e" : getDviBandColor(d) }}>{nd ? "N/A — New Development" : getDviBand(d)}</div>
               <div style={{ fontSize: 11, color: "#a8a49c" }}>DVI at {year}</div>
             </div>
+            {/* Anchor Density Badge */}
+            {(() => {
+              const density = calcAnchorDensity(activeFeature.properties.region_id);
+              const badge = getAnchorBadge(density);
+              return (
+                <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
+                  <div style={{ background: badge.bg, borderRadius: 8, padding: "6px 10px", border: `1px solid ${badge.color}22` }}>
+                    <div style={{ fontSize: 15, fontWeight: 700, color: badge.color, textAlign: "center" }}>
+                      {density != null ? `${(density * 100).toFixed(0)}%` : "—"}
+                    </div>
+                    <div style={{ fontSize: 9, color: badge.color, fontWeight: 600, whiteSpace: "nowrap" }}>{badge.label}</div>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
 
@@ -190,6 +205,33 @@ export default function RegionDetailPanel({
                 </div>
               );
             })}
+            {/* Rent Burden — from demographics via demoChartData */}
+            {(() => {
+              const n = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
+              const prev = demoChartData.length > 1 ? demoChartData[0] : null;
+              if (!n || n.rent_burden_pct == null) return null;
+              const ch = prev && prev.rent_burden_pct != null ? fmtChange(n.rent_burden_pct, prev.rent_burden_pct) : null;
+              const up = ch?.dir === "up";
+              const bad = up; // rising rent burden = bad
+              return (
+                <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px", gridColumn: "1 / -1" }}>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
+                  <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{n.rent_burden_pct.toFixed(1)}%</span>
+                    {ch && (
+                      <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${prev?.year}`}>
+                        <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
+                        {Math.abs(ch.raw).toFixed(0)}%
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5 }}>
+                    % of renter households paying &ge;30% of income on rent
+                    {ch && prev && <span> · vs {prev.year}</span>}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         )}
 

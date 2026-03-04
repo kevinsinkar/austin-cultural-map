@@ -1,0 +1,1907 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 2850,
+      "median_age": 38,
+      "household_count": 1017,
+      "population_density_sq_mi": 890,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 5.3,
+      "pct_owner_occupied": 92,
+      "rent_burden_pct": 11.5,
+      "pct_65_and_over": 12.3,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 1991,
+      "total_population": 2891,
+      "median_age": 38.2,
+      "household_count": 1032,
+      "population_density_sq_mi": 903,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 5.4,
+      "pct_owner_occupied": 92.2,
+      "rent_burden_pct": 11.6,
+      "pct_65_and_over": 12.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 2933,
+      "median_age": 38.4,
+      "household_count": 1047,
+      "population_density_sq_mi": 916,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 5.5,
+      "pct_owner_occupied": 92.1,
+      "rent_burden_pct": 11.7,
+      "pct_65_and_over": 12.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 2975,
+      "median_age": 38.6,
+      "household_count": 1062,
+      "population_density_sq_mi": 929,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 5.6,
+      "pct_owner_occupied": 92.3,
+      "rent_burden_pct": 11.8,
+      "pct_65_and_over": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 3020,
+      "median_age": 38.8,
+      "household_count": 1078,
+      "population_density_sq_mi": 943,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2,
+      "pct_foreign_born": 5.7,
+      "pct_owner_occupied": 92.4,
+      "rent_burden_pct": 11.9,
+      "pct_65_and_over": 13.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 3078,
+      "median_age": 39.1,
+      "household_count": 1099,
+      "population_density_sq_mi": 961,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 5.7,
+      "pct_owner_occupied": 92.6,
+      "rent_burden_pct": 12,
+      "pct_65_and_over": 13.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 3139,
+      "median_age": 39.3,
+      "household_count": 1121,
+      "population_density_sq_mi": 980,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 92.5,
+      "rent_burden_pct": 12.1,
+      "pct_65_and_over": 13.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 3201,
+      "median_age": 39.5,
+      "household_count": 1143,
+      "population_density_sq_mi": 1000,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 92.7,
+      "rent_burden_pct": 12.2,
+      "pct_65_and_over": 14,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 3266,
+      "median_age": 39.8,
+      "household_count": 1166,
+      "population_density_sq_mi": 1020,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 5.9,
+      "pct_owner_occupied": 92.9,
+      "rent_burden_pct": 12.3,
+      "pct_65_and_over": 14.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 3332,
+      "median_age": 40,
+      "household_count": 1190,
+      "population_density_sq_mi": 1041,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 5.9,
+      "pct_owner_occupied": 92.8,
+      "rent_burden_pct": 12.4,
+      "pct_65_and_over": 14.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 3401,
+      "median_age": 40.2,
+      "household_count": 1214,
+      "population_density_sq_mi": 1062,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 5.9,
+      "pct_owner_occupied": 93.1,
+      "rent_burden_pct": 12.5,
+      "pct_65_and_over": 14.7,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2001,
+      "total_population": 3436,
+      "median_age": 40.4,
+      "household_count": 1227,
+      "population_density_sq_mi": 1073,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.6,
+      "pct_foreign_born": 6,
+      "pct_owner_occupied": 93,
+      "rent_burden_pct": 12.5,
+      "pct_65_and_over": 14.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 3470,
+      "median_age": 40.6,
+      "household_count": 1239,
+      "population_density_sq_mi": 1084,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 92.8,
+      "rent_burden_pct": 12.6,
+      "pct_65_and_over": 15.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 3505,
+      "median_age": 40.9,
+      "household_count": 1251,
+      "population_density_sq_mi": 1095,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3,
+      "pct_foreign_born": 6.2,
+      "pct_owner_occupied": 93,
+      "rent_burden_pct": 12.7,
+      "pct_65_and_over": 15.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 3555,
+      "median_age": 41.1,
+      "household_count": 1269,
+      "population_density_sq_mi": 1110,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 6.3,
+      "pct_owner_occupied": 93.2,
+      "rent_burden_pct": 12.8,
+      "pct_65_and_over": 15.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 3606,
+      "median_age": 41.4,
+      "household_count": 1287,
+      "population_density_sq_mi": 1126,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.4,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 93.4,
+      "rent_burden_pct": 12.9,
+      "pct_65_and_over": 15.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 3658,
+      "median_age": 41.6,
+      "household_count": 1306,
+      "population_density_sq_mi": 1143,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 93.3,
+      "rent_burden_pct": 13,
+      "pct_65_and_over": 16.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 3711,
+      "median_age": 41.9,
+      "household_count": 1325,
+      "population_density_sq_mi": 1159,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 93.5,
+      "rent_burden_pct": 13.1,
+      "pct_65_and_over": 16.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 3756,
+      "median_age": 42.1,
+      "household_count": 1341,
+      "population_density_sq_mi": 1173,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 93.3,
+      "rent_burden_pct": 13.2,
+      "pct_65_and_over": 16.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 3801,
+      "median_age": 42.4,
+      "household_count": 1357,
+      "population_density_sq_mi": 1187,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 93.1,
+      "rent_burden_pct": 13.3,
+      "pct_65_and_over": 16.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 3847,
+      "median_age": 42.7,
+      "household_count": 1373,
+      "population_density_sq_mi": 1202,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 93.3,
+      "rent_burden_pct": 13.4,
+      "pct_65_and_over": 16.9,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2011,
+      "total_population": 3906,
+      "median_age": 43,
+      "household_count": 1395,
+      "population_density_sq_mi": 1220,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 93.5,
+      "rent_burden_pct": 13.5,
+      "pct_65_and_over": 17.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 3966,
+      "median_age": 43.3,
+      "household_count": 1416,
+      "population_density_sq_mi": 1239,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.3,
+      "pct_foreign_born": 6.6,
+      "pct_owner_occupied": 93.6,
+      "rent_burden_pct": 13.6,
+      "pct_65_and_over": 17.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 4027,
+      "median_age": 43.6,
+      "household_count": 1438,
+      "population_density_sq_mi": 1258,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 6.6,
+      "pct_owner_occupied": 93.8,
+      "rent_burden_pct": 13.7,
+      "pct_65_and_over": 18.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 4089,
+      "median_age": 43.9,
+      "household_count": 1460,
+      "population_density_sq_mi": 1277,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.7,
+      "pct_foreign_born": 6.6,
+      "pct_owner_occupied": 94,
+      "rent_burden_pct": 13.8,
+      "pct_65_and_over": 18.5,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 4152,
+      "median_age": 44.2,
+      "household_count": 1482,
+      "population_density_sq_mi": 1297,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.9,
+      "pct_foreign_born": 6.6,
+      "pct_owner_occupied": 93.9,
+      "rent_burden_pct": 13.9,
+      "pct_65_and_over": 18.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total_population": 4216,
+      "median_age": 44.5,
+      "household_count": 1505,
+      "population_density_sq_mi": 1317,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 94.1,
+      "rent_burden_pct": 14,
+      "pct_65_and_over": 19.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 4281,
+      "median_age": 44.8,
+      "household_count": 1528,
+      "population_density_sq_mi": 1337,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 5.3,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 94.3,
+      "rent_burden_pct": 14.1,
+      "pct_65_and_over": 19.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 4347,
+      "median_age": 45.1,
+      "household_count": 1552,
+      "population_density_sq_mi": 1358,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 5.4,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 94.5,
+      "rent_burden_pct": 14.2,
+      "pct_65_and_over": 19.9,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 4413,
+      "median_age": 45.4,
+      "household_count": 1576,
+      "population_density_sq_mi": 1379,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 94.4,
+      "rent_burden_pct": 14.3,
+      "pct_65_and_over": 20.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 4458,
+      "median_age": 45.7,
+      "household_count": 1592,
+      "population_density_sq_mi": 1393,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.6,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 94.6,
+      "rent_burden_pct": 14.4,
+      "pct_65_and_over": 20.2,
+      "confidence": "high",
+      "audit_flags": []
+    },
+    {
+      "year": 2021,
+      "total_population": 4503,
+      "median_age": 46,
+      "household_count": 1608,
+      "population_density_sq_mi": 1407,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.7,
+      "pct_foreign_born": 6.8,
+      "pct_owner_occupied": 94.8,
+      "rent_burden_pct": 14.5,
+      "pct_65_and_over": 20.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 4548,
+      "median_age": 46.2,
+      "household_count": 1624,
+      "population_density_sq_mi": 1421,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.8,
+      "pct_foreign_born": 6.8,
+      "pct_owner_occupied": 95,
+      "rent_burden_pct": 14.6,
+      "pct_65_and_over": 21,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total_population": 4585,
+      "median_age": 46.5,
+      "household_count": 1637,
+      "population_density_sq_mi": 1432,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.9,
+      "pct_foreign_born": 6.9,
+      "pct_owner_occupied": 94.9,
+      "rent_burden_pct": 14.7,
+      "pct_65_and_over": 21.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 4622,
+      "median_age": 46.8,
+      "household_count": 1650,
+      "population_density_sq_mi": 1444,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 6,
+      "pct_foreign_born": 6.9,
+      "pct_owner_occupied": 95.1,
+      "rent_burden_pct": 14.8,
+      "pct_65_and_over": 21.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 4659,
+      "median_age": 47.1,
+      "household_count": 1663,
+      "population_density_sq_mi": 1455,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 6.1,
+      "pct_foreign_born": 7,
+      "pct_owner_occupied": 95.3,
+      "rent_burden_pct": 14.9,
+      "pct_65_and_over": 22.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 550000,
+      "average_rent_usd": 1800,
+      "homeownership_rate_pct": 92,
+      "housing_units": 1057,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 16,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value_usd": 582890,
+      "average_rent_usd": 1843,
+      "homeownership_rate_pct": 92.2,
+      "housing_units": 1073,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 5.98,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 15,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value_usd": 618412,
+      "average_rent_usd": 1888,
+      "homeownership_rate_pct": 92.1,
+      "housing_units": 1088,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 6.09,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 16,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value_usd": 655410,
+      "average_rent_usd": 1934,
+      "homeownership_rate_pct": 92.3,
+      "housing_units": 1104,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 5.98,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 17,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value_usd": 693421,
+      "average_rent_usd": 1980,
+      "homeownership_rate_pct": 92.4,
+      "housing_units": 1121,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 5.8,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 21,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 751221,
+      "average_rent_usd": 2048,
+      "homeownership_rate_pct": 92.6,
+      "housing_units": 1142,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.33,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value_usd": 812110,
+      "average_rent_usd": 2121,
+      "homeownership_rate_pct": 92.5,
+      "housing_units": 1165,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.11,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value_usd": 875411,
+      "average_rent_usd": 2195,
+      "homeownership_rate_pct": 92.7,
+      "housing_units": 1188,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 7.79,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 24,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value_usd": 947443,
+      "average_rent_usd": 2275,
+      "homeownership_rate_pct": 92.9,
+      "housing_units": 1212,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.23,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value_usd": 1025110,
+      "average_rent_usd": 2361,
+      "homeownership_rate_pct": 92.8,
+      "housing_units": 1237,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.2,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 1109001,
+      "average_rent_usd": 2450,
+      "homeownership_rate_pct": 93.1,
+      "housing_units": 1262,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.18,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 14,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value_usd": 1130091,
+      "average_rent_usd": 2469,
+      "homeownership_rate_pct": 93,
+      "housing_units": 1276,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 1.9,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 12,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value_usd": 1152600,
+      "average_rent_usd": 2489,
+      "homeownership_rate_pct": 92.8,
+      "housing_units": 1288,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 2,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 13,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value_usd": 1175536,
+      "average_rent_usd": 2509,
+      "homeownership_rate_pct": 93,
+      "housing_units": 1301,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 2,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value_usd": 1243111,
+      "average_rent_usd": 2569,
+      "homeownership_rate_pct": 93.2,
+      "housing_units": 1319,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 5.75,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 19,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 3606,
+      "median_age": 41.4,
+      "household_count": 1287,
+      "population_density_sq_mi": 1126,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "median_home_value_usd": 1316104,
+      "average_rent_usd": 2630,
+      "homeownership_rate_pct": 93.4,
+      "housing_units": 1338,
+      "pct_home_value_change_yoy": 5.87,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 20,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value_usd": 1398899,
+      "average_rent_usd": 2694,
+      "homeownership_rate_pct": 93.3,
+      "housing_units": 1358,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 6.29,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 20,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value_usd": 1481112,
+      "average_rent_usd": 2760,
+      "homeownership_rate_pct": 93.5,
+      "housing_units": 1378,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 5.88,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 16,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value_usd": 1451490,
+      "average_rent_usd": 2741,
+      "homeownership_rate_pct": 93.3,
+      "housing_units": 1394,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": -2,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 17,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value_usd": 1422460,
+      "average_rent_usd": 2722,
+      "homeownership_rate_pct": 93.1,
+      "housing_units": 1411,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": -2,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 16,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 1394011,
+      "average_rent_usd": 2703,
+      "homeownership_rate_pct": 93.3,
+      "housing_units": 1427,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": -2,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 23,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_home_value_usd": 1506599,
+      "average_rent_usd": 2796,
+      "homeownership_rate_pct": 93.5,
+      "housing_units": 1450,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.08,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 22,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value_usd": 1642193,
+      "average_rent_usd": 2902,
+      "homeownership_rate_pct": 93.6,
+      "housing_units": 1472,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.99,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value_usd": 1790000,
+      "average_rent_usd": 3012,
+      "homeownership_rate_pct": 93.8,
+      "housing_units": 1495,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.9,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value_usd": 1949310,
+      "average_rent_usd": 3131,
+      "homeownership_rate_pct": 94,
+      "housing_units": 1518,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.9,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 23,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 2125000,
+      "average_rent_usd": 3261,
+      "homeownership_rate_pct": 93.9,
+      "housing_units": 1541,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 9.01,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 24,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value_usd": 2314125,
+      "average_rent_usd": 3396,
+      "homeownership_rate_pct": 94.1,
+      "housing_units": 1565,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.9,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 24,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value_usd": 2520000,
+      "average_rent_usd": 3540,
+      "homeownership_rate_pct": 94.3,
+      "housing_units": 1589,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.89,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value_usd": 2742180,
+      "average_rent_usd": 3690,
+      "homeownership_rate_pct": 94.5,
+      "housing_units": 1614,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.82,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 25,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value_usd": 2985011,
+      "average_rent_usd": 3845,
+      "homeownership_rate_pct": 94.4,
+      "housing_units": 1639,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 8.82,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 16,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 2235068,
+      "average_rent_usd": 4208,
+      "homeownership_rate_pct": 94.6,
+      "housing_units": 1655,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": -25.12,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 17,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_home_value_usd": 2788810,
+      "average_rent_usd": 4797,
+      "homeownership_rate_pct": 94.8,
+      "housing_units": 1672,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 24.78,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 16,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value_usd": 3478932,
+      "average_rent_usd": 5493,
+      "homeownership_rate_pct": 95,
+      "housing_units": 1688,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 24.74,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 14,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value_usd": 3531116,
+      "average_rent_usd": 5526,
+      "homeownership_rate_pct": 94.9,
+      "housing_units": 1702,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 1.5,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 14,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value_usd": 3584083,
+      "average_rent_usd": 5560,
+      "homeownership_rate_pct": 95.1,
+      "housing_units": 1716,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 1.5,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 13,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 3637844,
+      "average_rent_usd": 5594,
+      "homeownership_rate_pct": 95.3,
+      "housing_units": 1729,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "pct_home_value_change_yoy": 1.5,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 13,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 125000,
+      "per_capita_income_usd": 49603,
+      "bachelors_degree_or_higher_pct": 75,
+      "unemployment_rate_pct": 3.5,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.5,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income_usd": 128750,
+      "per_capita_income_usd": 51091,
+      "bachelors_degree_or_higher_pct": 75.4,
+      "unemployment_rate_pct": 3.1,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.1,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income_usd": 132612,
+      "per_capita_income_usd": 52623,
+      "bachelors_degree_or_higher_pct": 75.8,
+      "unemployment_rate_pct": 2.9,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.9,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income_usd": 136590,
+      "per_capita_income_usd": 54202,
+      "bachelors_degree_or_higher_pct": 76.2,
+      "unemployment_rate_pct": 2.7,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.7,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income_usd": 140688,
+      "per_capita_income_usd": 55828,
+      "bachelors_degree_or_higher_pct": 76.6,
+      "unemployment_rate_pct": 2.6,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.6,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 147178,
+      "per_capita_income_usd": 58404,
+      "bachelors_degree_or_higher_pct": 77,
+      "unemployment_rate_pct": 2.4,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income_usd": 153801,
+      "per_capita_income_usd": 61032,
+      "bachelors_degree_or_higher_pct": 77.4,
+      "unemployment_rate_pct": 2.3,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income_usd": 160738,
+      "per_capita_income_usd": 63784,
+      "bachelors_degree_or_higher_pct": 77.8,
+      "unemployment_rate_pct": 2.2,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income_usd": 168011,
+      "per_capita_income_usd": 66671,
+      "bachelors_degree_or_higher_pct": 78.2,
+      "unemployment_rate_pct": 2.1,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.1,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income_usd": 175571,
+      "per_capita_income_usd": 69671,
+      "bachelors_degree_or_higher_pct": 78.6,
+      "unemployment_rate_pct": 2,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 183472,
+      "per_capita_income_usd": 72806,
+      "bachelors_degree_or_higher_pct": 79.1,
+      "unemployment_rate_pct": 1.9,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 1.9,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income_usd": 183000,
+      "per_capita_income_usd": 72620,
+      "bachelors_degree_or_higher_pct": 79.5,
+      "unemployment_rate_pct": 4.8,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.8,
+      "eviction_filing_rate": 0,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income_usd": 185000,
+      "per_capita_income_usd": 73410,
+      "bachelors_degree_or_higher_pct": 79.9,
+      "unemployment_rate_pct": 4.5,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.5,
+      "eviction_filing_rate": 0,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income_usd": 188000,
+      "per_capita_income_usd": 74590,
+      "bachelors_degree_or_higher_pct": 80.3,
+      "unemployment_rate_pct": 4.1,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.1,
+      "eviction_filing_rate": 0,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income_usd": 193000,
+      "per_capita_income_usd": 76570,
+      "bachelors_degree_or_higher_pct": 80.7,
+      "unemployment_rate_pct": 3.8,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.8,
+      "eviction_filing_rate": 0,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 203548,
+      "per_capita_income_usd": 80773,
+      "bachelors_degree_or_higher_pct": 81.1,
+      "unemployment_rate_pct": 3.5,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income_usd": 209654,
+      "per_capita_income_usd": 83196,
+      "bachelors_degree_or_higher_pct": 81.5,
+      "unemployment_rate_pct": 3.3,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income_usd": 215944,
+      "per_capita_income_usd": 85692,
+      "bachelors_degree_or_higher_pct": 82,
+      "unemployment_rate_pct": 3.1,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.1,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income_usd": 215000,
+      "per_capita_income_usd": 85320,
+      "bachelors_degree_or_higher_pct": 82.4,
+      "unemployment_rate_pct": 3,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income_usd": 214000,
+      "per_capita_income_usd": 84920,
+      "bachelors_degree_or_higher_pct": 82.8,
+      "unemployment_rate_pct": 5.2,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 5.2,
+      "eviction_filing_rate": 0,
+      "confidence": "low",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 222487,
+      "per_capita_income_usd": 88288,
+      "bachelors_degree_or_higher_pct": 83.2,
+      "unemployment_rate_pct": 4.9,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.9,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income_usd": 231386,
+      "per_capita_income_usd": 91820,
+      "bachelors_degree_or_higher_pct": 83.6,
+      "unemployment_rate_pct": 4.6,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.6,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income_usd": 240641,
+      "per_capita_income_usd": 95492,
+      "bachelors_degree_or_higher_pct": 84.1,
+      "unemployment_rate_pct": 4.2,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income_usd": 250267,
+      "per_capita_income_usd": 99312,
+      "bachelors_degree_or_higher_pct": 84.5,
+      "unemployment_rate_pct": 4,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income_usd": 260278,
+      "per_capita_income_usd": 103284,
+      "bachelors_degree_or_higher_pct": 85,
+      "unemployment_rate_pct": 3.8,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 270689,
+      "per_capita_income_usd": 107416,
+      "bachelors_degree_or_higher_pct": 85.4,
+      "unemployment_rate_pct": 3.6,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.6,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income_usd": 281517,
+      "per_capita_income_usd": 111713,
+      "bachelors_degree_or_higher_pct": 85.8,
+      "unemployment_rate_pct": 3.4,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income_usd": 292778,
+      "per_capita_income_usd": 116181,
+      "bachelors_degree_or_higher_pct": 86.3,
+      "unemployment_rate_pct": 3.2,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income_usd": 304489,
+      "per_capita_income_usd": 120829,
+      "bachelors_degree_or_higher_pct": 86.7,
+      "unemployment_rate_pct": 3,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income_usd": 316668,
+      "per_capita_income_usd": 125662,
+      "bachelors_degree_or_higher_pct": 87.2,
+      "unemployment_rate_pct": 2.8,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 332501,
+      "per_capita_income_usd": 131945,
+      "bachelors_degree_or_higher_pct": 87.6,
+      "unemployment_rate_pct": 5.4,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 5.4,
+      "eviction_filing_rate": 0,
+      "confidence": "high",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_household_income_usd": 349126,
+      "per_capita_income_usd": 138542,
+      "bachelors_degree_or_higher_pct": 88,
+      "unemployment_rate_pct": 4.9,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.9,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income_usd": 366582,
+      "per_capita_income_usd": 145469,
+      "bachelors_degree_or_higher_pct": 88.5,
+      "unemployment_rate_pct": 4.4,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income_usd": 379412,
+      "per_capita_income_usd": 150560,
+      "bachelors_degree_or_higher_pct": 89,
+      "unemployment_rate_pct": 4.2,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 4.2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income_usd": 392691,
+      "per_capita_income_usd": 155829,
+      "bachelors_degree_or_higher_pct": 89.4,
+      "unemployment_rate_pct": 3.9,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.9,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 406435,
+      "per_capita_income_usd": 161283,
+      "bachelors_degree_or_higher_pct": 89.9,
+      "unemployment_rate_pct": 3.7,
+      "region": "Rob Roy",
+      "region_id": 130,
+      "unemployment_rate": 3.7,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

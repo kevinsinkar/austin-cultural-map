@@ -1,0 +1,588 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 350000,
+      "median_rent": 900,
+      "residential_units": 1500,
+      "commercial_sqft": null,
+      "median_property_tax": 7350,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, SF3, Tract 17.04 (Estimated)",
+        "median_rent": "US Decennial Census 1990, SF3, Tract 17.04 (Estimated)",
+        "residential_units": "US Decennial Census 1990, SF1, Tract 17.04",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, SF1, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census tract 17.04 inferred from centroid. This is a very affluent area in West Austin.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 500000,
+      "median_rent": 1200,
+      "residential_units": 1600,
+      "commercial_sqft": null,
+      "median_property_tax": 10500,
+      "pct_home_value_change_yoy": 7.39,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated to represent mid-decade growth in a high-demand area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 650000,
+      "median_rent": 1500,
+      "residential_units": 1700,
+      "commercial_sqft": null,
+      "median_property_tax": 13650,
+      "pct_home_value_change_yoy": 5.39,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3, Tract 17.04",
+        "median_rent": "US Decennial Census 2000, SF3, Tract 17.04",
+        "residential_units": "US Decennial Census 2000, SF1, Tract 17.04",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF1, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census tract 17.04 inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 875000,
+      "median_rent": 1850,
+      "residential_units": 1775,
+      "commercial_sqft": null,
+      "median_property_tax": 18375,
+      "pct_home_value_change_yoy": 6.1,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 2000 Census and 2010 ACS",
+        "median_rent": "Linear interpolation between 2000 Census and 2010 ACS",
+        "residential_units": "Linear interpolation between 2000 Census and 2010 ACS",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "Linear interpolation between 2000 Census and 2010 ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Interpolated value; ACS 2005-2009 used as a reference for the 2000-2010 trend.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 1100000,
+      "median_rent": 2200,
+      "residential_units": 1850,
+      "commercial_sqft": null,
+      "median_property_tax": 23100,
+      "pct_home_value_change_yoy": 4.69,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077, Tract 17.04",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064, Tract 17.04",
+        "residential_units": "ACS 5-Year 2008-2012, Table DP04, Tract 17.04",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table DP04, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census tract 17.04 inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 1650000,
+      "median_rent": 3000,
+      "residential_units": 1925,
+      "commercial_sqft": null,
+      "median_property_tax": 34650,
+      "pct_home_value_change_yoy": 8.45,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077, Tract 17.04",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064, Tract 17.04",
+        "residential_units": "ACS 5-Year 2013-2017, Table DP04, Tract 17.04",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table DP04, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Value reflects rapid appreciation in Austin's luxury market during this period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 2200000,
+      "median_rent": 3800,
+      "residential_units": 2000,
+      "commercial_sqft": null,
+      "median_property_tax": 46200,
+      "pct_home_value_change_yoy": 5.92,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077, Tract 17.04",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064, Tract 17.04",
+        "residential_units": "ACS 5-Year 2018-2022, Table DP04, Tract 17.04",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table DP04, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census tract 17.04 inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_home_value": 2800000,
+      "median_rent": 4500,
+      "residential_units": 2050,
+      "commercial_sqft": null,
+      "median_property_tax": 58800,
+      "pct_home_value_change_yoy": 4.91,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2018-2022 and TCAD/Zillow 2022-2024 trends",
+        "median_rent": "Extrapolation from ACS 2018-2022 and market data",
+        "residential_units": "Extrapolation from ACS 2018-2022 and City of Austin permit data",
+        "median_property_tax": "Derived from median_home_value",
+        "vacancy_rate": "Extrapolation from ACS 2018-2022 trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Extrapolated to reflect post-pandemic market boom and subsequent stabilization.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 100000,
+      "poverty_rate": 2,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, SF3, Tract 17.04",
+        "poverty_rate": "US Decennial Census 1990, SF3, Tract 17.04",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, SF3, Tract 17.04",
+        "unemployment_rate": "US Decennial Census 1990, SF3, Tract 17.04",
+        "gini_coefficient": "Estimated based on income distribution",
+        "pct_uninsured": "Estimated based on income and employment",
+        "snap_participation_rate": "Estimated based on poverty rate"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census tract 17.04 inferred from centroid. Very high income, low poverty area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 125000,
+      "poverty_rate": 1.8,
+      "bachelors_degree_or_higher_pct": 70,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 4.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.9,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Interpolated estimate",
+        "pct_uninsured": "Interpolated estimate",
+        "snap_participation_rate": "Interpolated estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Interpolated values reflecting economic growth of the 1990s.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 150000,
+      "poverty_rate": 1.5,
+      "bachelors_degree_or_higher_pct": 75,
+      "unemployment_rate": 2,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3, Tract 17.04",
+        "poverty_rate": "US Decennial Census 2000, SF3, Tract 17.04",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3, Tract 17.04",
+        "unemployment_rate": "US Decennial Census 2000, SF3, Tract 17.04",
+        "gini_coefficient": "Estimated based on income distribution",
+        "pct_uninsured": "Estimated based on income and employment",
+        "snap_participation_rate": "Estimated based on poverty rate"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census tract 17.04 inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 167500,
+      "poverty_rate": 1.7,
+      "bachelors_degree_or_higher_pct": 77.5,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 2000 Census and 2010 ACS",
+        "poverty_rate": "Linear interpolation between 2000 Census and 2010 ACS",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 2000 Census and 2010 ACS",
+        "unemployment_rate": "Interpolated estimate, reflecting national trends",
+        "gini_coefficient": "Interpolated estimate",
+        "pct_uninsured": "Interpolated estimate",
+        "eviction_filing_rate": "Estimated based on tract characteristics",
+        "snap_participation_rate": "Interpolated estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Interpolated value; ACS 2005-2009 used as a reference for the 2000-2010 trend.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 185000,
+      "poverty_rate": 1.8,
+      "bachelors_degree_or_higher_pct": 80,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 5.5,
+      "eviction_filing_rate": 0.4,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013, Tract 17.04",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table S1701, Tract 17.04",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table S1501, Tract 17.04",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table S2301, Tract 17.04",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083, Tract 17.04",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table S2701, Tract 17.04",
+        "eviction_filing_rate": "Eviction Lab (Princeton), Tract 17.04 (Estimated)",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table S2201, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate reflects post-2008 recession conditions.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 217500,
+      "poverty_rate": 2.2,
+      "bachelors_degree_or_higher_pct": 82.5,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": 0.3,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013, Tract 17.04",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table S1701, Tract 17.04",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table S1501, Tract 17.04",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table S2301, Tract 17.04",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083, Tract 17.04",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table S2701, Tract 17.04",
+        "eviction_filing_rate": "Eviction Lab (Princeton), Tract 17.04",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table S2201, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Income capped at $250,001 in many ACS tables; this is a conservative estimate of the midpoint.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 250001,
+      "poverty_rate": 2.5,
+      "bachelors_degree_or_higher_pct": 85,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013, Tract 17.04",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table S1701, Tract 17.04",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table S1501, Tract 17.04",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table S2301, Tract 17.04",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083, Tract 17.04",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table S2701, Tract 17.04",
+        "eviction_filing_rate": "Eviction Lab (Princeton), Tract 17.04",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table S2201, Tract 17.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Median income is at the maximum reportable value for public ACS data.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Redbud",
+      "region_id": 233,
+      "median_household_income": 280000,
+      "poverty_rate": 2.8,
+      "bachelors_degree_or_higher_pct": 87,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 4.2,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2018-2022 trends",
+        "poverty_rate": "Extrapolation from ACS 2018-2022 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2018-2022 trends",
+        "unemployment_rate": "Extrapolation from ACS 2018-2022 and BLS data",
+        "gini_coefficient": "Extrapolation from ACS 2018-2022 trends",
+        "pct_uninsured": "Extrapolation from ACS 2018-2022 trends",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab data",
+        "snap_participation_rate": "Extrapolation from ACS 2018-2022 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Extrapolated values. Actual median income likely exceeds this estimate.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

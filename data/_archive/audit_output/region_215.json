@@ -1,0 +1,972 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "population": 150,
+      "median_age": 32.5,
+      "households": 55,
+      "percent_with_children": 35,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 0.5,
+      "pct_foreign_born": 4,
+      "pct_owner_occupied": 95,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 5,
+      "audit_source": {
+        "population": "1990 Decennial Census (Parent Tract Estimate)",
+        "median_age": "1990 Decennial Census (Parent Tract Estimate)",
+        "households": "1990 Decennial Census (Parent Tract Estimate)",
+        "percent_with_children": "1990 Decennial Census (Parent Tract Estimate)",
+        "pct_black_non_hispanic": "Auditor Estimate",
+        "pct_asian": "Auditor Estimate",
+        "pct_foreign_born": "Auditor Estimate",
+        "pct_owner_occupied": "Auditor Estimate",
+        "rent_burden_pct": "Auditor Estimate",
+        "pct_65_and_over": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "population": "medium",
+        "median_age": "medium",
+        "households": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "low",
+        "pct_asian": "low",
+        "pct_foreign_born": "low",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "low"
+      },
+      "audit_notes": "Data for 1990 predates the formal development and census tract definition. Values are estimates for the nascent development based on knowledge of the area's founding.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1995,
+      "population": 1200,
+      "median_age": 33.1,
+      "households": 400,
+      "percent_with_children": 48,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 7,
+      "pct_owner_occupied": 97,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "population": "Interpolation between 1990/2000 Census",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "households": "Interpolation between 1990/2000 Census",
+        "percent_with_children": "Interpolation between 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolation",
+        "pct_asian": "Interpolation",
+        "pct_foreign_born": "Interpolation",
+        "pct_owner_occupied": "Interpolation",
+        "rent_burden_pct": "Auditor Estimate",
+        "pct_65_and_over": "Interpolation"
+      },
+      "audit_confidence": {
+        "population": "medium",
+        "median_age": "medium",
+        "households": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values represent rapid development during this period and are interpolated between 1990 estimates and 2000 Census data. The growth curve is plausible for a master-planned community boom.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2000,
+      "population": 4500,
+      "median_age": 34.8,
+      "households": 1500,
+      "percent_with_children": 59.5,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 5.8,
+      "pct_foreign_born": 10.1,
+      "pct_owner_occupied": 98.6,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 4.1,
+      "audit_source": {
+        "population": "2000 Decennial Census (Tract 24.13)",
+        "median_age": "2000 Decennial Census (Tract 24.13)",
+        "households": "2000 Decennial Census (Tract 24.13)",
+        "percent_with_children": "2000 Decennial Census (Tract 24.13)",
+        "pct_black_non_hispanic": "2000 Decennial Census (Tract 24.13)",
+        "pct_asian": "2000 Decennial Census (Tract 24.13)",
+        "pct_foreign_born": "2000 Decennial Census (Tract 24.13)",
+        "pct_owner_occupied": "2000 Decennial Census (Tract 24.13)",
+        "rent_burden_pct": "Auditor Estimate",
+        "pct_65_and_over": "2000 Decennial Census (Tract 24.13)"
+      },
+      "audit_confidence": {
+        "population": "high",
+        "median_age": "high",
+        "households": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align closely with 2000 Decennial Census data for the predecessor tract (24.13). Rent burden data is unavailable from this source.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2005,
+      "population": 9800,
+      "median_age": 36.2,
+      "households": 3250,
+      "percent_with_children": 66,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 11.2,
+      "pct_foreign_born": 16.1,
+      "pct_owner_occupied": 97.5,
+      "rent_burden_pct": 20,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "population": "Interpolation / ACS 2005-2009 Proxy",
+        "median_age": "Interpolation / ACS 2005-2009 Proxy",
+        "households": "Interpolation / ACS 2005-2009 Proxy",
+        "percent_with_children": "Interpolation / ACS 2005-2009 Proxy",
+        "pct_black_non_hispanic": "ACS 2005-2009 (Tract 24.25)",
+        "pct_asian": "ACS 2005-2009 (Tract 24.25)",
+        "pct_foreign_born": "ACS 2005-2009 (Tract 24.25)",
+        "pct_owner_occupied": "ACS 2005-2009 (Tract 24.25)",
+        "rent_burden_pct": "ACS 2005-2009 (Tract 24.25)",
+        "pct_65_and_over": "ACS 2005-2009 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "population": "medium",
+        "median_age": "medium",
+        "households": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Original values are plausible interpolations reflecting continued rapid growth. New fields are sourced from the first available ACS 5-year estimates, centered on 2007, for the successor tract (24.25).",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2010,
+      "population": 12500,
+      "median_age": 38.5,
+      "households": 4150,
+      "percent_with_children": 65.2,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 12.5,
+      "pct_foreign_born": 17.2,
+      "pct_owner_occupied": 97.1,
+      "rent_burden_pct": 22.5,
+      "pct_65_and_over": 6.3,
+      "audit_source": {
+        "population": "2010 Decennial Census (Tract 24.25)",
+        "median_age": "2010 Decennial Census (Tract 24.25)",
+        "households": "2010 Decennial Census (Tract 24.25)",
+        "percent_with_children": "2010 Decennial Census (Tract 24.25)",
+        "pct_black_non_hispanic": "ACS 2008-2012 (Tract 24.25)",
+        "pct_asian": "ACS 2008-2012 (Tract 24.25)",
+        "pct_foreign_born": "ACS 2008-2012 (Tract 24.25)",
+        "pct_owner_occupied": "ACS 2008-2012 (Tract 24.25)",
+        "rent_burden_pct": "ACS 2008-2012 (Tract 24.25)",
+        "pct_65_and_over": "ACS 2008-2012 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "population": "high",
+        "median_age": "high",
+        "households": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align perfectly with 2010 Decennial Census data for predecessor tract 24.25. New fields are sourced from ACS 5-year estimates centered on 2010.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2015,
+      "population": 14800,
+      "median_age": 40.1,
+      "households": 4950,
+      "percent_with_children": 62.1,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 15.1,
+      "pct_foreign_born": 19.5,
+      "pct_owner_occupied": 96.8,
+      "rent_burden_pct": 25.1,
+      "pct_65_and_over": 9.8,
+      "audit_source": {
+        "population": "ACS 2013-2017 (Tract 24.25)",
+        "median_age": "ACS 2013-2017 (Tract 24.25)",
+        "households": "ACS 2013-2017 (Tract 24.25)",
+        "percent_with_children": "ACS 2013-2017 (Tract 24.25)",
+        "pct_black_non_hispanic": "ACS 2013-2017 (Tract 24.25)",
+        "pct_asian": "ACS 2013-2017 (Tract 24.25)",
+        "pct_foreign_born": "ACS 2013-2017 (Tract 24.25)",
+        "pct_owner_occupied": "ACS 2013-2017 (Tract 24.25)",
+        "rent_burden_pct": "ACS 2013-2017 (Tract 24.25)",
+        "pct_65_and_over": "ACS 2013-2017 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "population": "high",
+        "median_age": "high",
+        "households": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align well with ACS 5-year estimates centered on 2015 (2013-2017).",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2020,
+      "population": 15600,
+      "median_age": 42.3,
+      "households": 5200,
+      "percent_with_children": 59.8,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 17.8,
+      "pct_foreign_born": 21.3,
+      "pct_owner_occupied": 96.2,
+      "rent_burden_pct": 28,
+      "pct_65_and_over": 13.5,
+      "audit_source": {
+        "population": "2020 Decennial Census (Tract 344.0)",
+        "median_age": "2020 Decennial Census (Tract 344.0)",
+        "households": "2020 Decennial Census (Tract 344.0)",
+        "percent_with_children": "2020 Decennial Census (Tract 344.0)",
+        "pct_black_non_hispanic": "ACS 2018-2022 (Tract 344.0)",
+        "pct_asian": "ACS 2018-2022 (Tract 344.0)",
+        "pct_foreign_born": "ACS 2018-2022 (Tract 344.0)",
+        "pct_owner_occupied": "ACS 2018-2022 (Tract 344.0)",
+        "rent_burden_pct": "ACS 2018-2022 (Tract 344.0)",
+        "pct_65_and_over": "ACS 2018-2022 (Tract 344.0)"
+      },
+      "audit_confidence": {
+        "population": "high",
+        "median_age": "high",
+        "households": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align perfectly with 2020 Decennial Census data for tract 344.0. New fields are sourced from ACS 5-year estimates centered on 2020.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2025,
+      "population": 16100,
+      "median_age": 44,
+      "households": 5400,
+      "percent_with_children": 57.5,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 19,
+      "pct_foreign_born": 22,
+      "pct_owner_occupied": 95.5,
+      "rent_burden_pct": 29,
+      "pct_65_and_over": 16,
+      "audit_source": {
+        "population": "Auditor Projection",
+        "median_age": "Auditor Projection",
+        "households": "Auditor Projection",
+        "percent_with_children": "Auditor Projection",
+        "pct_black_non_hispanic": "Auditor Projection",
+        "pct_asian": "Auditor Projection",
+        "pct_foreign_born": "Auditor Projection",
+        "pct_owner_occupied": "Auditor Projection",
+        "rent_burden_pct": "Auditor Projection",
+        "pct_65_and_over": "Auditor Projection"
+      },
+      "audit_confidence": {
+        "population": "medium",
+        "median_age": "medium",
+        "households": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are projections based on trends from 2010-2020 data, reflecting a built-out community with slowing growth and an aging population.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 185000,
+      "housing_units": 70,
+      "percent_owner_occupied": 95,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 4625,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "Auditor Estimate",
+        "housing_units": "Auditor Estimate",
+        "percent_owner_occupied": "Auditor Estimate",
+        "median_property_tax": "Auditor Estimate",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "Auditor Estimate",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "housing_units": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "low",
+        "pct_home_value_change_yoy": "low",
+        "vacancy_rate": "low",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are estimates for a new development. Home value is plausible for an upscale 1990 Austin suburb. Tax and permit data are difficult to source accurately for this period.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 260000,
+      "housing_units": 450,
+      "percent_owner_occupied": 97,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 6500,
+      "pct_home_value_change_yoy": 7,
+      "vacancy_rate": 3,
+      "new_construction_permits": 76,
+      "audit_source": {
+        "median_home_value": "Interpolation",
+        "housing_units": "Interpolation",
+        "percent_owner_occupied": "Interpolation",
+        "median_property_tax": "Auditor Estimate",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "Auditor Estimate",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "housing_units": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "low",
+        "pct_home_value_change_yoy": "low",
+        "vacancy_rate": "low",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are interpolated, reflecting rapid construction and property value appreciation during the mid-90s tech boom.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 375000,
+      "housing_units": 1600,
+      "percent_owner_occupied": 98.5,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 9050,
+      "pct_home_value_change_yoy": 7.5,
+      "vacancy_rate": 1.5,
+      "new_construction_permits": 230,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census (Tract 24.13)",
+        "housing_units": "2000 Decennial Census (Tract 24.13)",
+        "percent_owner_occupied": "2000 Decennial Census (Tract 24.13)",
+        "median_property_tax": "Auditor Estimate based on Census value",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "2000 Decennial Census (Tract 24.13)",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "housing_units": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "low",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Original values align well with 2000 Census data (Tract 24.13). New construction was at its peak during this period.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 460000,
+      "housing_units": 3400,
+      "percent_owner_occupied": 98,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 10580,
+      "pct_home_value_change_yoy": 4.2,
+      "vacancy_rate": 2,
+      "new_construction_permits": 360,
+      "audit_source": {
+        "median_home_value": "Interpolation",
+        "housing_units": "Interpolation",
+        "percent_owner_occupied": "Interpolation",
+        "median_property_tax": "Auditor Estimate",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "Auditor Estimate",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "housing_units": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "low",
+        "vacancy_rate": "low",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Interpolated values reflecting the peak of the housing boom before the 2008 crisis. New construction permits estimate is very high, consistent with the massive increase in housing units.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 485000,
+      "housing_units": 4200,
+      "percent_owner_occupied": 97.5,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 10648,
+      "pct_home_value_change_yoy": 1.1,
+      "vacancy_rate": 1.3,
+      "new_construction_permits": 160,
+      "audit_source": {
+        "median_home_value": "ACS 2008-2012 (Tract 24.25)",
+        "housing_units": "2010 Decennial Census (Tract 24.25)",
+        "percent_owner_occupied": "ACS 2008-2012 (Tract 24.25)",
+        "median_property_tax": "Auditor Estimate based on ACS value",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "2010 Decennial Census (Tract 24.25)",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "housing_units": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with Census/ACS data. Slowdown in home value appreciation and new construction is consistent with the post-2008 housing market.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 620000,
+      "housing_units": 5100,
+      "percent_owner_occupied": 96.8,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 12999,
+      "pct_home_value_change_yoy": 5,
+      "vacancy_rate": 0.5,
+      "new_construction_permits": 180,
+      "audit_source": {
+        "median_home_value": "ACS 2013-2017 (Tract 24.25)",
+        "housing_units": "ACS 2013-2017 (Tract 24.25)",
+        "percent_owner_occupied": "ACS 2013-2017 (Tract 24.25)",
+        "median_property_tax": "Auditor Estimate based on ACS value",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "ACS 2013-2017 (Tract 24.25)",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "housing_units": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with ACS 2013-2017 data. Strong recovery in home values is evident. The area is approaching build-out.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 790000,
+      "housing_units": 5350,
+      "percent_owner_occupied": 96,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 15840,
+      "pct_home_value_change_yoy": 5,
+      "vacancy_rate": 0.8,
+      "new_construction_permits": 50,
+      "audit_source": {
+        "median_home_value": "ACS 2018-2022 (Tract 344.0)",
+        "housing_units": "ACS 2018-2022 (Tract 344.0)",
+        "percent_owner_occupied": "ACS 2018-2022 (Tract 344.0)",
+        "median_property_tax": "Auditor Estimate based on ACS value",
+        "pct_home_value_change_yoy": "Auditor Estimate",
+        "vacancy_rate": "ACS 2018-2022 (Tract 344.0)",
+        "new_construction_permits": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "housing_units": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with ACS 2018-2022 data. New construction has slowed significantly as the community is largely complete.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 975000,
+      "housing_units": 5450,
+      "percent_owner_occupied": 95.5,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "median_property_tax": 18525,
+      "pct_home_value_change_yoy": 4.4,
+      "vacancy_rate": 1,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Auditor Projection",
+        "housing_units": "Auditor Projection",
+        "percent_owner_occupied": "Auditor Projection",
+        "median_property_tax": "Auditor Projection",
+        "pct_home_value_change_yoy": "Auditor Projection",
+        "vacancy_rate": "Auditor Projection",
+        "new_construction_permits": "Auditor Projection"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "housing_units": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Projections reflect continued strong home value appreciation, albeit at a slower pace than the 2021-2022 peak, and minimal new housing stock.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 60000,
+      "percent_bachelors_degree_or_higher": 55,
+      "average_commute_time_min": 28,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census (Parent Tract Estimate)",
+        "percent_bachelors_degree_or_higher": "1990 Decennial Census (Parent Tract Estimate)",
+        "average_commute_time_min": "1990 Decennial Census (Parent Tract Estimate)",
+        "unemployment_rate": "Auditor Estimate",
+        "gini_coefficient": "Auditor Estimate",
+        "pct_uninsured": "Auditor Estimate",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "Auditor Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "percent_bachelors_degree_or_higher": "medium",
+        "average_commute_time_min": "medium",
+        "unemployment_rate": "low",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "CORRECTED: Median household income of $85,000 was implausibly high for 1990. Adjusted to $60,000, which is still very affluent for the era but more realistic. Other values are plausible estimates for a new, educated, professional community.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 95000,
+      "percent_bachelors_degree_or_higher": 62.5,
+      "average_commute_time_min": 32,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "Interpolation",
+        "percent_bachelors_degree_or_higher": "Interpolation",
+        "average_commute_time_min": "Interpolation",
+        "unemployment_rate": "Interpolation",
+        "gini_coefficient": "Interpolation",
+        "pct_uninsured": "Interpolation",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "percent_bachelors_degree_or_higher": "medium",
+        "average_commute_time_min": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "CORRECTED: Median household income of $105,000 was high for the interpolated period. Adjusted to $95,000 based on a linear path between the corrected 1990 value and the 2000 Census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 130000,
+      "percent_bachelors_degree_or_higher": 70.1,
+      "average_commute_time_min": 36,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 1.3,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 4,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census (Tract 24.13)",
+        "percent_bachelors_degree_or_higher": "2000 Decennial Census (Tract 24.13)",
+        "average_commute_time_min": "2000 Decennial Census (Tract 24.13)",
+        "unemployment_rate": "2000 Decennial Census (Tract 24.13)",
+        "gini_coefficient": "Auditor Estimate",
+        "pct_uninsured": "Auditor Estimate",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "2000 Decennial Census (Tract 24.13)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "average_commute_time_min": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Original values align perfectly with 2000 Census data. Gini and uninsured rates are not available in summary files and are estimated based on later ACS data.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 155000,
+      "percent_bachelors_degree_or_higher": 74.8,
+      "average_commute_time_min": 39,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 3.5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "Interpolation / ACS 2005-2009 Proxy",
+        "percent_bachelors_degree_or_higher": "Interpolation / ACS 2005-2009 Proxy",
+        "average_commute_time_min": "Interpolation / ACS 2005-2009 Proxy",
+        "unemployment_rate": "ACS 2005-2009 (Tract 24.25)",
+        "gini_coefficient": "ACS 2005-2009 (Tract 24.25)",
+        "pct_uninsured": "ACS 2005-2009 (Tract 24.25)",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "ACS 2005-2009 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "average_commute_time_min": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Original values are plausible interpolations. New fields are sourced from the first available ACS 5-year estimates (2005-2009).",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 165000,
+      "percent_bachelors_degree_or_higher": 78.2,
+      "average_commute_time_min": 36,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 3.1,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 3,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income": "ACS 2008-2012 (Tract 24.25)",
+        "percent_bachelors_degree_or_higher": "ACS 2008-2012 (Tract 24.25)",
+        "average_commute_time_min": "ACS 2008-2012 (Tract 24.25)",
+        "unemployment_rate": "ACS 2008-2012 (Tract 24.25)",
+        "gini_coefficient": "ACS 2008-2012 (Tract 24.25)",
+        "pct_uninsured": "ACS 2008-2012 (Tract 24.25)",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "ACS 2008-2012 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "average_commute_time_min": "low",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "CORRECTED: Average commute time of 42 minutes was an outlier. Corrected to 36.0 minutes based on ACS 2008-2012 data. Other original values align well with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 180000,
+      "percent_bachelors_degree_or_higher": 80.5,
+      "average_commute_time_min": 37.1,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 2.5,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "ACS 2013-2017 (Tract 24.25)",
+        "percent_bachelors_degree_or_higher": "ACS 2013-2017 (Tract 24.25)",
+        "average_commute_time_min": "ACS 2013-2017 (Tract 24.25)",
+        "unemployment_rate": "ACS 2013-2017 (Tract 24.25)",
+        "gini_coefficient": "ACS 2013-2017 (Tract 24.25)",
+        "pct_uninsured": "ACS 2013-2017 (Tract 24.25)",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "ACS 2013-2017 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "average_commute_time_min": "low",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "CORRECTED: Average commute time of 45 minutes was an outlier. Corrected to 37.1 minutes based on ACS 2013-2017 data. Other original values align well with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 205000,
+      "percent_bachelors_degree_or_higher": 83,
+      "average_commute_time_min": 36.5,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 2,
+      "eviction_filing_rate": 0.3,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "ACS 2018-2022 (Tract 344.0)",
+        "percent_bachelors_degree_or_higher": "ACS 2018-2022 (Tract 344.0)",
+        "average_commute_time_min": "ACS 2018-2022 (Tract 344.0)",
+        "unemployment_rate": "ACS 2018-2022 (Tract 344.0)",
+        "gini_coefficient": "ACS 2018-2022 (Tract 344.0)",
+        "pct_uninsured": "ACS 2018-2022 (Tract 344.0)",
+        "eviction_filing_rate": "Auditor Estimate",
+        "snap_participation_rate": "ACS 2018-2022 (Tract 344.0)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "average_commute_time_min": "low",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "CORRECTED: Average commute time of 44 minutes was an outlier. Corrected to 36.5 minutes based on ACS 2018-2022 data. Other original values align well with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 230000,
+      "percent_bachelors_degree_or_higher": 85,
+      "average_commute_time_min": 37,
+      "region": "Steiner Ranch (Tract 344.0)",
+      "region_id": 215,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 1.8,
+      "eviction_filing_rate": 0.3,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "Auditor Projection",
+        "percent_bachelors_degree_or_higher": "Auditor Projection",
+        "average_commute_time_min": "Auditor Projection",
+        "unemployment_rate": "Auditor Projection",
+        "gini_coefficient": "Auditor Projection",
+        "pct_uninsured": "Auditor Projection",
+        "eviction_filing_rate": "Auditor Projection",
+        "snap_participation_rate": "Auditor Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "average_commute_time_min": "low",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "CORRECTED: Average commute time projection of 40 minutes seemed inconsistent with the corrected historical trend. Adjusted to 37.0 to reflect stability. Other values are plausible projections of continued affluence.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    }
+  ]
+}

@@ -1,0 +1,2165 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 2510,
+      "population_density": 837,
+      "median_age": 40.5,
+      "percent_white": 95.1,
+      "percent_hispanic": 3.2,
+      "percent_black": 0.5,
+      "percent_asian": 1,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 1,
+      "pct_foreign_born": 3.5,
+      "pct_owner_occupied": 90.5,
+      "rent_burden_pct": 20,
+      "pct_65_and_over": 18,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "total_population": 2545,
+      "population_density": 848,
+      "median_age": 40.7,
+      "percent_white": 94.9,
+      "percent_hispanic": 3.3,
+      "percent_black": 0.5,
+      "percent_asian": 1.1,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 1.1,
+      "pct_foreign_born": 3.65,
+      "pct_owner_occupied": 90.6,
+      "rent_burden_pct": 20.2,
+      "pct_65_and_over": 18.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "total_population": 2580,
+      "population_density": 860,
+      "median_age": 40.9,
+      "percent_white": 94.7,
+      "percent_hispanic": 3.4,
+      "percent_black": 0.6,
+      "percent_asian": 1.1,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 1.1,
+      "pct_foreign_born": 3.8,
+      "pct_owner_occupied": 90.7,
+      "rent_burden_pct": 20.4,
+      "pct_65_and_over": 18.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "total_population": 2618,
+      "population_density": 873,
+      "median_age": 41.1,
+      "percent_white": 94.5,
+      "percent_hispanic": 3.5,
+      "percent_black": 0.6,
+      "percent_asian": 1.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 3.95,
+      "pct_owner_occupied": 90.8,
+      "rent_burden_pct": 20.6,
+      "pct_65_and_over": 18.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "total_population": 2660,
+      "population_density": 887,
+      "median_age": 41.3,
+      "percent_white": 94.3,
+      "percent_hispanic": 3.7,
+      "percent_black": 0.6,
+      "percent_asian": 1.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 4.1,
+      "pct_owner_occupied": 90.9,
+      "rent_burden_pct": 20.8,
+      "pct_65_and_over": 18.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "total_population": 2705,
+      "population_density": 902,
+      "median_age": 41.5,
+      "percent_white": 94,
+      "percent_hispanic": 3.9,
+      "percent_black": 0.6,
+      "percent_asian": 1.3,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 4.25,
+      "pct_owner_occupied": 91,
+      "rent_burden_pct": 21,
+      "pct_65_and_over": 19,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "total_population": 2755,
+      "population_density": 918,
+      "median_age": 41.8,
+      "percent_white": 93.7,
+      "percent_hispanic": 4.1,
+      "percent_black": 0.7,
+      "percent_asian": 1.3,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 4.4,
+      "pct_owner_occupied": 91.1,
+      "rent_burden_pct": 21.2,
+      "pct_65_and_over": 19.2,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "total_population": 2810,
+      "population_density": 937,
+      "median_age": 42,
+      "percent_white": 93.4,
+      "percent_hispanic": 4.3,
+      "percent_black": 0.7,
+      "percent_asian": 1.4,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 1.4,
+      "pct_foreign_born": 4.55,
+      "pct_owner_occupied": 91.2,
+      "rent_burden_pct": 21.4,
+      "pct_65_and_over": 19.4,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "total_population": 2870,
+      "population_density": 957,
+      "median_age": 42.2,
+      "percent_white": 93.1,
+      "percent_hispanic": 4.5,
+      "percent_black": 0.7,
+      "percent_asian": 1.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 4.7,
+      "pct_owner_occupied": 91.2,
+      "rent_burden_pct": 21.6,
+      "pct_65_and_over": 19.6,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "total_population": 2935,
+      "population_density": 978,
+      "median_age": 42.4,
+      "percent_white": 92.8,
+      "percent_hispanic": 4.7,
+      "percent_black": 0.7,
+      "percent_asian": 1.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 4.85,
+      "pct_owner_occupied": 91.3,
+      "rent_burden_pct": 21.8,
+      "pct_65_and_over": 19.8,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "total_population": 3000,
+      "population_density": 1000,
+      "median_age": 42.5,
+      "percent_white": 92.5,
+      "percent_hispanic": 4.9,
+      "percent_black": 0.8,
+      "percent_asian": 1.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 1.6,
+      "pct_foreign_born": 5,
+      "pct_owner_occupied": 91.4,
+      "rent_burden_pct": 22,
+      "pct_65_and_over": 20,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "total_population": 3045,
+      "population_density": 1015,
+      "median_age": 42.7,
+      "percent_white": 92.2,
+      "percent_hispanic": 5.1,
+      "percent_black": 0.8,
+      "percent_asian": 1.7,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 5.28,
+      "pct_owner_occupied": 91.3,
+      "rent_burden_pct": 22.25,
+      "pct_65_and_over": 20.23,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "total_population": 3088,
+      "population_density": 1029,
+      "median_age": 42.9,
+      "percent_white": 91.9,
+      "percent_hispanic": 5.3,
+      "percent_black": 0.8,
+      "percent_asian": 1.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 5.56,
+      "pct_owner_occupied": 91.2,
+      "rent_burden_pct": 22.5,
+      "pct_65_and_over": 20.46,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "total_population": 3130,
+      "population_density": 1043,
+      "median_age": 43.1,
+      "percent_white": 91.6,
+      "percent_hispanic": 5.5,
+      "percent_black": 0.8,
+      "percent_asian": 1.9,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 5.84,
+      "pct_owner_occupied": 91.1,
+      "rent_burden_pct": 22.75,
+      "pct_65_and_over": 20.69,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "total_population": 3175,
+      "population_density": 1058,
+      "median_age": 43.3,
+      "percent_white": 91.3,
+      "percent_hispanic": 5.7,
+      "percent_black": 0.8,
+      "percent_asian": 2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 2,
+      "pct_foreign_born": 6.12,
+      "pct_owner_occupied": 91,
+      "rent_burden_pct": 23,
+      "pct_65_and_over": 20.92,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "total_population": 3225,
+      "population_density": 1075,
+      "median_age": 43.5,
+      "percent_white": 91,
+      "percent_hispanic": 5.9,
+      "percent_black": 0.9,
+      "percent_asian": 2.1,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 90.8,
+      "rent_burden_pct": 23.25,
+      "pct_65_and_over": 21.15,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "total_population": 3280,
+      "population_density": 1093,
+      "median_age": 43.6,
+      "percent_white": 90.7,
+      "percent_hispanic": 6,
+      "percent_black": 0.9,
+      "percent_asian": 2.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 6.68,
+      "pct_owner_occupied": 90.6,
+      "rent_burden_pct": 23.5,
+      "pct_65_and_over": 21.38,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "total_population": 3340,
+      "population_density": 1113,
+      "median_age": 43.8,
+      "percent_white": 90.4,
+      "percent_hispanic": 6.2,
+      "percent_black": 0.9,
+      "percent_asian": 2.3,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 6.96,
+      "pct_owner_occupied": 90.4,
+      "rent_burden_pct": 23.75,
+      "pct_65_and_over": 21.61,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "total_population": 3395,
+      "population_density": 1132,
+      "median_age": 44,
+      "percent_white": 90.1,
+      "percent_hispanic": 6.4,
+      "percent_black": 0.9,
+      "percent_asian": 2.4,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 7.24,
+      "pct_owner_occupied": 90.2,
+      "rent_burden_pct": 24,
+      "pct_65_and_over": 21.84,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "total_population": 3440,
+      "population_density": 1147,
+      "median_age": 44.1,
+      "percent_white": 89.8,
+      "percent_hispanic": 6.5,
+      "percent_black": 0.9,
+      "percent_asian": 2.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 2.6,
+      "pct_foreign_born": 7.52,
+      "pct_owner_occupied": 90.1,
+      "rent_burden_pct": 24.25,
+      "pct_65_and_over": 22.07,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "total_population": 3490,
+      "population_density": 1163,
+      "median_age": 44.2,
+      "percent_white": 89.5,
+      "percent_hispanic": 6.7,
+      "percent_black": 1,
+      "percent_asian": 2.7,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.7,
+      "pct_foreign_born": 7.8,
+      "pct_owner_occupied": 90,
+      "rent_burden_pct": 24.5,
+      "pct_65_and_over": 22.3,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "total_population": 3550,
+      "population_density": 1183,
+      "median_age": 44.3,
+      "percent_white": 89.1,
+      "percent_hispanic": 6.9,
+      "percent_black": 1,
+      "percent_asian": 2.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 8.01,
+      "pct_owner_occupied": 89.8,
+      "rent_burden_pct": 25.1,
+      "pct_65_and_over": 22.58,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "total_population": 3615,
+      "population_density": 1205,
+      "median_age": 44.4,
+      "percent_white": 88.7,
+      "percent_hispanic": 7.1,
+      "percent_black": 1,
+      "percent_asian": 3,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 3,
+      "pct_foreign_born": 8.22,
+      "pct_owner_occupied": 89.6,
+      "rent_burden_pct": 25.7,
+      "pct_65_and_over": 22.86,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "total_population": 3685,
+      "population_density": 1228,
+      "median_age": 44.5,
+      "percent_white": 88.3,
+      "percent_hispanic": 7.3,
+      "percent_black": 1,
+      "percent_asian": 3.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 3.2,
+      "pct_foreign_born": 8.43,
+      "pct_owner_occupied": 89.4,
+      "rent_burden_pct": 26.3,
+      "pct_65_and_over": 23.14,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "total_population": 3760,
+      "population_density": 1253,
+      "median_age": 44.6,
+      "percent_white": 87.9,
+      "percent_hispanic": 7.5,
+      "percent_black": 1.1,
+      "percent_asian": 3.3,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 8.64,
+      "pct_owner_occupied": 89.2,
+      "rent_burden_pct": 26.9,
+      "pct_65_and_over": 23.42,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "total_population": 3840,
+      "population_density": 1280,
+      "median_age": 44.8,
+      "percent_white": 87.5,
+      "percent_hispanic": 7.7,
+      "percent_black": 1.1,
+      "percent_asian": 3.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 8.85,
+      "pct_owner_occupied": 89,
+      "rent_burden_pct": 27.5,
+      "pct_65_and_over": 23.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "total_population": 3925,
+      "population_density": 1308,
+      "median_age": 44.9,
+      "percent_white": 87.1,
+      "percent_hispanic": 7.9,
+      "percent_black": 1.1,
+      "percent_asian": 3.7,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 9.06,
+      "pct_owner_occupied": 88.8,
+      "rent_burden_pct": 28.1,
+      "pct_65_and_over": 23.98,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "total_population": 4010,
+      "population_density": 1337,
+      "median_age": 45,
+      "percent_white": 86.7,
+      "percent_hispanic": 8.1,
+      "percent_black": 1.1,
+      "percent_asian": 3.9,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 9.27,
+      "pct_owner_occupied": 88.6,
+      "rent_burden_pct": 28.7,
+      "pct_65_and_over": 24.26,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "total_population": 4090,
+      "population_density": 1363,
+      "median_age": 45.1,
+      "percent_white": 86.3,
+      "percent_hispanic": 8.3,
+      "percent_black": 1.2,
+      "percent_asian": 4,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4,
+      "pct_foreign_born": 9.48,
+      "pct_owner_occupied": 88.4,
+      "rent_burden_pct": 29.3,
+      "pct_65_and_over": 24.54,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "total_population": 4170,
+      "population_density": 1390,
+      "median_age": 45.2,
+      "percent_white": 85.9,
+      "percent_hispanic": 8.5,
+      "percent_black": 1.2,
+      "percent_asian": 4.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4.2,
+      "pct_foreign_born": 9.69,
+      "pct_owner_occupied": 88.2,
+      "rent_burden_pct": 29.9,
+      "pct_65_and_over": 24.82,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "total_population": 4250,
+      "population_density": 1417,
+      "median_age": 45.3,
+      "percent_white": 85.5,
+      "percent_hispanic": 8.7,
+      "percent_black": 1.2,
+      "percent_asian": 4.4,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4.4,
+      "pct_foreign_born": 10.9,
+      "pct_owner_occupied": 88,
+      "rent_burden_pct": 30.5,
+      "pct_65_and_over": 25.1,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "total_population": 4320,
+      "population_density": 1440,
+      "median_age": 45.4,
+      "percent_white": 85.1,
+      "percent_hispanic": 8.9,
+      "percent_black": 1.2,
+      "percent_asian": 4.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4.6,
+      "pct_foreign_born": 11.02,
+      "pct_owner_occupied": 87.8,
+      "rent_burden_pct": 30.7,
+      "pct_65_and_over": 25.22,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "total_population": 4380,
+      "population_density": 1460,
+      "median_age": 45.5,
+      "percent_white": 84.7,
+      "percent_hispanic": 9.1,
+      "percent_black": 1.2,
+      "percent_asian": 4.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 4.8,
+      "pct_foreign_born": 11.14,
+      "pct_owner_occupied": 87.6,
+      "rent_burden_pct": 30.9,
+      "pct_65_and_over": 25.34,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "total_population": 4430,
+      "population_density": 1477,
+      "median_age": 45.6,
+      "percent_white": 84.4,
+      "percent_hispanic": 9.2,
+      "percent_black": 1.2,
+      "percent_asian": 5,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 5,
+      "pct_foreign_born": 11.26,
+      "pct_owner_occupied": 87.5,
+      "rent_burden_pct": 31.1,
+      "pct_65_and_over": 25.46,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "total_population": 4475,
+      "population_density": 1492,
+      "median_age": 45.7,
+      "percent_white": 84.1,
+      "percent_hispanic": 9.4,
+      "percent_black": 1.2,
+      "percent_asian": 5.1,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 11.38,
+      "pct_owner_occupied": 87.4,
+      "rent_burden_pct": 31.3,
+      "pct_65_and_over": 25.58,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "total_population": 4515,
+      "population_density": 1505,
+      "median_age": 45.8,
+      "percent_white": 83.8,
+      "percent_hispanic": 9.5,
+      "percent_black": 1.3,
+      "percent_asian": 5.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 5.2,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 87.3,
+      "rent_burden_pct": 31.5,
+      "pct_65_and_over": 25.7,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 255000,
+      "median_rent": 1250,
+      "homeownership_rate": 90.5,
+      "total_housing_units": 910,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 0,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_home_value": 264000,
+      "median_rent": 1275,
+      "homeownership_rate": 90.6,
+      "total_housing_units": 925,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 3.53,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_home_value": 273500,
+      "median_rent": 1300,
+      "homeownership_rate": 90.7,
+      "total_housing_units": 940,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 3.6,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_home_value": 285000,
+      "median_rent": 1330,
+      "homeownership_rate": 90.8,
+      "total_housing_units": 955,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 4.2,
+      "vacancy_rate": 4.7,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_home_value": 298000,
+      "median_rent": 1365,
+      "homeownership_rate": 90.9,
+      "total_housing_units": 975,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 4.56,
+      "vacancy_rate": 4.6,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_home_value": 315000,
+      "median_rent": 1400,
+      "homeownership_rate": 91,
+      "total_housing_units": 995,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 5.7,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_home_value": 335000,
+      "median_rent": 1450,
+      "homeownership_rate": 91.1,
+      "total_housing_units": 1020,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 6.35,
+      "vacancy_rate": 4.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_home_value": 358000,
+      "median_rent": 1500,
+      "homeownership_rate": 91.2,
+      "total_housing_units": 1045,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 6.87,
+      "vacancy_rate": 4.3,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_home_value": 385000,
+      "median_rent": 1560,
+      "homeownership_rate": 91.2,
+      "total_housing_units": 1075,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 7.54,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_home_value": 420000,
+      "median_rent": 1650,
+      "homeownership_rate": 91.3,
+      "total_housing_units": 1105,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 9.09,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_home_value": 455000,
+      "median_rent": 1750,
+      "homeownership_rate": 91.4,
+      "total_housing_units": 1140,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 8.33,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_home_value": 465000,
+      "median_rent": 1780,
+      "homeownership_rate": 91.3,
+      "total_housing_units": 1160,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 2.2,
+      "vacancy_rate": 3.96,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_home_value": 472000,
+      "median_rent": 1800,
+      "homeownership_rate": 91.2,
+      "total_housing_units": 1180,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 1.51,
+      "vacancy_rate": 3.92,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_home_value": 485000,
+      "median_rent": 1825,
+      "homeownership_rate": 91.1,
+      "total_housing_units": 1200,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 2.75,
+      "vacancy_rate": 3.88,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_home_value": 505000,
+      "median_rent": 1870,
+      "homeownership_rate": 91,
+      "total_housing_units": 1220,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 4.12,
+      "vacancy_rate": 3.84,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_home_value": 535000,
+      "median_rent": 1950,
+      "homeownership_rate": 90.8,
+      "total_housing_units": 1245,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 5.94,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_home_value": 580000,
+      "median_rent": 2050,
+      "homeownership_rate": 90.6,
+      "total_housing_units": 1270,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 8.41,
+      "vacancy_rate": 3.77,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_home_value": 630000,
+      "median_rent": 2150,
+      "homeownership_rate": 90.4,
+      "total_housing_units": 1295,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 8.62,
+      "vacancy_rate": 3.73,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_home_value": 615000,
+      "median_rent": 2200,
+      "homeownership_rate": 90.2,
+      "total_housing_units": 1315,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": -2.38,
+      "vacancy_rate": 3.7,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_home_value": 605000,
+      "median_rent": 2180,
+      "homeownership_rate": 90.1,
+      "total_housing_units": 1330,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": -1.63,
+      "vacancy_rate": 3.67,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_home_value": 625000,
+      "median_rent": 2250,
+      "homeownership_rate": 90,
+      "total_housing_units": 1350,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 3.31,
+      "vacancy_rate": 3.7,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_home_value": 655000,
+      "median_rent": 2350,
+      "homeownership_rate": 89.8,
+      "total_housing_units": 1370,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 4.8,
+      "vacancy_rate": 3.64,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_home_value": 710000,
+      "median_rent": 2500,
+      "homeownership_rate": 89.6,
+      "total_housing_units": 1395,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 8.4,
+      "vacancy_rate": 3.58,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_home_value": 795000,
+      "median_rent": 2700,
+      "homeownership_rate": 89.4,
+      "total_housing_units": 1420,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 11.97,
+      "vacancy_rate": 3.52,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_home_value": 910000,
+      "median_rent": 2950,
+      "homeownership_rate": 89.2,
+      "total_housing_units": 1450,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 14.47,
+      "vacancy_rate": 3.46,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_home_value": 1050000,
+      "median_rent": 3200,
+      "homeownership_rate": 89,
+      "total_housing_units": 1485,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 15.38,
+      "vacancy_rate": 3.4,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_home_value": 1200000,
+      "median_rent": 3500,
+      "homeownership_rate": 88.8,
+      "total_housing_units": 1520,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 14.29,
+      "vacancy_rate": 3.34,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_home_value": 1380000,
+      "median_rent": 3850,
+      "homeownership_rate": 88.6,
+      "total_housing_units": 1555,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 15,
+      "vacancy_rate": 3.28,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_home_value": 1550000,
+      "median_rent": 4200,
+      "homeownership_rate": 88.4,
+      "total_housing_units": 1590,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 12.32,
+      "vacancy_rate": 3.22,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_home_value": 1700000,
+      "median_rent": 4500,
+      "homeownership_rate": 88.2,
+      "total_housing_units": 1625,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 9.68,
+      "vacancy_rate": 3.16,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_home_value": 1950000,
+      "median_rent": 4850,
+      "homeownership_rate": 88,
+      "total_housing_units": 1660,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 14.71,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_home_value": 2450000,
+      "median_rent": 5300,
+      "homeownership_rate": 87.8,
+      "total_housing_units": 1690,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 25.64,
+      "vacancy_rate": 3.16,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "ANOMALY_SPIKE"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_home_value": 2650000,
+      "median_rent": 5700,
+      "homeownership_rate": 87.6,
+      "total_housing_units": 1720,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 8.16,
+      "vacancy_rate": 3.12,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_home_value": 2580000,
+      "median_rent": 5600,
+      "homeownership_rate": 87.5,
+      "total_housing_units": 1745,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": -2.64,
+      "vacancy_rate": 3.08,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_home_value": 2610000,
+      "median_rent": 5650,
+      "homeownership_rate": 87.4,
+      "total_housing_units": 1765,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 1.16,
+      "vacancy_rate": 3.04,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_home_value": 2675000,
+      "median_rent": 5750,
+      "homeownership_rate": 87.3,
+      "total_housing_units": 1785,
+      "region": "Redbud",
+      "region_id": 233,
+      "pct_home_value_change_yoy": 2.49,
+      "vacancy_rate": 3,
+      "new_construction_permits": null,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 75000,
+      "per_capita_income": 40000,
+      "poverty_rate": 2.1,
+      "percent_bachelors_or_higher": 65,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1991,
+      "median_household_income": 77500,
+      "per_capita_income": 41500,
+      "poverty_rate": 2,
+      "percent_bachelors_or_higher": 66.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1992,
+      "median_household_income": 80200,
+      "per_capita_income": 43100,
+      "poverty_rate": 1.9,
+      "percent_bachelors_or_higher": 67.4,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1993,
+      "median_household_income": 83100,
+      "per_capita_income": 44800,
+      "poverty_rate": 1.9,
+      "percent_bachelors_or_higher": 68.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1994,
+      "median_household_income": 86500,
+      "per_capita_income": 46700,
+      "poverty_rate": 1.8,
+      "percent_bachelors_or_higher": 69.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.1,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1995,
+      "median_household_income": 91000,
+      "per_capita_income": 49000,
+      "poverty_rate": 1.8,
+      "percent_bachelors_or_higher": 71,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1996,
+      "median_household_income": 96000,
+      "per_capita_income": 51500,
+      "poverty_rate": 1.7,
+      "percent_bachelors_or_higher": 72.3,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.9,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1997,
+      "median_household_income": 101500,
+      "per_capita_income": 54500,
+      "poverty_rate": 1.7,
+      "percent_bachelors_or_higher": 73.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1998,
+      "median_household_income": 108000,
+      "per_capita_income": 58000,
+      "poverty_rate": 1.6,
+      "percent_bachelors_or_higher": 74.9,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.7,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 1999,
+      "median_household_income": 115000,
+      "per_capita_income": 62000,
+      "poverty_rate": 1.5,
+      "percent_bachelors_or_higher": 76.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.6,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2000,
+      "median_household_income": 122000,
+      "per_capita_income": 66000,
+      "poverty_rate": 1.5,
+      "percent_bachelors_or_higher": 77.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2001,
+      "median_household_income": 124000,
+      "per_capita_income": 67500,
+      "poverty_rate": 1.6,
+      "percent_bachelors_or_higher": 78,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.6,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2002,
+      "median_household_income": 125500,
+      "per_capita_income": 68800,
+      "poverty_rate": 1.7,
+      "percent_bachelors_or_higher": 78.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.7,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2003,
+      "median_household_income": 128000,
+      "per_capita_income": 70500,
+      "poverty_rate": 1.7,
+      "percent_bachelors_or_higher": 79.1,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2004,
+      "median_household_income": 132000,
+      "per_capita_income": 73000,
+      "poverty_rate": 1.6,
+      "percent_bachelors_or_higher": 79.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.9,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2005,
+      "median_household_income": 138000,
+      "per_capita_income": 76000,
+      "poverty_rate": 1.6,
+      "percent_bachelors_or_higher": 80.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2006,
+      "median_household_income": 145000,
+      "per_capita_income": 80000,
+      "poverty_rate": 1.5,
+      "percent_bachelors_or_higher": 81.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2007,
+      "median_household_income": 153000,
+      "per_capita_income": 84500,
+      "poverty_rate": 1.5,
+      "percent_bachelors_or_higher": 82,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.9,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2008,
+      "median_household_income": 155000,
+      "per_capita_income": 86000,
+      "poverty_rate": 1.6,
+      "percent_bachelors_or_higher": 82.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 4.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2009,
+      "median_household_income": 152000,
+      "per_capita_income": 85000,
+      "poverty_rate": 1.7,
+      "percent_bachelors_or_higher": 83,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 5.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2010,
+      "median_household_income": 158000,
+      "per_capita_income": 88000,
+      "poverty_rate": 1.6,
+      "percent_bachelors_or_higher": 83.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2011,
+      "median_household_income": 164000,
+      "per_capita_income": 91000,
+      "poverty_rate": 1.5,
+      "percent_bachelors_or_higher": 84.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.7,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2012,
+      "median_household_income": 172000,
+      "per_capita_income": 95000,
+      "poverty_rate": 1.4,
+      "percent_bachelors_or_higher": 85,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.4,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2013,
+      "median_household_income": 181000,
+      "per_capita_income": 100000,
+      "poverty_rate": 1.4,
+      "percent_bachelors_or_higher": 85.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.2,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2014,
+      "median_household_income": 192000,
+      "per_capita_income": 106000,
+      "poverty_rate": 1.3,
+      "percent_bachelors_or_higher": 86.6,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.1,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2015,
+      "median_household_income": 205000,
+      "per_capita_income": 113000,
+      "poverty_rate": 1.3,
+      "percent_bachelors_or_higher": 87.4,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2016,
+      "median_household_income": 220000,
+      "per_capita_income": 121000,
+      "poverty_rate": 1.2,
+      "percent_bachelors_or_higher": 88.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2017,
+      "median_household_income": 235000,
+      "per_capita_income": 129000,
+      "poverty_rate": 1.2,
+      "percent_bachelors_or_higher": 89,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2018,
+      "median_household_income": 250000,
+      "per_capita_income": 137000,
+      "poverty_rate": 1.1,
+      "percent_bachelors_or_higher": 89.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2019,
+      "median_household_income": 268000,
+      "per_capita_income": 146000,
+      "poverty_rate": 1.1,
+      "percent_bachelors_or_higher": 90.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2020,
+      "median_household_income": 285000,
+      "per_capita_income": 155000,
+      "poverty_rate": 1,
+      "percent_bachelors_or_higher": 91.2,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 3.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2021,
+      "median_household_income": 305000,
+      "per_capita_income": 165000,
+      "poverty_rate": 1,
+      "percent_bachelors_or_higher": 91.8,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2022,
+      "median_household_income": 320000,
+      "per_capita_income": 173000,
+      "poverty_rate": 1,
+      "percent_bachelors_or_higher": 92.3,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.5,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2023,
+      "median_household_income": 325000,
+      "per_capita_income": 176000,
+      "poverty_rate": 1.1,
+      "percent_bachelors_or_higher": 92.7,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2024,
+      "median_household_income": 332000,
+      "per_capita_income": 180000,
+      "poverty_rate": 1.1,
+      "percent_bachelors_or_higher": 93.1,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    },
+    {
+      "year": 2025,
+      "median_household_income": 339000,
+      "per_capita_income": 184000,
+      "poverty_rate": 1,
+      "percent_bachelors_or_higher": 93.5,
+      "region": "Redbud",
+      "region_id": 233,
+      "unemployment_rate": 2.8,
+      "eviction_filing_rate": 0,
+      "confidence": "medium",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { REGIONS_GEOJSON, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, TIMELINE_INFRA } from "../data";
+import { REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, TIMELINE_INFRA } from "../data";
 import { DEMO_COLORS } from "../data/constants";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { catColor } from "../utils/formatters";
@@ -595,14 +595,14 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {REGIONS_GEOJSON.features.map((f) => {
-                    const n = f.properties.region_name;
+                  {REGION_INDEX.map((r) => {
+                    const n = r.region_name;
                     const nd = n === "The Domain / North Burnet";
-                    const rid = f.properties.region_id;
+                    const rid = r.region_id;
                     const vals = [interpolateDvi(rid, 2010), interpolateDvi(rid, 2020), interpolateDvi(rid, 2023)];
                     return (
                       <tr key={n} style={{ borderBottom: "1px solid #f0ede8" }}>
-                        <td style={{ padding: "5px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap", position: "sticky", left: 0, background: "#fffffe", zIndex: 1 }}>{f.properties.short_name}</td>
+                        <td style={{ padding: "5px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap", position: "sticky", left: 0, background: "#fffffe", zIndex: 1 }}>{r.short_name}</td>
                         {vals.map((v, i) => (
                           <td key={i} style={{ padding: "4px 8px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 10px", borderRadius: 4, background: nd ? "#f5f0ea" : getDviColor(v), color: v > 45 ? "#fff" : "#1a1a1a", fontWeight: 600, fontSize: 11, minWidth: 36 }}>

@@ -1,0 +1,929 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 350,
+      "households": 120,
+      "average_household_size": 2.9,
+      "median_age": 31.5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 6,
+      "pct_owner_occupied": 92,
+      "rent_burden_pct": 25,
+      "pct_65_and_over": 2.5,
+      "audit_source": {
+        "total_population": "Historical Estimate",
+        "households": "Historical Estimate",
+        "average_household_size": "Historical Estimate",
+        "median_age": "Interpolation from Census",
+        "pct_black_non_hispanic": "Interpolation from Census",
+        "pct_asian": "Interpolation from Census",
+        "pct_foreign_born": "Interpolation from ACS",
+        "pct_owner_occupied": "U.S. Census 1990 (Proxy)",
+        "rent_burden_pct": "Regional Estimate",
+        "pct_65_and_over": "Interpolation from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "households": "medium",
+        "average_household_size": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Initial year of rapid development; values are plausible estimates. New fields are extrapolated from later census/ACS data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 4500,
+      "households": 1500,
+      "average_household_size": 3,
+      "median_age": 32.8,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 6.5,
+      "pct_foreign_born": 8,
+      "pct_owner_occupied": 94,
+      "rent_burden_pct": 24,
+      "pct_65_and_over": 3,
+      "audit_source": {
+        "total_population": "Interpolation from Census",
+        "households": "Interpolation from Census",
+        "average_household_size": "Interpolation from Census",
+        "median_age": "Interpolation from Census",
+        "pct_black_non_hispanic": "Interpolation from Census",
+        "pct_asian": "Interpolation from Census",
+        "pct_foreign_born": "Interpolation from ACS",
+        "pct_owner_occupied": "Interpolation from Census",
+        "rent_burden_pct": "Regional Estimate",
+        "pct_65_and_over": "Interpolation from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "households": "medium",
+        "average_household_size": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values reflect rapid build-out phase. Data is interpolated between 1990 estimates and 2000 Census.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 10500,
+      "households": 3450,
+      "average_household_size": 3,
+      "median_age": 34.8,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 8.5,
+      "pct_foreign_born": 10,
+      "pct_owner_occupied": 95.5,
+      "rent_burden_pct": 23,
+      "pct_65_and_over": 3.5,
+      "audit_source": {
+        "total_population": "U.S. Census 2000",
+        "households": "U.S. Census 2000",
+        "average_household_size": "U.S. Census 2000",
+        "median_age": "U.S. Census 2000",
+        "pct_black_non_hispanic": "U.S. Census 2000",
+        "pct_asian": "U.S. Census 2000",
+        "pct_foreign_born": "U.S. Census 2000",
+        "pct_owner_occupied": "U.S. Census 2000",
+        "rent_burden_pct": "Regional Estimate",
+        "pct_65_and_over": "U.S. Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "households": "high",
+        "average_household_size": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align closely with U.S. Census 2000 data for the corresponding tracts. Rent burden is an estimate as this data was not readily available at the tract level.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 14200,
+      "households": 4750,
+      "average_household_size": 3,
+      "median_age": 37,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 10.3,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 94.5,
+      "rent_burden_pct": 22,
+      "pct_65_and_over": 4.2,
+      "audit_source": {
+        "total_population": "Interpolation from Census",
+        "households": "Interpolation from Census",
+        "average_household_size": "Interpolation from Census",
+        "median_age": "Interpolation from Census",
+        "pct_black_non_hispanic": "Interpolation from Census",
+        "pct_asian": "Interpolation from Census",
+        "pct_foreign_born": "Interpolation from Census/ACS",
+        "pct_owner_occupied": "Interpolation from Census",
+        "rent_burden_pct": "Interpolation from ACS",
+        "pct_65_and_over": "Interpolation from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "households": "medium",
+        "average_household_size": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Mid-decade values are interpolated between 2000 and 2010 Census. First ACS data becomes available around this time, improving confidence for some new fields.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 16500,
+      "households": 5650,
+      "average_household_size": 2.9,
+      "median_age": 39,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 12.1,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 93,
+      "rent_burden_pct": 21.5,
+      "pct_65_and_over": 4.8,
+      "audit_source": {
+        "total_population": "U.S. Census 2010 (Tract 24.25)",
+        "households": "U.S. Census 2010 (Tract 24.25)",
+        "average_household_size": "U.S. Census 2010 (Tract 24.25)",
+        "median_age": "U.S. Census 2010 (Tract 24.25)",
+        "pct_black_non_hispanic": "U.S. Census 2010 (Tract 24.25)",
+        "pct_asian": "U.S. Census 2010 (Tract 24.25)",
+        "pct_foreign_born": "ACS 5-Year 2009-2013",
+        "pct_owner_occupied": "U.S. Census 2010 (Tract 24.25)",
+        "rent_burden_pct": "ACS 5-Year 2009-2013",
+        "pct_65_and_over": "U.S. Census 2010 (Tract 24.25)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "households": "high",
+        "average_household_size": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align closely with U.S. Census 2010 data for predecessor Tract 24.25. New fields are sourced from the earliest available 5-year ACS estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 17500,
+      "households": 6020,
+      "average_household_size": 2.9,
+      "median_age": 40.5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 14.3,
+      "pct_foreign_born": 15.5,
+      "pct_owner_occupied": 91.5,
+      "rent_burden_pct": 20.8,
+      "pct_65_and_over": 8.2,
+      "audit_source": {
+        "total_population": "Interpolation from Census/ACS",
+        "households": "Interpolation from Census/ACS",
+        "average_household_size": "ACS 5-Year 2013-2017",
+        "median_age": "ACS 5-Year 2013-2017",
+        "pct_black_non_hispanic": "Interpolation from Census",
+        "pct_asian": "Interpolation from Census",
+        "pct_foreign_born": "Interpolation from ACS",
+        "pct_owner_occupied": "Interpolation from Census/ACS",
+        "rent_burden_pct": "Interpolation from ACS",
+        "pct_65_and_over": "Interpolation from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "households": "medium",
+        "average_household_size": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2010 and 2020 Census data, using ACS 5-year estimates as a guide.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 18200,
+      "households": 6300,
+      "average_household_size": 2.9,
+      "median_age": 41.6,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 16.5,
+      "pct_foreign_born": 18,
+      "pct_owner_occupied": 90,
+      "rent_burden_pct": 20,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "total_population": "U.S. Census 2020 (Tract 333.0)",
+        "households": "U.S. Census 2020 (Tract 333.0)",
+        "average_household_size": "U.S. Census 2020 (Tract 333.0)",
+        "median_age": "U.S. Census 2020 (Tract 333.0)",
+        "pct_black_non_hispanic": "U.S. Census 2020 (Tract 333.0)",
+        "pct_asian": "U.S. Census 2020 (Tract 333.0)",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "U.S. Census 2020 (Tract 333.0)"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "households": "high",
+        "average_household_size": "high",
+        "median_age": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align closely with U.S. Census 2020 and recent ACS 5-year estimates for Tract 333.0.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 18500,
+      "households": 6470,
+      "average_household_size": 2.9,
+      "median_age": 42.6,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "pct_black_non_hispanic": 2.2,
+      "pct_asian": 17.5,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 89,
+      "rent_burden_pct": 19.5,
+      "pct_65_and_over": 13.5,
+      "audit_source": {
+        "total_population": "Texas Demographic Center Projection",
+        "households": "Projection",
+        "average_household_size": "Projection",
+        "median_age": "Projection",
+        "pct_black_non_hispanic": "Projection",
+        "pct_asian": "Projection",
+        "pct_foreign_born": "Projection",
+        "pct_owner_occupied": "Projection",
+        "rent_burden_pct": "Projection",
+        "pct_65_and_over": "Projection"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "households": "medium",
+        "average_household_size": "medium",
+        "median_age": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Future values are projections based on trends from 2020 Census and recent ACS data. The area is largely built-out, so growth is expected to be slow.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "housing_units": 150,
+      "median_home_value_usd": 160000,
+      "owner_occupied_rate_percent": 92,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 3520,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5,
+      "new_construction_permits": 150,
+      "audit_source": {
+        "housing_units": "Historical Estimate",
+        "median_home_value_usd": "Historical ABoR Data",
+        "owner_occupied_rate_percent": "U.S. Census 1990 (Proxy)",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Historical Estimate",
+        "new_construction_permits": "Calculated Estimate"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "medium",
+        "owner_occupied_rate_percent": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "low",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Initial development year. Home value is a plausible estimate for new construction at the time. New construction permits estimated from total units.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 1995,
+      "housing_units": 1600,
+      "median_home_value_usd": 210000,
+      "owner_occupied_rate_percent": 94,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 4830,
+      "pct_home_value_change_yoy": 6.1,
+      "vacancy_rate": 4,
+      "new_construction_permits": 250,
+      "audit_source": {
+        "housing_units": "Interpolation",
+        "median_home_value_usd": "Interpolation from ABoR/TCAD",
+        "owner_occupied_rate_percent": "Interpolation from Census",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolation from Census",
+        "new_construction_permits": "Calculated Estimate"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "medium",
+        "owner_occupied_rate_percent": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Data reflects continued rapid construction. New permits calculated from year-over-year change in housing units.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2000,
+      "housing_units": 3600,
+      "median_home_value_usd": 315000,
+      "owner_occupied_rate_percent": 95.5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 7245,
+      "pct_home_value_change_yoy": 6.8,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": 300,
+      "audit_source": {
+        "housing_units": "U.S. Census 2000",
+        "median_home_value_usd": "U.S. Census 2000",
+        "owner_occupied_rate_percent": "U.S. Census 2000",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2000",
+        "new_construction_permits": "Calculated Estimate"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "owner_occupied_rate_percent": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with U.S. Census 2000. Median home value reflects dot-com era pricing.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2005,
+      "housing_units": 4900,
+      "median_home_value_usd": 355000,
+      "owner_occupied_rate_percent": 94.5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 8165,
+      "pct_home_value_change_yoy": 2.9,
+      "vacancy_rate": 2.5,
+      "new_construction_permits": 250,
+      "audit_source": {
+        "housing_units": "Interpolation",
+        "median_home_value_usd": "TCAD/Zillow ZHVI",
+        "owner_occupied_rate_percent": "Interpolation from Census",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolation from Census",
+        "new_construction_permits": "Calculated Estimate"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "medium",
+        "owner_occupied_rate_percent": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Build-out continues but at a slower pace. Home value appreciation is moderate pre-2008 crisis.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2010,
+      "housing_units": 5800,
+      "median_home_value_usd": 380000,
+      "owner_occupied_rate_percent": 93,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 8360,
+      "pct_home_value_change_yoy": 1.3,
+      "vacancy_rate": 1.8,
+      "new_construction_permits": 100,
+      "audit_source": {
+        "housing_units": "U.S. Census 2010",
+        "median_home_value_usd": "U.S. Census 2010",
+        "owner_occupied_rate_percent": "U.S. Census 2010",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "U.S. Census 2010",
+        "new_construction_permits": "Calculated Estimate"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "owner_occupied_rate_percent": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with U.S. Census 2010 for Tract 24.25. Home values are stable following the 2008 recession. New construction has slowed considerably.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2015,
+      "housing_units": 6200,
+      "median_home_value_usd": 485000,
+      "owner_occupied_rate_percent": 91.5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 10185,
+      "pct_home_value_change_yoy": 5.4,
+      "vacancy_rate": 1.2,
+      "new_construction_permits": 80,
+      "audit_source": {
+        "housing_units": "ACS 5-Year 2013-2017",
+        "median_home_value_usd": "Zillow ZHVI/TCAD",
+        "owner_occupied_rate_percent": "ACS 5-Year 2013-2017",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2013-2017",
+        "new_construction_permits": "City of Austin Permit Data (Proxy)"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "owner_occupied_rate_percent": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Home values show strong appreciation, consistent with Austin's market boom in the mid-2010s.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2020,
+      "housing_units": 6500,
+      "median_home_value_usd": 650000,
+      "owner_occupied_rate_percent": 90,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 13650,
+      "pct_home_value_change_yoy": 10.2,
+      "vacancy_rate": 0.5,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "housing_units": "U.S. Census 2020",
+        "median_home_value_usd": "Zillow ZHVI Dec 2020",
+        "owner_occupied_rate_percent": "ACS 5-Year 2018-2022",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2018-2022",
+        "new_construction_permits": "City of Austin Permit Data (Proxy)"
+      },
+      "audit_confidence": {
+        "housing_units": "high",
+        "median_home_value_usd": "high",
+        "owner_occupied_rate_percent": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with Census 2020 and Zillow data. The large jump in home value reflects the beginning of the pandemic-era housing boom.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2025,
+      "housing_units": 6700,
+      "median_home_value_usd": 890000,
+      "owner_occupied_rate_percent": 89,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "median_property_tax": 18690,
+      "pct_home_value_change_yoy": 1.1,
+      "vacancy_rate": 0.8,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "housing_units": "Projection",
+        "median_home_value_usd": "Market Projection (Zillow/ABoR)",
+        "owner_occupied_rate_percent": "Projection",
+        "median_property_tax": "Calculated Estimate",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projection",
+        "new_construction_permits": "Projection"
+      },
+      "audit_confidence": {
+        "housing_units": "medium",
+        "median_home_value_usd": "medium",
+        "owner_occupied_rate_percent": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Projected values based on market stabilization after the 2021-2022 spike and subsequent correction. The area is almost fully built-out.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 65000,
+      "bachelors_degree_or_higher_percent": 55,
+      "unemployment_rate_percent": 3.5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income_usd": "U.S. Census 1990 (Proxy)",
+        "bachelors_degree_or_higher_percent": "U.S. Census 1990 (Proxy)",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "gini_coefficient": "Regional Estimate",
+        "pct_uninsured": "Regional Estimate",
+        "eviction_filing_rate": "Regional Estimate",
+        "snap_participation_rate": "Regional Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_percent": "medium",
+        "unemployment_rate_percent": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Values are plausible for an affluent, new suburban development in 1990. New fields are broad estimates due to lack of tract-level data.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 88000,
+      "bachelors_degree_or_higher_percent": 61.5,
+      "unemployment_rate_percent": 2.9,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 2.9,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": 6,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.4,
+      "audit_source": {
+        "median_household_income_usd": "Interpolation",
+        "bachelors_degree_or_higher_percent": "Interpolation",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "gini_coefficient": "Interpolation",
+        "pct_uninsured": "Interpolation",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_percent": "medium",
+        "unemployment_rate_percent": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Income growth and low unemployment reflect the strong regional economy of the mid-1990s.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 120000,
+      "bachelors_degree_or_higher_percent": 67,
+      "unemployment_rate_percent": 2.4,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 2.4,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income_usd": "U.S. Census 2000",
+        "bachelors_degree_or_higher_percent": "U.S. Census 2000",
+        "unemployment_rate_percent": "U.S. Census 2000",
+        "gini_coefficient": "Regional Estimate",
+        "pct_uninsured": "Regional Estimate",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_percent": "high",
+        "unemployment_rate_percent": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Values align with Census 2000, reflecting the peak of the dot-com boom. Unemployment is very low.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 132000,
+      "bachelors_degree_or_higher_percent": 69.5,
+      "unemployment_rate_percent": 3.6,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 3.6,
+      "gini_coefficient": 0.375,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolation from Census/ACS",
+        "bachelors_degree_or_higher_percent": "Interpolation from Census/ACS",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "gini_coefficient": "Interpolation from ACS",
+        "pct_uninsured": "Interpolation from ACS",
+        "eviction_filing_rate": "Estimate",
+        "snap_participation_rate": "Interpolation from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_percent": "medium",
+        "unemployment_rate_percent": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Interpolated values. Unemployment rate reflects post-dot-com bust recovery.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 140000,
+      "bachelors_degree_or_higher_percent": 71.5,
+      "unemployment_rate_percent": 5,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 4,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 0.7,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2009-2013",
+        "bachelors_degree_or_higher_percent": "ACS 5-Year 2009-2013",
+        "unemployment_rate_percent": "ACS 5-Year 2009-2013",
+        "gini_coefficient": "ACS 5-Year 2009-2013",
+        "pct_uninsured": "ACS 5-Year 2009-2013",
+        "eviction_filing_rate": "Eviction Lab (Proxy)",
+        "snap_participation_rate": "ACS 5-Year 2009-2013"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_percent": "high",
+        "unemployment_rate_percent": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS data for Tract 24.25. Unemployment rate is elevated due to the Great Recession.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 165000,
+      "bachelors_degree_or_higher_percent": 74,
+      "unemployment_rate_percent": 3.1,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 3.1,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 3.2,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2013-2017",
+        "bachelors_degree_or_higher_percent": "ACS 5-Year 2013-2017",
+        "unemployment_rate_percent": "ACS 5-Year 2013-2017",
+        "gini_coefficient": "ACS 5-Year 2013-2017",
+        "pct_uninsured": "ACS 5-Year 2013-2017",
+        "eviction_filing_rate": "Eviction Lab (Proxy)",
+        "snap_participation_rate": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_percent": "high",
+        "unemployment_rate_percent": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Strong economic recovery reflected in high income and low unemployment. Values are well-supported by ACS data.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 190000,
+      "bachelors_degree_or_higher_percent": 76.5,
+      "unemployment_rate_percent": 4.8,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 2.5,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2018-2022",
+        "bachelors_degree_or_higher_percent": "ACS 5-Year 2018-2022",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Eviction Lab (Proxy)",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_percent": "high",
+        "unemployment_rate_percent": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment spike reflects the initial economic impact of the COVID-19 pandemic. Other indicators remain strong.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 220000,
+      "bachelors_degree_or_higher_percent": 78.5,
+      "unemployment_rate_percent": 2.8,
+      "region": "Circle C Ranch (Tract 333.0)",
+      "region_id": 166,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 2.2,
+      "eviction_filing_rate": 0.1,
+      "snap_participation_rate": 0.7,
+      "audit_source": {
+        "median_household_income_usd": "Projection",
+        "bachelors_degree_or_higher_percent": "Projection",
+        "unemployment_rate_percent": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Projection",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_percent": "medium",
+        "unemployment_rate_percent": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on continued affluence and a stable, tight labor market.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T15:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,1658 @@
+[
+  {
+    "region_id": 5,
+    "region_name": "Windsor Hills",
+    "census_tract": "419.0",
+    "lat": 30.392759000227727,
+    "lng": -97.69043849998675,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 6,
+    "region_name": "North Shoal Creek",
+    "census_tract": null,
+    "lat": 30.386088000161124,
+    "lng": -97.67947000004042,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 7,
+    "region_name": "Barton Creek",
+    "census_tract": null,
+    "lat": 30.1954525002827,
+    "lng": -97.90259269314825,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 10,
+    "region_name": "Circle C Ranch",
+    "census_tract": "368.0",
+    "lat": 30.18538100033294,
+    "lng": -97.87926639987441,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 13,
+    "region_name": "Northwood",
+    "census_tract": "324.0",
+    "lat": 30.389513500297852,
+    "lng": -97.73796450001163,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 17,
+    "region_name": "Dessau",
+    "census_tract": null,
+    "lat": 30.38760926230765,
+    "lng": -97.62735643595073,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 19,
+    "region_name": "North Austin",
+    "census_tract": null,
+    "lat": 30.36394799990032,
+    "lng": -97.67696600013076,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 28,
+    "region_name": "Milwood",
+    "census_tract": null,
+    "lat": 30.424451499886857,
+    "lng": -97.7412484999183,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 29,
+    "region_name": "The Arboretum",
+    "census_tract": "325.0",
+    "lat": 30.40676399990872,
+    "lng": -97.73727550016415,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 34,
+    "region_name": "North Burnet",
+    "census_tract": "420.0",
+    "lat": 30.436892499839047,
+    "lng": -97.71369249990892,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 36,
+    "region_name": "Northwood",
+    "census_tract": null,
+    "lat": 30.41672249959373,
+    "lng": -97.71318699998002,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 39,
+    "region_name": "North Shoal Creek",
+    "census_tract": null,
+    "lat": 30.326969500192348,
+    "lng": -97.68430800011407,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 41,
+    "region_name": "Gracywoods",
+    "census_tract": null,
+    "lat": 30.42298099997322,
+    "lng": -97.68929195431022,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 42,
+    "region_name": "North Shoal Creek",
+    "census_tract": null,
+    "lat": 30.412813000069946,
+    "lng": -97.70124350003746,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 45,
+    "region_name": "Lakeway",
+    "census_tract": null,
+    "lat": 30.389690462594842,
+    "lng": -97.80786800000817,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 46,
+    "region_name": "Cat Mountain",
+    "census_tract": null,
+    "lat": 30.39839799991782,
+    "lng": -97.76237399971029,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 47,
+    "region_name": "Montopolis",
+    "census_tract": null,
+    "lat": 30.158610500124553,
+    "lng": -97.65114974311612,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 49,
+    "region_name": "Oak Hill",
+    "census_tract": "313.0",
+    "lat": 30.192782182002162,
+    "lng": -97.85630350015637,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 51,
+    "region_name": "Harris Ridge",
+    "census_tract": "457.0",
+    "lat": 30.455301138736615,
+    "lng": -97.67148100034785,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 54,
+    "region_name": "Wells Branch",
+    "census_tract": null,
+    "lat": 30.41346303139383,
+    "lng": -97.63853829780419,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 55,
+    "region_name": "Cherry Creek",
+    "census_tract": null,
+    "lat": 30.15156217060772,
+    "lng": -97.83675100275653,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 57,
+    "region_name": "North Shoal Creek",
+    "census_tract": "433.0",
+    "lat": 30.3327100000665,
+    "lng": -97.69532949980655,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 63,
+    "region_name": "Barton Creek West",
+    "census_tract": null,
+    "lat": 30.205545499874972,
+    "lng": -97.84929900044847,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 66,
+    "region_name": "Montopolis",
+    "census_tract": "24.42",
+    "lat": 30.178674499978257,
+    "lng": -97.75528300006036,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 73,
+    "region_name": "Windsor Hills",
+    "census_tract": null,
+    "lat": 30.29955877576694,
+    "lng": -97.63359949991695,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 79,
+    "region_name": "Blackland",
+    "census_tract": null,
+    "lat": 30.28512749968442,
+    "lng": -97.71699649983856,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 82,
+    "region_name": "Eastview",
+    "census_tract": null,
+    "lat": 30.2671104997998,
+    "lng": -97.70240850025206,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 83,
+    "region_name": "Rosewood",
+    "census_tract": "8.02",
+    "lat": 30.27280749991624,
+    "lng": -97.70694250024616,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 87,
+    "region_name": "Old West Austin- Tarrytown East",
+    "census_tract": null,
+    "lat": 30.298826999666346,
+    "lng": -97.7576845001895,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 89,
+    "region_name": "Oakmont Heights*",
+    "census_tract": null,
+    "lat": 30.305439000159765,
+    "lng": -97.76104049981916,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 90,
+    "region_name": "Parker Lane West",
+    "census_tract": null,
+    "lat": 30.224560999940252,
+    "lng": -97.74247950002888,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 95,
+    "region_name": "Tarrytown West",
+    "census_tract": null,
+    "lat": 30.302563499755763,
+    "lng": -97.77429749962985,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 97,
+    "region_name": "Akins",
+    "census_tract": null,
+    "lat": 30.126863991679926,
+    "lng": -97.80831338745281,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 98,
+    "region_name": "East Riverside - Pleasant Valley",
+    "census_tract": null,
+    "lat": 30.233972999604305,
+    "lng": -97.73210700013792,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 99,
+    "region_name": "Dawson",
+    "census_tract": "13.08",
+    "lat": 30.232477500336415,
+    "lng": -97.76149249997886,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 101,
+    "region_name": "East Boggy Creek",
+    "census_tract": null,
+    "lat": 30.275000499873215,
+    "lng": -97.67832950005635,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 102,
+    "region_name": "Johnston Terrace",
+    "census_tract": null,
+    "lat": 30.259527999967275,
+    "lng": -97.68303887819164,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 103,
+    "region_name": "Windsor Park West",
+    "census_tract": null,
+    "lat": 30.31312799995729,
+    "lng": -97.70522800032191,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 104,
+    "region_name": "Windsor Park East",
+    "census_tract": null,
+    "lat": 30.30766400024345,
+    "lng": -97.69009449986123,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 106,
+    "region_name": "MLK South",
+    "census_tract": null,
+    "lat": 30.28132250003341,
+    "lng": -97.6878600002388,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 110,
+    "region_name": "Davenport Ranch",
+    "census_tract": null,
+    "lat": 30.315973480541743,
+    "lng": -97.80132099981424,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 111,
+    "region_name": "East Austin",
+    "census_tract": null,
+    "lat": 30.25921900010681,
+    "lng": -97.71763249993987,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 112,
+    "region_name": "East Cesar Chavez -Holly",
+    "census_tract": null,
+    "lat": 30.253904999666048,
+    "lng": -97.72082450010055,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 117,
+    "region_name": "Colorado Foothills*",
+    "census_tract": null,
+    "lat": 30.325771499804915,
+    "lng": -97.76833200017163,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 118,
+    "region_name": "Ridgetop",
+    "census_tract": null,
+    "lat": 30.313916499896607,
+    "lng": -97.69697749981174,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 125,
+    "region_name": "Brentwood North",
+    "census_tract": null,
+    "lat": 30.335687999801394,
+    "lng": -97.7296884996745,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 126,
+    "region_name": "Allandale North",
+    "census_tract": null,
+    "lat": 30.3471779999648,
+    "lng": -97.7429580000616,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 128,
+    "region_name": "South Manchaca",
+    "census_tract": "20.02",
+    "lat": 30.22317850003779,
+    "lng": -97.78512749993413,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 129,
+    "region_name": "Lakehills Plaza",
+    "census_tract": null,
+    "lat": 30.236777000308365,
+    "lng": -97.78911100017248,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 130,
+    "region_name": "Rob Roy",
+    "census_tract": null,
+    "lat": 30.324151936362824,
+    "lng": -97.81314899982647,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 132,
+    "region_name": "River Place",
+    "census_tract": "204.03",
+    "lat": 30.461961999846466,
+    "lng": -97.80511249974205,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 134,
+    "region_name": "Northwood",
+    "census_tract": "204.05",
+    "lat": 30.445502999863606,
+    "lng": -97.78899899995383,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 136,
+    "region_name": "Milwood",
+    "census_tract": null,
+    "lat": 30.481512076721003,
+    "lng": -97.73237690916699,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 143,
+    "region_name": "Rollingwood",
+    "census_tract": null,
+    "lat": 30.267808924542294,
+    "lng": -97.91731695396422,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 145,
+    "region_name": "Arboretum Area",
+    "census_tract": null,
+    "lat": 30.37227100015656,
+    "lng": -97.74669949993194,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 146,
+    "region_name": "Allandale",
+    "census_tract": null,
+    "lat": 30.363365999591252,
+    "lng": -97.75794500006165,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 151,
+    "region_name": "Windsor Hills",
+    "census_tract": "424.0",
+    "lat": 30.355484678425228,
+    "lng": -97.61205510805675,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 158,
+    "region_name": "Northwood",
+    "census_tract": "306.0",
+    "lat": 30.347939500007982,
+    "lng": -97.7600294999614,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 159,
+    "region_name": "Oak Hill",
+    "census_tract": "24.38",
+    "lat": 30.16103750592623,
+    "lng": -97.8105801340659,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 162,
+    "region_name": "West Campus",
+    "census_tract": null,
+    "lat": 30.284326499618317,
+    "lng": -97.74960299982854,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 173,
+    "region_name": "Oak Hill",
+    "census_tract": "348.0",
+    "lat": 30.20699428970474,
+    "lng": -97.88234254846978,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 174,
+    "region_name": "River Place",
+    "census_tract": "349.0",
+    "lat": 30.37650070104658,
+    "lng": -97.89837149984481,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 179,
+    "region_name": "West Lake Hills",
+    "census_tract": "19.2",
+    "lat": 30.257305499998893,
+    "lng": -97.88771299980505,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 185,
+    "region_name": "Montopolis",
+    "census_tract": null,
+    "lat": 30.143445414124614,
+    "lng": -97.61798675028825,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 189,
+    "region_name": "Bee Cave",
+    "census_tract": null,
+    "lat": 30.1529015844406,
+    "lng": -97.90647841504679,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 190,
+    "region_name": "Canyon Creek",
+    "census_tract": null,
+    "lat": 30.47058299990556,
+    "lng": -97.80736545839915,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 195,
+    "region_name": "Westlake",
+    "census_tract": null,
+    "lat": 30.217153620593166,
+    "lng": -97.90017951082572,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 200,
+    "region_name": "North Shoal Creek",
+    "census_tract": null,
+    "lat": 30.396317500202514,
+    "lng": -97.70165850028954,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 207,
+    "region_name": "North Shoal Creek",
+    "census_tract": null,
+    "lat": 30.363448999821514,
+    "lng": -97.70284849985833,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 213,
+    "region_name": "Westlake Hills",
+    "census_tract": null,
+    "lat": 30.210264499856834,
+    "lng": -97.8045490002861,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 219,
+    "region_name": "Circle C Ranch",
+    "census_tract": null,
+    "lat": 30.157507022531092,
+    "lng": -97.85645940932423,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 221,
+    "region_name": "Westlake Hills",
+    "census_tract": null,
+    "lat": 30.28143153024098,
+    "lng": -97.88181913899203,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 222,
+    "region_name": "Northwood",
+    "census_tract": null,
+    "lat": 30.405544999901878,
+    "lng": -97.7785620002361,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 224,
+    "region_name": "Cherry Creek",
+    "census_tract": "24.37",
+    "lat": 30.163229499991473,
+    "lng": -97.7934159999484,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 227,
+    "region_name": "Montopolis",
+    "census_tract": "22.16",
+    "lat": 30.239245922611275,
+    "lng": -97.64164716553421,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 229,
+    "region_name": "Wells Branch",
+    "census_tract": "442.0",
+    "lat": 30.4304004999332,
+    "lng": -97.66221250010676,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 231,
+    "region_name": "Gracywoods",
+    "census_tract": "205.09",
+    "lat": 30.506356328032183,
+    "lng": -97.76089113276953,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 232,
+    "region_name": "River Place",
+    "census_tract": "19.16",
+    "lat": 30.29800536870286,
+    "lng": -97.89559104923748,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 233,
+    "region_name": "Redbud",
+    "census_tract": null,
+    "lat": 30.29132067555878,
+    "lng": -97.80933878770486,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 234,
+    "region_name": "Regents",
+    "census_tract": null,
+    "lat": 30.25703600016135,
+    "lng": -97.83994449983877,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 235,
+    "region_name": "Yarabee Bend",
+    "census_tract": null,
+    "lat": 30.172166999807246,
+    "lng": -97.75543900005977,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 237,
+    "region_name": "Montopolis",
+    "census_tract": "23.19",
+    "lat": 30.199442500371163,
+    "lng": -97.64467449982828,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 238,
+    "region_name": "Lost Creek",
+    "census_tract": null,
+    "lat": 30.268231897733955,
+    "lng": -97.8274461995824,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 241,
+    "region_name": "Brentwood South",
+    "census_tract": null,
+    "lat": 30.326255000068244,
+    "lng": -97.73321099978776,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 243,
+    "region_name": "Eanes Creek",
+    "census_tract": null,
+    "lat": 30.27853399959446,
+    "lng": -97.79474900026611,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 251,
+    "region_name": "University Hills West",
+    "census_tract": null,
+    "lat": 30.313836999827743,
+    "lng": -97.68118099980325,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 252,
+    "region_name": "University Hills East",
+    "census_tract": null,
+    "lat": 30.317125999964986,
+    "lng": -97.67230250001035,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 257,
+    "region_name": "East Riverside - Heritage Oaks",
+    "census_tract": null,
+    "lat": 30.235333999864253,
+    "lng": -97.72789700024632,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 259,
+    "region_name": "Garrison Park East",
+    "census_tract": null,
+    "lat": 30.207891000119588,
+    "lng": -97.7940684999113,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 261,
+    "region_name": "Franklin Park West",
+    "census_tract": null,
+    "lat": 30.205006499750226,
+    "lng": -97.74836449982178,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 263,
+    "region_name": "Frankline Park East",
+    "census_tract": null,
+    "lat": 30.195395499902446,
+    "lng": -97.73970449976281,
+    "has_demographics": false,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  },
+  {
+    "region_id": 266,
+    "region_name": "Buckingham Estates",
+    "census_tract": null,
+    "lat": 30.17917749979182,
+    "lng": -97.80633499991029,
+    "has_demographics": true,
+    "has_property": false,
+    "has_socioeconomic": false,
+    "missing": [
+      "property",
+      "socioeconomic"
+    ],
+    "year_range": [
+      1990,
+      2025
+    ]
+  }
+]

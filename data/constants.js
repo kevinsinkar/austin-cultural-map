@@ -1,6 +1,6 @@
-import { REGIONS_GEOJSON } from "./regions";
+import { REGION_INDEX } from "./regionIndex";
 
-export const REGION_NAMES = REGIONS_GEOJSON.features.map(f => f.properties.region_name);
+export const REGION_NAMES = REGION_INDEX.map(r => r.region_name);
 
 export const TIMELINE_EVENTS = [
   { year: 1928, label: "1928 Master Plan" },

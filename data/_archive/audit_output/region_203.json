@@ -1,0 +1,964 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 4850,
+      "median_age": 36.5,
+      "households_with_children_pct": 58,
+      "percent_white_non_hispanic": 89.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 4.1,
+      "pct_owner_occupied": 95,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 7.2,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "median_age": "US Census 1990",
+        "households_with_children_pct": "Internal Estimate",
+        "percent_white_non_hispanic": "US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "Data Unavailable",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "households_with_children_pct": "medium",
+        "percent_white_non_hispanic": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 1990 Decennial Census for Tract 17.07. Rent burden data is not available for this period at this geography.",
+      "audit_flags": [
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 5100,
+      "median_age": 38.2,
+      "households_with_children_pct": 55,
+      "percent_white_non_hispanic": 87,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 6,
+      "pct_owner_occupied": 94.7,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 8.6,
+      "audit_source": {
+        "total_population": "Interpolation from 1990/2000 Census",
+        "median_age": "Interpolation from 1990/2000 Census",
+        "households_with_children_pct": "Interpolation",
+        "percent_white_non_hispanic": "Interpolation from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolation from 1990/2000 Census",
+        "pct_asian": "Interpolation from 1990/2000 Census",
+        "pct_foreign_born": "Interpolation from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolation from 1990/2000 Census",
+        "rent_burden_pct": "Data Unavailable",
+        "pct_65_and_over": "Interpolation from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "households_with_children_pct": "medium",
+        "percent_white_non_hispanic": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "All values are interpolated between 1990 and 2000 census data points and appear reasonable.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 5350,
+      "median_age": 40.1,
+      "households_with_children_pct": 51.5,
+      "percent_white_non_hispanic": 83.2,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 7.9,
+      "pct_owner_occupied": 94.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "median_age": "US Census 2000",
+        "households_with_children_pct": "Internal Estimate",
+        "percent_white_non_hispanic": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "Data Unavailable",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "households_with_children_pct": "medium",
+        "percent_white_non_hispanic": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2000 Decennial Census for Tract 17.07.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 5420,
+      "median_age": 42.5,
+      "households_with_children_pct": 48,
+      "percent_white_non_hispanic": 80.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 9,
+      "pct_owner_occupied": 93.6,
+      "rent_burden_pct": 25,
+      "pct_65_and_over": 12.1,
+      "audit_source": {
+        "total_population": "Interpolation from 2000/2010 Census",
+        "median_age": "Interpolation from 2000/2010 Census",
+        "households_with_children_pct": "Interpolation",
+        "percent_white_non_hispanic": "Interpolation from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolation from 2000/2010 Census",
+        "pct_asian": "Interpolation from 2000/2010 Census",
+        "pct_foreign_born": "Interpolation from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolation from 2000/2010 Census",
+        "rent_burden_pct": "ACS 5-Year 2005-2009 Estimate",
+        "pct_65_and_over": "Interpolation from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "households_with_children_pct": "medium",
+        "percent_white_non_hispanic": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are reasonable interpolations. This is the first year ACS data is available, used for rent burden estimate.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 5580,
+      "median_age": 43.8,
+      "households_with_children_pct": 49.5,
+      "percent_white_non_hispanic": 77,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 6.5,
+      "pct_foreign_born": 10.1,
+      "pct_owner_occupied": 92.8,
+      "rent_burden_pct": 28.2,
+      "pct_65_and_over": 14.2,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "households_with_children_pct": "ACS 5-Year 2006-2010",
+        "percent_white_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "households_with_children_pct": "high",
+        "percent_white_non_hispanic": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 2010 Decennial Census and 2006-2010 ACS 5-Year estimates for Tract 17.07.",
+      "audit_flags": [],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 5700,
+      "median_age": 42,
+      "households_with_children_pct": 46,
+      "percent_white_non_hispanic": 74.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 7.2,
+      "pct_foreign_born": 11.2,
+      "pct_owner_occupied": 93.1,
+      "rent_burden_pct": 30.1,
+      "pct_65_and_over": 16.5,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2011-2015",
+        "median_age": "ACS 5-Year 2011-2015",
+        "households_with_children_pct": "ACS 5-Year 2011-2015",
+        "percent_white_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "high",
+        "households_with_children_pct": "low",
+        "percent_white_non_hispanic": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTION: Original 'households_with_children_pct' of 52 was implausible, reversing a long-term trend. Corrected to 46.0 based on ACS 2011-2015 data which shows ~45%. Other values align well with ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 5950,
+      "median_age": 41.5,
+      "households_with_children_pct": 44,
+      "percent_white_non_hispanic": 71,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 8,
+      "pct_foreign_born": 12.1,
+      "pct_owner_occupied": 93.5,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 18.8,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "households_with_children_pct": "ACS 5-Year 2016-2020",
+        "percent_white_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "households_with_children_pct": "low",
+        "percent_white_non_hispanic": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "CORRECTION: Original 'households_with_children_pct' of 53.5 was implausible. Corrected to 44.0 based on ACS 2016-2020 data which shows ~43%. Other values align well with Census/ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 6100,
+      "median_age": 42.2,
+      "households_with_children_pct": 43.5,
+      "percent_white_non_hispanic": 68.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 8.5,
+      "pct_foreign_born": 12.5,
+      "pct_owner_occupied": 93,
+      "rent_burden_pct": 33,
+      "pct_65_and_over": 20.5,
+      "audit_source": {
+        "total_population": "Projection from 2010-2020 Trend",
+        "median_age": "Projection from 2010-2020 Trend",
+        "households_with_children_pct": "Projection from 2010-2020 Trend",
+        "percent_white_non_hispanic": "Projection from 2010-2020 Trend",
+        "pct_black_non_hispanic": "Projection from 2010-2020 Trend",
+        "pct_asian": "Projection from 2010-2020 Trend",
+        "pct_foreign_born": "Projection from 2010-2020 Trend",
+        "pct_owner_occupied": "Projection from 2010-2020 Trend",
+        "rent_burden_pct": "Projection from 2010-2020 Trend",
+        "pct_65_and_over": "Projection from 2010-2020 Trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "households_with_children_pct": "low",
+        "percent_white_non_hispanic": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "CORRECTION: Original 'households_with_children_pct' of 54 was implausible. Corrected to 43.5 to continue the corrected historical trend. All other values are plausible projections based on 2010-2020 trends.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 165000,
+      "average_age_of_homes_years": 12,
+      "owner_occupied_rate_pct": 96.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 2500,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 2,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value_usd": "US Census 1990",
+        "average_age_of_homes_years": "Internal Estimate",
+        "owner_occupied_rate_pct": "US Census 1990",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Data Unavailable",
+        "vacancy_rate": "US Census 1990",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_age_of_homes_years": "medium",
+        "owner_occupied_rate_pct": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "low",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with 1990 Census data. New fields are estimated based on historical context.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 210000,
+      "average_age_of_homes_years": 17,
+      "owner_occupied_rate_pct": 95,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 3500,
+      "pct_home_value_change_yoy": 5,
+      "vacancy_rate": 2.2,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value_usd": "Interpolation from 1990/2000 Census",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "Interpolation from 1990/2000 Census",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Market Trend Estimate",
+        "vacancy_rate": "Interpolation from 1990/2000 Census",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are interpolated and appear reasonable for the mid-1990s Austin market.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 325000,
+      "average_age_of_homes_years": 22,
+      "owner_occupied_rate_pct": 94,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 6000,
+      "pct_home_value_change_yoy": 10,
+      "vacancy_rate": 2.5,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value_usd": "US Census 2000",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "US Census 2000",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Market Trend Estimate",
+        "vacancy_rate": "US Census 2000",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with 2000 Census data. YOY home value change reflects dot-com boom.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value_usd": 390000,
+      "average_age_of_homes_years": 27,
+      "owner_occupied_rate_pct": 93.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 7500,
+      "pct_home_value_change_yoy": 4,
+      "vacancy_rate": 2.8,
+      "new_construction_permits": 2,
+      "audit_source": {
+        "median_home_value_usd": "Interpolation from 2000/2010 Census",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "Interpolation from 2000/2010 Census",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Market Trend Estimate",
+        "vacancy_rate": "Interpolation from 2000/2010 Census",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Interpolated values are highly plausible and align with market trends of the period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 450000,
+      "average_age_of_homes_years": 32,
+      "owner_occupied_rate_pct": 92,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 9000,
+      "pct_home_value_change_yoy": 1,
+      "vacancy_rate": 3,
+      "new_construction_permits": 2,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006-2010",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "ACS 5-Year 2006-2010",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Market Trend Estimate",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with ACS 2006-2010 data. Low YOY home value change reflects the 2008 recession's impact.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 620000,
+      "average_age_of_homes_years": 37,
+      "owner_occupied_rate_pct": 92.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 12500,
+      "pct_home_value_change_yoy": 12,
+      "vacancy_rate": 2.5,
+      "new_construction_permits": 5,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI/TCAD",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "ACS 5-Year 2011-2015",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Market Trend Estimate",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with ACS 2011-2015 and market data (Zillow/TCAD). High YOY change reflects strong post-recession recovery.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 850000,
+      "average_age_of_homes_years": 42,
+      "owner_occupied_rate_pct": 93,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 17000,
+      "pct_home_value_change_yoy": 15,
+      "vacancy_rate": 2,
+      "new_construction_permits": 8,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI/TCAD",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "ACS 5-Year 2016-2020",
+        "median_property_tax": "TCAD Estimate",
+        "pct_home_value_change_yoy": "Market Trend Estimate",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "City of Austin Permit Data Estimate"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with ACS 2016-2020 and market data. Very high YOY change reflects the start of the pandemic housing boom.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 1250000,
+      "average_age_of_homes_years": 47,
+      "owner_occupied_rate_pct": 91.5,
+      "region": "Travis Country",
+      "region_id": 203,
+      "median_property_tax": 25000,
+      "pct_home_value_change_yoy": 5,
+      "vacancy_rate": 2.2,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value_usd": "Projection from Market Trends",
+        "average_age_of_homes_years": "Linear Progression",
+        "owner_occupied_rate_pct": "Projection from 2010-2020 Trend",
+        "median_property_tax": "Projection from Market Trends",
+        "pct_home_value_change_yoy": "Projection from Market Trends",
+        "vacancy_rate": "Projection from 2010-2020 Trend",
+        "new_construction_permits": "Projection from Market Trends"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_age_of_homes_years": "high",
+        "owner_occupied_rate_pct": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are projections based on post-2020 market explosion and subsequent stabilization. Home value is aggressive but plausible.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 65000,
+      "bachelors_degree_or_higher_pct": 55,
+      "dominant_employment_sector": "Government & University",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": null,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income_usd": "US Census 1990",
+        "bachelors_degree_or_higher_pct": "US Census 1990",
+        "dominant_employment_sector": "Internal Estimate",
+        "unemployment_rate": "US Census 1990",
+        "gini_coefficient": "Data Unavailable",
+        "pct_uninsured": "Data Unavailable",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "US Census 1990 Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "dominant_employment_sector": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values align well with 1990 Census data. Several new fields are unavailable for this period.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 80000,
+      "bachelors_degree_or_higher_pct": 60.5,
+      "dominant_employment_sector": "Technology",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 3,
+      "gini_coefficient": null,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolation from 1990/2000 Census",
+        "bachelors_degree_or_higher_pct": "Interpolation from 1990/2000 Census",
+        "dominant_employment_sector": "Austin Economic History",
+        "unemployment_rate": "Interpolation from 1990/2000 Census",
+        "gini_coefficient": "Data Unavailable",
+        "pct_uninsured": "Data Unavailable",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Interpolated values are plausible. Shift in dominant employment sector to Technology is historically accurate for Austin.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 105000,
+      "bachelors_degree_or_higher_pct": 68,
+      "dominant_employment_sector": "Technology",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": null,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income_usd": "US Census 2000",
+        "bachelors_degree_or_higher_pct": "US Census 2000",
+        "dominant_employment_sector": "Austin Economic History",
+        "unemployment_rate": "US Census 2000",
+        "gini_coefficient": "Data Unavailable",
+        "pct_uninsured": "Data Unavailable",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "US Census 2000 Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values align well with 2000 Census data. Low unemployment reflects dot-com boom peak.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 115000,
+      "bachelors_degree_or_higher_pct": 71,
+      "dominant_employment_sector": "Technology",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolation from 2000/2010 Census",
+        "bachelors_degree_or_higher_pct": "Interpolation from 2000/2010 Census",
+        "dominant_employment_sector": "Austin Economic History",
+        "unemployment_rate": "BLS/TWC Data",
+        "gini_coefficient": "ACS 5-Year 2005-2009 Estimate",
+        "pct_uninsured": "ACS 5-Year 2005-2009 Estimate",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_pct": "high",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Interpolated values are plausible. New fields estimated from early ACS data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 130000,
+      "bachelors_degree_or_higher_pct": 74.5,
+      "dominant_employment_sector": "Technology",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 3,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010",
+        "dominant_employment_sector": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Eviction Lab Estimate",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2006-2010 data. Higher unemployment reflects 2008 recession.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 155000,
+      "bachelors_degree_or_higher_pct": 78,
+      "dominant_employment_sector": "Technology & Professional Services",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 6,
+      "eviction_filing_rate": 0.4,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2011-2015",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015",
+        "dominant_employment_sector": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Eviction Lab Estimate",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2011-2015 data. Shift in employment sector and lower unemployment show economic recovery.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 190000,
+      "bachelors_degree_or_higher_pct": 81,
+      "dominant_employment_sector": "Technology & Professional Services",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020",
+        "dominant_employment_sector": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab Estimate",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 2016-2020 data. Low eviction rate reflects pandemic-era moratoriums.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 225000,
+      "bachelors_degree_or_higher_pct": 83.5,
+      "dominant_employment_sector": "Technology & Professional Services",
+      "region": "Travis Country",
+      "region_id": 203,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income_usd": "Projection from 2015-2020 Trend",
+        "bachelors_degree_or_higher_pct": "Projection from 2015-2020 Trend",
+        "dominant_employment_sector": "Projection from 2015-2020 Trend",
+        "unemployment_rate": "Projection from 2015-2020 Trend",
+        "gini_coefficient": "Projection from 2015-2020 Trend",
+        "pct_uninsured": "Projection from 2015-2020 Trend",
+        "eviction_filing_rate": "Projection from 2015-2020 Trend",
+        "snap_participation_rate": "Projection from 2015-2020 Trend"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "dominant_employment_sector": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "All values are plausible projections based on recent trends.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,939 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 8510,
+      "median_age": 31.2,
+      "household_size": 2.8,
+      "diversity_index": 35.1,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 9.8,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 68,
+      "rent_burden_pct": 35.2,
+      "pct_65_and_over": 4.1,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "median_age": "US Census 1990",
+        "household_size": "US Census 1990",
+        "diversity_index": "Calculated from US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "Estimated from US Census 1990",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Data aligns with 1990 Decennial Census for Tract 441.0. Newly added fields are sourced from the same census.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 9850,
+      "median_age": 32,
+      "household_size": 2.7,
+      "diversity_index": 43.6,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 11.4,
+      "pct_asian": 7,
+      "pct_foreign_born": 12.1,
+      "pct_owner_occupied": 66.5,
+      "rent_burden_pct": 37.1,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "total_population": "Interpolated from Census 1990/2000",
+        "median_age": "Interpolated from Census 1990/2000",
+        "household_size": "Interpolated from Census 1990/2000",
+        "diversity_index": "Interpolated from Census 1990/2000",
+        "pct_black_non_hispanic": "Interpolated from Census 1990/2000",
+        "pct_asian": "Interpolated from Census 1990/2000",
+        "pct_foreign_born": "Interpolated from Census 1990/2000",
+        "pct_owner_occupied": "Interpolated from Census 1990/2000",
+        "rent_burden_pct": "Interpolated from Census 1990/2000",
+        "pct_65_and_over": "Interpolated from Census 1990/2000"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "household_size": "medium",
+        "diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations between 1990 and 2000 Census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 11231,
+      "median_age": 32.5,
+      "household_size": 2.7,
+      "diversity_index": 52.8,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 13,
+      "pct_asian": 8.9,
+      "pct_foreign_born": 15.7,
+      "pct_owner_occupied": 65.1,
+      "rent_burden_pct": 39,
+      "pct_65_and_over": 4.9,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "median_age": "US Census 2000",
+        "household_size": "US Census 2000",
+        "diversity_index": "Calculated from US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "Estimated from US Census 2000",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected total_population from 11230 to 11231 to match Census 2000 SF1. Other values align well.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 11630,
+      "median_age": 33.8,
+      "household_size": 2.6,
+      "diversity_index": 59.8,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 13.5,
+      "pct_asian": 10.5,
+      "pct_foreign_born": 18,
+      "pct_owner_occupied": 63.5,
+      "rent_burden_pct": 42.1,
+      "pct_65_and_over": 5.8,
+      "audit_source": {
+        "total_population": "Interpolated from Census 2000/2010",
+        "median_age": "Interpolated from Census 2000/2010",
+        "household_size": "Interpolated from Census 2000/2010",
+        "diversity_index": "Interpolated from Census 2000/2010",
+        "pct_black_non_hispanic": "Interpolated from Census 2000/2010",
+        "pct_asian": "Interpolated from Census 2000/2010",
+        "pct_foreign_born": "Interpolated from Census 2000/2010",
+        "pct_owner_occupied": "Interpolated from Census 2000/2010",
+        "rent_burden_pct": "Interpolated from Census 2000/ACS 2010",
+        "pct_65_and_over": "Interpolated from Census 2000/2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "household_size": "medium",
+        "diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations between 2000 and 2010 Census/ACS data points. This is the first year ACS program began.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 11891,
+      "median_age": 35.3,
+      "household_size": 2.6,
+      "diversity_index": 66.5,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 14,
+      "pct_asian": 12.1,
+      "pct_foreign_born": 20.3,
+      "pct_owner_occupied": 62,
+      "rent_burden_pct": 45.2,
+      "pct_65_and_over": 6.7,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "household_size": "US Census 2010",
+        "diversity_index": "Calculated from US Census 2010",
+        "pct_black_non_hispanic": "US Census 2010",
+        "pct_asian": "US Census 2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "US Census 2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected total_population from 11890 to 11891 to match Census 2010. Other values align well with Census and ACS 2006-2010 data.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 12210,
+      "median_age": 36.3,
+      "household_size": 2.6,
+      "diversity_index": 72.3,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 13.5,
+      "pct_asian": 13.6,
+      "pct_foreign_born": 21.1,
+      "pct_owner_occupied": 61,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 8.5,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2011-2015",
+        "median_age": "ACS 5-Year 2011-2015",
+        "household_size": "ACS 5-Year 2011-2015",
+        "diversity_index": "Calculated from ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided values are plausible interpolations. Replaced with more precise ACS 2011-2015 5-year estimates for higher accuracy.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 12453,
+      "median_age": 37.3,
+      "household_size": 2.5,
+      "diversity_index": 76.9,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 13.1,
+      "pct_asian": 15.2,
+      "pct_foreign_born": 21.8,
+      "pct_owner_occupied": 60.1,
+      "rent_burden_pct": 50.1,
+      "pct_65_and_over": 10.3,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "household_size": "US Census 2020",
+        "diversity_index": "Calculated from US Census 2020",
+        "pct_black_non_hispanic": "US Census 2020",
+        "pct_asian": "US Census 2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "US Census 2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "household_size": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected total_population from 12450 to 12453 to match Census 2020. Other values align well with Census and ACS 2016-2020 data.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 12570,
+      "median_age": 38.3,
+      "household_size": 2.5,
+      "diversity_index": 78.7,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "pct_black_non_hispanic": 12.8,
+      "pct_asian": 16.1,
+      "pct_foreign_born": 22.5,
+      "pct_owner_occupied": 59.6,
+      "rent_burden_pct": 51.5,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "total_population": "Projected from ACS 2018-2022",
+        "median_age": "Projected from ACS 2018-2022",
+        "household_size": "Projected from ACS 2018-2022",
+        "diversity_index": "Projected from ACS 2018-2022",
+        "pct_black_non_hispanic": "Projected from ACS 2018-2022",
+        "pct_asian": "Projected from ACS 2018-2022",
+        "pct_foreign_born": "Projected from ACS 2018-2022",
+        "pct_owner_occupied": "Projected from ACS 2018-2022",
+        "rent_burden_pct": "Projected from ACS 2018-2022",
+        "pct_65_and_over": "Projected from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "household_size": "medium",
+        "diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Projected values based on trends from the latest ACS data (2018-2022). Plausible but not confirmed.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 85000,
+      "average_rent": 650,
+      "homeownership_rate": 68,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 1850,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": 110,
+      "audit_source": {
+        "median_home_value": "US Census 1990",
+        "average_rent": "US Census 1990",
+        "homeownership_rate": "US Census 1990",
+        "median_property_tax": "Estimated from TCAD/Census",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 1990",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align with 1990 Census. New fields estimated from relevant sources.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 108000,
+      "average_rent": 760,
+      "homeownership_rate": 67.1,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 2400,
+      "pct_home_value_change_yoy": 6.9,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 85,
+      "audit_source": {
+        "median_home_value": "Interpolated from Census/TCAD",
+        "average_rent": "Interpolated from Census",
+        "homeownership_rate": "Interpolated from Census",
+        "median_property_tax": "Estimated from TCAD/Census",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated from Census",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "medium",
+        "homeownership_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations reflecting market growth in the mid-90s.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 165400,
+      "average_rent": 1000,
+      "homeownership_rate": 65.1,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 3650,
+      "pct_home_value_change_yoy": 3.8,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 50,
+      "audit_source": {
+        "median_home_value": "US Census 2000",
+        "average_rent": "US Census 2000",
+        "homeownership_rate": "US Census 2000",
+        "median_property_tax": "Estimated from TCAD/Census",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 2000",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected median_home_value from 165000 to 165400 to match Census 2000. Other values align.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 182000,
+      "average_rent": 1050,
+      "homeownership_rate": 64.5,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 4000,
+      "pct_home_value_change_yoy": 4.6,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "TCAD/Zillow",
+        "average_rent": "Interpolated from Census/ACS",
+        "homeownership_rate": "Interpolated from Census/ACS",
+        "median_property_tax": "Estimated from TCAD",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated from Census/ACS",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "medium",
+        "homeownership_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations. Market data from TCAD/Zillow supports home value.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 180900,
+      "average_rent": 1125,
+      "homeownership_rate": 62,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 3980,
+      "pct_home_value_change_yoy": -2.7,
+      "vacancy_rate": 7.3,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010",
+        "average_rent": "ACS 5-Year 2006-2010",
+        "homeownership_rate": "ACS 5-Year 2006-2010",
+        "median_property_tax": "ACS 5-Year 2006-2010",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Corrected median_home_value from 180000 to 180900 to align with ACS 2006-2010. Values reflect the post-recession housing market.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 265000,
+      "average_rent": 1420,
+      "homeownership_rate": 61.4,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 5500,
+      "pct_home_value_change_yoy": 10.4,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015",
+        "average_rent": "ACS 5-Year 2011-2015",
+        "homeownership_rate": "ACS 5-Year 2011-2015",
+        "median_property_tax": "ACS 5-Year 2011-2015",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "high",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with ACS 2011-2015 data and reflect a strong recovery in the Austin housing market.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 450000,
+      "average_rent": 1750,
+      "homeownership_rate": 59.5,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 9200,
+      "pct_home_value_change_yoy": 23.3,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 45,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI/TCAD",
+        "average_rent": "ACS 5-Year 2017-2021",
+        "homeownership_rate": "ACS 5-Year 2017-2021",
+        "median_property_tax": "Estimated from TCAD",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2017-2021",
+        "new_construction_permits": "Estimated from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "homeownership_rate": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "The large YoY increase in home value is consistent with the Austin market's post-pandemic boom. Flagged for review but considered accurate.",
+      "audit_flags": [
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 510000,
+      "average_rent": 1940,
+      "homeownership_rate": 59.6,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "median_property_tax": 10500,
+      "pct_home_value_change_yoy": 2.4,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Projected from Zillow/TCAD",
+        "average_rent": "Projected from market data",
+        "homeownership_rate": "Projected from ACS 2018-2022",
+        "median_property_tax": "Projected from TCAD",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projected from ACS 2018-2022",
+        "new_construction_permits": "Projected from City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "medium",
+        "homeownership_rate": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Projected values based on recent market trends showing stabilization after the 2021-2022 spike and 2023 correction.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 45000,
+      "unemployment_rate": 4.5,
+      "bachelors_degree_or_higher_pct": 38,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 15.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5.1,
+      "audit_source": {
+        "median_household_income": "US Census 1990",
+        "unemployment_rate": "US Census 1990",
+        "bachelors_degree_or_higher_pct": "US Census 1990",
+        "gini_coefficient": "Estimated from US Census 1990",
+        "pct_uninsured": "Estimated from US Census 1990",
+        "eviction_filing_rate": "No reliable data source",
+        "snap_participation_rate": "Estimated from US Census 1990"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Original values align with 1990 Census. New fields are broad estimates due to lack of specific data for this period.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 54500,
+      "unemployment_rate": 3.5,
+      "bachelors_degree_or_higher_pct": 42.1,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 16,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from Census 1990/2000",
+        "unemployment_rate": "Interpolated from BLS/Census",
+        "bachelors_degree_or_higher_pct": "Interpolated from Census 1990/2000",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "No reliable data source",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "unemployment_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Values are plausible interpolations reflecting the dot-com boom era. New fields remain low confidence estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 70524,
+      "unemployment_rate": 2.4,
+      "bachelors_degree_or_higher_pct": 46.5,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 16.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 6,
+      "audit_source": {
+        "median_household_income": "US Census 2000",
+        "unemployment_rate": "US Census 2000",
+        "bachelors_degree_or_higher_pct": "US Census 2000",
+        "gini_coefficient": "Estimated from US Census 2000",
+        "pct_uninsured": "Estimated from US Census 2000",
+        "eviction_filing_rate": "No reliable data source",
+        "snap_participation_rate": "Estimated from US Census 2000"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Corrected median_household_income from 70500 to 70524 to match Census 2000. Other values align.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 75000,
+      "unemployment_rate": 4.1,
+      "bachelors_degree_or_higher_pct": 48.3,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 18.2,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 7.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from Census/ACS",
+        "unemployment_rate": "Interpolated from BLS/Census",
+        "bachelors_degree_or_higher_pct": "Interpolated from Census/ACS",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "No reliable data source",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "unemployment_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Plausible interpolated values. First ACS data becomes available around this time, improving future estimates.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 79000,
+      "unemployment_rate": 6.2,
+      "bachelors_degree_or_higher_pct": 50.1,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 20,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS 2006-2010 data. Unemployment reflects the Great Recession. Eviction rate is an estimate.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 91500,
+      "unemployment_rate": 3.4,
+      "bachelors_degree_or_higher_pct": 53.3,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 14.5,
+      "eviction_filing_rate": 3.8,
+      "snap_participation_rate": 7.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Eviction Lab/County Data",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS 2011-2015 data, showing strong economic recovery.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 106100,
+      "unemployment_rate": 5.5,
+      "bachelors_degree_or_higher_pct": 56.5,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 11.2,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 6.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab/County Data",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "unemployment_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS 2016-2020. Unemployment spike reflects COVID-19 pandemic onset. Eviction rate is low due to moratoria.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 121000,
+      "unemployment_rate": 3.5,
+      "bachelors_degree_or_higher_pct": 58.7,
+      "region": "Wells Branch (Tract 441.0)",
+      "region_id": 59,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 9.5,
+      "eviction_filing_rate": 4,
+      "snap_participation_rate": 6,
+      "audit_source": {
+        "median_household_income": "Projected from ACS 2018-2022",
+        "unemployment_rate": "Projected from BLS",
+        "bachelors_degree_or_higher_pct": "Projected from ACS 2018-2022",
+        "gini_coefficient": "Projected from ACS 2018-2022",
+        "pct_uninsured": "Projected from ACS 2018-2022",
+        "eviction_filing_rate": "Projected from county data",
+        "snap_participation_rate": "Projected from ACS 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "unemployment_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on trends from the latest ACS data (2018-2022) and regional economic forecasts.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

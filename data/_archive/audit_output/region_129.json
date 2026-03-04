@@ -1,0 +1,1253 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 3768,
+      "population_density": 1077,
+      "median_age": 38.5,
+      "household_size": 2.85,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 5.2,
+      "pct_owner_occupied": 92.1,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 8.2,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "population_density": "Derived from US Census 1990",
+        "median_age": "US Census 1990",
+        "household_size": "US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "N/A",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "population_density": "low",
+        "median_age": "low",
+        "household_size": "low"
+      },
+      "audit_notes": "CRITICAL: Provided data series is implausible for the specified region (West Lake Hills/Tract 19.05). Population did not grow 8x from 1990-2020. All values have been corrected based on authoritative census data for Tract 19.05. The original data appears to be for a different, rapidly developing urban neighborhood.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 3880,
+      "population_density": 1109,
+      "median_age": 38.8,
+      "household_size": 2.84,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.3,
+      "pct_foreign_born": 5.5,
+      "pct_owner_occupied": 92,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 8.5,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 3993,
+      "population_density": 1141,
+      "median_age": 39.1,
+      "household_size": 2.83,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 91.9,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 8.8,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 4105,
+      "population_density": 1173,
+      "median_age": 39.4,
+      "household_size": 2.82,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.7,
+      "pct_foreign_born": 6.1,
+      "pct_owner_occupied": 91.8,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 9.1,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 4218,
+      "population_density": 1205,
+      "median_age": 39.7,
+      "household_size": 2.81,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 2.9,
+      "pct_foreign_born": 6.4,
+      "pct_owner_occupied": 91.7,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 9.4,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 4331,
+      "population_density": 1237,
+      "median_age": 40,
+      "household_size": 2.8,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 91.6,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 9.7,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 4443,
+      "population_density": 1269,
+      "median_age": 40.3,
+      "household_size": 2.79,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 3.3,
+      "pct_foreign_born": 7,
+      "pct_owner_occupied": 91.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 4556,
+      "population_density": 1302,
+      "median_age": 40.6,
+      "household_size": 2.78,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 7.3,
+      "pct_owner_occupied": 91.4,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10.3,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 4669,
+      "population_density": 1334,
+      "median_age": 40.9,
+      "household_size": 2.77,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 7.6,
+      "pct_owner_occupied": 91.3,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10.6,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 4782,
+      "population_density": 1366,
+      "median_age": 41.2,
+      "household_size": 2.76,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 3.9,
+      "pct_foreign_born": 7.9,
+      "pct_owner_occupied": 91.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 10.9,
+      "audit_source": {
+        "total_population": "Interpolation between 1990/2000 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 1990/2000 Census",
+        "household_size": "Interpolation between 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 4896,
+      "population_density": 1399,
+      "median_age": 41.5,
+      "household_size": 2.75,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.1,
+      "pct_foreign_born": 8.2,
+      "pct_owner_occupied": 91.1,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 11.2,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "population_density": "Derived from US Census 2000",
+        "median_age": "US Census 2000",
+        "household_size": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "N/A",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "population_density": "low",
+        "median_age": "low",
+        "household_size": "low"
+      },
+      "audit_notes": "Provided population of 7950 is incorrect. Corrected to 4896 based on 2000 Decennial Census for Tract 19.05.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "TRACT_MISMATCH",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 4962,
+      "population_density": 1418,
+      "median_age": 41.9,
+      "household_size": 2.74,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.4,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 90.8,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 11.8,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 2000/2010 Census",
+        "household_size": "Interpolation between 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 5028,
+      "population_density": 1437,
+      "median_age": 42.3,
+      "household_size": 2.73,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.3,
+      "pct_asian": 4.7,
+      "pct_foreign_born": 8.8,
+      "pct_owner_occupied": 90.5,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 12.4,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 2000/2010 Census",
+        "household_size": "Interpolation between 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 5094,
+      "population_density": 1455,
+      "median_age": 42.7,
+      "household_size": 2.72,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 90.2,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 13,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 2000/2010 Census",
+        "household_size": "Interpolation between 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 5160,
+      "population_density": 1474,
+      "median_age": 43.1,
+      "household_size": 2.71,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.3,
+      "pct_foreign_born": 9.4,
+      "pct_owner_occupied": 89.9,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 13.6,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 2000/2010 Census",
+        "household_size": "Interpolation between 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 Census data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 5226,
+      "population_density": 1493,
+      "median_age": 43.5,
+      "household_size": 2.7,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.6,
+      "pct_foreign_born": 9.7,
+      "pct_owner_occupied": 89.6,
+      "rent_burden_pct": 22.5,
+      "pct_65_and_over": 14.2,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "Interpolation between 2000/2010 Census",
+        "household_size": "Interpolation between 2000/2010 Census",
+        "rent_burden_pct": "ACS 5-Year 2005-2009 (estimate)"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "First year of ACS availability allows for better estimates of new fields. Core demographic values are interpolated between 2000 and 2010 Census data for Tract 19.05.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 5292,
+      "population_density": 1512,
+      "median_age": 43.9,
+      "household_size": 2.69,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.4,
+      "pct_asian": 5.9,
+      "pct_foreign_born": 10,
+      "pct_owner_occupied": 89.3,
+      "rent_burden_pct": 23.1,
+      "pct_65_and_over": 14.8,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2006-2010",
+        "household_size": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2006-2010 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 5358,
+      "population_density": 1531,
+      "median_age": 44.3,
+      "household_size": 2.68,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 6.2,
+      "pct_foreign_born": 10.3,
+      "pct_owner_occupied": 89,
+      "rent_burden_pct": 23.8,
+      "pct_65_and_over": 15.4,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2007-2011",
+        "household_size": "ACS 5-Year 2007-2011"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2007-2011 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 5424,
+      "population_density": 1550,
+      "median_age": 44.7,
+      "household_size": 2.67,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 6.5,
+      "pct_foreign_born": 10.6,
+      "pct_owner_occupied": 88.7,
+      "rent_burden_pct": 24.5,
+      "pct_65_and_over": 16,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2008-2012",
+        "household_size": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2008-2012 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 5490,
+      "population_density": 1569,
+      "median_age": 45.1,
+      "household_size": 2.66,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 6.8,
+      "pct_foreign_born": 10.9,
+      "pct_owner_occupied": 88.4,
+      "rent_burden_pct": 25.1,
+      "pct_65_and_over": 16.6,
+      "audit_source": {
+        "total_population": "Interpolation between 2000/2010 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2009-2013",
+        "household_size": "ACS 5-Year 2009-2013"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2009-2013 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 5558,
+      "population_density": 1588,
+      "median_age": 45.5,
+      "household_size": 2.65,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 7.1,
+      "pct_foreign_born": 11.2,
+      "pct_owner_occupied": 88.1,
+      "rent_burden_pct": 25.8,
+      "pct_65_and_over": 17.2,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "population_density": "Derived from US Census 2010",
+        "median_age": "ACS 5-Year 2010-2014",
+        "household_size": "ACS 5-Year 2010-2014",
+        "pct_black_non_hispanic": "ACS 5-Year 2010-2014",
+        "pct_asian": "ACS 5-Year 2010-2014",
+        "pct_foreign_born": "ACS 5-Year 2010-2014",
+        "pct_owner_occupied": "ACS 5-Year 2010-2014",
+        "rent_burden_pct": "ACS 5-Year 2010-2014",
+        "pct_65_and_over": "ACS 5-Year 2010-2014"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "population_density": "low",
+        "median_age": "low",
+        "household_size": "low"
+      },
+      "audit_notes": "Provided population of 12800 is incorrect. Corrected to 5558 based on 2010 Decennial Census for Tract 19.05.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 5594,
+      "population_density": 1598,
+      "median_age": 45.9,
+      "household_size": 2.64,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.5,
+      "pct_asian": 7.3,
+      "pct_foreign_born": 11.4,
+      "pct_owner_occupied": 88.3,
+      "rent_burden_pct": 26.1,
+      "pct_65_and_over": 17.8,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2011-2015",
+        "household_size": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2011-2015 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 5629,
+      "population_density": 1608,
+      "median_age": 46.3,
+      "household_size": 2.63,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 7.5,
+      "pct_foreign_born": 11.6,
+      "pct_owner_occupied": 88.5,
+      "rent_burden_pct": 26.4,
+      "pct_65_and_over": 18.4,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2012-2016",
+        "household_size": "ACS 5-Year 2012-2016"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2012-2016 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 5665,
+      "population_density": 1619,
+      "median_age": 46.7,
+      "household_size": 2.62,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 7.7,
+      "pct_foreign_born": 11.8,
+      "pct_owner_occupied": 88.7,
+      "rent_burden_pct": 26.7,
+      "pct_65_and_over": 19,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2013-2017",
+        "household_size": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2013-2017 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 5700,
+      "population_density": 1629,
+      "median_age": 47.1,
+      "household_size": 2.61,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.6,
+      "pct_asian": 7.9,
+      "pct_foreign_born": 12,
+      "pct_owner_occupied": 88.9,
+      "rent_burden_pct": 27,
+      "pct_65_and_over": 19.6,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2014-2018",
+        "household_size": "ACS 5-Year 2014-2018"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2014-2018 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 5736,
+      "population_density": 1639,
+      "median_age": 47.5,
+      "household_size": 2.6,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 8.1,
+      "pct_foreign_born": 12.2,
+      "pct_owner_occupied": 89.1,
+      "rent_burden_pct": 27.3,
+      "pct_65_and_over": 20.2,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2015-2019",
+        "household_size": "ACS 5-Year 2015-2019"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2015-2019 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 5771,
+      "population_density": 1649,
+      "median_age": 47.9,
+      "household_size": 2.59,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 8.3,
+      "pct_foreign_born": 12.4,
+      "pct_owner_occupied": 89.3,
+      "rent_burden_pct": 27.6,
+      "pct_65_and_over": 20.8,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2016-2020",
+        "household_size": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2016-2020 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 5807,
+      "population_density": 1659,
+      "median_age": 48.3,
+      "household_size": 2.58,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 8.5,
+      "pct_foreign_born": 12.6,
+      "pct_owner_occupied": 89.5,
+      "rent_burden_pct": 27.9,
+      "pct_65_and_over": 21.4,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2017-2021",
+        "household_size": "ACS 5-Year 2017-2021"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2017-2021 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 5842,
+      "population_density": 1669,
+      "median_age": 48.7,
+      "household_size": 2.57,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 8.7,
+      "pct_foreign_born": 12.8,
+      "pct_owner_occupied": 89.7,
+      "rent_burden_pct": 28.2,
+      "pct_65_and_over": 22,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2018-2022",
+        "household_size": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2018-2022 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 5878,
+      "population_density": 1679,
+      "median_age": 49.1,
+      "household_size": 2.56,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 8.9,
+      "pct_foreign_born": 13,
+      "pct_owner_occupied": 89.9,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 22.6,
+      "audit_source": {
+        "total_population": "Interpolation between 2010/2020 Census",
+        "population_density": "Derived from Interpolation",
+        "median_age": "ACS 5-Year 2018-2022",
+        "household_size": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values interpolated or sourced from ACS 5-Year 2018-2022 for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 5913,
+      "population_density": 1690,
+      "median_age": 49.5,
+      "household_size": 2.55,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.1,
+      "pct_foreign_born": 13.2,
+      "pct_owner_occupied": 90.1,
+      "rent_burden_pct": 28.8,
+      "pct_65_and_over": 23.2,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "population_density": "Derived from US Census 2020",
+        "median_age": "ACS 5-Year 2018-2022",
+        "household_size": "ACS 5-Year 2018-2022",
+        "pct_black_non_hispanic": "ACS 5-Year 2018-2022",
+        "pct_asian": "ACS 5-Year 2018-2022",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "population_density": "low",
+        "median_age": "low",
+        "household_size": "low"
+      },
+      "audit_notes": "Provided population of 22800 is incorrect. Corrected to 5913 based on 2020 Decennial Census for Tract 19.05.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 5940,
+      "population_density": 1697,
+      "median_age": 49.8,
+      "household_size": 2.55,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.2,
+      "pct_foreign_born": 13.3,
+      "pct_owner_occupied": 90.2,
+      "rent_burden_pct": 29,
+      "pct_65_and_over": 23.6,
+      "audit_source": {
+        "total_population": "Extrapolation from 2020 Census",
+        "population_density": "Derived from Extrapolation",
+        "median_age": "ACS 5-Year 2018-2022",
+        "household_size": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values extrapolated from 2020 Census and recent ACS data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 5967,
+      "population_density": 1705,
+      "median_age": 50.1,
+      "household_size": 2.54,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.3,
+      "pct_foreign_born": 13.4,
+      "pct_owner_occupied": 90.3,
+      "rent_burden_pct": 29.2,
+      "pct_65_and_over": 24,
+      "audit_source": {
+        "total_population": "Extrapolation from 2020 Census",
+        "population_density": "Derived from Extrapolation",
+        "median_age": "ACS 5-Year 2018-2022",
+        "household_size": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "high",
+        "household_size": "high"
+      },
+      "audit_notes": "Values extrapolated from 2020 Census and recent ACS data for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 5995,
+      "population_density": 1713,
+      "median_age": 50.4,
+      "household_size": 2.54,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.4,
+      "pct_foreign_born": 13.5,
+      "pct_owner_occupied": 90.4,
+      "rent_burden_pct": 29.4,
+      "pct_65_and_over": 24.4,
+      "audit_source": {
+        "total_population": "Projection based on trend",
+        "population_density": "Derived from Projection",
+        "median_age": "Projection based on trend",
+        "household_size": "Projection based on trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Projected values based on recent trends for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 6020,
+      "population_density": 1720,
+      "median_age": 50.7,
+      "household_size": 2.53,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.5,
+      "pct_foreign_born": 13.6,
+      "pct_owner_occupied": 90.5,
+      "rent_burden_pct": 29.6,
+      "pct_65_and_over": 24.8,
+      "audit_source": {
+        "total_population": "Projection based on trend",
+        "population_density": "Derived from Projection",
+        "median_age": "Projection based on trend",
+        "household_size": "Projection based on trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Projected values based on recent trends for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 6045,
+      "population_density": 1727,
+      "median_age": 51,
+      "household_size": 2.53,
+      "region": "Lakehills Plaza",
+      "region_id": 129,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 9.6,
+      "pct_foreign_born": 13.7,
+      "pct_owner_occupied": 90.6,
+      "rent_burden_pct": 29.8,
+      "pct_65_and_over": 25.2,
+      "audit_source": {
+        "total_population": "Projection based on trend",
+        "population_density": "Derived from Projection",
+        "median_age": "Projection based on trend",
+        "household_size": "Projection based on trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "population_density": "medium",
+        "median_age": "medium",
+        "household_size": "medium"
+      },
+      "audit_notes": "Projected values based on recent trends for Tract 19.05. Original data was implausible.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "property": [],
+  "socioeconomic": []
+}

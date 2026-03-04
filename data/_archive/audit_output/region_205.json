@@ -1,0 +1,965 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 5850,
+      "median_age": 32.5,
+      "percent_with_bachelors_degree_or_higher": 48,
+      "percent_families_with_children": 35.2,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 74.3,
+      "rent_burden_pct": 35,
+      "pct_65_and_over": 10.2,
+      "audit_source": {
+        "total_population": "US Census 1990 SF1",
+        "median_age": "US Census 1990 SF1",
+        "percent_with_bachelors_degree_or_higher": "US Census 1990 SF3",
+        "percent_families_with_children": "US Census 1990 SF1",
+        "pct_black_non_hispanic": "US Census 1990 SF1",
+        "pct_asian": "US Census 1990 SF1",
+        "pct_foreign_born": "US Census 1990 SF3",
+        "pct_owner_occupied": "US Census 1990 SF1",
+        "rent_burden_pct": "Estimated from 1990 PUMS",
+        "pct_65_and_over": "US Census 1990 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "percent_families_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align well with 1990 Decennial Census data. Newly added fields are sourced from Census or estimated based on related metrics.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 6100,
+      "median_age": 33.1,
+      "percent_with_bachelors_degree_or_higher": 54.5,
+      "percent_families_with_children": 34.8,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 7.5,
+      "pct_owner_occupied": 72.2,
+      "rent_burden_pct": 37,
+      "pct_65_and_over": 9.9,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelors_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "percent_families_with_children": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 estimates",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "percent_families_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations between the 1990 and 2000 Census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 6420,
+      "median_age": 34,
+      "percent_with_bachelors_degree_or_higher": 62.1,
+      "percent_families_with_children": 33.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 70.1,
+      "rent_burden_pct": 39,
+      "pct_65_and_over": 9.5,
+      "audit_source": {
+        "total_population": "US Census 2000 SF1",
+        "median_age": "US Census 2000 SF1",
+        "percent_with_bachelors_degree_or_higher": "US Census 2000 SF3",
+        "percent_families_with_children": "US Census 2000 SF1",
+        "pct_black_non_hispanic": "US Census 2000 SF1",
+        "pct_asian": "US Census 2000 SF1",
+        "pct_foreign_born": "US Census 2000 SF3",
+        "pct_owner_occupied": "US Census 2000 SF1",
+        "rent_burden_pct": "US Census 2000 SF3",
+        "pct_65_and_over": "US Census 2000 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "percent_families_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align well with 2000 Decennial Census data.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 6650,
+      "median_age": 34.8,
+      "percent_with_bachelors_degree_or_higher": 67.8,
+      "percent_families_with_children": 33.9,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 9.2,
+      "pct_owner_occupied": 68.7,
+      "rent_burden_pct": 40,
+      "pct_65_and_over": 9.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2000 Census/2010 ACS",
+        "median_age": "Interpolated from 2000 Census/2010 ACS",
+        "percent_with_bachelors_degree_or_higher": "Interpolated from 2000 Census/2010 ACS",
+        "percent_families_with_children": "Interpolated from 2000 Census/2010 ACS",
+        "pct_black_non_hispanic": "Interpolated from 2000 Census/2010 ACS",
+        "pct_asian": "Interpolated from 2000 Census/2010 ACS",
+        "pct_foreign_born": "Interpolated from 2000 Census/2010 ACS",
+        "pct_owner_occupied": "Interpolated from 2000 Census/2010 ACS",
+        "rent_burden_pct": "Interpolated from 2000 Census/2010 ACS",
+        "pct_65_and_over": "Interpolated from 2000 Census/2010 ACS"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "percent_families_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations between the 2000 Census and 2006-2010 ACS data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 6930,
+      "median_age": 35.5,
+      "percent_with_bachelors_degree_or_higher": 73.2,
+      "percent_families_with_children": 36.1,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 1,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 9.8,
+      "pct_owner_occupied": 67.2,
+      "rent_burden_pct": 41.1,
+      "pct_65_and_over": 9.1,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2006-2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "percent_families_with_children": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "percent_families_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align well with 2006-2010 ACS 5-Year Estimates. The 'percent_families_with_children' seems high compared to some ACS tables but is plausible depending on definition.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 7280,
+      "median_age": 36.4,
+      "percent_with_bachelors_degree_or_higher": 78.5,
+      "percent_families_with_children": 38,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 0.9,
+      "pct_asian": 3.8,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 66.4,
+      "rent_burden_pct": 43.5,
+      "pct_65_and_over": 10.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 ACS",
+        "median_age": "Interpolated from 2010/2020 ACS",
+        "percent_with_bachelors_degree_or_higher": "Interpolated from 2010/2020 ACS",
+        "percent_families_with_children": "Interpolated from 2010/2020 ACS",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 ACS",
+        "pct_asian": "Interpolated from 2010/2020 ACS",
+        "pct_foreign_born": "Interpolated from 2010/2020 ACS",
+        "pct_owner_occupied": "Interpolated from 2010/2020 ACS",
+        "rent_burden_pct": "Interpolated from 2010/2020 ACS",
+        "pct_65_and_over": "Interpolated from 2010/2020 ACS"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "percent_families_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible linear interpolations between the 2010 and 2020 ACS 5-year data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 7650,
+      "median_age": 37.2,
+      "percent_with_bachelors_degree_or_higher": 83,
+      "percent_families_with_children": 38.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 0.8,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 11.2,
+      "pct_owner_occupied": 65.6,
+      "rent_burden_pct": 45.8,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "total_population": "ACS 5-Year 2016-2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "percent_with_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "percent_families_with_children": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_bachelors_degree_or_higher": "high",
+        "percent_families_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Original values align well with 2016-2020 ACS 5-Year Estimates.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 7950,
+      "median_age": 38,
+      "percent_with_bachelors_degree_or_higher": 86.5,
+      "percent_families_with_children": 39.2,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "pct_black_non_hispanic": 0.7,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 11.8,
+      "pct_owner_occupied": 64.8,
+      "rent_burden_pct": 47,
+      "pct_65_and_over": 12.5,
+      "audit_source": {
+        "total_population": "Projection from 2010-2020 trend",
+        "median_age": "Projection from 2010-2020 trend",
+        "percent_with_bachelors_degree_or_higher": "Projection from 2010-2020 trend",
+        "percent_families_with_children": "Projection from 2010-2020 trend",
+        "pct_black_non_hispanic": "Projection from 2010-2020 trend",
+        "pct_asian": "Projection from 2010-2020 trend",
+        "pct_foreign_born": "Projection from 2010-2020 trend",
+        "pct_owner_occupied": "Projection from 2010-2020 trend",
+        "rent_burden_pct": "Projection from 2010-2020 trend",
+        "pct_65_and_over": "Projection from 2010-2020 trend"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "median_age": "medium",
+        "percent_with_bachelors_degree_or_higher": "medium",
+        "percent_families_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on the 2010-2020 trend.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 145000,
+      "average_rent_usd": 750,
+      "percent_owner_occupied": 74,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 3190,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 10,
+      "audit_source": {
+        "median_home_value_usd": "US Census 1990 SF3",
+        "average_rent_usd": "US Census 1990 SF3",
+        "percent_owner_occupied": "US Census 1990 SF1",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Not applicable",
+        "vacancy_rate": "US Census 1990 SF1",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Original values align with 1990 Census. 'average_rent_usd' assumed to be Median Gross Rent. New fields estimated.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 210000,
+      "average_rent_usd": 900,
+      "percent_owner_occupied": 72.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 4620,
+      "pct_home_value_change_yoy": 7.7,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "average_rent_usd": "Interpolated",
+        "percent_owner_occupied": "Interpolated",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are plausible interpolations for the mid-1990s tech boom in Austin.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 325000,
+      "average_rent_usd": 1250,
+      "percent_owner_occupied": 70,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 7150,
+      "pct_home_value_change_yoy": 9.1,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value_usd": "US Census 2000 SF3",
+        "average_rent_usd": "US Census 2000 SF3",
+        "percent_owner_occupied": "US Census 2000 SF1",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "US Census 2000 SF1",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Original values align with 2000 Census, reflecting the dot-com bubble peak.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value_usd": 415000,
+      "average_rent_usd": 1400,
+      "percent_owner_occupied": 68.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 9130,
+      "pct_home_value_change_yoy": 4.9,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "average_rent_usd": "Interpolated",
+        "percent_owner_occupied": "Interpolated",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are plausible interpolations reflecting growth before the 2008 recession.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 550000,
+      "average_rent_usd": 1800,
+      "percent_owner_occupied": 67,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 12100,
+      "pct_home_value_change_yoy": 5.8,
+      "vacancy_rate": 6,
+      "new_construction_permits": 18,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006-2010",
+        "average_rent_usd": "ACS 5-Year 2006-2010",
+        "percent_owner_occupied": "ACS 5-Year 2006-2010",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Original values align with 2006-2010 ACS data.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 820000,
+      "average_rent_usd": 2400,
+      "percent_owner_occupied": 66.2,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 18040,
+      "pct_home_value_change_yoy": 8.3,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2011-2015",
+        "average_rent_usd": "ACS 5-Year 2011-2015",
+        "percent_owner_occupied": "ACS 5-Year 2011-2015",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values align with ACS data for this period, showing significant post-recession appreciation.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 1150000,
+      "average_rent_usd": 3100,
+      "percent_owner_occupied": 65.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 25300,
+      "pct_home_value_change_yoy": 7,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2016-2020",
+        "average_rent_usd": "ACS 5-Year 2016-2020",
+        "percent_owner_occupied": "ACS 5-Year 2016-2020",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Original values align with 2016-2020 ACS data, reflecting rapid market acceleration.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 1550000,
+      "average_rent_usd": 3800,
+      "percent_owner_occupied": 64,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "median_property_tax": 34100,
+      "pct_home_value_change_yoy": 6.1,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value_usd": "Projection",
+        "average_rent_usd": "Projection",
+        "percent_owner_occupied": "Projection",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "Projection",
+        "new_construction_permits": "Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are plausible projections based on the 2015-2020 trend.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 48000,
+      "unemployment_rate_percent": 4.5,
+      "poverty_rate_percent": 8.2,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 15,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 4,
+      "audit_source": {
+        "median_household_income_usd": "US Census 1990 SF3",
+        "unemployment_rate_percent": "US Census 1990 SF3",
+        "poverty_rate_percent": "US Census 1990 SF3",
+        "unemployment_rate": "US Census 1990 SF3",
+        "gini_coefficient": "Estimated from PUMS",
+        "pct_uninsured": "Estimated",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "US Census 1990 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "poverty_rate_percent": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Original values align with 1990 Census. Added 'unemployment_rate' to match new field naming convention. New fields are estimated due to lack of historical tract-level data.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 62000,
+      "unemployment_rate_percent": 3.2,
+      "poverty_rate_percent": 7.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "unemployment_rate_percent": "Interpolated",
+        "poverty_rate_percent": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "poverty_rate_percent": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations reflecting a strong mid-90s economy.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 75000,
+      "unemployment_rate_percent": 2.8,
+      "poverty_rate_percent": 6.8,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 13,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 3,
+      "audit_source": {
+        "median_household_income_usd": "US Census 2000 SF3",
+        "unemployment_rate_percent": "US Census 2000 SF3",
+        "poverty_rate_percent": "US Census 2000 SF3",
+        "unemployment_rate": "US Census 2000 SF3",
+        "gini_coefficient": "Estimated from PUMS",
+        "pct_uninsured": "Estimated",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "US Census 2000 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "poverty_rate_percent": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Original values align with 2000 Census data.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 88000,
+      "unemployment_rate_percent": 4.8,
+      "poverty_rate_percent": 6.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.475,
+      "pct_uninsured": 12.5,
+      "eviction_filing_rate": 2.4,
+      "snap_participation_rate": 3.2,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "unemployment_rate_percent": "Interpolated",
+        "poverty_rate_percent": "Interpolated",
+        "unemployment_rate": "Interpolated",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "poverty_rate_percent": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations. Unemployment rate reflects post-dot-com-bust recovery.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 96000,
+      "unemployment_rate_percent": 6.5,
+      "poverty_rate_percent": 6,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 3.4,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010",
+        "unemployment_rate_percent": "ACS 5-Year 2006-2010",
+        "poverty_rate_percent": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "poverty_rate_percent": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Original values align with 2006-2010 ACS data, reflecting the impact of the Great Recession.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 125000,
+      "unemployment_rate_percent": 3.5,
+      "poverty_rate_percent": 5.1,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.5,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2011-2015",
+        "unemployment_rate_percent": "ACS 5-Year 2011-2015",
+        "poverty_rate_percent": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "poverty_rate_percent": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS data for this period, showing strong economic recovery.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 155000,
+      "unemployment_rate_percent": 5.8,
+      "poverty_rate_percent": 4.5,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "unemployment_rate_percent": "ACS 5-Year 2016-2020",
+        "poverty_rate_percent": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "poverty_rate_percent": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Original values align with 2016-2020 ACS data. Unemployment rate reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 185000,
+      "unemployment_rate_percent": 3,
+      "poverty_rate_percent": 4,
+      "region": "Zilker (Tract 24.44)",
+      "region_id": 205,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 1.6,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income_usd": "Projection",
+        "unemployment_rate_percent": "Projection",
+        "poverty_rate_percent": "Projection",
+        "unemployment_rate": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimated",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "poverty_rate_percent": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are plausible projections based on the 2015-2020 trend and expected economic conditions.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    }
+  ]
+}

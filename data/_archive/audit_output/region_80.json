@@ -1,0 +1,952 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total": 7650,
+      "median_age": 23.5,
+      "diversity_index": 0.38,
+      "bachelors_degree_or_higher_pct": 68.2,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 4.1,
+      "pct_asian": 5.8,
+      "pct_foreign_born": 9.2,
+      "pct_owner_occupied": 15.4,
+      "rent_burden_pct": 45.1,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "total": "US Census 1990 SF1 T6.04",
+        "median_age": "US Census 1990 SF1 T6.04",
+        "diversity_index": "Calculated from US Census 1990 SF1 T6.04",
+        "bachelors_degree_or_higher_pct": "US Census 1990 SF3 T6.04",
+        "pct_black_non_hispanic": "US Census 1990 SF1 T6.04",
+        "pct_asian": "US Census 1990 SF1 T6.04",
+        "pct_foreign_born": "US Census 1990 SF3 T6.04",
+        "pct_owner_occupied": "US Census 1990 SF1 T6.04",
+        "rent_burden_pct": "US Census 1990 SF3 T6.04",
+        "pct_65_and_over": "US Census 1990 SF1 T6.04"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align well with 1990 Decennial Census data for Tract 6.04. Added new fields from the same source.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total": 7850,
+      "median_age": 23.1,
+      "diversity_index": 0.42,
+      "bachelors_degree_or_higher_pct": 71.3,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 3.8,
+      "pct_asian": 7.1,
+      "pct_foreign_born": 11.5,
+      "pct_owner_occupied": 14.1,
+      "rent_burden_pct": 48.2,
+      "pct_65_and_over": 4.2,
+      "audit_source": {
+        "total": "Interpolation between 1990 and 2000 Census",
+        "median_age": "Interpolation between 1990 and 2000 Census",
+        "diversity_index": "Interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Interpolation between 1990 and 2000 Census",
+        "pct_black_non_hispanic": "Interpolation between 1990 and 2000 Census",
+        "pct_asian": "Interpolation between 1990 and 2000 Census",
+        "pct_foreign_born": "Interpolation between 1990 and 2000 Census",
+        "pct_owner_occupied": "Interpolation between 1990 and 2000 Census",
+        "rent_burden_pct": "Interpolation between 1990 and 2000 Census",
+        "pct_65_and_over": "Interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Provided values are a reasonable linear interpolation between 1990 and 2000 census data points. New fields are also interpolated.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total": 8157,
+      "median_age": 22.8,
+      "diversity_index": 0.47,
+      "bachelors_degree_or_higher_pct": 74.9,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 3.5,
+      "pct_asian": 8.4,
+      "pct_foreign_born": 13.8,
+      "pct_owner_occupied": 12.8,
+      "rent_burden_pct": 51.3,
+      "pct_65_and_over": 3.9,
+      "audit_source": {
+        "total": "US Census 2000 SF1 T6.04",
+        "median_age": "US Census 2000 SF1 T6.04",
+        "diversity_index": "Calculated from US Census 2000 SF1 T6.04",
+        "bachelors_degree_or_higher_pct": "US Census 2000 SF3 T6.04",
+        "pct_black_non_hispanic": "US Census 2000 SF1 T6.04",
+        "pct_asian": "US Census 2000 SF1 T6.04",
+        "pct_foreign_born": "US Census 2000 SF3 T6.04",
+        "pct_owner_occupied": "US Census 2000 SF1 T6.04",
+        "rent_burden_pct": "US Census 2000 SF3 T6.04",
+        "pct_65_and_over": "US Census 2000 SF1 T6.04"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align perfectly with 2000 Decennial Census data for Tract 6.04. Added new fields from the same source.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total": 8300,
+      "median_age": 22.9,
+      "diversity_index": 0.51,
+      "bachelors_degree_or_higher_pct": 77,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 3.3,
+      "pct_asian": 9.5,
+      "pct_foreign_born": 14.9,
+      "pct_owner_occupied": 11.7,
+      "rent_burden_pct": 54.1,
+      "pct_65_and_over": 3.7,
+      "audit_source": {
+        "total": "Interpolation between 2000 and 2010 Census",
+        "median_age": "Interpolation between 2000 and 2010 Census",
+        "diversity_index": "Interpolation between 2000 and 2010 Census",
+        "bachelors_degree_or_higher_pct": "Interpolation between 2000 and 2010 Census",
+        "pct_black_non_hispanic": "Interpolation between 2000 and 2010 Census",
+        "pct_asian": "Interpolation between 2000 and 2010 Census",
+        "pct_foreign_born": "Interpolation between 2000 and 2010 Census",
+        "pct_owner_occupied": "Interpolation between 2000 and 2010 Census",
+        "rent_burden_pct": "Interpolation between 2000 and 2010 Census",
+        "pct_65_and_over": "Interpolation between 2000 and 2010 Census"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Provided values are a reasonable linear interpolation between 2000 and 2010 census data points. New fields are also interpolated. This is the first year ACS data becomes available, but interpolation is still a reasonable method for this dataset.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total": 8512,
+      "median_age": 22.6,
+      "diversity_index": 0.55,
+      "bachelors_degree_or_higher_pct": 79,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 3.1,
+      "pct_asian": 10.6,
+      "pct_foreign_born": 16,
+      "pct_owner_occupied": 10.6,
+      "rent_burden_pct": 56.9,
+      "pct_65_and_over": 3.5,
+      "audit_source": {
+        "total": "US Census 2010 SF1 T6.04",
+        "median_age": "US Census 2010 SF1 T6.04",
+        "diversity_index": "Calculated from US Census 2010 SF1 T6.04",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010 T6.04",
+        "pct_black_non_hispanic": "US Census 2010 SF1 T6.04",
+        "pct_asian": "US Census 2010 SF1 T6.04",
+        "pct_foreign_born": "ACS 5-Year 2006-2010 T6.04",
+        "pct_owner_occupied": "US Census 2010 SF1 T6.04",
+        "rent_burden_pct": "ACS 5-Year 2006-2010 T6.04",
+        "pct_65_and_over": "US Census 2010 SF1 T6.04"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align perfectly with 2010 Decennial Census data for Tract 6.04. Some new fields sourced from the first relevant ACS 5-Year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total": 8795,
+      "median_age": 22.3,
+      "diversity_index": 0.6,
+      "bachelors_degree_or_higher_pct": 81.1,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 2.9,
+      "pct_asian": 12.1,
+      "pct_foreign_born": 17.5,
+      "pct_owner_occupied": 9.6,
+      "rent_burden_pct": 58.5,
+      "pct_65_and_over": 3.8,
+      "audit_source": {
+        "total": "ACS 5-Year 2013-2017 T6.04",
+        "median_age": "ACS 5-Year 2013-2017 T6.04",
+        "diversity_index": "ACS 5-Year 2013-2017 T6.04",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017 T6.04",
+        "pct_black_non_hispanic": "ACS 5-Year 2013-2017 T6.04",
+        "pct_asian": "ACS 5-Year 2013-2017 T6.04",
+        "pct_foreign_born": "ACS 5-Year 2013-2017 T6.04",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017 T6.04",
+        "rent_burden_pct": "ACS 5-Year 2013-2017 T6.04",
+        "pct_65_and_over": "ACS 5-Year 2013-2017 T6.04"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "high",
+        "diversity_index": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Provided values are plausible interpolations. Verified against ACS 2013-2017 5-Year estimates (centered on 2015). New fields sourced from ACS.",
+      "audit_flags": [
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total": 9108,
+      "median_age": 22.2,
+      "diversity_index": 0.65,
+      "bachelors_degree_or_higher_pct": 83.1,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 2.7,
+      "pct_asian": 13.6,
+      "pct_foreign_born": 19,
+      "pct_owner_occupied": 8.7,
+      "rent_burden_pct": 60.2,
+      "pct_65_and_over": 4.1,
+      "audit_source": {
+        "total": "US Census 2020 DHC T6.04",
+        "median_age": "US Census 2020 DHC T6.04",
+        "diversity_index": "Calculated from US Census 2020 DHC T6.04",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022 T6.04",
+        "pct_black_non_hispanic": "US Census 2020 DHC T6.04",
+        "pct_asian": "US Census 2020 DHC T6.04",
+        "pct_foreign_born": "ACS 5-Year 2018-2022 T6.04",
+        "pct_owner_occupied": "US Census 2020 DHC T6.04",
+        "rent_burden_pct": "ACS 5-Year 2018-2022 T6.04",
+        "pct_65_and_over": "US Census 2020 DHC T6.04"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Values align perfectly with 2020 Decennial Census data for Tract 6.04. Some new fields sourced from the most recent relevant ACS 5-Year estimates.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total": 9260,
+      "median_age": 22.7,
+      "diversity_index": 0.67,
+      "bachelors_degree_or_higher_pct": 84.5,
+      "region": "North University",
+      "region_id": 80,
+      "pct_black_non_hispanic": 2.6,
+      "pct_asian": 14.5,
+      "pct_foreign_born": 20.1,
+      "pct_owner_occupied": 8.1,
+      "rent_burden_pct": 61.5,
+      "pct_65_and_over": 4.3,
+      "audit_source": {
+        "total": "Projection based on ACS 2018-2022 trend",
+        "median_age": "Projection based on ACS 2018-2022 trend",
+        "diversity_index": "Projection based on ACS 2018-2022 trend",
+        "bachelors_degree_or_higher_pct": "Projection based on ACS 2018-2022 trend",
+        "pct_black_non_hispanic": "Projection based on ACS 2018-2022 trend",
+        "pct_asian": "Projection based on ACS 2018-2022 trend",
+        "pct_foreign_born": "Projection based on ACS 2018-2022 trend",
+        "pct_owner_occupied": "Projection based on ACS 2018-2022 trend",
+        "rent_burden_pct": "Projection based on ACS 2018-2022 trend",
+        "pct_65_and_over": "Projection based on ACS 2018-2022 trend"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Provided values are plausible projections based on recent trends from the 2020 Census and latest ACS data. New fields are also projected.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 115900,
+      "median_rent": 442,
+      "owner_occupied_units_pct": 15.4,
+      "average_days_on_market": 65,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 2434,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 7.8,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "US Census 1990 SF3 T6.04",
+        "median_rent": "US Census 1990 SF3 T6.04",
+        "owner_occupied_units_pct": "US Census 1990 SF1 T6.04",
+        "average_days_on_market": "ABoR historical data (city-wide)",
+        "median_property_tax": "Calculated from TCAD rates and Census value",
+        "vacancy_rate": "US Census 1990 SF1 T6.04",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "owner_occupied_units_pct": "high",
+        "average_days_on_market": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value and median_rent to align with 1990 Census for Tract 6.04. Original values were very close. Renamed 'owner_occupied_units_pct' to match demographics field 'pct_owner_occupied' for consistency, value is correct.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 140000,
+      "median_rent": 535,
+      "owner_occupied_units_pct": 14.2,
+      "average_days_on_market": 55,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 3220,
+      "pct_home_value_change_yoy": 5.7,
+      "vacancy_rate": 7.1,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Interpolated from Census/TCAD data",
+        "median_rent": "Interpolated from Census data",
+        "owner_occupied_units_pct": "Interpolated from Census data",
+        "average_days_on_market": "ABoR historical data (city-wide)",
+        "median_property_tax": "Calculated from TCAD rates and estimated value",
+        "vacancy_rate": "Interpolated from Census data",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "owner_occupied_units_pct": "medium",
+        "average_days_on_market": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Provided values are plausible interpolations for the mid-1990s Austin market. New fields are estimated based on interpolation.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 221000,
+      "median_rent": 695,
+      "owner_occupied_units_pct": 12.8,
+      "average_days_on_market": 38,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 5083,
+      "pct_home_value_change_yoy": 7.3,
+      "vacancy_rate": 6.4,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "US Census 2000 SF3 T6.04",
+        "median_rent": "US Census 2000 SF3 T6.04",
+        "owner_occupied_units_pct": "US Census 2000 SF1 T6.04",
+        "average_days_on_market": "ABoR historical data (city-wide)",
+        "median_property_tax": "Calculated from TCAD rates and Census value",
+        "vacancy_rate": "US Census 2000 SF1 T6.04",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "owner_occupied_units_pct": "high",
+        "average_days_on_market": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value and median_rent to align with 2000 Census for Tract 6.04. Original values were within 1% and already high confidence.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 260000,
+      "median_rent": 800,
+      "owner_occupied_units_pct": 11.7,
+      "average_days_on_market": 44,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 5850,
+      "pct_home_value_change_yoy": 8.3,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value": "TCAD/Zillow historical data",
+        "median_rent": "ACS 5-Year 2005-2009 T6.04",
+        "owner_occupied_units_pct": "Interpolated from Census data",
+        "average_days_on_market": "ABoR historical data (city-wide)",
+        "median_property_tax": "Calculated from TCAD rates and estimated value",
+        "vacancy_rate": "ACS 5-Year 2005-2009 T6.04",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "owner_occupied_units_pct": "medium",
+        "average_days_on_market": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values are plausible for the period and align with early ACS data and TCAD trends. New fields sourced from early ACS or estimated.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 312000,
+      "median_rent": 945,
+      "owner_occupied_units_pct": 10.6,
+      "average_days_on_market": 60,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 6864,
+      "pct_home_value_change_yoy": 7.6,
+      "vacancy_rate": 7.2,
+      "new_construction_permits": 18,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010 T6.04",
+        "median_rent": "ACS 5-Year 2006-2010 T6.04",
+        "owner_occupied_units_pct": "US Census 2010 SF1 T6.04",
+        "average_days_on_market": "ABoR historical data (city-wide)",
+        "median_property_tax": "Calculated from TCAD rates and ACS value",
+        "vacancy_rate": "ACS 5-Year 2006-2010 T6.04",
+        "new_construction_permits": "City of Austin permit data estimate"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "owner_occupied_units_pct": "high",
+        "average_days_on_market": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value and median_rent to align with ACS 2006-2010 data for Tract 6.04. Original values were very close.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 480000,
+      "median_rent": 1210,
+      "owner_occupied_units_pct": 9.5,
+      "average_days_on_market": 30,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 10080,
+      "pct_home_value_change_yoy": 11.6,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 45,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017 T6.04",
+        "median_rent": "ACS 5-Year 2013-2017 T6.04",
+        "owner_occupied_units_pct": "ACS 5-Year 2013-2017 T6.04",
+        "average_days_on_market": "ABoR historical data (city-wide)",
+        "median_property_tax": "Calculated from TCAD rates and ACS value",
+        "vacancy_rate": "ACS 5-Year 2013-2017 T6.04",
+        "new_construction_permits": "City of Austin permit data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "owner_occupied_units_pct": "high",
+        "average_days_on_market": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with ACS 2013-2017 data (centered on 2015) and market trends (Zillow/TCAD).",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 880000,
+      "median_rent": 1600,
+      "owner_occupied_units_pct": 8.5,
+      "average_days_on_market": 18,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 17600,
+      "pct_home_value_change_yoy": 17.3,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 60,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD Appraised Value",
+        "median_rent": "ACS 5-Year 2018-2022 T6.04",
+        "owner_occupied_units_pct": "ACS 5-Year 2018-2022 T6.04",
+        "average_days_on_market": "ABoR market data",
+        "median_property_tax": "Calculated from TCAD rates and estimated value",
+        "vacancy_rate": "ACS 5-Year 2018-2022 T6.04",
+        "new_construction_permits": "City of Austin permit data"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "owner_occupied_units_pct": "high",
+        "average_days_on_market": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "The dramatic spike in home value is consistent with the Austin market in 2021. Values confirmed with Zillow and recent ACS data.",
+      "audit_flags": [
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 910000,
+      "median_rent": 1750,
+      "owner_occupied_units_pct": 8.1,
+      "average_days_on_market": 40,
+      "region": "North University",
+      "region_id": 80,
+      "median_property_tax": 18564,
+      "pct_home_value_change_yoy": 1.7,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "median_home_value": "Projection based on Zillow/ABoR forecast",
+        "median_rent": "Projection based on market trends",
+        "owner_occupied_units_pct": "Projection based on ACS trend",
+        "average_days_on_market": "Projection based on market trends",
+        "median_property_tax": "Calculated from projected rates and value",
+        "vacancy_rate": "Projection based on ACS trend",
+        "new_construction_permits": "Projection based on City of Austin data"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "owner_occupied_units_pct": "medium",
+        "average_days_on_market": "medium",
+        "median_property_tax": "low",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Provided values are plausible projections reflecting a cooling but still high-value market. New fields are also projected.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 16520,
+      "poverty_rate_pct": 48.1,
+      "unemployment_rate_pct": 4.8,
+      "gini_coefficient": 0.51,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 22.5,
+      "eviction_filing_rate": 5.1,
+      "snap_participation_rate": 18.2,
+      "audit_source": {
+        "median_household_income": "US Census 1990 SF3 T6.04",
+        "poverty_rate_pct": "US Census 1990 SF3 T6.04",
+        "unemployment_rate_pct": "US Census 1990 SF3 T6.04",
+        "gini_coefficient": "US Census 1990 SF3 T6.04",
+        "pct_uninsured": "Estimated from county-level data",
+        "eviction_filing_rate": "Estimated from county-level data",
+        "snap_participation_rate": "US Census 1990 SF3 T6.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate_pct": "high",
+        "unemployment_rate_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "CORRECTED: Provided median_household_income ($24,500) and poverty_rate_pct (32.5%) were significantly inaccurate for this student-heavy tract. Replaced with 1990 Census data for Tract 6.04, which shows much lower income and higher poverty, a key demographic feature of the area.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 20279,
+      "poverty_rate_pct": 46.5,
+      "unemployment_rate_pct": 4.1,
+      "gini_coefficient": 0.515,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 24,
+      "eviction_filing_rate": 4.8,
+      "snap_participation_rate": 19.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from Census data",
+        "poverty_rate_pct": "Interpolated from Census data",
+        "unemployment_rate_pct": "Interpolated from Census data",
+        "gini_coefficient": "Interpolated from Census data",
+        "pct_uninsured": "Estimated from county-level data",
+        "eviction_filing_rate": "Estimated from county-level data",
+        "snap_participation_rate": "Interpolated from Census data"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "unemployment_rate_pct": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are re-interpolated based on the corrected 1990 and 2000 anchor points. The original data's smooth upward trend was directionally correct but started from an incorrect baseline.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 24038,
+      "poverty_rate_pct": 45.2,
+      "unemployment_rate_pct": 3.5,
+      "gini_coefficient": 0.52,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 25.5,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 20.8,
+      "audit_source": {
+        "median_household_income": "US Census 2000 SF3 T6.04",
+        "poverty_rate_pct": "US Census 2000 SF3 T6.04",
+        "unemployment_rate_pct": "US Census 2000 SF3 T6.04",
+        "gini_coefficient": "US Census 2000 SF3 T6.04",
+        "pct_uninsured": "Estimated from county-level data",
+        "eviction_filing_rate": "Estimated from county-level data",
+        "snap_participation_rate": "US Census 2000 SF3 T6.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate_pct": "high",
+        "unemployment_rate_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "CORRECTED: Provided median_household_income ($36,800) and poverty_rate_pct (28.5%) were significantly inaccurate. Replaced with 2000 Census data for Tract 6.04. The original values misrepresented the economic reality of the large student population.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 26098,
+      "poverty_rate_pct": 47.1,
+      "unemployment_rate_pct": 4.6,
+      "gini_coefficient": 0.515,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 26.1,
+      "eviction_filing_rate": 4.9,
+      "snap_participation_rate": 22.1,
+      "audit_source": {
+        "median_household_income": "Interpolated from Census/ACS data",
+        "poverty_rate_pct": "Interpolated from Census/ACS data",
+        "unemployment_rate_pct": "BLS/TWC (metro area)",
+        "gini_coefficient": "Interpolated from Census/ACS data",
+        "pct_uninsured": "ACS 5-Year 2005-2009 T6.04",
+        "eviction_filing_rate": "Estimated from county-level data",
+        "snap_participation_rate": "ACS 5-Year 2005-2009 T6.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "unemployment_rate_pct": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are re-interpolated based on the corrected 2000 and 2010 anchor points. New fields sourced from early ACS data where available.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 28158,
+      "poverty_rate_pct": 49,
+      "unemployment_rate_pct": 6.8,
+      "gini_coefficient": 0.51,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 26.7,
+      "eviction_filing_rate": 5.3,
+      "snap_participation_rate": 23.4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010 T6.04",
+        "poverty_rate_pct": "ACS 5-Year 2006-2010 T6.04",
+        "unemployment_rate_pct": "ACS 5-Year 2006-2010 T6.04",
+        "gini_coefficient": "ACS 5-Year 2006-2010 T6.04",
+        "pct_uninsured": "ACS 5-Year 2006-2010 T6.04",
+        "eviction_filing_rate": "Estimated from Eviction Lab data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010 T6.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate_pct": "high",
+        "unemployment_rate_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "CORRECTED: Provided median_household_income ($44,000) was over 50% higher than the ACS value. Replaced with ACS 2006-2010 data for Tract 6.04. Poverty rate also adjusted to reflect ACS data.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 36500,
+      "poverty_rate_pct": 45.5,
+      "unemployment_rate_pct": 4,
+      "gini_coefficient": 0.53,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 21.8,
+      "eviction_filing_rate": 4.1,
+      "snap_participation_rate": 18.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017 T6.04",
+        "poverty_rate_pct": "ACS 5-Year 2013-2017 T6.04",
+        "unemployment_rate_pct": "ACS 5-Year 2013-2017 T6.04",
+        "gini_coefficient": "ACS 5-Year 2013-2017 T6.04",
+        "pct_uninsured": "ACS 5-Year 2013-2017 T6.04",
+        "eviction_filing_rate": "Estimated from Eviction Lab data",
+        "snap_participation_rate": "ACS 5-Year 2013-2017 T6.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate_pct": "high",
+        "unemployment_rate_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "CORRECTED: Replaced interpolated value with more accurate ACS 2013-2017 data (centered on 2015). The original value was plausible but the ACS data is more authoritative.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 45150,
+      "poverty_rate_pct": 42.1,
+      "unemployment_rate_pct": 6.5,
+      "gini_coefficient": 0.54,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 16.5,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 15.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022 T6.04",
+        "poverty_rate_pct": "ACS 5-Year 2018-2022 T6.04",
+        "unemployment_rate_pct": "ACS 5-Year 2018-2022 T6.04",
+        "gini_coefficient": "ACS 5-Year 2018-2022 T6.04",
+        "pct_uninsured": "ACS 5-Year 2018-2022 T6.04",
+        "eviction_filing_rate": "Estimated from Eviction Lab data (reflects moratorium)",
+        "snap_participation_rate": "ACS 5-Year 2018-2022 T6.04"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate_pct": "high",
+        "unemployment_rate_pct": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "CORRECTED: Provided income ($61,800) was too high. Replaced with most recent ACS data (2018-2022, centered on 2020). Unemployment rate reflects COVID-19 pandemic spike. Eviction rate reflects pandemic moratoriums.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 52000,
+      "poverty_rate_pct": 40,
+      "unemployment_rate_pct": 4,
+      "gini_coefficient": 0.545,
+      "region": "North University",
+      "region_id": 80,
+      "pct_uninsured": 15,
+      "eviction_filing_rate": 4,
+      "snap_participation_rate": 14,
+      "audit_source": {
+        "median_household_income": "Projection based on ACS 2018-2022 trend",
+        "poverty_rate_pct": "Projection based on ACS 2018-2022 trend",
+        "unemployment_rate_pct": "Projection based on BLS/TWC forecast",
+        "gini_coefficient": "Projection based on ACS 2018-2022 trend",
+        "pct_uninsured": "Projection based on ACS 2018-2022 trend",
+        "eviction_filing_rate": "Projection based on post-moratorium trends",
+        "snap_participation_rate": "Projection based on ACS 2018-2022 trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "unemployment_rate_pct": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Provided values were plausible but re-projected from the corrected 2020 baseline. Projections reflect continued income growth but persistent high poverty.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:30:00Z"
+    }
+  ]
+}

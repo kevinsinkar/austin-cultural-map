@@ -104,8 +104,6 @@ export default function MapView({
               { on: showHeritage, toggle: () => setShowHeritage(!showHeritage), label: "Heritage", icon: <span style={{ width: 12, height: 0, borderTop: "2px dashed currentColor" }} /> },
               { on: showPins, toggle: () => setShowPins(!showPins), label: "Businesses", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPins ? "#4ade80" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
               { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Project Connect", icon: <svg width="12" height="10" viewBox="0 0 12 10"><path d="M1 9L6 1L11 9" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg> },
-              { on: showMusicVenues, toggle: () => setShowMusicVenues(!showMusicVenues), label: "Music Venues", icon: <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" stroke="currentColor" strokeWidth="1.5" fill="none" /><circle cx="6" cy="6" r="1.5" fill="currentColor" /></svg> },
-              { on: showDevPressure, toggle: () => setShowDevPressure(!showDevPressure), label: "Dev. Pressure", icon: <svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="4" width="8" height="6" stroke="currentColor" strokeWidth="1.5" fill="none" /><path d="M6 1L10 4H2Z" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg> },
             ].map((btn, i) => (
               <button key={i} onClick={btn.toggle} aria-pressed={btn.on} style={{ display: "flex", alignItems: "center", gap: 5, padding: "4px 10px", borderRadius: 6, border: btn.on ? "1.5px solid #0f766e" : "1.5px solid #c4c0b8", background: btn.on ? "#f0fdfa" : "#fff", color: btn.on ? "#0f766e" : "#64615b", fontSize: 11, fontWeight: 500, cursor: "pointer", minHeight: 32 }}>
                 {btn.icon}{btn.label}
@@ -190,11 +188,9 @@ export default function MapView({
                 ))}
               </div>
             )}
-            {(showProjectConnect || showMusicVenues || showDevPressure) && (
+            {showProjectConnect && (
               <div style={{ paddingTop: 6, borderTop: "1px solid #e8e5e0", display: "flex", gap: 8, flexWrap: "wrap" }}>
-                {showProjectConnect && <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2.5px dashed #2563eb" }} aria-hidden="true" /><span style={{ fontSize: 10, color: "#64615b" }}>Transit</span></div>}
-                {showMusicVenues && <div style={{ display: "flex", alignItems: "center", gap: 4 }}><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="rgba(124,58,237,.15)" stroke="#7c3aed" strokeWidth="1.5" /></svg><span style={{ fontSize: 10, color: "#64615b" }}>Venues</span></div>}
-                {showDevPressure && <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 10, height: 10, borderRadius: 2, border: "2.5px solid #fb923c" }} aria-hidden="true" /><span style={{ fontSize: 10, color: "#64615b" }}>Dev. pressure</span></div>}
+                <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2.5px dashed #2563eb" }} aria-hidden="true" /><span style={{ fontSize: 10, color: "#64615b" }}>Transit</span></div>
               </div>
             )}
           </div>

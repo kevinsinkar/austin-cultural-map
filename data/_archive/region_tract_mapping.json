@@ -1,0 +1,2054 @@
+{
+  "analysis_date": "2026-03-03 19:01:14",
+  "total_data_regions": 270,
+  "geojson_analysis": {
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "geojson_regions_found": 0,
+    "data_vs_geojson_match": false
+  },
+  "region_mappings": {
+    "St. Elmo District": {
+      "region_id": 1,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Loop (Tract 407.0)": {
+      "region_id": 2,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Cherrywood (Tract 3.09)": {
+      "region_id": 3,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Blackland (Tract 22.14)": {
+      "region_id": 4,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Windsor Hills (Tract 419.0)": {
+      "region_id": 5,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "North Shoal Creek (Tract 411.0)": {
+      "region_id": 6,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Barton Creek": {
+      "region_id": 7,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "St. John's (Tract 440.0)": {
+      "region_id": 8,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Windsor Park (Tract 437.0)": {
+      "region_id": 9,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Circle C Ranch (Tract 368.0)": {
+      "region_id": 10,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Georgian Acres (Tract 415.0)": {
+      "region_id": 11,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Springdale": {
+      "region_id": 12,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 324.0)": {
+      "region_id": 13,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Cherrywood (Tract 410.0)": {
+      "region_id": 14,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Zilker (Tract 13.12)": {
+      "region_id": 15,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Riverside (Tract 23.2)": {
+      "region_id": 16,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Dessau": {
+      "region_id": 17,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Creedmoor": {
+      "region_id": 18,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Austin": {
+      "region_id": 19,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "North Loop (Tract 400.0)": {
+      "region_id": 20,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "St. Edward's": {
+      "region_id": 21,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Milwood (Tract 345.0)": {
+      "region_id": 22,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Oak Hill (Tract 321.0)": {
+      "region_id": 23,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Pleasant Valley": {
+      "region_id": 24,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Anderson Mill (Tract 338.0)": {
+      "region_id": 25,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Brentwood": {
+      "region_id": 26,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "The Domain (Tract 308.0)": {
+      "region_id": 27,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Milwood (Tract 316.0)": {
+      "region_id": 28,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "The Arboretum (Tract 325.0)": {
+      "region_id": 29,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Walnut Creek (Tract 456.0)": {
+      "region_id": 30,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Great Hills (Tract 342.0)": {
+      "region_id": 31,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "The Arboretum (Tract 413.0)": {
+      "region_id": 32,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "St. Johns": {
+      "region_id": 33,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Burnet (Tract 420.0)": {
+      "region_id": 34,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Tech Ridge (Tract 451.0)": {
+      "region_id": 35,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 414.0)": {
+      "region_id": 36,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Windsor Park (Tract 431.0)": {
+      "region_id": 37,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Harris Ridge (Tract 464.0)": {
+      "region_id": 38,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Shoal Creek (Tract 402.0)": {
+      "region_id": 39,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "River Place (Tract 339.0)": {
+      "region_id": 40,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Gracywoods (Tract 452.0)": {
+      "region_id": 41,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Shoal Creek (Tract 422.0)": {
+      "region_id": 42,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Great Hills (Tract 300.0)": {
+      "region_id": 43,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Harris Branch": {
+      "region_id": 44,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Lakeway": {
+      "region_id": 45,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Cat Mountain": {
+      "region_id": 46,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Montopolis (Tract 24.49)": {
+      "region_id": 47,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "East Cesar Chavez (Tract 13.11)": {
+      "region_id": 48,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Oak Hill (Tract 313.0)": {
+      "region_id": 49,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "River Place (Tract 358.0)": {
+      "region_id": 50,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Harris Ridge (Tract 457.0)": {
+      "region_id": 51,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Dessau Valley": {
+      "region_id": 52,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Shady Hollow (Tract 319.0)": {
+      "region_id": 53,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Wells Branch (Tract 446.0)": {
+      "region_id": 54,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Cherry Creek (Tract 332.0)": {
+      "region_id": 55,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Shady Hollow (Tract 24.45)": {
+      "region_id": 56,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Shoal Creek (Tract 433.0)": {
+      "region_id": 57,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Wells Branch (Tract 465.0)": {
+      "region_id": 58,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Wells Branch (Tract 441.0)": {
+      "region_id": 59,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Southwood (Tract 24.39)": {
+      "region_id": 60,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Pflugerville (Tract 421.0)": {
+      "region_id": 61,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Gracywoods (Tract 439.0)": {
+      "region_id": 62,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Barton Creek West": {
+      "region_id": 63,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Southwood (Tract 24.4)": {
+      "region_id": 64,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Circle C Ranch (Tract 24.46)": {
+      "region_id": 65,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Montopolis (Tract 24.42)": {
+      "region_id": 66,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Anderson Mill (Tract 356.0)": {
+      "region_id": 67,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "St. John's Neighborhood": {
+      "region_id": 68,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Milwood (Tract 205.17)": {
+      "region_id": 69,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Jollyville (Tract 203.33)": {
+      "region_id": 70,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 341.0)": {
+      "region_id": 71,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Montopolis (Tract 24.52)": {
+      "region_id": 72,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Windsor Hills (Tract 22.22)": {
+      "region_id": 73,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Cherrywood (Tract 3.08)": {
+      "region_id": 74,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Great Hills (Tract 346.0)": {
+      "region_id": 75,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Montopolis (Tract 23.21)": {
+      "region_id": 76,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Wildhorse Ranch": {
+      "region_id": 77,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Riverside (Tract 23.26)": {
+      "region_id": 78,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Blackland (Tract 4.02)": {
+      "region_id": 79,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North University": {
+      "region_id": 80,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Campus": {
+      "region_id": 81,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Eastview": {
+      "region_id": 82,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Rosewood (Tract 8.02)": {
+      "region_id": 83,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Chestnut": {
+      "region_id": 84,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Foster Heights": {
+      "region_id": 85,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Central East Austin": {
+      "region_id": 86,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Old West Austin- Tarrytown East": {
+      "region_id": 87,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Old Enfield - Central West Austin": {
+      "region_id": 88,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Oakmont Heights*": {
+      "region_id": 89,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Parker Lane West": {
+      "region_id": 90,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "West Congress": {
+      "region_id": 91,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Allandale South-Rosedale": {
+      "region_id": 92,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Parker Lane East": {
+      "region_id": 93,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northside": {
+      "region_id": 94,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Tarrytown West": {
+      "region_id": 95,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Treemont": {
+      "region_id": 96,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Akins": {
+      "region_id": 97,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "East Riverside - Pleasant Valley": {
+      "region_id": 98,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Dawson (Tract 13.08)": {
+      "region_id": 99,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Bartons Bluff": {
+      "region_id": 100,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Boggy Creek": {
+      "region_id": 101,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Johnston Terrace": {
+      "region_id": 102,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Windsor Park West": {
+      "region_id": 103,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Windsor Park East": {
+      "region_id": 104,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "MLK North": {
+      "region_id": 105,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "MLK South": {
+      "region_id": 106,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "West University": {
+      "region_id": 107,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Riverside - I35": {
+      "region_id": 108,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East MLK": {
+      "region_id": 109,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Davenport Ranch": {
+      "region_id": 110,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "East Austin": {
+      "region_id": 111,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "East Cesar Chavez -Holly": {
+      "region_id": 112,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Clarksville": {
+      "region_id": 113,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Zilker-Bouldin": {
+      "region_id": 114,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Galindo": {
+      "region_id": 115,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Travis Heights East": {
+      "region_id": 116,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Colorado Foothills*": {
+      "region_id": 117,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Ridgetop": {
+      "region_id": 118,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Triangle State": {
+      "region_id": 119,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Hyde Park South": {
+      "region_id": 120,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Hancock": {
+      "region_id": 121,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Highland South": {
+      "region_id": 122,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Travis Heights West": {
+      "region_id": 123,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Crestview": {
+      "region_id": 124,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Brentwood North": {
+      "region_id": 125,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Allandale North": {
+      "region_id": 126,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Deep Eddy": {
+      "region_id": 127,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "South Manchaca (Tract 20.02)": {
+      "region_id": 128,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Lakehills Plaza": {
+      "region_id": 129,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Rob Roy": {
+      "region_id": 130,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Jollyville (Tract 204.1)": {
+      "region_id": 131,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "River Place (Tract 204.03)": {
+      "region_id": 132,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Steiner Ranch (Tract 204.04)": {
+      "region_id": 133,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 204.05)": {
+      "region_id": 134,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Avery Ranch (Tract 204.06)": {
+      "region_id": 135,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Milwood (Tract 205.03)": {
+      "region_id": 136,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 204.11)": {
+      "region_id": 137,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Lakeline Area (Tract 205.08)": {
+      "region_id": 138,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Steiner Ranch (Tract 340.0)": {
+      "region_id": 139,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Zilker (Tract 19.23)": {
+      "region_id": 140,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "West Lake Hills (Tract 330.0)": {
+      "region_id": 141,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Old West Austin": {
+      "region_id": 142,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Rollingwood": {
+      "region_id": 143,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Great Hills (Tract 307.0)": {
+      "region_id": 144,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Arboretum Area": {
+      "region_id": 145,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Allandale": {
+      "region_id": 146,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "The Arboretum (Tract 323.0)": {
+      "region_id": 147,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Shady Hollow (Tract 318.0)": {
+      "region_id": 148,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Stratford Hills": {
+      "region_id": 149,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Tech Ridge (Tract 435.0)": {
+      "region_id": 150,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Windsor Hills (Tract 424.0)": {
+      "region_id": 151,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "St. John's (Tract 403.0)": {
+      "region_id": 152,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Highland": {
+      "region_id": 153,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "South Congress": {
+      "region_id": 154,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Circle C Ranch (Tract 317.0)": {
+      "region_id": 155,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Barton Hills (Tract 310.0)": {
+      "region_id": 156,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Bouldin Creek (Tract 23.23)": {
+      "region_id": 157,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 306.0)": {
+      "region_id": 158,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Oak Hill (Tract 24.38)": {
+      "region_id": 159,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "East 11th Street": {
+      "region_id": 160,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "University of Texas at Austin": {
+      "region_id": 161,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "West Campus": {
+      "region_id": 162,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Capitol Complex": {
+      "region_id": 163,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Bouldin Creek (Tract 13.1)": {
+      "region_id": 164,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Cesar Chavez (Tract 11.02)": {
+      "region_id": 165,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Circle C Ranch (Tract 333.0)": {
+      "region_id": 166,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Shady Hollow (Tract 309.0)": {
+      "region_id": 167,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Harris Ridge (Tract 450.0)": {
+      "region_id": 168,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Georgian Acres (Tract 22.21)": {
+      "region_id": 169,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Dawson (Tract 20.06)": {
+      "region_id": 170,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "University of Texas at Austin Campus": {
+      "region_id": 171,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Zilker (Tract 20.07)": {
+      "region_id": 172,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Oak Hill (Tract 348.0)": {
+      "region_id": 173,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "River Place (Tract 349.0)": {
+      "region_id": 174,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Circle C Ranch (Tract 312.0)": {
+      "region_id": 175,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "The Arboretum (Tract 454.0)": {
+      "region_id": 176,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Milwood (Tract 453.0)": {
+      "region_id": 177,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Great Hills (Tract 404.0)": {
+      "region_id": 178,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "West Lake Hills (Tract 19.2)": {
+      "region_id": 179,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Avery Ranch (Tract 205.16)": {
+      "region_id": 180,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Travis Heights": {
+      "region_id": 181,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Wells Branch (Tract 412.0)": {
+      "region_id": 182,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Del Valle (Tract 22.17)": {
+      "region_id": 183,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Pflugerville (Tract 447.0)": {
+      "region_id": 184,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Montopolis (Tract 24.5)": {
+      "region_id": 185,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Lamar": {
+      "region_id": 186,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Walnut Creek (Tract 205.13)": {
+      "region_id": 187,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Fern Bluff": {
+      "region_id": 188,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Bee Cave": {
+      "region_id": 189,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Canyon Creek": {
+      "region_id": 190,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Four Points": {
+      "region_id": 191,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Southpark Meadows": {
+      "region_id": 192,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Southwood (Tract 24.51)": {
+      "region_id": 193,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "The Domain (Tract 405.0)": {
+      "region_id": 194,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Westlake": {
+      "region_id": 195,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Steiner Ranch (Tract 314.0)": {
+      "region_id": 196,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Steiner Ranch (Tract 357.0)": {
+      "region_id": 197,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Lamar / Rundberg Area": {
+      "region_id": 198,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Quail Creek": {
+      "region_id": 199,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Shoal Creek (Tract 418.0)": {
+      "region_id": 200,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Burnet (Tract 417.0)": {
+      "region_id": 201,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Bouldin Creek (Tract 24.43)": {
+      "region_id": 202,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Travis Country": {
+      "region_id": 203,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Circle C Ranch (Tract 372.0)": {
+      "region_id": 204,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Zilker (Tract 24.44)": {
+      "region_id": 205,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Georgian Acres (Tract 409.0)": {
+      "region_id": 206,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "North Shoal Creek (Tract 406.0)": {
+      "region_id": 207,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Oak Hill (Tract 334.0)": {
+      "region_id": 208,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Barton Hills (Tract 19.22)": {
+      "region_id": 209,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Cesar Chavez (Tract 11.03)": {
+      "region_id": 210,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Steiner Ranch (Tract 351.0)": {
+      "region_id": 211,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Zilker (Tract 303.0)": {
+      "region_id": 212,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Westlake Hills (Tract 304.0)": {
+      "region_id": 213,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Lakeline Area (Tract 343.0)": {
+      "region_id": 214,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Steiner Ranch (Tract 344.0)": {
+      "region_id": 215,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Jollyville (Tract 337.0)": {
+      "region_id": 216,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Jollyville (Tract 327.0)": {
+      "region_id": 217,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwest Hills": {
+      "region_id": 218,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Circle C Ranch (Tract 371.0)": {
+      "region_id": 219,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Scofield Farms": {
+      "region_id": 220,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Westlake Hills (Tract 19.21)": {
+      "region_id": 221,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Northwood (Tract 326.0)": {
+      "region_id": 222,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Rosewood (Tract 434.0)": {
+      "region_id": 223,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Cherry Creek (Tract 24.37)": {
+      "region_id": 224,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Southwood (Tract 24.41)": {
+      "region_id": 225,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "River Place (Tract 350.0)": {
+      "region_id": 226,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Montopolis (Tract 22.16)": {
+      "region_id": 227,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "St. Elmo": {
+      "region_id": 228,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Wells Branch (Tract 442.0)": {
+      "region_id": 229,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Wells Branch (Tact 442.0)": {
+      "region_id": 229,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Lakeline": {
+      "region_id": 230,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Gracywoods (Tract 205.09)": {
+      "region_id": 231,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "River Place (Tract 19.16)": {
+      "region_id": 232,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Redbud": {
+      "region_id": 233,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Regents": {
+      "region_id": 234,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Yarabee Bend": {
+      "region_id": 235,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Hyde Park East": {
+      "region_id": 236,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Montopolis (Tract 23.19)": {
+      "region_id": 237,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Lost Creek": {
+      "region_id": 238,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Rosedale": {
+      "region_id": 239,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Hyde Park West": {
+      "region_id": 240,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Brentwood South": {
+      "region_id": 241,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Cherrywood (Tract 3.07)": {
+      "region_id": 242,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Eanes Creek": {
+      "region_id": 243,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Great Hills (Tract 203.11)": {
+      "region_id": 244,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Avery Ranch (Tract 204.08)": {
+      "region_id": 245,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "St. Andrews": {
+      "region_id": 246,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "South Manchaca (Tract 24.34)": {
+      "region_id": 247,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Thunderbird": {
+      "region_id": 248,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Raintree Estates": {
+      "region_id": 249,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Pilot Knob": {
+      "region_id": 250,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "University Hills West": {
+      "region_id": 251,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "University Hills East": {
+      "region_id": 252,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Walnut Bend": {
+      "region_id": 253,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Austin-Bergstrom International Airport": {
+      "region_id": 254,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Riverside (Tract 23.04)": {
+      "region_id": 255,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Riverside - Oltorf": {
+      "region_id": 256,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Riverside - Heritage Oaks": {
+      "region_id": 257,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "East Congress": {
+      "region_id": 258,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Garrison Park East": {
+      "region_id": 259,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Armadillo Park": {
+      "region_id": 260,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Franklin Park West": {
+      "region_id": 261,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "William Cannon": {
+      "region_id": 262,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Frankline Park East": {
+      "region_id": 263,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Comal Bluff": {
+      "region_id": 264,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Parkridge Gardens": {
+      "region_id": 265,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Buckingham Estates": {
+      "region_id": 266,
+      "appears_in": [
+        "demographics"
+      ]
+    },
+    "Elmwood Estates": {
+      "region_id": 267,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "East Riverside (Tract 23.1)": {
+      "region_id": 268,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    },
+    "Del Valle (Tract 9503.03)": {
+      "region_id": 269,
+      "appears_in": [
+        "demographics",
+        "property",
+        "socioeconomic"
+      ]
+    }
+  },
+  "recommendations": {
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "about_modal_update": "Review region count accuracy",
+    "priority": "high"
+  }
+}

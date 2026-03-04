@@ -9,9 +9,9 @@
  * every row on import so the rest of the app can rely on canonical names.
  */
 
-import AUDITED_DEMO from "./audit_output/audited_demographics.json";
-import AUDITED_PROP from "./audit_output/audited_property.json";
-import AUDITED_SOCIO from "./audit_output/audited_socioeconomic.json";
+import AUDITED_DEMO from "./phase1_output/audited_demographics_normalized.json";
+import AUDITED_PROP from "./phase1_output/audited_property_normalized.json";
+import AUDITED_SOCIO from "./phase1_output/audited_socioeconomic_normalized.json";
 
 // ── Field-name normalisation ────────────────────────────────────────────
 
@@ -189,6 +189,38 @@ export const AUDITED_PROP_BY_ID = buildIndex(AUDITED_PROP, normProp);
 /** Map<region_id, auditedSocioeconomicRow[]>  (normalised) */
 export const AUDITED_SOCIO_BY_ID = buildIndex(AUDITED_SOCIO, normSocio);
 
+// ── Normalized flat arrays (one pass, reused by downstream modules) ──────
+
+/** Flat array of all normalized demographic rows */
+export const NORMALIZED_DEMO = Array.from(AUDITED_DEMO_BY_ID.values()).flat();
+
+/** Flat array of all normalized property rows */
+export const NORMALIZED_PROP = Array.from(AUDITED_PROP_BY_ID.values()).flat();
+
+/** Flat array of all normalized socioeconomic rows */
+export const NORMALIZED_SOCIO = Array.from(AUDITED_SOCIO_BY_ID.values()).flat();
+
+// ── (region_id, year) → row lookup maps (for fast cross-dataset joins) ───
+
+function buildRegionYearIndex(byIdMap) {
+  const m = new Map();
+  for (const [id, rows] of byIdMap) {
+    for (const r of rows) {
+      if (r.year != null) m.set(`${id}_${r.year}`, r);
+    }
+  }
+  return m;
+}
+
+/** Map<"regionId_year", normalizedDemoRow> */
+export const DEMO_BY_RY = buildRegionYearIndex(AUDITED_DEMO_BY_ID);
+
+/** Map<"regionId_year", normalizedPropRow> */
+export const PROP_BY_RY = buildRegionYearIndex(AUDITED_PROP_BY_ID);
+
+/** Map<"regionId_year", normalizedSocioRow> */
+export const SOCIO_BY_RY = buildRegionYearIndex(AUDITED_SOCIO_BY_ID);
+
 // ── Helpers ──────────────────────────────────────────────────────────────
 
 /**
@@ -223,6 +255,9 @@ export function priorRow(rows, targetYear, gapYears = 5) {
  *
  * The chart expects keys: year, White, Black, Hispanic, Asian, Other
  * as 0–1 fractions of total population, plus raw counts.
+ *
+ * Uses the pre-normalized AUDITED_DEMO_BY_ID data — the same source
+ * as interim_demographics.js — so the pct→fraction math is done once.
  */
 export function toDemoChartData(regionId) {
   const rows = AUDITED_DEMO_BY_ID.get(regionId);
@@ -247,7 +282,6 @@ export function toDemoChartData(regionId) {
       popWhite: Math.round(tot * pW / 100),
       popBlack: Math.round(tot * pB / 100),
       popHispanic: Math.round(tot * pH / 100),
-      // extra audited fields available for future use
       median_age: d.median_age,
       pct_foreign_born: d.pct_foreign_born,
       pct_owner_occupied: d.pct_owner_occupied,

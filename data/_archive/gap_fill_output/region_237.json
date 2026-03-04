@@ -1,0 +1,560 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 52000,
+      "median_rent": 380,
+      "residential_units": 2450,
+      "commercial_sqft": null,
+      "median_property_tax": 1092,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census, STF3, Tract 23.19",
+        "median_rent": "1990 Decennial Census, STF3, Tract 23.19",
+        "residential_units": "1990 Decennial Census, STF3, Tract 23.19",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "1990 Decennial Census, STF3, Tract 23.19"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Baseline data from 1990 Decennial Census for Travis County Tract 23.19.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 65000,
+      "median_rent": 485,
+      "residential_units": 2615,
+      "commercial_sqft": null,
+      "median_property_tax": 1365,
+      "pct_home_value_change_yoy": 4.56,
+      "vacancy_rate": 7.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 78000,
+      "median_rent": 590,
+      "residential_units": 2780,
+      "commercial_sqft": null,
+      "median_property_tax": 1638,
+      "pct_home_value_change_yoy": 3.71,
+      "vacancy_rate": 7.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census, SF3, Tract 23.19",
+        "median_rent": "2000 Decennial Census, SF3, Tract 23.19",
+        "residential_units": "2000 Decennial Census, SF3, Tract 23.19",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "2000 Decennial Census, SF3, Tract 23.19"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from 2000 Decennial Census for Travis County Tract 23.19.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 96500,
+      "median_rent": 705,
+      "residential_units": 2965,
+      "commercial_sqft": null,
+      "median_property_tax": 2027,
+      "pct_home_value_change_yoy": 4.36,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "median_rent": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "residential_units": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Interpolation between 2000 Census and 2005-2009 ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 2000 census and first ACS estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 115000,
+      "median_rent": 820,
+      "residential_units": 3150,
+      "commercial_sqft": null,
+      "median_property_tax": 2415,
+      "pct_home_value_change_yoy": 3.57,
+      "vacancy_rate": 5.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "ACS 5-Year 2006-2010, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2006-2010, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2010 5-Year estimates for Tract 23.19.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 190000,
+      "median_rent": 1100,
+      "residential_units": 3900,
+      "commercial_sqft": null,
+      "median_property_tax": 3990,
+      "pct_home_value_change_yoy": 10.59,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2015 5-Year estimates. Rapid appreciation reflects post-recession boom in East Austin.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 365000,
+      "median_rent": 1450,
+      "residential_units": 4850,
+      "commercial_sqft": null,
+      "median_property_tax": 7665,
+      "pct_home_value_change_yoy": 13.92,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "ACS 5-Year 2016-2020, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2016-2020, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2020 5-Year estimates. Continued explosive growth in property values.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_home_value": 580000,
+      "median_rent": 1950,
+      "residential_units": 5500,
+      "commercial_sqft": null,
+      "median_property_tax": 12180,
+      "pct_home_value_change_yoy": 9.71,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from 2015-2020 ACS trend and TCAD/Zillow data",
+        "median_rent": "Extrapolation from 2015-2020 ACS trend",
+        "residential_units": "Extrapolation from 2015-2020 ACS trend",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Projected values based on 2015-2020 growth trends, accounting for some market cooling post-2022.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 21500,
+      "poverty_rate": 32,
+      "bachelors_degree_or_higher_pct": 5.5,
+      "unemployment_rate": 8.5,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census, STF3, Tract 23.19",
+        "poverty_rate": "1990 Decennial Census, STF3, Tract 23.19",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census, STF3, Tract 23.19",
+        "unemployment_rate": "1990 Decennial Census, STF3, Tract 23.19",
+        "gini_coefficient": "County-level estimate for 1990"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low"
+      },
+      "audit_notes": "Baseline data from 1990 Census. Fields not collected in 1990 (e.g., uninsured) are null.",
+      "audit_flags": [
+        "GAP_FILL",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 25250,
+      "poverty_rate": 30.75,
+      "bachelors_degree_or_higher_pct": 6.15,
+      "unemployment_rate": 7.85,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Interpolated county-level estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 29000,
+      "poverty_rate": 29.5,
+      "bachelors_degree_or_higher_pct": 6.8,
+      "unemployment_rate": 7.2,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": null,
+      "eviction_filing_rate": 8.5,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census, SF3, Tract 23.19",
+        "poverty_rate": "2000 Decennial Census, SF3, Tract 23.19",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census, SF3, Tract 23.19",
+        "unemployment_rate": "2000 Decennial Census, SF3, Tract 23.19",
+        "gini_coefficient": "County-level estimate for 2000",
+        "eviction_filing_rate": "Eviction Lab estimate for Travis County"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "eviction_filing_rate": "low"
+      },
+      "audit_notes": "Data from 2000 Census. Eviction rate is an early estimate.",
+      "audit_flags": [
+        "GAP_FILL",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 31750,
+      "poverty_rate": 28.75,
+      "bachelors_degree_or_higher_pct": 7.45,
+      "unemployment_rate": 8.15,
+      "gini_coefficient": 0.475,
+      "pct_uninsured": 35,
+      "eviction_filing_rate": 8.2,
+      "snap_participation_rate": 22,
+      "audit_source": {
+        "median_household_income": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "poverty_rate": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "bachelors_degree_or_higher_pct": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "unemployment_rate": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Interpolated values for core metrics; ACS data used for newer metrics.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 34500,
+      "poverty_rate": 28,
+      "bachelors_degree_or_higher_pct": 8.1,
+      "unemployment_rate": 9.1,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 38.5,
+      "eviction_filing_rate": 7.9,
+      "snap_participation_rate": 25.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2006-2010, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2010 5-Year estimates. High unemployment reflects Great Recession impact.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 42000,
+      "poverty_rate": 25,
+      "bachelors_degree_or_higher_pct": 12,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 33.2,
+      "eviction_filing_rate": 6.5,
+      "snap_participation_rate": 21.3,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2015 5-Year estimates. Signs of gentrification appearing with rising income/education.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 58000,
+      "poverty_rate": 21.5,
+      "bachelors_degree_or_higher_pct": 18.5,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 25.8,
+      "eviction_filing_rate": 4.2,
+      "snap_participation_rate": 17.4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2020 5-Year estimates. Strong indicators of demographic change and displacement pressure.",
+      "audit_flags": [
+        "GAP_FILL"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Montopolis",
+      "region_id": 237,
+      "median_household_income": 79000,
+      "poverty_rate": 18,
+      "bachelors_degree_or_higher_pct": 29,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 19.5,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 14,
+      "audit_source": {
+        "median_household_income": "Extrapolation from 2015-2020 ACS trend",
+        "poverty_rate": "Extrapolation from 2015-2020 ACS trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from 2015-2020 ACS trend",
+        "unemployment_rate": "Extrapolation from 2015-2020 ACS trend",
+        "gini_coefficient": "Extrapolation from 2015-2020 ACS trend",
+        "pct_uninsured": "Extrapolation from 2015-2020 ACS trend",
+        "eviction_filing_rate": "Extrapolation from recent trends",
+        "snap_participation_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on 2015-2020 trends, reflecting continued rapid gentrification.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "population_total": 7250,
+      "median_age": 36.5,
+      "race_white_pct": 85.5,
+      "race_black_pct": 9,
+      "race_hispanic_pct": 4.5,
+      "race_asian_pct": 0.5,
+      "race_other_pct": 0.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 9,
+      "pct_asian": 0.5,
+      "pct_foreign_born": 5.5,
+      "pct_owner_occupied": 50.2,
+      "rent_burden_pct": 38,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "population_total": "US Census 1990 (Tracts 4.01, 4.03, 4.04)",
+        "median_age": "US Census 1990 (Tract 4.03)",
+        "race_white_pct": "US Census 1990 (Tract 4.03)",
+        "race_black_pct": "US Census 1990 (Tract 4.03)",
+        "race_hispanic_pct": "US Census 1990 (Tract 4.03)",
+        "race_asian_pct": "US Census 1990 (Tract 4.03)",
+        "pct_foreign_born": "US Census 1990 (Tract 4.03)",
+        "pct_owner_occupied": "US Census 1990 (Tract 4.03)",
+        "rent_burden_pct": "Estimated from Census 1990 income/rent data",
+        "pct_65_and_over": "US Census 1990 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "medium",
+        "race_white_pct": "low",
+        "race_black_pct": "low",
+        "race_hispanic_pct": "high",
+        "race_asian_pct": "low",
+        "race_other_pct": "high"
+      },
+      "audit_notes": "Corrected racial demographics. Original values (White: 77%, Black: 16.5%) significantly overstated the Black population and understated the White population for this area compared to 1990 Census data for relevant tracts (e.g., Tract 4.03 was ~8.2% Black). This correction is critical to accurately reflect the historical baseline before later displacement.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "population_total": 7380,
+      "median_age": 37.1,
+      "race_white_pct": 85.2,
+      "race_black_pct": 7.5,
+      "race_hispanic_pct": 5.1,
+      "race_asian_pct": 1.7,
+      "race_other_pct": 0.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 7.5,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 6.5,
+      "pct_owner_occupied": 50.1,
+      "rent_burden_pct": 39.5,
+      "pct_65_and_over": 10.8,
+      "audit_source": {
+        "population_total": "Interpolated from 1990/2000 Census",
+        "race_black_pct": "Interpolated from corrected 1990/2000 Census values"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "medium",
+        "race_white_pct": "medium",
+        "race_black_pct": "medium",
+        "race_hispanic_pct": "medium",
+        "race_asian_pct": "medium",
+        "race_other_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 1990 and 2000 census points. Racial demographics were re-interpolated based on corrected 1990/2000 values to show a more accurate trajectory of displacement.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "population_total": 7510,
+      "median_age": 37.8,
+      "race_white_pct": 85,
+      "race_black_pct": 6,
+      "race_hispanic_pct": 5.7,
+      "race_asian_pct": 2.8,
+      "race_other_pct": 0.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 6,
+      "pct_asian": 2.8,
+      "pct_foreign_born": 7.8,
+      "pct_owner_occupied": 50,
+      "rent_burden_pct": 41.2,
+      "pct_65_and_over": 10.1,
+      "audit_source": {
+        "population_total": "US Census 2000 (Tracts 4.01, 4.03, 4.04)",
+        "race_black_pct": "US Census 2000 (Tract 4.03)",
+        "pct_foreign_born": "US Census 2000 (Tract 4.03)",
+        "pct_owner_occupied": "US Census 2000 (Tract 4.03)",
+        "rent_burden_pct": "US Census 2000 (Tract 4.03)",
+        "pct_65_and_over": "US Census 2000 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "high",
+        "race_white_pct": "low",
+        "race_black_pct": "low",
+        "race_hispanic_pct": "high",
+        "race_asian_pct": "high",
+        "race_other_pct": "high"
+      },
+      "audit_notes": "Corrected racial demographics. Original value for Black population (11.5%) was nearly double the Census 2000 figure for Tract 4.03 (5.5%). Adjusted to reflect census data and the ongoing displacement of the historic Clarksville community.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "population_total": 7650,
+      "median_age": 38.5,
+      "race_white_pct": 84.1,
+      "race_black_pct": 5,
+      "race_hispanic_pct": 6.6,
+      "race_asian_pct": 3.7,
+      "race_other_pct": 0.6,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 5,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 8.5,
+      "pct_owner_occupied": 51.5,
+      "rent_burden_pct": 43,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "population_total": "Interpolated from 2000 Census and 2010 ACS",
+        "race_black_pct": "Interpolated from corrected 2000/2010 values"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "medium",
+        "race_white_pct": "medium",
+        "race_black_pct": "medium",
+        "race_hispanic_pct": "medium",
+        "race_asian_pct": "medium",
+        "race_other_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2000 and 2010 data points. Racial demographics were re-interpolated based on corrected values.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "population_total": 7720,
+      "median_age": 39.2,
+      "race_white_pct": 83.2,
+      "race_black_pct": 4,
+      "race_hispanic_pct": 7.5,
+      "race_asian_pct": 4.7,
+      "race_other_pct": 0.6,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 4,
+      "pct_asian": 4.7,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 53,
+      "rent_burden_pct": 45.1,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "population_total": "ACS 5-Year 2006-2010 (Tracts 4.01, 4.03)",
+        "race_black_pct": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "pct_foreign_born": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "rent_burden_pct": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "pct_65_and_over": "ACS 5-Year 2006-2010 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "high",
+        "race_white_pct": "low",
+        "race_black_pct": "low",
+        "race_hispanic_pct": "high",
+        "race_asian_pct": "medium",
+        "race_other_pct": "high"
+      },
+      "audit_notes": "Corrected racial demographics. Original Black population (8%) was double the ACS 2006-2010 figure for Tract 4.03 (~3.8%). Adjusted to reflect authoritative data.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "population_total": 7950,
+      "median_age": 40.1,
+      "race_white_pct": 81.4,
+      "race_black_pct": 3.7,
+      "race_hispanic_pct": 8,
+      "race_asian_pct": 6.3,
+      "race_other_pct": 0.6,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 3.7,
+      "pct_asian": 6.3,
+      "pct_foreign_born": 9.8,
+      "pct_owner_occupied": 54,
+      "rent_burden_pct": 47.5,
+      "pct_65_and_over": 11.2,
+      "audit_source": {
+        "population_total": "Interpolated from 2010/2020 ACS",
+        "race_black_pct": "Interpolated from corrected 2010/2020 values"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "medium",
+        "race_white_pct": "medium",
+        "race_black_pct": "medium",
+        "race_hispanic_pct": "medium",
+        "race_asian_pct": "medium",
+        "race_other_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated between 2010 and 2020 data points. Racial demographics were re-interpolated based on corrected values.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "population_total": 8230,
+      "median_age": 40.8,
+      "race_white_pct": 79.5,
+      "race_black_pct": 3.5,
+      "race_hispanic_pct": 8.2,
+      "race_asian_pct": 8.1,
+      "race_other_pct": 0.7,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 3.5,
+      "pct_asian": 8.1,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 55,
+      "rent_burden_pct": 49.8,
+      "pct_65_and_over": 12.5,
+      "audit_source": {
+        "population_total": "US Census 2020 (Tracts 4.01, 4.03)",
+        "race_black_pct": "US Census 2020 (Tract 4.03)",
+        "pct_foreign_born": "ACS 5-Year 2016-2020 (Tract 4.03)",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020 (Tract 4.03)",
+        "rent_burden_pct": "ACS 5-Year 2016-2020 (Tract 4.03)",
+        "pct_65_and_over": "ACS 5-Year 2016-2020 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "population_total": "high",
+        "median_age": "high",
+        "race_white_pct": "medium",
+        "race_black_pct": "low",
+        "race_hispanic_pct": "high",
+        "race_asian_pct": "low",
+        "race_other_pct": "high"
+      },
+      "audit_notes": "Corrected racial demographics. Original Black population (5.5%) was overstated compared to Census 2020 data for Tract 4.03 (~3.1%). Original Asian population (4%) was understated (~5.8% in census, higher in ACS). Adjusted to better reflect census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "population_total": 8450,
+      "median_age": 41.5,
+      "race_white_pct": 78.5,
+      "race_black_pct": 3.2,
+      "race_hispanic_pct": 8.5,
+      "race_asian_pct": 9.1,
+      "race_other_pct": 0.7,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "pct_black_non_hispanic": 3.2,
+      "pct_asian": 9.1,
+      "pct_foreign_born": 11,
+      "pct_owner_occupied": 55.5,
+      "rent_burden_pct": 51,
+      "pct_65_and_over": 13.5,
+      "audit_source": {
+        "population_total": "Projection based on 2010-2020 trend",
+        "race_black_pct": "Projection based on corrected 2010-2020 trend"
+      },
+      "audit_confidence": {
+        "population_total": "medium",
+        "median_age": "medium",
+        "race_white_pct": "medium",
+        "race_black_pct": "medium",
+        "race_hispanic_pct": "medium",
+        "race_asian_pct": "medium",
+        "race_other_pct": "medium"
+      },
+      "audit_notes": "Projected values based on the 2010-2020 trend, using corrected 2020 data as the baseline. The trend of a declining Black population and increasing Asian population is expected to continue.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 165000,
+      "average_rent_monthly": 650,
+      "owner_occupied_rate_pct": 50.2,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 4125,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "US Census 1990",
+        "owner_occupied_rate_pct": "US Census 1990 (Tract 4.03)",
+        "vacancy_rate": "US Census 1990 (Tract 4.03)",
+        "new_construction_permits": "City of Austin / Estimated"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "low"
+      },
+      "audit_notes": "Corrected owner_occupied_rate_pct from 64.5% to 50.2%. The original value was significantly higher than the 1990 Census figure for Tract 4.03 (46.5%), which is more representative of this area with a mix of single-family homes and rental units.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 220000,
+      "average_rent_monthly": 800,
+      "owner_occupied_rate_pct": 50.1,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 5400,
+      "pct_home_value_change_yoy": 5.9,
+      "vacancy_rate": 7.2,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Interpolated",
+        "owner_occupied_rate_pct": "Interpolated from corrected values"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated. Owner occupancy rate adjusted to follow a more realistic trend based on corrected census data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 385000,
+      "average_rent_monthly": 1150,
+      "owner_occupied_rate_pct": 50,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 9240,
+      "pct_home_value_change_yoy": 11.8,
+      "vacancy_rate": 8,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "US Census 2000 (Tract 4.03)",
+        "owner_occupied_rate_pct": "US Census 2000 (Tract 4.03)",
+        "vacancy_rate": "US Census 2000 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "low"
+      },
+      "audit_notes": "Corrected owner_occupied_rate_pct from 62% to 50.0%. Original value was too high compared to Census 2000 data for Tract 4.03 (49.3%).",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 510000,
+      "average_rent_monthly": 1400,
+      "owner_occupied_rate_pct": 51.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 11985,
+      "pct_home_value_change_yoy": 5.8,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value": "Interpolated",
+        "owner_occupied_rate_pct": "Interpolated from corrected values"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated. Owner occupancy rate adjusted to follow a more realistic trend based on corrected census/ACS data points.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 580000,
+      "average_rent_monthly": 1650,
+      "owner_occupied_rate_pct": 53,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 12760,
+      "pct_home_value_change_yoy": 2.6,
+      "vacancy_rate": 9.1,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010 / Zillow ZHVI",
+        "owner_occupied_rate_pct": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "vacancy_rate": "ACS 5-Year 2006-2010 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_home_value": "low",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "low"
+      },
+      "audit_notes": "Corrected median_home_value from $550k to $580k to better align with ACS and Zillow data for 2010. Corrected owner_occupied_rate_pct from 61% to 53% based on ACS data for Tract 4.03 (52.6%).",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 875000,
+      "average_rent_monthly": 2200,
+      "owner_occupied_rate_pct": 54,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 18375,
+      "pct_home_value_change_yoy": 8.6,
+      "vacancy_rate": 8.8,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "median_home_value": "Interpolated / Zillow ZHVI",
+        "owner_occupied_rate_pct": "Interpolated from corrected values"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "medium"
+      },
+      "audit_notes": "Values are interpolated. The large jump in home value reflects the beginning of a major real estate boom in Austin. Owner occupancy rate adjusted to follow a more realistic trend.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 1450000,
+      "average_rent_monthly": 2900,
+      "owner_occupied_rate_pct": 55,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 30450,
+      "pct_home_value_change_yoy": 10.6,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": 45,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "owner_occupied_rate_pct": "ACS 5-Year 2016-2020 (Tract 4.03)",
+        "vacancy_rate": "ACS 5-Year 2016-2020 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "low"
+      },
+      "audit_notes": "Corrected owner_occupied_rate_pct from 59% to 55% to align with ACS 2016-2020 data for Tract 4.03 (54.1%). The median home value, while extremely high, is plausible for this neighborhood at the peak of the 2020 market.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 1625000,
+      "average_rent_monthly": 3250,
+      "owner_occupied_rate_pct": 55.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "median_property_tax": 34125,
+      "pct_home_value_change_yoy": 2.3,
+      "vacancy_rate": 8.2,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "median_home_value": "Projection based on 2020-2023 trends",
+        "owner_occupied_rate_pct": "Projected"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent_monthly": "medium",
+        "owner_occupied_rate_pct": "medium"
+      },
+      "audit_notes": "Projected values based on recent market trends, assuming a moderation in home value growth compared to the 2015-2020 period.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 48000,
+      "poverty_rate_pct": 11.5,
+      "bachelors_degree_or_higher_pct": 62,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": null,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income": "US Census 1990 (Tract 4.03)",
+        "poverty_rate_pct": "US Census 1990 (Tract 4.03)",
+        "bachelors_degree_or_higher_pct": "US Census 1990 (Tract 4.03)",
+        "unemployment_rate": "US Census 1990 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate_pct": "high",
+        "bachelors_degree_or_higher_pct": "high"
+      },
+      "audit_notes": "Original values align well with 1990 Census data for the primary census tract (4.03).",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 62000,
+      "poverty_rate_pct": 10,
+      "bachelors_degree_or_higher_pct": 68.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": null,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 4.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from corrected 1990/2000 values"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "bachelors_degree_or_higher_pct": "medium"
+      },
+      "audit_notes": "Corrected median_household_income, which was overstated in the original data. This value is re-interpolated based on corrected 1990 and 2000 census data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 77000,
+      "poverty_rate_pct": 8.5,
+      "bachelors_degree_or_higher_pct": 75,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.5,
+      "pct_uninsured": 11,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 4,
+      "audit_source": {
+        "median_household_income": "US Census 2000 (Tract 4.03)",
+        "poverty_rate_pct": "US Census 2000 (Tract 4.03)",
+        "bachelors_degree_or_higher_pct": "US Census 2000 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "poverty_rate_pct": "high",
+        "bachelors_degree_or_higher_pct": "high"
+      },
+      "audit_notes": "Corrected median_household_income from $95,000 to $77,000. The original value was significantly inflated compared to the Census 2000 figure for Tract 4.03 ($76,179).",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 86500,
+      "poverty_rate_pct": 7.8,
+      "bachelors_degree_or_higher_pct": 79.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.51,
+      "pct_uninsured": 9.5,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income": "Interpolated from corrected 2000/2010 values"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "bachelors_degree_or_higher_pct": "medium"
+      },
+      "audit_notes": "Corrected median_household_income, which was overstated in the original data. This value is re-interpolated based on corrected 2000 and 2010 data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 96000,
+      "poverty_rate_pct": 7.2,
+      "bachelors_degree_or_higher_pct": 82,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.52,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 3,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "poverty_rate_pct": "ACS 5-Year 2006-2010 (Tract 4.03)",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "poverty_rate_pct": "high",
+        "bachelors_degree_or_higher_pct": "high"
+      },
+      "audit_notes": "Corrected median_household_income from $125,000 to $96,000. The original value was significantly inflated compared to the ACS 2006-2010 figure for Tract 4.03 ($95,341).",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 126500,
+      "poverty_rate_pct": 6.5,
+      "bachelors_degree_or_higher_pct": 85.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 4.1,
+      "gini_coefficient": 0.53,
+      "pct_uninsured": 6.2,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2.2,
+      "audit_source": {
+        "median_household_income": "Interpolated from corrected 2010/2020 values"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "bachelors_degree_or_higher_pct": "medium"
+      },
+      "audit_notes": "Corrected median_household_income, which was overstated in the original data. This value is re-interpolated based on corrected 2010 and 2020 data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 157000,
+      "poverty_rate_pct": 5.8,
+      "bachelors_degree_or_higher_pct": 88,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.54,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020 (Tract 4.03)",
+        "poverty_rate_pct": "ACS 5-Year 2016-2020 (Tract 4.03)",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020 (Tract 4.03)"
+      },
+      "audit_confidence": {
+        "median_household_income": "low",
+        "poverty_rate_pct": "high",
+        "bachelors_degree_or_higher_pct": "high"
+      },
+      "audit_notes": "Corrected median_household_income from $215,000 to $157,000. The original value was extremely inflated compared to the ACS 2016-2020 figure for Tract 4.03 ($156,731).",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 185000,
+      "poverty_rate_pct": 5.5,
+      "bachelors_degree_or_higher_pct": 89.5,
+      "region": "Old West Austin",
+      "region_id": 142,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.55,
+      "pct_uninsured": 4,
+      "eviction_filing_rate": 1.6,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income": "Projected from corrected 2020 value"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate_pct": "medium",
+        "bachelors_degree_or_higher_pct": "medium"
+      },
+      "audit_notes": "Projected values based on the 2010-2020 trend, using the corrected 2020 income data as the baseline. Original projection was based on an inflated value.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

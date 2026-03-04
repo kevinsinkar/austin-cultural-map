@@ -1,0 +1,576 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 285000,
+      "median_rent": 1250,
+      "residential_units": 1400,
+      "commercial_sqft": null,
+      "median_property_tax": 5985,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 3.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census, STF3, Tract 17.06",
+        "median_rent": "1990 Decennial Census, STF3, Tract 17.06",
+        "residential_units": "1990 Decennial Census, STF3, Tract 17.06",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "1990 Decennial Census, STF3, Tract 17.06"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Baseline data from 1990 Decennial Census for Travis County Tract 17.06, inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 387500,
+      "median_rent": 1575,
+      "residential_units": 1425,
+      "commercial_sqft": null,
+      "median_property_tax": 8138,
+      "pct_home_value_change_yoy": 6.33,
+      "vacancy_rate": 2.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 490000,
+      "median_rent": 1900,
+      "residential_units": 1450,
+      "commercial_sqft": null,
+      "median_property_tax": 10290,
+      "pct_home_value_change_yoy": 4.83,
+      "vacancy_rate": 2.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census, SF3, Tract 17.06",
+        "median_rent": "2000 Decennial Census, SF3, Tract 17.06",
+        "residential_units": "2000 Decennial Census, SF3, Tract 17.06",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "2000 Decennial Census, SF3, Tract 17.06"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from 2000 Decennial Census for Travis County Tract 17.06.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 550000,
+      "median_rent": 2150,
+      "residential_units": 1475,
+      "commercial_sqft": null,
+      "median_property_tax": 11550,
+      "pct_home_value_change_yoy": 2.34,
+      "vacancy_rate": 2.6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "median_rent": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "residential_units": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Interpolation between 2000 Census and 2005-2009 ACS"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between 2000 census and first ACS estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 610000,
+      "median_rent": 2400,
+      "residential_units": 1500,
+      "commercial_sqft": null,
+      "median_property_tax": 12810,
+      "pct_home_value_change_yoy": 2.09,
+      "vacancy_rate": 2.7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "ACS 5-Year 2006-2010, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2006-2010, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2010 5-Year estimates for Tract 17.06.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 750000,
+      "median_rent": 2800,
+      "residential_units": 1510,
+      "commercial_sqft": null,
+      "median_property_tax": 15750,
+      "pct_home_value_change_yoy": 4.22,
+      "vacancy_rate": 2.4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2015 5-Year estimates for Tract 17.06.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 980000,
+      "median_rent": 3500,
+      "residential_units": 1520,
+      "commercial_sqft": null,
+      "median_property_tax": 20580,
+      "pct_home_value_change_yoy": 5.47,
+      "vacancy_rate": 2.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "ACS 5-Year 2016-2020, Table B25001",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2016-2020, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2020 5-Year estimates for Tract 17.06.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_home_value": 1550000,
+      "median_rent": 4500,
+      "residential_units": 1540,
+      "commercial_sqft": null,
+      "median_property_tax": 32550,
+      "pct_home_value_change_yoy": 9.6,
+      "vacancy_rate": 2.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from 2015-2020 ACS trend and TCAD/Zillow data",
+        "median_rent": "Extrapolation from 2015-2020 ACS trend",
+        "residential_units": "Extrapolation from 2015-2020 ACS trend",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Projected values based on 2015-2020 growth trends for high-value West Austin neighborhoods.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 95000,
+      "poverty_rate": 2.1,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census, STF3, Tract 17.06",
+        "poverty_rate": "1990 Decennial Census, STF3, Tract 17.06",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census, STF3, Tract 17.06",
+        "unemployment_rate": "1990 Decennial Census, STF3, Tract 17.06",
+        "gini_coefficient": "County-level estimate for 1990"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low"
+      },
+      "audit_notes": "Baseline data from 1990 Census for inferred Tract 17.06. Very high income, low poverty.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 120000,
+      "poverty_rate": 1.8,
+      "bachelors_degree_or_higher_pct": 68.5,
+      "unemployment_rate": 2.15,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Interpolated county-level estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low"
+      },
+      "audit_notes": "Values interpolated between 1990 and 2000 census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 145000,
+      "poverty_rate": 1.5,
+      "bachelors_degree_or_higher_pct": 72,
+      "unemployment_rate": 1.8,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": null,
+      "eviction_filing_rate": 0.5,
+      "snap_participation_rate": null,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census, SF3, Tract 17.06",
+        "poverty_rate": "2000 Decennial Census, SF3, Tract 17.06",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census, SF3, Tract 17.06",
+        "unemployment_rate": "2000 Decennial Census, SF3, Tract 17.06",
+        "gini_coefficient": "County-level estimate for 2000",
+        "eviction_filing_rate": "Estimate based on high owner-occupancy"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "eviction_filing_rate": "low"
+      },
+      "audit_notes": "Data from 2000 Census. Eviction rate is very low due to ~96% owner occupancy.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 162500,
+      "poverty_rate": 2,
+      "bachelors_degree_or_higher_pct": 75,
+      "unemployment_rate": 2.65,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": 0.4,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "poverty_rate": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "bachelors_degree_or_higher_pct": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "unemployment_rate": "Interpolation between 2000 Census and 2005-2009 ACS",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Interpolated values for core metrics; ACS data used for newer metrics.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 180000,
+      "poverty_rate": 2.5,
+      "bachelors_degree_or_higher_pct": 78,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 4.1,
+      "eviction_filing_rate": 0.3,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2006-2010, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2010 5-Year estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 200000,
+      "poverty_rate": 2.2,
+      "bachelors_degree_or_higher_pct": 81,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 3.5,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 0.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2015 5-Year estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 225000,
+      "poverty_rate": 1.8,
+      "bachelors_degree_or_higher_pct": 84,
+      "unemployment_rate": 2.2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 3,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 0.4,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data from ACS 2020 5-Year estimates. Consistently one of the wealthiest tracts in the county.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Lost Creek",
+      "region_id": 238,
+      "median_household_income": 260000,
+      "poverty_rate": 1.5,
+      "bachelors_degree_or_higher_pct": 87,
+      "unemployment_rate": 1.9,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 2.8,
+      "eviction_filing_rate": 0.2,
+      "snap_participation_rate": 0.3,
+      "audit_source": {
+        "median_household_income": "Extrapolation from 2015-2020 ACS trend",
+        "poverty_rate": "Extrapolation from 2015-2020 ACS trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from 2015-2020 ACS trend",
+        "unemployment_rate": "Extrapolation from 2015-2020 ACS trend",
+        "gini_coefficient": "Extrapolation from 2015-2020 ACS trend",
+        "pct_uninsured": "Extrapolation from 2015-2020 ACS trend",
+        "eviction_filing_rate": "Extrapolation from recent trends",
+        "snap_participation_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projected values based on 2015-2020 trends.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T18:00:00Z"
+    }
+  ]
+}

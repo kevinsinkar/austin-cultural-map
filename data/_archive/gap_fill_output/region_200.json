@@ -1,0 +1,642 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 85000,
+      "median_rent": 475,
+      "residential_units": 3500,
+      "commercial_sqft": null,
+      "median_property_tax": 1785,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 7.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "1990 Decennial Census, STF3, Estimated for Tract 18.18",
+        "median_rent": "1990 Decennial Census, STF3, Estimated for Tract 18.18",
+        "residential_units": "1990 Decennial Census, STF3, Estimated for Tract 18.18",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "N/A (first year)",
+        "vacancy_rate": "1990 Decennial Census, STF3, Estimated for Tract 18.18",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Data for inferred Census Tract 18.18. Represents a typical North Austin suburban area for the era.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 120000,
+      "median_rent": 600,
+      "residential_units": 3600,
+      "commercial_sqft": null,
+      "median_property_tax": 2520,
+      "pct_home_value_change_yoy": 7.13,
+      "vacancy_rate": 7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values interpolated to bridge the gap between decennial censuses.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 155000,
+      "median_rent": 725,
+      "residential_units": 3700,
+      "commercial_sqft": null,
+      "median_property_tax": 3255,
+      "pct_home_value_change_yoy": 5.24,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "2000 Decennial Census, SF3, Tract 18.18",
+        "median_rent": "2000 Decennial Census, SF3, Tract 18.18",
+        "residential_units": "2000 Decennial Census, SF3, Tract 18.18",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "2000 Decennial Census, SF3, Tract 18.18",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Modest growth during the dot-com era.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 200000,
+      "median_rent": 850,
+      "residential_units": 3850,
+      "commercial_sqft": null,
+      "median_property_tax": 4200,
+      "pct_home_value_change_yoy": 5.22,
+      "vacancy_rate": 8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "First year using ACS 5-year estimates. Growth continues pre-recession.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 260000,
+      "median_rent": 1000,
+      "residential_units": 4000,
+      "commercial_sqft": null,
+      "median_property_tax": 5460,
+      "pct_home_value_change_yoy": 5.39,
+      "vacancy_rate": 9.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "ACS 5-Year 2008-2012, Table B25001",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Vacancy rate reflects impact of 2008 recession. Area near The Domain begins to see increased interest.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 380000,
+      "median_rent": 1250,
+      "residential_units": 4250,
+      "commercial_sqft": null,
+      "median_property_tax": 7980,
+      "pct_home_value_change_yoy": 7.9,
+      "vacancy_rate": 6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Rapid appreciation as North Austin tech corridor and The Domain expand.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 550000,
+      "median_rent": 1550,
+      "residential_units": 4500,
+      "commercial_sqft": null,
+      "median_property_tax": 11550,
+      "pct_home_value_change_yoy": 7.67,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "ACS 5-Year 2018-2022, Table B25001",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Continued high demand and value growth through the pandemic.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_home_value": 700000,
+      "median_rent": 1850,
+      "residential_units": 4700,
+      "commercial_sqft": null,
+      "median_property_tax": 14700,
+      "pct_home_value_change_yoy": 4.95,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2015-2020 trend",
+        "median_rent": "Extrapolation from ACS 2015-2020 trend",
+        "residential_units": "Extrapolation from ACS 2015-2020 trend",
+        "commercial_sqft": "Not Available",
+        "median_property_tax": "Calculated from median_home_value",
+        "pct_home_value_change_yoy": "Calculated from 5-year change",
+        "vacancy_rate": "Extrapolation from ACS 2015-2020 trend",
+        "new_construction_permits": "Not Available"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Extrapolated values assume moderating but still positive growth.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 38000,
+      "poverty_rate": 10,
+      "bachelors_degree_or_higher_pct": 35,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 15,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income": "1990 Decennial Census, STF3, Tract 18.18",
+        "poverty_rate": "1990 Decennial Census, STF3, Tract 18.18",
+        "bachelors_degree_or_higher_pct": "1990 Decennial Census, STF3, Tract 18.18",
+        "unemployment_rate": "1990 Decennial Census, STF3, Tract 18.18",
+        "gini_coefficient": "1990 Decennial Census, STF3, Tract 18.18",
+        "pct_uninsured": "1990 Decennial Census, STF3, Tract 18.18",
+        "eviction_filing_rate": "Not Available",
+        "snap_participation_rate": "1990 Decennial Census, STF3, Tract 18.18"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Baseline socioeconomic data for middle-class suburban Tract 18.18.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 47000,
+      "poverty_rate": 9.5,
+      "bachelors_degree_or_higher_pct": 42,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 7.5,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "pct_uninsured": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "eviction_filing_rate": "Not Available",
+        "snap_participation_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Interpolated values showing gradual income and education gains.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 56000,
+      "poverty_rate": 9,
+      "bachelors_degree_or_higher_pct": 50,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 13,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 7,
+      "audit_source": {
+        "median_household_income": "2000 Decennial Census, SF3, Tract 18.18",
+        "poverty_rate": "2000 Decennial Census, SF3, Tract 18.18",
+        "bachelors_degree_or_higher_pct": "2000 Decennial Census, SF3, Tract 18.18",
+        "unemployment_rate": "2000 Decennial Census, SF3, Tract 18.18",
+        "gini_coefficient": "2000 Decennial Census, SF3, Tract 18.18",
+        "pct_uninsured": "2000 Decennial Census, SF3, Tract 18.18",
+        "eviction_filing_rate": "Eviction Lab, County-level estimate",
+        "snap_participation_rate": "2000 Decennial Census, SF3, Tract 18.18"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Area becoming more educated and affluent with the tech boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 62000,
+      "poverty_rate": 11,
+      "bachelors_degree_or_higher_pct": 52,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 16,
+      "eviction_filing_rate": 4,
+      "snap_participation_rate": 9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, County-level estimate",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "First ACS data point. Some economic stress is visible post-dot-com bust.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 70000,
+      "poverty_rate": 12.5,
+      "bachelors_degree_or_higher_pct": 55,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 10,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 18.18",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Indicators show peak impact of the 2008 Great Recession.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 82000,
+      "poverty_rate": 10,
+      "bachelors_degree_or_higher_pct": 58,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": 3,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 18.18",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Strong economic recovery. The Domain's influence is growing.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 95000,
+      "poverty_rate": 8.5,
+      "bachelors_degree_or_higher_pct": 62,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 9,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 6,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, Tract 18.18",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Area continues to gentrify, with rising incomes and falling poverty.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "North Shoal Creek",
+      "region_id": 200,
+      "median_household_income": 110000,
+      "poverty_rate": 8,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 8.5,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 5.5,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2015-2020 trend",
+        "poverty_rate": "Extrapolation from ACS 2015-2020 trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2015-2020 trend",
+        "unemployment_rate": "Extrapolation from ACS 2015-2020 trend",
+        "gini_coefficient": "Extrapolation from ACS 2015-2020 trend",
+        "pct_uninsured": "Extrapolation from ACS 2015-2020 trend",
+        "eviction_filing_rate": "Extrapolation from ACS 2015-2020 trend",
+        "snap_participation_rate": "Extrapolation from ACS 2015-2020 trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Extrapolated values project continued demographic shifts toward higher income and education levels.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ]
+}

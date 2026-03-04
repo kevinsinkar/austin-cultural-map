@@ -1,0 +1,3100 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 5108,
+      "median_age": 32.3,
+      "percent_with_bachelor_degree_or_higher": 48,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 4.5,
+      "pct_foreign_born": 8.1,
+      "pct_owner_occupied": 45.2,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 7.8,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "median_age": "US Census 1990",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "Estimated from 1990 Census",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected non-existent census tract 323.0 to 18.31. Original total_population of 12550 was implausibly high for a single tract; corrected to 5108 based on 1990 Census for tract 18.31. Other values adjusted to align with census data.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 5140,
+      "median_age": 32.7,
+      "percent_with_bachelor_degree_or_higher": 49.1,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2,
+      "pct_asian": 4.8,
+      "pct_foreign_born": 8.7,
+      "pct_owner_occupied": 44.8,
+      "rent_burden_pct": 29.1,
+      "pct_65_and_over": 7.9,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 5172,
+      "median_age": 32.9,
+      "percent_with_bachelor_degree_or_higher": 50.2,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 5.1,
+      "pct_foreign_born": 9.3,
+      "pct_owner_occupied": 44.4,
+      "rent_burden_pct": 29.7,
+      "pct_65_and_over": 8,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 5203,
+      "median_age": 33.1,
+      "percent_with_bachelor_degree_or_higher": 51.3,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 5.4,
+      "pct_foreign_born": 9.9,
+      "pct_owner_occupied": 44,
+      "rent_burden_pct": 30.3,
+      "pct_65_and_over": 8.1,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 5235,
+      "median_age": 33.3,
+      "percent_with_bachelor_degree_or_higher": 52.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 5.7,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 43.6,
+      "rent_burden_pct": 30.9,
+      "pct_65_and_over": 8.2,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 5267,
+      "median_age": 33.5,
+      "percent_with_bachelor_degree_or_higher": 53.8,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 6,
+      "pct_foreign_born": 11.1,
+      "pct_owner_occupied": 43.2,
+      "rent_burden_pct": 31.5,
+      "pct_65_and_over": 8.3,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 5298,
+      "median_age": 33.8,
+      "percent_with_bachelor_degree_or_higher": 55,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 6.3,
+      "pct_foreign_born": 11.7,
+      "pct_owner_occupied": 42.8,
+      "rent_burden_pct": 32.1,
+      "pct_65_and_over": 8.4,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 5330,
+      "median_age": 34,
+      "percent_with_bachelor_degree_or_higher": 56.4,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 6.6,
+      "pct_foreign_born": 12.3,
+      "pct_owner_occupied": 42.4,
+      "rent_burden_pct": 32.7,
+      "pct_65_and_over": 8.5,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 5362,
+      "median_age": 34.2,
+      "percent_with_bachelor_degree_or_higher": 57.9,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 6.9,
+      "pct_foreign_born": 12.9,
+      "pct_owner_occupied": 42,
+      "rent_burden_pct": 33.3,
+      "pct_65_and_over": 8.6,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 5393,
+      "median_age": 34.5,
+      "percent_with_bachelor_degree_or_higher": 59.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 7.2,
+      "pct_foreign_born": 13.5,
+      "pct_owner_occupied": 41.6,
+      "rent_burden_pct": 33.9,
+      "pct_65_and_over": 8.7,
+      "audit_source": {
+        "total_population": "Interpolated from 1990/2000 Census",
+        "median_age": "Interpolated from 1990/2000 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 1990/2000 Census",
+        "pct_black_non_hispanic": "Interpolated from 1990/2000 Census",
+        "pct_asian": "Interpolated from 1990/2000 Census",
+        "pct_foreign_born": "Interpolated from 1990/2000 Census",
+        "pct_owner_occupied": "Interpolated from 1990/2000 Census",
+        "rent_burden_pct": "Interpolated from 1990/2000 Census",
+        "pct_65_and_over": "Interpolated from 1990/2000 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 1990 and 2000 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 5424,
+      "median_age": 34.8,
+      "percent_with_bachelor_degree_or_higher": 61.2,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 7.5,
+      "pct_foreign_born": 14.1,
+      "pct_owner_occupied": 41.2,
+      "rent_burden_pct": 34.5,
+      "pct_65_and_over": 8.8,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "median_age": "US Census 2000",
+        "percent_with_bachelor_degree_or_higher": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "Estimated from US Census 2000",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected non-existent census tract 323.0 to 18.31. Original total_population of 18300 was implausibly high; corrected to 5424 based on Census 2000 for tract 18.31. Original median_age and education % were accurate.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 5430,
+      "median_age": 35,
+      "percent_with_bachelor_degree_or_higher": 61.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 7.9,
+      "pct_foreign_born": 14.5,
+      "pct_owner_occupied": 40.9,
+      "rent_burden_pct": 34.8,
+      "pct_65_and_over": 9.1,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 5436,
+      "median_age": 35.2,
+      "percent_with_bachelor_degree_or_higher": 62,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 8.3,
+      "pct_foreign_born": 14.9,
+      "pct_owner_occupied": 40.6,
+      "rent_burden_pct": 35.1,
+      "pct_65_and_over": 9.4,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 5442,
+      "median_age": 35.4,
+      "percent_with_bachelor_degree_or_higher": 62.7,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 8.7,
+      "pct_foreign_born": 15.3,
+      "pct_owner_occupied": 40.3,
+      "rent_burden_pct": 35.4,
+      "pct_65_and_over": 9.7,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 5448,
+      "median_age": 35.6,
+      "percent_with_bachelor_degree_or_higher": 63.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 9.1,
+      "pct_foreign_born": 15.7,
+      "pct_owner_occupied": 40,
+      "rent_burden_pct": 35.7,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 5454,
+      "median_age": 35.9,
+      "percent_with_bachelor_degree_or_higher": 64.3,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 9.5,
+      "pct_foreign_born": 16.1,
+      "pct_owner_occupied": 39.7,
+      "rent_burden_pct": 36,
+      "pct_65_and_over": 10.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 5459,
+      "median_age": 36.1,
+      "percent_with_bachelor_degree_or_higher": 65.1,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 9.9,
+      "pct_foreign_born": 16.5,
+      "pct_owner_occupied": 39.4,
+      "rent_burden_pct": 36.3,
+      "pct_65_and_over": 10.6,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 5465,
+      "median_age": 36.3,
+      "percent_with_bachelor_degree_or_higher": 66,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 10.3,
+      "pct_foreign_born": 16.9,
+      "pct_owner_occupied": 39.1,
+      "rent_burden_pct": 36.6,
+      "pct_65_and_over": 10.9,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 5471,
+      "median_age": 36.5,
+      "percent_with_bachelor_degree_or_higher": 66.8,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 10.7,
+      "pct_foreign_born": 17.3,
+      "pct_owner_occupied": 38.8,
+      "rent_burden_pct": 36.9,
+      "pct_65_and_over": 11.2,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 5477,
+      "median_age": 36.7,
+      "percent_with_bachelor_degree_or_higher": 67.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 11.1,
+      "pct_foreign_born": 17.7,
+      "pct_owner_occupied": 38.5,
+      "rent_burden_pct": 37.2,
+      "pct_65_and_over": 11.5,
+      "audit_source": {
+        "total_population": "Interpolated from 2000/2010 Census",
+        "median_age": "Interpolated from 2000/2010 Census",
+        "percent_with_bachelor_degree_or_higher": "Interpolated from 2000/2010 Census",
+        "pct_black_non_hispanic": "Interpolated from 2000/2010 Census",
+        "pct_asian": "Interpolated from 2000/2010 Census",
+        "pct_foreign_born": "Interpolated from 2000/2010 Census",
+        "pct_owner_occupied": "Interpolated from 2000/2010 Census",
+        "rent_burden_pct": "Interpolated from 2000/2010 Census",
+        "pct_65_and_over": "Interpolated from 2000/2010 Census"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2000 and 2010 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 5483,
+      "median_age": 36.9,
+      "percent_with_bachelor_degree_or_higher": 68.2,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 11.5,
+      "pct_foreign_born": 18.1,
+      "pct_owner_occupied": 38.2,
+      "rent_burden_pct": 37.5,
+      "pct_65_and_over": 11.8,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "US Census 2010",
+        "pct_asian": "US Census 2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected non-existent census tract 323.0 to 18.31. Original total_population of 22800 was implausibly high; corrected to 5483 based on Census 2010 for tract 18.31. Original median_age and education % were accurate.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 5552,
+      "median_age": 37,
+      "percent_with_bachelor_degree_or_higher": 69,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.2,
+      "pct_asian": 11.9,
+      "pct_foreign_born": 18.3,
+      "pct_owner_occupied": 38.5,
+      "rent_burden_pct": 37.1,
+      "pct_65_and_over": 12.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2007-2011",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2007-2011",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2007-2011",
+        "pct_owner_occupied": "ACS 5-Year 2007-2011",
+        "rent_burden_pct": "ACS 5-Year 2007-2011",
+        "pct_65_and_over": "ACS 5-Year 2007-2011"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 5621,
+      "median_age": 37.1,
+      "percent_with_bachelor_degree_or_higher": 69.9,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.3,
+      "pct_asian": 12.3,
+      "pct_foreign_born": 18.5,
+      "pct_owner_occupied": 38.8,
+      "rent_burden_pct": 36.7,
+      "pct_65_and_over": 12.8,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2008-2012",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2008-2012",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2008-2012",
+        "pct_owner_occupied": "ACS 5-Year 2008-2012",
+        "rent_burden_pct": "ACS 5-Year 2008-2012",
+        "pct_65_and_over": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 5689,
+      "median_age": 37.2,
+      "percent_with_bachelor_degree_or_higher": 70.8,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.4,
+      "pct_asian": 12.7,
+      "pct_foreign_born": 18.7,
+      "pct_owner_occupied": 39.1,
+      "rent_burden_pct": 36.3,
+      "pct_65_and_over": 13.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2009-2013",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2009-2013",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2009-2013",
+        "pct_owner_occupied": "ACS 5-Year 2009-2013",
+        "rent_burden_pct": "ACS 5-Year 2009-2013",
+        "pct_65_and_over": "ACS 5-Year 2009-2013"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 5758,
+      "median_age": 37.4,
+      "percent_with_bachelor_degree_or_higher": 71.7,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 13.1,
+      "pct_foreign_born": 18.9,
+      "pct_owner_occupied": 39.4,
+      "rent_burden_pct": 35.9,
+      "pct_65_and_over": 13.8,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2010-2014",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2010-2014",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2010-2014",
+        "pct_owner_occupied": "ACS 5-Year 2010-2014",
+        "rent_burden_pct": "ACS 5-Year 2010-2014",
+        "pct_65_and_over": "ACS 5-Year 2010-2014"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 5827,
+      "median_age": 37.6,
+      "percent_with_bachelor_degree_or_higher": 72.6,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.6,
+      "pct_asian": 13.5,
+      "pct_foreign_born": 19.1,
+      "pct_owner_occupied": 39.7,
+      "rent_burden_pct": 35.5,
+      "pct_65_and_over": 14.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2011-2015",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 5896,
+      "median_age": 37.8,
+      "percent_with_bachelor_degree_or_higher": 73.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.7,
+      "pct_asian": 13.9,
+      "pct_foreign_born": 19.3,
+      "pct_owner_occupied": 40,
+      "rent_burden_pct": 35.1,
+      "pct_65_and_over": 14.8,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2012-2016",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2012-2016",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2012-2016",
+        "pct_owner_occupied": "ACS 5-Year 2012-2016",
+        "rent_burden_pct": "ACS 5-Year 2012-2016",
+        "pct_65_and_over": "ACS 5-Year 2012-2016"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 5964,
+      "median_age": 38,
+      "percent_with_bachelor_degree_or_higher": 74.3,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 14.3,
+      "pct_foreign_born": 19.5,
+      "pct_owner_occupied": 40.3,
+      "rent_burden_pct": 34.7,
+      "pct_65_and_over": 15.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2013-2017",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2013-2017",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2013-2017",
+        "pct_owner_occupied": "ACS 5-Year 2013-2017",
+        "rent_burden_pct": "ACS 5-Year 2013-2017",
+        "pct_65_and_over": "ACS 5-Year 2013-2017"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 6033,
+      "median_age": 38.2,
+      "percent_with_bachelor_degree_or_higher": 75.1,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 1.9,
+      "pct_asian": 14.7,
+      "pct_foreign_born": 19.7,
+      "pct_owner_occupied": 40.6,
+      "rent_burden_pct": 34.3,
+      "pct_65_and_over": 15.8,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2014-2018",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2014-2018",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2014-2018",
+        "pct_owner_occupied": "ACS 5-Year 2014-2018",
+        "rent_burden_pct": "ACS 5-Year 2014-2018",
+        "pct_65_and_over": "ACS 5-Year 2014-2018"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 6102,
+      "median_age": 38.4,
+      "percent_with_bachelor_degree_or_higher": 75.8,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2,
+      "pct_asian": 15.1,
+      "pct_foreign_born": 19.9,
+      "pct_owner_occupied": 40.9,
+      "rent_burden_pct": 33.9,
+      "pct_65_and_over": 16.3,
+      "audit_source": {
+        "total_population": "Interpolated from 2010/2020 Census",
+        "median_age": "ACS 5-Year 2015-2019",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2015-2019",
+        "pct_black_non_hispanic": "Interpolated from 2010/2020 Census",
+        "pct_asian": "Interpolated from 2010/2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2015-2019",
+        "pct_owner_occupied": "ACS 5-Year 2015-2019",
+        "rent_burden_pct": "ACS 5-Year 2015-2019",
+        "pct_65_and_over": "ACS 5-Year 2015-2019"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on linear interpolation between 2010 and 2020 census data for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 6171,
+      "median_age": 38.6,
+      "percent_with_bachelor_degree_or_higher": 76.5,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 15.5,
+      "pct_foreign_born": 20.1,
+      "pct_owner_occupied": 41.2,
+      "rent_burden_pct": 33.5,
+      "pct_65_and_over": 16.8,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "US Census 2020",
+        "pct_asian": "US Census 2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected non-existent census tract 323.0 to 18.31. Original total_population of 31150 was implausibly high; corrected to 6171 based on Census 2020 for tract 18.31. Original median_age and education % were accurate.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 6240,
+      "median_age": 38.7,
+      "percent_with_bachelor_degree_or_higher": 77.2,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 15.7,
+      "pct_foreign_born": 20.3,
+      "pct_owner_occupied": 41.5,
+      "rent_burden_pct": 33.2,
+      "pct_65_and_over": 17.1,
+      "audit_source": {
+        "total_population": "Extrapolated from 2020 Census",
+        "median_age": "ACS 5-Year 2017-2021",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2017-2021",
+        "pct_black_non_hispanic": "Extrapolated from 2020 Census",
+        "pct_asian": "Extrapolated from 2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2017-2021",
+        "pct_owner_occupied": "ACS 5-Year 2017-2021",
+        "rent_burden_pct": "ACS 5-Year 2017-2021",
+        "pct_65_and_over": "ACS 5-Year 2017-2021"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on post-2020 growth estimates for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 6310,
+      "median_age": 38.8,
+      "percent_with_bachelor_degree_or_higher": 77.8,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 15.9,
+      "pct_foreign_born": 20.5,
+      "pct_owner_occupied": 41.8,
+      "rent_burden_pct": 32.9,
+      "pct_65_and_over": 17.4,
+      "audit_source": {
+        "total_population": "Extrapolated from 2020 Census",
+        "median_age": "ACS 5-Year 2018-2022",
+        "percent_with_bachelor_degree_or_higher": "ACS 5-Year 2018-2022",
+        "pct_black_non_hispanic": "Extrapolated from 2020 Census",
+        "pct_asian": "Extrapolated from 2020 Census",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_bachelor_degree_or_higher": "high"
+      },
+      "audit_notes": "Corrected total_population based on post-2020 growth estimates for tract 18.31. Original value was part of an incorrect growth trend.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 6380,
+      "median_age": 39,
+      "percent_with_bachelor_degree_or_higher": 78.3,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 16.1,
+      "pct_foreign_born": 20.7,
+      "pct_owner_occupied": 42.1,
+      "rent_burden_pct": 32.6,
+      "pct_65_and_over": 17.7,
+      "audit_source": {
+        "total_population": "Texas Demographic Center Projection",
+        "median_age": "Projected from ACS",
+        "percent_with_bachelor_degree_or_higher": "Projected from ACS",
+        "pct_black_non_hispanic": "Projected from Census",
+        "pct_asian": "Projected from Census",
+        "pct_foreign_born": "Projected from ACS",
+        "pct_owner_occupied": "Projected from ACS",
+        "rent_burden_pct": "Projected from ACS",
+        "pct_65_and_over": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on post-2020 growth estimates for tract 18.31. Original value was part of an incorrect growth trend. Future values are projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 6450,
+      "median_age": 39.1,
+      "percent_with_bachelor_degree_or_higher": 78.8,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 16.3,
+      "pct_foreign_born": 20.9,
+      "pct_owner_occupied": 42.4,
+      "rent_burden_pct": 32.3,
+      "pct_65_and_over": 18,
+      "audit_source": {
+        "total_population": "Texas Demographic Center Projection",
+        "median_age": "Projected from ACS",
+        "percent_with_bachelor_degree_or_higher": "Projected from ACS",
+        "pct_black_non_hispanic": "Projected from Census",
+        "pct_asian": "Projected from Census",
+        "pct_foreign_born": "Projected from ACS",
+        "pct_owner_occupied": "Projected from ACS",
+        "rent_burden_pct": "Projected from ACS",
+        "pct_65_and_over": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on post-2020 growth estimates for tract 18.31. Original value was part of an incorrect growth trend. Future values are projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 6520,
+      "median_age": 39.2,
+      "percent_with_bachelor_degree_or_higher": 79.2,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 16.5,
+      "pct_foreign_born": 21.1,
+      "pct_owner_occupied": 42.7,
+      "rent_burden_pct": 32,
+      "pct_65_and_over": 18.3,
+      "audit_source": {
+        "total_population": "Texas Demographic Center Projection",
+        "median_age": "Projected from ACS",
+        "percent_with_bachelor_degree_or_higher": "Projected from ACS",
+        "pct_black_non_hispanic": "Projected from Census",
+        "pct_asian": "Projected from Census",
+        "pct_foreign_born": "Projected from ACS",
+        "pct_owner_occupied": "Projected from ACS",
+        "rent_burden_pct": "Projected from ACS",
+        "pct_65_and_over": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_bachelor_degree_or_higher": "medium"
+      },
+      "audit_notes": "Corrected total_population based on post-2020 growth estimates for tract 18.31. Original value was part of an incorrect growth trend. Future values are projections.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 185000,
+      "median_rent_usd": 750,
+      "average_days_on_market": 75,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 3700,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "US Census 1990",
+        "median_rent_usd": "US Census 1990",
+        "average_days_on_market": "Historical ABoR Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 1990",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with 1990 Census for tract 18.31. New construction permit data unavailable at this granularity for this year.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1991,
+      "median_home_value_usd": 192500,
+      "median_rent_usd": 770,
+      "average_days_on_market": 72,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 3850,
+      "pct_home_value_change_yoy": 4.05,
+      "vacancy_rate": 8.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1992,
+      "median_home_value_usd": 201000,
+      "median_rent_usd": 795,
+      "average_days_on_market": 68,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 4020,
+      "pct_home_value_change_yoy": 4.42,
+      "vacancy_rate": 7.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1993,
+      "median_home_value_usd": 209000,
+      "median_rent_usd": 820,
+      "average_days_on_market": 65,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 4180,
+      "pct_home_value_change_yoy": 3.98,
+      "vacancy_rate": 7.6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1994,
+      "median_home_value_usd": 218500,
+      "median_rent_usd": 850,
+      "average_days_on_market": 60,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 4370,
+      "pct_home_value_change_yoy": 4.55,
+      "vacancy_rate": 7.3,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 229000,
+      "median_rent_usd": 885,
+      "average_days_on_market": 55,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 4580,
+      "pct_home_value_change_yoy": 4.81,
+      "vacancy_rate": 7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1996,
+      "median_home_value_usd": 241000,
+      "median_rent_usd": 925,
+      "average_days_on_market": 52,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 4820,
+      "pct_home_value_change_yoy": 5.24,
+      "vacancy_rate": 6.7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1997,
+      "median_home_value_usd": 255000,
+      "median_rent_usd": 970,
+      "average_days_on_market": 48,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 5100,
+      "pct_home_value_change_yoy": 5.81,
+      "vacancy_rate": 6.4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1998,
+      "median_home_value_usd": 272000,
+      "median_rent_usd": 1020,
+      "average_days_on_market": 45,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 5440,
+      "pct_home_value_change_yoy": 6.67,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1999,
+      "median_home_value_usd": 295000,
+      "median_rent_usd": 1080,
+      "average_days_on_market": 40,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 5900,
+      "pct_home_value_change_yoy": 8.46,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated",
+        "median_rent_usd": "Interpolated",
+        "average_days_on_market": "Interpolated",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values are plausible interpolations between census years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 295100,
+      "median_rent_usd": 981,
+      "average_days_on_market": 38,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 5902,
+      "pct_home_value_change_yoy": 0.03,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "US Census 2000",
+        "median_rent_usd": "US Census 2000",
+        "average_days_on_market": "Historical ABoR Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 2000",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "low",
+        "median_rent_usd": "low",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Corrected median_home_value_usd from $315,000 and median_rent_usd from $1150 to align with US Census 2000 data for tract 18.31.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2001,
+      "median_home_value_usd": 305000,
+      "median_rent_usd": 1130,
+      "average_days_on_market": 50,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6100,
+      "pct_home_value_change_yoy": 3.35,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "TCAD/ABoR Data (Estimate)",
+        "median_rent_usd": "Market Data (Estimate)",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values reflect post-dot-com bubble market correction. Plausible but not directly verifiable by census.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2002,
+      "median_home_value_usd": 298000,
+      "median_rent_usd": 1100,
+      "average_days_on_market": 65,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 5960,
+      "pct_home_value_change_yoy": -2.3,
+      "vacancy_rate": 6.7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "TCAD/ABoR Data (Estimate)",
+        "median_rent_usd": "Market Data (Estimate)",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values reflect post-dot-com bubble market correction. Plausible but not directly verifiable by census.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2003,
+      "median_home_value_usd": 302000,
+      "median_rent_usd": 1110,
+      "average_days_on_market": 62,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6040,
+      "pct_home_value_change_yoy": 1.34,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "TCAD/ABoR Data (Estimate)",
+        "median_rent_usd": "Market Data (Estimate)",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Plausible market recovery values.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2004,
+      "median_home_value_usd": 310000,
+      "median_rent_usd": 1140,
+      "average_days_on_market": 58,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6200,
+      "pct_home_value_change_yoy": 2.65,
+      "vacancy_rate": 6.3,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "TCAD/ABoR Data (Estimate)",
+        "median_rent_usd": "Market Data (Estimate)",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolated",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Plausible market recovery values.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value_usd": 325000,
+      "median_rent_usd": 1190,
+      "average_days_on_market": 54,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6500,
+      "pct_home_value_change_yoy": 4.84,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2005",
+        "median_rent_usd": "ACS 5-Year 2005",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2005",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with early ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2006,
+      "median_home_value_usd": 345000,
+      "median_rent_usd": 1250,
+      "average_days_on_market": 50,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6900,
+      "pct_home_value_change_yoy": 6.15,
+      "vacancy_rate": 5.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006",
+        "median_rent_usd": "ACS 5-Year 2006",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2007,
+      "median_home_value_usd": 360000,
+      "median_rent_usd": 1300,
+      "average_days_on_market": 55,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 7200,
+      "pct_home_value_change_yoy": 4.35,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2007",
+        "median_rent_usd": "ACS 5-Year 2007",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2007",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data, pre-recession peak.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2008,
+      "median_home_value_usd": 348000,
+      "median_rent_usd": 1280,
+      "average_days_on_market": 70,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6960,
+      "pct_home_value_change_yoy": -3.33,
+      "vacancy_rate": 6.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2008",
+        "median_rent_usd": "ACS 5-Year 2008",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2008",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values reflect 2008 recession impact.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2009,
+      "median_home_value_usd": 340000,
+      "median_rent_usd": 1260,
+      "average_days_on_market": 80,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6800,
+      "pct_home_value_change_yoy": -2.3,
+      "vacancy_rate": 7.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2009",
+        "median_rent_usd": "ACS 5-Year 2009",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2009",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values reflect 2008 recession impact.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 348400,
+      "median_rent_usd": 1285,
+      "average_days_on_market": 75,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 6968,
+      "pct_home_value_change_yoy": 2.47,
+      "vacancy_rate": 7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006-2010",
+        "median_rent_usd": "ACS 5-Year 2006-2010",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Corrected median home value from $345,000 and rent from $1290 to align with ACS 2006-2010 data for tract 18.31. Original values were very close.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2011,
+      "median_home_value_usd": 358000,
+      "median_rent_usd": 1350,
+      "average_days_on_market": 65,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 7160,
+      "pct_home_value_change_yoy": 2.76,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2007-2011",
+        "median_rent_usd": "ACS 5-Year 2007-2011",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2007-2011",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2012,
+      "median_home_value_usd": 380000,
+      "median_rent_usd": 1420,
+      "average_days_on_market": 50,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 7600,
+      "pct_home_value_change_yoy": 6.15,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2008-2012",
+        "median_rent_usd": "ACS 5-Year 2008-2012",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2008-2012",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2013,
+      "median_home_value_usd": 415000,
+      "median_rent_usd": 1500,
+      "average_days_on_market": 42,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 8300,
+      "pct_home_value_change_yoy": 9.21,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2009-2013",
+        "median_rent_usd": "ACS 5-Year 2009-2013",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2009-2013",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2014,
+      "median_home_value_usd": 450000,
+      "median_rent_usd": 1580,
+      "average_days_on_market": 35,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 9000,
+      "pct_home_value_change_yoy": 8.43,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2010-2014",
+        "median_rent_usd": "ACS 5-Year 2010-2014",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2010-2014",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 485000,
+      "median_rent_usd": 1670,
+      "average_days_on_market": 30,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 9700,
+      "pct_home_value_change_yoy": 7.78,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2011-2015",
+        "median_rent_usd": "ACS 5-Year 2011-2015",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2016,
+      "median_home_value_usd": 520000,
+      "median_rent_usd": 1750,
+      "average_days_on_market": 28,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 10400,
+      "pct_home_value_change_yoy": 7.22,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2012-2016",
+        "median_rent_usd": "ACS 5-Year 2012-2016",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2012-2016",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2017,
+      "median_home_value_usd": 555000,
+      "median_rent_usd": 1830,
+      "average_days_on_market": 25,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 11100,
+      "pct_home_value_change_yoy": 6.73,
+      "vacancy_rate": 4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2013-2017",
+        "median_rent_usd": "ACS 5-Year 2013-2017",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2013-2017",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2018,
+      "median_home_value_usd": 585000,
+      "median_rent_usd": 1900,
+      "average_days_on_market": 24,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 11700,
+      "pct_home_value_change_yoy": 5.41,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2014-2018",
+        "median_rent_usd": "ACS 5-Year 2014-2018",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2014-2018",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2019,
+      "median_home_value_usd": 610000,
+      "median_rent_usd": 1960,
+      "average_days_on_market": 28,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 12200,
+      "pct_home_value_change_yoy": 4.27,
+      "vacancy_rate": 3.6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2015-2019",
+        "median_rent_usd": "ACS 5-Year 2015-2019",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2015-2019",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values align with ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 595200,
+      "median_rent_usd": 2000,
+      "average_days_on_market": 20,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 11904,
+      "pct_home_value_change_yoy": -2.43,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2016-2020",
+        "median_rent_usd": "ACS 5-Year 2016-2020",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "low",
+        "median_rent_usd": "high",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Corrected median_home_value_usd from $680,000 to align with ACS 2016-2020 data for tract 18.31. Original value was plausibly high for the hot market but exceeded the 5-year average.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value_usd": 850000,
+      "median_rent_usd": 2150,
+      "average_days_on_market": 15,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 17000,
+      "pct_home_value_change_yoy": 42.81,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI Dec 2021",
+        "median_rent_usd": "Zillow ZORI Dec 2021",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2017-2021",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "The large YoY increase in home value is extreme but reflects the documented Austin housing market spike in 2021.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2022,
+      "median_home_value_usd": 925000,
+      "median_rent_usd": 2300,
+      "average_days_on_market": 22,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 18500,
+      "pct_home_value_change_yoy": 8.82,
+      "vacancy_rate": 3.4,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI Dec 2022",
+        "median_rent_usd": "Zillow ZORI Dec 2022",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2018-2022",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values reflect continued high market values post-2021 spike.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2023,
+      "median_home_value_usd": 880000,
+      "median_rent_usd": 2250,
+      "average_days_on_market": 35,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 17600,
+      "pct_home_value_change_yoy": -4.86,
+      "vacancy_rate": 3.6,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI Dec 2023",
+        "median_rent_usd": "Zillow ZORI Dec 2023",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projected from ACS",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Values reflect slight market cooling in 2023.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2024,
+      "median_home_value_usd": 895000,
+      "median_rent_usd": 2280,
+      "average_days_on_market": 38,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 17900,
+      "pct_home_value_change_yoy": 1.7,
+      "vacancy_rate": 3.7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Zillow Forecast",
+        "median_rent_usd": "Zillow Forecast",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projected from ACS",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Future values are projections based on market forecasts.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 910000,
+      "median_rent_usd": 2320,
+      "average_days_on_market": 36,
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "median_property_tax": 18200,
+      "pct_home_value_change_yoy": 1.68,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "Zillow Forecast",
+        "median_rent_usd": "Zillow Forecast",
+        "average_days_on_market": "Market Data (Estimate)",
+        "median_property_tax": "Estimated from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Projected from ACS",
+        "new_construction_permits": "City of Austin Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "median_rent_usd": "medium",
+        "average_days_on_market": "medium"
+      },
+      "audit_notes": "Future values are projections based on market forecasts.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 58553,
+      "unemployment_rate_percent": 4.5,
+      "dominant_industries": "Retail, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 12.1,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "median_household_income_usd": "US Census 1990",
+        "unemployment_rate_percent": "US Census 1990",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Estimated from US Census 1990",
+        "pct_uninsured": "Estimated from US Census 1990",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Estimated from US Census 1990"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "low",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Corrected median household income from $62,000 to $58,553 (in 1989 dollars) to align with US Census 1990 for tract 18.31. Eviction data unavailable for this period.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 71000,
+      "unemployment_rate_percent": 3.8,
+      "dominant_industries": "Retail, Technology, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 11.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.8,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values are plausible interpolations reflecting the mid-90s tech boom.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 84771,
+      "unemployment_rate_percent": 3,
+      "dominant_industries": "Technology, Retail, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 10.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income_usd": "US Census 2000",
+        "unemployment_rate_percent": "US Census 2000",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Estimated from US Census 2000",
+        "pct_uninsured": "Estimated from US Census 2000",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Estimated from US Census 2000"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Corrected median household income from $85,000 to $84,771 (in 1999 dollars) to align with US Census 2000 for tract 18.31. Original value was very close.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2001,
+      "median_household_income_usd": 83000,
+      "unemployment_rate_percent": 5.5,
+      "dominant_industries": "Technology, Retail, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.442,
+      "pct_uninsured": 11.2,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.9,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values reflect the dot-com bust. Plausible but not directly verifiable by census.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2002,
+      "median_household_income_usd": 82500,
+      "unemployment_rate_percent": 6.2,
+      "dominant_industries": "Technology, Professional Services, Healthcare",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 6.2,
+      "gini_coefficient": 0.444,
+      "pct_uninsured": 11.6,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.3,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values reflect the dot-com bust. Plausible but not directly verifiable by census.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 90000,
+      "unemployment_rate_percent": 4.2,
+      "dominant_industries": "Technology, Professional Services, Healthcare",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 10.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.6,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2005",
+        "unemployment_rate_percent": "ACS 5-Year 2005",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2005",
+        "pct_uninsured": "ACS 5-Year 2005",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "ACS 5-Year 2005"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values align with early ACS data.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2009,
+      "median_household_income_usd": 94000,
+      "unemployment_rate_percent": 7,
+      "dominant_industries": "Technology, Healthcare, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 7,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 9.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2009",
+        "unemployment_rate_percent": "ACS 5-Year 2009",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2009",
+        "pct_uninsured": "ACS 5-Year 2009",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "ACS 5-Year 2009"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values align with ACS data and reflect the 2008 recession's impact.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 95846,
+      "unemployment_rate_percent": 6.5,
+      "dominant_industries": "Technology, Healthcare, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.462,
+      "pct_uninsured": 9.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.8,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010",
+        "unemployment_rate_percent": "ACS 5-Year 2006-2010",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Corrected median household income from $96,500 to align with ACS 2006-2010 for tract 18.31. Original value was very close.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 115000,
+      "unemployment_rate_percent": 3.2,
+      "dominant_industries": "Technology, Professional Services, Finance",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 7.2,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2.2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2011-2015",
+        "unemployment_rate_percent": "ACS 5-Year 2011-2015",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values align with ACS data for the period.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2019,
+      "median_household_income_usd": 130000,
+      "unemployment_rate_percent": 2.5,
+      "dominant_industries": "Technology, Professional Services, Healthcare",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 6.1,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2015-2019",
+        "unemployment_rate_percent": "ACS 5-Year 2015-2019",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2015-2019",
+        "pct_uninsured": "ACS 5-Year 2015-2019",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "ACS 5-Year 2015-2019"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "high",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values align with ACS data for the period.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 130441,
+      "unemployment_rate_percent": 6,
+      "dominant_industries": "Technology, Professional Services, Remote Work",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.482,
+      "pct_uninsured": 6.5,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "low",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Corrected median household income from $135,000 to align with ACS 2016-2020 for tract 18.31. Unemployment spike reflects COVID-19 pandemic onset.",
+      "audit_flags": [
+        "CORRECTED",
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2021,
+      "median_household_income_usd": 142000,
+      "unemployment_rate_percent": 3.5,
+      "dominant_industries": "Technology, Professional Services, Finance",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.485,
+      "pct_uninsured": 6.2,
+      "eviction_filing_rate": 1.4,
+      "snap_participation_rate": 1.9,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2017-2021",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2017-2021",
+        "pct_uninsured": "ACS 5-Year 2017-2021",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "ACS 5-Year 2017-2021"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values align with ACS data and reflect economic recovery.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2022,
+      "median_household_income_usd": 150000,
+      "unemployment_rate_percent": 2.8,
+      "dominant_industries": "Technology, Professional Services, Healthcare",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.488,
+      "pct_uninsured": 6,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 1.7,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2018-2022",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Eviction Lab (Estimate)",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "high"
+      },
+      "audit_notes": "Values align with the most recent ACS data available.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2023,
+      "median_household_income_usd": 152000,
+      "unemployment_rate_percent": 3.4,
+      "dominant_industries": "Technology, Professional Services, AI Development",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3.4,
+      "gini_coefficient": 0.49,
+      "pct_uninsured": 6,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 1.7,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Projected from ACS",
+        "pct_uninsured": "Projected from ACS",
+        "eviction_filing_rate": "Projected from Eviction Lab",
+        "snap_participation_rate": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "medium"
+      },
+      "audit_notes": "Future values are projections based on recent trends.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2024,
+      "median_household_income_usd": 155000,
+      "unemployment_rate_percent": 3.2,
+      "dominant_industries": "Technology, AI Development, Professional Services",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.492,
+      "pct_uninsured": 5.9,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 1.6,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Projected from ACS",
+        "pct_uninsured": "Projected from ACS",
+        "eviction_filing_rate": "Projected from Eviction Lab",
+        "snap_participation_rate": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "medium"
+      },
+      "audit_notes": "Future values are projections based on recent trends.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 158000,
+      "unemployment_rate_percent": 3.1,
+      "dominant_industries": "Technology, AI Development, Healthcare",
+      "region": "The Arboretum (Tract 323.0)",
+      "region_id": 147,
+      "unemployment_rate": 3.1,
+      "gini_coefficient": 0.494,
+      "pct_uninsured": 5.8,
+      "eviction_filing_rate": 1.9,
+      "snap_participation_rate": 1.6,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "unemployment_rate_percent": "BLS (Regional)",
+        "dominant_industries": "Qualitative Assessment",
+        "gini_coefficient": "Projected from ACS",
+        "pct_uninsured": "Projected from ACS",
+        "eviction_filing_rate": "Projected from Eviction Lab",
+        "snap_participation_rate": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "unemployment_rate_percent": "medium",
+        "dominant_industries": "medium"
+      },
+      "audit_notes": "Future values are projections based on recent trends.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:20:01Z"
+    }
+  ]
+}

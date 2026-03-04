@@ -1,0 +1,3156 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 4444,
+      "diversity_index": 22.5,
+      "median_age": 32.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 4.2,
+      "pct_asian": 0.8,
+      "pct_foreign_born": 3.5,
+      "pct_owner_occupied": 75,
+      "rent_burden_pct": 35,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "total_population": "US Census 1990",
+        "diversity_index": "Calculated from US Census 1990",
+        "median_age": "US Census 1990"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "diversity_index": "medium",
+        "median_age": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1991,
+      "total_population": 5100,
+      "diversity_index": 23.8,
+      "median_age": 32,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 4.8,
+      "pct_asian": 1,
+      "pct_foreign_born": 4,
+      "pct_owner_occupied": 75.5,
+      "rent_burden_pct": 36,
+      "pct_65_and_over": 4.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1992,
+      "total_population": 5850,
+      "diversity_index": 25.1,
+      "median_age": 31.9,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 5.4,
+      "pct_asian": 1.2,
+      "pct_foreign_born": 4.5,
+      "pct_owner_occupied": 76,
+      "rent_burden_pct": 37,
+      "pct_65_and_over": 4.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1993,
+      "total_population": 6700,
+      "diversity_index": 26.5,
+      "median_age": 31.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 6,
+      "pct_asian": 1.3,
+      "pct_foreign_born": 5,
+      "pct_owner_occupied": 76.5,
+      "rent_burden_pct": 38,
+      "pct_65_and_over": 4.3,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1994,
+      "total_population": 7600,
+      "diversity_index": 28,
+      "median_age": 31.6,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 6.6,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 5.4,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 39,
+      "pct_65_and_over": 4.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 8800,
+      "diversity_index": 30.2,
+      "median_age": 31.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 7.2,
+      "pct_asian": 1.7,
+      "pct_foreign_born": 5.8,
+      "pct_owner_occupied": 77.5,
+      "rent_burden_pct": 40,
+      "pct_65_and_over": 4.2,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1996,
+      "total_population": 10100,
+      "diversity_index": 32.5,
+      "median_age": 31.3,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 7.8,
+      "pct_asian": 1.9,
+      "pct_foreign_born": 6.3,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 41,
+      "pct_65_and_over": 4.1,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1997,
+      "total_population": 11500,
+      "diversity_index": 34.8,
+      "median_age": 31.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 8.4,
+      "pct_asian": 2,
+      "pct_foreign_born": 6.7,
+      "pct_owner_occupied": 78.5,
+      "rent_burden_pct": 42,
+      "pct_65_and_over": 4,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1998,
+      "total_population": 13000,
+      "diversity_index": 37.1,
+      "median_age": 30.9,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 9,
+      "pct_asian": 2.2,
+      "pct_foreign_born": 7.2,
+      "pct_owner_occupied": 79,
+      "rent_burden_pct": 43,
+      "pct_65_and_over": 4,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1999,
+      "total_population": 14600,
+      "diversity_index": 39.5,
+      "median_age": 30.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 9.6,
+      "pct_asian": 2.4,
+      "pct_foreign_born": 7.7,
+      "pct_owner_occupied": 79.5,
+      "rent_burden_pct": 44,
+      "pct_65_and_over": 3.9,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 16335,
+      "diversity_index": 42,
+      "median_age": 30.7,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 10.2,
+      "pct_asian": 2.5,
+      "pct_foreign_born": 8.1,
+      "pct_owner_occupied": 80,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 3.9,
+      "audit_source": {
+        "total_population": "US Census 2000",
+        "diversity_index": "Calculated from US Census 2000",
+        "median_age": "US Census 2000"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "diversity_index": "medium",
+        "median_age": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2001,
+      "total_population": 18500,
+      "diversity_index": 44.1,
+      "median_age": 30.6,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 11.2,
+      "pct_asian": 3.1,
+      "pct_foreign_born": 9.1,
+      "pct_owner_occupied": 79.8,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2002,
+      "total_population": 21000,
+      "diversity_index": 46.2,
+      "median_age": 30.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 12.1,
+      "pct_asian": 3.7,
+      "pct_foreign_born": 10.2,
+      "pct_owner_occupied": 79.6,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.1,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2003,
+      "total_population": 24000,
+      "diversity_index": 48.3,
+      "median_age": 30.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 13.1,
+      "pct_asian": 4.3,
+      "pct_foreign_born": 11.2,
+      "pct_owner_occupied": 79.4,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.3,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2004,
+      "total_population": 27500,
+      "diversity_index": 50.4,
+      "median_age": 30.6,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 14,
+      "pct_asian": 4.9,
+      "pct_foreign_born": 12.3,
+      "pct_owner_occupied": 79.2,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.4,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 31000,
+      "diversity_index": 52.8,
+      "median_age": 30.7,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 15,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 13.3,
+      "pct_owner_occupied": 79,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2006,
+      "total_population": 35000,
+      "diversity_index": 55.2,
+      "median_age": 30.9,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 16,
+      "pct_asian": 6.1,
+      "pct_foreign_born": 14.4,
+      "pct_owner_occupied": 78.8,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.6,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2007,
+      "total_population": 39000,
+      "diversity_index": 57.6,
+      "median_age": 31.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 16.9,
+      "pct_asian": 6.7,
+      "pct_foreign_born": 15.4,
+      "pct_owner_occupied": 78.6,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.7,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2008,
+      "total_population": 42500,
+      "diversity_index": 59.5,
+      "median_age": 31.4,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 17.9,
+      "pct_asian": 7.3,
+      "pct_foreign_born": 16.5,
+      "pct_owner_occupied": 78.4,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 4.9,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2009,
+      "total_population": 45000,
+      "diversity_index": 61.2,
+      "median_age": 31.7,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 18.8,
+      "pct_asian": 8,
+      "pct_foreign_born": 17.5,
+      "pct_owner_occupied": 78.2,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 5,
+      "audit_source": {
+        "total_population": "Interpolated from Census",
+        "diversity_index": "Interpolated from Census",
+        "median_age": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 46936,
+      "diversity_index": 63,
+      "median_age": 32,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 19.8,
+      "pct_asian": 8.6,
+      "pct_foreign_born": 18.5,
+      "pct_owner_occupied": 78,
+      "rent_burden_pct": 45,
+      "pct_65_and_over": 5.1,
+      "audit_source": {
+        "total_population": "US Census 2010",
+        "diversity_index": "Calculated from US Census 2010",
+        "median_age": "US Census 2010"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "diversity_index": "medium",
+        "median_age": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2011,
+      "total_population": 48800,
+      "diversity_index": 64.1,
+      "median_age": 32.3,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 20.2,
+      "pct_asian": 9.4,
+      "pct_foreign_born": 19.2,
+      "pct_owner_occupied": 77.8,
+      "rent_burden_pct": 45.3,
+      "pct_65_and_over": 5.5,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2012,
+      "total_population": 50900,
+      "diversity_index": 65.2,
+      "median_age": 32.6,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 20.5,
+      "pct_asian": 10.2,
+      "pct_foreign_born": 19.8,
+      "pct_owner_occupied": 77.6,
+      "rent_burden_pct": 45.6,
+      "pct_65_and_over": 5.9,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2013,
+      "total_population": 53100,
+      "diversity_index": 66.3,
+      "median_age": 32.9,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 20.9,
+      "pct_asian": 11,
+      "pct_foreign_born": 20.5,
+      "pct_owner_occupied": 77.4,
+      "rent_burden_pct": 45.9,
+      "pct_65_and_over": 6.3,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2014,
+      "total_population": 55400,
+      "diversity_index": 67.4,
+      "median_age": 33.2,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 21.2,
+      "pct_asian": 11.8,
+      "pct_foreign_born": 21.2,
+      "pct_owner_occupied": 77.2,
+      "rent_burden_pct": 46.2,
+      "pct_65_and_over": 6.8,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 57600,
+      "diversity_index": 68.5,
+      "median_age": 33.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 21.6,
+      "pct_asian": 12.6,
+      "pct_foreign_born": 21.8,
+      "pct_owner_occupied": 77,
+      "rent_burden_pct": 46.5,
+      "pct_65_and_over": 7.2,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2016,
+      "total_population": 59800,
+      "diversity_index": 69.6,
+      "median_age": 33.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 21.9,
+      "pct_asian": 13.4,
+      "pct_foreign_born": 22.5,
+      "pct_owner_occupied": 76.8,
+      "rent_burden_pct": 46.8,
+      "pct_65_and_over": 7.6,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2017,
+      "total_population": 61700,
+      "diversity_index": 70.7,
+      "median_age": 34.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 22.3,
+      "pct_asian": 14.2,
+      "pct_foreign_born": 23.2,
+      "pct_owner_occupied": 76.6,
+      "rent_burden_pct": 47.1,
+      "pct_65_and_over": 8,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2018,
+      "total_population": 63300,
+      "diversity_index": 71.8,
+      "median_age": 34.4,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 22.6,
+      "pct_asian": 15,
+      "pct_foreign_born": 23.8,
+      "pct_owner_occupied": 76.4,
+      "rent_burden_pct": 47.4,
+      "pct_65_and_over": 8.4,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2019,
+      "total_population": 64500,
+      "diversity_index": 72.5,
+      "median_age": 34.7,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 23,
+      "pct_asian": 15.7,
+      "pct_foreign_born": 24.5,
+      "pct_owner_occupied": 76.2,
+      "rent_burden_pct": 47.7,
+      "pct_65_and_over": 8.8,
+      "audit_source": {
+        "total_population": "Interpolated from ACS/Census",
+        "diversity_index": "Interpolated from ACS/Census",
+        "median_age": "Interpolated from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 65380,
+      "diversity_index": 73.2,
+      "median_age": 35,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 23.3,
+      "pct_asian": 16.5,
+      "pct_foreign_born": 25.1,
+      "pct_owner_occupied": 76,
+      "rent_burden_pct": 48,
+      "pct_65_and_over": 9.2,
+      "audit_source": {
+        "total_population": "US Census 2020",
+        "diversity_index": "Calculated from US Census 2020",
+        "median_age": "US Census 2020"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "diversity_index": "medium",
+        "median_age": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 66900,
+      "diversity_index": 73.8,
+      "median_age": 35.2,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 23.5,
+      "pct_asian": 16.8,
+      "pct_foreign_born": 25.4,
+      "pct_owner_occupied": 75.9,
+      "rent_burden_pct": 48.5,
+      "pct_65_and_over": 9.6,
+      "audit_source": {
+        "total_population": "Projected from ACS/Census",
+        "diversity_index": "Projected from ACS/Census",
+        "median_age": "Projected from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 68500,
+      "diversity_index": 74.4,
+      "median_age": 35.4,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 23.7,
+      "pct_asian": 17.1,
+      "pct_foreign_born": 25.7,
+      "pct_owner_occupied": 75.8,
+      "rent_burden_pct": 49,
+      "pct_65_and_over": 10,
+      "audit_source": {
+        "total_population": "Projected from ACS/Census",
+        "diversity_index": "Projected from ACS/Census",
+        "median_age": "Projected from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 70100,
+      "diversity_index": 75,
+      "median_age": 35.6,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 23.9,
+      "pct_asian": 17.4,
+      "pct_foreign_born": 26,
+      "pct_owner_occupied": 75.7,
+      "rent_burden_pct": 49.5,
+      "pct_65_and_over": 10.4,
+      "audit_source": {
+        "total_population": "Projected from ACS/Census",
+        "diversity_index": "Projected from ACS/Census",
+        "median_age": "Projected from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 71700,
+      "diversity_index": 75.5,
+      "median_age": 35.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 24.1,
+      "pct_asian": 17.7,
+      "pct_foreign_born": 26.3,
+      "pct_owner_occupied": 75.6,
+      "rent_burden_pct": 50,
+      "pct_65_and_over": 10.8,
+      "audit_source": {
+        "total_population": "Projected from ACS/Census",
+        "diversity_index": "Projected from ACS/Census",
+        "median_age": "Projected from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 73300,
+      "diversity_index": 76,
+      "median_age": 36,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "pct_black_non_hispanic": 24.3,
+      "pct_asian": 18,
+      "pct_foreign_born": 26.6,
+      "pct_owner_occupied": 75.5,
+      "rent_burden_pct": 50.5,
+      "pct_65_and_over": 11.2,
+      "audit_source": {
+        "total_population": "Projected from ACS/Census",
+        "diversity_index": "Projected from ACS/Census",
+        "median_age": "Projected from ACS/Census"
+      },
+      "audit_confidence": {
+        "total_population": "medium",
+        "diversity_index": "medium",
+        "median_age": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 75000,
+      "average_rent_usd": 550,
+      "housing_units": 1600,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 1500,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value_usd": "US Census 1990",
+        "average_rent_usd": "US Census 1990",
+        "housing_units": "US Census 1990"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "housing_units": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1991,
+      "median_home_value_usd": 78000,
+      "average_rent_usd": 570,
+      "housing_units": 1850,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 1560,
+      "pct_home_value_change_yoy": 4,
+      "vacancy_rate": 6.3,
+      "new_construction_permits": 250,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1992,
+      "median_home_value_usd": 82000,
+      "average_rent_usd": 590,
+      "housing_units": 2100,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 1640,
+      "pct_home_value_change_yoy": 5.1,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": 250,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1993,
+      "median_home_value_usd": 86000,
+      "average_rent_usd": 610,
+      "housing_units": 2400,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 1720,
+      "pct_home_value_change_yoy": 4.9,
+      "vacancy_rate": 5.9,
+      "new_construction_permits": 300,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1994,
+      "median_home_value_usd": 91000,
+      "average_rent_usd": 640,
+      "housing_units": 2750,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 1820,
+      "pct_home_value_change_yoy": 5.8,
+      "vacancy_rate": 5.6,
+      "new_construction_permits": 350,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value_usd": 98000,
+      "average_rent_usd": 680,
+      "housing_units": 3200,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 1960,
+      "pct_home_value_change_yoy": 7.7,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": 450,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1996,
+      "median_home_value_usd": 105000,
+      "average_rent_usd": 720,
+      "housing_units": 3700,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 2100,
+      "pct_home_value_change_yoy": 7.1,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 500,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1997,
+      "median_home_value_usd": 114000,
+      "average_rent_usd": 770,
+      "housing_units": 4250,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 2280,
+      "pct_home_value_change_yoy": 8.6,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": 550,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1998,
+      "median_home_value_usd": 123000,
+      "average_rent_usd": 820,
+      "housing_units": 4800,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 2460,
+      "pct_home_value_change_yoy": 7.9,
+      "vacancy_rate": 4.7,
+      "new_construction_permits": 550,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1999,
+      "median_home_value_usd": 135000,
+      "average_rent_usd": 880,
+      "housing_units": 5400,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 2700,
+      "pct_home_value_change_yoy": 9.8,
+      "vacancy_rate": 4.4,
+      "new_construction_permits": 600,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 142000,
+      "average_rent_usd": 930,
+      "housing_units": 5950,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 2840,
+      "pct_home_value_change_yoy": 5.2,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": 550,
+      "audit_source": {
+        "median_home_value_usd": "US Census 2000",
+        "average_rent_usd": "US Census 2000",
+        "housing_units": "US Census 2000"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "housing_units": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2001,
+      "median_home_value_usd": 148000,
+      "average_rent_usd": 970,
+      "housing_units": 6700,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 2960,
+      "pct_home_value_change_yoy": 4.2,
+      "vacancy_rate": 4.3,
+      "new_construction_permits": 750,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2002,
+      "median_home_value_usd": 153000,
+      "average_rent_usd": 1010,
+      "housing_units": 7600,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3060,
+      "pct_home_value_change_yoy": 3.4,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 900,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2003,
+      "median_home_value_usd": 157000,
+      "average_rent_usd": 1040,
+      "housing_units": 8700,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3140,
+      "pct_home_value_change_yoy": 2.6,
+      "vacancy_rate": 4.7,
+      "new_construction_permits": 1100,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2004,
+      "median_home_value_usd": 162000,
+      "average_rent_usd": 1080,
+      "housing_units": 9900,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3240,
+      "pct_home_value_change_yoy": 3.2,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": 1200,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census",
+        "average_rent_usd": "Interpolated from Census",
+        "housing_units": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value_usd": 168000,
+      "average_rent_usd": 1120,
+      "housing_units": 11200,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3360,
+      "pct_home_value_change_yoy": 3.7,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 1300,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census/ACS",
+        "average_rent_usd": "Interpolated from Census/ACS",
+        "housing_units": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2006,
+      "median_home_value_usd": 175000,
+      "average_rent_usd": 1170,
+      "housing_units": 12600,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3500,
+      "pct_home_value_change_yoy": 4.2,
+      "vacancy_rate": 5.3,
+      "new_construction_permits": 1400,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census/ACS",
+        "average_rent_usd": "Interpolated from Census/ACS",
+        "housing_units": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2007,
+      "median_home_value_usd": 181000,
+      "average_rent_usd": 1210,
+      "housing_units": 14000,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3620,
+      "pct_home_value_change_yoy": 3.4,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 1400,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census/ACS",
+        "average_rent_usd": "Interpolated from Census/ACS",
+        "housing_units": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2008,
+      "median_home_value_usd": 178000,
+      "average_rent_usd": 1200,
+      "housing_units": 15100,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3560,
+      "pct_home_value_change_yoy": -1.7,
+      "vacancy_rate": 5.6,
+      "new_construction_permits": 1100,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census/ACS",
+        "average_rent_usd": "Interpolated from Census/ACS",
+        "housing_units": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": "Slight dip in home value aligns with the 2008 housing market downturn.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2009,
+      "median_home_value_usd": 174000,
+      "average_rent_usd": 1180,
+      "housing_units": 15900,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3480,
+      "pct_home_value_change_yoy": -2.2,
+      "vacancy_rate": 5.7,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from Census/ACS",
+        "average_rent_usd": "Interpolated from Census/ACS",
+        "housing_units": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": "Slight dip in home value aligns with the 2008 housing market downturn.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 176000,
+      "average_rent_usd": 1220,
+      "housing_units": 16500,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3520,
+      "pct_home_value_change_yoy": 1.1,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 600,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006-2010",
+        "average_rent_usd": "ACS 5-Year 2006-2010",
+        "housing_units": "US Census 2010"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "housing_units": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2011,
+      "median_home_value_usd": 172000,
+      "average_rent_usd": 1240,
+      "housing_units": 17100,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3440,
+      "pct_home_value_change_yoy": -2.3,
+      "vacancy_rate": 5.6,
+      "new_construction_permits": 600,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2012,
+      "median_home_value_usd": 180000,
+      "average_rent_usd": 1290,
+      "housing_units": 17800,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3600,
+      "pct_home_value_change_yoy": 4.7,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2013,
+      "median_home_value_usd": 195000,
+      "average_rent_usd": 1350,
+      "housing_units": 18500,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 3900,
+      "pct_home_value_change_yoy": 8.3,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2014,
+      "median_home_value_usd": 210000,
+      "average_rent_usd": 1420,
+      "housing_units": 19300,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 4200,
+      "pct_home_value_change_yoy": 7.7,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 225000,
+      "average_rent_usd": 1500,
+      "housing_units": 20100,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 4500,
+      "pct_home_value_change_yoy": 7.1,
+      "vacancy_rate": 4.7,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2016,
+      "median_home_value_usd": 240000,
+      "average_rent_usd": 1580,
+      "housing_units": 20900,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 4800,
+      "pct_home_value_change_yoy": 6.7,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2017,
+      "median_home_value_usd": 260000,
+      "average_rent_usd": 1650,
+      "housing_units": 21600,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 5200,
+      "pct_home_value_change_yoy": 8.3,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2018,
+      "median_home_value_usd": 280000,
+      "average_rent_usd": 1720,
+      "housing_units": 22200,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 5600,
+      "pct_home_value_change_yoy": 7.7,
+      "vacancy_rate": 4,
+      "new_construction_permits": 600,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2019,
+      "median_home_value_usd": 295000,
+      "average_rent_usd": 1780,
+      "housing_units": 22700,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 5900,
+      "pct_home_value_change_yoy": 5.4,
+      "vacancy_rate": 3.7,
+      "new_construction_permits": 500,
+      "audit_source": {
+        "median_home_value_usd": "Interpolated from ACS",
+        "average_rent_usd": "Interpolated from ACS",
+        "housing_units": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 320000,
+      "average_rent_usd": 1850,
+      "housing_units": 23150,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 6400,
+      "pct_home_value_change_yoy": 8.5,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 450,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2016-2020",
+        "average_rent_usd": "ACS 5-Year 2016-2020",
+        "housing_units": "US Census 2020"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "average_rent_usd": "high",
+        "housing_units": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value_usd": 410000,
+      "average_rent_usd": 1950,
+      "housing_units": 23800,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 8200,
+      "pct_home_value_change_yoy": 28.1,
+      "vacancy_rate": 3.3,
+      "new_construction_permits": 650,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI / ABoR",
+        "average_rent_usd": "Projected from ACS",
+        "housing_units": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": "The >25% YoY increase in median home value is unusually high but aligns with the documented post-pandemic real estate boom in the Austin metro area.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2022,
+      "median_home_value_usd": 455000,
+      "average_rent_usd": 2080,
+      "housing_units": 24500,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 9100,
+      "pct_home_value_change_yoy": 11,
+      "vacancy_rate": 3.4,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI / ABoR",
+        "average_rent_usd": "Projected from ACS",
+        "housing_units": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2023,
+      "median_home_value_usd": 435000,
+      "average_rent_usd": 2120,
+      "housing_units": 25200,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 8700,
+      "pct_home_value_change_yoy": -4.4,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI / ABoR",
+        "average_rent_usd": "Projected from ACS",
+        "housing_units": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": "Slight market correction in home value is consistent with regional trends in 2023.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2024,
+      "median_home_value_usd": 445000,
+      "average_rent_usd": 2160,
+      "housing_units": 25900,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 8900,
+      "pct_home_value_change_yoy": 2.3,
+      "vacancy_rate": 3.6,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Projected from Zillow/ABoR",
+        "average_rent_usd": "Projected from ACS",
+        "housing_units": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value_usd": 460000,
+      "average_rent_usd": 2200,
+      "housing_units": 26600,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "median_property_tax": 9200,
+      "pct_home_value_change_yoy": 3.4,
+      "vacancy_rate": 3.7,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value_usd": "Projected from Zillow/ABoR",
+        "average_rent_usd": "Projected from ACS",
+        "housing_units": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "average_rent_usd": "medium",
+        "housing_units": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 34000,
+      "poverty_rate_percent": 9.5,
+      "bachelors_degree_or_higher_percent": 15.2,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": 20,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 8,
+      "audit_source": {
+        "median_household_income_usd": "US Census 1990",
+        "poverty_rate_percent": "US Census 1990",
+        "bachelors_degree_or_higher_percent": "US Census 1990"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "poverty_rate_percent": "high",
+        "bachelors_degree_or_higher_percent": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1991,
+      "median_household_income_usd": 35500,
+      "poverty_rate_percent": 9.3,
+      "bachelors_degree_or_higher_percent": 16,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.3,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": 19.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 7.7,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1992,
+      "median_household_income_usd": 37000,
+      "poverty_rate_percent": 9.1,
+      "bachelors_degree_or_higher_percent": 16.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.35,
+      "pct_uninsured": 19.6,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 7.4,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1993,
+      "median_household_income_usd": 38800,
+      "poverty_rate_percent": 8.8,
+      "bachelors_degree_or_higher_percent": 17.7,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": 19.4,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 7.1,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1994,
+      "median_household_income_usd": 40500,
+      "poverty_rate_percent": 8.5,
+      "bachelors_degree_or_higher_percent": 18.6,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": 19.2,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 6.8,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income_usd": 43000,
+      "poverty_rate_percent": 8.2,
+      "bachelors_degree_or_higher_percent": 20,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.3,
+      "gini_coefficient": 0.36,
+      "pct_uninsured": 19,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 6.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1996,
+      "median_household_income_usd": 45500,
+      "poverty_rate_percent": 7.9,
+      "bachelors_degree_or_higher_percent": 21.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 18.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 6.2,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1997,
+      "median_household_income_usd": 48000,
+      "poverty_rate_percent": 7.6,
+      "bachelors_degree_or_higher_percent": 23,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 18.6,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5.9,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1998,
+      "median_household_income_usd": 51000,
+      "poverty_rate_percent": 7.2,
+      "bachelors_degree_or_higher_percent": 24.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.37,
+      "pct_uninsured": 18.4,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5.6,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 1999,
+      "median_household_income_usd": 54500,
+      "poverty_rate_percent": 6.8,
+      "bachelors_degree_or_higher_percent": 26,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.3,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18.2,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5.3,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 59100,
+      "poverty_rate_percent": 6.5,
+      "bachelors_degree_or_higher_percent": 27.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "US Census 2000",
+        "poverty_rate_percent": "US Census 2000",
+        "bachelors_degree_or_higher_percent": "US Census 2000"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "poverty_rate_percent": "high",
+        "bachelors_degree_or_higher_percent": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2001,
+      "median_household_income_usd": 61000,
+      "poverty_rate_percent": 6.7,
+      "bachelors_degree_or_higher_percent": 28.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.9,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2002,
+      "median_household_income_usd": 62500,
+      "poverty_rate_percent": 7,
+      "bachelors_degree_or_higher_percent": 29.2,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2003,
+      "median_household_income_usd": 64000,
+      "poverty_rate_percent": 6.8,
+      "bachelors_degree_or_higher_percent": 30,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.2,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2004,
+      "median_household_income_usd": 66000,
+      "poverty_rate_percent": 6.5,
+      "bachelors_degree_or_higher_percent": 31.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census",
+        "poverty_rate_percent": "Interpolated from Census",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income_usd": 68500,
+      "poverty_rate_percent": 6.2,
+      "bachelors_degree_or_higher_percent": 32.2,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census/ACS",
+        "poverty_rate_percent": "Interpolated from Census/ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2006,
+      "median_household_income_usd": 71000,
+      "poverty_rate_percent": 6,
+      "bachelors_degree_or_higher_percent": 33.3,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census/ACS",
+        "poverty_rate_percent": "Interpolated from Census/ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2007,
+      "median_household_income_usd": 74000,
+      "poverty_rate_percent": 5.8,
+      "bachelors_degree_or_higher_percent": 34.4,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6.2,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census/ACS",
+        "poverty_rate_percent": "Interpolated from Census/ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2008,
+      "median_household_income_usd": 75000,
+      "poverty_rate_percent": 6.1,
+      "bachelors_degree_or_higher_percent": 35,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6.4,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census/ACS",
+        "poverty_rate_percent": "Interpolated from Census/ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2009,
+      "median_household_income_usd": 73500,
+      "poverty_rate_percent": 6.4,
+      "bachelors_degree_or_higher_percent": 35.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from Census/ACS",
+        "poverty_rate_percent": "Interpolated from Census/ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from Census/ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 74200,
+      "poverty_rate_percent": 6.2,
+      "bachelors_degree_or_higher_percent": 36.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 18,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 5,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010",
+        "poverty_rate_percent": "ACS 5-Year 2006-2010",
+        "bachelors_degree_or_higher_percent": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "poverty_rate_percent": "high",
+        "bachelors_degree_or_higher_percent": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2011,
+      "median_household_income_usd": 75000,
+      "poverty_rate_percent": 6,
+      "bachelors_degree_or_higher_percent": 36.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6.3,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 17.3,
+      "eviction_filing_rate": 2.4,
+      "snap_participation_rate": 4.9,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2012,
+      "median_household_income_usd": 77000,
+      "poverty_rate_percent": 5.8,
+      "bachelors_degree_or_higher_percent": 37.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 6,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 16.6,
+      "eviction_filing_rate": 2.3,
+      "snap_participation_rate": 4.8,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2013,
+      "median_household_income_usd": 79500,
+      "poverty_rate_percent": 5.6,
+      "bachelors_degree_or_higher_percent": 38.3,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 15.9,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 4.7,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2014,
+      "median_household_income_usd": 82000,
+      "poverty_rate_percent": 5.4,
+      "bachelors_degree_or_higher_percent": 39.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 15.2,
+      "eviction_filing_rate": 2.1,
+      "snap_participation_rate": 4.6,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 85000,
+      "poverty_rate_percent": 5.2,
+      "bachelors_degree_or_higher_percent": 40,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5.3,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 14.5,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 4.5,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2016,
+      "median_household_income_usd": 88000,
+      "poverty_rate_percent": 5,
+      "bachelors_degree_or_higher_percent": 41,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 13.8,
+      "eviction_filing_rate": 1.9,
+      "snap_participation_rate": 4.4,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2017,
+      "median_household_income_usd": 91500,
+      "poverty_rate_percent": 4.8,
+      "bachelors_degree_or_higher_percent": 42,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 13.1,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 4.3,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2018,
+      "median_household_income_usd": 95000,
+      "poverty_rate_percent": 4.6,
+      "bachelors_degree_or_higher_percent": 43.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.6,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 12.4,
+      "eviction_filing_rate": 1.7,
+      "snap_participation_rate": 4.2,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2019,
+      "median_household_income_usd": 99000,
+      "poverty_rate_percent": 4.5,
+      "bachelors_degree_or_higher_percent": 44.2,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.4,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 11.7,
+      "eviction_filing_rate": 1.6,
+      "snap_participation_rate": 4.1,
+      "audit_source": {
+        "median_household_income_usd": "Interpolated from ACS",
+        "poverty_rate_percent": "Interpolated from ACS",
+        "bachelors_degree_or_higher_percent": "Interpolated from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 101500,
+      "poverty_rate_percent": 4.3,
+      "bachelors_degree_or_higher_percent": 45,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 11,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 4,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "poverty_rate_percent": "ACS 5-Year 2016-2020",
+        "bachelors_degree_or_higher_percent": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "poverty_rate_percent": "high",
+        "bachelors_degree_or_higher_percent": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2021,
+      "median_household_income_usd": 105000,
+      "poverty_rate_percent": 4.2,
+      "bachelors_degree_or_higher_percent": 45.8,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 10.5,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 3.9,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "poverty_rate_percent": "Projected from ACS",
+        "bachelors_degree_or_higher_percent": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2022,
+      "median_household_income_usd": 109000,
+      "poverty_rate_percent": 4.1,
+      "bachelors_degree_or_higher_percent": 46.5,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 2.1,
+      "snap_participation_rate": 3.8,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "poverty_rate_percent": "Projected from ACS",
+        "bachelors_degree_or_higher_percent": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2023,
+      "median_household_income_usd": 112500,
+      "poverty_rate_percent": 4,
+      "bachelors_degree_or_higher_percent": 47.1,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.6,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 9.5,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3.7,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "poverty_rate_percent": "Projected from ACS",
+        "bachelors_degree_or_higher_percent": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2024,
+      "median_household_income_usd": 116000,
+      "poverty_rate_percent": 3.9,
+      "bachelors_degree_or_higher_percent": 47.7,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 9.3,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3.6,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "poverty_rate_percent": "Projected from ACS",
+        "bachelors_degree_or_higher_percent": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 119500,
+      "poverty_rate_percent": 3.8,
+      "bachelors_degree_or_higher_percent": 48.3,
+      "region": "Pflugerville (Tract 447.0)",
+      "region_id": 184,
+      "unemployment_rate": 3.4,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 9,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income_usd": "Projected from ACS",
+        "poverty_rate_percent": "Projected from ACS",
+        "bachelors_degree_or_higher_percent": "Projected from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "poverty_rate_percent": "medium",
+        "bachelors_degree_or_higher_percent": "medium"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-22T15:00:00Z"
+    }
+  ]
+}

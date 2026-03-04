@@ -1,0 +1,1459 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total_population": 1253,
+      "median_age": 38.5,
+      "percent_with_children": 35,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 1.1,
+      "pct_asian": 1.5,
+      "pct_foreign_born": 3.2,
+      "pct_owner_occupied": 82.3,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 5.8,
+      "audit_source": {
+        "total_population": "US Census 1990 SF1",
+        "median_age": "US Census 1990 SF1",
+        "percent_with_children": "US Census 1990 SF1",
+        "pct_black_non_hispanic": "US Census 1990 SF1",
+        "pct_asian": "US Census 1990 SF1",
+        "pct_foreign_born": "US Census 1990 SF3",
+        "pct_owner_occupied": "US Census 1990 SF1",
+        "rent_burden_pct": "N/A",
+        "pct_65_and_over": "US Census 1990 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected total_population from 1250 to 1253 to match 1990 Census data for Tract 343.0. Rent burden data is not readily available for this period at the tract level.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "total_population": 8728,
+      "median_age": 34.2,
+      "percent_with_children": 42.1,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 2.5,
+      "pct_asian": 8,
+      "pct_foreign_born": 10.5,
+      "pct_owner_occupied": 76.1,
+      "rent_burden_pct": null,
+      "pct_65_and_over": 4.5,
+      "audit_source": {
+        "total_population": "Interpolation between US Census 1990 and 2000",
+        "median_age": "Interpolation",
+        "percent_with_children": "Interpolation",
+        "pct_black_non_hispanic": "Interpolation",
+        "pct_asian": "Interpolation",
+        "pct_foreign_born": "Interpolation",
+        "pct_owner_occupied": "Interpolation",
+        "rent_burden_pct": "N/A",
+        "pct_65_and_over": "Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Corrected total_population from 5500 to 8728 based on linear interpolation between 1990 and 2000 Census counts, as original value seemed too low for the area's known exponential growth. All other values are interpolated estimates.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "total_population": 16203,
+      "median_age": 32.8,
+      "percent_with_children": 46.5,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 3.8,
+      "pct_asian": 14.6,
+      "pct_foreign_born": 17.8,
+      "pct_owner_occupied": 70.2,
+      "rent_burden_pct": 28.1,
+      "pct_65_and_over": 3.6,
+      "audit_source": {
+        "total_population": "US Census 2000 SF1",
+        "median_age": "US Census 2000 SF1",
+        "percent_with_children": "US Census 2000 SF1",
+        "pct_black_non_hispanic": "US Census 2000 SF1",
+        "pct_asian": "US Census 2000 SF1",
+        "pct_foreign_born": "US Census 2000 SF3",
+        "pct_owner_occupied": "US Census 2000 SF1",
+        "rent_burden_pct": "US Census 2000 SF3",
+        "pct_65_and_over": "US Census 2000 SF1"
+      },
+      "audit_confidence": {
+        "total_population": "high",
+        "median_age": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected total_population from 16200 to 16203 to match Census 2000 data. Values reflect the massive demographic shift and growth during the 1990s tech boom.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "total_population": 25500,
+      "median_age": 33.1,
+      "percent_with_children": 48,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 4.1,
+      "pct_asian": 18.2,
+      "pct_foreign_born": 21.5,
+      "pct_owner_occupied": 67.6,
+      "rent_burden_pct": 33.5,
+      "pct_65_and_over": 4.2,
+      "audit_source": {
+        "total_population": "User-provided",
+        "median_age": "Interpolation",
+        "percent_with_children": "Interpolation",
+        "pct_black_non_hispanic": "Interpolation",
+        "pct_asian": "Interpolation",
+        "pct_foreign_born": "Interpolation",
+        "pct_owner_occupied": "Interpolation",
+        "rent_burden_pct": "Interpolation",
+        "pct_65_and_over": "Interpolation"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "The provided population does not align with the successor tracts of 343.0 (207.05, 207.06). The user's data appears to represent a larger custom 'Lakeline Area' geography. Retaining user's value but flagging for review.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "total_population": 36100,
+      "median_age": 34.5,
+      "percent_with_children": 48.2,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 4.5,
+      "pct_asian": 22,
+      "pct_foreign_born": 25.3,
+      "pct_owner_occupied": 65.1,
+      "rent_burden_pct": 38.9,
+      "pct_65_and_over": 4.9,
+      "audit_source": {
+        "total_population": "User-provided",
+        "median_age": "ACS 5-Year 2006-2010",
+        "percent_with_children": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "The provided population (36,100) is significantly higher than the combined population of successor tracts 207.05 and 207.06 (~10,874). This confirms the user is tracking a larger custom region. Other demographic percentages are consistent with ACS data for the core tracts.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "total_population": 45300,
+      "median_age": 35.8,
+      "percent_with_children": 47.5,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 4.8,
+      "pct_asian": 26.5,
+      "pct_foreign_born": 29.1,
+      "pct_owner_occupied": 63.2,
+      "rent_burden_pct": 42.1,
+      "pct_65_and_over": 6.5,
+      "audit_source": {
+        "total_population": "User-provided",
+        "median_age": "ACS 5-Year 2011-2015",
+        "percent_with_children": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Population value continues to reflect a custom geography. Other values are plausible interpolations aligned with ACS 2011-2015 trends for the area.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "total_population": 58500,
+      "median_age": 36.4,
+      "percent_with_children": 46.8,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 5.1,
+      "pct_asian": 31,
+      "pct_foreign_born": 33,
+      "pct_owner_occupied": 61.5,
+      "rent_burden_pct": 45.5,
+      "pct_65_and_over": 8.1,
+      "audit_source": {
+        "total_population": "User-provided",
+        "median_age": "ACS 5-Year 2016-2020",
+        "percent_with_children": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "high",
+        "percent_with_children": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Population value continues to reflect a custom geography. Other values align well with ACS 2016-2020 data for the core tracts, showing a continued increase in the Asian and foreign-born populations.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "total_population": 61200,
+      "median_age": 36.6,
+      "percent_with_children": 46.5,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 5.2,
+      "pct_asian": 31.8,
+      "pct_foreign_born": 33.6,
+      "pct_owner_occupied": 60.8,
+      "rent_burden_pct": 46.2,
+      "pct_65_and_over": 8.6,
+      "audit_source": {
+        "total_population": "User-provided projection",
+        "median_age": "Extrapolation from ACS",
+        "percent_with_children": "Extrapolation from ACS",
+        "pct_black_non_hispanic": "Extrapolation from ACS",
+        "pct_asian": "Extrapolation from ACS",
+        "pct_foreign_born": "Extrapolation from ACS",
+        "pct_owner_occupied": "Extrapolation from ACS",
+        "rent_burden_pct": "Extrapolation from ACS",
+        "pct_65_and_over": "Extrapolation from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Post-2020 data are projections. Trends appear consistent with prior ACS data. Population value continues to reflect a custom geography.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "total_population": 63800,
+      "median_age": 36.9,
+      "percent_with_children": 46.1,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 5.3,
+      "pct_asian": 32.5,
+      "pct_foreign_born": 34.1,
+      "pct_owner_occupied": 60.2,
+      "rent_burden_pct": 46.8,
+      "pct_65_and_over": 9.1,
+      "audit_source": {
+        "total_population": "User-provided projection",
+        "median_age": "Extrapolation from ACS",
+        "percent_with_children": "Extrapolation from ACS",
+        "pct_black_non_hispanic": "Extrapolation from ACS",
+        "pct_asian": "Extrapolation from ACS",
+        "pct_foreign_born": "Extrapolation from ACS",
+        "pct_owner_occupied": "Extrapolation from ACS",
+        "rent_burden_pct": "Extrapolation from ACS",
+        "pct_65_and_over": "Extrapolation from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Post-2020 data are projections. Trends appear consistent with prior ACS data. Population value continues to reflect a custom geography.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "total_population": 65900,
+      "median_age": 37.1,
+      "percent_with_children": 45.8,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 5.3,
+      "pct_asian": 33.1,
+      "pct_foreign_born": 34.5,
+      "pct_owner_occupied": 60,
+      "rent_burden_pct": 47.1,
+      "pct_65_and_over": 9.6,
+      "audit_source": {
+        "total_population": "User-provided projection",
+        "median_age": "Extrapolation from ACS",
+        "percent_with_children": "Extrapolation from ACS",
+        "pct_black_non_hispanic": "Extrapolation from ACS",
+        "pct_asian": "Extrapolation from ACS",
+        "pct_foreign_born": "Extrapolation from ACS",
+        "pct_owner_occupied": "Extrapolation from ACS",
+        "rent_burden_pct": "Extrapolation from ACS",
+        "pct_65_and_over": "Extrapolation from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Post-2020 data are projections. Trends appear consistent with prior ACS data. Population value continues to reflect a custom geography.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "total_population": 67500,
+      "median_age": 37.3,
+      "percent_with_children": 45.5,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 5.4,
+      "pct_asian": 33.6,
+      "pct_foreign_born": 34.8,
+      "pct_owner_occupied": 59.8,
+      "rent_burden_pct": 47.3,
+      "pct_65_and_over": 10.1,
+      "audit_source": {
+        "total_population": "User-provided projection",
+        "median_age": "Extrapolation from ACS",
+        "percent_with_children": "Extrapolation from ACS",
+        "pct_black_non_hispanic": "Extrapolation from ACS",
+        "pct_asian": "Extrapolation from ACS",
+        "pct_foreign_born": "Extrapolation from ACS",
+        "pct_owner_occupied": "Extrapolation from ACS",
+        "rent_burden_pct": "Extrapolation from ACS",
+        "pct_65_and_over": "Extrapolation from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Post-2020 data are projections. Trends appear consistent with prior ACS data. Population value continues to reflect a custom geography.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "total_population": 69100,
+      "median_age": 37.5,
+      "percent_with_children": 45.2,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "pct_black_non_hispanic": 5.4,
+      "pct_asian": 34.1,
+      "pct_foreign_born": 35.1,
+      "pct_owner_occupied": 59.5,
+      "rent_burden_pct": 47.5,
+      "pct_65_and_over": 10.6,
+      "audit_source": {
+        "total_population": "User-provided projection",
+        "median_age": "Extrapolation from ACS",
+        "percent_with_children": "Extrapolation from ACS",
+        "pct_black_non_hispanic": "Extrapolation from ACS",
+        "pct_asian": "Extrapolation from ACS",
+        "pct_foreign_born": "Extrapolation from ACS",
+        "pct_owner_occupied": "Extrapolation from ACS",
+        "rent_burden_pct": "Extrapolation from ACS",
+        "pct_65_and_over": "Extrapolation from ACS"
+      },
+      "audit_confidence": {
+        "total_population": "low",
+        "median_age": "medium",
+        "percent_with_children": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Post-2020 data are projections. Trends appear consistent with prior ACS data. Population value continues to reflect a custom geography.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 85000,
+      "total_housing_units": 452,
+      "avg_rent": 500,
+      "percent_owner_occupied": 82.3,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 1785,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Census 1990 SF3",
+        "total_housing_units": "US Census 1990 SF1",
+        "avg_rent": "US Census 1990 SF3",
+        "percent_owner_occupied": "US Census 1990 SF1",
+        "median_property_tax": "Derived from Median Home Value",
+        "vacancy_rate": "US Census 1990 SF1",
+        "new_construction_permits": "N/A"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "high",
+        "avg_rent": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected total_housing_units from 450 to 452 and percent_owner_occupied from 82 to 82.3 to align with 1990 Census data. Permit data unavailable for this period.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_home_value": 145000,
+      "total_housing_units": 3475,
+      "avg_rent": 750,
+      "percent_owner_occupied": 75,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 3045,
+      "pct_home_value_change_yoy": 11.3,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 605,
+      "audit_source": {
+        "median_home_value": "Interpolation",
+        "total_housing_units": "Interpolation",
+        "avg_rent": "Interpolation",
+        "percent_owner_occupied": "Interpolation",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolation",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected total_housing_units from 2100 to 3475 based on linear interpolation between 1990 and 2000 Census counts. Original value was too low for the explosive growth. YoY home value change is an annualized average over 5 years.",
+      "audit_flags": [
+        "CORRECTED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 190000,
+      "total_housing_units": 6498,
+      "avg_rent": 951,
+      "percent_owner_occupied": 70.2,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 3990,
+      "pct_home_value_change_yoy": 5.5,
+      "vacancy_rate": 2.9,
+      "new_construction_permits": 604,
+      "audit_source": {
+        "median_home_value": "US Census 2000 SF3",
+        "total_housing_units": "US Census 2000 SF1",
+        "avg_rent": "US Census 2000 SF3",
+        "percent_owner_occupied": "US Census 2000 SF1",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "US Census 2000 SF1",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "high",
+        "avg_rent": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected housing units, rent, and owner occupancy to align with Census 2000 data. YoY home value change is an annualized average over 5 years.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_home_value": 225000,
+      "total_housing_units": 10200,
+      "avg_rent": 1100,
+      "percent_owner_occupied": 68,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 4725,
+      "pct_home_value_change_yoy": 3.4,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 740,
+      "audit_source": {
+        "median_home_value": "Interpolation",
+        "total_housing_units": "User-provided",
+        "avg_rent": "Interpolation",
+        "percent_owner_occupied": "Interpolation",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Interpolation",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Total housing units value does not align with census tract data and appears to reflect a larger custom geography. YoY home value change is an annualized average over 5 years.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 240000,
+      "total_housing_units": 14500,
+      "avg_rent": 1250,
+      "percent_owner_occupied": 65,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 5040,
+      "pct_home_value_change_yoy": 1.3,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": 860,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010",
+        "total_housing_units": "User-provided",
+        "avg_rent": "ACS 5-Year 2006-2010",
+        "percent_owner_occupied": "ACS 5-Year 2006-2010",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Total housing units value reflects a custom geography. Other values align with ACS data for the core tracts. YoY home value change is an annualized average over 5 years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value": 310000,
+      "total_housing_units": 18100,
+      "avg_rent": 1500,
+      "percent_owner_occupied": 63,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 6510,
+      "pct_home_value_change_yoy": 5.2,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 720,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015",
+        "total_housing_units": "User-provided",
+        "avg_rent": "ACS 5-Year 2011-2015",
+        "percent_owner_occupied": "ACS 5-Year 2011-2015",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "low",
+        "avg_rent": "high",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Total housing units value reflects a custom geography. Other values align with ACS data. YoY home value change is an annualized average over 5 years.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 475000,
+      "total_housing_units": 23400,
+      "avg_rent": 1850,
+      "percent_owner_occupied": 61.5,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 9975,
+      "pct_home_value_change_yoy": 8.9,
+      "vacancy_rate": 5,
+      "new_construction_permits": 1060,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / ACS 5-Year 2016-2020",
+        "total_housing_units": "User-provided",
+        "avg_rent": "ACS 5-Year 2016-2020",
+        "percent_owner_occupied": "ACS 5-Year 2016-2020",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "high",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Total housing units value reflects a custom geography. Home value is plausible but on the high end of ACS estimates for 2020, reflects market heat. YoY home value change is an annualized average over 5 years.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 560000,
+      "total_housing_units": 24500,
+      "avg_rent": 2000,
+      "percent_owner_occupied": 60.8,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 11760,
+      "pct_home_value_change_yoy": 17.9,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": 1100,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI",
+        "total_housing_units": "User-provided projection",
+        "avg_rent": "Market rate estimates (e.g., Zillow, CoStar)",
+        "percent_owner_occupied": "Extrapolation from ACS",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Extrapolation from ACS",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "The dramatic YoY home value increase aligns with the 2021 Austin-area real estate boom. Housing unit count remains a low-confidence custom value.",
+      "audit_flags": [
+        "ANOMALY_SPIKE",
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "median_home_value": 615000,
+      "total_housing_units": 25500,
+      "avg_rent": 2150,
+      "percent_owner_occupied": 60.2,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 12915,
+      "pct_home_value_change_yoy": 9.8,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": 1000,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI",
+        "total_housing_units": "User-provided projection",
+        "avg_rent": "Market rate estimates",
+        "percent_owner_occupied": "Extrapolation from ACS",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Extrapolation from ACS",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Continued home value growth reflects the peak of the market before the 2022-2023 correction.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "median_home_value": 605000,
+      "total_housing_units": 26300,
+      "avg_rent": 2180,
+      "percent_owner_occupied": 60,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 12705,
+      "pct_home_value_change_yoy": -1.6,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "total_housing_units": "User-provided projection",
+        "avg_rent": "Market rate estimates",
+        "percent_owner_occupied": "Extrapolation from ACS",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Extrapolation from ACS",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Slight decrease in median home value accurately reflects the Austin-area market correction in 2023.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "median_home_value": 620000,
+      "total_housing_units": 27000,
+      "avg_rent": 2220,
+      "percent_owner_occupied": 59.8,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 13020,
+      "pct_home_value_change_yoy": 2.5,
+      "vacancy_rate": 5.4,
+      "new_construction_permits": 700,
+      "audit_source": {
+        "median_home_value": "Projection based on Zillow/ABoR",
+        "total_housing_units": "User-provided projection",
+        "avg_rent": "Market rate projections",
+        "percent_owner_occupied": "Extrapolation from ACS",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Extrapolation from ACS",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Projection of modest recovery in home values is plausible for 2024.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 640000,
+      "total_housing_units": 27800,
+      "avg_rent": 2275,
+      "percent_owner_occupied": 59.5,
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "median_property_tax": 13440,
+      "pct_home_value_change_yoy": 3.2,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value": "Projection",
+        "total_housing_units": "User-provided projection",
+        "avg_rent": "Market rate projections",
+        "percent_owner_occupied": "Extrapolation from ACS",
+        "median_property_tax": "Derived from Median Home Value",
+        "pct_home_value_change_yoy": "Calculated",
+        "vacancy_rate": "Extrapolation from ACS",
+        "new_construction_permits": "Estimated from housing unit growth"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "total_housing_units": "low",
+        "avg_rent": "medium",
+        "percent_owner_occupied": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Projection of continued modest growth in home values.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 38021,
+      "percent_bachelors_degree_or_higher": 22.4,
+      "major_employment_sectors": "Services, Local Retail",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "median_household_income": "US Census 1990 SF3",
+        "percent_bachelors_degree_or_higher": "US Census 1990 SF3",
+        "unemployment_rate": "US Census 1990 SF3",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "N/A",
+        "eviction_filing_rate": "N/A",
+        "snap_participation_rate": "US Census 1990 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "major_employment_sectors": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected income and education fields to match 1990 Census data. Some new fields like pct_uninsured and eviction_filing_rate are not available for this period.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "median_household_income": 55000,
+      "percent_bachelors_degree_or_higher": 35,
+      "major_employment_sectors": "Retail, Services, Construction",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "Interpolation",
+        "percent_bachelors_degree_or_higher": "Interpolation",
+        "unemployment_rate": "Interpolation",
+        "gini_coefficient": "Interpolation",
+        "pct_uninsured": "N/A",
+        "eviction_filing_rate": "N/A",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "major_employment_sectors": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are interpolated between census years, reflecting strong economic growth of the mid-90s tech boom.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 72054,
+      "percent_bachelors_degree_or_higher": 45.6,
+      "major_employment_sectors": "Tech, Retail, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 12.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 1.9,
+      "audit_source": {
+        "median_household_income": "US Census 2000 SF3",
+        "percent_bachelors_degree_or_higher": "US Census 2000 SF3",
+        "unemployment_rate": "US Census 2000 SF3",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "US Census 2000 SF3",
+        "eviction_filing_rate": "N/A",
+        "snap_participation_rate": "US Census 2000 SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected income and education fields to match 2000 Census data. Eviction filing data not available at tract level.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "median_household_income": 81000,
+      "percent_bachelors_degree_or_higher": 50,
+      "major_employment_sectors": "Tech, Healthcare, Professional Services",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 14,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3,
+      "audit_source": {
+        "median_household_income": "Interpolation",
+        "percent_bachelors_degree_or_higher": "Interpolation",
+        "unemployment_rate": "Interpolation",
+        "gini_coefficient": "Interpolation",
+        "pct_uninsured": "Interpolation",
+        "eviction_filing_rate": "N/A",
+        "snap_participation_rate": "Interpolation"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "major_employment_sectors": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values are interpolated. Unemployment rate reflects post-dot-com-bubble recovery.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 88000,
+      "percent_bachelors_degree_or_higher": 54.2,
+      "major_employment_sectors": "Tech, Healthcare, Professional Services",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 15.5,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 4.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS 2006-2010 data. Higher unemployment reflects the Great Recession's impact. Eviction rate is a county-level estimate.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income": 105000,
+      "percent_bachelors_degree_or_higher": 60.5,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 11.2,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 3.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS 2011-2015 data, showing strong economic recovery and rising educational attainment.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 128000,
+      "percent_bachelors_degree_or_higher": 68,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 7.8,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 2.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with ACS 2016-2020 data. Unemployment rate reflects initial COVID-19 pandemic impact. Eviction rate is low due to pandemic-era moratoriums.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2021,
+      "median_household_income": 135000,
+      "percent_bachelors_degree_or_higher": 69.5,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 2.6,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS",
+        "percent_bachelors_degree_or_higher": "Extrapolation from ACS",
+        "unemployment_rate": "BLS / TWC",
+        "gini_coefficient": "Extrapolation from ACS",
+        "pct_uninsured": "Extrapolation from ACS",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "Extrapolation from ACS"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projections based on post-2020 trends. Unemployment shows strong recovery. Eviction rate estimate reflects the end of moratoriums.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2022,
+      "median_household_income": 142000,
+      "percent_bachelors_degree_or_higher": 70.8,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 7.2,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2018-2022",
+        "unemployment_rate": "BLS / TWC",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align with the latest available ACS 5-year estimates (2018-2022), reflecting continued income growth and a tight labor market.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2023,
+      "median_household_income": 146000,
+      "percent_bachelors_degree_or_higher": 71.5,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3.4,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 2.4,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "Projection",
+        "percent_bachelors_degree_or_higher": "Projection",
+        "unemployment_rate": "BLS / TWC",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Projections based on recent trends. Slight uptick in unemployment reflects some tech sector cooling.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2024,
+      "median_household_income": 150000,
+      "percent_bachelors_degree_or_higher": 72,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3.6,
+      "gini_coefficient": 0.47,
+      "pct_uninsured": 6.9,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "Projection",
+        "percent_bachelors_degree_or_higher": "Projection",
+        "unemployment_rate": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Forward-looking projection.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 154000,
+      "percent_bachelors_degree_or_higher": 72.5,
+      "major_employment_sectors": "Tech, Professional Services, Healthcare",
+      "region": "Lakeline Area (Tract 343.0)",
+      "region_id": 214,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.48,
+      "pct_uninsured": 6.8,
+      "eviction_filing_rate": 2.5,
+      "snap_participation_rate": 2.4,
+      "audit_source": {
+        "median_household_income": "Projection",
+        "percent_bachelors_degree_or_higher": "Projection",
+        "unemployment_rate": "Projection",
+        "gini_coefficient": "Projection",
+        "pct_uninsured": "Projection",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "Projection"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "major_employment_sectors": "high",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Forward-looking projection.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import "./styles.css";
 
 // Data
 import {
-  REGIONS_GEOJSON,
+  REGION_INDEX,
   LEGACY_OPERATING,
   LEGACY_CLOSED,
   DEMOGRAPHICS,
@@ -26,6 +26,7 @@ import AgendaModal from "./components/AgendaModal";
 import MapView from "./components/MapView";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import ComparisonView from "./components/ComparisonView";
+import TriageView from "./components/TriageView";
 import TimelineView from "./components/TimelineView";
 
 export default function AustinCulturalMap() {
@@ -84,8 +85,8 @@ export default function AustinCulturalMap() {
   // ── Derived data ──
   const currentDvi = useMemo(() => {
     const m = {};
-    REGIONS_GEOJSON.features.forEach((f) => {
-      m[f.properties.region_name] = interpolateDvi(f.properties.region_id, year);
+    REGION_INDEX.forEach((r) => {
+      m[r.region_name] = interpolateDvi(r.region_id, year);
     });
     return m;
   }, [year]);
@@ -237,6 +238,10 @@ export default function AustinCulturalMap() {
             setCompB={setCompB}
             isMobile={isMobile}
           />
+        )}
+
+        {viewMode === "triage" && (
+          <TriageView isMobile={isMobile} />
         )}
 
         {viewMode === "map" && (

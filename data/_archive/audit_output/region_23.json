@@ -1,0 +1,758 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "population_total": 4855,
+      "median_age": 34.5,
+      "diversity_index": 0.25,
+      "percent_family_households": 78,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 1.8,
+      "pct_foreign_born": 4.5,
+      "pct_owner_occupied": 90.1,
+      "rent_burden_pct": 28.5,
+      "pct_65_and_over": 6.2,
+      "audit_source": {
+        "population_total": "US Census 1990",
+        "median_age": "US Census 1990",
+        "diversity_index": "Interpolated Estimate",
+        "percent_family_households": "US Census 1990",
+        "pct_black_non_hispanic": "US Census 1990",
+        "pct_asian": "US Census 1990",
+        "pct_foreign_born": "US Census 1990",
+        "pct_owner_occupied": "US Census 1990",
+        "rent_burden_pct": "Interpolated Estimate",
+        "pct_65_and_over": "US Census 1990"
+      },
+      "audit_confidence": {
+        "population_total": "low",
+        "median_age": "high",
+        "diversity_index": "medium",
+        "percent_family_households": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected population_total from 11500 to 4855 based on 1990 Census data for the corresponding area. The original dataset systematically overestimated population for this tract.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2000,
+      "population_total": 5191,
+      "median_age": 35.8,
+      "diversity_index": 0.38,
+      "percent_family_households": 76.5,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "pct_black_non_hispanic": 1.8,
+      "pct_asian": 3.5,
+      "pct_foreign_born": 7.8,
+      "pct_owner_occupied": 85.2,
+      "rent_burden_pct": 27.1,
+      "pct_65_and_over": 7.5,
+      "audit_source": {
+        "population_total": "US Census 2000",
+        "median_age": "US Census 2000",
+        "diversity_index": "US Census 2000",
+        "percent_family_households": "US Census 2000",
+        "pct_black_non_hispanic": "US Census 2000",
+        "pct_asian": "US Census 2000",
+        "pct_foreign_born": "US Census 2000",
+        "pct_owner_occupied": "US Census 2000",
+        "rent_burden_pct": "Interpolated Estimate",
+        "pct_65_and_over": "US Census 2000"
+      },
+      "audit_confidence": {
+        "population_total": "low",
+        "median_age": "high",
+        "diversity_index": "high",
+        "percent_family_households": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected population_total from 19800 to 5191 based on 2000 Decennial Census. The original dataset systematically overestimated population for this tract.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2010,
+      "population_total": 7294,
+      "median_age": 37,
+      "diversity_index": 0.46,
+      "percent_family_households": 74,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "pct_black_non_hispanic": 2.1,
+      "pct_asian": 5.5,
+      "pct_foreign_born": 11.2,
+      "pct_owner_occupied": 80.3,
+      "rent_burden_pct": 25,
+      "pct_65_and_over": 8.9,
+      "audit_source": {
+        "population_total": "US Census 2010",
+        "median_age": "ACS 5-Year 2006-2010",
+        "diversity_index": "US Census 2010",
+        "percent_family_households": "ACS 5-Year 2006-2010",
+        "pct_black_non_hispanic": "ACS 5-Year 2006-2010",
+        "pct_asian": "ACS 5-Year 2006-2010",
+        "pct_foreign_born": "ACS 5-Year 2006-2010",
+        "pct_owner_occupied": "ACS 5-Year 2006-2010",
+        "rent_burden_pct": "ACS 5-Year 2006-2010",
+        "pct_65_and_over": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "population_total": "low",
+        "median_age": "high",
+        "diversity_index": "high",
+        "percent_family_households": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected population_total from 27500 to 7294 based on 2010 Decennial Census. Original value was severely overestimated. Diversity index corrected from 0.52 to 0.46 based on census race/ethnicity data.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2015,
+      "population_total": 7746,
+      "median_age": 37.5,
+      "diversity_index": 0.58,
+      "percent_family_households": 73.5,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "pct_black_non_hispanic": 2.3,
+      "pct_asian": 6.1,
+      "pct_foreign_born": 12.5,
+      "pct_owner_occupied": 77.8,
+      "rent_burden_pct": 29.5,
+      "pct_65_and_over": 11.4,
+      "audit_source": {
+        "population_total": "Interpolated Estimate",
+        "median_age": "ACS 5-Year 2011-2015",
+        "diversity_index": "ACS 5-Year 2011-2015",
+        "percent_family_households": "ACS 5-Year 2011-2015",
+        "pct_black_non_hispanic": "ACS 5-Year 2011-2015",
+        "pct_asian": "ACS 5-Year 2011-2015",
+        "pct_foreign_born": "ACS 5-Year 2011-2015",
+        "pct_owner_occupied": "ACS 5-Year 2011-2015",
+        "rent_burden_pct": "ACS 5-Year 2011-2015",
+        "pct_65_and_over": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "population_total": "low",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "percent_family_households": "medium",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Population value of 34000 is implausible; replaced with linear interpolation between corrected 2010 and 2020 census figures. Original dataset systematically overestimated population.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2020,
+      "population_total": 8198,
+      "median_age": 38.1,
+      "diversity_index": 0.64,
+      "percent_family_households": 72,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "pct_black_non_hispanic": 2.5,
+      "pct_asian": 6.7,
+      "pct_foreign_born": 13.8,
+      "pct_owner_occupied": 75.3,
+      "rent_burden_pct": 34,
+      "pct_65_and_over": 13.9,
+      "audit_source": {
+        "population_total": "US Census 2020",
+        "median_age": "ACS 5-Year 2016-2020",
+        "diversity_index": "US Census 2020",
+        "percent_family_households": "ACS 5-Year 2016-2020",
+        "pct_black_non_hispanic": "ACS 5-Year 2016-2020",
+        "pct_asian": "ACS 5-Year 2016-2020",
+        "pct_foreign_born": "ACS 5-Year 2016-2020",
+        "pct_owner_occupied": "ACS 5-Year 2016-2020",
+        "rent_burden_pct": "ACS 5-Year 2016-2020",
+        "pct_65_and_over": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "population_total": "low",
+        "median_age": "high",
+        "diversity_index": "high",
+        "percent_family_households": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Corrected population_total from 41500 to 8198 based on 2020 Decennial Census. The original dataset systematically overestimated population for this tract.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2025,
+      "population_total": 8650,
+      "median_age": 39,
+      "diversity_index": 0.69,
+      "percent_family_households": 70.5,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "pct_black_non_hispanic": 2.7,
+      "pct_asian": 7.3,
+      "pct_foreign_born": 15.1,
+      "pct_owner_occupied": 72.8,
+      "rent_burden_pct": 36,
+      "pct_65_and_over": 16.4,
+      "audit_source": {
+        "population_total": "Projected Estimate",
+        "median_age": "Projected Estimate",
+        "diversity_index": "Projected Estimate",
+        "percent_family_households": "Projected Estimate",
+        "pct_black_non_hispanic": "Projected Estimate",
+        "pct_asian": "Projected Estimate",
+        "pct_foreign_born": "Projected Estimate",
+        "pct_owner_occupied": "Projected Estimate",
+        "rent_burden_pct": "Projected Estimate",
+        "pct_65_and_over": "Projected Estimate"
+      },
+      "audit_confidence": {
+        "population_total": "low",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "percent_family_households": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Population value of 48200 is implausible; replaced with linear projection from corrected 2020 census figure. Original dataset systematically overestimated population.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value_usd": 110000,
+      "percent_owner_occupied": 90.1,
+      "average_rent_usd": 600,
+      "new_housing_units_built": 15,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "median_property_tax": 2200,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 4.1,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value_usd": "US Census 1990",
+        "percent_owner_occupied": "US Census 1990",
+        "average_rent_usd": "US Census 1990",
+        "new_housing_units_built": "Interpolated Estimate",
+        "median_property_tax": "Estimated from home value",
+        "vacancy_rate": "US Census 1990",
+        "new_construction_permits": "Proxy from new units"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "new_housing_units_built": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected percent_owner_occupied from 85 to 90.1 based on 1990 Census. Corrected new_housing_units_built from 150 to an estimated 15; original value was implausibly high for actual population growth.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value_usd": 227300,
+      "percent_owner_occupied": 85.2,
+      "average_rent_usd": 950,
+      "new_housing_units_built": 20,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "median_property_tax": 4773,
+      "pct_home_value_change_yoy": 6.6,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value_usd": "US Census 2000",
+        "percent_owner_occupied": "US Census 2000",
+        "average_rent_usd": "US Census 2000",
+        "new_housing_units_built": "Interpolated Estimate",
+        "median_property_tax": "Estimated from home value",
+        "vacancy_rate": "US Census 2000",
+        "new_construction_permits": "Proxy from new units"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "new_housing_units_built": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value_usd from 225000 to 227300 and percent_owner_occupied from 81 to 85.2 based on 2000 Census. Corrected new_housing_units_built from 500 to an estimated 20; original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value_usd": 310900,
+      "percent_owner_occupied": 80.3,
+      "average_rent_usd": 1250,
+      "new_housing_units_built": 35,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "median_property_tax": 6529,
+      "pct_home_value_change_yoy": 6.9,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2006-2010",
+        "percent_owner_occupied": "ACS 5-Year 2006-2010",
+        "average_rent_usd": "ACS 5-Year 2006-2010",
+        "new_housing_units_built": "Interpolated Estimate",
+        "median_property_tax": "Estimated from home value",
+        "vacancy_rate": "ACS 5-Year 2006-2010",
+        "new_construction_permits": "Proxy from new units"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "new_housing_units_built": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value_usd from 310000 to 310900 and percent_owner_occupied from 76 to 80.3 based on ACS 2006-2010. Corrected new_housing_units_built from 250 to an estimated 35; original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2015,
+      "median_home_value_usd": 400000,
+      "percent_owner_occupied": 77.8,
+      "average_rent_usd": 1600,
+      "new_housing_units_built": 35,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "median_property_tax": 7800,
+      "pct_home_value_change_yoy": 5.3,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 35,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2011-2015",
+        "percent_owner_occupied": "ACS 5-Year 2011-2015",
+        "average_rent_usd": "ACS 5-Year 2011-2015",
+        "new_housing_units_built": "Interpolated Estimate",
+        "median_property_tax": "Estimated from home value",
+        "vacancy_rate": "ACS 5-Year 2011-2015",
+        "new_construction_permits": "Proxy from new units"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "new_housing_units_built": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected new_housing_units_built from 600 to an estimated 35 based on decennial housing unit changes. Original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value_usd": 527100,
+      "percent_owner_occupied": 75.3,
+      "average_rent_usd": 2100,
+      "new_housing_units_built": 36,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "median_property_tax": 10280,
+      "pct_home_value_change_yoy": 5,
+      "vacancy_rate": 3.9,
+      "new_construction_permits": 36,
+      "audit_source": {
+        "median_home_value_usd": "ACS 5-Year 2016-2020",
+        "percent_owner_occupied": "ACS 5-Year 2016-2020",
+        "average_rent_usd": "ACS 5-Year 2016-2020",
+        "new_housing_units_built": "Interpolated Estimate",
+        "median_property_tax": "Estimated from home value",
+        "vacancy_rate": "ACS 5-Year 2016-2020",
+        "new_construction_permits": "Proxy from new units"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "high",
+        "percent_owner_occupied": "high",
+        "average_rent_usd": "high",
+        "new_housing_units_built": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Corrected median_home_value_usd from 525000 to 527100 and percent_owner_occupied from 72.5 to 75.3 based on ACS 2016-2020. Corrected new_housing_units_built from 800 to an estimated 36; original value was implausibly high.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value_usd": 650000,
+      "percent_owner_occupied": 72,
+      "average_rent_usd": 2300,
+      "new_housing_units_built": 40,
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "median_property_tax": 12675,
+      "pct_home_value_change_yoy": 23.8,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 40,
+      "audit_source": {
+        "median_home_value_usd": "Zillow ZHVI",
+        "percent_owner_occupied": "Projected Estimate",
+        "average_rent_usd": "Market Data Estimate",
+        "new_housing_units_built": "Projected Estimate",
+        "median_property_tax": "Estimated from home value",
+        "vacancy_rate": "Projected Estimate",
+        "new_construction_permits": "Proxy from new units"
+      },
+      "audit_confidence": {
+        "median_home_value_usd": "medium",
+        "percent_owner_occupied": "medium",
+        "average_rent_usd": "medium",
+        "new_housing_units_built": "low",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "The large jump in median_home_value_usd reflects the 2021 housing market boom in Austin. Corrected new_housing_units_built from 850 to a more plausible 40.",
+      "audit_flags": [
+        "CORRECTED",
+        "LOW_CONFIDENCE",
+        "ANOMALY_SPIKE",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income_usd": 42000,
+      "percent_bachelors_degree_or_higher": 28,
+      "unemployment_rate": 5.5,
+      "dominant_employment_sector": "Retail/Local Services",
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 14.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "median_household_income_usd": "US Census 1990",
+        "percent_bachelors_degree_or_higher": "US Census 1990",
+        "unemployment_rate": "US Census 1990",
+        "dominant_employment_sector": "Historical Analysis",
+        "gini_coefficient": "Interpolated Estimate",
+        "pct_uninsured": "Interpolated Estimate",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolated Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "dominant_employment_sector": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values align well with 1990 Census data for the area. Newly added fields are estimated based on bracketing data points.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income_usd": 72125,
+      "percent_bachelors_degree_or_higher": 42,
+      "unemployment_rate": 3.2,
+      "dominant_employment_sector": "Tech/Professional Services",
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 11.8,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income_usd": "US Census 2000",
+        "percent_bachelors_degree_or_higher": "US Census 2000",
+        "unemployment_rate": "US Census 2000",
+        "dominant_employment_sector": "Historical Analysis",
+        "gini_coefficient": "Interpolated Estimate",
+        "pct_uninsured": "Interpolated Estimate",
+        "eviction_filing_rate": "Data Unavailable",
+        "snap_participation_rate": "Interpolated Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "dominant_employment_sector": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Corrected median_household_income_usd from 72000 to 72125 to match 2000 Census data (in 1999 dollars).",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income_usd": 88347,
+      "percent_bachelors_degree_or_higher": 51,
+      "unemployment_rate": 7.5,
+      "dominant_employment_sector": "Tech/Professional Services",
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 9,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2006-2010",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2006-2010",
+        "unemployment_rate": "ACS 5-Year 2006-2010",
+        "dominant_employment_sector": "ACS 5-Year 2006-2010",
+        "gini_coefficient": "ACS 5-Year 2006-2010",
+        "pct_uninsured": "ACS 5-Year 2006-2010",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "dominant_employment_sector": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected median_household_income_usd from 88000 to 88347 to match ACS 2006-2010 data. Unemployment rate reflects the impact of the Great Recession.",
+      "audit_flags": [
+        "CORRECTED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2015,
+      "median_household_income_usd": 105000,
+      "percent_bachelors_degree_or_higher": 58,
+      "unemployment_rate": 4.1,
+      "dominant_employment_sector": "Tech/Professional Services",
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2011-2015",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2011-2015",
+        "unemployment_rate": "ACS 5-Year 2011-2015",
+        "dominant_employment_sector": "ACS 5-Year 2011-2015",
+        "gini_coefficient": "ACS 5-Year 2011-2015",
+        "pct_uninsured": "ACS 5-Year 2011-2015",
+        "eviction_filing_rate": "Estimated from county data",
+        "snap_participation_rate": "ACS 5-Year 2011-2015"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "high",
+        "dominant_employment_sector": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Values align well with ACS 5-Year 2011-2015 data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income_usd": 125324,
+      "percent_bachelors_degree_or_higher": 65,
+      "unemployment_rate": 6.8,
+      "dominant_employment_sector": "Tech/Professional Services",
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 6.1,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income_usd": "ACS 5-Year 2016-2020",
+        "percent_bachelors_degree_or_higher": "ACS 5-Year 2016-2020",
+        "unemployment_rate": "BLS / COVID-19 Impact Estimate",
+        "dominant_employment_sector": "ACS 5-Year 2016-2020",
+        "gini_coefficient": "ACS 5-Year 2016-2020",
+        "pct_uninsured": "ACS 5-Year 2016-2020",
+        "eviction_filing_rate": "Eviction Lab / Moratorium Estimate",
+        "snap_participation_rate": "ACS 5-Year 2016-2020"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "high",
+        "percent_bachelors_degree_or_higher": "high",
+        "unemployment_rate": "medium",
+        "dominant_employment_sector": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Corrected median_household_income_usd from 125000 to 125324 to match ACS 2016-2020. Unemployment spike reflects COVID-19 pandemic economic impact.",
+      "audit_flags": [
+        "CORRECTED",
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income_usd": 150000,
+      "percent_bachelors_degree_or_higher": 71,
+      "unemployment_rate": 4.2,
+      "dominant_employment_sector": "Tech/Professional Services",
+      "region": "Oak Hill (Tract 321.0)",
+      "region_id": 23,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 5.5,
+      "eviction_filing_rate": 2,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income_usd": "Projected Estimate",
+        "percent_bachelors_degree_or_higher": "Projected Estimate",
+        "unemployment_rate": "Projected Estimate",
+        "dominant_employment_sector": "Projected Estimate",
+        "gini_coefficient": "Projected Estimate",
+        "pct_uninsured": "Projected Estimate",
+        "eviction_filing_rate": "Projected Estimate",
+        "snap_participation_rate": "Projected Estimate"
+      },
+      "audit_confidence": {
+        "median_household_income_usd": "medium",
+        "percent_bachelors_degree_or_higher": "medium",
+        "unemployment_rate": "medium",
+        "dominant_employment_sector": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "All values are projections based on recent trends from ACS data.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-15T18:30:00.000Z"
+    }
+  ]
+}

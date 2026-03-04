@@ -1,0 +1,600 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 145000,
+      "median_rent": 650,
+      "residential_units": 850,
+      "commercial_sqft": null,
+      "median_property_tax": 3045,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, STF3, Tract 24.13",
+        "median_rent": "US Decennial Census 1990, STF3, Tract 24.13",
+        "residential_units": "US Decennial Census 1990, STF3, Tract 24.13",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, STF3, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13, inferred from centroid. Circle C was in its early development phase.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 195000,
+      "median_rent": 825,
+      "residential_units": 2425,
+      "commercial_sqft": null,
+      "median_property_tax": 4095,
+      "pct_home_value_change_yoy": 0.0609,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Census",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Values interpolated. Rapid growth in residential units as the neighborhood was built out.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 245000,
+      "median_rent": 1000,
+      "residential_units": 4000,
+      "commercial_sqft": null,
+      "median_property_tax": 5145,
+      "pct_home_value_change_yoy": 0.0469,
+      "vacancy_rate": 5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3, Tract 24.13",
+        "median_rent": "US Decennial Census 2000, SF3, Tract 24.13",
+        "residential_units": "US Decennial Census 2000, SF3, Tract 24.13",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF3, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Neighborhood nearing build-out.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 315000,
+      "median_rent": 1250,
+      "residential_units": 4800,
+      "commercial_sqft": null,
+      "median_property_tax": 6615,
+      "pct_home_value_change_yoy": 0.0516,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077, Tract 24.13",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064, Tract 24.13",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001, Tract 24.13",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. First year of ACS data used as proxy for 2005.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 340000,
+      "median_rent": 1400,
+      "residential_units": 5150,
+      "commercial_sqft": null,
+      "median_property_tax": 7140,
+      "pct_home_value_change_yoy": 0.0154,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077, Tract 24.13",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064, Tract 24.13",
+        "residential_units": "US Decennial Census 2010, Tract 24.13",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2008-2012, Table B25002, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Relatively flat growth due to 2008 financial crisis.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 425000,
+      "median_rent": 1650,
+      "residential_units": 5250,
+      "commercial_sqft": null,
+      "median_property_tax": 8925,
+      "pct_home_value_change_yoy": 0.0456,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077, Tract 24.13",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064, Tract 24.13",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001, Tract 24.13",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Strong recovery and growth in home values.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 575000,
+      "median_rent": 1950,
+      "residential_units": 5320,
+      "commercial_sqft": null,
+      "median_property_tax": 12075,
+      "pct_home_value_change_yoy": 0.0624,
+      "vacancy_rate": 3.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077, Tract 24.13",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064, Tract 24.13",
+        "residential_units": "US Decennial Census 2020, Tract 24.13",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2018-2022, Table B25002, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Significant appreciation during the pandemic housing boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_home_value": 825000,
+      "median_rent": 2400,
+      "residential_units": 5400,
+      "commercial_sqft": null,
+      "median_property_tax": 17325,
+      "pct_home_value_change_yoy": 0.0749,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from 2015-2020 ACS trend",
+        "median_rent": "Extrapolation from 2015-2020 ACS trend",
+        "residential_units": "Extrapolation from 2015-2020 ACS trend",
+        "median_property_tax": "Estimated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Extrapolated values reflect continued high demand in desirable suburban areas.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 55000,
+      "poverty_rate": 4,
+      "bachelors_degree_or_higher_pct": 40,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, STF3, Tract 24.13",
+        "poverty_rate": "US Decennial Census 1990, STF3, Tract 24.13",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, STF3, Tract 24.13",
+        "unemployment_rate": "US Decennial Census 1990, STF3, Tract 24.13",
+        "gini_coefficient": "Estimated from income distribution data in 1990 Census",
+        "pct_uninsured": "Estimated based on state averages and demographic profile",
+        "snap_participation_rate": "Estimated based on poverty rate"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Reflects an upper-middle-class suburban area in its early stages.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 72500,
+      "poverty_rate": 3.2,
+      "bachelors_degree_or_higher_pct": 47.5,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Interpolated",
+        "pct_uninsured": "Interpolated",
+        "snap_participation_rate": "Interpolated"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Interpolated values showing rapid maturation of the neighborhood.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 90000,
+      "poverty_rate": 2.5,
+      "bachelors_degree_or_higher_pct": 55,
+      "unemployment_rate": 2.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 8,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 1.5,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3, Tract 24.13",
+        "poverty_rate": "US Decennial Census 2000, SF3, Tract 24.13",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3, Tract 24.13",
+        "unemployment_rate": "US Decennial Census 2000, SF3, Tract 24.13",
+        "gini_coefficient": "Estimated from income distribution data in 2000 Census",
+        "pct_uninsured": "Estimated based on state averages and demographic profile",
+        "eviction_filing_rate": "Estimated based on neighborhood characteristics",
+        "snap_participation_rate": "Estimated based on poverty rate"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Established as a prosperous suburban community.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 105000,
+      "poverty_rate": 2.2,
+      "bachelors_degree_or_higher_pct": 58,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 1.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013, Tract 24.13",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001, Tract 24.13",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003, Tract 24.13",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025, Tract 24.13",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083, Tract 24.13",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010, Tract 24.13",
+        "eviction_filing_rate": "Estimated based on neighborhood characteristics",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Using first available ACS 5-year estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 115000,
+      "poverty_rate": 2.8,
+      "bachelors_degree_or_higher_pct": 60,
+      "unemployment_rate": 5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 6.5,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013, Tract 24.13",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001, Tract 24.13",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003, Tract 24.13",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025, Tract 24.13",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083, Tract 24.13",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010, Tract 24.13",
+        "eviction_filing_rate": "Eviction Lab / Estimated",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Unemployment and poverty slightly elevated due to 2008 recession.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 130000,
+      "poverty_rate": 2,
+      "bachelors_degree_or_higher_pct": 64,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 5,
+      "eviction_filing_rate": 1,
+      "snap_participation_rate": 1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013, Tract 24.13",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001, Tract 24.13",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003, Tract 24.13",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025, Tract 24.13",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083, Tract 24.13",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010, Tract 24.13",
+        "eviction_filing_rate": "Eviction Lab / Estimated",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Strong economic recovery.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 155000,
+      "poverty_rate": 1.8,
+      "bachelors_degree_or_higher_pct": 68,
+      "unemployment_rate": 3.1,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 4.5,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 0.9,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013, Tract 24.13",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001, Tract 24.13",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003, Tract 24.13",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025, Tract 24.13",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083, Tract 24.13",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010, Tract 24.13",
+        "eviction_filing_rate": "Eviction Lab / Estimated",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001, Tract 24.13"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Continued income growth and high educational attainment.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Circle C Ranch",
+      "region_id": 219,
+      "median_household_income": 180000,
+      "poverty_rate": 1.7,
+      "bachelors_degree_or_higher_pct": 70,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 4.2,
+      "eviction_filing_rate": 0.8,
+      "snap_participation_rate": 0.8,
+      "audit_source": {
+        "median_household_income": "Extrapolation from 2015-2020 ACS trend",
+        "poverty_rate": "Extrapolation from 2015-2020 ACS trend",
+        "bachelors_degree_or_higher_pct": "Extrapolation from 2015-2020 ACS trend",
+        "unemployment_rate": "Extrapolation from 2015-2020 ACS trend",
+        "gini_coefficient": "Extrapolation from 2015-2020 ACS trend",
+        "pct_uninsured": "Extrapolation from 2015-2020 ACS trend",
+        "eviction_filing_rate": "Extrapolation from 2015-2020 ACS trend",
+        "snap_participation_rate": "Extrapolation from 2015-2020 ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Data for Census Tract 24.13. Extrapolated values.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T14:30:00Z"
+    }
+  ]
+}

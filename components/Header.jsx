@@ -36,6 +36,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
               {[
                 { key: "map", label: "Map" },
                 { key: "compare", label: "Compare" },
+                { key: "triage", label: "Triage" },
                 { key: "timeline", label: "Timeline" },
               ].map((tab) => (
                 <button
@@ -93,6 +94,28 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
             >
               About
             </button>
+            <a
+              href="https://forms.gle/r3FojhBqyHPzw4mG7"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: "5px 10px",
+                borderRadius: 6,
+                border: "1px solid #d6d3cd",
+                background: "#fffffe",
+                color: "#64615b",
+                fontSize: 11,
+                fontWeight: 500,
+                cursor: "pointer",
+                minHeight: 32,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+              aria-label="Leave feedback"
+            >
+              Feedback
+            </a>
           </div>
         </div>
       </div>

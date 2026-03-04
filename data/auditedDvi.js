@@ -11,11 +11,24 @@
  *
  * Output format matches what the rest of the app expects from DVI_LOOKUP:
  *   { [region_id]: [ { year, dvi }, ... ] }   (sorted by year)
+ *
+ * Uses pre-normalized data from auditedData.js so the raw JSONs are
+ * imported and normalized exactly once across the entire app.
  */
 
-import AUDITED_DEMO from "./audit_output/audited_demographics.json";
-import AUDITED_PROP from "./audit_output/audited_property.json";
-import AUDITED_SOCIO from "./audit_output/audited_socioeconomic.json";
+import {
+  AUDITED_DEMO_BY_ID,
+  AUDITED_PROP_BY_ID,
+  AUDITED_SOCIO_BY_ID,
+  DEMO_BY_RY,
+  PROP_BY_RY,
+  SOCIO_BY_RY,
+} from "./auditedData";
+
+// ── Constants ────────────────────────────────────────────────────────────
+
+/** Citywide median household income (Austin ~$86k in 2024 ACS). */
+const CITY_MEDIAN_INCOME = 86000;
 
 // ── Helpers ──────────────────────────────────────────────────────────────
 
@@ -29,39 +42,20 @@ function clamp(v, cap = 100) {
   return Math.max(0, Math.min(v, cap));
 }
 
-/**
- * Return the first non-null/non-undefined value for any of `keys`.
- */
-function pick(obj, keys, fallback = 0) {
-  for (const k of keys) {
-    if (obj[k] !== undefined && obj[k] !== null) return obj[k];
-  }
-  return fallback;
-}
+// ── Collect distinct (region_id, year) pairs from the pre-built Maps ─────
 
-// ── Build per-(region_id, year) indexes ──────────────────────────────────
-
-function indexByRegionYear(rows) {
-  const m = new Map();
-  for (const r of rows) {
-    const id = r.region_id;
-    const yr = r.year;
-    if (id == null || yr == null) continue;
-    m.set(`${id}_${yr}`, r);
-  }
-  return m;
-}
-
-const demoIdx = indexByRegionYear(AUDITED_DEMO);
-const propIdx = indexByRegionYear(AUDITED_PROP);
-const socioIdx = indexByRegionYear(AUDITED_SOCIO);
-
-// Collect the distinct set of (region_id, year) pairs across all datasets
 const regionYears = new Map(); // region_id → Set<year>
-for (const r of [...AUDITED_DEMO, ...AUDITED_PROP, ...AUDITED_SOCIO]) {
-  if (r.region_id == null || r.year == null) continue;
-  if (!regionYears.has(r.region_id)) regionYears.set(r.region_id, new Set());
-  regionYears.get(r.region_id).add(r.year);
+for (const [id, rows] of AUDITED_DEMO_BY_ID) {
+  if (!regionYears.has(id)) regionYears.set(id, new Set());
+  for (const r of rows) regionYears.get(id).add(r.year);
+}
+for (const [id, rows] of AUDITED_PROP_BY_ID) {
+  if (!regionYears.has(id)) regionYears.set(id, new Set());
+  for (const r of rows) regionYears.get(id).add(r.year);
+}
+for (const [id, rows] of AUDITED_SOCIO_BY_ID) {
+  if (!regionYears.has(id)) regionYears.set(id, new Set());
+  for (const r of rows) regionYears.get(id).add(r.year);
 }
 
 // ── Sub-index scorers ────────────────────────────────────────────────────
@@ -69,54 +63,42 @@ for (const r of [...AUDITED_DEMO, ...AUDITED_PROP, ...AUDITED_SOCIO]) {
 /**
  * Demographic Vulnerability sub-index (0–100).
  * Higher = more vulnerable to displacement.
+ * Fields are already normalized by auditedData.js.
  */
 function demScore(d) {
   if (!d) return null;
-  const rentBurden = clamp(
-    num(pick(d, ["rent_burden_pct"])) / 55 * 100
-  );          // 55% is severe
+  const rentBurden = clamp(num(d.rent_burden_pct) / 55 * 100);
   const renterShare = clamp(
-    (100 - num(pick(d, ["pct_owner_occupied", "percent_renters"], 50), 50)) / 75 * 100
-  ); // 75% renter = max
-  const foreignBorn = clamp(
-    num(pick(d, ["pct_foreign_born", "foreign_born_percent", "foreign_born_pct"])) / 40 * 100
-  );        // 40% = max
+    (100 - num(d.pct_owner_occupied, 50)) / 75 * 100
+  );
+  const foreignBorn = clamp(num(d.pct_foreign_born) / 40 * 100);
   return 0.50 * rentBurden + 0.30 * renterShare + 0.20 * foreignBorn;
 }
 
 /**
  * Market Pressure sub-index (0–100).
  * Higher = stronger displacement-driving market forces.
+ * Fields are already normalized by auditedData.js.
  */
 function propScore(p, s) {
   if (!p) return null;
-  // Home-value year-over-year appreciation (5%+ is pressure, 15%+ severe)
-  const appreciation = clamp(
-    num(pick(p, ["pct_home_value_change_yoy"], 0)) / 15 * 100
-  );
-  // Rent-to-income ratio: (annual rent / household income)
-  const rent = num(pick(p, ["median_rent_monthly", "median_rent", "median_rent_usd",
-    "average_rent", "average_rent_monthly", "average_rent_usd", "avg_rent",
-    "avg_rent_monthly", "rent_median", "average_rent_per_month",
-    "median_rental_rate_monthly", "average_rent_per_month_usd"], 0));
-  const income = s ? num(pick(s, ["median_household_income", "median_household_income_usd",
-    "income_median_household"], 30000)) : 30000;
-  const rentIncomeRatio = clamp((rent * 12 / Math.max(income, 1)) / 0.50 * 100); // 50% rent/income = max
+  const appreciation = clamp(num(p.pct_home_value_change_yoy) / 15 * 100);
+  const rent = num(p.median_rent_monthly);
+  const income = s ? num(s.median_household_income, 30000) : 30000;
+  const rentIncomeRatio = clamp((rent * 12 / Math.max(income, 1)) / 0.50 * 100);
   return 0.50 * appreciation + 0.50 * rentIncomeRatio;
 }
 
 /**
  * Socioeconomic Stress sub-index (0–100).
  * Higher = greater stress on residents.
+ * Fields are already normalized by auditedData.js.
  */
 function socioScore(s) {
   if (!s) return null;
-  const poverty = clamp(num(pick(s, ["poverty_rate", "poverty_rate_pct",
-    "poverty_rate_percent", "pct_poverty", "poverty_rate_percentage"], 0)) / 30 * 100);
-  const unemp = clamp(num(pick(s, ["unemployment_rate", "unemployment_rate_pct",
-    "unemployment_rate_percent", "employment_unemployment_rate",
-    "unemployment_rate_percentage"], 0)) / 15 * 100);
-  const eviction = clamp(num(pick(s, ["eviction_filing_rate"], 0)) / 10 * 100);
+  const poverty = clamp(num(s.poverty_rate) / 30 * 100);
+  const unemp = clamp(num(s.unemployment_rate) / 15 * 100);
+  const eviction = clamp(num(s.eviction_filing_rate) / 10 * 100);
   return 0.40 * poverty + 0.30 * unemp + 0.30 * eviction;
 }
 
@@ -128,13 +110,26 @@ for (const [regionId, years] of regionYears) {
   const pts = [];
   for (const yr of years) {
     const key = `${regionId}_${yr}`;
-    const d = demoIdx.get(key);
-    const p = propIdx.get(key);
-    const s = socioIdx.get(key);
+    const d = DEMO_BY_RY.get(key);
+    const p = PROP_BY_RY.get(key);
+    const s = SOCIO_BY_RY.get(key);
 
     const V = demScore(d);
     const P = propScore(p, s);
     const S = socioScore(s);
+
+    // Data Confidence Score: average audit_confidence across available sources.
+    // If confidence is low, boost Socioeconomic Stress weight because it tracks
+    // displacement more reliably than property appreciation in "data deserts."
+    const confParts = [
+      d?.audit_confidence,
+      p?.audit_confidence,
+      s?.audit_confidence,
+    ].filter((c) => c != null);
+    const confidence =
+      confParts.length > 0
+        ? confParts.reduce((a, b) => a + b, 0) / confParts.length
+        : 0;
 
     // Re-weight across available sub-indices when data is missing,
     // instead of treating absent sub-indices as zero.
@@ -143,13 +138,38 @@ for (const [regionId, years] of regionYears) {
     if (P != null) parts.push({ score: P, weight: 0.35 });
     if (S != null) parts.push({ score: S, weight: 0.30 });
 
+    // Low-confidence boost: shift +0.10 weight toward Socioeconomic Stress
+    // when audit confidence is below 50%, as S better captures displacement
+    // signals from "data ghosts" (neighborhoods with high demographic
+    // vulnerability but sparse business/property records).
+    if (confidence < 0.5 && S != null) {
+      const sPart = parts.find((pt) => pt.score === S);
+      if (sPart) sPart.weight += 0.10;
+    }
+
     let dvi = 0;
     if (parts.length > 0) {
       const totalW = parts.reduce((s, p) => s + p.weight, 0);
       dvi = parts.reduce((s, p) => s + (p.weight / totalW) * p.score, 0);
     }
+
+    // ── Vulnerability Gate ────────────────────────────────────────────
+    // If a region is affluent (income > 150% city median) AND has high
+    // owner-occupancy (>75%), it is not "vulnerable" to displacement in
+    // the same way as low-income renter tracts. Cap the DVI at a
+    // "Stable" ceiling (20) and flag it so MapView can use a distinct
+    // color ramp.
+    const isAffluent =
+      s && s.median_household_income > CITY_MEDIAN_INCOME * 1.5;
+    const isHighOwnership = d && d.pct_owner_occupied > 75;
+    const isExcluded = !!(isAffluent && isHighOwnership);
+
+    if (isExcluded) {
+      dvi = Math.min(dvi, 20);
+    }
+
     dvi = +dvi.toFixed(1);
-    pts.push({ year: yr, dvi });
+    pts.push({ year: yr, dvi, isExcluded });
   }
   // Sort by year for correct interpolation
   pts.sort((a, b) => a.year - b.year);

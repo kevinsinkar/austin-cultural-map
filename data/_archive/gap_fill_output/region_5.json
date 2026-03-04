@@ -1,0 +1,589 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 78500,
+      "median_rent": 450,
+      "residential_units": 2650,
+      "commercial_sqft": null,
+      "median_property_tax": 1649,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, SF3",
+        "median_rent": "US Decennial Census 1990, SF3",
+        "residential_units": "US Decennial Census 1990, SF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, SF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census Tract 18.13 used based on centroid, as provided tract 419.0 and GEOID are invalid for Travis County.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 97000,
+      "median_rent": 560,
+      "residential_units": 2725,
+      "commercial_sqft": null,
+      "median_property_tax": 2037,
+      "pct_home_value_change_yoy": 4.31,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Census",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between decennial census data points. YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 115500,
+      "median_rent": 670,
+      "residential_units": 2800,
+      "commercial_sqft": null,
+      "median_property_tax": 2426,
+      "pct_home_value_change_yoy": 3.55,
+      "vacancy_rate": 4.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3",
+        "median_rent": "US Decennial Census 2000, SF3",
+        "residential_units": "US Decennial Census 2000, SF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 130250,
+      "median_rent": 775,
+      "residential_units": 2900,
+      "commercial_sqft": null,
+      "median_property_tax": 2735,
+      "pct_home_value_change_yoy": 2.45,
+      "vacancy_rate": 6.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Interpolation between 2000 Census and ACS 2006-2010",
+        "median_rent": "Interpolation between 2000 Census and ACS 2006-2010",
+        "residential_units": "Interpolation between 2000 Census and ACS 2006-2010",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Interpolation between 2000 Census and ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 145000,
+      "median_rent": 880,
+      "residential_units": 3000,
+      "commercial_sqft": null,
+      "median_property_tax": 3045,
+      "pct_home_value_change_yoy": 2.17,
+      "vacancy_rate": 7.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "ACS 5-Year 2006-2010, Table B25001",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2006-2010, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 210000,
+      "median_rent": 1050,
+      "residential_units": 3080,
+      "commercial_sqft": null,
+      "median_property_tax": 4410,
+      "pct_home_value_change_yoy": 7.69,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table B25001",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 385000,
+      "median_rent": 1300,
+      "residential_units": 3150,
+      "commercial_sqft": null,
+      "median_property_tax": 8085,
+      "pct_home_value_change_yoy": 12.9,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "ACS 5-Year 2016-2020, Table B25001",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2016-2020, Table B25002"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_home_value": 525000,
+      "median_rent": 1650,
+      "residential_units": 3200,
+      "commercial_sqft": null,
+      "median_property_tax": 11025,
+      "pct_home_value_change_yoy": 6.41,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2016-2020 and TCAD/Zillow trends",
+        "median_rent": "Extrapolation from ACS 2016-2020 trends",
+        "residential_units": "Extrapolation from ACS 2016-2020 trends",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Extrapolation from ACS 2016-2020 trends"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "low"
+      },
+      "audit_notes": "Values projected from 2020 data, reflecting post-2022 market stabilization. YoY change is an annualized average over 5 years.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 32000,
+      "poverty_rate": 12.5,
+      "bachelors_degree_or_higher_pct": 18.2,
+      "unemployment_rate": 5.1,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 22.1,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 10.5,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, SF3",
+        "poverty_rate": "US Decennial Census 1990, SF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, SF3",
+        "unemployment_rate": "US Decennial Census 1990, SF3",
+        "gini_coefficient": "Estimated from 1990 Census income distribution",
+        "pct_uninsured": "Estimated based on state-level data for the period",
+        "snap_participation_rate": "US Decennial Census 1990, SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Census Tract 18.13 used based on centroid. Pre-ACS data for Gini and uninsured rates are estimates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 38500,
+      "poverty_rate": 11.8,
+      "bachelors_degree_or_higher_pct": 20.1,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": 21.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 11,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Linear interpolation between 1990 and 2000 Census",
+        "pct_uninsured": "Linear interpolation between 1990 and 2000 Census",
+        "snap_participation_rate": "Linear interpolation between 1990 and 2000 Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values interpolated between decennial census data points.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 45000,
+      "poverty_rate": 11,
+      "bachelors_degree_or_higher_pct": 22,
+      "unemployment_rate": 3.9,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 21,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 11.5,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3",
+        "poverty_rate": "US Decennial Census 2000, SF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3",
+        "unemployment_rate": "US Decennial Census 2000, SF3",
+        "gini_coefficient": "US Decennial Census 2000, SF3",
+        "pct_uninsured": "US Decennial Census 2000, SF3",
+        "snap_participation_rate": "US Decennial Census 2000, SF3"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Eviction data not available for this period at tract level.",
+      "audit_flags": [
+        "GAP_FILL",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 47500,
+      "poverty_rate": 12,
+      "bachelors_degree_or_higher_pct": 23.5,
+      "unemployment_rate": 4.8,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 23,
+      "eviction_filing_rate": 4.5,
+      "snap_participation_rate": 12.5,
+      "audit_source": {
+        "median_household_income": "Interpolation between 2000 Census and ACS 2006-2010",
+        "poverty_rate": "Interpolation between 2000 Census and ACS 2006-2010",
+        "bachelors_degree_or_higher_pct": "Interpolation between 2000 Census and ACS 2006-2010",
+        "unemployment_rate": "Interpolation between 2000 Census and ACS 2006-2010",
+        "gini_coefficient": "Interpolation between 2000 Census and ACS 2006-2010",
+        "pct_uninsured": "Interpolation between 2000 Census and ACS 2006-2010",
+        "eviction_filing_rate": "Estimated based on Eviction Lab county-level trends",
+        "snap_participation_rate": "Interpolation between 2000 Census and ACS 2006-2010"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "First year of ACS data is 2005-2009; this is an interpolation.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 50000,
+      "poverty_rate": 13,
+      "bachelors_degree_or_higher_pct": 25,
+      "unemployment_rate": 5.7,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 25,
+      "eviction_filing_rate": 5.1,
+      "snap_participation_rate": 13.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2006-2010, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, county-level data",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 55000,
+      "poverty_rate": 12.2,
+      "bachelors_degree_or_higher_pct": 28.1,
+      "unemployment_rate": 4.2,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 20.1,
+      "eviction_filing_rate": 4.2,
+      "snap_participation_rate": 12,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, county-level data",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": null,
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 70000,
+      "poverty_rate": 10.5,
+      "bachelors_degree_or_higher_pct": 32.5,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 15.5,
+      "eviction_filing_rate": 3.5,
+      "snap_participation_rate": 9.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table B27010",
+        "eviction_filing_rate": "Eviction Lab, county-level data",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Windsor Hills",
+      "region_id": 5,
+      "median_household_income": 85000,
+      "poverty_rate": 9.5,
+      "bachelors_degree_or_higher_pct": 35,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 13,
+      "eviction_filing_rate": 3.8,
+      "snap_participation_rate": 9,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2016-2020 trends",
+        "poverty_rate": "Extrapolation from ACS 2016-2020 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2016-2020 trends",
+        "unemployment_rate": "Extrapolation based on post-pandemic recovery",
+        "gini_coefficient": "Extrapolation from ACS 2016-2020 trends",
+        "pct_uninsured": "Extrapolation from ACS 2016-2020 trends",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab trends",
+        "snap_participation_rate": "Extrapolation from ACS 2016-2020 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "low",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Values projected from 2020 data.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2023-10-27T10:00:00Z"
+    }
+  ]
+}

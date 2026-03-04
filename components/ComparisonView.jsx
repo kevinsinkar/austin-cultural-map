@@ -1,16 +1,17 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import _ from "lodash";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { REGIONS_GEOJSON, SOCIOECONOMIC, DEMOGRAPHICS } from "../data";
-import { REGION_NAMES } from "../data/constants";
+import { SOCIOECONOMIC, DEMOGRAPHICS } from "../data";
+import { REGION_NAMES, DEMO_COLORS } from "../data/constants";
 import { NAME_TO_ID } from "../data/regionLookup";
-import { interpolateDvi } from "../utils/math";
+import { interpolateDvi, calcAnchorDensity } from "../utils/math";
 import { fmtPct } from "../utils/formatters";
 
 export default function ComparisonView({ compA, setCompA, compB, setCompB, isMobile }) {
+  const [demoMode, setDemoMode] = useState("focused"); // "focused" = Black & Hispanic, "all" = all groups
   // Resolve region_ids from names once
   const idA = NAME_TO_ID.get(compA);
   const idB = NAME_TO_ID.get(compB);
@@ -50,8 +51,14 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
         year: yr,
         [`${compA}_Black`]: a?.pctBlack || 0,
         [`${compA}_Hispanic`]: a?.pctHispanic || 0,
+        [`${compA}_White`]: a?.pctWhite || 0,
+        [`${compA}_Asian`]: a?.pctAsian || 0,
+        [`${compA}_Other`]: a?.pctOther || 0,
         [`${compB}_Black`]: b?.pctBlack || 0,
         [`${compB}_Hispanic`]: b?.pctHispanic || 0,
+        [`${compB}_White`]: b?.pctWhite || 0,
+        [`${compB}_Asian`]: b?.pctAsian || 0,
+        [`${compB}_Other`]: b?.pctOther || 0,
       };
     }),
     [compA, compB, idA, idB]
@@ -156,23 +163,82 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
 
         {/* Demographics */}
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-          <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Black & Hispanic Population Share</h3>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12, flexWrap: "wrap", gap: 8 }}>
+            <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: 0 }}>
+              {demoMode === "focused" ? "Black & Hispanic Population Share" : "All Groups Population Share"}
+            </h3>
+            <div style={{ display: "flex", background: "#edeae4", borderRadius: 6, padding: 2 }}>
+              {[
+                { key: "focused", label: "Black & Hispanic" },
+                { key: "all", label: "All Groups" },
+              ].map((opt) => (
+                <button
+                  key={opt.key}
+                  onClick={() => setDemoMode(opt.key)}
+                  style={{
+                    padding: "3px 10px",
+                    borderRadius: 4,
+                    fontSize: 10,
+                    fontWeight: demoMode === opt.key ? 600 : 400,
+                    background: demoMode === opt.key ? "#fffffe" : "transparent",
+                    color: demoMode === opt.key ? "#0f766e" : "#7c6f5e",
+                    border: "none",
+                    cursor: "pointer",
+                    boxShadow: demoMode === opt.key ? "0 1px 2px rgba(0,0,0,.06)" : "none",
+                  }}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
           <div style={{ height: 200 }} role="img" aria-label={`Demographics comparison: ${compA} vs ${compB}`}>
             <ResponsiveContainer><LineChart data={compDemoChart} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} />
               <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, "auto"]} />
               <Tooltip formatter={(v) => `${(v * 100).toFixed(1)}%`} contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #d6d3cd" }} />
-              <Line type="monotone" dataKey={`${compA}_Black`} stroke="#0f766e" strokeWidth={2} dot={{ r: 2.5 }} name={`${nameA} Black`} />
-              <Line type="monotone" dataKey={`${compA}_Hispanic`} stroke="#0f766e" strokeWidth={2} strokeDasharray="6 3" dot={{ r: 2.5 }} name={`${nameA} Hispanic`} />
-              <Line type="monotone" dataKey={`${compB}_Black`} stroke="#7c3aed" strokeWidth={2} dot={{ r: 2.5 }} name={`${nameB} Black`} />
-              <Line type="monotone" dataKey={`${compB}_Hispanic`} stroke="#7c3aed" strokeWidth={2} strokeDasharray="6 3" dot={{ r: 2.5 }} name={`${nameB} Hispanic`} />
+              {/* Region A lines — solid */}
+              <Line type="monotone" dataKey={`${compA}_Black`} stroke={demoMode === "all" ? DEMO_COLORS.Black : "#0f766e"} strokeWidth={2} dot={{ r: 2.5 }} name={`${nameA} Black`} />
+              <Line type="monotone" dataKey={`${compA}_Hispanic`} stroke={demoMode === "all" ? DEMO_COLORS.Hispanic : "#0f766e"} strokeWidth={2} strokeDasharray={demoMode === "all" ? undefined : "6 3"} dot={{ r: 2.5 }} name={`${nameA} Hispanic`} />
+              {demoMode === "all" && (
+                <>
+                  <Line type="monotone" dataKey={`${compA}_White`} stroke={DEMO_COLORS.White} strokeWidth={2} dot={{ r: 2.5 }} name={`${nameA} White`} />
+                  <Line type="monotone" dataKey={`${compA}_Asian`} stroke={DEMO_COLORS.Asian} strokeWidth={2} dot={{ r: 2.5 }} name={`${nameA} Asian`} />
+                  <Line type="monotone" dataKey={`${compA}_Other`} stroke={DEMO_COLORS.Other} strokeWidth={2} dot={{ r: 2.5 }} name={`${nameA} Other`} />
+                </>
+              )}
+              {/* Region B lines — dashed */}
+              <Line type="monotone" dataKey={`${compB}_Black`} stroke={demoMode === "all" ? DEMO_COLORS.Black : "#7c3aed"} strokeWidth={2} strokeDasharray="6 3" dot={{ r: 2.5 }} name={`${nameB} Black`} />
+              <Line type="monotone" dataKey={`${compB}_Hispanic`} stroke={demoMode === "all" ? DEMO_COLORS.Hispanic : "#7c3aed"} strokeWidth={2} strokeDasharray={demoMode === "all" ? "6 3" : "2 2"} dot={{ r: 2.5 }} name={`${nameB} Hispanic`} />
+              {demoMode === "all" && (
+                <>
+                  <Line type="monotone" dataKey={`${compB}_White`} stroke={DEMO_COLORS.White} strokeWidth={2} strokeDasharray="6 3" dot={{ r: 2.5 }} name={`${nameB} White`} />
+                  <Line type="monotone" dataKey={`${compB}_Asian`} stroke={DEMO_COLORS.Asian} strokeWidth={2} strokeDasharray="6 3" dot={{ r: 2.5 }} name={`${nameB} Asian`} />
+                  <Line type="monotone" dataKey={`${compB}_Other`} stroke={DEMO_COLORS.Other} strokeWidth={2} strokeDasharray="6 3" dot={{ r: 2.5 }} name={`${nameB} Other`} />
+                </>
+              )}
             </LineChart></ResponsiveContainer>
           </div>
-          <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px solid #0f766e" }} /><span style={{ fontSize: 10, color: "#64615b" }}>Solid = Black</span></div>
-            <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px dashed #7c3aed" }} /><span style={{ fontSize: 10, color: "#64615b" }}>Dashed = Hispanic</span></div>
-          </div>
+          {demoMode === "focused" ? (
+            <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px solid #0f766e" }} /><span style={{ fontSize: 10, color: "#64615b" }}>Solid = Black</span></div>
+              <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px dashed #7c3aed" }} /><span style={{ fontSize: 10, color: "#64615b" }}>Dashed = Hispanic</span></div>
+            </div>
+          ) : (
+            <div style={{ display: "flex", gap: 10, marginTop: 8, flexWrap: "wrap" }}>
+              {[["White", DEMO_COLORS.White], ["Black", DEMO_COLORS.Black], ["Hispanic", DEMO_COLORS.Hispanic], ["Asian", DEMO_COLORS.Asian], ["Other", DEMO_COLORS.Other]].map(([label, color]) => (
+                <div key={label} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                  <span style={{ width: 8, height: 8, borderRadius: 2, background: color }} aria-hidden="true" />
+                  <span style={{ fontSize: 10, color: "#64615b" }}>{label}</span>
+                </div>
+              ))}
+              <span style={{ fontSize: 10, color: "#a8a49c", marginLeft: 4 }}>Solid = {nameA}, Dashed = {nameB}</span>
+            </div>
+          )}
+          <p style={{ fontSize: 10, color: "#7c6f5e", margin: "10px 0 0", lineHeight: 1.5, fontStyle: "italic" }}>
+            Note: Indigenous populations are not separately tracked in Census data for these geographies. This represents a known data gap.
+          </p>
         </div>
       </div>
 
@@ -196,13 +262,19 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
                 const dA = DEMOGRAPHICS.find((d) => d.region_id === idA && d.year === 2023);
                 const dB = DEMOGRAPHICS.find((d) => d.region_id === idB && d.year === 2023);
                 if (!sA || !sB) return null;
+                const ancA = calcAnchorDensity(idA);
+                const ancB = calcAnchorDensity(idB);
+                const fmtAnc = (v) => v != null ? `${(v * 100).toFixed(0)}%` : "—";
                 return [
                   { l: "DVI (2010–20)", a: interpolateDvi(idA, 2020).toFixed(1), b: interpolateDvi(idB, 2020).toFixed(1), d: (interpolateDvi(idA, 2020) - interpolateDvi(idB, 2020)).toFixed(1) },
+                  { l: "Anchor Density", a: fmtAnc(ancA), b: fmtAnc(ancB), d: ancA != null && ancB != null ? `${((ancA - ancB) * 100).toFixed(0)}pp` : "—" },
                   { l: "Income", a: `$${(sA.incomeAdj / 1000).toFixed(0)}k`, b: `$${(sB.incomeAdj / 1000).toFixed(0)}k`, d: `$${((sA.incomeAdj - sB.incomeAdj) / 1000).toFixed(0)}k` },
                   { l: "Home Value", a: `$${(sA.homeValue / 1000).toFixed(0)}k`, b: `$${(sB.homeValue / 1000).toFixed(0)}k`, d: `$${((sA.homeValue - sB.homeValue) / 1000).toFixed(0)}k` },
                   { l: "Bachelor's+", a: fmtPct(sA.pctBachelors), b: fmtPct(sB.pctBachelors), d: `${((sA.pctBachelors - sB.pctBachelors) * 100).toFixed(0)}pp` },
                   { l: "Cost-Burdened", a: fmtPct(sA.pctCostBurdened), b: fmtPct(sB.pctCostBurdened), d: `${((sA.pctCostBurdened - sB.pctCostBurdened) * 100).toFixed(0)}pp` },
                   { l: "Population", a: dA?.total?.toLocaleString() || "—", b: dB?.total?.toLocaleString() || "—", d: dA && dB ? ((dA.total - dB.total) > 0 ? "+" : "") + (dA.total - dB.total).toLocaleString() : "—" },
+                  { l: "Asian %", a: dA ? fmtPct(dA.pctAsian || 0) : "—", b: dB ? fmtPct(dB.pctAsian || 0) : "—", d: dA && dB ? `${(((dA.pctAsian || 0) - (dB.pctAsian || 0)) * 100).toFixed(0)}pp` : "—" },
+                  { l: "Other %", a: dA ? fmtPct(dA.pctOther || 0) : "—", b: dB ? fmtPct(dB.pctOther || 0) : "—", d: dA && dB ? `${(((dA.pctOther || 0) - (dB.pctOther || 0)) * 100).toFixed(0)}pp` : "—" },
                 ].map((r, i) => (
                   <tr key={i} style={{ borderBottom: "1px solid #f0ede8" }}>
                     <td style={{ padding: "6px 10px", color: "#1a1a1a", fontWeight: 500 }}>{r.l}</td>

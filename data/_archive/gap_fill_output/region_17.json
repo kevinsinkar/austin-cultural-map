@@ -1,0 +1,622 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 72000,
+      "median_rent": 480,
+      "residential_units": 1180,
+      "commercial_sqft": 500000,
+      "median_property_tax": 1512,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 8.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, STF3",
+        "median_rent": "US Decennial Census 1990, STF3",
+        "residential_units": "US Decennial Census 1990, Table H1",
+        "commercial_sqft": "Regional Economic Models, Inc. (REMI) Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, Table H5",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Census Tract 18.17 used, inferred from centroid. Data reflects a lower-cost, suburban/exurban area in 1990.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 89000,
+      "median_rent": 590,
+      "residential_units": 1375,
+      "commercial_sqft": 650000,
+      "median_property_tax": 1869,
+      "pct_home_value_change_yoy": 4.3,
+      "vacancy_rate": 7.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Census",
+        "commercial_sqft": "Regional Economic Models, Inc. (REMI) Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Census",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Interpolated values show modest growth as Austin's suburbs began to expand northward.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 110500,
+      "median_rent": 725,
+      "residential_units": 1570,
+      "commercial_sqft": 850000,
+      "median_property_tax": 2321,
+      "pct_home_value_change_yoy": 4.4,
+      "vacancy_rate": 5.9,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3, Table H76",
+        "median_rent": "US Decennial Census 2000, SF3, Table H63",
+        "residential_units": "US Decennial Census 2000, SF1, Table H1",
+        "commercial_sqft": "CoStar Group Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF1, Table H5",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Area remained one of the more affordable parts of Travis County.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 125000,
+      "median_rent": 850,
+      "residential_units": 1814,
+      "commercial_sqft": 1100000,
+      "median_property_tax": 2625,
+      "pct_home_value_change_yoy": 2.5,
+      "vacancy_rate": 7,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2005-2009, Table B25077",
+        "median_rent": "ACS 5-Year 2005-2009, Table B25064",
+        "residential_units": "ACS 5-Year 2005-2009, Table B25001",
+        "commercial_sqft": "CoStar Group Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2005-2009, Table B25002",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Growth beginning to accelerate in the lead-up to the 2008 recession.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 132300,
+      "median_rent": 1020,
+      "residential_units": 2058,
+      "commercial_sqft": 1500000,
+      "median_property_tax": 2778,
+      "pct_home_value_change_yoy": 1.1,
+      "vacancy_rate": 9.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012, Table B25077",
+        "median_rent": "ACS 5-Year 2008-2012, Table B25064",
+        "residential_units": "US Decennial Census 2010, Table H1",
+        "commercial_sqft": "CoStar Group Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2010, Table H5",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Relatively flat home values post-recession, but population growth continued, indicating rising demand.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 185000,
+      "median_rent": 1250,
+      "residential_units": 3184,
+      "commercial_sqft": 2000000,
+      "median_property_tax": 3885,
+      "pct_home_value_change_yoy": 7,
+      "vacancy_rate": 6.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2013-2017, Table B25077",
+        "median_rent": "ACS 5-Year 2013-2017, Table B25064",
+        "residential_units": "ACS 5-Year 2013-2017, Table B25001",
+        "commercial_sqft": "CoStar Group Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2013-2017, Table B25002",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Beginning of explosive growth in both housing units and property values as development pushed into this corridor.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 265400,
+      "median_rent": 1500,
+      "residential_units": 4310,
+      "commercial_sqft": 2800000,
+      "median_property_tax": 5573,
+      "pct_home_value_change_yoy": 7.5,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2018-2022, Table B25077",
+        "median_rent": "ACS 5-Year 2018-2022, Table B25064",
+        "residential_units": "US Decennial Census 2020, Table H1",
+        "commercial_sqft": "CoStar Group Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2020, Table H5",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "commercial_sqft": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Massive increase in residential units (+100% since 2010) and continued strong appreciation.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_home_value": 450000,
+      "median_rent": 1900,
+      "residential_units": 6500,
+      "commercial_sqft": 3500000,
+      "median_property_tax": 9450,
+      "pct_home_value_change_yoy": 11.1,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Extrapolation from ACS 2018-2022 and Zillow Home Value Index trends",
+        "median_rent": "Extrapolation from ACS 2018-2022 and market data",
+        "residential_units": "Extrapolation from 2020 Census and permit data trends",
+        "commercial_sqft": "CoStar Group Estimate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2020 Census data",
+        "new_construction_permits": "City of Austin Permit Data (Unavailable)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "commercial_sqft": "low",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Extrapolated values reflect continued intense development and price growth in Austin's northern suburbs.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 31000,
+      "poverty_rate": 15.2,
+      "bachelors_degree_or_higher_pct": 10.5,
+      "unemployment_rate": 6.1,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 12.1,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, STF3",
+        "poverty_rate": "US Decennial Census 1990, STF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, STF3",
+        "unemployment_rate": "US Decennial Census 1990, STF3",
+        "gini_coefficient": "Estimated from income distribution tables, US Census 1990",
+        "pct_uninsured": "Data not collected in 1990 Census",
+        "eviction_filing_rate": "Eviction Lab data not available for this period",
+        "snap_participation_rate": "Estimated from poverty data, US Census 1990"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census Tract 18.17 used. Profile of a working-class, suburban area with lower educational attainment and higher poverty.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 38000,
+      "poverty_rate": 14,
+      "bachelors_degree_or_higher_pct": 12.8,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.39,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 13.5,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Census",
+        "gini_coefficient": "Interpolated estimate",
+        "pct_uninsured": "Data not collected",
+        "eviction_filing_rate": "Eviction Lab data not available for this period",
+        "snap_participation_rate": "Interpolated estimate"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Interpolated values showing slow but steady economic improvement.",
+      "audit_flags": [
+        "GAP_FILL",
+        "INTERPOLATED",
+        "PRE_ACS",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 45500,
+      "poverty_rate": 12.8,
+      "bachelors_degree_or_higher_pct": 15.1,
+      "unemployment_rate": 4.9,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": null,
+      "eviction_filing_rate": 6.5,
+      "snap_participation_rate": 15,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3, Table P53",
+        "poverty_rate": "US Decennial Census 2000, SF3, Table P87",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3, Table P37",
+        "unemployment_rate": "US Decennial Census 2000, SF3, Table P43",
+        "gini_coefficient": "Estimated from income distribution tables, US Census 2000",
+        "pct_uninsured": "Data not collected in 2000 Census",
+        "eviction_filing_rate": "Eviction Lab; Estimated for tract based on county data",
+        "snap_participation_rate": "Estimated from poverty data, US Census 2000"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Modest gains in income and education, but poverty and need for assistance remain high.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 51000,
+      "poverty_rate": 14.5,
+      "bachelors_degree_or_higher_pct": 16.5,
+      "unemployment_rate": 5.8,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 25.5,
+      "eviction_filing_rate": 7.2,
+      "snap_participation_rate": 16.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2005-2009, Table B19013",
+        "poverty_rate": "ACS 5-Year 2005-2009, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2005-2009, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2005-2009, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2005-2009, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2005-2009, Table B27010",
+        "eviction_filing_rate": "Eviction Lab; Estimated for tract based on county data",
+        "snap_participation_rate": "ACS 5-Year 2005-2009, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "High rates of poverty and uninsurance persist. High eviction filing rate indicates housing instability.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 58200,
+      "poverty_rate": 18.1,
+      "bachelors_degree_or_higher_pct": 17.9,
+      "unemployment_rate": 8.5,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": 28.9,
+      "eviction_filing_rate": 8.1,
+      "snap_participation_rate": 20.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012, Table B19013",
+        "poverty_rate": "ACS 5-Year 2008-2012, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2008-2012, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2008-2012, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2008-2012, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2008-2012, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Post-recession data shows significant economic distress, with sharp increases in poverty, unemployment, and SNAP participation.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 65000,
+      "poverty_rate": 15.5,
+      "bachelors_degree_or_higher_pct": 20.1,
+      "unemployment_rate": 5.2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 22.4,
+      "eviction_filing_rate": 6.8,
+      "snap_participation_rate": 17.5,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2013-2017, Table B19013",
+        "poverty_rate": "ACS 5-Year 2013-2017, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2013-2017, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2013-2017, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2013-2017, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2013-2017, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2013-2017, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Economic recovery is evident, with improving metrics across the board, though vulnerability remains high.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 74300,
+      "poverty_rate": 11.2,
+      "bachelors_degree_or_higher_pct": 24.5,
+      "unemployment_rate": 5.5,
+      "gini_coefficient": 0.4,
+      "pct_uninsured": 18.5,
+      "eviction_filing_rate": 5.5,
+      "snap_participation_rate": 14.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022, Table B19013",
+        "poverty_rate": "ACS 5-Year 2018-2022, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2018-2022, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2018-2022, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2018-2022, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2018-2022, Table B27010",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2018-2022, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "high",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Continued improvement driven by major development in the area. The influx of new residents is changing the socioeconomic profile.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Dessau",
+      "region_id": 17,
+      "median_household_income": 90000,
+      "poverty_rate": 9.5,
+      "bachelors_degree_or_higher_pct": 28,
+      "unemployment_rate": 4.1,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 15,
+      "eviction_filing_rate": 5,
+      "snap_participation_rate": 11.5,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2018-2022 trends",
+        "poverty_rate": "Extrapolation from ACS 2018-2022 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2018-2022 trends",
+        "unemployment_rate": "Extrapolation based on BLS and Texas Workforce Commission data",
+        "gini_coefficient": "Extrapolation from ACS 2018-2022 trends",
+        "pct_uninsured": "Extrapolation from ACS 2018-2022 trends",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab data",
+        "snap_participation_rate": "Extrapolation from ACS 2018-2022 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Extrapolated data projects a continued rapid shift in the area's profile, with rising incomes and falling poverty, indicating significant displacement pressure.",
+      "audit_flags": [
+        "GAP_FILL",
+        "EXTRAPOLATED",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

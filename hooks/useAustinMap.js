@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { REGION_INDEX, REGIONS_GEOJSON } from "../data";
-import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES, PROPERTY_DATA } from "../data";
-// TODO: Remove LEGACY_OPERATING and LEGACY_CLOSED usage once all components are migrated to interim data
-// PROPERTY_DATA now points to interim_property.js via data/index.js
+import { REGION_INDEX } from "../data";
+import { REGIONS_GEOJSON } from "../data/final_updated_regions";
+import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
+import { AUDITED_PROP_BY_ID } from "../data/auditedData";
+import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
 
@@ -97,12 +98,30 @@ export default function useAustinMap({
             const rid = feature.properties.region_id;
             const yr = yearRef.current;
             const dvi = interpolateDvi(rid, yr);
-            const fill = yr < 1993 ? "#e0ddd7" : getDviColor(dvi, false);
             const isActive = activeRegionIdRef.current === rid;
+
+            // Respect affluent/excluded flag for fill color
+            const dviSeries = AUDITED_DVI_LOOKUP[rid];
+            const dviPt = dviSeries?.reduce((best, pt) =>
+              Math.abs(pt.year - yr) < Math.abs(best.year - yr) ? pt : best,
+              dviSeries[0]
+            );
+
+            let fill;
+            let opacity = 0.25;
+            if (yr < 1993) {
+              fill = "#e0ddd7";
+            } else if (dviPt?.isExcluded) {
+              fill = "#B0BEC5";
+              opacity = 0.6;
+            } else {
+              fill = getDviColor(dvi, false);
+            }
+
             e.target.setStyle({
               fillColor: fill,
-              fillOpacity: 0.25,
-              color: isActive ? "#1a1a1a" : "#a8a49c",
+              fillOpacity: opacity,
+              color: isActive ? "#1a1a1a" : (dviPt?.isExcluded ? "#455A64" : "#a8a49c"),
               weight: isActive ? 3 : 1,
             });
             setHoveredRegion(null);
@@ -159,13 +178,33 @@ export default function useAustinMap({
       if (!regionIndex) return {};
 
       const dvi = interpolateDvi(regionId, year);
-      const fill = year < 1993 ? "#e0ddd7" : getDviColor(dvi, false);
       const isActive = activeRegionId === regionId;
+
+      // Check if this region is flagged as Affluent/Excluded for the
+      // closest available year — use a neutral slate color instead of
+      // the displacement ramp so the map clearly distinguishes
+      // gentrification from affluent appreciation.
+      const dviSeries = AUDITED_DVI_LOOKUP[regionId];
+      const dviPoint = dviSeries?.reduce((best, pt) =>
+        Math.abs(pt.year - year) < Math.abs(best.year - year) ? pt : best,
+        dviSeries[0]
+      );
+
+      let fill;
+      let opacity = 0.25;
+      if (year < 1993) {
+        fill = "#e0ddd7";
+      } else if (dviPoint?.isExcluded) {
+        fill = "#B0BEC5"; // Neutral Slate for "Affluent Stability"
+        opacity = 0.6;
+      } else {
+        fill = getDviColor(dvi, false);
+      }
 
       return {
         fillColor: fill,
-        fillOpacity: 0.25,
-        color: isActive ? "#1a1a1a" : "#a8a49c",
+        fillOpacity: opacity,
+        color: isActive ? "#1a1a1a" : (dviPoint?.isExcluded ? "#455A64" : "#a8a49c"),
         weight: isActive ? 3 : 1,
       };
     });
@@ -184,19 +223,15 @@ export default function useAustinMap({
     pcLayer && pcLayer.clearLayers();
     pressureLayer && pressureLayer.clearLayers();
 
-    // Build lookup caches keyed by region_id for consistent joins
+    // Build music lookup cache (only done once per overlay update, not per render)
     const musicByRegion = new Map();
-    const propertyByRegion = new Map();
     MUSIC_NIGHTLIFE.forEach(m => {
       const key = m.region_id ?? m.region;           // fallback to name if no id yet
       if (!musicByRegion.has(key)) musicByRegion.set(key, []);
       musicByRegion.get(key).push(m);
     });
-    PROPERTY_DATA.forEach(p => {
-      const key = p.region_id ?? p.region;
-      if (!propertyByRegion.has(key)) propertyByRegion.set(key, []);
-      propertyByRegion.get(key).push(p);
-    });
+    // Use pre-built AUDITED_PROP_BY_ID map (already indexed by region_id)
+    // instead of rebuilding from the raw PROPERTY_DATA array each time
 
     // Businesses
     if (showPins) {
@@ -269,15 +304,17 @@ export default function useAustinMap({
       geojsonLayerRef.current.eachLayer((layer) => {
         const props = layer.feature.properties;
         const region = REGION_INDEX.find(r => r.region_id === props.region_id);
-        const rows = propertyByRegion.get(props.region_id) || propertyByRegion.get(region?.region_name) || [];
+        const rows = AUDITED_PROP_BY_ID.get(props.region_id) || [];
         if (!rows.length) return;
         const closest = rows.reduce(
           (a, b) => (Math.abs(b.year - year) < Math.abs(a.year - year) ? b : a),
           rows[0]
         );
-        if (!closest || !closest.yoy || closest.yoy < 0.05) return;
+        if (!closest) return;
+        const yoy = closest.pct_home_value_change_yoy ?? closest.yoy ?? 0;
+        if (!yoy || yoy < 0.05) return;
 
-        const strokeW = Math.max(0.0002, closest.yoy * 0.0001);
+        const strokeW = Math.max(0.0002, yoy * 0.0001);
         layer.setStyle({ weight: strokeW, color: getDevPressureColor(region.region_name, year) });
       });
     }
@@ -288,12 +325,29 @@ export default function useAustinMap({
       geojsonLayerRef.current.eachLayer((layer) => {
         const regionId = layer.feature.properties.region_id;
         const dvi = interpolateDvi(regionId, year);
-        const fill = year < 1993 ? "#e0ddd7" : getDviColor(dvi, false);
         const isActive = activeRegionId === regionId;
+
+        const dviSeries = AUDITED_DVI_LOOKUP[regionId];
+        const dviPt = dviSeries?.reduce((best, pt) =>
+          Math.abs(pt.year - year) < Math.abs(best.year - year) ? pt : best,
+          dviSeries[0]
+        );
+
+        let fill;
+        let opacity = 0.25;
+        if (year < 1993) {
+          fill = "#e0ddd7";
+        } else if (dviPt?.isExcluded) {
+          fill = "#B0BEC5";
+          opacity = 0.6;
+        } else {
+          fill = getDviColor(dvi, false);
+        }
+
         layer.setStyle({
           fillColor: fill,
-          fillOpacity: 0.25,
-          color: isActive ? "#1a1a1a" : "#a8a49c",
+          fillOpacity: opacity,
+          color: isActive ? "#1a1a1a" : (dviPt?.isExcluded ? "#455A64" : "#a8a49c"),
           weight: isActive ? 3 : 1,
         });
       });

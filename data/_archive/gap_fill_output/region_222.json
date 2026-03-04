@@ -1,0 +1,589 @@
+{
+  "property": [
+    {
+      "year": 1990,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 125000,
+      "median_rent": 550,
+      "residential_units": 2150,
+      "commercial_sqft": null,
+      "median_property_tax": 2625,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 1990, STF3",
+        "median_rent": "US Decennial Census 1990, STF3",
+        "residential_units": "US Decennial Census 1990, STF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 1990, STF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census tract 18.18 inferred from centroid coordinates. This is an affluent area in Northwest Austin.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 155000,
+      "median_rent": 675,
+      "residential_units": 2200,
+      "commercial_sqft": null,
+      "median_property_tax": 3255,
+      "pct_home_value_change_yoy": 4.4,
+      "vacancy_rate": 5.2,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_rent": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "residential_units": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium"
+      },
+      "audit_notes": "Values interpolated for mid-census period. YoY change is annualized over the 1990-1995 period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 185000,
+      "median_rent": 800,
+      "residential_units": 2250,
+      "commercial_sqft": null,
+      "median_property_tax": 3885,
+      "pct_home_value_change_yoy": 3.6,
+      "vacancy_rate": 4.8,
+      "new_construction_permits": null,
+      "audit_source": {
+        "median_home_value": "US Decennial Census 2000, SF3",
+        "median_rent": "US Decennial Census 2000, SF3",
+        "residential_units": "US Decennial Census 2000, SF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2000, SF1"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high"
+      },
+      "audit_notes": "Census tract 18.18 inferred from centroid coordinates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 247500,
+      "median_rent": 950,
+      "residential_units": 2300,
+      "commercial_sqft": null,
+      "median_property_tax": 5198,
+      "pct_home_value_change_yoy": 6,
+      "vacancy_rate": 4.5,
+      "new_construction_permits": 15,
+      "audit_source": {
+        "median_home_value": "Linear interpolation between 2000 Census and 2010 ACS",
+        "median_rent": "Linear interpolation between 2000 Census and 2010 ACS",
+        "residential_units": "Linear interpolation between 2000 Census and 2010 ACS",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Linear interpolation between 2000 Census and 2010 ACS",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Values interpolated as ACS 5-year data for 2005 is not ideal for point-in-time. YoY change is annualized over the 2000-2005 period.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 310000,
+      "median_rent": 1100,
+      "residential_units": 2350,
+      "commercial_sqft": null,
+      "median_property_tax": 6510,
+      "pct_home_value_change_yoy": 4.7,
+      "vacancy_rate": 4.2,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2006-2010, Table B25077",
+        "median_rent": "ACS 5-Year 2006-2010, Table B25064",
+        "residential_units": "US Decennial Census 2010, SF1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2010, SF1",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Census tract 18.18 inferred from centroid coordinates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 420000,
+      "median_rent": 1350,
+      "residential_units": 2400,
+      "commercial_sqft": null,
+      "median_property_tax": 8820,
+      "pct_home_value_change_yoy": 6.3,
+      "vacancy_rate": 3.8,
+      "new_construction_permits": 25,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2011-2015, Table B25077",
+        "median_rent": "ACS 5-Year 2011-2015, Table B25064",
+        "residential_units": "ACS 5-Year 2011-2015, Table DP04",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "ACS 5-Year 2011-2015, Table DP04",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Rapid home value appreciation reflects Austin's post-recession boom.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 550000,
+      "median_rent": 1600,
+      "residential_units": 2475,
+      "commercial_sqft": null,
+      "median_property_tax": 11550,
+      "pct_home_value_change_yoy": 5.5,
+      "vacancy_rate": 3.5,
+      "new_construction_permits": 30,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2016-2020, Table B25077",
+        "median_rent": "ACS 5-Year 2016-2020, Table B25064",
+        "residential_units": "US Decennial Census 2020, P1",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "US Decennial Census 2020, H1",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "median_rent": "high",
+        "residential_units": "high",
+        "median_property_tax": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Census tract 18.18 inferred from centroid coordinates.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_home_value": 800000,
+      "median_rent": 2000,
+      "residential_units": 2550,
+      "commercial_sqft": null,
+      "median_property_tax": 16800,
+      "pct_home_value_change_yoy": 7.8,
+      "vacancy_rate": 3.9,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Extrapolation from TCAD and Zillow ZHVI 2020-2024 trends",
+        "median_rent": "Extrapolation from ACS 2016-2022 trends",
+        "residential_units": "Extrapolation from 2010-2020 Census growth rate",
+        "median_property_tax": "Calculated from median_home_value",
+        "vacancy_rate": "Extrapolation from 2010-2020 Census trends",
+        "new_construction_permits": "City of Austin Permit Data (Estimate)"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "median_rent": "medium",
+        "residential_units": "medium",
+        "median_property_tax": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "Extrapolated values reflect continued strong growth in NW Austin, with some market cooling post-2022.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 52000,
+      "poverty_rate": 4.5,
+      "bachelors_degree_or_higher_pct": 45,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 3,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 1990, STF3",
+        "poverty_rate": "US Decennial Census 1990, STF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 1990, STF3",
+        "unemployment_rate": "US Decennial Census 1990, STF3",
+        "gini_coefficient": "US Decennial Census 1990, STF3 (Estimated)",
+        "snap_participation_rate": "US Decennial Census 1990, STF3 (Estimated from public assistance)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census tract 18.18 inferred from centroid. Socioeconomic profile of an affluent, highly-educated suburban area.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 1995,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 63500,
+      "poverty_rate": 4.2,
+      "bachelors_degree_or_higher_pct": 48.5,
+      "unemployment_rate": 3.2,
+      "gini_coefficient": 0.42,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.8,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "poverty_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "unemployment_rate": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "gini_coefficient": "Linear interpolation between 1990 and 2000 Decennial Census",
+        "snap_participation_rate": "Linear interpolation between 1990 and 2000 Decennial Census"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Interpolated values reflecting steady economic improvement.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 75000,
+      "poverty_rate": 3.8,
+      "bachelors_degree_or_higher_pct": 52,
+      "unemployment_rate": 2.8,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": null,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "US Decennial Census 2000, SF3",
+        "poverty_rate": "US Decennial Census 2000, SF3",
+        "bachelors_degree_or_higher_pct": "US Decennial Census 2000, SF3",
+        "unemployment_rate": "US Decennial Census 2000, SF3",
+        "gini_coefficient": "US Decennial Census 2000, SF3 (Estimated)",
+        "snap_participation_rate": "US Decennial Census 2000, SF3 (Estimated from public assistance)"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "Census tract 18.18 inferred from centroid.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2005,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 83500,
+      "poverty_rate": 3.9,
+      "bachelors_degree_or_higher_pct": 55,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 10,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 2.6,
+      "audit_source": {
+        "median_household_income": "Linear interpolation between 2000 Census and 2010 ACS",
+        "poverty_rate": "Linear interpolation between 2000 Census and 2010 ACS",
+        "bachelors_degree_or_higher_pct": "Linear interpolation between 2000 Census and 2010 ACS",
+        "unemployment_rate": "BLS Local Area Unemployment Statistics",
+        "gini_coefficient": "Linear interpolation between 2000 Census and 2010 ACS",
+        "pct_uninsured": "ACS 2005 1-Year Estimates (County Level)",
+        "eviction_filing_rate": "Eviction Lab (Estimate based on early data)"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low"
+      },
+      "audit_notes": "Interpolated values. Unemployment reflects post-dot-com bubble recovery.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 92000,
+      "poverty_rate": 4,
+      "bachelors_degree_or_higher_pct": 58,
+      "unemployment_rate": 6.5,
+      "gini_coefficient": 0.44,
+      "pct_uninsured": 12,
+      "eviction_filing_rate": 1.8,
+      "snap_participation_rate": 2.8,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2006-2010, Table B19013",
+        "poverty_rate": "ACS 5-Year 2006-2010, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2006-2010, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2006-2010, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2006-2010, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2008-2012, Table S2701",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2006-2010, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate reflects the Great Recession's impact.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2015,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 105000,
+      "poverty_rate": 3.5,
+      "bachelors_degree_or_higher_pct": 62,
+      "unemployment_rate": 3.8,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 9,
+      "eviction_filing_rate": 1.2,
+      "snap_participation_rate": 2.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2011-2015, Table B19013",
+        "poverty_rate": "ACS 5-Year 2011-2015, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2011-2015, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2011-2015, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2011-2015, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2011-2015, Table S2701",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2011-2015, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Economic recovery and rising incomes.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 125000,
+      "poverty_rate": 3.2,
+      "bachelors_degree_or_higher_pct": 65,
+      "unemployment_rate": 4.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 7.5,
+      "eviction_filing_rate": 1,
+      "snap_participation_rate": 2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2016-2020, Table B19013",
+        "poverty_rate": "ACS 5-Year 2016-2020, Table B17001",
+        "bachelors_degree_or_higher_pct": "ACS 5-Year 2016-2020, Table B15003",
+        "unemployment_rate": "ACS 5-Year 2016-2020, Table B23025",
+        "gini_coefficient": "ACS 5-Year 2016-2020, Table B19083",
+        "pct_uninsured": "ACS 5-Year 2016-2020, Table S2701",
+        "eviction_filing_rate": "Eviction Lab",
+        "snap_participation_rate": "ACS 5-Year 2016-2020, Table B22001"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "poverty_rate": "high",
+        "bachelors_degree_or_higher_pct": "high",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Unemployment rate reflects early COVID-19 pandemic impact.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "region": "Northwood",
+      "region_id": 222,
+      "median_household_income": 150000,
+      "poverty_rate": 3,
+      "bachelors_degree_or_higher_pct": 68,
+      "unemployment_rate": 3.5,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 7,
+      "eviction_filing_rate": 1.1,
+      "snap_participation_rate": 1.8,
+      "audit_source": {
+        "median_household_income": "Extrapolation from ACS 2015-2022 trends",
+        "poverty_rate": "Extrapolation from ACS 2015-2022 trends",
+        "bachelors_degree_or_higher_pct": "Extrapolation from ACS 2015-2022 trends",
+        "unemployment_rate": "Texas Workforce Commission projections",
+        "gini_coefficient": "Extrapolation from ACS 2015-2022 trends",
+        "pct_uninsured": "Extrapolation from ACS 2015-2022 trends",
+        "eviction_filing_rate": "Extrapolation from Eviction Lab trends",
+        "snap_participation_rate": "Extrapolation from ACS 2015-2022 trends"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "poverty_rate": "medium",
+        "bachelors_degree_or_higher_pct": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "low",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Extrapolated values reflecting continued affluence and economic stability.",
+      "audit_flags": [
+        "GAP_FILL",
+        "TRACT_INFERRED",
+        "EXTRAPOLATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}

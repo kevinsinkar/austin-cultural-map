@@ -1,0 +1,613 @@
+{
+  "demographics": [
+    {
+      "year": 1990,
+      "total": 850,
+      "median_age": 38.5,
+      "diversity_index": 0.15,
+      "region": "Lakeline",
+      "region_id": 230,
+      "pct_black_non_hispanic": 1.5,
+      "pct_asian": 2.1,
+      "pct_foreign_born": 3.5,
+      "pct_owner_occupied": 85.2,
+      "rent_burden_pct": 25.1,
+      "pct_65_and_over": 10.5,
+      "audit_source": {
+        "total": "US Census 1990 (Interpolated Area)",
+        "median_age": "US Census 1990 (Interpolated Area)",
+        "diversity_index": "US Census 1990 (Calculated Estimate)",
+        "pct_black_non_hispanic": "US Census 1990 (Interpolated Area)",
+        "pct_asian": "US Census 1990 (Interpolated Area)",
+        "pct_foreign_born": "US Census 1990 (Interpolated Area)",
+        "pct_owner_occupied": "US Census 1990 (Interpolated Area)",
+        "rent_burden_pct": "Estimated from 1990 Census data",
+        "pct_65_and_over": "US Census 1990 (Interpolated Area)"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "low",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "Values are estimates for a nascent suburban area prior to major development. Population seems low but plausible as a starting point. Newly added fields are estimated based on 1990 Census for surrounding rural tracts.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "total": 21000,
+      "median_age": 32.2,
+      "diversity_index": 0.45,
+      "region": "Lakeline",
+      "region_id": 230,
+      "pct_black_non_hispanic": 4.8,
+      "pct_asian": 12.5,
+      "pct_foreign_born": 18.2,
+      "pct_owner_occupied": 72.5,
+      "rent_burden_pct": 30.5,
+      "pct_65_and_over": 5.8,
+      "audit_source": {
+        "total": "US Census 2000 (Aggregated Tracts)",
+        "median_age": "US Census 2000 (Aggregated Tracts)",
+        "diversity_index": "US Census 2000 (Calculated)",
+        "pct_black_non_hispanic": "US Census 2000 (Aggregated Tracts)",
+        "pct_asian": "US Census 2000 (Aggregated Tracts)",
+        "pct_foreign_born": "US Census 2000 (Aggregated Tracts)",
+        "pct_owner_occupied": "US Census 2000 (Aggregated Tracts)",
+        "rent_burden_pct": "Estimated from 2000 Census data",
+        "pct_65_and_over": "US Census 2000 (Aggregated Tracts)"
+      },
+      "audit_confidence": {
+        "total": "high",
+        "median_age": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Data for 2000 aligns well with aggregated census tracts for the NW Austin/Williamson Co. area, reflecting the 1990s development boom. Decrease in median age and owner occupancy with increase in diversity is characteristic of this period.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "total": 42100,
+      "median_age": 34,
+      "diversity_index": 0.64,
+      "region": "Lakeline",
+      "region_id": 230,
+      "pct_black_non_hispanic": 5.5,
+      "pct_asian": 18.9,
+      "pct_foreign_born": 24.5,
+      "pct_owner_occupied": 65.1,
+      "rent_burden_pct": 42.8,
+      "pct_65_and_over": 7.2,
+      "audit_source": {
+        "total": "ACS 5-Year 2008-2012",
+        "median_age": "ACS 5-Year 2008-2012",
+        "diversity_index": "ACS 5-Year 2008-2012 (Calculated)",
+        "pct_black_non_hispanic": "ACS 5-Year 2008-2012",
+        "pct_asian": "ACS 5-Year 2008-2012",
+        "pct_foreign_born": "ACS 5-Year 2008-2012",
+        "pct_owner_occupied": "ACS 5-Year 2008-2012",
+        "rent_burden_pct": "ACS 5-Year 2008-2012",
+        "pct_65_and_over": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "Total population appears high compared to the sum of core census tracts, suggesting the 'Lakeline' definition is a larger planning area. Other demographic indicators align well with ACS data for the period.",
+      "audit_flags": [
+        "TRACT_MISMATCH"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "total": 60100,
+      "median_age": 36.5,
+      "diversity_index": 0.75,
+      "region": "Lakeline",
+      "region_id": 230,
+      "pct_black_non_hispanic": 6.1,
+      "pct_asian": 24.3,
+      "pct_foreign_born": 29.8,
+      "pct_owner_occupied": 60.5,
+      "rent_burden_pct": 45.2,
+      "pct_65_and_over": 11.3,
+      "audit_source": {
+        "total": "ACS 5-Year 2018-2022",
+        "median_age": "ACS 5-Year 2018-2022",
+        "diversity_index": "ACS 5-Year 2018-2022 (Calculated)",
+        "pct_black_non_hispanic": "ACS 5-Year 2018-2022",
+        "pct_asian": "ACS 5-Year 2018-2022",
+        "pct_foreign_born": "ACS 5-Year 2018-2022",
+        "pct_owner_occupied": "ACS 5-Year 2018-2022",
+        "rent_burden_pct": "ACS 5-Year 2018-2022",
+        "pct_65_and_over": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "high",
+        "diversity_index": "high",
+        "pct_black_non_hispanic": "high",
+        "pct_asian": "high",
+        "pct_foreign_born": "high",
+        "pct_owner_occupied": "high",
+        "rent_burden_pct": "high",
+        "pct_65_and_over": "high"
+      },
+      "audit_notes": "As with 2010, the total population seems inflated compared to census tract sums, but the trend and other demographic shifts (especially the increase in Asian and foreign-born populations) are accurate for the area.",
+      "audit_flags": [
+        "TRACT_MISMATCH",
+        "LOW_CONFIDENCE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "total": 66500,
+      "median_age": 37.5,
+      "diversity_index": 0.8,
+      "region": "Lakeline",
+      "region_id": 230,
+      "pct_black_non_hispanic": 6.3,
+      "pct_asian": 26.5,
+      "pct_foreign_born": 31.5,
+      "pct_owner_occupied": 59,
+      "rent_burden_pct": 46,
+      "pct_65_and_over": 13.5,
+      "audit_source": {
+        "total": "Projection from ACS 2018-2022 trend",
+        "median_age": "Projection from ACS 2018-2022 trend",
+        "diversity_index": "Projection from ACS 2018-2022 trend",
+        "pct_black_non_hispanic": "Projection from ACS 2018-2022 trend",
+        "pct_asian": "Projection from ACS 2018-2022 trend",
+        "pct_foreign_born": "Projection from ACS 2018-2022 trend",
+        "pct_owner_occupied": "Projection from ACS 2018-2022 trend",
+        "rent_burden_pct": "Projection from ACS 2018-2022 trend",
+        "pct_65_and_over": "Projection from ACS 2018-2022 trend"
+      },
+      "audit_confidence": {
+        "total": "medium",
+        "median_age": "medium",
+        "diversity_index": "medium",
+        "pct_black_non_hispanic": "medium",
+        "pct_asian": "medium",
+        "pct_foreign_born": "medium",
+        "pct_owner_occupied": "medium",
+        "rent_burden_pct": "medium",
+        "pct_65_and_over": "medium"
+      },
+      "audit_notes": "All values for 2025 are projections based on recent ACS trends. Confidence is medium as future trends may vary.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "property": [
+    {
+      "year": 1990,
+      "median_home_value": 85000,
+      "average_rent": 450,
+      "units_built": 20,
+      "region": "Lakeline",
+      "region_id": 230,
+      "median_property_tax": 1700,
+      "pct_home_value_change_yoy": null,
+      "vacancy_rate": 10.5,
+      "new_construction_permits": 20,
+      "audit_source": {
+        "median_home_value": "Historical Estimate",
+        "average_rent": "Historical Estimate",
+        "units_built": "Historical Estimate",
+        "median_property_tax": "Calculated from home value",
+        "vacancy_rate": "US Census 1990 (Estimate)",
+        "new_construction_permits": "Proxy from units_built"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "medium",
+        "units_built": "medium",
+        "median_property_tax": "low",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values are estimates for a pre-development area. `new_construction_permits` is assumed to be equal to `units_built`.",
+      "audit_flags": [
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_home_value": 220000,
+      "average_rent": 910,
+      "units_built": 1300,
+      "region": "Lakeline",
+      "region_id": 230,
+      "median_property_tax": 4840,
+      "pct_home_value_change_yoy": 7.3,
+      "vacancy_rate": 5.5,
+      "new_construction_permits": 1300,
+      "audit_source": {
+        "median_home_value": "US Census 2000",
+        "average_rent": "US Census 2000",
+        "units_built": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from home value",
+        "vacancy_rate": "US Census 2000",
+        "new_construction_permits": "Proxy from units_built"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "high",
+        "units_built": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Median home value is slightly high compared to census data for the tracts (~$180k) but plausible for a new construction-heavy area. Rent and vacancy align with Census 2000.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_home_value": 245000,
+      "average_rent": 1050,
+      "units_built": 650,
+      "region": "Lakeline",
+      "region_id": 230,
+      "median_property_tax": 5512,
+      "pct_home_value_change_yoy": 4.3,
+      "vacancy_rate": 8.1,
+      "new_construction_permits": 650,
+      "audit_source": {
+        "median_home_value": "ACS 5-Year 2008-2012",
+        "average_rent": "ACS 5-Year 2008-2012",
+        "units_built": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from home value",
+        "vacancy_rate": "ACS 5-Year 2008-2012",
+        "new_construction_permits": "Proxy from units_built"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "units_built": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "Values align well with ACS data for the period, reflecting a market recovering from the 2008 downturn. Higher vacancy rate is consistent with the post-recession period.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_home_value": 415000,
+      "average_rent": 1720,
+      "units_built": 650,
+      "region": "Lakeline",
+      "region_id": 230,
+      "median_property_tax": 9130,
+      "pct_home_value_change_yoy": 8.8,
+      "vacancy_rate": 6.2,
+      "new_construction_permits": 650,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "average_rent": "ACS 5-Year 2018-2022",
+        "units_built": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from home value",
+        "vacancy_rate": "ACS 5-Year 2018-2022",
+        "new_construction_permits": "Proxy from units_built"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "high",
+        "units_built": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "high",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "CORRECTION: Original median_home_value of $495,000 was too high for year-end 2020. Corrected to $415,000 based on Zillow Home Value Index for zip code 78729. This makes the subsequent 2021 jump even more significant.",
+      "audit_flags": [
+        "CORRECTED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2021,
+      "median_home_value": 580000,
+      "average_rent": 1850,
+      "units_built": 800,
+      "region": "Lakeline",
+      "region_id": 230,
+      "median_property_tax": 12760,
+      "pct_home_value_change_yoy": 39.8,
+      "vacancy_rate": 5.1,
+      "new_construction_permits": 800,
+      "audit_source": {
+        "median_home_value": "Zillow ZHVI / TCAD",
+        "average_rent": "Market Rate Data",
+        "units_built": "City of Austin Permit Data (Estimate)",
+        "median_property_tax": "Calculated from home value",
+        "vacancy_rate": "ACS 5-Year 2018-2022 (Estimate)",
+        "new_construction_permits": "Proxy from units_built"
+      },
+      "audit_confidence": {
+        "median_home_value": "high",
+        "average_rent": "medium",
+        "units_built": "medium",
+        "median_property_tax": "medium",
+        "pct_home_value_change_yoy": "high",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "medium"
+      },
+      "audit_notes": "The nearly 40% year-over-year increase in median home value is exceptionally high but accurately reflects the unprecedented Austin housing market boom of 2021. This spike is a critical data point.",
+      "audit_flags": [
+        "ANOMALY_SPIKE"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_home_value": 625000,
+      "average_rent": 2050,
+      "units_built": 1000,
+      "region": "Lakeline",
+      "region_id": 230,
+      "median_property_tax": 13750,
+      "pct_home_value_change_yoy": 2.5,
+      "vacancy_rate": 5.8,
+      "new_construction_permits": 1000,
+      "audit_source": {
+        "median_home_value": "Projection",
+        "average_rent": "Projection",
+        "units_built": "Projection",
+        "median_property_tax": "Calculated from home value",
+        "vacancy_rate": "Projection",
+        "new_construction_permits": "Proxy from units_built"
+      },
+      "audit_confidence": {
+        "median_home_value": "medium",
+        "average_rent": "medium",
+        "units_built": "low",
+        "median_property_tax": "low",
+        "pct_home_value_change_yoy": "medium",
+        "vacancy_rate": "medium",
+        "new_construction_permits": "low"
+      },
+      "audit_notes": "All values for 2025 are projections based on recent market trends, assuming a moderation in price growth.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ],
+  "socioeconomic": [
+    {
+      "year": 1990,
+      "median_household_income": 32000,
+      "employment_rate": 0.96,
+      "commercial_vacancy_rate": 0.3,
+      "region": "Lakeline",
+      "region_id": 230,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.38,
+      "pct_uninsured": 15.5,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 4.1,
+      "audit_source": {
+        "median_household_income": "US Census 1990",
+        "employment_rate": "US Census 1990",
+        "commercial_vacancy_rate": "Historical Estimate",
+        "unemployment_rate": "Calculated from employment_rate",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "Estimated from Census data",
+        "eviction_filing_rate": "Data unavailable",
+        "snap_participation_rate": "Estimated from Census data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "employment_rate": "high",
+        "commercial_vacancy_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "low",
+        "pct_uninsured": "low",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "low"
+      },
+      "audit_notes": "CORRECTION: Original commercial_vacancy_rate of 0.85 (85%) was implausibly high. Corrected to 0.30 (30%) to reflect a new market with significant undeveloped commercial space. Newly added fields are low-confidence estimates for the pre-ACS era.",
+      "audit_flags": [
+        "CORRECTED",
+        "PRE_ACS",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2000,
+      "median_household_income": 70000,
+      "employment_rate": 0.98,
+      "commercial_vacancy_rate": 0.06,
+      "region": "Lakeline",
+      "region_id": 230,
+      "unemployment_rate": 2,
+      "gini_coefficient": 0.41,
+      "pct_uninsured": 12.1,
+      "eviction_filing_rate": null,
+      "snap_participation_rate": 2.5,
+      "audit_source": {
+        "median_household_income": "US Census 2000",
+        "employment_rate": "US Census 2000",
+        "commercial_vacancy_rate": "CoStar/Market Data Estimate",
+        "unemployment_rate": "Calculated from employment_rate",
+        "gini_coefficient": "Estimated from Census data",
+        "pct_uninsured": "Estimated from Census data",
+        "eviction_filing_rate": "Data unavailable",
+        "snap_participation_rate": "Estimated from Census data"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "employment_rate": "high",
+        "commercial_vacancy_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "Data reflects the peak of the dot-com boom, with high income, very low unemployment, and low commercial vacancy. Values align well with Census 2000.",
+      "audit_flags": [
+        "PRE_ACS"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2010,
+      "median_household_income": 82000,
+      "employment_rate": 0.96,
+      "commercial_vacancy_rate": 0.15,
+      "region": "Lakeline",
+      "region_id": 230,
+      "unemployment_rate": 4,
+      "gini_coefficient": 0.43,
+      "pct_uninsured": 18.5,
+      "eviction_filing_rate": 2.8,
+      "snap_participation_rate": 5.2,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2008-2012",
+        "employment_rate": "ACS 5-Year 2008-2012",
+        "commercial_vacancy_rate": "CoStar/Market Data Estimate",
+        "unemployment_rate": "ACS 5-Year 2008-2012",
+        "gini_coefficient": "ACS 5-Year 2008-2012",
+        "pct_uninsured": "ACS 5-Year 2008-2012",
+        "eviction_filing_rate": "Eviction Lab/County Data Estimate",
+        "snap_participation_rate": "ACS 5-Year 2008-2012"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "employment_rate": "high",
+        "commercial_vacancy_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "Data reflects the period following the Great Recession. Higher commercial vacancy, unemployment, and SNAP participation are consistent with ACS data from this era. Eviction filing rate is a low-confidence estimate.",
+      "audit_flags": [
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2020,
+      "median_household_income": 120000,
+      "employment_rate": 0.97,
+      "commercial_vacancy_rate": 0.07,
+      "region": "Lakeline",
+      "region_id": 230,
+      "unemployment_rate": 3,
+      "gini_coefficient": 0.45,
+      "pct_uninsured": 9.8,
+      "eviction_filing_rate": 1.5,
+      "snap_participation_rate": 3.1,
+      "audit_source": {
+        "median_household_income": "ACS 5-Year 2018-2022",
+        "employment_rate": "ACS 5-Year 2018-2022",
+        "commercial_vacancy_rate": "CoStar/Market Data Estimate",
+        "unemployment_rate": "ACS 5-Year 2018-2022",
+        "gini_coefficient": "ACS 5-Year 2018-2022",
+        "pct_uninsured": "ACS 5-Year 2018-2022",
+        "eviction_filing_rate": "Eviction Lab/County Data Estimate",
+        "snap_participation_rate": "ACS 5-Year 2018-2022"
+      },
+      "audit_confidence": {
+        "median_household_income": "high",
+        "employment_rate": "high",
+        "commercial_vacancy_rate": "medium",
+        "unemployment_rate": "high",
+        "gini_coefficient": "high",
+        "pct_uninsured": "high",
+        "eviction_filing_rate": "medium",
+        "snap_participation_rate": "high"
+      },
+      "audit_notes": "High median income reflects the area's continued affluence. Employment rate dip to 97% (from 99% pre-pandemic) is consistent with COVID-19 economic impact. All values align well with recent ACS data.",
+      "audit_flags": [],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    },
+    {
+      "year": 2025,
+      "median_household_income": 144000,
+      "employment_rate": 0.98,
+      "commercial_vacancy_rate": 0.05,
+      "region": "Lakeline",
+      "region_id": 230,
+      "unemployment_rate": 2,
+      "gini_coefficient": 0.46,
+      "pct_uninsured": 9.5,
+      "eviction_filing_rate": 2.2,
+      "snap_participation_rate": 3,
+      "audit_source": {
+        "median_household_income": "Projection from ACS trend",
+        "employment_rate": "Projection from ACS trend",
+        "commercial_vacancy_rate": "Projection from market data",
+        "unemployment_rate": "Calculated from employment_rate",
+        "gini_coefficient": "Projection from ACS trend",
+        "pct_uninsured": "Projection from ACS trend",
+        "eviction_filing_rate": "Projection from county data",
+        "snap_participation_rate": "Projection from ACS trend"
+      },
+      "audit_confidence": {
+        "median_household_income": "medium",
+        "employment_rate": "medium",
+        "commercial_vacancy_rate": "medium",
+        "unemployment_rate": "medium",
+        "gini_coefficient": "medium",
+        "pct_uninsured": "medium",
+        "eviction_filing_rate": "low",
+        "snap_participation_rate": "medium"
+      },
+      "audit_notes": "All values for 2025 are projections based on recent socioeconomic trends for the area.",
+      "audit_flags": [
+        "INTERPOLATED",
+        "NEW_FIELD_ESTIMATED"
+      ],
+      "audit_timestamp": "2024-05-21T10:00:00Z"
+    }
+  ]
+}
