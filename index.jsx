@@ -48,20 +48,11 @@ export default function AustinCulturalMap() {
   const [showAbout, setShowAbout] = useState(false);
   const [showAgenda, setShowAgenda] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
-  const [isMobile, setIsMobile] = useState(false);
   const [activeRegionId, setActiveRegionId] = useState(null);
   const [activeFeature, setActiveFeature] = useState(null);
 
   const playRef = useRef(null);
   const activeRegionName = activeFeature?.properties?.region_name;
-
-  // ── Responsive check ──
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   // ── Playback animation ──
   useEffect(() => {
@@ -184,6 +175,8 @@ export default function AustinCulturalMap() {
       style={{
         background: "#f8f7f4",
         minHeight: "100vh",
+        width: "100%",
+        maxWidth: "100vw",
         fontFamily: "'Libre Franklin','Source Sans 3',system-ui,sans-serif",
       }}
     >
@@ -191,6 +184,12 @@ export default function AustinCulturalMap() {
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
+
+      {/* Mobile notice — shown only on small screens via CSS */}
+      <div className="mobile-notice" aria-label="Device notice">
+        <h2>Desktop or Tablet Recommended</h2>
+        <p>This interactive map is designed for screens 900 px or wider. Please visit on a laptop, desktop, or tablet in landscape orientation for the best experience.</p>
+      </div>
 
       {/* Live region for screen readers */}
       <div
@@ -210,7 +209,6 @@ export default function AustinCulturalMap() {
         setViewMode={setViewMode}
         setShowAbout={setShowAbout}
         setShowAgenda={setShowAgenda}
-        isMobile={isMobile}
       />
 
       {/* About Modal */}
@@ -225,9 +223,9 @@ export default function AustinCulturalMap() {
       )}
 
       {/* Main Content */}
-      <main id="main-content" style={{ maxWidth: 1400, margin: "0 auto", padding: isMobile ? "12px 16px 40px" : "16px 28px 40px" }}>
+      <main id="main-content" style={{ width: "100%", padding: "16px 28px 40px" }}>
         {viewMode === "timeline" && (
-          <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} isMobile={isMobile} />
+          <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
         )}
 
         {viewMode === "compare" && (
@@ -236,12 +234,11 @@ export default function AustinCulturalMap() {
             setCompA={setCompA}
             compB={compB}
             setCompB={setCompB}
-            isMobile={isMobile}
           />
         )}
 
         {viewMode === "triage" && (
-          <TriageView isMobile={isMobile} />
+          <TriageView />
         )}
 
         {viewMode === "map" && (
@@ -273,7 +270,6 @@ export default function AustinCulturalMap() {
               setSelectedBiz={setSelectedBiz}
               bizTab={bizTab}
               setBizTab={setBizTab}
-              isMobile={isMobile}
               currentDvi={currentDvi}
               regionBizOpen={regionBizOpen}
               regionBizClosed={regionBizClosed}

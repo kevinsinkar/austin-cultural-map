@@ -29,13 +29,12 @@ export default function RegionDetailPanel({
   setBizTab,
   setSelectedRegion,
   setHoveredRegion,
-  isMobile,
 }) {
   if (!activeFeature) {
     return (
       <div
         className="detail-panel"
-        style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }}
+        style={{ flex: "0 1 380px", minWidth: 300, maxHeight: "calc(100vh - 100px)", overflowY: "auto", position: "sticky", top: 16 }}
         role="region"
         aria-label="Region detail panel"
       >
@@ -54,7 +53,7 @@ export default function RegionDetailPanel({
   return (
     <div
       className="detail-panel"
-      style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }}
+      style={{ flex: "0 1 380px", minWidth: 300, maxHeight: "calc(100vh - 100px)", overflowY: "auto", position: "sticky", top: 16 }}
       role="region"
       aria-label="Region detail panel"
     >

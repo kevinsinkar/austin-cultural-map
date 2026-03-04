@@ -76,7 +76,7 @@ const x = (yr) => MG.l + (yr - YR0) * PX_YR;    // year → x pixel
 /* ═══════════════════════════════════════════════════════════
    COMPONENT
    ═══════════════════════════════════════════════════════════ */
-export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
+export default function TimelineView({ tlFilter, setTlFilter }) {
 
   /* ── state ───────────────────────────────────────────── */
   const [hoveredBar,  setHoveredBar]  = useState(null);
@@ -205,10 +205,10 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
      ═══════════════════════════════════════════════════════ */
   return (
     <section aria-label="Timeline view">
-      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: isMobile ? "column" : "row" }}>
+      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: "row" }}>
 
         {/* ─── LEFT: TIMELINE CONTENT ─── */}
-        <div style={{ flex: "0 0 auto", width: isMobile ? "100%" : "calc(100% - 360px)", minWidth: 0 }}>
+        <div style={{ flex: "1 1 0", minWidth: 0 }}>
 
           {/* ── Category filters ── */}
           <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap", alignItems: "center" }}>
@@ -624,7 +624,7 @@ export default function TimelineView({ tlFilter, setTlFilter, isMobile }) {
         </div>
 
         {/* ─── RIGHT: DETAIL PANEL ─── */}
-        <div className="detail-panel" style={{ flex: "1 1 0", minWidth: isMobile ? 0 : 320, maxHeight: isMobile ? "none" : "calc(100vh - 100px)", overflowY: "auto", position: isMobile ? "static" : "sticky", top: 16 }} role="region" aria-label="Detail card">
+        <div className="detail-panel" style={{ flex: "0 1 380px", minWidth: 300, maxHeight: "calc(100vh - 100px)", overflowY: "auto", position: "sticky", top: 16 }} role="region" aria-label="Detail card">
 
           {/* ── Dam (infrastructure) detail ── */}
           {hoveredDam ? (

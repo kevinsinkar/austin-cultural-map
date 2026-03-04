@@ -1,14 +1,14 @@
-export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda, isMobile }) {
+export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda }) {
   return (
     <header
-      style={{ borderBottom: "1px solid #d6d3cd", padding: isMobile ? "14px 16px" : "20px 28px 16px" }}
+      style={{ borderBottom: "1px solid #d6d3cd", padding: "20px 28px 16px" }}
       role="banner"
     >
-      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+      <div style={{ margin: "0 auto" }}>
         <h1
           style={{
             fontFamily: "'Newsreader',Georgia,serif",
-            fontSize: isMobile ? 20 : 26,
+            fontSize: 26,
             fontWeight: 600,
             color: "#1a1a1a",
             letterSpacing: "-.02em",
@@ -28,7 +28,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
             gap: 8,
           }}
         >
-          <p style={{ fontSize: isMobile ? 12 : 14, color: "#64615b", margin: 0, lineHeight: 1.4 }}>
+          <p style={{ fontSize: 14, color: "#64615b", margin: 0, lineHeight: 1.4 }}>
             Four decades of cultural displacement — 1990 to 2025
           </p>
           <div style={{ display: "flex", gap: 6, alignItems: "center" }}>

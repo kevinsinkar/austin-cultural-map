@@ -68,7 +68,7 @@ const TRIAGE_ORDER = [
 
 // ── Component ──
 
-export default function TriageView({ isMobile }) {
+export default function TriageView() {
   const [sortCol, setSortCol] = useState("triage");
   const [sortDir, setSortDir] = useState("asc");
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -262,7 +262,7 @@ export default function TriageView({ isMobile }) {
   };
 
   return (
-    <section aria-label="Grant triage view" style={{ maxWidth: 1200 }}>
+    <section aria-label="Grant triage view">
       <div style={{ marginBottom: 20 }}>
         <h2
           style={{
@@ -372,7 +372,7 @@ export default function TriageView({ isMobile }) {
           Displacement Risk vs. Cultural Anchor Survival
         </h3>
         <div
-          style={{ width: "100%", height: isMobile ? 260 : 340 }}
+          style={{ width: "100%", height: 340 }}
           role="img"
           aria-label="Scatter plot: DVI score vs anchor density for all regions"
         >

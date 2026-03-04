@@ -37,7 +37,6 @@ export default function MapView({
   setSelectedBiz,
   bizTab,
   setBizTab,
-  isMobile,
   // Derived data
   currentDvi,
   regionBizOpen,
@@ -94,10 +93,10 @@ export default function MapView({
   const handleSliderChange = (e) => setYear(parseInt(e.target.value));
 
   return (
-    <section aria-label="Map view">
-      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: isMobile ? "column" : "row" }}>
+    <section aria-label="Map view" style={{ width: "100%" }}>
+      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: "row" }}>
         {/* ═══ LEFT: MAP ═══ */}
-        <div style={{ flex: "0 0 auto", width: isMobile ? "100%" : 560, minWidth: 0 }}>
+        <div style={{ flex: "1 1 0", minWidth: 0 }}>
           {/* Toggles */}
           <div style={{ display: "flex", gap: 6, marginBottom: 10, flexWrap: "wrap" }} role="toolbar" aria-label="Map overlays">
             {[
@@ -217,7 +216,6 @@ export default function MapView({
           setBizTab={setBizTab}
           setSelectedRegion={setSelectedRegion}
           setHoveredRegion={setHoveredRegion}
-          isMobile={isMobile}
         />
       </div>
     </section>

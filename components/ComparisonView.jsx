@@ -10,7 +10,7 @@ import { NAME_TO_ID } from "../data/regionLookup";
 import { interpolateDvi, calcAnchorDensity } from "../utils/math";
 import { fmtPct } from "../utils/formatters";
 
-export default function ComparisonView({ compA, setCompA, compB, setCompB, isMobile }) {
+export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
   const [demoMode, setDemoMode] = useState("focused"); // "focused" = Black & Hispanic, "all" = all groups
   // Resolve region_ids from names once
   const idA = NAME_TO_ID.get(compA);
@@ -153,7 +153,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
   const nameB = compB.split("/")[0].trim();
 
   return (
-    <section aria-label="Comparison view" style={{ maxWidth: 1100 }}>
+    <section aria-label="Comparison view" style={{ width: "100%" }}>
       {/* Region selectors */}
       <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap", alignItems: "flex-end" }}>
         {[
@@ -178,7 +178,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, isMob
       </div>
 
       {/* Charts grid */}
-      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
         {/* DVI */}
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
           <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Displacement Velocity Index</h3>
