@@ -106,43 +106,76 @@ export default function RegionDetailPanel({
         {/* Demo chart */}
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
           <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Demographic Composition</h3>
-          <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2023</p>
-          {demoChartData.length > 0 && (
-            <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${activeRegionName}`}>
-              <ResponsiveContainer>
-                <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
-                  <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} />
-                  <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
-                  <Tooltip content={<ChartTooltip />} />
-                  <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
-                  <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" />
-                  <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" />
-                  <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" />
-                  <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" />
-                  <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" />
-                </AreaChart>
-              </ResponsiveContainer>
-            </div>
-          )}
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 8 }}>
-            {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
-              <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
-                <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
-              </div>
-            ))}
-          </div>
           {(() => {
-            const n = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
-            if (!n) return null;
+            if (!demoChartData.length) {
+              return (
+                <div style={{ padding: "24px 0", textAlign: "center" }}>
+                  <div style={{ fontSize: 24, marginBottom: 8, opacity: 0.2 }} aria-hidden="true">📊</div>
+                  <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>No demographic data available for this region at this time.</div>
+                </div>
+              );
+            }
+
+            // Check whether the demographic breakdown is conclusive:
+            // average the sum of racial fractions across all years; if < 50% treat as inconclusive
+            const breakdownSums = demoChartData.map((d) => (d.White || 0) + (d.Black || 0) + (d.Hispanic || 0) + (d.Asian || 0));
+            const avgBreakdown = breakdownSums.reduce((a, b) => a + b, 0) / breakdownSums.length;
+            const hasBreakdown = avgBreakdown >= 0.5;
+
+            // Check whether any row has a reported total population > 0
+            const hasPop = demoChartData.some((d) => d.total > 0);
+
+            const nearest = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
+
             return (
-              <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
-                In <strong>{n.year}</strong>, total pop. was <strong>{n.total != null ? n.total.toLocaleString() : "N/A"}</strong>.
-                Black: <strong style={{ color: DEMO_COLORS.Black }}>{n.popBlack != null ? n.popBlack.toLocaleString() : "N/A"}</strong>.
-                Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{n.popHispanic != null ? n.popHispanic.toLocaleString() : "N/A"}</strong>.
-                White: <strong style={{ color: DEMO_COLORS.White }}>{n.popWhite != null ? n.popWhite.toLocaleString() : "N/A"}</strong>.
-              </div>
+              <>
+                {hasBreakdown ? (
+                  <>
+                    <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2023</p>
+                    <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${activeRegionName}`}>
+                      <ResponsiveContainer>
+                        <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
+                          <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} />
+                          <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                          <Tooltip content={<ChartTooltip />} />
+                          <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
+                          <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" />
+                          <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" />
+                          <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" />
+                          <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" />
+                          <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" />
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </div>
+                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 8 }}>
+                      {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
+                        <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                          <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
+                          <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div style={{ padding: "20px 0", textAlign: "center" }}>
+                    <div style={{ fontSize: 24, marginBottom: 8, opacity: 0.2 }} aria-hidden="true">📊</div>
+                    <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>Demographic breakdown data is inconclusive for this region at this time.</div>
+                  </div>
+                )}
+
+                {/* Population summary — shown whenever population data exists, regardless of breakdown */}
+                {hasPop && nearest && (
+                  <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
+                    In <strong>{nearest.year}</strong>, total pop. was <strong>{nearest.total != null ? nearest.total.toLocaleString() : "N/A"}</strong>.
+                    {hasBreakdown && (<>
+                      {" "}Black: <strong style={{ color: DEMO_COLORS.Black }}>{nearest.popBlack != null ? nearest.popBlack.toLocaleString() : "N/A"}</strong>.
+                      {" "}Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{nearest.popHispanic != null ? nearest.popHispanic.toLocaleString() : "N/A"}</strong>.
+                      {" "}White: <strong style={{ color: DEMO_COLORS.White }}>{nearest.popWhite != null ? nearest.popWhite.toLocaleString() : "N/A"}</strong>.
+                    </>)}
+                  </div>
+                )}
+              </>
             );
           })()}
         </div>
