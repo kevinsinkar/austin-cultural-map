@@ -296,11 +296,11 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
             {/* ═══ SCROLLABLE SVG ═══ */}
             <div
               ref={scrollRef}
+              className="river-scroll"
               style={{
-                overflowX: "auto", overflowY: "hidden",
+                overflowX: "scroll", overflowY: "hidden",
                 borderRadius: 6, border: "1px solid #f0ede8",
                 background: "linear-gradient(180deg, #fafaf9 0%, #fffffe 30%, #fffffe 70%, #fafaf9 100%)",
-                scrollbarWidth: "thin", scrollbarColor: "#d6d3cd transparent",
               }}
             >
               <svg

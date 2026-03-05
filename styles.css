@@ -198,6 +198,27 @@ html, body {
   border-radius: 3px;
 }
 
+/* River timeline horizontal scrollbar */
+.river-scroll {
+  scrollbar-width: auto;
+  scrollbar-color: #b0ada6 #f0ede8;
+}
+.river-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+.river-scroll::-webkit-scrollbar-track {
+  background: #f0ede8;
+  border-radius: 5px;
+}
+.river-scroll::-webkit-scrollbar-thumb {
+  background: #b0ada6;
+  border-radius: 5px;
+  border: 2px solid #f0ede8;
+}
+.river-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8a8780;
+}
+
 .biz-pin {
   cursor: pointer;
   transition: r 0.12s, opacity 0.12s;
