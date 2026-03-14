@@ -1,86 +1,85 @@
-## Task: Disambiguate Duplicate Region Names
+## Task: Re-Audit Region Names for Better User Interface
 
-### Problem
+### Context
 
-The 269 regions in `data/regionIndex.js` are census tracts mapped to neighborhood names, but **44 neighborhood names are shared by multiple tracts** (165 unique names out of 269 regions). This causes real UX problems:
+The initial region name disambiguation is complete (44 duplicate groups resolved, 269 -> 232 visible regions). A three-source reconciliation pipeline then renamed 125 regions from census-tract labels to more recognizable neighborhood names. However, many names still need human review.
 
-- **Compare tab** (`components/ComparisonView.jsx`): The region selector dropdowns list names from `REGION_NAMES` (defined in `data/constants.js` as `REGION_INDEX.map(r => r.region_name).sort()`). Duplicate names appear multiple times with no way to tell them apart. Selecting "Zilker" could be any of 5 different tracts with DVI scores ranging from 4.9 to 85.7.
-- **Triage tab** (`components/TriageView.jsx`): The sortable table shows `region_name` for each of the 269 rows. Seven rows all say "Circle C Ranch" with different DVI scores — confusing for grant decisions.
-- **Timeline tab** (`components/TimelineView.jsx`): The DVI heatmap table at the bottom iterates over all 269 `REGION_INDEX` entries, producing duplicate row labels.
+### Current State
 
-### Duplicate inventory (44 names, sorted by frequency)
+Each region in `data/regionIndex.js` now has:
+- `region_name` — original census-tract name (preserved, never changed)
+- `display_name` — the name shown in all UI (dropdowns, tables, tooltips, heatmap)
+- `google_maps_name` — name from Gemini/official audit (if renamed)
+- `short_name` — truncated version for tight UI spaces
 
-| Name | Count | DVI range | Notes |
-|------|-------|-----------|-------|
-| Circle C Ranch | 7 | 4.9–4.9 | All identical DVI — strong merge candidate |
-| Northwood | 7 | 4.9–69.5 | Wide DVI spread — tracts are diverse |
-| Montopolis | 7 | 0–70.3 | Wide spread |
-| North Shoal Creek | 6 | 17.8–72.4 | Wide spread |
-| Great Hills | 6 | 4.9–61.1 | |
-| River Place | 6 | 4.9–4.9 | All identical DVI — strong merge candidate |
-| Steiner Ranch | 6 | 4.9–12.4 | Low spread — merge candidate |
-| Zilker | 5 | 4.9–85.7 | Very wide spread |
-| Milwood | 5 | 4.9–4.9 | All identical DVI — strong merge candidate |
-| Oak Hill | 5 | 4.9–29.2 | |
-| Wells Branch | 5 | 4.9–53.5 | |
-| Cherrywood | 4 | 21.1–70.3 | |
-| The Arboretum | 4 | 4.9–23.8 | |
-| Shady Hollow | 4 | 4.9–17.8 | |
-| Southwood | 4 | 4.9–63.2 | |
-| Jollyville | 4 | 4.9–4.9 | All identical DVI — strong merge candidate |
-| + 28 more names | 2–3 each | various | |
+### What Needs Review
 
-### Approach options (pick one or combine)
+1. **149 regions outside City of Austin coverage** — These are suburbs, ETJ areas, and unincorporated zones (Circle C, Steiner Ranch, Wells Branch, Del Valle, etc.) that the official neighborhood planning area GeoJSON doesn't cover. Their names come from Gemini's knowledge of Google Maps, which may be inaccurate.
 
-#### Option A: Merge contiguous tracts with the same name into a single region
+2. **77 official-data renames** — The centroid of each region was tested against City of Austin planning area polygons. When a centroid fell inside a differently-named official area, the name was updated. Some of these may feel wrong to locals (e.g., "Clarksville" -> "Old West Austin", "South Congress" -> "St. Edward's") because planning area names don't always match common usage.
 
-If multiple tracts share a name AND their GeoJSON polygons are adjacent (share a border), merge them into one region by:
-1. Combining their GeoJSON geometries into a `MultiPolygon` in `data/final_updated_regions.js`
-2. Averaging or population-weighting their demographic/property/socioeconomic rows in the phase1_output JSON files (or keeping per-tract rows and aggregating at display time)
-3. Assigning the merged region a single `region_id` and updating `regionIndex.js`
-4. This is the cleanest long-term fix but the most work
+3. **User-identified issues** (not yet applied):
+   - "The Arboretum — East" should be "The Domain" (official says NORTH BURNET)
+   - "Shady Hollow — North" should be "Cherry Creek — East"
+   - "Circle C Ranch — Southwest" should be "Cherry Creek — West"
 
-To check adjacency, you can use the GeoJSON polygons in `data/final_updated_regions.js` — tracts sharing the same name that share a polygon edge are merge candidates.
+### How to Fix
 
-#### Option B: Append a disambiguator to non-unique names
+#### Step 1: Visual review in the browser
+Run the app (`npm run dev`) and check region names in:
+- Compare tab dropdowns
+- Triage table "Region" column
+- Timeline DVI heatmap row labels
+- Map tooltips on hover
 
-For each duplicated name, modify `region_name` (or add a `display_name` field) in `data/regionIndex.js` to include a differentiator. Options:
-- **Tract ID**: "Zilker (Tract 15)" — technical but unambiguous
-- **Cardinal direction from centroid cluster**: "Zilker — South", "Zilker — Central" — user-friendly, computed from lat/lng centroids relative to the group mean
-- **DVI tier suffix**: "Montopolis (High DVI)", "Montopolis (Low DVI)" — directly meaningful for this tool's purpose
+#### Step 2: Add corrections to USER_OVERRIDES
+Edit `scripts/build_master_remap.py` and add entries to the `USER_OVERRIDES` dict:
 
-#### Option C: Hybrid — merge where DVI is identical, disambiguate where it diverges
+```python
+USER_OVERRIDES = {
+    176: "The Domain",              # "The Arboretum - East" -> The Domain
+    167: "Cherry Creek — East",     # "Shady Hollow - North"
+    156: "Cherry Creek — West",     # "Circle C Ranch - Southwest"
+    # Add more as you find them...
+}
+```
 
-- If all tracts sharing a name have the same DVI score (Circle C Ranch: all 4.9, Milwood: all 4.9, Jollyville: all 4.9, River Place: all 4.9), merge them — they're effectively one region for this tool's purposes
-- If tracts sharing a name have divergent DVI scores (Zilker: 4.9–85.7, Montopolis: 0–70.3), disambiguate with a suffix since they tell different displacement stories
+#### Step 3: Re-run the pipeline
+```bash
+python scripts/build_master_remap.py          # Rebuilds master_remap.json
+python scripts/apply_google_maps_names.py     # Patches regionIndex.js
+npm run build                                 # Verify
+```
 
-### Files to modify
+User overrides take priority over official data and Gemini suggestions.
 
-| File | What changes |
-|------|-------------|
-| `data/regionIndex.js` | Add `display_name` field (or update `region_name`) for all 269 entries. If merging, remove merged duplicates and assign new IDs. |
-| `data/final_updated_regions.js` | If merging: combine GeoJSON polygons into MultiPolygons. If disambiguating: update `region_name` in feature properties. |
-| `data/constants.js` | `REGION_NAMES` derives from `REGION_INDEX` — will auto-update if `region_name` changes. If using `display_name`, update to use that field instead. |
-| `data/regionLookup.js` | `NAME_TO_ID` and `ID_TO_NAME` maps — must reflect new names or merged IDs. |
-| `components/ComparisonView.jsx` | Uses `REGION_NAMES` for dropdown options and `NAME_TO_ID` for lookups. If using `display_name`, update the `<option>` rendering. |
-| `components/TriageView.jsx` | Displays `region_name` in the table. Update to use `display_name` or the new merged names. |
-| `components/TimelineView.jsx` | DVI heatmap iterates `REGION_INDEX` and shows `short_name`. Update to use `display_name` or short variant. |
-| `hooks/useAustinMap.js` | Tooltip on hover shows `region_name` from GeoJSON feature properties. |
-| `data/auditedData.js` | If merging: the `AUDITED_*_BY_ID` Maps need to reflect merged region IDs. |
-| `data/auditedDvi.js` | `AUDITED_DVI_LOOKUP` keyed by `region_id` — needs merged IDs if merging. |
+#### Step 4 (optional): OSM cross-reference
+For the 149 regions outside City of Austin coverage, `remapping_sug.txt` documents how to pull OpenStreetMap neighborhood boundaries via Overpass Turbo. This could fill the coverage gap for suburban areas.
 
-### Constraints
+### Pipeline scripts
 
-- The map choropleth (`hooks/useAustinMap.js`) renders GeoJSON features directly — each polygon must retain a unique `region_id` in its properties regardless of approach
-- Business data in `data/businesses.js` references `region_id` — must stay consistent
-- The three phase1_output JSON files use `region_id` as the join key — if merging, decide whether to aggregate data or keep per-tract rows
-- `REGION_NAMES` is currently sorted alphabetically (just changed) — maintain that
+| Script | Purpose |
+|--------|---------|
+| `scripts/audit_region_names.py` | Downloads City of Austin neighborhood GeoJSON, point-in-polygon tests all 269 centroids |
+| `scripts/gemini_google_maps_names.py` | Sends centroids to Gemini 2.5 Flash for Google Maps name comparison |
+| `scripts/build_master_remap.py` | Merges user overrides + official audit + Gemini into one remap table |
+| `scripts/apply_google_maps_names.py` | Applies remap to `regionIndex.js` with collision detection |
+| `scripts/gemini_retry_failed.py` | Re-runs failed Gemini batches with higher token limit |
 
-### Acceptance criteria
+### Files involved
 
-- No two entries in the Compare dropdowns have identical display text
-- No two rows in the Triage table have identical display text
-- No two rows in the Timeline DVI heatmap have identical display text
-- Map tooltips show the disambiguated name
-- All data lookups (DVI, demographics, property, socio, businesses) still work correctly
-- The total region count may decrease if merging, but no data should be lost
+| File | Role |
+|------|------|
+| `data/regionIndex.js` | Source of truth — all 269 entries with `display_name`, `region_name`, `google_maps_name` |
+| `data/regionLookup.js` | `VISIBLE_REGIONS`, `NAME_TO_ID`, `ID_TO_NAME` — derived from regionIndex |
+| `data/constants.js` | `REGION_NAMES` — sorted list of unique `display_name` values |
+| `scripts/gemini_output/neighborhood_audit.json` | Point-in-polygon audit results |
+| `scripts/gemini_output/google_maps_names.json` | Gemini rename suggestions |
+| `scripts/gemini_output/master_remap.json` | Combined remap table (what was actually applied) |
+
+### Acceptance Criteria
+
+- All 232 visible display names are recognizable to Austin locals
+- No two visible regions share the same display name
+- Map tooltips, dropdowns, table rows, and heatmap labels all show the corrected names
+- Original `region_name` field preserved in every entry for data lineage

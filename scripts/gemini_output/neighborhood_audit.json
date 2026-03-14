@@ -1,0 +1,2701 @@
+{
+  "matches": [
+    {
+      "region_id": 1,
+      "current_display_name": "St. Elmo District",
+      "centroid": [
+        30.203029,
+        -97.726392
+      ],
+      "official_neighborhood": "MCKINNEY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 2,
+      "current_display_name": "North Loop",
+      "centroid": [
+        30.371992,
+        -97.714707
+      ],
+      "official_neighborhood": "NORTH AUSTIN CIVIC ASSOCIATION",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 3,
+      "current_display_name": "Cherrywood — Inner South",
+      "centroid": [
+        30.297928,
+        -97.705555
+      ],
+      "official_neighborhood": "RMMA",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 4,
+      "current_display_name": "Blackland — East",
+      "centroid": [
+        30.282295,
+        -97.651995
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 5,
+      "current_display_name": "Windsor Hills — Northwest",
+      "centroid": [
+        30.392759,
+        -97.690438
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 6,
+      "current_display_name": "North Shoal Creek — Northeast",
+      "centroid": [
+        30.386088,
+        -97.67947
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 7,
+      "current_display_name": "Barton Creek",
+      "centroid": [
+        30.195453,
+        -97.902593
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 8,
+      "current_display_name": "St. John's",
+      "centroid": [
+        30.397748,
+        -97.663054
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 9,
+      "current_display_name": "Windsor Park — North",
+      "centroid": [
+        30.39339,
+        -97.666317
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 10,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.185381,
+        -97.879266
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 11,
+      "current_display_name": "Georgian Acres — North",
+      "centroid": [
+        30.380422,
+        -97.66835
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 12,
+      "current_display_name": "Springdale",
+      "centroid": [
+        30.288082,
+        -97.638883
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 13,
+      "current_display_name": "Balcones Woods — Southeast",
+      "centroid": [
+        30.389514,
+        -97.737965
+      ],
+      "official_neighborhood": "GATEWAY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 14,
+      "current_display_name": "Cherrywood — North",
+      "centroid": [
+        30.370095,
+        -97.686553
+      ],
+      "official_neighborhood": "NORTH LAMAR",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 15,
+      "current_display_name": "Zilker — Northeast",
+      "centroid": [
+        30.249684,
+        -97.758818
+      ],
+      "official_neighborhood": "BOULDIN CREEK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 16,
+      "current_display_name": "Riverside",
+      "centroid": [
+        30.223396,
+        -97.697634
+      ],
+      "official_neighborhood": "MONTOPOLIS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 17,
+      "current_display_name": "Dessau — Southeast",
+      "centroid": [
+        30.387609,
+        -97.627356
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 18,
+      "current_display_name": "Creedmoor",
+      "centroid": [
+        30.177359,
+        -97.591404
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 19,
+      "current_display_name": "Highland — Northeast",
+      "centroid": [
+        30.363948,
+        -97.676966
+      ],
+      "official_neighborhood": "WINDSOR HILLS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 20,
+      "current_display_name": "North Loop",
+      "centroid": [
+        30.341821,
+        -97.707355
+      ],
+      "official_neighborhood": "HIGHLAND",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 21,
+      "current_display_name": "St. Edward's — Northeast",
+      "centroid": [
+        30.240895,
+        -97.704116
+      ],
+      "official_neighborhood": "PLEASANT VALLEY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 22,
+      "current_display_name": "Milwood",
+      "centroid": [
+        30.432175,
+        -97.825583
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 23,
+      "current_display_name": "Oak Hill — Northeast",
+      "centroid": [
+        30.221462,
+        -97.81856
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 24,
+      "current_display_name": "Pleasant Valley",
+      "centroid": [
+        30.231099,
+        -97.707377
+      ],
+      "official_neighborhood": "PLEASANT VALLEY",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 25,
+      "current_display_name": "Anderson Mill",
+      "centroid": [
+        30.429205,
+        -97.792521
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 26,
+      "current_display_name": "Allandale — North",
+      "centroid": [
+        30.380587,
+        -97.752538
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 27,
+      "current_display_name": "The Domain — Northwest",
+      "centroid": [
+        30.399076,
+        -97.754577
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 28,
+      "current_display_name": "Milwood",
+      "centroid": [
+        30.424451,
+        -97.741248
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 29,
+      "current_display_name": "The Arboretum — North",
+      "centroid": [
+        30.406764,
+        -97.737276
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 30,
+      "current_display_name": "Harris Ridge — East",
+      "centroid": [
+        30.46539,
+        -97.682768
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 31,
+      "current_display_name": "Great Hills — Northeast",
+      "centroid": [
+        30.433842,
+        -97.750746
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 32,
+      "current_display_name": "Balcones Woods — Northeast",
+      "centroid": [
+        30.422133,
+        -97.721843
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 33,
+      "current_display_name": "Highland — Northwest",
+      "centroid": [
+        30.350907,
+        -97.701377
+      ],
+      "official_neighborhood": "GEORGIAN ACRES",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 34,
+      "current_display_name": "Gracywoods — North",
+      "centroid": [
+        30.436892,
+        -97.713692
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 35,
+      "current_display_name": "Tech Ridge",
+      "centroid": [
+        30.434075,
+        -97.690407
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 36,
+      "current_display_name": "Balcones Woods — East",
+      "centroid": [
+        30.416722,
+        -97.713187
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 37,
+      "current_display_name": "Windsor Park",
+      "centroid": [
+        30.35643,
+        -97.694235
+      ],
+      "official_neighborhood": "GEORGIAN ACRES",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 38,
+      "current_display_name": "Harris Ridge — North",
+      "centroid": [
+        30.470233,
+        -97.669777
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 39,
+      "current_display_name": "Crestview — South",
+      "centroid": [
+        30.32697,
+        -97.684308
+      ],
+      "official_neighborhood": "CORONADO HILLS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 40,
+      "current_display_name": "River Place",
+      "centroid": [
+        30.34254,
+        -97.868593
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 41,
+      "current_display_name": "Gracywoods",
+      "centroid": [
+        30.422981,
+        -97.689292
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 42,
+      "current_display_name": "North Burnet — Outer North",
+      "centroid": [
+        30.412813,
+        -97.701244
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 43,
+      "current_display_name": "Northwest Hills — Inner South",
+      "centroid": [
+        30.371678,
+        -97.774288
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 44,
+      "current_display_name": "Harris Branch",
+      "centroid": [
+        30.38305,
+        -97.657821
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 45,
+      "current_display_name": "Lakeway",
+      "centroid": [
+        30.38969,
+        -97.807868
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 46,
+      "current_display_name": "Cat Mountain",
+      "centroid": [
+        30.398398,
+        -97.762374
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 47,
+      "current_display_name": "Pilot Knob — South",
+      "centroid": [
+        30.158611,
+        -97.65115
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 48,
+      "current_display_name": "East Cesar Chavez — Southwest",
+      "centroid": [
+        30.257247,
+        -97.751124
+      ],
+      "official_neighborhood": "BOULDIN CREEK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 49,
+      "current_display_name": "Oak Hill — Inner West",
+      "centroid": [
+        30.192782,
+        -97.856304
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 50,
+      "current_display_name": "River Place",
+      "centroid": [
+        30.423876,
+        -97.867536
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 51,
+      "current_display_name": "Harris Ridge — Northwest",
+      "centroid": [
+        30.455301,
+        -97.671481
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 52,
+      "current_display_name": "Dessau — Northwest",
+      "centroid": [
+        30.432505,
+        -97.67761
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 53,
+      "current_display_name": "Shady Hollow — West",
+      "centroid": [
+        30.169695,
+        -97.838074
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 54,
+      "current_display_name": "Wells Branch — Southeast #54",
+      "centroid": [
+        30.413463,
+        -97.638538
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 55,
+      "current_display_name": "Cherry Creek — West",
+      "centroid": [
+        30.151562,
+        -97.836751
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 56,
+      "current_display_name": "Shady Hollow — Southeast",
+      "centroid": [
+        30.140402,
+        -97.777719
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 57,
+      "current_display_name": "Crestview — South (Moderate)",
+      "centroid": [
+        30.33271,
+        -97.695329
+      ],
+      "official_neighborhood": "ST. JOHN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 58,
+      "current_display_name": "Wells Branch — North",
+      "centroid": [
+        30.455234,
+        -97.666073
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 59,
+      "current_display_name": "Wells Branch — Southeast #59",
+      "centroid": [
+        30.439172,
+        -97.657989
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 60,
+      "current_display_name": "Southwood — East",
+      "centroid": [
+        30.164002,
+        -97.750094
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 61,
+      "current_display_name": "Pflugerville",
+      "centroid": [
+        30.417838,
+        -97.687966
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 62,
+      "current_display_name": "Gracywoods",
+      "centroid": [
+        30.405666,
+        -97.65661
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 63,
+      "current_display_name": "Barton Creek West",
+      "centroid": [
+        30.205545,
+        -97.849299
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 64,
+      "current_display_name": "Southwood — Southeast",
+      "centroid": [
+        30.147465,
+        -97.749476
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 65,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.128901,
+        -97.790244
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 66,
+      "current_display_name": "Montopolis — West",
+      "centroid": [
+        30.178674,
+        -97.755283
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 67,
+      "current_display_name": "Anderson Mill",
+      "centroid": [
+        30.439693,
+        -97.869137
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 68,
+      "current_display_name": "ShadowGlen",
+      "centroid": [
+        30.303195,
+        -97.577769
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 69,
+      "current_display_name": "Milwood",
+      "centroid": [
+        30.494276,
+        -97.745013
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 70,
+      "current_display_name": "Jollyville",
+      "centroid": [
+        30.45868,
+        -97.821781
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 71,
+      "current_display_name": "Northwood — Northeast",
+      "centroid": [
+        30.444267,
+        -97.737692
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 72,
+      "current_display_name": "Montopolis — East",
+      "centroid": [
+        30.18968,
+        -97.631319
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 73,
+      "current_display_name": "Windsor Hills — South",
+      "centroid": [
+        30.299559,
+        -97.633599
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 74,
+      "current_display_name": "Cherrywood — Outer South",
+      "centroid": [
+        30.296498,
+        -97.693144
+      ],
+      "official_neighborhood": "WINDSOR PARK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 75,
+      "current_display_name": "Great Hills — West",
+      "centroid": [
+        30.411954,
+        -97.831181
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 76,
+      "current_display_name": "Montopolis — Northwest",
+      "centroid": [
+        30.233032,
+        -97.694292
+      ],
+      "official_neighborhood": "MONTOPOLIS",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 77,
+      "current_display_name": "Wildhorse Ranch",
+      "centroid": [
+        30.273562,
+        -97.597896
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 78,
+      "current_display_name": "East Riverside — Northeast",
+      "centroid": [
+        30.243945,
+        -97.709793
+      ],
+      "official_neighborhood": "PLEASANT VALLEY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 79,
+      "current_display_name": "Blackland — West",
+      "centroid": [
+        30.285127,
+        -97.716996
+      ],
+      "official_neighborhood": "UPPER BOGGY CREEK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 80,
+      "current_display_name": "North University",
+      "centroid": [
+        30.295461,
+        -97.734691
+      ],
+      "official_neighborhood": "NORTH UNIVERSITY",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 81,
+      "current_display_name": "North Campus",
+      "centroid": [
+        30.28824,
+        -97.738039
+      ],
+      "official_neighborhood": "UT",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 82,
+      "current_display_name": "Eastview",
+      "centroid": [
+        30.26711,
+        -97.702409
+      ],
+      "official_neighborhood": "GOVALLE",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 83,
+      "current_display_name": "Rosewood — South",
+      "centroid": [
+        30.272807,
+        -97.706943
+      ],
+      "official_neighborhood": "ROSEWOOD",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 84,
+      "current_display_name": "Chestnut",
+      "centroid": [
+        30.276836,
+        -97.720498
+      ],
+      "official_neighborhood": "CHESTNUT",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 85,
+      "current_display_name": "Foster Heights",
+      "centroid": [
+        30.269772,
+        -97.723622
+      ],
+      "official_neighborhood": "CENTRAL EAST AUSTIN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 86,
+      "current_display_name": "Central East Austin — Southeast (High Risk) #86",
+      "centroid": [
+        30.26597,
+        -97.723706
+      ],
+      "official_neighborhood": "CENTRAL EAST AUSTIN",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 87,
+      "current_display_name": "Tarrytown — East",
+      "centroid": [
+        30.298827,
+        -97.757685
+      ],
+      "official_neighborhood": "WINDSOR ROAD",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 88,
+      "current_display_name": "Old Enfield",
+      "centroid": [
+        30.286596,
+        -97.761099
+      ],
+      "official_neighborhood": "OLD ENFIELD",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 89,
+      "current_display_name": "Oakmont Heights",
+      "centroid": [
+        30.305439,
+        -97.76104
+      ],
+      "official_neighborhood": "WEST AUSTIN NEIGHBORHOOD GROUP",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 90,
+      "current_display_name": "Parker Lane West",
+      "centroid": [
+        30.224561,
+        -97.74248
+      ],
+      "official_neighborhood": "PARKER LANE",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 91,
+      "current_display_name": "West Congress",
+      "centroid": [
+        30.218911,
+        -97.776698
+      ],
+      "official_neighborhood": "SOUTH MANCHACA",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 92,
+      "current_display_name": "Rosedale — Southwest",
+      "centroid": [
+        30.321075,
+        -97.7549
+      ],
+      "official_neighborhood": "ROSEDALE",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 93,
+      "current_display_name": "Parker Lane East",
+      "centroid": [
+        30.221999,
+        -97.723109
+      ],
+      "official_neighborhood": "PARKER LANE",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 94,
+      "current_display_name": "Northside",
+      "centroid": [
+        30.277887,
+        -97.741082
+      ],
+      "official_neighborhood": "DOWNTOWN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 95,
+      "current_display_name": "Tarrytown West",
+      "centroid": [
+        30.302563,
+        -97.774297
+      ],
+      "official_neighborhood": "WEST AUSTIN NEIGHBORHOOD GROUP",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 96,
+      "current_display_name": "Treemont",
+      "centroid": [
+        30.272816,
+        -97.795641
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 97,
+      "current_display_name": "Akins",
+      "centroid": [
+        30.126864,
+        -97.808313
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 98,
+      "current_display_name": "East Riverside - Pleasant Valley",
+      "centroid": [
+        30.233973,
+        -97.732107
+      ],
+      "official_neighborhood": "RIVERSIDE",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 99,
+      "current_display_name": "Dawson — East",
+      "centroid": [
+        30.232478,
+        -97.761492
+      ],
+      "official_neighborhood": "DAWSON",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 100,
+      "current_display_name": "Bartons Bluff",
+      "centroid": [
+        30.257736,
+        -97.782549
+      ],
+      "official_neighborhood": "BARTON HILLS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 101,
+      "current_display_name": "East Boggy Creek",
+      "centroid": [
+        30.275,
+        -97.67833
+      ],
+      "official_neighborhood": "MLK-183",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 102,
+      "current_display_name": "Johnston Terrace",
+      "centroid": [
+        30.259528,
+        -97.683039
+      ],
+      "official_neighborhood": "JOHNSTON TERRACE",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 103,
+      "current_display_name": "Windsor Park West",
+      "centroid": [
+        30.313128,
+        -97.705228
+      ],
+      "official_neighborhood": "WINDSOR PARK",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 104,
+      "current_display_name": "Windsor Park East",
+      "centroid": [
+        30.307664,
+        -97.690094
+      ],
+      "official_neighborhood": "WINDSOR PARK",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 105,
+      "current_display_name": "MLK North",
+      "centroid": [
+        30.296358,
+        -97.683816
+      ],
+      "official_neighborhood": "MLK",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 106,
+      "current_display_name": "MLK South",
+      "centroid": [
+        30.281323,
+        -97.68786
+      ],
+      "official_neighborhood": "MLK",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 107,
+      "current_display_name": "West University",
+      "centroid": [
+        30.307153,
+        -97.743831
+      ],
+      "official_neighborhood": "ROSEDALE",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 108,
+      "current_display_name": "East Riverside — West (High Risk)",
+      "centroid": [
+        30.240101,
+        -97.735279
+      ],
+      "official_neighborhood": "RIVERSIDE",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 109,
+      "current_display_name": "Windsor Park — South",
+      "centroid": [
+        30.300859,
+        -97.671669
+      ],
+      "official_neighborhood": "PECAN SPRINGS-SPRINGDALE",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 110,
+      "current_display_name": "Davenport Ranch — North",
+      "centroid": [
+        30.315973,
+        -97.801321
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 111,
+      "current_display_name": "Central East Austin — Southeast (High Risk) #111",
+      "centroid": [
+        30.259219,
+        -97.717632
+      ],
+      "official_neighborhood": "HOLLY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 112,
+      "current_display_name": "East Cesar Chavez -Holly",
+      "centroid": [
+        30.253905,
+        -97.720825
+      ],
+      "official_neighborhood": "HOLLY",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 113,
+      "current_display_name": "Clarksville",
+      "centroid": [
+        30.274013,
+        -97.760886
+      ],
+      "official_neighborhood": "OLD WEST AUSTIN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 114,
+      "current_display_name": "Zilker",
+      "centroid": [
+        30.247696,
+        -97.772991
+      ],
+      "official_neighborhood": "ZILKER",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 115,
+      "current_display_name": "Galindo",
+      "centroid": [
+        30.236267,
+        -97.768057
+      ],
+      "official_neighborhood": "GALINDO",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 116,
+      "current_display_name": "Travis Heights East",
+      "centroid": [
+        30.250664,
+        -97.745989
+      ],
+      "official_neighborhood": "SOUTH RIVER CITY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 117,
+      "current_display_name": "Northwest Hills — Southeast",
+      "centroid": [
+        30.325771,
+        -97.768332
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 118,
+      "current_display_name": "Ridgetop",
+      "centroid": [
+        30.313916,
+        -97.696977
+      ],
+      "official_neighborhood": "WINDSOR PARK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 119,
+      "current_display_name": "Triangle State",
+      "centroid": [
+        30.31301,
+        -97.737122
+      ],
+      "official_neighborhood": "TRIANGLE STATE",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 120,
+      "current_display_name": "Hyde Park — Southwest",
+      "centroid": [
+        30.302563,
+        -97.726707
+      ],
+      "official_neighborhood": "HANCOCK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 121,
+      "current_display_name": "Hancock",
+      "centroid": [
+        30.287996,
+        -97.724637
+      ],
+      "official_neighborhood": "HANCOCK",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 122,
+      "current_display_name": "Highland — Southwest",
+      "centroid": [
+        30.327182,
+        -97.716264
+      ],
+      "official_neighborhood": "HIGHLAND",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 123,
+      "current_display_name": "Travis Heights West",
+      "centroid": [
+        30.243431,
+        -97.741292
+      ],
+      "official_neighborhood": "SOUTH RIVER CITY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 124,
+      "current_display_name": "Crestview",
+      "centroid": [
+        30.346424,
+        -97.725316
+      ],
+      "official_neighborhood": "CRESTVIEW",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 125,
+      "current_display_name": "Brentwood — North",
+      "centroid": [
+        30.335688,
+        -97.729688
+      ],
+      "official_neighborhood": "BRENTWOOD",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 126,
+      "current_display_name": "Allandale — South",
+      "centroid": [
+        30.347178,
+        -97.742958
+      ],
+      "official_neighborhood": "ALLANDALE",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 127,
+      "current_display_name": "Deep Eddy",
+      "centroid": [
+        30.285571,
+        -97.77486
+      ],
+      "official_neighborhood": "WEST AUSTIN NEIGHBORHOOD GROUP",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 128,
+      "current_display_name": "South Manchaca — North",
+      "centroid": [
+        30.223179,
+        -97.785127
+      ],
+      "official_neighborhood": "SOUTH MANCHACA",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 129,
+      "current_display_name": "Westgate",
+      "centroid": [
+        30.236777,
+        -97.789111
+      ],
+      "official_neighborhood": "SOUTH LAMAR",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 130,
+      "current_display_name": "Rob Roy",
+      "centroid": [
+        30.324152,
+        -97.813149
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 131,
+      "current_display_name": "Jollyville",
+      "centroid": [
+        30.443131,
+        -97.765492
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 132,
+      "current_display_name": "River Place",
+      "centroid": [
+        30.461962,
+        -97.805112
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 133,
+      "current_display_name": "Steiner Ranch",
+      "centroid": [
+        30.454645,
+        -97.816398
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 134,
+      "current_display_name": "Canyon Creek — Northwest",
+      "centroid": [
+        30.445503,
+        -97.788999
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 135,
+      "current_display_name": "Avery Ranch",
+      "centroid": [
+        30.445527,
+        -97.777211
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 136,
+      "current_display_name": "Milwood",
+      "centroid": [
+        30.481512,
+        -97.732377
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 137,
+      "current_display_name": "Scofield Farms — North",
+      "centroid": [
+        30.457946,
+        -97.744533
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 138,
+      "current_display_name": "Lakeline Area",
+      "centroid": [
+        30.490786,
+        -97.767894
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 139,
+      "current_display_name": "Steiner Ranch",
+      "centroid": [
+        30.326241,
+        -97.913886
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 140,
+      "current_display_name": "Zilker — North",
+      "centroid": [
+        30.254342,
+        -97.775866
+      ],
+      "official_neighborhood": "ZILKER",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 141,
+      "current_display_name": "Barton Creek — Southwest",
+      "centroid": [
+        30.244553,
+        -97.899887
+      ],
+      "official_neighborhood": "WEST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 142,
+      "current_display_name": "Old West Austin",
+      "centroid": [
+        30.260263,
+        -97.763657
+      ],
+      "official_neighborhood": "ZILKER",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 143,
+      "current_display_name": "Bee Cave — North",
+      "centroid": [
+        30.267809,
+        -97.917317
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 144,
+      "current_display_name": "Great Hills — Outer South",
+      "centroid": [
+        30.347515,
+        -97.781725
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 145,
+      "current_display_name": "Arboretum Area",
+      "centroid": [
+        30.372271,
+        -97.746699
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 146,
+      "current_display_name": "Northwest Hills — Northeast",
+      "centroid": [
+        30.363366,
+        -97.757945
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 147,
+      "current_display_name": "The Arboretum — Southwest",
+      "centroid": [
+        30.357711,
+        -97.750018
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 148,
+      "current_display_name": "Shady Hollow — Northwest",
+      "centroid": [
+        30.181745,
+        -97.824036
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 149,
+      "current_display_name": "Stratford Hills",
+      "centroid": [
+        30.22855,
+        -97.84479
+      ],
+      "official_neighborhood": "EAST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 150,
+      "current_display_name": "Tech Ridge",
+      "centroid": [
+        30.36555,
+        -97.660806
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 151,
+      "current_display_name": "Windsor Hills — East",
+      "centroid": [
+        30.355485,
+        -97.612055
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 152,
+      "current_display_name": "St. John's",
+      "centroid": [
+        30.345438,
+        -97.688083
+      ],
+      "official_neighborhood": "HERITAGE HILLS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 153,
+      "current_display_name": "Highland — East",
+      "centroid": [
+        30.335788,
+        -97.665187
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 154,
+      "current_display_name": "South Congress",
+      "centroid": [
+        30.222998,
+        -97.755705
+      ],
+      "official_neighborhood": "ST. EDWARDS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 155,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.185985,
+        -97.837553
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 156,
+      "current_display_name": "Circle C Ranch — Southwest",
+      "centroid": [
+        30.20242,
+        -97.828886
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 157,
+      "current_display_name": "Bouldin Creek — East",
+      "centroid": [
+        30.232611,
+        -97.750741
+      ],
+      "official_neighborhood": "ST. EDWARDS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 158,
+      "current_display_name": "Great Hills — South",
+      "centroid": [
+        30.34794,
+        -97.760029
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 159,
+      "current_display_name": "Oak Hill — Southeast",
+      "centroid": [
+        30.161038,
+        -97.81058
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 160,
+      "current_display_name": "Central East Austin — Northwest",
+      "centroid": [
+        30.284836,
+        -97.743363
+      ],
+      "official_neighborhood": "WEST UNIVERSITY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 161,
+      "current_display_name": "University of Texas at Austin",
+      "centroid": [
+        30.29182,
+        -97.744493
+      ],
+      "official_neighborhood": "WEST UNIVERSITY",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 162,
+      "current_display_name": "West Campus",
+      "centroid": [
+        30.284326,
+        -97.749603
+      ],
+      "official_neighborhood": "WEST UNIVERSITY",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 163,
+      "current_display_name": "Capitol Complex",
+      "centroid": [
+        30.271143,
+        -97.742291
+      ],
+      "official_neighborhood": "DOWNTOWN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 164,
+      "current_display_name": "Bouldin Creek — North",
+      "centroid": [
+        30.255586,
+        -97.762423
+      ],
+      "official_neighborhood": "ZILKER",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 165,
+      "current_display_name": "East Cesar Chavez — North",
+      "centroid": [
+        30.266095,
+        -97.747694
+      ],
+      "official_neighborhood": "DOWNTOWN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 166,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.164708,
+        -97.887713
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 167,
+      "current_display_name": "Shady Hollow — North",
+      "centroid": [
+        30.196405,
+        -97.817686
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 168,
+      "current_display_name": "Harris Ridge — Southeast",
+      "centroid": [
+        30.368697,
+        -97.631398
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 169,
+      "current_display_name": "Georgian Acres — Southeast",
+      "centroid": [
+        30.319864,
+        -97.614767
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 170,
+      "current_display_name": "Dawson — West",
+      "centroid": [
+        30.233345,
+        -97.778751
+      ],
+      "official_neighborhood": "SOUTH LAMAR",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 171,
+      "current_display_name": "University of Texas at Austin Campus",
+      "centroid": [
+        30.293512,
+        -97.748616
+      ],
+      "official_neighborhood": "WINDSOR ROAD",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 172,
+      "current_display_name": "Zilker — Northwest",
+      "centroid": [
+        30.237596,
+        -97.782264
+      ],
+      "official_neighborhood": "SOUTH LAMAR",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 173,
+      "current_display_name": "Oak Hill — Outer West",
+      "centroid": [
+        30.206994,
+        -97.882343
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 174,
+      "current_display_name": "River Place",
+      "centroid": [
+        30.376501,
+        -97.898371
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 175,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.218905,
+        -97.856577
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 176,
+      "current_display_name": "The Arboretum — East",
+      "centroid": [
+        30.391966,
+        -97.725891
+      ],
+      "official_neighborhood": "NORTH BURNET",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 177,
+      "current_display_name": "Milwood",
+      "centroid": [
+        30.399395,
+        -97.709739
+      ],
+      "official_neighborhood": "NORTH BURNET",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 178,
+      "current_display_name": "Great Hills — Southeast",
+      "centroid": [
+        30.367415,
+        -97.735214
+      ],
+      "official_neighborhood": "NORTH SHOAL CREEK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 179,
+      "current_display_name": "West Lake Hills — Northeast",
+      "centroid": [
+        30.257305,
+        -97.887713
+      ],
+      "official_neighborhood": "WEST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 180,
+      "current_display_name": "Avery Ranch",
+      "centroid": [
+        30.492511,
+        -97.762334
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 181,
+      "current_display_name": "Travis Heights",
+      "centroid": [
+        30.235259,
+        -97.718944
+      ],
+      "official_neighborhood": "PLEASANT VALLEY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 182,
+      "current_display_name": "Wells Branch — Southwest",
+      "centroid": [
+        30.400334,
+        -97.684689
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 183,
+      "current_display_name": "Del Valle",
+      "centroid": [
+        30.34304,
+        -97.579322
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 184,
+      "current_display_name": "Pflugerville",
+      "centroid": [
+        30.402966,
+        -97.635325
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 185,
+      "current_display_name": "Creedmoor — Southeast",
+      "centroid": [
+        30.143445,
+        -97.617987
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 186,
+      "current_display_name": "North Lamar",
+      "centroid": [
+        30.31559,
+        -97.635443
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 187,
+      "current_display_name": "Northwood — West",
+      "centroid": [
+        30.467674,
+        -97.704902
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 188,
+      "current_display_name": "Fern Bluff",
+      "centroid": [
+        30.500283,
+        -97.794951
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 189,
+      "current_display_name": "Bee Cave — South",
+      "centroid": [
+        30.152902,
+        -97.906478
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 190,
+      "current_display_name": "Canyon Creek",
+      "centroid": [
+        30.470583,
+        -97.807365
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 191,
+      "current_display_name": "Four Points",
+      "centroid": [
+        30.47737,
+        -97.809276
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 192,
+      "current_display_name": "Southpark Meadows",
+      "centroid": [
+        30.087115,
+        -97.798809
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 193,
+      "current_display_name": "Southwood — West",
+      "centroid": [
+        30.163298,
+        -97.777574
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 194,
+      "current_display_name": "The Domain — Southeast",
+      "centroid": [
+        30.360035,
+        -97.721671
+      ],
+      "official_neighborhood": "WOOTEN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 195,
+      "current_display_name": "Westlake",
+      "centroid": [
+        30.217154,
+        -97.90018
+      ],
+      "official_neighborhood": "WEST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 196,
+      "current_display_name": "Steiner Ranch",
+      "centroid": [
+        30.393159,
+        -97.905081
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 197,
+      "current_display_name": "Steiner Ranch",
+      "centroid": [
+        30.454275,
+        -97.849118
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 198,
+      "current_display_name": "North Lamar / Rundberg Area",
+      "centroid": [
+        30.381267,
+        -97.708564
+      ],
+      "official_neighborhood": "NORTH AUSTIN CIVIC ASSOCIATION",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 199,
+      "current_display_name": "Quail Creek",
+      "centroid": [
+        30.356709,
+        -97.709044
+      ],
+      "official_neighborhood": "NORTH AUSTIN CIVIC ASSOCIATION",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 200,
+      "current_display_name": "Balcones Woods — Inner North",
+      "centroid": [
+        30.396318,
+        -97.701659
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 201,
+      "current_display_name": "North Burnet — South",
+      "centroid": [
+        30.387894,
+        -97.699753
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 202,
+      "current_display_name": "St. Elmo — South",
+      "centroid": [
+        30.200534,
+        -97.770247
+      ],
+      "official_neighborhood": "SWEETBRIAR",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 203,
+      "current_display_name": "Travis Country",
+      "centroid": [
+        30.221391,
+        -97.879277
+      ],
+      "official_neighborhood": "WEST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 204,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.158988,
+        -97.844447
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 205,
+      "current_display_name": "Barton Hills — South",
+      "centroid": [
+        30.204328,
+        -97.779632
+      ],
+      "official_neighborhood": "SWEETBRIAR",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 206,
+      "current_display_name": "Quail Creek — Northwest",
+      "centroid": [
+        30.373791,
+        -97.696592
+      ],
+      "official_neighborhood": "NORTH AUSTIN CIVIC ASSOCIATION",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 207,
+      "current_display_name": "North Shoal Creek — Southwest",
+      "centroid": [
+        30.363449,
+        -97.702848
+      ],
+      "official_neighborhood": "NORTH AUSTIN CIVIC ASSOCIATION",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 208,
+      "current_display_name": "Oak Hill — North",
+      "centroid": [
+        30.211719,
+        -97.840677
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 209,
+      "current_display_name": "Barton Hills — Northeast",
+      "centroid": [
+        30.245445,
+        -97.792424
+      ],
+      "official_neighborhood": "BARTON HILLS",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 210,
+      "current_display_name": "East Cesar Chavez — East",
+      "centroid": [
+        30.259339,
+        -97.739949
+      ],
+      "official_neighborhood": "DOWNTOWN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 211,
+      "current_display_name": "Steiner Ranch",
+      "centroid": [
+        30.344493,
+        -97.915799
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 212,
+      "current_display_name": "Zilker — Southwest",
+      "centroid": [
+        30.22381,
+        -97.797735
+      ],
+      "official_neighborhood": "WESTGATE",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 213,
+      "current_display_name": "Westlake Hills — Southeast #213",
+      "centroid": [
+        30.210264,
+        -97.804549
+      ],
+      "official_neighborhood": "GARRISON PARK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 214,
+      "current_display_name": "Lakeline Area",
+      "centroid": [
+        30.436101,
+        -97.81199
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 215,
+      "current_display_name": "Steiner Ranch",
+      "centroid": [
+        30.441988,
+        -97.832042
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 216,
+      "current_display_name": "Jollyville",
+      "centroid": [
+        30.438903,
+        -97.793365
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 217,
+      "current_display_name": "Jollyville",
+      "centroid": [
+        30.424946,
+        -97.771141
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 218,
+      "current_display_name": "Northwest Hills — West",
+      "centroid": [
+        30.359229,
+        -97.827835
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 219,
+      "current_display_name": "Circle C Ranch",
+      "centroid": [
+        30.157507,
+        -97.856459
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 220,
+      "current_display_name": "Scofield Farms",
+      "centroid": [
+        30.417716,
+        -97.648216
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 221,
+      "current_display_name": "Westlake Hills — Northwest #221",
+      "centroid": [
+        30.281432,
+        -97.881819
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 222,
+      "current_display_name": "Jester Estates — West",
+      "centroid": [
+        30.405545,
+        -97.778562
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 223,
+      "current_display_name": "North Burnet — North",
+      "centroid": [
+        30.327152,
+        -97.699618
+      ],
+      "official_neighborhood": "ST. JOHN",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 224,
+      "current_display_name": "Cherry Creek — East",
+      "centroid": [
+        30.163229,
+        -97.793416
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 225,
+      "current_display_name": "Southwood — North",
+      "centroid": [
+        30.180828,
+        -97.767339
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 226,
+      "current_display_name": "River Place",
+      "centroid": [
+        30.372336,
+        -97.873602
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 227,
+      "current_display_name": "Montopolis — Northeast (Moderate)",
+      "centroid": [
+        30.239246,
+        -97.641647
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 228,
+      "current_display_name": "St. Elmo",
+      "centroid": [
+        30.189577,
+        -97.715053
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 229,
+      "current_display_name": "Wells Branch — South",
+      "centroid": [
+        30.4304,
+        -97.662213
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 230,
+      "current_display_name": "Lakeline",
+      "centroid": [
+        30.465272,
+        -97.759327
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 231,
+      "current_display_name": "Gracywoods",
+      "centroid": [
+        30.506356,
+        -97.760891
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 232,
+      "current_display_name": "River Place",
+      "centroid": [
+        30.298005,
+        -97.895591
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 233,
+      "current_display_name": "Redbud",
+      "centroid": [
+        30.291321,
+        -97.809339
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 234,
+      "current_display_name": "Westlake Hills — Northwest #234",
+      "centroid": [
+        30.257036,
+        -97.839944
+      ],
+      "official_neighborhood": "EAST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 235,
+      "current_display_name": "Onion Creek",
+      "centroid": [
+        30.172167,
+        -97.755439
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 236,
+      "current_display_name": "Hyde Park — East",
+      "centroid": [
+        30.309216,
+        -97.717018
+      ],
+      "official_neighborhood": "HYDE PARK",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 237,
+      "current_display_name": "Montopolis — Northeast",
+      "centroid": [
+        30.199443,
+        -97.644674
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 238,
+      "current_display_name": "Lost Creek",
+      "centroid": [
+        30.268232,
+        -97.827446
+      ],
+      "official_neighborhood": "EAST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 239,
+      "current_display_name": "Rosedale — Northeast",
+      "centroid": [
+        30.325605,
+        -97.744466
+      ],
+      "official_neighborhood": "ALLANDALE",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 240,
+      "current_display_name": "Hyde Park — Northwest",
+      "centroid": [
+        30.314973,
+        -97.725752
+      ],
+      "official_neighborhood": "TRIANGLE STATE",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 241,
+      "current_display_name": "Brentwood — South",
+      "centroid": [
+        30.326255,
+        -97.733211
+      ],
+      "official_neighborhood": "BRENTWOOD",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 242,
+      "current_display_name": "Cherrywood — Southwest",
+      "centroid": [
+        30.297838,
+        -97.713434
+      ],
+      "official_neighborhood": "UPPER BOGGY CREEK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 243,
+      "current_display_name": "Davenport Ranch — South",
+      "centroid": [
+        30.278534,
+        -97.794749
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 244,
+      "current_display_name": "Great Hills — North",
+      "centroid": [
+        30.486981,
+        -97.784281
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 245,
+      "current_display_name": "Avery Ranch",
+      "centroid": [
+        30.46312,
+        -97.778775
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 246,
+      "current_display_name": "Westlake Hills — Southeast #246",
+      "centroid": [
+        30.243354,
+        -97.831439
+      ],
+      "official_neighborhood": "EAST OAK HILL",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 247,
+      "current_display_name": "South Manchaca — South",
+      "centroid": [
+        30.095344,
+        -97.797488
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 248,
+      "current_display_name": "Windsor Hills",
+      "centroid": [
+        30.281318,
+        -97.619214
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 249,
+      "current_display_name": "Balcones Woods",
+      "centroid": [
+        30.418012,
+        -97.756271
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 250,
+      "current_display_name": "Pilot Knob",
+      "centroid": [
+        30.159097,
+        -97.710224
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 251,
+      "current_display_name": "University Hills — West",
+      "centroid": [
+        30.313837,
+        -97.681181
+      ],
+      "official_neighborhood": "WINDSOR PARK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 252,
+      "current_display_name": "University Hills — East",
+      "centroid": [
+        30.317126,
+        -97.672303
+      ],
+      "official_neighborhood": "UNIVERSITY HILLS",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 253,
+      "current_display_name": "Walnut Bend",
+      "centroid": [
+        30.31589,
+        -97.658613
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 254,
+      "current_display_name": "Austin-Bergstrom International Airport",
+      "centroid": [
+        30.195343,
+        -97.664825
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 255,
+      "current_display_name": "Riverside",
+      "centroid": [
+        30.242357,
+        -97.72475
+      ],
+      "official_neighborhood": "RIVERSIDE",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 256,
+      "current_display_name": "East Riverside — Southeast",
+      "centroid": [
+        30.224539,
+        -97.715584
+      ],
+      "official_neighborhood": "PLEASANT VALLEY",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 257,
+      "current_display_name": "East Riverside — West (Moderate)",
+      "centroid": [
+        30.235334,
+        -97.727897
+      ],
+      "official_neighborhood": "RIVERSIDE",
+      "match_type": "partial"
+    },
+    {
+      "region_id": 258,
+      "current_display_name": "St. Edward's — Southwest",
+      "centroid": [
+        30.212263,
+        -97.761671
+      ],
+      "official_neighborhood": "EAST CONGRESS",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 259,
+      "current_display_name": "Garrison Park — West",
+      "centroid": [
+        30.207891,
+        -97.794068
+      ],
+      "official_neighborhood": "GARRISON PARK",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 260,
+      "current_display_name": "Garrison Park — East",
+      "centroid": [
+        30.205959,
+        -97.786296
+      ],
+      "official_neighborhood": "GARRISON PARK",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 261,
+      "current_display_name": "Franklin Park — Northwest",
+      "centroid": [
+        30.205006,
+        -97.748364
+      ],
+      "official_neighborhood": "FRANKLIN PARK",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 262,
+      "current_display_name": "Southwood — East (High Risk)",
+      "centroid": [
+        30.188945,
+        -97.752947
+      ],
+      "official_neighborhood": "FRANKLIN PARK",
+      "match_type": "mismatch"
+    },
+    {
+      "region_id": 263,
+      "current_display_name": "Franklin Park — Southeast",
+      "centroid": [
+        30.195395,
+        -97.739704
+      ],
+      "official_neighborhood": "FRANKLIN PARK",
+      "match_type": "exact"
+    },
+    {
+      "region_id": 264,
+      "current_display_name": "Southwood — East (Moderate)",
+      "centroid": [
+        30.190691,
+        -97.758406
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 265,
+      "current_display_name": "Southwood — Southwest",
+      "centroid": [
+        30.182082,
+        -97.784713
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 266,
+      "current_display_name": "Southwood — Outer West",
+      "centroid": [
+        30.179177,
+        -97.806335
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 267,
+      "current_display_name": "Southwood — Inner West",
+      "centroid": [
+        30.192697,
+        -97.800295
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 268,
+      "current_display_name": "East Riverside",
+      "centroid": [
+        30.232884,
+        -97.658499
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    },
+    {
+      "region_id": 269,
+      "current_display_name": "Del Valle",
+      "centroid": [
+        30.141973,
+        -97.567163
+      ],
+      "official_neighborhood": null,
+      "match_type": "no_coverage"
+    }
+  ],
+  "summary": {
+    "total": 269,
+    "exact_matches": 29,
+    "partial_matches": 14,
+    "mismatches": 77,
+    "no_coverage": 149
+  }
+}

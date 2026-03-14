@@ -1,0 +1,521 @@
+{
+  "metadata": {
+    "total_regions": 232,
+    "total_renames": 73,
+    "model": "gemini-2.5-flash",
+    "timestamp": "2026-03-14T09:32:32"
+  },
+  "renames": [
+    {
+      "region_id": 57,
+      "current_name": "North Shoal Creek — South (Moderate)",
+      "google_maps_name": "Crestview",
+      "confidence": "high",
+      "reasoning": "Centroid is squarely within the Crestview neighborhood, which is a more common and specific name for this area than a generic 'North Shoal Creek — South'."
+    },
+    {
+      "region_id": 58,
+      "current_name": "Wells Branch — North #58",
+      "google_maps_name": "Wells Branch — North",
+      "confidence": "high",
+      "reasoning": "Removed internal identifier '#58' for common usage, preserving the directional suffix."
+    },
+    {
+      "region_id": 59,
+      "current_name": "Wells Branch — North (Moderate)",
+      "google_maps_name": "Wells Branch — North",
+      "confidence": "high",
+      "reasoning": "Removed internal descriptor '(Moderate)' for common usage, preserving the directional suffix."
+    },
+    {
+      "region_id": 68,
+      "current_name": "St. John's Neighborhood",
+      "google_maps_name": "ShadowGlen",
+      "confidence": "high",
+      "reasoning": "Centroid is located far east of Austin, near Manor, within the ShadowGlen community, not the St. John's neighborhood in Austin."
+    },
+    {
+      "region_id": 74,
+      "current_name": "Cherrywood — Outer South",
+      "google_maps_name": "Cherrywood",
+      "confidence": "high",
+      "reasoning": "Removed internal descriptor 'Outer South' as 'Cherrywood' is the common neighborhood name for this area."
+    },
+    {
+      "region_id": 87,
+      "current_name": "Old West Austin- Tarrytown East",
+      "google_maps_name": "Tarrytown — East",
+      "confidence": "high",
+      "reasoning": "Simplified to the more specific and commonly used 'Tarrytown — East' and standardized the directional separator."
+    },
+    {
+      "region_id": 88,
+      "current_name": "Old Enfield - Central West Austin",
+      "google_maps_name": "Old Enfield",
+      "confidence": "high",
+      "reasoning": "Simplified to the specific and commonly used neighborhood name 'Old Enfield'."
+    },
+    {
+      "region_id": 89,
+      "current_name": "Oakmont Heights*",
+      "google_maps_name": "Oakmont Heights",
+      "confidence": "high",
+      "reasoning": "Removed internal identifier '*' for common usage."
+    },
+    {
+      "region_id": 92,
+      "current_name": "Allandale South-Rosedale",
+      "google_maps_name": "Rosedale",
+      "confidence": "high",
+      "reasoning": "Centroid is squarely within the Rosedale neighborhood, which is a more specific and commonly recognized name than a combined 'Allandale South-Rosedale'."
+    },
+    {
+      "region_id": 108,
+      "current_name": "Riverside - I35",
+      "google_maps_name": "East Riverside",
+      "confidence": "high",
+      "reasoning": "Simplified to the more common and encompassing neighborhood name 'East Riverside'."
+    },
+    {
+      "region_id": 109,
+      "current_name": "East MLK",
+      "google_maps_name": "Windsor Park",
+      "confidence": "high",
+      "reasoning": "\"East MLK\" is too generic. This area is commonly known as Windsor Park on Google Maps and in local usage."
+    },
+    {
+      "region_id": 111,
+      "current_name": "East Austin",
+      "google_maps_name": "Central East Austin",
+      "confidence": "medium",
+      "reasoning": "\"East Austin\" is a broad area. This specific centroid falls within the more commonly recognized \"Central East Austin\" neighborhood."
+    },
+    {
+      "region_id": 114,
+      "current_name": "Zilker-Bouldin",
+      "google_maps_name": "Zilker",
+      "confidence": "high",
+      "reasoning": "The centroid is squarely within the Zilker neighborhood; \"Zilker-Bouldin\" is an unnecessary combination for this specific location."
+    },
+    {
+      "region_id": 117,
+      "current_name": "Colorado Foothills*",
+      "google_maps_name": "Northwest Hills",
+      "confidence": "high",
+      "reasoning": "\"Colorado Foothills\" is not a common local or Google Maps name. This area is widely known as Northwest Hills."
+    },
+    {
+      "region_id": 120,
+      "current_name": "Hyde Park South",
+      "google_maps_name": "Hyde Park",
+      "confidence": "high",
+      "reasoning": "The centroid is within the well-known Hyde Park neighborhood; \"Hyde Park South\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 122,
+      "current_name": "Highland South",
+      "google_maps_name": "Highland",
+      "confidence": "high",
+      "reasoning": "The area is commonly known simply as Highland; \"Highland South\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 125,
+      "current_name": "Brentwood North",
+      "google_maps_name": "Brentwood",
+      "confidence": "high",
+      "reasoning": "The centroid is within the well-known Brentwood neighborhood; \"Brentwood North\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 126,
+      "current_name": "Allandale North",
+      "google_maps_name": "Allandale",
+      "confidence": "high",
+      "reasoning": "The centroid is within the well-known Allandale neighborhood; \"Allandale North\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 129,
+      "current_name": "Lakehills Plaza",
+      "google_maps_name": "Westgate",
+      "confidence": "high",
+      "reasoning": "\"Lakehills Plaza\" is a commercial center, not a neighborhood. The area is commonly known as Westgate."
+    },
+    {
+      "region_id": 134,
+      "current_name": "Northwood — Northwest",
+      "google_maps_name": "Canyon Creek — Northwest",
+      "confidence": "high",
+      "reasoning": "\"Northwood\" is not a common name for this area. The centroid is within the Canyon Creek neighborhood."
+    },
+    {
+      "region_id": 137,
+      "current_name": "Northwood — North",
+      "google_maps_name": "Scofield Farms — North",
+      "confidence": "high",
+      "reasoning": "\"Northwood\" is not a common name for this area. The centroid is within the Scofield Farms neighborhood."
+    },
+    {
+      "region_id": 141,
+      "current_name": "West Lake Hills — Southwest",
+      "google_maps_name": "Barton Creek — Southwest",
+      "confidence": "high",
+      "reasoning": "The centroid is significantly west of West Lake Hills and is located within the Barton Creek community."
+    },
+    {
+      "region_id": 143,
+      "current_name": "Rollingwood",
+      "google_maps_name": "Bee Cave",
+      "confidence": "high",
+      "reasoning": "The centroid is significantly west of Rollingwood, closer to the Bee Cave area."
+    },
+    {
+      "region_id": 146,
+      "current_name": "Allandale",
+      "google_maps_name": "Northwest Hills",
+      "confidence": "high",
+      "reasoning": "The centroid is north of the Allandale neighborhood (north of US-183), within the commonly recognized Northwest Hills area."
+    },
+    {
+      "region_id": 156,
+      "current_name": "Barton Hills — Southwest",
+      "google_maps_name": "Circle C Ranch — Southwest",
+      "confidence": "high",
+      "reasoning": "The centroid is significantly southwest of Barton Hills, located within the Circle C Ranch community."
+    },
+    {
+      "region_id": 158,
+      "current_name": "Northwood — South",
+      "google_maps_name": "Great Hills — South",
+      "confidence": "high",
+      "reasoning": "\"Northwood\" is not a common name for this area. The centroid is within the Great Hills neighborhood."
+    },
+    {
+      "region_id": 160,
+      "current_name": "East 11th Street",
+      "google_maps_name": "Central East Austin",
+      "confidence": "high",
+      "reasoning": "\"East 11th Street\" refers to a specific corridor, not the broader neighborhood. The area is commonly known as Central East Austin."
+    },
+    {
+      "region_id": 234,
+      "current_name": "Regents",
+      "google_maps_name": "Westlake Hills",
+      "confidence": "high",
+      "reasoning": "\"Regents\" refers to a specific school; the broader area is widely known as Westlake Hills."
+    },
+    {
+      "region_id": 235,
+      "current_name": "Yarabee Bend",
+      "google_maps_name": "Onion Creek",
+      "confidence": "high",
+      "reasoning": "\"Yarabee Bend\" is not a common neighborhood name; the area is widely known as Onion Creek."
+    },
+    {
+      "region_id": 236,
+      "current_name": "Hyde Park East",
+      "google_maps_name": "Hyde Park",
+      "confidence": "medium",
+      "reasoning": "\"Hyde Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 237,
+      "current_name": "Montopolis — Northeast (Low Risk)",
+      "google_maps_name": "Montopolis — Northeast",
+      "confidence": "high",
+      "reasoning": "Removed internal planning label \" (Low Risk)\"; \"Montopolis — Northeast\" is accurate and commonly used."
+    },
+    {
+      "region_id": 240,
+      "current_name": "Hyde Park West",
+      "google_maps_name": "Hyde Park",
+      "confidence": "medium",
+      "reasoning": "\"Hyde Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 241,
+      "current_name": "Brentwood South",
+      "google_maps_name": "Brentwood",
+      "confidence": "medium",
+      "reasoning": "\"Brentwood\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 243,
+      "current_name": "Eanes Creek",
+      "google_maps_name": "Davenport Ranch",
+      "confidence": "high",
+      "reasoning": "\"Eanes Creek\" is not a common neighborhood name; the area is widely known as Davenport Ranch."
+    },
+    {
+      "region_id": 246,
+      "current_name": "St. Andrews",
+      "google_maps_name": "Westlake Hills",
+      "confidence": "high",
+      "reasoning": "\"St. Andrews\" refers to a specific school; the broader area is widely known as Westlake Hills."
+    },
+    {
+      "region_id": 248,
+      "current_name": "Thunderbird",
+      "google_maps_name": "Windsor Hills",
+      "confidence": "high",
+      "reasoning": "\"Thunderbird\" is not a common neighborhood name; the area is widely known as Windsor Hills."
+    },
+    {
+      "region_id": 249,
+      "current_name": "Raintree Estates",
+      "google_maps_name": "Balcones Woods",
+      "confidence": "high",
+      "reasoning": "\"Raintree Estates\" is a specific subdivision; the broader, more commonly recognized neighborhood is Balcones Woods."
+    },
+    {
+      "region_id": 251,
+      "current_name": "University Hills West",
+      "google_maps_name": "University Hills",
+      "confidence": "medium",
+      "reasoning": "\"University Hills\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 252,
+      "current_name": "University Hills East",
+      "google_maps_name": "University Hills",
+      "confidence": "medium",
+      "reasoning": "\"University Hills\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 256,
+      "current_name": "East Riverside - Oltorf",
+      "google_maps_name": "East Riverside",
+      "confidence": "high",
+      "reasoning": "\"East Riverside\" is the widely recognized neighborhood name; \"Oltorf\" is too specific for a general area name."
+    },
+    {
+      "region_id": 257,
+      "current_name": "East Riverside - Heritage Oaks",
+      "google_maps_name": "East Riverside",
+      "confidence": "high",
+      "reasoning": "\"East Riverside\" is the widely recognized neighborhood name; \"Heritage Oaks\" is too specific for a general area name."
+    },
+    {
+      "region_id": 258,
+      "current_name": "East Congress",
+      "google_maps_name": "St. Edward's",
+      "confidence": "high",
+      "reasoning": "\"East Congress\" is not a common neighborhood name; the area is widely known as St. Edward's."
+    },
+    {
+      "region_id": 259,
+      "current_name": "Garrison Park East",
+      "google_maps_name": "Garrison Park",
+      "confidence": "medium",
+      "reasoning": "\"Garrison Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 260,
+      "current_name": "Armadillo Park",
+      "google_maps_name": "Garrison Park",
+      "confidence": "high",
+      "reasoning": "\"Armadillo Park\" is not a common neighborhood name; the area is widely known as Garrison Park."
+    },
+    {
+      "region_id": 261,
+      "current_name": "Franklin Park West",
+      "google_maps_name": "Franklin Park",
+      "confidence": "medium",
+      "reasoning": "\"Franklin Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 262,
+      "current_name": "William Cannon",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "reasoning": "\"William Cannon\" is a major road, not a common neighborhood name; the area is widely known as Southwood."
+    },
+    {
+      "region_id": 263,
+      "current_name": "Frankline Park East",
+      "google_maps_name": "Franklin Park",
+      "confidence": "high",
+      "reasoning": "Corrected typo from \"Frankline\" to \"Franklin\"; \"Franklin Park\" is the widely recognized neighborhood name for this area, simplifying the directional suffix."
+    },
+    {
+      "region_id": 264,
+      "current_name": "Comal Bluff",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "reasoning": "\"Comal Bluff\" is a specific street/subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 265,
+      "current_name": "Parkridge Gardens",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "reasoning": "\"Parkridge Gardens\" is a specific subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 266,
+      "current_name": "Buckingham Estates",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "reasoning": "\"Buckingham Estates\" is a specific subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 267,
+      "current_name": "Elmwood Estates",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "reasoning": "\"Elmwood Estates\" is a specific subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 13,
+      "current_name": "Northwood — Southeast",
+      "google_maps_name": "Balcones Woods — Southeast",
+      "confidence": "high",
+      "reasoning": "The centroid is squarely within the Balcones Woods neighborhood, which is a more widely recognized name for this specific area than 'Northwood'."
+    },
+    {
+      "region_id": 19,
+      "current_name": "North Austin",
+      "google_maps_name": "Highland",
+      "confidence": "high",
+      "reasoning": "'North Austin' is a very general term. The centroid is located in the well-defined and commonly recognized Highland neighborhood, which is a more specific and accurate name."
+    },
+    {
+      "region_id": 26,
+      "current_name": "Brentwood",
+      "google_maps_name": "Allandale",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the well-defined and commonly recognized Allandale neighborhood, not Brentwood, which is further south and east."
+    },
+    {
+      "region_id": 30,
+      "current_name": "Walnut Creek — East",
+      "google_maps_name": "Harris Ridge — East",
+      "confidence": "high",
+      "reasoning": "The centroid is located within the commonly recognized Harris Ridge neighborhood, which is a more specific and accurate name for this area than the general 'Walnut Creek — East'."
+    },
+    {
+      "region_id": 32,
+      "current_name": "The Arboretum — Northeast",
+      "google_maps_name": "Balcones Woods — Northeast",
+      "confidence": "high",
+      "reasoning": "The centroid is located within the commonly recognized Balcones Woods neighborhood, which is a more specific and accurate name for this area than 'The Arboretum'."
+    },
+    {
+      "region_id": 33,
+      "current_name": "St. Johns",
+      "google_maps_name": "Highland",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the well-defined and commonly recognized Highland neighborhood, not the St. Johns neighborhood which is further north."
+    },
+    {
+      "region_id": 34,
+      "current_name": "North Burnet — North",
+      "google_maps_name": "Gracywoods — North",
+      "confidence": "high",
+      "reasoning": "The centroid is located within the commonly recognized Gracywoods neighborhood, which is a more specific and accurate name for this area than the general 'North Burnet'."
+    },
+    {
+      "region_id": 36,
+      "current_name": "Northwood — East",
+      "google_maps_name": "Balcones Woods — East",
+      "confidence": "high",
+      "reasoning": "The centroid is squarely within the Balcones Woods neighborhood, which is a more widely recognized name for this specific area than 'Northwood'."
+    },
+    {
+      "region_id": 39,
+      "current_name": "North Shoal Creek — South (High Risk)",
+      "google_maps_name": "Crestview — South",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the well-defined and commonly recognized Crestview neighborhood, not North Shoal Creek. The '(High Risk)' suffix is not a geographic descriptor."
+    },
+    {
+      "region_id": 42,
+      "current_name": "North Shoal Creek — Outer North",
+      "google_maps_name": "North Burnet — Outer North",
+      "confidence": "high",
+      "reasoning": "The centroid is located within the commonly recognized North Burnet area, which is a more specific and accurate name for this area than 'North Shoal Creek'."
+    },
+    {
+      "region_id": 43,
+      "current_name": "Great Hills — Inner South",
+      "google_maps_name": "Northwest Hills — Inner South",
+      "confidence": "high",
+      "reasoning": "The centroid is located within the commonly recognized Northwest Hills neighborhood, which is a more specific and accurate name for this area than 'Great Hills'."
+    },
+    {
+      "region_id": 47,
+      "current_name": "Montopolis — South",
+      "google_maps_name": "Pilot Knob — South",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the Pilot Knob area, which is a more specific and accurate name for this location than Montopolis, which is further north."
+    },
+    {
+      "region_id": 52,
+      "current_name": "Dessau Valley",
+      "google_maps_name": "Dessau",
+      "confidence": "medium",
+      "reasoning": "'Dessau Valley' is a specific subdivision, but 'Dessau' is the more commonly recognized broader area name for this location."
+    },
+    {
+      "region_id": 185,
+      "current_name": "Montopolis — Southeast",
+      "google_maps_name": "Creedmoor",
+      "confidence": "high",
+      "reasoning": "The centroid is significantly south of the commonly recognized Montopolis neighborhood, closer to the community of Creedmoor."
+    },
+    {
+      "region_id": 187,
+      "current_name": "Walnut Creek — West",
+      "google_maps_name": "Northwood",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the Northwood neighborhood, not typically referred to as 'Walnut Creek'."
+    },
+    {
+      "region_id": 200,
+      "current_name": "North Shoal Creek — Inner North",
+      "google_maps_name": "Balcones Woods",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the Balcones Woods neighborhood, not typically referred to as 'North Shoal Creek'."
+    },
+    {
+      "region_id": 202,
+      "current_name": "Bouldin Creek — South",
+      "google_maps_name": "St. Elmo",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the St. Elmo neighborhood, south of the commonly recognized Bouldin Creek area."
+    },
+    {
+      "region_id": 205,
+      "current_name": "Zilker — South",
+      "google_maps_name": "Barton Hills",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the Barton Hills neighborhood, south of the commonly recognized Zilker area."
+    },
+    {
+      "region_id": 206,
+      "current_name": "Georgian Acres — Northwest",
+      "google_maps_name": "Quail Creek",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the Quail Creek neighborhood, west of I-35, while Georgian Acres is typically east of I-35."
+    },
+    {
+      "region_id": 222,
+      "current_name": "Northwood — West",
+      "google_maps_name": "Jester Estates",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the Jester Estates neighborhood, significantly west of the commonly recognized Northwood area."
+    },
+    {
+      "region_id": 223,
+      "current_name": "Rosewood — North",
+      "google_maps_name": "North Burnet",
+      "confidence": "high",
+      "reasoning": "The centroid is located in the North Burnet area, significantly north and west of the Rosewood neighborhood."
+    },
+    {
+      "region_id": 229,
+      "current_name": "Wells Branch — North #229",
+      "google_maps_name": "Wells Branch — North",
+      "confidence": "high",
+      "reasoning": "Removed internal identifier '#229' from the name, preserving the common area name and directional suffix."
+    }
+  ]
+}

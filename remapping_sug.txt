@@ -1,0 +1,55 @@
+Google Maps does not provide a public "list" or downloadable database of neighborhood coordinates or polygons directly. Their map data is proprietary and generally restricted to visual rendering or specific API lookups (like getting a single point or a bounding box for a specific address).
+
+However, you can get exactly what you're looking for (mapping areas with individual borders for Austin neighborhoods) by using the **City of Austin’s Open Data Portal** or **OpenStreetMap (OSM)**.
+
+### 1. The Best Source: Austin Open Data Portal
+
+The City of Austin provides the official "Neighborhood Planning Areas" and "Neighborhood Reporting Areas" in several formats (GeoJSON, KML, CSV). This is the most accurate data for the sub-regions you mentioned (like *Cherry Creek* or *Garrison Park*).
+
+* **Dataset Name:** [Boundaries: City of Austin Neighborhoods](https://data.austintexas.gov/City-Government/Boundaries-City-of-Austin-Neighborhoods/inrm-c3ee)
+* **How to get the coordinates:**
+1. Go to the link above.
+2. Click **Export** in the top right.
+3. Choose **GeoJSON** or **KML**. These files contain the literal coordinate strings for the polygon borders of every neighborhood in the city.
+4. If you want a simple list of the names first, you can choose **CSV**.
+
+
+
+### 2. The Developer Way: Overpass Turbo (OpenStreetMap)
+
+If you want to pull this data programmatically without downloading a static file, you can use **Overpass Turbo**, which queries the OpenStreetMap database.
+
+1. Go to [overpass-turbo.eu](https://overpass-turbo.eu/).
+2. Paste this query into the left panel:
+```json
+[out:json][timeout:25];
+{{geocodeArea:Austin, TX}}->.searchArea;
+(
+  relation["boundary"~"neighborhood|administrative"](area.searchArea);
+);
+out body;
+>;
+out skel qt;
+
+```
+
+
+3. Click **Run**. This will highlight every neighborhood boundary in Austin. You can then click **Export** → **Download as GeoJSON** to get the raw coordinates.
+
+### 3. Using Google Maps API (If you have a key)
+
+If you are building an app and specifically need to use Google, you can use the **Geocoding API**. However, it will not give you a "list of all regions." You have to ask for them one by one.
+
+* **Request:** `https://maps.googleapis.com/maps/api/geocode/json?address=South+Austin,TX&key=YOUR_API_KEY`
+* **What you get:** Google will return a `bounds` object (Northeast and Southwest corners) and a `viewport`.
+* **The Catch:** Google generally does **not** return the full polygon (the complex "border" lines) via the API; it only returns a rectangular bounding box.
+
+### Summary of Austin Regions
+
+The examples you listed (Brodie Lane, Maple Run, etc.) are technically **Neighborhood Planning Areas (NPAs)**. In South Austin, these are often grouped under the "South" or "Southwest" sectors.
+
+| Region Type | Best Tool | Format |
+| --- | --- | --- |
+| **Official City Boundaries** | Austin Open Data Portal | GeoJSON/KML |
+| **Crowdsourced/Detailed** | Overpass Turbo (OSM) | GeoJSON |
+| **Basic Center Points** | Google Geocoding API | JSON (Lat/Lng) |

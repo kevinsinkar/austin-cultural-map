@@ -1,0 +1,33 @@
+```json
+{
+  "renames": [
+    {
+      "region_id": 170,
+      "current_name": "Dawson — West",
+      "google_maps_name": "Zilker — West",
+      "confidence": "high",
+      "reasoning": "The centroid (30.233, -97.778) falls squarely within the Zilker neighborhood on Google Maps, which is a more widely recognized name for this area than Dawson."
+    },
+    {
+      "region_id": 176,
+      "current_name": "The Arboretum — East",
+      "google_maps_name": "Balcones Woods — East",
+      "confidence": "high",
+      "reasoning": "The centroid (30.391, -97.725) is located within the Balcones Woods neighborhood, which is a more common and accurate residential area name than 'The Arboretum' for this tract."
+    },
+    {
+      "region_id": 186,
+      "current_name": "North Lamar",
+      "google_maps_name": "St. Johns",
+      "confidence": "high",
+      "reasoning": "The centroid (30.315, -97.635) is located within the St. Johns neighborhood on Google Maps, which is a more specific and commonly recognized residential area name than the broader 'North Lamar' for this location."
+    },
+    {
+      "region_id": 187,
+      "current_name": "Walnut Creek — West",
+      "google_maps_name": "Scofield Farms — West",
+      "confidence": "high",
+      "reasoning": "The centroid (30.467, -97.704) is located within the Scofield Farms neighborhood, which is a more accurate and commonly recognized name for this residential area than 'Walnut Creek'."
+    },
+    {
+      "region_id": 19

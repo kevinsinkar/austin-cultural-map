@@ -15,11 +15,11 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
   - `audited_property_normalized.json` — 2,645 rows across 209 regions (home values, rent, commercial sqft, vacancy, permits)
   - `audited_socioeconomic_normalized.json` — 2,544 rows across 209 regions (income, poverty, unemployment, Gini, eviction, SNAP)
 * **Field Normalization:** Dozens of variant field names (20+ Hispanic variants, 14+ Black variants, etc.) collapsed to canonical names. Percentage scales unified.
-* **Rent Burden:** Added to the RegionDetailPanel detail cards with "% of renter households paying ≥30% of income on rent" subtitle.
+* **Rent Burden:** Added to the RegionDetailPanel detail cards with "% of renter households paying >=30% of income on rent" subtitle.
 
 #### Phase 2 — Core Feature Gaps ✅
 
-* **Grant Triage View:** New "Triage" tab classifies all 269 regions into Urgent / Critical / Monitor / Post-Displacement / High Risk–Data Gap tiers using DVI + anchor density. Features scatter plot, sortable/filterable table with search, and per-region grant recommendations.
+* **Grant Triage View:** New "Triage" tab classifies all 269 regions into Urgent / Critical / Monitor / Post-Displacement / High Risk-Data Gap tiers using DVI + anchor density. Features scatter plot, sortable/filterable table with search, and per-region grant recommendations.
 * **Cultural Anchor Density Metric:** `calcAnchorDensity` and `calcAnchorPressureScore` computed per region. Badge shown in RegionDetailPanel and ComparisonView.
 * **DVI Weight Sliders:** TriageView's "Advanced" panel lets users adjust the three DVI sub-index weights (Demographic, Market, Socioeconomic) and see triage results update live. Includes "Reset to defaults" button.
 * **Expanded Demographics:** ComparisonView supports "Black & Hispanic" / "All Groups" toggle showing Asian%, Other%, and all five demographic groups in charts.
@@ -28,8 +28,19 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 
 #### Phase 3 — Narrative & Context Enrichment (Partial) ✅
 
-* **Enriched Comparison Narratives:** ComparisonView auto-narratives now reference closed businesses by cultural affiliation (e.g., "East Austin lost 8 African American heritage businesses between 2000–2020"), surviving businesses under pressure, and cultural context beyond raw DVI numbers.
+* **Enriched Comparison Narratives:** ComparisonView auto-narratives now reference closed businesses by cultural affiliation (e.g., "East Austin lost 8 African American heritage businesses between 2000-2020"), surviving businesses under pressure, and cultural context beyond raw DVI numbers.
 * **Inflation-Adjusted Property Cards:** RegionDetailPanel and ComparisonView display dual nominal / 2023$ values for home values, rent, and income. Change arrows use inflation-adjusted figures.
+
+#### Region Name Disambiguation & Reconciliation ✅
+
+* **44 duplicate region names resolved:** 269 census tracts mapped to only 165 unique names. Hybrid approach applied: merged 17 groups (54 tracts) with identical DVI into single entries; disambiguated 27 groups (94 tracts) with cardinal-direction suffixes. Net result: 269 -> 232 visible regions, all display names unique.
+* **`display_name` system:** Added `display_name` field to all `regionIndex.js` entries. All UI components (Compare dropdowns, Triage table, Timeline heatmap, map tooltips) now render `display_name`. Original `region_name` preserved for data integrity.
+* **Merge infrastructure:** `regionLookup.js` exports `VISIBLE_REGIONS`, `getMergedIds()`, `toPrimaryId()`, `MERGE_LOOKUP`. Data lookups switched from name-based to `region_id`-based throughout `index.jsx`, `mapHelpers.js`, and `math.js`.
+* **Multi-source name reconciliation:** Three-tier pipeline to improve region names beyond census-tract labels:
+  1. City of Austin official neighborhood boundaries (`audit_region_names.py`) — point-in-polygon audit against 95 official planning areas
+  2. Gemini 2.5 Flash / Google Maps name suggestions (`gemini_google_maps_names.py`) — AI-based name matching for 232 regions
+  3. User manual overrides (`build_master_remap.py` `USER_OVERRIDES` dict) — highest priority
+* **125 regions renamed** from census-tract labels to commonly recognized neighborhood names using official City of Austin data (77) and Gemini suggestions (48). Collision detection and auto-disambiguation ensure all names remain unique.
 
 #### Infrastructure & Cleanup ✅
 
@@ -47,6 +58,14 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 ---
 
 ### Open Work
+
+#### Region Name Re-Audit
+
+| Priority | Task | Status |
+| --- | --- | --- |
+| 🔴 **High** | Re-audit region names for accuracy | In Progress — 125 regions renamed via City of Austin official data + Gemini. 149 regions fall outside official coverage (suburbs, ETJ). Many names still reflect census-tract planning labels rather than names locals recognize. User review needed to identify remaining mismatches. |
+| 🟡 **Med** | Apply user override corrections | Not Started — `scripts/build_master_remap.py` has an empty `USER_OVERRIDES` dict ready for manual corrections. After visual review of the map, add `region_id: "Corrected Name"` entries and re-run the pipeline. |
+| 🟡 **Med** | Cross-reference with OpenStreetMap neighborhoods | Not Started — `remapping_sug.txt` documents how to query OSM via Overpass Turbo for neighborhood boundaries. Could provide better coverage for the 149 regions outside City of Austin planning areas. |
 
 #### Phase 3 — Narrative & Context Enrichment (Remaining)
 
@@ -68,13 +87,12 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 
 | Priority | Issue | Notes |
 | --- | --- | --- |
-| 🔴 **High** | 44 duplicate region names across 269 tracts | e.g., "Circle C Ranch" appears 7 times, "Montopolis" 7 times, "Zilker" 5 times. Compare dropdowns, Triage table, and Timeline heatmap show identical names with no way to distinguish them. Need to either merge contiguous tracts or append a disambiguator (e.g., tract ID, cardinal direction). See `nextTask.md` for full details. |
 | 🟡 **Med** | Dual GeoJSON files | `regions.js` (old) used only by `constants.js` for `REGION_NAMES`; `final_updated_regions.js` (canonical, 269 regions) used everywhere else. Should unify. |
 | 🟡 **Med** | Bundle size ~13.6 MB | Large GeoJSON polygons dominate. Consider code-splitting or lazy-loading geometry data via `React.lazy()`. |
 | 🟡 **Med** | Business data coverage | Legacy businesses only cover ~40 of 269 regions. Triage logic marks zero-business high-DVI regions as "High Risk / Data Gap" but more data would improve accuracy. |
 | 🔵 **Low** | Property/socio coverage gap | 209 of 269 regions have property & socioeconomic data; 60 regions have demographics only. |
 | 🔵 **Low** | Predictive "At-Risk" modeling | Trend-line feature for early-stage displacement indicators — backlog. |
 | 🔵 **Low** | Community Landmark Layer | Soft-data layer for murals, social clubs, gathering spaces — backlog. |
-| 🔵 **Low** | ARCHITECTURE.md out of date | Does not reflect Data Confidence Score, removed map filters, inflation-adjustment logic, enriched narratives, or detail panel tabs. Last updated March 3. |
+| 🔵 **Low** | ARCHITECTURE.md out of date | Does not reflect Data Confidence Score, removed map filters, inflation-adjustment logic, enriched narratives, detail panel tabs, or region name disambiguation system. Last updated March 3. |
 
 ---

@@ -1,0 +1,27 @@
+```json
+{
+  "renames": [
+    {
+      "region_id": 3,
+      "current_name": "Cherrywood — Inner South",
+      "google_maps_name": "Cherrywood",
+      "confidence": "high",
+      "reasoning": "The suffix 'Inner South' is a planning distinction; the common local and Google Maps name for this area is 'Cherrywood'."
+    },
+    {
+      "region_id": 4,
+      "current_name": "Blackland — East",
+      "google_maps_name": "Pecan Springs-Springdale — East",
+      "confidence": "high",
+      "reasoning": "'Blackland' is an obscure planning term. The centroid (30.282295, -97.651995) is commonly recognized as part of the 'Pecan Springs-Springdale' neighborhood on Google Maps. The directional suffix 'East' is preserved."
+    },
+    {
+      "region_id": 5,
+      "current_name": "Windsor Hills — Northwest",
+      "google_maps_name": "Windsor Hills",
+      "confidence": "high",
+      "reasoning": "The suffix 'Northwest' is a planning distinction; the common local and Google Maps name for this area is 'Windsor Hills'."
+    },
+    {
+      "region_id": 6,
+      "current_name": "

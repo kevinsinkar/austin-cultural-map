@@ -1,0 +1,1093 @@
+{
+  "metadata": {
+    "total_renames": 125,
+    "sources": {
+      "city_of_austin_official": 77,
+      "gemini_google_maps": 48
+    },
+    "priority_order": [
+      "1. user_override (manual corrections)",
+      "2. city_of_austin_official (centroid in official planning area)",
+      "3. gemini_google_maps (AI suggestion for areas outside coverage)"
+    ]
+  },
+  "renames": [
+    {
+      "region_id": 1,
+      "current_name": "St. Elmo District",
+      "google_maps_name": "Mckinney",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'MCKINNEY' planning area",
+      "official_name_raw": "MCKINNEY"
+    },
+    {
+      "region_id": 3,
+      "current_name": "Cherrywood — Inner South",
+      "google_maps_name": "RMMA — Inner South",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'RMMA' planning area",
+      "official_name_raw": "RMMA"
+    },
+    {
+      "region_id": 13,
+      "current_name": "Balcones Woods — Southeast",
+      "google_maps_name": "Gateway — Southeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'GATEWAY' planning area",
+      "official_name_raw": "GATEWAY"
+    },
+    {
+      "region_id": 14,
+      "current_name": "Cherrywood — North",
+      "google_maps_name": "North Lamar — North",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH LAMAR' planning area",
+      "official_name_raw": "NORTH LAMAR"
+    },
+    {
+      "region_id": 15,
+      "current_name": "Zilker — Northeast",
+      "google_maps_name": "Bouldin Creek — Northeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'BOULDIN CREEK' planning area",
+      "official_name_raw": "BOULDIN CREEK"
+    },
+    {
+      "region_id": 16,
+      "current_name": "Riverside",
+      "google_maps_name": "Montopolis",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'MONTOPOLIS' planning area",
+      "official_name_raw": "MONTOPOLIS"
+    },
+    {
+      "region_id": 19,
+      "current_name": "Highland — Northeast",
+      "google_maps_name": "Windsor Hills — Northeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WINDSOR HILLS' planning area",
+      "official_name_raw": "WINDSOR HILLS"
+    },
+    {
+      "region_id": 20,
+      "current_name": "North Loop",
+      "google_maps_name": "Highland",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'HIGHLAND' planning area",
+      "official_name_raw": "HIGHLAND"
+    },
+    {
+      "region_id": 21,
+      "current_name": "St. Edward's — Northeast",
+      "google_maps_name": "Pleasant Valley — Northeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'PLEASANT VALLEY' planning area",
+      "official_name_raw": "PLEASANT VALLEY"
+    },
+    {
+      "region_id": 26,
+      "current_name": "Allandale — North",
+      "google_maps_name": "Allandale",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located in the well-defined and commonly recognized Allandale neighborhood, not Brentwood, which is further south and east."
+    },
+    {
+      "region_id": 30,
+      "current_name": "Harris Ridge — East",
+      "google_maps_name": "Harris Ridge — East",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located within the commonly recognized Harris Ridge neighborhood, which is a more specific and accurate name for this area than the general 'Walnut Creek — East'."
+    },
+    {
+      "region_id": 32,
+      "current_name": "Balcones Woods — Northeast",
+      "google_maps_name": "Balcones Woods — Northeast",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located within the commonly recognized Balcones Woods neighborhood, which is a more specific and accurate name for this area than 'The Arboretum'."
+    },
+    {
+      "region_id": 33,
+      "current_name": "Highland — Northwest",
+      "google_maps_name": "Georgian Acres — Northwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'GEORGIAN ACRES' planning area",
+      "official_name_raw": "GEORGIAN ACRES"
+    },
+    {
+      "region_id": 34,
+      "current_name": "Gracywoods — North",
+      "google_maps_name": "Gracywoods — North",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located within the commonly recognized Gracywoods neighborhood, which is a more specific and accurate name for this area than the general 'North Burnet'."
+    },
+    {
+      "region_id": 36,
+      "current_name": "Balcones Woods — East",
+      "google_maps_name": "Balcones Woods — East",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is squarely within the Balcones Woods neighborhood, which is a more widely recognized name for this specific area than 'Northwood'."
+    },
+    {
+      "region_id": 37,
+      "current_name": "Windsor Park",
+      "google_maps_name": "Georgian Acres",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'GEORGIAN ACRES' planning area",
+      "official_name_raw": "GEORGIAN ACRES"
+    },
+    {
+      "region_id": 39,
+      "current_name": "Crestview — South",
+      "google_maps_name": "Coronado Hills — South",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'CORONADO HILLS' planning area",
+      "official_name_raw": "CORONADO HILLS"
+    },
+    {
+      "region_id": 42,
+      "current_name": "North Burnet — Outer North",
+      "google_maps_name": "North Burnet — Outer North",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located within the commonly recognized North Burnet area, which is a more specific and accurate name for this area than 'North Shoal Creek'."
+    },
+    {
+      "region_id": 43,
+      "current_name": "Northwest Hills — Inner South",
+      "google_maps_name": "Northwest Hills — Inner South",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located within the commonly recognized Northwest Hills neighborhood, which is a more specific and accurate name for this area than 'Great Hills'."
+    },
+    {
+      "region_id": 47,
+      "current_name": "Pilot Knob — South",
+      "google_maps_name": "Pilot Knob — South",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located in the Pilot Knob area, which is a more specific and accurate name for this location than Montopolis, which is further north."
+    },
+    {
+      "region_id": 48,
+      "current_name": "East Cesar Chavez — Southwest",
+      "google_maps_name": "Bouldin Creek — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'BOULDIN CREEK' planning area",
+      "official_name_raw": "BOULDIN CREEK"
+    },
+    {
+      "region_id": 52,
+      "current_name": "Dessau — Northwest",
+      "google_maps_name": "Dessau",
+      "confidence": "medium",
+      "source": "gemini_google_maps",
+      "reasoning": "'Dessau Valley' is a specific subdivision, but 'Dessau' is the more commonly recognized broader area name for this location."
+    },
+    {
+      "region_id": 57,
+      "current_name": "Crestview — South (Moderate)",
+      "google_maps_name": "St. John — South (Moderate)",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ST. JOHN' planning area",
+      "official_name_raw": "ST. JOHN"
+    },
+    {
+      "region_id": 58,
+      "current_name": "Wells Branch — North",
+      "google_maps_name": "Wells Branch — North",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Removed internal identifier '#58' for common usage, preserving the directional suffix."
+    },
+    {
+      "region_id": 59,
+      "current_name": "Wells Branch — Southeast #59",
+      "google_maps_name": "Wells Branch — North",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Removed internal descriptor '(Moderate)' for common usage, preserving the directional suffix."
+    },
+    {
+      "region_id": 68,
+      "current_name": "ShadowGlen",
+      "google_maps_name": "ShadowGlen",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Centroid is located far east of Austin, near Manor, within the ShadowGlen community, not the St. John's neighborhood in Austin."
+    },
+    {
+      "region_id": 74,
+      "current_name": "Cherrywood — Outer South",
+      "google_maps_name": "Windsor Park — Outer South",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WINDSOR PARK' planning area",
+      "official_name_raw": "WINDSOR PARK"
+    },
+    {
+      "region_id": 78,
+      "current_name": "East Riverside — Northeast",
+      "google_maps_name": "Pleasant Valley — Northeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'PLEASANT VALLEY' planning area",
+      "official_name_raw": "PLEASANT VALLEY"
+    },
+    {
+      "region_id": 79,
+      "current_name": "Blackland — West",
+      "google_maps_name": "Upper Boggy Creek — West",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'UPPER BOGGY CREEK' planning area",
+      "official_name_raw": "UPPER BOGGY CREEK"
+    },
+    {
+      "region_id": 81,
+      "current_name": "North Campus",
+      "google_maps_name": "UT",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'UT' planning area",
+      "official_name_raw": "UT"
+    },
+    {
+      "region_id": 82,
+      "current_name": "Eastview",
+      "google_maps_name": "Govalle",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'GOVALLE' planning area",
+      "official_name_raw": "GOVALLE"
+    },
+    {
+      "region_id": 85,
+      "current_name": "Foster Heights",
+      "google_maps_name": "Central East Austin",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'CENTRAL EAST AUSTIN' planning area",
+      "official_name_raw": "CENTRAL EAST AUSTIN"
+    },
+    {
+      "region_id": 87,
+      "current_name": "Tarrytown — East",
+      "google_maps_name": "Windsor Road — East",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WINDSOR ROAD' planning area",
+      "official_name_raw": "WINDSOR ROAD"
+    },
+    {
+      "region_id": 88,
+      "current_name": "Old Enfield",
+      "google_maps_name": "Old Enfield",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Simplified to the specific and commonly used neighborhood name 'Old Enfield'."
+    },
+    {
+      "region_id": 89,
+      "current_name": "Oakmont Heights",
+      "google_maps_name": "West Austin Neighborhood Group",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST AUSTIN NEIGHBORHOOD GROUP' planning area",
+      "official_name_raw": "WEST AUSTIN NEIGHBORHOOD GROUP"
+    },
+    {
+      "region_id": 91,
+      "current_name": "West Congress",
+      "google_maps_name": "South Manchaca",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SOUTH MANCHACA' planning area",
+      "official_name_raw": "SOUTH MANCHACA"
+    },
+    {
+      "region_id": 92,
+      "current_name": "Rosedale — Southwest",
+      "google_maps_name": "Rosedale",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Centroid is squarely within the Rosedale neighborhood, which is a more specific and commonly recognized name than a combined 'Allandale South-Rosedale'."
+    },
+    {
+      "region_id": 94,
+      "current_name": "Northside",
+      "google_maps_name": "Downtown",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'DOWNTOWN' planning area",
+      "official_name_raw": "DOWNTOWN"
+    },
+    {
+      "region_id": 100,
+      "current_name": "Bartons Bluff",
+      "google_maps_name": "Barton Hills",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'BARTON HILLS' planning area",
+      "official_name_raw": "BARTON HILLS"
+    },
+    {
+      "region_id": 101,
+      "current_name": "East Boggy Creek",
+      "google_maps_name": "MLK-183",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'MLK-183' planning area",
+      "official_name_raw": "MLK-183"
+    },
+    {
+      "region_id": 107,
+      "current_name": "West University",
+      "google_maps_name": "Rosedale",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ROSEDALE' planning area",
+      "official_name_raw": "ROSEDALE"
+    },
+    {
+      "region_id": 108,
+      "current_name": "East Riverside — West (High Risk)",
+      "google_maps_name": "East Riverside",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Simplified to the more common and encompassing neighborhood name 'East Riverside'."
+    },
+    {
+      "region_id": 109,
+      "current_name": "Windsor Park — South",
+      "google_maps_name": "Pecan Springs-springdale — South",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'PECAN SPRINGS-SPRINGDALE' planning area",
+      "official_name_raw": "PECAN SPRINGS-SPRINGDALE"
+    },
+    {
+      "region_id": 111,
+      "current_name": "Central East Austin — Southeast (High Risk) #111",
+      "google_maps_name": "Holly — Southeast (High Risk) #111",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'HOLLY' planning area",
+      "official_name_raw": "HOLLY"
+    },
+    {
+      "region_id": 113,
+      "current_name": "Clarksville",
+      "google_maps_name": "Old West Austin",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'OLD WEST AUSTIN' planning area",
+      "official_name_raw": "OLD WEST AUSTIN"
+    },
+    {
+      "region_id": 114,
+      "current_name": "Zilker",
+      "google_maps_name": "Zilker",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is squarely within the Zilker neighborhood; \"Zilker-Bouldin\" is an unnecessary combination for this specific location."
+    },
+    {
+      "region_id": 116,
+      "current_name": "Travis Heights East",
+      "google_maps_name": "South River City",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SOUTH RIVER CITY' planning area",
+      "official_name_raw": "SOUTH RIVER CITY"
+    },
+    {
+      "region_id": 117,
+      "current_name": "Northwest Hills — Southeast",
+      "google_maps_name": "Northwest Hills",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Colorado Foothills\" is not a common local or Google Maps name. This area is widely known as Northwest Hills."
+    },
+    {
+      "region_id": 118,
+      "current_name": "Ridgetop",
+      "google_maps_name": "Windsor Park",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WINDSOR PARK' planning area",
+      "official_name_raw": "WINDSOR PARK"
+    },
+    {
+      "region_id": 120,
+      "current_name": "Hyde Park — Southwest",
+      "google_maps_name": "Hancock — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'HANCOCK' planning area",
+      "official_name_raw": "HANCOCK"
+    },
+    {
+      "region_id": 122,
+      "current_name": "Highland — Southwest",
+      "google_maps_name": "Highland",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The area is commonly known simply as Highland; \"Highland South\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 123,
+      "current_name": "Travis Heights West",
+      "google_maps_name": "South River City",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SOUTH RIVER CITY' planning area",
+      "official_name_raw": "SOUTH RIVER CITY"
+    },
+    {
+      "region_id": 125,
+      "current_name": "Brentwood — North",
+      "google_maps_name": "Brentwood",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is within the well-known Brentwood neighborhood; \"Brentwood North\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 126,
+      "current_name": "Allandale — South",
+      "google_maps_name": "Allandale",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is within the well-known Allandale neighborhood; \"Allandale North\" is an unnecessary distinction."
+    },
+    {
+      "region_id": 127,
+      "current_name": "Deep Eddy",
+      "google_maps_name": "West Austin Neighborhood Group",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST AUSTIN NEIGHBORHOOD GROUP' planning area",
+      "official_name_raw": "WEST AUSTIN NEIGHBORHOOD GROUP"
+    },
+    {
+      "region_id": 129,
+      "current_name": "Westgate",
+      "google_maps_name": "South Lamar",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SOUTH LAMAR' planning area",
+      "official_name_raw": "SOUTH LAMAR"
+    },
+    {
+      "region_id": 134,
+      "current_name": "Canyon Creek — Northwest",
+      "google_maps_name": "Canyon Creek — Northwest",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Northwood\" is not a common name for this area. The centroid is within the Canyon Creek neighborhood."
+    },
+    {
+      "region_id": 137,
+      "current_name": "Scofield Farms — North",
+      "google_maps_name": "Scofield Farms — North",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Northwood\" is not a common name for this area. The centroid is within the Scofield Farms neighborhood."
+    },
+    {
+      "region_id": 141,
+      "current_name": "Barton Creek — Southwest",
+      "google_maps_name": "West Oak Hill — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST OAK HILL' planning area",
+      "official_name_raw": "WEST OAK HILL"
+    },
+    {
+      "region_id": 142,
+      "current_name": "Old West Austin",
+      "google_maps_name": "Zilker",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ZILKER' planning area",
+      "official_name_raw": "ZILKER"
+    },
+    {
+      "region_id": 143,
+      "current_name": "Bee Cave — North",
+      "google_maps_name": "Bee Cave",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is significantly west of Rollingwood, closer to the Bee Cave area."
+    },
+    {
+      "region_id": 146,
+      "current_name": "Northwest Hills — Northeast",
+      "google_maps_name": "Northwest Hills",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is north of the Allandale neighborhood (north of US-183), within the commonly recognized Northwest Hills area."
+    },
+    {
+      "region_id": 149,
+      "current_name": "Stratford Hills",
+      "google_maps_name": "East Oak Hill",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'EAST OAK HILL' planning area",
+      "official_name_raw": "EAST OAK HILL"
+    },
+    {
+      "region_id": 152,
+      "current_name": "St. John's",
+      "google_maps_name": "Heritage Hills",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'HERITAGE HILLS' planning area",
+      "official_name_raw": "HERITAGE HILLS"
+    },
+    {
+      "region_id": 154,
+      "current_name": "South Congress",
+      "google_maps_name": "St. Edward's",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ST. EDWARDS' planning area",
+      "official_name_raw": "ST. EDWARDS"
+    },
+    {
+      "region_id": 156,
+      "current_name": "Circle C Ranch — Southwest",
+      "google_maps_name": "Circle C Ranch — Southwest",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is significantly southwest of Barton Hills, located within the Circle C Ranch community."
+    },
+    {
+      "region_id": 157,
+      "current_name": "Bouldin Creek — East",
+      "google_maps_name": "St. Edward's — East",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ST. EDWARDS' planning area",
+      "official_name_raw": "ST. EDWARDS"
+    },
+    {
+      "region_id": 158,
+      "current_name": "Great Hills — South",
+      "google_maps_name": "Great Hills — South",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Northwood\" is not a common name for this area. The centroid is within the Great Hills neighborhood."
+    },
+    {
+      "region_id": 160,
+      "current_name": "Central East Austin — Northwest",
+      "google_maps_name": "West University — Northwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST UNIVERSITY' planning area",
+      "official_name_raw": "WEST UNIVERSITY"
+    },
+    {
+      "region_id": 163,
+      "current_name": "Capitol Complex",
+      "google_maps_name": "Downtown",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'DOWNTOWN' planning area",
+      "official_name_raw": "DOWNTOWN"
+    },
+    {
+      "region_id": 164,
+      "current_name": "Bouldin Creek — North",
+      "google_maps_name": "Zilker — North",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ZILKER' planning area",
+      "official_name_raw": "ZILKER"
+    },
+    {
+      "region_id": 165,
+      "current_name": "East Cesar Chavez — North",
+      "google_maps_name": "Downtown — North",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'DOWNTOWN' planning area",
+      "official_name_raw": "DOWNTOWN"
+    },
+    {
+      "region_id": 170,
+      "current_name": "Dawson — West",
+      "google_maps_name": "South Lamar — West",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SOUTH LAMAR' planning area",
+      "official_name_raw": "SOUTH LAMAR"
+    },
+    {
+      "region_id": 171,
+      "current_name": "University of Texas at Austin Campus",
+      "google_maps_name": "Windsor Road",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WINDSOR ROAD' planning area",
+      "official_name_raw": "WINDSOR ROAD"
+    },
+    {
+      "region_id": 172,
+      "current_name": "Zilker — Northwest",
+      "google_maps_name": "South Lamar — Northwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SOUTH LAMAR' planning area",
+      "official_name_raw": "SOUTH LAMAR"
+    },
+    {
+      "region_id": 176,
+      "current_name": "The Arboretum — East",
+      "google_maps_name": "North Burnet — East",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH BURNET' planning area",
+      "official_name_raw": "NORTH BURNET"
+    },
+    {
+      "region_id": 177,
+      "current_name": "Milwood",
+      "google_maps_name": "North Burnet",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH BURNET' planning area",
+      "official_name_raw": "NORTH BURNET"
+    },
+    {
+      "region_id": 178,
+      "current_name": "Great Hills — Southeast",
+      "google_maps_name": "North Shoal Creek — Southeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH SHOAL CREEK' planning area",
+      "official_name_raw": "NORTH SHOAL CREEK"
+    },
+    {
+      "region_id": 179,
+      "current_name": "West Lake Hills — Northeast",
+      "google_maps_name": "West Oak Hill — Northeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST OAK HILL' planning area",
+      "official_name_raw": "WEST OAK HILL"
+    },
+    {
+      "region_id": 181,
+      "current_name": "Travis Heights",
+      "google_maps_name": "Pleasant Valley",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'PLEASANT VALLEY' planning area",
+      "official_name_raw": "PLEASANT VALLEY"
+    },
+    {
+      "region_id": 185,
+      "current_name": "Creedmoor — Southeast",
+      "google_maps_name": "Creedmoor",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is significantly south of the commonly recognized Montopolis neighborhood, closer to the community of Creedmoor."
+    },
+    {
+      "region_id": 187,
+      "current_name": "Northwood — West",
+      "google_maps_name": "Northwood",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located in the Northwood neighborhood, not typically referred to as 'Walnut Creek'."
+    },
+    {
+      "region_id": 194,
+      "current_name": "The Domain — Southeast",
+      "google_maps_name": "Wooten — Southeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WOOTEN' planning area",
+      "official_name_raw": "WOOTEN"
+    },
+    {
+      "region_id": 195,
+      "current_name": "Westlake",
+      "google_maps_name": "West Oak Hill",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST OAK HILL' planning area",
+      "official_name_raw": "WEST OAK HILL"
+    },
+    {
+      "region_id": 198,
+      "current_name": "North Lamar / Rundberg Area",
+      "google_maps_name": "North Austin Civic Association",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH AUSTIN CIVIC ASSOCIATION' planning area",
+      "official_name_raw": "NORTH AUSTIN CIVIC ASSOCIATION"
+    },
+    {
+      "region_id": 199,
+      "current_name": "Quail Creek",
+      "google_maps_name": "North Austin Civic Association",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH AUSTIN CIVIC ASSOCIATION' planning area",
+      "official_name_raw": "NORTH AUSTIN CIVIC ASSOCIATION"
+    },
+    {
+      "region_id": 200,
+      "current_name": "Balcones Woods — Inner North",
+      "google_maps_name": "Balcones Woods",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located in the Balcones Woods neighborhood, not typically referred to as 'North Shoal Creek'."
+    },
+    {
+      "region_id": 202,
+      "current_name": "St. Elmo — South",
+      "google_maps_name": "Sweetbriar — South",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SWEETBRIAR' planning area",
+      "official_name_raw": "SWEETBRIAR"
+    },
+    {
+      "region_id": 203,
+      "current_name": "Travis Country",
+      "google_maps_name": "West Oak Hill",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WEST OAK HILL' planning area",
+      "official_name_raw": "WEST OAK HILL"
+    },
+    {
+      "region_id": 205,
+      "current_name": "Barton Hills — South",
+      "google_maps_name": "Sweetbriar — South",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'SWEETBRIAR' planning area",
+      "official_name_raw": "SWEETBRIAR"
+    },
+    {
+      "region_id": 206,
+      "current_name": "Quail Creek — Northwest",
+      "google_maps_name": "North Austin Civic Association — Northwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH AUSTIN CIVIC ASSOCIATION' planning area",
+      "official_name_raw": "NORTH AUSTIN CIVIC ASSOCIATION"
+    },
+    {
+      "region_id": 207,
+      "current_name": "North Shoal Creek — Southwest",
+      "google_maps_name": "North Austin Civic Association — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'NORTH AUSTIN CIVIC ASSOCIATION' planning area",
+      "official_name_raw": "NORTH AUSTIN CIVIC ASSOCIATION"
+    },
+    {
+      "region_id": 210,
+      "current_name": "East Cesar Chavez — East",
+      "google_maps_name": "Downtown — East",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'DOWNTOWN' planning area",
+      "official_name_raw": "DOWNTOWN"
+    },
+    {
+      "region_id": 212,
+      "current_name": "Zilker — Southwest",
+      "google_maps_name": "Westgate — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WESTGATE' planning area",
+      "official_name_raw": "WESTGATE"
+    },
+    {
+      "region_id": 213,
+      "current_name": "Westlake Hills — Southeast #213",
+      "google_maps_name": "Garrison Park — Southeast #213",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'GARRISON PARK' planning area",
+      "official_name_raw": "GARRISON PARK"
+    },
+    {
+      "region_id": 222,
+      "current_name": "Jester Estates — West",
+      "google_maps_name": "Jester Estates",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "The centroid is located in the Jester Estates neighborhood, significantly west of the commonly recognized Northwood area."
+    },
+    {
+      "region_id": 223,
+      "current_name": "North Burnet — North",
+      "google_maps_name": "St. John — North",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ST. JOHN' planning area",
+      "official_name_raw": "ST. JOHN"
+    },
+    {
+      "region_id": 229,
+      "current_name": "Wells Branch — South",
+      "google_maps_name": "Wells Branch — North",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Removed internal identifier '#229' from the name, preserving the common area name and directional suffix."
+    },
+    {
+      "region_id": 234,
+      "current_name": "Westlake Hills — Northwest #234",
+      "google_maps_name": "East Oak Hill — Northwest #234",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'EAST OAK HILL' planning area",
+      "official_name_raw": "EAST OAK HILL"
+    },
+    {
+      "region_id": 235,
+      "current_name": "Onion Creek",
+      "google_maps_name": "Onion Creek",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Yarabee Bend\" is not a common neighborhood name; the area is widely known as Onion Creek."
+    },
+    {
+      "region_id": 236,
+      "current_name": "Hyde Park — East",
+      "google_maps_name": "Hyde Park",
+      "confidence": "medium",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Hyde Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 237,
+      "current_name": "Montopolis — Northeast",
+      "google_maps_name": "Montopolis — Northeast",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Removed internal planning label \" (Low Risk)\"; \"Montopolis — Northeast\" is accurate and commonly used."
+    },
+    {
+      "region_id": 238,
+      "current_name": "Lost Creek",
+      "google_maps_name": "East Oak Hill",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'EAST OAK HILL' planning area",
+      "official_name_raw": "EAST OAK HILL"
+    },
+    {
+      "region_id": 239,
+      "current_name": "Rosedale — Northeast",
+      "google_maps_name": "Allandale — Northeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'ALLANDALE' planning area",
+      "official_name_raw": "ALLANDALE"
+    },
+    {
+      "region_id": 240,
+      "current_name": "Hyde Park — Northwest",
+      "google_maps_name": "Triangle State — Northwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'TRIANGLE STATE' planning area",
+      "official_name_raw": "TRIANGLE STATE"
+    },
+    {
+      "region_id": 241,
+      "current_name": "Brentwood — South",
+      "google_maps_name": "Brentwood",
+      "confidence": "medium",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Brentwood\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 242,
+      "current_name": "Cherrywood — Southwest",
+      "google_maps_name": "Upper Boggy Creek — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'UPPER BOGGY CREEK' planning area",
+      "official_name_raw": "UPPER BOGGY CREEK"
+    },
+    {
+      "region_id": 243,
+      "current_name": "Davenport Ranch — South",
+      "google_maps_name": "Davenport Ranch",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Eanes Creek\" is not a common neighborhood name; the area is widely known as Davenport Ranch."
+    },
+    {
+      "region_id": 246,
+      "current_name": "Westlake Hills — Southeast #246",
+      "google_maps_name": "East Oak Hill — Southeast #246",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'EAST OAK HILL' planning area",
+      "official_name_raw": "EAST OAK HILL"
+    },
+    {
+      "region_id": 248,
+      "current_name": "Windsor Hills",
+      "google_maps_name": "Windsor Hills",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Thunderbird\" is not a common neighborhood name; the area is widely known as Windsor Hills."
+    },
+    {
+      "region_id": 249,
+      "current_name": "Balcones Woods",
+      "google_maps_name": "Balcones Woods",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Raintree Estates\" is a specific subdivision; the broader, more commonly recognized neighborhood is Balcones Woods."
+    },
+    {
+      "region_id": 251,
+      "current_name": "University Hills — West",
+      "google_maps_name": "Windsor Park — West",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'WINDSOR PARK' planning area",
+      "official_name_raw": "WINDSOR PARK"
+    },
+    {
+      "region_id": 252,
+      "current_name": "University Hills — East",
+      "google_maps_name": "University Hills",
+      "confidence": "medium",
+      "source": "gemini_google_maps",
+      "reasoning": "\"University Hills\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 256,
+      "current_name": "East Riverside — Southeast",
+      "google_maps_name": "Pleasant Valley — Southeast",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'PLEASANT VALLEY' planning area",
+      "official_name_raw": "PLEASANT VALLEY"
+    },
+    {
+      "region_id": 257,
+      "current_name": "East Riverside — West (Moderate)",
+      "google_maps_name": "East Riverside",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"East Riverside\" is the widely recognized neighborhood name; \"Heritage Oaks\" is too specific for a general area name."
+    },
+    {
+      "region_id": 258,
+      "current_name": "St. Edward's — Southwest",
+      "google_maps_name": "East Congress — Southwest",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'EAST CONGRESS' planning area",
+      "official_name_raw": "EAST CONGRESS"
+    },
+    {
+      "region_id": 259,
+      "current_name": "Garrison Park — West",
+      "google_maps_name": "Garrison Park",
+      "confidence": "medium",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Garrison Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 260,
+      "current_name": "Garrison Park — East",
+      "google_maps_name": "Garrison Park",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Armadillo Park\" is not a common neighborhood name; the area is widely known as Garrison Park."
+    },
+    {
+      "region_id": 261,
+      "current_name": "Franklin Park — Northwest",
+      "google_maps_name": "Franklin Park",
+      "confidence": "medium",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Franklin Park\" is the widely recognized neighborhood name for this area; the directional suffix is overly specific for common usage."
+    },
+    {
+      "region_id": 262,
+      "current_name": "Southwood — East (High Risk)",
+      "google_maps_name": "Franklin Park — East (High Risk)",
+      "confidence": "high",
+      "source": "city_of_austin_official",
+      "reasoning": "Centroid falls within official 'FRANKLIN PARK' planning area",
+      "official_name_raw": "FRANKLIN PARK"
+    },
+    {
+      "region_id": 263,
+      "current_name": "Franklin Park — Southeast",
+      "google_maps_name": "Franklin Park",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "Corrected typo from \"Frankline\" to \"Franklin\"; \"Franklin Park\" is the widely recognized neighborhood name for this area, simplifying the directional suffix."
+    },
+    {
+      "region_id": 264,
+      "current_name": "Southwood — East (Moderate)",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Comal Bluff\" is a specific street/subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 265,
+      "current_name": "Southwood — Southwest",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Parkridge Gardens\" is a specific subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 266,
+      "current_name": "Southwood — Outer West",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Buckingham Estates\" is a specific subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    },
+    {
+      "region_id": 267,
+      "current_name": "Southwood — Inner West",
+      "google_maps_name": "Southwood",
+      "confidence": "high",
+      "source": "gemini_google_maps",
+      "reasoning": "\"Elmwood Estates\" is a specific subdivision; the broader, more commonly recognized neighborhood is Southwood."
+    }
+  ]
+}
