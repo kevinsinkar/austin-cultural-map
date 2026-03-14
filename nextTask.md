@@ -1,107 +1,86 @@
-## GitHub Task: Refactor DVI & Triage Logic to Mitigate Data Bias
+## Task: Disambiguate Duplicate Region Names
 
-**Context:** The current `AUDITED_DVI_LOOKUP` and `TriageView` rely on scraped business data that suffers from "digital preservation bias" (over-representing internet-famous spots while missing non-digital neighborhood anchors). We need to adjust the DVI to be more predictive and the TriageView to be more skeptical of incomplete business data.
+### Problem
 
----
+The 269 regions in `data/regionIndex.js` are census tracts mapped to neighborhood names, but **44 neighborhood names are shared by multiple tracts** (165 unique names out of 269 regions). This causes real UX problems:
 
-### Step 1: Update `auditedDvi.js`
+- **Compare tab** (`components/ComparisonView.jsx`): The region selector dropdowns list names from `REGION_NAMES` (defined in `data/constants.js` as `REGION_INDEX.map(r => r.region_name).sort()`). Duplicate names appear multiple times with no way to tell them apart. Selecting "Zilker" could be any of 5 different tracts with DVI scores ranging from 4.9 to 85.7.
+- **Triage tab** (`components/TriageView.jsx`): The sortable table shows `region_name` for each of the 269 rows. Seven rows all say "Circle C Ranch" with different DVI scores — confusing for grant decisions.
+- **Timeline tab** (`components/TimelineView.jsx`): The DVI heatmap table at the bottom iterates over all 269 `REGION_INDEX` entries, producing duplicate row labels.
 
-**Instruction for AI:** "Modify `data/auditedDvi.js` to include a 'Data Confidence' multiplier and refine the weighting. If a region has high demographic vulnerability but zero business data, do not assume zero risk; instead, weight the Socioeconomic Stress higher to account for potential 'data ghosts.'"
+### Duplicate inventory (44 names, sorted by frequency)
 
-```javascript
-/** * REFACTOR: Update AUDITED_DVI_LOOKUP 
- * 1. Introduce a 'Data Confidence Score' based on source_audit fields.
- * 2. Adjust weights if Market Pressure or Socio data is missing.
- */
+| Name | Count | DVI range | Notes |
+|------|-------|-----------|-------|
+| Circle C Ranch | 7 | 4.9–4.9 | All identical DVI — strong merge candidate |
+| Northwood | 7 | 4.9–69.5 | Wide DVI spread — tracts are diverse |
+| Montopolis | 7 | 0–70.3 | Wide spread |
+| North Shoal Creek | 6 | 17.8–72.4 | Wide spread |
+| Great Hills | 6 | 4.9–61.1 | |
+| River Place | 6 | 4.9–4.9 | All identical DVI — strong merge candidate |
+| Steiner Ranch | 6 | 4.9–12.4 | Low spread — merge candidate |
+| Zilker | 5 | 4.9–85.7 | Very wide spread |
+| Milwood | 5 | 4.9–4.9 | All identical DVI — strong merge candidate |
+| Oak Hill | 5 | 4.9–29.2 | |
+| Wells Branch | 5 | 4.9–53.5 | |
+| Cherrywood | 4 | 21.1–70.3 | |
+| The Arboretum | 4 | 4.9–23.8 | |
+| Shady Hollow | 4 | 4.9–17.8 | |
+| Southwood | 4 | 4.9–63.2 | |
+| Jollyville | 4 | 4.9–4.9 | All identical DVI — strong merge candidate |
+| + 28 more names | 2–3 each | various | |
 
-// Inside the year loop in auditedDvi.js:
-const V = demScore(d);
-const P = propScore(p, s);
-const S = socioScore(s);
+### Approach options (pick one or combine)
 
-// New logic: Check if we have high audit confidence
-const confidence = (d?.audit_confidence + (p?.audit_confidence || 0) + (s?.audit_confidence || 0)) / 3;
+#### Option A: Merge contiguous tracts with the same name into a single region
 
-const parts = [];
-if (V != null) parts.push({ score: V, weight: 0.35 });
-if (P != null) parts.push({ score: P, weight: 0.35 });
-if (S != null) parts.push({ score: S, weight: 0.30 });
+If multiple tracts share a name AND their GeoJSON polygons are adjacent (share a border), merge them into one region by:
+1. Combining their GeoJSON geometries into a `MultiPolygon` in `data/final_updated_regions.js`
+2. Averaging or population-weighting their demographic/property/socioeconomic rows in the phase1_output JSON files (or keeping per-tract rows and aggregating at display time)
+3. Assigning the merged region a single `region_id` and updating `regionIndex.js`
+4. This is the cleanest long-term fix but the most work
 
-// If confidence is low, boost the weight of Socioeconomic Stress (S) 
-// as it often tracks displacement more reliably than property appreciation in 'data deserts'.
-if (confidence < 0.5 && S != null) {
-  const sPart = parts.find(p => p.score === S);
-  if (sPart) sPart.weight += 0.10; 
-}
+To check adjacency, you can use the GeoJSON polygons in `data/final_updated_regions.js` — tracts sharing the same name that share a polygon edge are merge candidates.
 
-```
+#### Option B: Append a disambiguator to non-unique names
 
----
+For each duplicated name, modify `region_name` (or add a `display_name` field) in `data/regionIndex.js` to include a differentiator. Options:
+- **Tract ID**: "Zilker (Tract 15)" — technical but unambiguous
+- **Cardinal direction from centroid cluster**: "Zilker — South", "Zilker — Central" — user-friendly, computed from lat/lng centroids relative to the group mean
+- **DVI tier suffix**: "Montopolis (High DVI)", "Montopolis (Low DVI)" — directly meaningful for this tool's purpose
 
-### Step 2: Rework `TriageView.jsx` Logic
+#### Option C: Hybrid — merge where DVI is identical, disambiguate where it diverges
 
-**Instruction for AI:**
-"Rework the classification logic in `components/TriageView.jsx`. Instead of using raw `LEGACY_OPERATING` counts (which are biased), use a 'Proxy Vulnerability Score.' If a region has High DVI but Low Business Count, classify it as 'Potential Data Gap' rather than 'Safe.'"
+- If all tracts sharing a name have the same DVI score (Circle C Ranch: all 4.9, Milwood: all 4.9, Jollyville: all 4.9, River Place: all 4.9), merge them — they're effectively one region for this tool's purposes
+- If tracts sharing a name have divergent DVI scores (Zilker: 4.9–85.7, Montopolis: 0–70.3), disambiguate with a suffix since they tell different displacement stories
 
-```javascript
-/** * REFACTOR: Triage Classification 
- * Move away from 'Anchor Density' as a primary metric toward 'Environmental Risk'.
- */
+### Files to modify
 
-const getTriageCategory = (dvi, anchorCount, regionId) => {
-  const isHighRisk = dvi > 55; // 'Critical' or 'Severe' bands
-  
-  // BIAS CHECK: If there are 0 businesses but DVI is high, 
-  // it is likely a reporting gap, not a lack of culture.
-  if (isHighRisk && anchorCount === 0) {
-    return {
-      label: "High Risk / Data Gap",
-      color: "#FF9800", // Alert orange instead of Post-Displacement gray
-      action: "Field Audit Required"
-    };
-  }
+| File | What changes |
+|------|-------------|
+| `data/regionIndex.js` | Add `display_name` field (or update `region_name`) for all 269 entries. If merging, remove merged duplicates and assign new IDs. |
+| `data/final_updated_regions.js` | If merging: combine GeoJSON polygons into MultiPolygons. If disambiguating: update `region_name` in feature properties. |
+| `data/constants.js` | `REGION_NAMES` derives from `REGION_INDEX` — will auto-update if `region_name` changes. If using `display_name`, update to use that field instead. |
+| `data/regionLookup.js` | `NAME_TO_ID` and `ID_TO_NAME` maps — must reflect new names or merged IDs. |
+| `components/ComparisonView.jsx` | Uses `REGION_NAMES` for dropdown options and `NAME_TO_ID` for lookups. If using `display_name`, update the `<option>` rendering. |
+| `components/TriageView.jsx` | Displays `region_name` in the table. Update to use `display_name` or the new merged names. |
+| `components/TimelineView.jsx` | DVI heatmap iterates `REGION_INDEX` and shows `short_name`. Update to use `display_name` or short variant. |
+| `hooks/useAustinMap.js` | Tooltip on hover shows `region_name` from GeoJSON feature properties. |
+| `data/auditedData.js` | If merging: the `AUDITED_*_BY_ID` Maps need to reflect merged region IDs. |
+| `data/auditedDvi.js` | `AUDITED_DVI_LOOKUP` keyed by `region_id` — needs merged IDs if merging. |
 
-  if (isHighRisk && anchorCount > 0) return { label: "Urgent Preservation", color: "#F44336" };
-  if (dvi > 35 && anchorCount > 0) return { label: "Monitor & Protect", color: "#2196F3" };
-  
-  return { label: "Stable", color: "#4CAF50" };
-};
+### Constraints
 
-```
+- The map choropleth (`hooks/useAustinMap.js`) renders GeoJSON features directly — each polygon must retain a unique `region_id` in its properties regardless of approach
+- Business data in `data/businesses.js` references `region_id` — must stay consistent
+- The three phase1_output JSON files use `region_id` as the join key — if merging, decide whether to aggregate data or keep per-tract rows
+- `REGION_NAMES` is currently sorted alphabetically (just changed) — maintain that
 
----
+### Acceptance criteria
 
-### Step 3: Implement Bi-Yearly Interpolation in `math.js`
-
-**Instruction for AI:**
-"Update `utils/math.js` to support bi-yearly (every 6 months) interpolation. This will allow the UI to show 'Market Shocks' between the standard ACS yearly snapshots."
-
-```javascript
-/**
- * REFACTOR: interpolateDvi
- * Allow for fractional years (e.g., 2023.5) to simulate bi-yearly reporting.
- */
-export function interpolateDvi(regionId, targetYear) {
-  const series = AUDITED_DVI_LOOKUP[regionId];
-  if (!series) return 0;
-
-  // Find the two surrounding years for the targetYear (e.g., 2022 and 2023)
-  const prior = _.findLast(series, p => p.year <= targetYear);
-  const next = _.find(series, p => p.year > targetYear);
-
-  if (!next) return prior ? prior.dvi : 0;
-  if (!prior) return next.dvi;
-
-  // Linear interpolation for the 6-month 'mid-point'
-  const t = (targetYear - prior.year) / (next.year - prior.year);
-  return parseFloat((prior.dvi + t * (next.dvi - prior.dvi)).toFixed(1));
-}
-
-```
-
----
-
-### Step 4: Documentation Update
-
-**Instruction for AI:**
-"Update `ARCHITECTURE.md` Section 7 (Key Domain Concepts) to explicitly mention 'Digital Preservation Bias' and how the Data Confidence Score in `auditedDvi.js` mitigates this."
+- No two entries in the Compare dropdowns have identical display text
+- No two rows in the Triage table have identical display text
+- No two rows in the Timeline DVI heatmap have identical display text
+- Map tooltips show the disambiguated name
+- All data lookups (DVI, demographics, property, socio, businesses) still work correctly
+- The total region count may decrease if merging, but no data should be lost

@@ -8,6 +8,7 @@ import {
   REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED,
   DEMOGRAPHICS, AUDITED_DVI_LOOKUP,
 } from "../data";
+import { VISIBLE_REGIONS, getMergedIds } from "../data/regionLookup";
 import {
   interpolateDvi, calcAnchorDensity, calcAnchorPressureScore,
   getDviBandColor,
@@ -101,22 +102,24 @@ export default function TriageView() {
 
   const resetWeights = useCallback(() => setWeights({ ...DEFAULT_WEIGHTS }), []);
 
-  // ── Compute per-region triage data ──
+  // ── Compute per-region triage data (only visible/primary regions) ──
   const regionData = useMemo(() => {
-    return REGION_INDEX.map((r) => {
+    return VISIBLE_REGIONS.map((r) => {
       const rid = r.region_id;
-      const name = r.region_name;
+      const name = r.display_name;
+      // For merged regions, aggregate across all member IDs
+      const allIds = getMergedIds(rid);
       const dvi = interpolateDvi(rid, 2023);
-      const density = calcAnchorDensity(rid);
-      const pressureScore = calcAnchorPressureScore(rid);
 
-      const open = LEGACY_OPERATING.filter((b) => b.region_id === rid);
-      const closed = LEGACY_CLOSED.filter((b) => b.region_id === rid);
+      const open = LEGACY_OPERATING.filter((b) => allIds.includes(b.region_id));
+      const closed = LEGACY_CLOSED.filter((b) => allIds.includes(b.region_id));
       const survivingCount = open.length;
       const closedCount = closed.length;
       const highPressureCount = open.filter(
         (b) => b.pressure === "High" || b.pressure === "Critical"
       ).length;
+      const density = calcAnchorDensity(rid);
+      const pressureScore = calcAnchorPressureScore(rid);
 
       // Rent burden from demographics
       const demo2023 = DEMOGRAPHICS.find(

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import _ from "lodash";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -49,6 +50,13 @@ export default function RegionDetailPanel({
 
   const nd = activeRegionName === "The Domain / North Burnet";
   const d = currentDvi[activeRegionName] || 0;
+  const [panelTab, setPanelTab] = useState("demographics");
+
+  const panelTabs = [
+    { key: "demographics", label: "Demographics" },
+    { key: "economics", label: "Economics" },
+    { key: "culture", label: "Culture" },
+  ];
 
   return (
     <div
@@ -58,11 +66,11 @@ export default function RegionDetailPanel({
       aria-label="Region detail panel"
     >
       <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        {/* Header */}
+        {/* Header — always visible */}
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
             <div>
-              <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 20, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 }}>{activeFeature.properties.region_name} <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}>[id. {activeFeature.properties.region_id}]</span></h2>
+              <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 20, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 }}>{activeRegionName} <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}>[id. {activeFeature.properties.region_id}]</span></h2>
               {activeFeature.properties.heritage && (
                 <span style={{ display: "inline-block", fontSize: 10, color: "#7c6f5e", padding: "2px 8px", background: "#f5f0ea", borderRadius: 3, fontWeight: 500, marginTop: 4 }}>
                   {activeFeature.properties.heritage}
@@ -101,296 +109,337 @@ export default function RegionDetailPanel({
               );
             })()}
           </div>
-        </div>
 
-        {/* Demo chart */}
-        <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-          <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Demographic Composition</h3>
-          {(() => {
-            if (!demoChartData.length) {
-              return (
-                <div style={{ padding: "24px 0", textAlign: "center" }}>
-                  <div style={{ fontSize: 24, marginBottom: 8, opacity: 0.2 }} aria-hidden="true">📊</div>
-                  <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>No demographic data available for this region at this time.</div>
-                </div>
-              );
-            }
-
-            // Check whether the demographic breakdown is conclusive:
-            // average the sum of racial fractions across all years; if < 50% treat as inconclusive
-            const breakdownSums = demoChartData.map((d) => (d.White || 0) + (d.Black || 0) + (d.Hispanic || 0) + (d.Asian || 0));
-            const avgBreakdown = breakdownSums.reduce((a, b) => a + b, 0) / breakdownSums.length;
-            const hasBreakdown = avgBreakdown >= 0.5;
-
-            // Check whether any row has a reported total population > 0
-            const hasPop = demoChartData.some((d) => d.total > 0);
-
-            const nearest = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
-
-            return (
-              <>
-                {hasBreakdown ? (
-                  <>
-                    <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2023</p>
-                    <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${activeRegionName}`}>
-                      <ResponsiveContainer>
-                        <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
-                          <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
-                          <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} />
-                          <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
-                          <Tooltip content={<ChartTooltip />} />
-                          <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
-                          <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" />
-                          <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" />
-                          <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" />
-                          <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" />
-                          <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" />
-                        </AreaChart>
-                      </ResponsiveContainer>
-                    </div>
-                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 8 }}>
-                      {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
-                        <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                          <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
-                          <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <div style={{ padding: "20px 0", textAlign: "center" }}>
-                    <div style={{ fontSize: 24, marginBottom: 8, opacity: 0.2 }} aria-hidden="true">📊</div>
-                    <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>Demographic breakdown data is inconclusive for this region at this time.</div>
-                  </div>
-                )}
-
-                {/* Population summary — shown whenever population data exists, regardless of breakdown */}
-                {hasPop && nearest && (
-                  <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
-                    In <strong>{nearest.year}</strong>, total pop. was <strong>{nearest.total != null ? nearest.total.toLocaleString() : "N/A"}</strong>.
-                    {hasBreakdown && (<>
-                      {" "}Black: <strong style={{ color: DEMO_COLORS.Black }}>{nearest.popBlack != null ? nearest.popBlack.toLocaleString() : "N/A"}</strong>.
-                      {" "}Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{nearest.popHispanic != null ? nearest.popHispanic.toLocaleString() : "N/A"}</strong>.
-                      {" "}White: <strong style={{ color: DEMO_COLORS.White }}>{nearest.popWhite != null ? nearest.popWhite.toLocaleString() : "N/A"}</strong>.
-                    </>)}
-                  </div>
-                )}
-              </>
-            );
-          })()}
-        </div>
-
-        {/* Property & Socioeconomic Metrics */}
-        {(propertyNow || socioNow) && (
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-            {/* Property Metrics */}
-            {propertyNow && [
-              { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value },
-              { label: "Median Rent", value: propertyNow.median_rent_monthly, fmt: (v) => v != null ? "$" + v.toLocaleString() : "N/A", prevVal: propertyPrev?.median_rent_monthly },
-            ].map((c, i) => {
-              const valueAdj = c.value != null ? adjustForInflation(c.value, propertyNow.year) : null;
-              const prevValAdj = c.prevVal != null && propertyPrev?.year != null
-                ? adjustForInflation(c.prevVal, propertyPrev.year)
-                : null;
-
-              const ch = valueAdj != null && prevValAdj != null ? fmtChange(valueAdj, prevValAdj) : null;
-              const up = ch?.dir === "up";
-              // For property, up is usually good except for rent
-              const bad = c.label === "Median Rent" ? up : !up;
-
-              const nominalFmt = c.fmt(c.value);
-              const adjustedFmt = c.fmt(valueAdj);
-
-              return (
-                <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
-                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
-                      {nominalFmt}
-                      {valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
-                    </span>
-                    {ch && (
-                      <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${propertyPrev?.year}`}>
-                        <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
-                        {Math.abs(ch.raw).toFixed(0)}%
-                      </span>
-                    )}
-                  </div>
-                  <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
-                    (nominal / 2023$)
-                    {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
-                  </div>
-                </div>
-              );
-            })}
-            {/* Socioeconomic Metrics */}
-            {socioNow && [
-              { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: socioPrev?.median_household_income, sub: "Annual", isCurrency: true },
-              { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: (v) => v != null ? v.toFixed(1) + "%" : "N/A", prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true, isCurrency: false },
-            ].map((c, i) => {
-              const valueAdj = c.isCurrency && c.value != null ? adjustForInflation(c.value, socioNow.year) : null;
-              const prevValAdj = c.isCurrency && c.prevVal != null && socioPrev?.year != null
-                ? adjustForInflation(c.prevVal, socioPrev.year)
-                : null;
-
-              const ch = c.isCurrency
-                ? (valueAdj != null && prevValAdj != null ? fmtChange(valueAdj, prevValAdj) : null)
-                : (c.prevVal != null ? fmtChange(c.value, c.prevVal) : null);
-              
-              const up = ch?.dir === "up";
-              const bad = c.inv ? up : !up;
-
-              const nominalFmt = c.fmt(c.value);
-              const adjustedFmt = c.fmt(valueAdj);
-
-              return (
-                <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
-                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
-                      {nominalFmt}
-                      {c.isCurrency && valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
-                    </span>
-                    {ch && (
-                      <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${socioPrev?.year}`}>
-                        <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
-                        {Math.abs(ch.raw).toFixed(0)}%
-                      </span>
-                    )}
-                  </div>
-                  <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
-                    {c.isCurrency ? "(nominal / 2023$)" : c.sub}
-                    {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
-                  </div>
-                </div>
-              );
-            })}
-            {/* Rent Burden — from demographics via demoChartData */}
-            {(() => {
-              const n = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
-              const prev = demoChartData.length > 1 ? demoChartData[0] : null;
-              if (!n || n.rent_burden_pct == null) return null;
-              const ch = prev && prev.rent_burden_pct != null ? fmtChange(n.rent_burden_pct, prev.rent_burden_pct) : null;
-              const up = ch?.dir === "up";
-              const bad = up; // rising rent burden = bad
-              return (
-                <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px", gridColumn: "1 / -1" }}>
-                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                    <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{n.rent_burden_pct.toFixed(1)}%</span>
-                    {ch && (
-                      <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${prev?.year}`}>
-                        <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
-                        {Math.abs(ch.raw).toFixed(0)}%
-                      </span>
-                    )}
-                  </div>
-                  <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5 }}>
-                    % of renter households paying &ge;30% of income on rent
-                    {ch && prev && <span> · vs {prev.year}</span>}
-                  </div>
-                </div>
-              );
-            })()}
-          </div>
-        )}
-
-        {/* Tipping point */}
-        {tippingPoint && tippingPoint.magnitude !== "N/A" && (
-          <div style={{ background: "#fefbf3", borderRadius: 10, border: "1px solid #e6dfc8", padding: "16px 18px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#b45309" strokeWidth="1.5" fill="none" /><path d="M8 4v5M8 11v1" stroke="#b45309" strokeWidth="1.5" strokeLinecap="round" /></svg>
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#92400e" }}>What Happened Here?</span>
-              <span style={{ fontSize: 10, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
-            </div>
-            <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>The tipping point: {tippingPoint.decade}</div>
-            <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.description}</p>
-            <div style={{ fontSize: 11, color: "#78716c", lineHeight: 1.4, borderTop: "1px solid #e6dfc8", paddingTop: 8 }}>
-              <strong style={{ color: "#92400e" }}>Catalyst:</strong> {tippingPoint.event} <span style={{ color: "#a8a49c" }}>({tippingPoint.eventYear})</span>
-            </div>
-            {activeRegionName === "Dove Springs" && <div style={{ fontSize: 11, color: "#7c6f5e", fontStyle: "italic", marginTop: 8 }}>Note: Dove Springs is a receiving community. Changes reflect inflow of displaced families, not gentrification.</div>}
-          </div>
-        )}
-        {activeRegionName === "The Domain / North Burnet" && (
-          <div style={{ background: "#f5f0ea", borderRadius: 10, border: "1px solid #e6dfc8", padding: "16px 18px" }}>
-            <div style={{ fontSize: 12, fontWeight: 600, color: "#7c6f5e", marginBottom: 4 }}>Greenfield Development</div>
-            <p style={{ fontSize: 12, color: "#64615b", margin: 0, lineHeight: 1.5 }}>Developed on non-residential land. DVI not applicable — included as comparison reference.</p>
-          </div>
-        )}
-
-        {/* Legacy businesses */}
-        {(regionBizOpen.length > 0 || regionBizClosed.length > 0) && (
-          <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-            <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Legacy Businesses</h3>
-            <div style={{ display: "flex", gap: 0, marginBottom: 12, borderBottom: "2px solid #e8e5e0" }} role="tablist">
-              {[
-                { key: "open", label: `Still Here (${regionBizOpen.length})` },
-                { key: "closed", label: `What We Lost (${regionBizClosed.length})` },
-              ].map((tab) => (
-                <button key={tab.key} onClick={() => setBizTab(tab.key)} role="tab" aria-selected={bizTab === tab.key} style={{ padding: "6px 14px", fontSize: 12, fontWeight: bizTab === tab.key ? 600 : 400, color: bizTab === tab.key ? "#0f766e" : "#a8a49c", background: "none", border: "none", cursor: "pointer", borderBottom: bizTab === tab.key ? "2px solid #0f766e" : "2px solid transparent", marginBottom: -2, minHeight: 32 }}>
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-            <div role="tabpanel">
-              {bizTab === "open" && (
-                regionBizOpen.length === 0 ? (
-                  <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No legacy businesses recorded.</div>
-                ) : (
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {regionBizOpen.map((b) => (
-                      <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => setSelectedBiz(b)} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") setSelectedBiz(b); }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                          <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
-                          <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
-                        </div>
-                        <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
-                          <span style={{ fontSize: 10, color: "#64615b" }}>{b.type}</span>
-                          <span style={{ fontSize: 10, color: "#7c6f5e" }}>·</span>
-                          <span style={{ fontSize: 10, color: "#7c6f5e" }}>{b.culture}</span>
-                          <span style={{ marginLeft: "auto", display: "flex", gap: 2 }}>
-                            {pressureDots(b.pressure).map((on, i) => (
-                              <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: on ? pressureColor(b.pressure) : "#e8e5e0" }} aria-hidden="true" />
-                            ))}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )
-              )}
-              {bizTab === "closed" && (
-                regionBizClosed.length === 0 ? (
-                  <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No closed legacy businesses recorded.</div>
-                ) : (
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {regionBizClosed.map((b) => (
-                      <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => setSelectedBiz({ ...b, _closed: true })} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") setSelectedBiz({ ...b, _closed: true }); }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                          <div style={{ fontSize: 13, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
-                          <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
-                        </div>
-                        <div style={{ fontSize: 10, color: "#7c6f5e", marginTop: 2 }}>{b.culture} · {b.type}</div>
-                        <div style={{ fontSize: 10, color: "#991b1b", marginTop: 4, fontWeight: 500 }}>Closed: {b.cause}</div>
-                        <div style={{ fontSize: 10, color: "#64615b", marginTop: 2 }}>Now: <span style={{ fontWeight: 500 }}>{b.replacedBy}</span></div>
-                      </div>
-                    ))}
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Narrative callouts */}
-        {narrativeCallouts.length > 0 && (
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {narrativeCallouts.map((c, i) => (
-              <div key={i} style={{ background: c.type === "pop_loss" ? "#faf5ff" : "#fffbeb", borderRadius: 8, padding: "12px 14px", borderLeft: `3px solid ${c.type === "pop_loss" ? "#7c3aed" : "#f59e0b"}` }} role="note">
-                <p style={{ fontSize: 12, color: "#1a1a1a", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{c.text}</p>
-              </div>
+          {/* Panel tab bar */}
+          <div style={{ display: "flex", gap: 0, marginTop: 14, borderBottom: "2px solid #e8e5e0" }} role="tablist" aria-label="Detail panel sections">
+            {panelTabs.map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setPanelTab(tab.key)}
+                role="tab"
+                aria-selected={panelTab === tab.key}
+                style={{
+                  flex: 1,
+                  padding: "7px 0",
+                  fontSize: 11,
+                  fontWeight: panelTab === tab.key ? 600 : 400,
+                  color: panelTab === tab.key ? "#0f766e" : "#a8a49c",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  borderBottom: panelTab === tab.key ? "2px solid #0f766e" : "2px solid transparent",
+                  marginBottom: -2,
+                  minHeight: 32,
+                  letterSpacing: ".03em",
+                  textTransform: "uppercase",
+                }}
+              >
+                {tab.label}
+              </button>
             ))}
           </div>
+        </div>
+
+        {/* ═══ DEMOGRAPHICS TAB ═══ */}
+        {panelTab === "demographics" && (
+          <>
+            <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+              <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Demographic Composition</h3>
+              {(() => {
+                if (!demoChartData.length) {
+                  return (
+                    <div style={{ padding: "24px 0", textAlign: "center" }}>
+                      <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>No demographic data available for this region at this time.</div>
+                    </div>
+                  );
+                }
+
+                const breakdownSums = demoChartData.map((d) => (d.White || 0) + (d.Black || 0) + (d.Hispanic || 0) + (d.Asian || 0));
+                const avgBreakdown = breakdownSums.reduce((a, b) => a + b, 0) / breakdownSums.length;
+                const hasBreakdown = avgBreakdown >= 0.5;
+                const hasPop = demoChartData.some((d) => d.total > 0);
+                const nearest = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
+
+                return (
+                  <>
+                    {hasBreakdown ? (
+                      <>
+                        <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2023</p>
+                        <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${activeRegionName}`}>
+                          <ResponsiveContainer>
+                            <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
+                              <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
+                              <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} />
+                              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                              <Tooltip content={<ChartTooltip />} />
+                              <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
+                              <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" />
+                              <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" />
+                              <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" />
+                              <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" />
+                              <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" />
+                            </AreaChart>
+                          </ResponsiveContainer>
+                        </div>
+                        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 8 }}>
+                          {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
+                            <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                              <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
+                              <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <div style={{ padding: "20px 0", textAlign: "center" }}>
+                        <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>Demographic breakdown data is inconclusive for this region at this time.</div>
+                      </div>
+                    )}
+
+                    {hasPop && nearest && (
+                      <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
+                        In <strong>{nearest.year}</strong>, total pop. was <strong>{nearest.total != null ? nearest.total.toLocaleString() : "N/A"}</strong>.
+                        {hasBreakdown && (<>
+                          {" "}Black: <strong style={{ color: DEMO_COLORS.Black }}>{nearest.popBlack != null ? nearest.popBlack.toLocaleString() : "N/A"}</strong>.
+                          {" "}Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{nearest.popHispanic != null ? nearest.popHispanic.toLocaleString() : "N/A"}</strong>.
+                          {" "}White: <strong style={{ color: DEMO_COLORS.White }}>{nearest.popWhite != null ? nearest.popWhite.toLocaleString() : "N/A"}</strong>.
+                        </>)}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
+            </div>
+
+            {/* Narrative callouts */}
+            {narrativeCallouts.length > 0 && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {narrativeCallouts.map((c, i) => (
+                  <div key={i} style={{ background: c.type === "pop_loss" ? "#faf5ff" : "#fffbeb", borderRadius: 8, padding: "12px 14px", borderLeft: `3px solid ${c.type === "pop_loss" ? "#7c3aed" : "#f59e0b"}` }} role="note">
+                    <p style={{ fontSize: 12, color: "#1a1a1a", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{c.text}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
+        )}
+
+        {/* ═══ ECONOMICS TAB ═══ */}
+        {panelTab === "economics" && (
+          <>
+            {(propertyNow || socioNow) ? (
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                {/* Property Metrics */}
+                {propertyNow && [
+                  { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value },
+                  { label: "Median Rent", value: propertyNow.median_rent_monthly, fmt: (v) => v != null ? "$" + v.toLocaleString() : "N/A", prevVal: propertyPrev?.median_rent_monthly },
+                ].map((c) => {
+                  const valueAdj = c.value != null ? adjustForInflation(c.value, propertyNow.year) : null;
+                  const prevValAdj = c.prevVal != null && propertyPrev?.year != null
+                    ? adjustForInflation(c.prevVal, propertyPrev.year)
+                    : null;
+
+                  const ch = valueAdj != null && prevValAdj != null ? fmtChange(valueAdj, prevValAdj) : null;
+                  const up = ch?.dir === "up";
+                  const bad = c.label === "Median Rent" ? up : !up;
+
+                  const nominalFmt = c.fmt(c.value);
+                  const adjustedFmt = c.fmt(valueAdj);
+
+                  return (
+                    <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
+                      <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+                        <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
+                          {nominalFmt}
+                          {valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
+                        </span>
+                        {ch && (
+                          <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${propertyPrev?.year}`}>
+                            <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
+                            {Math.abs(ch.raw).toFixed(0)}%
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
+                        (nominal / 2023$)
+                        {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* Socioeconomic Metrics */}
+                {socioNow && [
+                  { label: "Median Household Income", value: socioNow.median_household_income, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: socioPrev?.median_household_income, sub: "Annual", isCurrency: true },
+                  { label: "Poverty Rate", value: socioNow.poverty_rate, fmt: (v) => v != null ? v.toFixed(1) + "%" : "N/A", prevVal: socioPrev?.poverty_rate, sub: "% of pop.", inv: true, isCurrency: false },
+                ].map((c) => {
+                  const valueAdj = c.isCurrency && c.value != null ? adjustForInflation(c.value, socioNow.year) : null;
+                  const prevValAdj = c.isCurrency && c.prevVal != null && socioPrev?.year != null
+                    ? adjustForInflation(c.prevVal, socioPrev.year)
+                    : null;
+
+                  const ch = c.isCurrency
+                    ? (valueAdj != null && prevValAdj != null ? fmtChange(valueAdj, prevValAdj) : null)
+                    : (c.prevVal != null ? fmtChange(c.value, c.prevVal) : null);
+
+                  const up = ch?.dir === "up";
+                  const bad = c.inv ? up : !up;
+
+                  const nominalFmt = c.fmt(c.value);
+                  const adjustedFmt = c.fmt(valueAdj);
+
+                  return (
+                    <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
+                      <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+                        <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
+                          {nominalFmt}
+                          {c.isCurrency && valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
+                        </span>
+                        {ch && (
+                          <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${socioPrev?.year}`}>
+                            <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
+                            {Math.abs(ch.raw).toFixed(0)}%
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
+                        {c.isCurrency ? "(nominal / 2023$)" : c.sub}
+                        {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* Rent Burden */}
+                {(() => {
+                  const n = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
+                  const prev = demoChartData.length > 1 ? demoChartData[0] : null;
+                  if (!n || n.rent_burden_pct == null) return null;
+                  const ch = prev && prev.rent_burden_pct != null ? fmtChange(n.rent_burden_pct, prev.rent_burden_pct) : null;
+                  const up = ch?.dir === "up";
+                  const bad = up;
+                  return (
+                    <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px", gridColumn: "1 / -1" }}>
+                      <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+                        <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{n.rent_burden_pct.toFixed(1)}%</span>
+                        {ch && (
+                          <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${prev?.year}`}>
+                            <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
+                            {Math.abs(ch.raw).toFixed(0)}%
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5 }}>
+                        % of renter households paying &ge;30% of income on rent
+                        {ch && prev && <span> · vs {prev.year}</span>}
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            ) : (
+              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "24px 20px", textAlign: "center" }}>
+                <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No property or socioeconomic data available for this region.</div>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* ═══ CULTURE TAB ═══ */}
+        {panelTab === "culture" && (
+          <>
+            {/* Tipping point */}
+            {tippingPoint && tippingPoint.magnitude !== "N/A" && (
+              <div style={{ background: "#fefbf3", borderRadius: 10, border: "1px solid #e6dfc8", padding: "16px 18px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#b45309" strokeWidth="1.5" fill="none" /><path d="M8 4v5M8 11v1" stroke="#b45309" strokeWidth="1.5" strokeLinecap="round" /></svg>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: "#92400e" }}>What Happened Here?</span>
+                  <span style={{ fontSize: 10, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
+                </div>
+                <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>The tipping point: {tippingPoint.decade}</div>
+                <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.description}</p>
+                <div style={{ fontSize: 11, color: "#78716c", lineHeight: 1.4, borderTop: "1px solid #e6dfc8", paddingTop: 8 }}>
+                  <strong style={{ color: "#92400e" }}>Catalyst:</strong> {tippingPoint.event} <span style={{ color: "#a8a49c" }}>({tippingPoint.eventYear})</span>
+                </div>
+                {activeRegionName === "Dove Springs" && <div style={{ fontSize: 11, color: "#7c6f5e", fontStyle: "italic", marginTop: 8 }}>Note: Dove Springs is a receiving community. Changes reflect inflow of displaced families, not gentrification.</div>}
+              </div>
+            )}
+            {activeRegionName === "The Domain / North Burnet" && (
+              <div style={{ background: "#f5f0ea", borderRadius: 10, border: "1px solid #e6dfc8", padding: "16px 18px" }}>
+                <div style={{ fontSize: 12, fontWeight: 600, color: "#7c6f5e", marginBottom: 4 }}>Greenfield Development</div>
+                <p style={{ fontSize: 12, color: "#64615b", margin: 0, lineHeight: 1.5 }}>Developed on non-residential land. DVI not applicable — included as comparison reference.</p>
+              </div>
+            )}
+
+            {/* Legacy businesses */}
+            {(regionBizOpen.length > 0 || regionBizClosed.length > 0) ? (
+              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+                <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Legacy Businesses</h3>
+                <div style={{ display: "flex", gap: 0, marginBottom: 12, borderBottom: "2px solid #e8e5e0" }} role="tablist">
+                  {[
+                    { key: "open", label: `Still Here (${regionBizOpen.length})` },
+                    { key: "closed", label: `What We Lost (${regionBizClosed.length})` },
+                  ].map((tab) => (
+                    <button key={tab.key} onClick={() => setBizTab(tab.key)} role="tab" aria-selected={bizTab === tab.key} style={{ padding: "6px 14px", fontSize: 12, fontWeight: bizTab === tab.key ? 600 : 400, color: bizTab === tab.key ? "#0f766e" : "#a8a49c", background: "none", border: "none", cursor: "pointer", borderBottom: bizTab === tab.key ? "2px solid #0f766e" : "2px solid transparent", marginBottom: -2, minHeight: 32 }}>
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+                <div role="tabpanel">
+                  {bizTab === "open" && (
+                    regionBizOpen.length === 0 ? (
+                      <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No legacy businesses recorded.</div>
+                    ) : (
+                      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                        {regionBizOpen.map((b) => (
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => setSelectedBiz(b)} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") setSelectedBiz(b); }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                              <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
+                              <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
+                            </div>
+                            <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
+                              <span style={{ fontSize: 10, color: "#64615b" }}>{b.type}</span>
+                              <span style={{ fontSize: 10, color: "#7c6f5e" }}>·</span>
+                              <span style={{ fontSize: 10, color: "#7c6f5e" }}>{b.culture}</span>
+                              <span style={{ marginLeft: "auto", display: "flex", gap: 2 }}>
+                                {pressureDots(b.pressure).map((on, i) => (
+                                  <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: on ? pressureColor(b.pressure) : "#e8e5e0" }} aria-hidden="true" />
+                                ))}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  )}
+                  {bizTab === "closed" && (
+                    regionBizClosed.length === 0 ? (
+                      <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No closed legacy businesses recorded.</div>
+                    ) : (
+                      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                        {regionBizClosed.map((b) => (
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => setSelectedBiz({ ...b, _closed: true })} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") setSelectedBiz({ ...b, _closed: true }); }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                              <div style={{ fontSize: 13, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
+                              <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
+                            </div>
+                            <div style={{ fontSize: 10, color: "#7c6f5e", marginTop: 2 }}>{b.culture} · {b.type}</div>
+                            <div style={{ fontSize: 10, color: "#991b1b", marginTop: 4, fontWeight: 500 }}>Closed: {b.cause}</div>
+                            <div style={{ fontSize: 10, color: "#64615b", marginTop: 2 }}>Now: <span style={{ fontWeight: 500 }}>{b.replacedBy}</span></div>
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "24px 20px", textAlign: "center" }}>
+                <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No legacy business data recorded for this region.</div>
+              </div>
+            )}
+          </>
         )}
 
         <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "8px 4px" }}>

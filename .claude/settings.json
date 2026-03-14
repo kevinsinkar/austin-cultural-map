@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls c:/Users/k1s4l/OneDrive/Desktop/Repos/austin-cultural-map/*.md c:/Users/k1s4l/OneDrive/Desktop/Repos/austin-cultural-map/public/*.md c:/Users/k1s4l/OneDrive/Desktop/Repos/austin-cultural-map/src/*.md)",
+      "Bash(npx vite:*)",
+      "Bash(node -e \":*)",
+      "Bash(grep -r \"region_id\" /c/Users/k1s4l/OneDrive/Desktop/Repos/austin-cultural-map/data/*.js --include=\"*.js\")",
+      "Bash(node -e \"const j=JSON.parse\\(require\\(''''fs''''\\).readFileSync\\(''''/dev/stdin'''',''''utf8''''\\)\\); const dn=Object.values\\(j\\).filter\\(v=>!v.merge_into\\).map\\(v=>v.display_name\\); const unique = new Set\\(dn\\); console.log\\(''''Total display entries \\(excl merged secondaries\\):'''', dn.length\\); console.log\\(''''Unique display names:'''', unique.size\\); const dupes = dn.filter\\(\\(v,i,a\\) => a.indexOf\\(v\\) !== i\\); console.log\\(''''Remaining duplicates:'''', [...new Set\\(dupes\\)]\\);\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}

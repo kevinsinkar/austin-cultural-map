@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { REGION_INDEX } from "../data";
+import { regionLookupMap } from "../data/regionIndex";
 import { REGIONS_GEOJSON } from "../data/final_updated_regions";
 import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
 import { AUDITED_PROP_BY_ID } from "../data/auditedData";
@@ -78,7 +79,8 @@ export default function useAustinMap({
         fillColor: "#e0ddd7",
       }),
       onEachFeature: (feature, layer) => {
-        layer.bindTooltip(feature.properties.region_name, { direction: "auto", sticky: true });
+        const displayName = regionLookupMap.get(feature.properties.region_id)?.display_name || feature.properties.region_name;
+        layer.bindTooltip(displayName, { direction: "auto", sticky: true });
         layer.on({
           mouseover: (e) => {
             const l = e.target;
@@ -315,7 +317,7 @@ export default function useAustinMap({
         if (!yoy || yoy < 0.05) return;
 
         const strokeW = Math.max(0.0002, yoy * 0.0001);
-        layer.setStyle({ weight: strokeW, color: getDevPressureColor(region.region_name, year) });
+        layer.setStyle({ weight: strokeW, color: getDevPressureColor(props.region_id, year) });
       });
     }
     // When dev-pressure is off (or after any overlay update), re-apply the

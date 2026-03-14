@@ -1,7 +1,7 @@
 // REGIONS_GEOJSON (~7.6 MB) is NOT barrel-exported;
 // only hooks/useAustinMap.js imports it directly for Leaflet rendering.
 export { REGION_INDEX } from "./regionIndex";
-export { NAME_TO_ID, ID_TO_NAME, toId, toName } from "./regionLookup";
+export { NAME_TO_ID, ID_TO_NAME, toId, toName, VISIBLE_REGIONS, MERGE_LOOKUP, toPrimaryId, getMergedIds } from "./regionLookup";
 // REGION_SVGS was previously used for SVG overlays but has been
 // deprecated in favor of rendering REGIONS_GEOJSON with Leaflet's
 // native styling and event handling (see useAustinMap.js).

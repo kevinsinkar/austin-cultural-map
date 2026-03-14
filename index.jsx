@@ -15,6 +15,7 @@ import {
 // agenda markdown will be fetched at runtime
 // the files live in public/ so fetch('/ISSUES.md') works
 import { PLAY_YEARS } from "./data/constants";
+import { ID_TO_NAME } from "./data/regionLookup";
 
 // Utils
 import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
@@ -43,8 +44,8 @@ export default function AustinCulturalMap() {
   const [showMusicVenues, setShowMusicVenues] = useState(false);
   const [showDevPressure, setShowDevPressure] = useState(false);
   const [bizTab, setBizTab] = useState("open");
-  const [compA, setCompA] = useState("East 11th/12th Street Corridor");
-  const [compB, setCompB] = useState("Holly / Rainey Street");
+  const [compA, setCompA] = useState("East 11th Street");
+  const [compB, setCompB] = useState("East Cesar Chavez -Holly");
   const [showAbout, setShowAbout] = useState(false);
   const [showAgenda, setShowAgenda] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
@@ -53,6 +54,7 @@ export default function AustinCulturalMap() {
 
   const playRef = useRef(null);
   const activeRegionName = activeFeature?.properties?.region_name;
+  const activeDisplayName = activeRegionId ? (ID_TO_NAME.get(activeRegionId) || activeRegionName) : null;
 
   // ── Playback animation ──
   useEffect(() => {
@@ -77,27 +79,27 @@ export default function AustinCulturalMap() {
   const currentDvi = useMemo(() => {
     const m = {};
     REGION_INDEX.forEach((r) => {
-      m[r.region_name] = interpolateDvi(r.region_id, year);
+      m[r.display_name] = interpolateDvi(r.region_id, year);
     });
     return m;
   }, [year]);
 
   const regionBizOpen = useMemo(
-    () => (activeRegionName ? LEGACY_OPERATING.filter((b) => b.region === activeRegionName) : []),
-    [activeRegionName]
+    () => (activeRegionId ? LEGACY_OPERATING.filter((b) => b.region_id === activeRegionId) : []),
+    [activeRegionId]
   );
   const regionBizClosed = useMemo(
-    () => (activeRegionName ? LEGACY_CLOSED.filter((b) => b.region === activeRegionName) : []),
-    [activeRegionName]
+    () => (activeRegionId ? LEGACY_CLOSED.filter((b) => b.region_id === activeRegionId) : []),
+    [activeRegionId]
   );
 
   const socioNow = useMemo(
-    () => (activeRegionName ? interpolateSocio(activeRegionName, year) : null),
-    [activeRegionName, year]
+    () => (activeRegionId ? interpolateSocio(activeRegionId, year) : null),
+    [activeRegionId, year]
   );
   const socioPrev = useMemo(
-    () => (activeRegionName ? findPriorSocio(activeRegionName, year) : null),
-    [activeRegionName, year]
+    () => (activeRegionId ? findPriorSocio(activeRegionId, year) : null),
+    [activeRegionId, year]
   );
   const tippingPoint = useMemo(
     () => (activeRegionName ? TIPPING_POINTS.find((t) => t.region === activeRegionName) : null),
@@ -138,9 +140,9 @@ export default function AustinCulturalMap() {
 
   // Narrative callouts
   const narrativeCallouts = useMemo(() => {
-    if (!activeRegionName) return [];
+    if (!activeRegionId) return [];
     const out = [];
-    const rd = DEMOGRAPHICS.filter((d) => d.region === activeRegionName);
+    const rd = DEMOGRAPHICS.filter((d) => d.region_id === activeRegionId);
     const isDove = activeRegionName === "Dove Springs";
     for (let i = 1; i < rd.length; i++) {
       const p = rd[i - 1];
@@ -150,11 +152,11 @@ export default function AustinCulturalMap() {
         if (drop > 0.25)
           out.push({
             type: "pop_loss",
-            text: `${activeRegionName} lost ${(drop * 100).toFixed(0)}% of its Black population between ${p.year} and ${c.year} — a decline of ${(p.popBlack - c.popBlack).toLocaleString()} residents. ${c.popBlack.toLocaleString()} remained.`,
+            text: `${activeDisplayName} lost ${(drop * 100).toFixed(0)}% of its Black population between ${p.year} and ${c.year} — a decline of ${(p.popBlack - c.popBlack).toLocaleString()} residents. ${c.popBlack.toLocaleString()} remained.`,
           });
       }
     }
-    const rs = SOCIOECONOMIC.filter((s) => s.region === activeRegionName);
+    const rs = SOCIOECONOMIC.filter((s) => s.region_id === activeRegionId);
     for (let i = 1; i < rs.length; i++) {
       const p = rs[i - 1];
       const c = rs[i];
@@ -168,7 +170,7 @@ export default function AustinCulturalMap() {
       }
     }
     return out;
-  }, [activeRegionName]);
+  }, [activeRegionId, activeDisplayName, activeRegionName]);
 
   return (
     <div
@@ -198,8 +200,8 @@ export default function AustinCulturalMap() {
         aria-atomic="true"
         style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}
       >
-        {activeRegionName
-          ? `Viewing ${activeRegionName}, DVI ${(currentDvi[activeRegionName] || 0).toFixed(0)} at year ${year}`
+        {activeDisplayName
+          ? `Viewing ${activeDisplayName}, DVI ${(currentDvi[activeDisplayName] || 0).toFixed(0)} at year ${year}`
           : `${viewMode} view, year ${year}`}
       </div>
 

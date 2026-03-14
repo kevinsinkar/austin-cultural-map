@@ -1,6 +1,9 @@
 import { REGION_INDEX } from "./regionIndex";
 
-export const REGION_NAMES = REGION_INDEX.map(r => r.region_name);
+export const REGION_NAMES = REGION_INDEX
+  .filter(r => !r.merge_into)
+  .map(r => r.display_name)
+  .sort((a, b) => a.localeCompare(b));
 
 export const TIMELINE_EVENTS = [
   { year: 1928, label: "1928 Master Plan" },

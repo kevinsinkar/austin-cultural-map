@@ -4,7 +4,8 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, TIMELINE_INFRA } from "../data";
+import { LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, TIMELINE_INFRA } from "../data";
+import { VISIBLE_REGIONS } from "../data/regionLookup";
 import { DEMO_COLORS } from "../data/constants";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { catColor } from "../utils/formatters";
@@ -550,14 +551,22 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
 
           {/* ── Aggregate Demographic Track ── */}
           <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px", marginBottom: 12 }}>
-            <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Aggregate Demographics Across All 15 Regions</h3>
+            <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Aggregate Demographics Across All Regions</h3>
             <div style={{ height: 180 }} role="img" aria-label="Aggregate demographic chart showing combined population shares across all regions from 1990 to 2023">
               <ResponsiveContainer>
                 <LineChart
                   data={[1990, 2000, 2010, 2020, 2023].map((yr) => {
                     const rows = DEMOGRAPHICS.filter((dd) => dd.year === yr);
                     const t = _.sumBy(rows, "total");
-                    return { year: yr, Black: _.sumBy(rows, "popBlack") / t, Hispanic: _.sumBy(rows, "popHispanic") / t, White: _.sumBy(rows, "popWhite") / t, total: t };
+                    return {
+                      year: yr,
+                      Black: _.sumBy(rows, "popBlack") / t,
+                      Hispanic: _.sumBy(rows, "popHispanic") / t,
+                      White: _.sumBy(rows, "popWhite") / t,
+                      Asian: _.sumBy(rows, (r) => Math.round(r.total * r.pctAsian)) / t,
+                      Other: _.sumBy(rows, (r) => Math.round(r.total * r.pctOther)) / t,
+                      total: t,
+                    };
                   })}
                   margin={{ top: 4, right: 8, left: -20, bottom: 0 }}
                 >
@@ -568,11 +577,13 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
                   <Line type="monotone" dataKey="White" stroke={DEMO_COLORS.White} strokeWidth={2.5} dot={{ r: 3 }} name="White non-Hispanic" />
                   <Line type="monotone" dataKey="Black" stroke={DEMO_COLORS.Black} strokeWidth={2.5} dot={{ r: 3 }} name="Black" />
                   <Line type="monotone" dataKey="Hispanic" stroke={DEMO_COLORS.Hispanic} strokeWidth={2.5} dot={{ r: 3 }} name="Hispanic/Latino" />
+                  <Line type="monotone" dataKey="Asian" stroke={DEMO_COLORS.Asian} strokeWidth={2.5} dot={{ r: 3 }} name="Asian" />
+                  <Line type="monotone" dataKey="Other" stroke={DEMO_COLORS.Other} strokeWidth={2.5} dot={{ r: 3 }} name="Other/Multiracial" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
             <div style={{ display: "flex", gap: 12, marginTop: 6 }}>
-              {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"]].map(([l, k]) => (
+              {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
                 <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ width: 10, height: 3, borderRadius: 1, background: DEMO_COLORS[k] }} />
                   <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
@@ -595,14 +606,14 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {REGION_INDEX.map((r) => {
-                    const n = r.region_name;
+                  {[...VISIBLE_REGIONS].sort((a, b) => a.display_name.localeCompare(b.display_name)).map((r) => {
+                    const n = r.display_name;
                     const nd = n === "The Domain / North Burnet";
                     const rid = r.region_id;
                     const vals = [interpolateDvi(rid, 2010), interpolateDvi(rid, 2020), interpolateDvi(rid, 2023)];
                     return (
-                      <tr key={n} style={{ borderBottom: "1px solid #f0ede8" }}>
-                        <td style={{ padding: "5px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap", position: "sticky", left: 0, background: "#fffffe", zIndex: 1 }}>{r.short_name}</td>
+                      <tr key={rid} style={{ borderBottom: "1px solid #f0ede8" }}>
+                        <td style={{ padding: "5px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap", position: "sticky", left: 0, background: "#fffffe", zIndex: 1 }}>{n}</td>
                         {vals.map((v, i) => (
                           <td key={i} style={{ padding: "4px 8px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 10px", borderRadius: 4, background: nd ? "#f5f0ea" : getDviColor(v), color: v > 45 ? "#fff" : "#1a1a1a", fontWeight: 600, fontSize: 11, minWidth: 36 }}>
@@ -619,7 +630,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
           </div>
 
           <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "12px 4px" }}>
-            Infrastructure events compiled from City of Austin records, news sources, and community timelines. Business dates from community inventories. Aggregate demographics sum all 15 tracked regions.
+            Infrastructure events compiled from City of Austin records, news sources, and community timelines. Business dates from community inventories. Aggregate demographics sum all tracked regions.
           </div>
         </div>
 

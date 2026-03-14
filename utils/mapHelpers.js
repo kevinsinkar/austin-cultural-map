@@ -3,12 +3,12 @@ import { MUSIC_NIGHTLIFE } from "../data/musicNightlife";
 import { AUDITED_PROP_BY_ID } from "../data/auditedData";
 import { NAME_TO_ID } from "../data/regionLookup";
 
-export function getMusicData(regionName, yr) {
-  // Prefer region_id join; fall back to name
-  const rid = NAME_TO_ID.get(regionName);
+export function getMusicData(regionNameOrId, yr) {
+  // Accept region_id (number) or display_name (string)
+  const rid = typeof regionNameOrId === "number" ? regionNameOrId : NAME_TO_ID.get(regionNameOrId);
   const rows = rid != null
     ? MUSIC_NIGHTLIFE.filter((m) => m.region_id === rid)
-    : MUSIC_NIGHTLIFE.filter((m) => m.region === regionName);
+    : MUSIC_NIGHTLIFE.filter((m) => m.region === regionNameOrId);
   if (!rows.length) return null;
   const closest = rows.reduce(
     (a, b) => (Math.abs(b.year - yr) < Math.abs(a.year - yr) ? b : a),
@@ -17,8 +17,8 @@ export function getMusicData(regionName, yr) {
   return closest;
 }
 
-export function getDevPressureColor(regionName, yr) {
-  const rid = NAME_TO_ID.get(regionName);
+export function getDevPressureColor(regionNameOrId, yr) {
+  const rid = typeof regionNameOrId === "number" ? regionNameOrId : NAME_TO_ID.get(regionNameOrId);
   const rows = rid != null ? AUDITED_PROP_BY_ID.get(rid) : null;
   if (!rows || !rows.length) return "#fb923c";
   const closest = rows.reduce(

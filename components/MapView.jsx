@@ -2,6 +2,7 @@ import { useRef, useMemo } from "react";
 import useAustinMap from "../hooks/useAustinMap";
 import RegionDetailPanel from "./RegionDetailPanel";
 import { SNAP_YEARS, PLAY_YEARS, TIMELINE_EVENTS } from "../data/constants";
+import { ID_TO_NAME } from "../data/regionLookup";
 import {
   AUDITED_PROP_BY_ID,
   AUDITED_SOCIO_BY_ID,
@@ -63,6 +64,9 @@ export default function MapView({
   });
 
   const activeRegionName = activeFeature?.properties?.region_name;
+  const activeDisplayName = activeRegionId != null
+    ? (ID_TO_NAME.get(activeRegionId) || activeRegionName)
+    : activeRegionName;
 
   // Compute demoChartData from audited demographics for the selected region
   const demoChartData = useMemo(
@@ -198,7 +202,7 @@ export default function MapView({
         {/* ═══ RIGHT: DETAIL PANEL ═══ */}
         <RegionDetailPanel
           activeFeature={activeFeature}
-          activeRegionName={activeRegionName}
+          activeRegionName={activeDisplayName}
           year={year}
           currentDvi={currentDvi}
           regionBizOpen={regionBizOpen}
