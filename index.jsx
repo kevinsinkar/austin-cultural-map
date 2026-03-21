@@ -46,6 +46,8 @@ export default function AustinCulturalMap() {
   const [showPreservationAustin, setShowPreservationAustin] = useState(false);
   const [paFilter, setPaFilter] = useState({ grant: true, merit_award: true, legacy_business: true, advocacy: true });
   const [bizTab, setBizTab] = useState("open");
+  const [panelTab, setPanelTab] = useState("demographics");
+  const [selectedPA, setSelectedPA] = useState(null);
   const [compA, setCompA] = useState("East 11th Street");
   const [compB, setCompB] = useState("East Cesar Chavez -Holly");
   const [showAbout, setShowAbout] = useState(false);
@@ -278,6 +280,10 @@ export default function AustinCulturalMap() {
               setSelectedBiz={setSelectedBiz}
               bizTab={bizTab}
               setBizTab={setBizTab}
+              panelTab={panelTab}
+              setPanelTab={setPanelTab}
+              selectedPA={selectedPA}
+              setSelectedPA={setSelectedPA}
               currentDvi={currentDvi}
               regionBizOpen={regionBizOpen}
               regionBizClosed={regionBizClosed}

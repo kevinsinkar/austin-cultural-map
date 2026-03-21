@@ -42,6 +42,10 @@ export default function MapView({
   setSelectedBiz,
   bizTab,
   setBizTab,
+  panelTab,
+  setPanelTab,
+  selectedPA,
+  setSelectedPA,
   // Derived data
   currentDvi,
   regionBizOpen,
@@ -51,7 +55,7 @@ export default function MapView({
 }) {
   const mapRef = useRef(null);
 
-  const { leafletMapRef } = useAustinMap({
+  const { leafletMapRef, bizMarkersRef, paMarkersRef } = useAustinMap({
     mapRef,
     year,
     activeRegionId,
@@ -67,6 +71,9 @@ export default function MapView({
     setActiveFeature,
     setHoveredRegion,
     setSelectedBiz,
+    setPanelTab,
+    setBizTab,
+    setSelectedPA,
   });
 
   const activeRegionName = activeFeature?.properties?.region_name;
@@ -245,6 +252,11 @@ export default function MapView({
           showPreservationAustin={showPreservationAustin}
           activeRegionId={activeRegionId}
           leafletMapRef={leafletMapRef}
+          bizMarkersRef={bizMarkersRef}
+          paMarkersRef={paMarkersRef}
+          panelTab={panelTab}
+          setPanelTab={setPanelTab}
+          selectedPA={selectedPA}
         />
       </div>
     </section>

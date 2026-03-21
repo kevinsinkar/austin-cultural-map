@@ -1,4 +1,3 @@
-import { useState } from "react";
 import _ from "lodash";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -35,6 +34,11 @@ export default function RegionDetailPanel({
   showPreservationAustin,
   activeRegionId,
   leafletMapRef,
+  bizMarkersRef,
+  paMarkersRef,
+  panelTab,
+  setPanelTab,
+  selectedPA,
 }) {
   if (!activeFeature) {
     return (
@@ -55,7 +59,6 @@ export default function RegionDetailPanel({
 
   const nd = activeRegionName === "The Domain / North Burnet";
   const d = currentDvi[activeRegionName] || 0;
-  const [panelTab, setPanelTab] = useState("demographics");
 
   const panelTabs = [
     { key: "demographics", label: "Demographics" },
@@ -398,7 +401,7 @@ export default function RegionDetailPanel({
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizOpen.map((b) => (
-                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); } }}>
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
                               <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
@@ -424,7 +427,7 @@ export default function RegionDetailPanel({
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizClosed.map((b) => (
-                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); }} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); } }}>
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
                               <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
@@ -457,7 +460,7 @@ export default function RegionDetailPanel({
                   <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Preservation Austin</h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {nearby.map((item) => (
-                      <div key={item.id} onClick={() => { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" && leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); }} style={{ padding: "8px 10px", borderRadius: 8, border: "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}`, cursor: "pointer" }}>
+                      <div key={item.id} onClick={() => { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); const mk = paMarkersRef?.current?.get(item.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); const mk = paMarkersRef?.current?.get(item.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }} style={{ padding: "8px 10px", borderRadius: 8, border: selectedPA?.id === item.id ? `1.5px solid ${PA_COLORS[item.type]}` : "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}`, background: selectedPA?.id === item.id ? "#f5f3ff" : "transparent", cursor: "pointer" }}>
                         <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</div>
                         <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3, flexWrap: "wrap" }}>
                           <span style={{ fontSize: 10, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>

@@ -27,11 +27,16 @@ export default function useAustinMap({
   setActiveFeature,
   setHoveredRegion,
   setSelectedBiz,
+  setPanelTab,
+  setBizTab,
+  setSelectedPA,
 }) {
   const leafletMapRef = useRef(null);
   const geojsonLayerRef = useRef(null); // Leaflet layer for regions
   const musicLayer = useRef(null);
   const businessLayerRef = useRef({ operating: null, closed: null });
+  const bizMarkersRef = useRef(new Map());
+  const paMarkersRef = useRef(new Map());
 
   // Keep a mutable ref to activeRegionId so GeoJSON event handlers
   // (created once in the init useEffect) always see the latest value.
@@ -230,6 +235,8 @@ export default function useAustinMap({
     pcLayer && pcLayer.clearLayers();
     pressureLayer && pressureLayer.clearLayers();
     paLayer && paLayer.clearLayers();
+    bizMarkersRef.current.clear();
+    paMarkersRef.current.clear();
 
     // Build music lookup cache (only done once per overlay update, not per render)
     const musicByRegion = new Map();
@@ -252,8 +259,9 @@ export default function useAustinMap({
           weight: 1,
           fillOpacity: 0.95,
         }).addTo(operatingLayer);
-        m.on("click", () => setSelectedBiz(b));
+        m.on("click", () => { setSelectedBiz(b); setPanelTab("culture"); setBizTab("open"); });
         m.bindPopup(`<strong>${b.name}</strong><br/>Est. ${b.est}<br/>${b.address}`);
+        bizMarkersRef.current.set(b.id, m);
       });
       LEGACY_CLOSED.forEach((b) => {
         if (!b.lat || !b.lng) return;
@@ -265,8 +273,9 @@ export default function useAustinMap({
           weight: 1,
           fillOpacity: 0.85,
         }).addTo(closedLayer);
-        m.on("click", () => setSelectedBiz({ ...b, _closed: true }));
+        m.on("click", () => { setSelectedBiz({ ...b, _closed: true }); setPanelTab("culture"); setBizTab("closed"); });
         m.bindPopup(`<strong>${b.name}</strong><br/>Closed ${b.closed}<br/>${b.relocated || ""}`);
+        bizMarkersRef.current.set(b.id, m);
       });
     }
 
@@ -380,6 +389,8 @@ export default function useAustinMap({
         const label = item.type === "grant" ? "Grant" : item.type === "merit_award" ? "Merit Award" : item.type === "legacy_business" ? "Legacy Business" : "Advocacy";
         const amountStr = item.amount ? `<br/>$${item.amount.toLocaleString()}` : "";
         m.bindPopup(`<strong>${item.name}</strong><br/><em>${label} · ${item.year}</em>${amountStr}<br/>${item.description}`);
+        m.on("click", () => { setSelectedPA(item); setPanelTab("culture"); });
+        paMarkersRef.current.set(item.id, m);
       });
     }
   }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter]);
@@ -392,5 +403,5 @@ export default function useAustinMap({
     }
   }, [selectedRegion]);
 
-  return { leafletMapRef };
+  return { leafletMapRef, bizMarkersRef, paMarkersRef };
 }
