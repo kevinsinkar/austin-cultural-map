@@ -26,6 +26,8 @@ export default function MapView({
   setShowMusicVenues,
   showDevPressure,
   setShowDevPressure,
+  showRegions,
+  setShowRegions,
   showPreservationAustin,
   setShowPreservationAustin,
   paFilter,
@@ -63,6 +65,7 @@ export default function MapView({
     showMusicVenues,
     showProjectConnect,
     showDevPressure,
+    showRegions,
     showPreservationAustin,
     paFilter,
     selectedRegion,
@@ -117,6 +120,7 @@ export default function MapView({
           {/* Toggles */}
           <div style={{ display: "flex", gap: 6, marginBottom: 10, flexWrap: "wrap" }} role="toolbar" aria-label="Map overlays">
             {[
+              { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Regions", icon: <span style={{ width: 10, height: 10, borderRadius: 2, background: showRegions ? "linear-gradient(135deg, #4ade80, #facc15, #fb923c, #ef4444)" : "#a8a49c", border: "1px solid currentColor" }} /> },
               { on: showHeritage, toggle: () => setShowHeritage(!showHeritage), label: "Heritage", icon: <span style={{ width: 12, height: 0, borderTop: "2px dashed currentColor" }} /> },
               { on: showPins, toggle: () => setShowPins(!showPins), label: "Businesses", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPins ? "#4ade80" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
               { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Project Connect", icon: <svg width="12" height="10" viewBox="0 0 12 10"><path d="M1 9L6 1L11 9" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg> },

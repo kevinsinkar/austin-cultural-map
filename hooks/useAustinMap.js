@@ -19,6 +19,7 @@ export default function useAustinMap({
   showMusicVenues,
   showProjectConnect,
   showDevPressure,
+  showRegions,
   showPreservationAustin,
   paFilter,
   selectedRegion,
@@ -221,6 +222,18 @@ export default function useAustinMap({
       };
     });
   }, [year, activeRegionId]);
+
+  // ── Toggle region polygon visibility ──
+  useEffect(() => {
+    const layer = geojsonLayerRef.current;
+    const map = leafletMapRef.current;
+    if (!layer || !map) return;
+    if (showRegions) {
+      if (!map.hasLayer(layer)) map.addLayer(layer);
+    } else {
+      if (map.hasLayer(layer)) map.removeLayer(layer);
+    }
+  }, [showRegions]);
 
   // ── Update overlays (business markers, music venues, PC lines, dev pressure) ──
   useEffect(() => {
