@@ -398,7 +398,7 @@ export default function RegionDetailPanel({
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizOpen.map((b) => (
-                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => setSelectedBiz(b)} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") setSelectedBiz(b); }}>
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
                               <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
@@ -424,7 +424,7 @@ export default function RegionDetailPanel({
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizClosed.map((b) => (
-                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => setSelectedBiz({ ...b, _closed: true })} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") setSelectedBiz({ ...b, _closed: true }); }}>
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); }} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
                               <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
