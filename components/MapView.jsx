@@ -28,6 +28,8 @@ export default function MapView({
   setShowDevPressure,
   showPreservationAustin,
   setShowPreservationAustin,
+  paFilter,
+  setPaFilter,
   activeRegionId,
   setActiveRegionId,
   activeFeature,
@@ -49,7 +51,7 @@ export default function MapView({
 }) {
   const mapRef = useRef(null);
 
-  useAustinMap({
+  const { leafletMapRef } = useAustinMap({
     mapRef,
     year,
     activeRegionId,
@@ -58,6 +60,7 @@ export default function MapView({
     showProjectConnect,
     showDevPressure,
     showPreservationAustin,
+    paFilter,
     selectedRegion,
     setActiveRegionId,
     setSelectedRegion,
@@ -203,15 +206,15 @@ export default function MapView({
             {showPreservationAustin && (
               <div style={{ paddingTop: 6, borderTop: "1px solid #e8e5e0", display: "flex", gap: 8, flexWrap: "wrap" }}>
                 {[
-                  { l: "PA Grant", c: "#7c3aed" },
-                  { l: "Merit Award", c: "#2563eb" },
-                  { l: "Legacy Business", c: "#d97706" },
-                  { l: "Advocacy", c: "#059669" },
-                ].map((p, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                  { l: "PA Grant", c: "#7c3aed", k: "grant" },
+                  { l: "Merit Award", c: "#2563eb", k: "merit_award" },
+                  { l: "Legacy Business", c: "#d97706", k: "legacy_business" },
+                  { l: "Advocacy", c: "#059669", k: "advocacy" },
+                ].map((p) => (
+                  <button key={p.k} onClick={() => setPaFilter(prev => ({ ...prev, [p.k]: !prev[p.k] }))} style={{ display: "flex", alignItems: "center", gap: 4, background: "none", border: "none", cursor: "pointer", padding: "2px 0", opacity: paFilter[p.k] ? 1 : 0.35 }}>
                     <span style={{ width: 8, height: 8, borderRadius: "50%", background: p.c }} aria-hidden="true" />
                     <span style={{ fontSize: 10, color: "#64615b" }}>{p.l}</span>
-                  </div>
+                  </button>
                 ))}
               </div>
             )}
@@ -241,6 +244,7 @@ export default function MapView({
           setHoveredRegion={setHoveredRegion}
           showPreservationAustin={showPreservationAustin}
           activeRegionId={activeRegionId}
+          leafletMapRef={leafletMapRef}
         />
       </div>
     </section>

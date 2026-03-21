@@ -20,6 +20,7 @@ export default function useAustinMap({
   showProjectConnect,
   showDevPressure,
   showPreservationAustin,
+  paFilter,
   selectedRegion,
   setActiveRegionId,
   setSelectedRegion,
@@ -364,6 +365,7 @@ export default function useAustinMap({
       PA_ALL.forEach((item) => {
         if (!item.lat || !item.lng) return;
         if (item.year > year) return;
+        if (paFilter && !paFilter[item.type]) return;
         const color = PA_COLORS[item.type] || "#7c3aed";
         const radius = item.type === "grant"
           ? Math.min(7, 3 + (item.amount || 0) / 2000)
@@ -380,7 +382,7 @@ export default function useAustinMap({
         m.bindPopup(`<strong>${item.name}</strong><br/><em>${label} · ${item.year}</em>${amountStr}<br/>${item.description}`);
       });
     }
-  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin]);
+  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter]);
 
   // ── Clear active feature when selectedRegion is cleared ──
   useEffect(() => {

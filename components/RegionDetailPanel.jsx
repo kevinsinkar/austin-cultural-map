@@ -34,6 +34,7 @@ export default function RegionDetailPanel({
   setHoveredRegion,
   showPreservationAustin,
   activeRegionId,
+  leafletMapRef,
 }) {
   if (!activeFeature) {
     return (
@@ -456,7 +457,7 @@ export default function RegionDetailPanel({
                   <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Preservation Austin</h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {nearby.map((item) => (
-                      <div key={item.id} style={{ padding: "8px 10px", borderRadius: 8, border: "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}` }}>
+                      <div key={item.id} onClick={() => { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" && leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); }} style={{ padding: "8px 10px", borderRadius: 8, border: "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}`, cursor: "pointer" }}>
                         <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</div>
                         <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3, flexWrap: "wrap" }}>
                           <span style={{ fontSize: 10, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>
