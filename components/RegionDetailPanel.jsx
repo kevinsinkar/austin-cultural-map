@@ -6,6 +6,8 @@ import {
 } from "recharts";
 import { DEMO_COLORS } from "../data/constants";
 import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge } from "../utils/math";
+import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
+import { REGION_INDEX } from "../data";
 import { fmtPct, fmtChange, pressureColor, pressureDots } from "../utils/formatters";
 import { adjustForInflation } from "../utils/cpi";
 import ChartTooltip from "./ChartTooltip";
@@ -30,6 +32,8 @@ export default function RegionDetailPanel({
   setBizTab,
   setSelectedRegion,
   setHoveredRegion,
+  showPreservationAustin,
+  activeRegionId,
 }) {
   if (!activeFeature) {
     return (
@@ -439,6 +443,33 @@ export default function RegionDetailPanel({
                 <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No legacy business data recorded for this region.</div>
               </div>
             )}
+
+            {/* Preservation Austin section */}
+            {showPreservationAustin && (() => {
+              const region = REGION_INDEX.find(r => r.region_id === activeRegionId);
+              if (!region) return null;
+              const dist = (a, b) => Math.sqrt((a.lat - b.lat) ** 2 + (a.lng - b.lng) ** 2);
+              const nearby = PA_ALL.filter(item => item.lat && item.lng && dist(item, region) < 0.012);
+              if (!nearby.length) return null;
+              return (
+                <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+                  <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Preservation Austin</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {nearby.map((item) => (
+                      <div key={item.id} style={{ padding: "8px 10px", borderRadius: 8, border: "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}` }}>
+                        <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</div>
+                        <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3, flexWrap: "wrap" }}>
+                          <span style={{ fontSize: 10, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>
+                          <span style={{ fontSize: 10, color: "#a8a49c" }}>{item.year}</span>
+                          {item.amount && <span style={{ fontSize: 10, color: "#64615b", fontWeight: 500 }}>${item.amount.toLocaleString()}</span>}
+                        </div>
+                        <div style={{ fontSize: 10, color: "#7c6f5e", marginTop: 3, lineHeight: 1.4 }}>{item.description}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
           </>
         )}
 

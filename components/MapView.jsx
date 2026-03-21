@@ -26,6 +26,8 @@ export default function MapView({
   setShowMusicVenues,
   showDevPressure,
   setShowDevPressure,
+  showPreservationAustin,
+  setShowPreservationAustin,
   activeRegionId,
   setActiveRegionId,
   activeFeature,
@@ -55,6 +57,7 @@ export default function MapView({
     showMusicVenues,
     showProjectConnect,
     showDevPressure,
+    showPreservationAustin,
     selectedRegion,
     setActiveRegionId,
     setSelectedRegion,
@@ -107,6 +110,7 @@ export default function MapView({
               { on: showHeritage, toggle: () => setShowHeritage(!showHeritage), label: "Heritage", icon: <span style={{ width: 12, height: 0, borderTop: "2px dashed currentColor" }} /> },
               { on: showPins, toggle: () => setShowPins(!showPins), label: "Businesses", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPins ? "#4ade80" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
               { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Project Connect", icon: <svg width="12" height="10" viewBox="0 0 12 10"><path d="M1 9L6 1L11 9" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg> },
+              { on: showPreservationAustin, toggle: () => setShowPreservationAustin(!showPreservationAustin), label: "Preservation Austin", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPreservationAustin ? "#7c3aed" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
             ].map((btn, i) => (
               <button key={i} onClick={btn.toggle} aria-pressed={btn.on} style={{ display: "flex", alignItems: "center", gap: 5, padding: "4px 10px", borderRadius: 6, border: btn.on ? "1.5px solid #0f766e" : "1.5px solid #c4c0b8", background: btn.on ? "#f0fdfa" : "#fff", color: btn.on ? "#0f766e" : "#64615b", fontSize: 11, fontWeight: 500, cursor: "pointer", minHeight: 32 }}>
                 {btn.icon}{btn.label}
@@ -196,6 +200,21 @@ export default function MapView({
                 <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2.5px dashed #2563eb" }} aria-hidden="true" /><span style={{ fontSize: 10, color: "#64615b" }}>Transit</span></div>
               </div>
             )}
+            {showPreservationAustin && (
+              <div style={{ paddingTop: 6, borderTop: "1px solid #e8e5e0", display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {[
+                  { l: "PA Grant", c: "#7c3aed" },
+                  { l: "Merit Award", c: "#2563eb" },
+                  { l: "Legacy Business", c: "#d97706" },
+                  { l: "Advocacy", c: "#059669" },
+                ].map((p, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                    <span style={{ width: 8, height: 8, borderRadius: "50%", background: p.c }} aria-hidden="true" />
+                    <span style={{ fontSize: 10, color: "#64615b" }}>{p.l}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
@@ -220,6 +239,8 @@ export default function MapView({
           setBizTab={setBizTab}
           setSelectedRegion={setSelectedRegion}
           setHoveredRegion={setHoveredRegion}
+          showPreservationAustin={showPreservationAustin}
+          activeRegionId={activeRegionId}
         />
       </div>
     </section>

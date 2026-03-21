@@ -9,6 +9,7 @@ import { AUDITED_PROP_BY_ID } from "../data/auditedData";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
+import { PA_ALL, PA_COLORS } from "../data";
 
 export default function useAustinMap({
   mapRef,
@@ -18,6 +19,7 @@ export default function useAustinMap({
   showMusicVenues,
   showProjectConnect,
   showDevPressure,
+  showPreservationAustin,
   selectedRegion,
   setActiveRegionId,
   setSelectedRegion,
@@ -147,6 +149,7 @@ export default function useAustinMap({
     const musicLayerGroup = L.layerGroup().addTo(map);
     const pcLayer = L.layerGroup().addTo(map);
     const pressureLayer = L.layerGroup().addTo(map);
+    const paLayer = L.layerGroup().addTo(map);
 
     businessLayerRef.current = { operating: operatingLayer, closed: closedLayer };
     musicLayer.current = musicLayerGroup;
@@ -160,6 +163,7 @@ export default function useAustinMap({
       musicLayer: musicLayerGroup,
       pcLayer,
       pressureLayer,
+      paLayer,
     };
 
     return () => {
@@ -216,7 +220,7 @@ export default function useAustinMap({
   useEffect(() => {
     const mapObj = leafletMapRef.current;
     if (!mapObj) return;
-    const { operatingLayer, closedLayer, musicLayer, pcLayer, pressureLayer } =
+    const { operatingLayer, closedLayer, musicLayer, pcLayer, pressureLayer, paLayer } =
       mapObj._overlayLayers || {};
 
     operatingLayer && operatingLayer.clearLayers();
@@ -224,6 +228,7 @@ export default function useAustinMap({
     musicLayer && musicLayer.clearLayers();
     pcLayer && pcLayer.clearLayers();
     pressureLayer && pressureLayer.clearLayers();
+    paLayer && paLayer.clearLayers();
 
     // Build music lookup cache (only done once per overlay update, not per render)
     const musicByRegion = new Map();
@@ -354,7 +359,28 @@ export default function useAustinMap({
         });
       });
     }
-  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure]);
+    // Preservation Austin overlay
+    if (showPreservationAustin && paLayer) {
+      PA_ALL.forEach((item) => {
+        if (!item.lat || !item.lng) return;
+        if (item.year > year) return;
+        const color = PA_COLORS[item.type] || "#7c3aed";
+        const radius = item.type === "grant"
+          ? Math.min(7, 3 + (item.amount || 0) / 2000)
+          : 4;
+        const m = L.circleMarker([item.lat, item.lng], {
+          radius,
+          fillColor: color,
+          color: "#fff",
+          weight: 1,
+          fillOpacity: 0.9,
+        }).addTo(paLayer);
+        const label = item.type === "grant" ? "Grant" : item.type === "merit_award" ? "Merit Award" : item.type === "legacy_business" ? "Legacy Business" : "Advocacy";
+        const amountStr = item.amount ? `<br/>$${item.amount.toLocaleString()}` : "";
+        m.bindPopup(`<strong>${item.name}</strong><br/><em>${label} · ${item.year}</em>${amountStr}<br/>${item.description}`);
+      });
+    }
+  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin]);
 
   // ── Clear active feature when selectedRegion is cleared ──
   useEffect(() => {
