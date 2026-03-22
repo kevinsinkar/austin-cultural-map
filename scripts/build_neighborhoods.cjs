@@ -265,9 +265,15 @@ function loadRegionsGeoJSON() {
   return fn();
 }
 
-function buildNeighborhoodPolygon(hood, tractsGeoJSON) {
+function buildNeighborhoodPolygon(hood, tractsGeoJSON, mergedSecondaries) {
+  // Include merged secondary tract polygons alongside primary tracts
+  const allIds = new Set(hood.tract_ids);
+  hood.tract_ids.forEach(tid => {
+    const secondaries = mergedSecondaries.get(tid);
+    if (secondaries) secondaries.forEach(sid => allIds.add(sid));
+  });
   const tractFeatures = tractsGeoJSON.features.filter(f =>
-    hood.tract_ids.includes(f.properties.region_id)
+    allIds.has(f.properties.region_id)
   );
   if (tractFeatures.length === 0) return null;
 
@@ -649,11 +655,19 @@ export const NEIGHBORHOOD_NAMES = NEIGHBORHOODS
   const REGIONS_GEOJSON = loadRegionsGeoJSON();
   console.log(`  Loaded ${REGIONS_GEOJSON.features.length} tract features`);
 
+  // Build map: primary_id → [secondary_ids] for merged tracts
+  const mergedSecondaries = new Map();
+  REGION_INDEX.filter(r => r.merge_into).forEach(r => {
+    if (!mergedSecondaries.has(r.merge_into)) mergedSecondaries.set(r.merge_into, []);
+    mergedSecondaries.get(r.merge_into).push(r.region_id);
+  });
+  console.log(`  Merged secondary tracts: ${REGION_INDEX.filter(r => r.merge_into).length} (across ${mergedSecondaries.size} primary tracts)`);
+
   const neighborhoodFeatures = [];
   let unionFails = 0;
 
   for (const hood of neighborhoods) {
-    const feature = buildNeighborhoodPolygon(hood, REGIONS_GEOJSON);
+    const feature = buildNeighborhoodPolygon(hood, REGIONS_GEOJSON, mergedSecondaries);
     if (feature) {
       neighborhoodFeatures.push(feature);
     } else {
