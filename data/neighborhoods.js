@@ -107,28 +107,16 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "blackland",
-    "name": "Blackland (under review)",
-    "tract_ids": [
-      4,
-      79
-    ],
-    "source": "name-cluster",
-    "centroid": [
-      30.2837,
-      -97.6845
-    ]
-  },
-  {
     "id": "bouldin-creek",
     "name": "Bouldin Creek",
     "tract_ids": [
-      15
+      15,
+      48
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.2497,
-      -97.7588
+      30.2535,
+      -97.755
     ]
   },
   {
@@ -148,12 +136,13 @@ export const NEIGHBORHOODS = [
     "id": "cat-mountain",
     "name": "Cat Mountain (under review)",
     "tract_ids": [
+      27,
       46
     ],
     "source": "suburban-community",
     "centroid": [
-      30.3984,
-      -97.7624
+      30.3987,
+      -97.7585
     ]
   },
   {
@@ -319,20 +308,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2785,
       -97.7947
-    ]
-  },
-  {
-    "id": "east-cesar-chavez",
-    "name": "East Cesar Chavez (under review)",
-    "tract_ids": [
-      48,
-      165,
-      210
-    ],
-    "source": "name-cluster",
-    "centroid": [
-      30.2609,
-      -97.7463
     ]
   },
   {
@@ -538,13 +513,24 @@ export const NEIGHBORHOODS = [
     "id": "highland",
     "name": "Highland",
     "tract_ids": [
-      122,
-      153
+      122
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3315,
-      -97.6907
+      30.3272,
+      -97.7163
+    ]
+  },
+  {
+    "id": "highland-153",
+    "name": "Highland [153] (under review)",
+    "tract_ids": [
+      153
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3358,
+      -97.6652
     ]
   },
   {
@@ -664,12 +650,13 @@ export const NEIGHBORHOODS = [
     "id": "mlk-183",
     "name": "Mlk-183",
     "tract_ids": [
-      101
+      101,
+      4
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.275,
-      -97.6783
+      30.2786,
+      -97.6652
     ]
   },
   {
@@ -714,13 +701,12 @@ export const NEIGHBORHOODS = [
     "name": "Mueller",
     "tract_ids": [
       3,
-      74,
-      242
+      74
     ],
     "source": "manual",
     "centroid": [
-      30.2974,
-      -97.704
+      30.2972,
+      -97.6993
     ]
   },
   {
@@ -743,12 +729,13 @@ export const NEIGHBORHOODS = [
     "id": "north-burnet",
     "name": "North Burnet",
     "tract_ids": [
+      176,
       200
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3963,
-      -97.7017
+      30.3941,
+      -97.7138
     ]
   },
   {
@@ -767,13 +754,24 @@ export const NEIGHBORHOODS = [
     "id": "north-lamar",
     "name": "North Lamar",
     "tract_ids": [
-      14,
-      186
+      14
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3428,
-      -97.661
+      30.3701,
+      -97.6866
+    ]
+  },
+  {
+    "id": "north-lamar-186",
+    "name": "North Lamar [186] (under review)",
+    "tract_ids": [
+      186
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3156,
+      -97.6354
     ]
   },
   {
@@ -793,12 +791,13 @@ export const NEIGHBORHOODS = [
     "name": "North Shoal Creek",
     "tract_ids": [
       178,
-      145
+      145,
+      26
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3698,
-      -97.741
+      30.3734,
+      -97.7448
     ]
   },
   {
@@ -946,6 +945,18 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2351,
       -97.7112
+    ]
+  },
+  {
+    "id": "rainey-street-historic-district",
+    "name": "Rainey Street Historic District",
+    "tract_ids": [
+      210
+    ],
+    "source": "manual",
+    "centroid": [
+      30.2593,
+      -97.7399
     ]
   },
   {
@@ -1231,27 +1242,12 @@ export const NEIGHBORHOODS = [
     "tract_ids": [
       29,
       32,
-      147,
-      176
+      147
     ],
     "source": "suburban-community",
     "centroid": [
-      30.3946,
-      -97.7338
-    ]
-  },
-  {
-    "id": "the-domain",
-    "name": "The Domain (under review)",
-    "tract_ids": [
-      27,
-      194,
-      26
-    ],
-    "source": "name-cluster",
-    "centroid": [
-      30.3799,
-      -97.7429
+      30.3955,
+      -97.7364
     ]
   },
   {
@@ -1292,6 +1288,19 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "upper-boggy-creek",
+    "name": "Upper Boggy Creek (under review)",
+    "tract_ids": [
+      79,
+      242
+    ],
+    "source": "name-cluster",
+    "centroid": [
+      30.2915,
+      -97.7152
+    ]
+  },
+  {
     "id": "ut",
     "name": "Ut",
     "tract_ids": [
@@ -1314,6 +1323,18 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.4665,
       -97.6938
+    ]
+  },
+  {
+    "id": "warehouse-district",
+    "name": "Warehouse District",
+    "tract_ids": [
+      165
+    ],
+    "source": "manual",
+    "centroid": [
+      30.2661,
+      -97.7477
     ]
   },
   {
@@ -1463,6 +1484,18 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2962,
       -97.7532
+    ]
+  },
+  {
+    "id": "wooten",
+    "name": "Wooten",
+    "tract_ids": [
+      194
+    ],
+    "source": "City of Austin NPA",
+    "centroid": [
+      30.36,
+      -97.7217
     ]
   },
   {
