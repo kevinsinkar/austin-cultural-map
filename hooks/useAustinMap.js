@@ -8,7 +8,7 @@ import { REGIONS_GEOJSON } from "../data/final_updated_regions";
 import { NEIGHBORHOODS_GEOJSON } from "../data/neighborhoods_geojson";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
-import { AUDITED_PROP_BY_ID, DEMO_BY_RY } from "../data/auditedData";
+import { AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID, closestRow } from "../data/auditedData";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
@@ -85,7 +85,8 @@ export default function useAustinMap({
     if (!hood) return 0;
     const entries = hood.tract_ids.map(id => {
       const dvi = interpolateDvi(id, yr);
-      const pop = DEMO_BY_RY.get(`${id}_${yr}`)?.total_population || 0;
+      const demoRow = closestRow(AUDITED_DEMO_BY_ID.get(id), yr);
+      const pop = demoRow?.total_population || 0;
       return { dvi, pop };
     }).filter(e => e.dvi != null);
     const totalPop = _.sumBy(entries, "pop");

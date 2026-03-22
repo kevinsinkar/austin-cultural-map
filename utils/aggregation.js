@@ -15,10 +15,32 @@ import {
   PROP_BY_RY,
   SOCIO_BY_RY,
   AUDITED_DEMO_BY_ID,
+  AUDITED_PROP_BY_ID,
+  AUDITED_SOCIO_BY_ID,
+  closestRow,
 } from "../data/auditedData";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL } from "../data";
 import { interpolateDvi } from "./math";
+
+/**
+ * Get the closest demographic row for a tract at a given year.
+ * Falls back to nearest available year when exact match doesn't exist.
+ */
+function closestDemo(tractId, year) {
+  return DEMO_BY_RY.get(`${tractId}_${year}`)
+    || closestRow(AUDITED_DEMO_BY_ID.get(tractId), year);
+}
+
+function closestProp(tractId, year) {
+  return PROP_BY_RY.get(`${tractId}_${year}`)
+    || closestRow(AUDITED_PROP_BY_ID.get(tractId), year);
+}
+
+function closestSocio(tractId, year) {
+  return SOCIO_BY_RY.get(`${tractId}_${year}`)
+    || closestRow(AUDITED_SOCIO_BY_ID.get(tractId), year);
+}
 
 /**
  * Aggregate tract-level data for a neighborhood at a given year.
@@ -30,7 +52,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
 
   // ── Demographics (population-weighted averages) ──
   const demoRows = tract_ids
-    .map(id => DEMO_BY_RY.get(`${id}_${year}`))
+    .map(id => closestDemo(id, year))
     .filter(Boolean);
 
   if (demoRows.length === 0) return null;
@@ -59,8 +81,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
   const dviEntries = tract_ids
     .map(id => {
       const dvi = interpolateDvi(id, year);
-      const pop =
-        DEMO_BY_RY.get(`${id}_${year}`)?.total_population || 0;
+      const pop = closestDemo(id, year)?.total_population || 0;
       return { dvi, pop };
     })
     .filter(e => e.dvi != null);
@@ -73,7 +94,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
 
   // ── Property (population-weighted averages) ──
   const propRows = tract_ids
-    .map(id => PROP_BY_RY.get(`${id}_${year}`))
+    .map(id => closestProp(id, year))
     .filter(Boolean);
 
   const property =
@@ -94,7 +115,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
 
   // ── Socioeconomic (population-weighted averages) ──
   const socioRows = tract_ids
-    .map(id => SOCIO_BY_RY.get(`${id}_${year}`))
+    .map(id => closestSocio(id, year))
     .filter(Boolean);
 
   const socioeconomic =
