@@ -37,6 +37,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
                 { key: "map", label: "Map" },
                 { key: "compare", label: "Compare" },
                 { key: "triage", label: "Triage" },
+                { key: "timeline", label: "Timeline" },
               ].map((tab) => (
                 <button
                   key={tab.key}
