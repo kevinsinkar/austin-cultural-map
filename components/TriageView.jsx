@@ -130,6 +130,7 @@ export default function TriageView({ boundaryMode }) {
   const [weights, setWeights] = useState({ ...DEFAULT_WEIGHTS });
   const [searchTerm, setSearchTerm] = useState("");
   const [filterCategory, setFilterCategory] = useState("all");
+  const [selectedRegionId, setSelectedRegionId] = useState(null);
 
   const handleWeightChange = useCallback((key, newVal) => {
     setWeights((prev) => {
@@ -186,18 +187,18 @@ export default function TriageView({ boundaryMode }) {
     if (lens === "trajectory") {
       return activeData.map(r => ({
         x: r.dvi2023, y: r.velocity, z: Math.max(r.interventionWindow, 10) * 3,
-        name: r.name, category: r.category,
+        name: r.name, category: r.category, regionId: r.regionId,
       }));
     }
     if (lens === "equity") {
       return activeData.map(r => ({
         x: r.dvi, y: r.equityDeficit, z: Math.max(r.preservationGap, 10) * 3,
-        name: r.name, category: r.category,
+        name: r.name, category: r.category, regionId: r.regionId,
       }));
     }
     return activeData.map(r => ({
       x: r.marketPressure, y: r.communityVuln, z: Math.max(r.culturalSig, 10) * 3,
-      name: r.name, category: r.category, grantType: r.grantType,
+      name: r.name, category: r.category, grantType: r.grantType, regionId: r.regionId,
     }));
   }, [activeData, lens]);
 
@@ -246,6 +247,7 @@ export default function TriageView({ boundaryMode }) {
     setFilterCategory("all");
     setSortCol("priority");
     setSortDir("desc");
+    setSelectedRegionId(null);
   };
 
   // ── Recommendation text ──
@@ -399,7 +401,13 @@ export default function TriageView({ boundaryMode }) {
               <Tooltip content={<ScatterTooltip />} />
               <Scatter data={scatterData}>
                 {scatterData.map((entry, i) => (
-                  <Cell key={i} fill={activeColors[entry.category]} fillOpacity={0.8} stroke={activeColors[entry.category]} strokeWidth={1} />
+                  <Cell
+                    key={i}
+                    fill={selectedRegionId && entry.regionId !== selectedRegionId ? "#d6d3cd" : activeColors[entry.category]}
+                    fillOpacity={selectedRegionId && entry.regionId !== selectedRegionId ? 0.3 : 0.8}
+                    stroke={selectedRegionId && entry.regionId === selectedRegionId ? "#1a1a1a" : (selectedRegionId ? "#d6d3cd" : activeColors[entry.category])}
+                    strokeWidth={selectedRegionId && entry.regionId === selectedRegionId ? 2.5 : 1}
+                  />
                 ))}
               </Scatter>
             </ScatterChart>
@@ -438,7 +446,16 @@ export default function TriageView({ boundaryMode }) {
             </thead>
             <tbody>
               {sorted.map(r => (
-                <tr key={r.regionId} style={{ borderBottom: "1px solid #f0ede8" }}>
+                <tr
+                  key={r.regionId}
+                  onClick={() => setSelectedRegionId(prev => prev === r.regionId ? null : r.regionId)}
+                  style={{
+                    borderBottom: "1px solid #f0ede8",
+                    cursor: "pointer",
+                    background: selectedRegionId === r.regionId ? "#f0fdfa" : "transparent",
+                    transition: "background 0.15s",
+                  }}
+                >
                   {activeCols.map(col => {
                     const val = r[col.key];
                     if (col.key === "category") {
