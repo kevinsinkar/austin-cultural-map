@@ -19,6 +19,7 @@ import { ID_TO_NAME } from "./data/regionLookup";
 
 // Utils
 import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
+import { aggregateNeighborhood } from "./utils/aggregation";
 
 // Components
 import Header from "./components/Header";
@@ -112,6 +113,12 @@ export default function AustinCulturalMap() {
     () => (activeRegionName ? TIPPING_POINTS.find((t) => t.region === activeRegionName) : null),
     [activeRegionName]
   );
+
+  // Neighborhood aggregation (full panel data for neighborhood mode)
+  const neighborhoodAgg = useMemo(() => {
+    if (boundaryMode !== "neighborhoods" || !activeNeighborhoodId) return null;
+    return aggregateNeighborhood(activeNeighborhoodId, year);
+  }, [boundaryMode, activeNeighborhoodId, year]);
 
   // Agenda parsing
   const [issuesText, setIssuesText] = useState("");
@@ -299,6 +306,7 @@ export default function AustinCulturalMap() {
               setBoundaryMode={setBoundaryMode}
               activeNeighborhoodId={activeNeighborhoodId}
               setActiveNeighborhoodId={setActiveNeighborhoodId}
+              neighborhoodAgg={neighborhoodAgg}
             />
           </ErrorBoundary>
         )}

@@ -59,6 +59,7 @@ export default function MapView({
   setBoundaryMode,
   activeNeighborhoodId,
   setActiveNeighborhoodId,
+  neighborhoodAgg,
 }) {
   const mapRef = useRef(null);
 
@@ -273,19 +274,19 @@ export default function MapView({
 
         {/* ═══ RIGHT: DETAIL PANEL ═══ */}
         <RegionDetailPanel
-          activeFeature={activeFeature}
-          activeRegionName={activeDisplayName}
+          activeFeature={boundaryMode === "tracts" ? activeFeature : null}
+          activeRegionName={boundaryMode === "tracts" ? activeDisplayName : neighborhoodAgg?.name}
           year={year}
           currentDvi={currentDvi}
-          regionBizOpen={regionBizOpen}
-          regionBizClosed={regionBizClosed}
-          demoChartData={demoChartData}
-          propertyNow={propertyNow}
-          propertyPrev={propertyPrev}
-          socioNow={socioNow}
-          socioPrev={socioPrev}
-          tippingPoint={tippingPoint}
-          narrativeCallouts={narrativeCallouts}
+          regionBizOpen={boundaryMode === "tracts" ? regionBizOpen : neighborhoodAgg?.bizOpen ?? []}
+          regionBizClosed={boundaryMode === "tracts" ? regionBizClosed : neighborhoodAgg?.bizClosed ?? []}
+          demoChartData={boundaryMode === "tracts" ? demoChartData : neighborhoodAgg?.demoChartData ?? []}
+          propertyNow={boundaryMode === "tracts" ? propertyNow : neighborhoodAgg?.propertyNow}
+          propertyPrev={boundaryMode === "tracts" ? propertyPrev : neighborhoodAgg?.propertyPrev}
+          socioNow={boundaryMode === "tracts" ? socioNow : neighborhoodAgg?.socioNow}
+          socioPrev={boundaryMode === "tracts" ? socioPrev : neighborhoodAgg?.socioPrev}
+          tippingPoint={boundaryMode === "tracts" ? tippingPoint : neighborhoodAgg?.tippingPoints?.[0] ?? null}
+          narrativeCallouts={boundaryMode === "tracts" ? narrativeCallouts : neighborhoodAgg?.narrativeCallouts ?? []}
           selectedBiz={selectedBiz}
           setSelectedBiz={setSelectedBiz}
           bizTab={bizTab}
@@ -301,7 +302,7 @@ export default function MapView({
           setPanelTab={setPanelTab}
           selectedPA={selectedPA}
           boundaryMode={boundaryMode}
-          activeNeighborhoodId={activeNeighborhoodId}
+          neighborhoodAgg={neighborhoodAgg}
         />
       </div>
     </section>

@@ -6,230 +6,283 @@
  * METHOD: Centroid-assignment — each tract belongs to exactly one
  * neighborhood. No double-counting. Population-weighted averages
  * for rates and percentages. Sums for absolute counts.
+ *
+ * The output shape matches what RegionDetailPanel expects, so the
+ * panel can render without knowing whether it's showing a single
+ * tract or an aggregated neighborhood.
  */
 
 import _ from "lodash";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import {
   DEMO_BY_RY,
-  PROP_BY_RY,
-  SOCIO_BY_RY,
   AUDITED_DEMO_BY_ID,
   AUDITED_PROP_BY_ID,
   AUDITED_SOCIO_BY_ID,
   closestRow,
+  priorRow,
 } from "../data/auditedData";
-import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
-import { REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL } from "../data";
+import {
+  REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, TIPPING_POINTS,
+} from "../data";
+import { ID_TO_NAME } from "../data/regionLookup";
 import { interpolateDvi } from "./math";
 
+// Chart years matching toDemoChartData() output
+const CHART_YEARS = [1990, 2000, 2010, 2020, 2023];
+
+// ── Helpers ──
+
+function getClosestProp(tid, yr) {
+  return closestRow(AUDITED_PROP_BY_ID.get(tid), yr);
+}
+
+function getClosestSocio(tid, yr) {
+  return closestRow(AUDITED_SOCIO_BY_ID.get(tid), yr);
+}
+
+function getPriorProp(tid, yr) {
+  return priorRow(AUDITED_PROP_BY_ID.get(tid), yr);
+}
+
+function getPriorSocio(tid, yr) {
+  return priorRow(AUDITED_SOCIO_BY_ID.get(tid), yr);
+}
+
+function tractPop(tid, yr) {
+  const d = DEMO_BY_RY.get(`${tid}_${yr}`)
+    || closestRow(AUDITED_DEMO_BY_ID.get(tid), yr);
+  return d?.total_population ?? 0;
+}
+
 /**
- * Get the closest demographic row for a tract at a given year.
- * Falls back to nearest available year when exact match doesn't exist.
+ * Population-weighted average of a field across tracts for a given year.
+ * @param {number[]} tracts - tract IDs
+ * @param {number} yr - target year
+ * @param {function} getRow - (tid, yr) => row
+ * @param {string} field - field name to average
  */
-function closestDemo(tractId, year) {
-  return DEMO_BY_RY.get(`${tractId}_${year}`)
-    || closestRow(AUDITED_DEMO_BY_ID.get(tractId), year);
-}
-
-function closestProp(tractId, year) {
-  return PROP_BY_RY.get(`${tractId}_${year}`)
-    || closestRow(AUDITED_PROP_BY_ID.get(tractId), year);
-}
-
-function closestSocio(tractId, year) {
-  return SOCIO_BY_RY.get(`${tractId}_${year}`)
-    || closestRow(AUDITED_SOCIO_BY_ID.get(tractId), year);
+function popWeightedAvg(tracts, yr, getRow, field) {
+  let totalWeight = 0;
+  let weightedSum = 0;
+  for (const tid of tracts) {
+    const row = getRow(tid, yr);
+    const pop = tractPop(tid, yr);
+    const val = row?.[field];
+    if (val != null && pop > 0) {
+      weightedSum += val * pop;
+      totalWeight += pop;
+    }
+  }
+  return totalWeight > 0 ? weightedSum / totalWeight : null;
 }
 
 /**
- * Aggregate tract-level data for a neighborhood at a given year.
+ * Aggregate all panel data for a neighborhood at a given year.
+ * Returns the same data shapes that RegionDetailPanel expects.
  */
 export function aggregateNeighborhood(neighborhoodId, year) {
   const hood = NEIGHBORHOOD_BY_ID.get(neighborhoodId);
   if (!hood) return null;
   const { tract_ids } = hood;
 
-  // ── Demographics (population-weighted averages) ──
-  const demoRows = tract_ids
-    .map(id => closestDemo(id, year))
-    .filter(Boolean);
+  // ═══ DVI ═══
 
-  if (demoRows.length === 0) return null;
+  const dviEntries = tract_ids.map(tid => ({
+    dvi: interpolateDvi(tid, year),
+    pop: tractPop(tid, year),
+  })).filter(e => e.dvi != null);
+  const totalDviPop = _.sumBy(dviEntries, "pop");
+  const aggDvi = totalDviPop > 0
+    ? +(_.sumBy(dviEntries, e => e.dvi * e.pop) / totalDviPop).toFixed(1)
+    : 0;
 
-  const totalPop = _.sumBy(demoRows, "total_population");
+  // ═══ DEMOGRAPHICS TAB — demoChartData ═══
 
-  function popWeightedAvg(field) {
-    if (totalPop === 0) return 0;
-    return (
-      _.sumBy(demoRows, r => (r[field] || 0) * (r.total_population || 0)) /
-      totalPop
-    );
+  const demoChartData = CHART_YEARS.map(yr => {
+    const rows = tract_ids
+      .map(tid => DEMO_BY_RY.get(`${tid}_${yr}`))
+      .filter(Boolean);
+    if (rows.length === 0) return null;
+
+    const totalPop = _.sumBy(rows, "total_population");
+    if (totalPop === 0) return null;
+
+    const wAvg = (field) => {
+      const sum = _.sumBy(rows, r => (r[field] ?? 0) * (r.total_population ?? 0));
+      return sum / totalPop / 100;
+    };
+
+    const White = wAvg("pct_white_non_hispanic");
+    const Black = wAvg("pct_black_non_hispanic");
+    const Hispanic = wAvg("pct_hispanic");
+    const Asian = wAvg("pct_asian");
+    const Other = Math.max(0, 1 - White - Black - Hispanic - Asian);
+
+    const rbSum = _.sumBy(rows, r => (r.rent_burden_pct ?? 0) * (r.total_population ?? 0));
+    const rent_burden_pct = rbSum / totalPop;
+
+    return {
+      year: yr,
+      White, Black, Hispanic, Asian, Other,
+      total: totalPop,
+      popBlack: Math.round(totalPop * Black),
+      popHispanic: Math.round(totalPop * Hispanic),
+      popWhite: Math.round(totalPop * White),
+      rent_burden_pct,
+    };
+  }).filter(Boolean);
+
+  // ═══ DEMOGRAPHICS TAB — narrativeCallouts ═══
+
+  const narrativeCallouts = [];
+  for (let i = 1; i < demoChartData.length; i++) {
+    const prev = demoChartData[i - 1];
+    const curr = demoChartData[i];
+
+    if (prev.popBlack > 0) {
+      const drop = (prev.popBlack - curr.popBlack) / prev.popBlack;
+      if (drop > 0.25) {
+        narrativeCallouts.push({
+          type: "pop_loss",
+          text: `${hood.name} lost ${(drop * 100).toFixed(0)}% of its Black population between ${prev.year} and ${curr.year} \u2014 a decline of ${(prev.popBlack - curr.popBlack).toLocaleString()} residents. ${curr.popBlack.toLocaleString()} remained.`,
+        });
+      }
+    }
   }
 
-  const demographics = {
-    total_population: totalPop,
-    pct_hispanic: popWeightedAvg("pct_hispanic"),
-    pct_white: popWeightedAvg("pct_white_non_hispanic"),
-    pct_black: popWeightedAvg("pct_black_non_hispanic"),
-    pct_asian: popWeightedAvg("pct_asian"),
-    pct_owner_occupied: popWeightedAvg("pct_owner_occupied"),
-    median_age: popWeightedAvg("median_age"),
-  };
+  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, 2023]]) {
+    const hvA = popWeightedAvg(tract_ids, yrA, getClosestProp, "median_home_value");
+    const hvB = popWeightedAvg(tract_ids, yrB, getClosestProp, "median_home_value");
+    if (hvA > 0 && hvB > 0) {
+      const inc = (hvB - hvA) / hvA;
+      if (inc > 1) {
+        narrativeCallouts.push({
+          type: "home_value",
+          text: `Median home values rose ${(inc * 100).toFixed(0)}%, from $${(hvA / 1000).toFixed(0)}k to $${(hvB / 1000).toFixed(0)}k, between ${yrA} and ${yrB}.`,
+        });
+      }
+    }
+  }
 
-  // ── DVI (population-weighted average) ──
-  const dviEntries = tract_ids
-    .map(id => {
-      const dvi = interpolateDvi(id, year);
-      const pop = closestDemo(id, year)?.total_population || 0;
-      return { dvi, pop };
-    })
-    .filter(e => e.dvi != null);
+  // ═══ ECONOMICS TAB — propertyNow / propertyPrev ═══
 
-  const totalDviPop = _.sumBy(dviEntries, "pop");
-  const aggDvi =
-    totalDviPop > 0
-      ? _.sumBy(dviEntries, e => e.dvi * e.pop) / totalDviPop
-      : 0;
+  const propRowsNow = tract_ids
+    .map(tid => ({ tid, row: getClosestProp(tid, year) }))
+    .filter(r => r.row);
 
-  // ── Property (population-weighted averages) ──
-  const propRows = tract_ids
-    .map(id => closestProp(id, year))
-    .filter(Boolean);
+  let propertyNow = null;
+  if (propRowsNow.length > 0) {
+    const yearCounts = _.countBy(propRowsNow, r => r.row.year);
+    const aggPropYear = +Object.entries(yearCounts).sort((a, b) => b[1] - a[1])[0][0];
+    propertyNow = {
+      year: aggPropYear,
+      median_home_value: popWeightedAvg(tract_ids, aggPropYear, getClosestProp, "median_home_value"),
+      median_rent_monthly: popWeightedAvg(tract_ids, aggPropYear, getClosestProp, "median_rent_monthly"),
+      region_id: null,
+    };
+  }
 
-  const property =
-    propRows.length > 0
-      ? {
-          median_home_value: popWeightedAvgFrom(
-            propRows,
-            demoRows,
-            "median_home_value"
-          ),
-          median_rent: popWeightedAvgFrom(
-            propRows,
-            demoRows,
-            "median_rent_monthly"
-          ),
-        }
-      : null;
+  const propRowsPrev = tract_ids
+    .map(tid => ({ tid, row: getPriorProp(tid, year) }))
+    .filter(r => r.row);
 
-  // ── Socioeconomic (population-weighted averages) ──
-  const socioRows = tract_ids
-    .map(id => closestSocio(id, year))
-    .filter(Boolean);
+  let propertyPrev = null;
+  if (propRowsPrev.length > 0) {
+    const yearCounts = _.countBy(propRowsPrev, r => r.row.year);
+    const aggPropPrevYear = +Object.entries(yearCounts).sort((a, b) => b[1] - a[1])[0][0];
+    propertyPrev = {
+      year: aggPropPrevYear,
+      median_home_value: popWeightedAvg(tract_ids, aggPropPrevYear, getClosestProp, "median_home_value"),
+      median_rent_monthly: popWeightedAvg(tract_ids, aggPropPrevYear, getClosestProp, "median_rent_monthly"),
+      region_id: null,
+    };
+  }
 
-  const socioeconomic =
-    socioRows.length > 0
-      ? {
-          median_household_income: popWeightedAvgFrom(
-            socioRows,
-            demoRows,
-            "median_household_income"
-          ),
-          poverty_rate: popWeightedAvgFrom(
-            socioRows,
-            demoRows,
-            "poverty_rate"
-          ),
-        }
-      : null;
+  // ═══ ECONOMICS TAB — socioNow / socioPrev ═══
 
-  // ── Businesses (union — no double counting since tracts are exclusive) ──
-  const bizOpen = LEGACY_OPERATING.filter(b =>
-    tract_ids.includes(b.region_id)
-  );
-  const bizClosed = LEGACY_CLOSED.filter(b =>
-    tract_ids.includes(b.region_id)
-  );
+  const socioRowsNow = tract_ids
+    .map(tid => ({ tid, row: getClosestSocio(tid, year) }))
+    .filter(r => r.row);
 
-  // ── Preservation Austin items (matched to constituent tracts) ──
-  const paItems = PA_ALL.filter(p =>
+  let socioNow = null;
+  if (socioRowsNow.length > 0) {
+    const yearCounts = _.countBy(socioRowsNow, r => r.row.year);
+    const aggSocioYear = +Object.entries(yearCounts).sort((a, b) => b[1] - a[1])[0][0];
+    socioNow = {
+      year: aggSocioYear,
+      median_household_income: popWeightedAvg(tract_ids, aggSocioYear, getClosestSocio, "median_household_income"),
+      poverty_rate: popWeightedAvg(tract_ids, aggSocioYear, getClosestSocio, "poverty_rate"),
+      region_id: null,
+    };
+  }
+
+  const socioRowsPrev = tract_ids
+    .map(tid => ({ tid, row: getPriorSocio(tid, year) }))
+    .filter(r => r.row);
+
+  let socioPrev = null;
+  if (socioRowsPrev.length > 0) {
+    const yearCounts = _.countBy(socioRowsPrev, r => r.row.year);
+    const aggSocioPrevYear = +Object.entries(yearCounts).sort((a, b) => b[1] - a[1])[0][0];
+    socioPrev = {
+      year: aggSocioPrevYear,
+      median_household_income: popWeightedAvg(tract_ids, aggSocioPrevYear, getClosestSocio, "median_household_income"),
+      poverty_rate: popWeightedAvg(tract_ids, aggSocioPrevYear, getClosestSocio, "poverty_rate"),
+      region_id: null,
+    };
+  }
+
+  // ═══ CULTURE TAB — businesses ═══
+
+  const bizOpen = LEGACY_OPERATING.filter(b => tract_ids.includes(b.region_id));
+  const bizClosed = LEGACY_CLOSED.filter(b => tract_ids.includes(b.region_id));
+
+  const totalSurviving = bizOpen.length;
+  const totalClosed = bizClosed.length;
+  const anchorDensity = (totalSurviving + totalClosed) > 0
+    ? totalSurviving / (totalSurviving + totalClosed)
+    : null;
+
+  // ═══ CULTURE TAB — PA items ═══
+
+  const paItems = PA_ALL.filter(item =>
     tract_ids.some(tid => {
       const tract = REGION_INDEX.find(r => r.region_id === tid);
       if (!tract) return false;
-      const dlat = p.lat - tract.lat;
-      const dlng = p.lng - tract.lng;
+      const dlat = item.lat - tract.lat;
+      const dlng = item.lng - tract.lng;
       return Math.sqrt(dlat * dlat + dlng * dlng) < 0.012;
     })
   );
 
-  // ── Demographic chart data (combined across tracts) ──
-  const chartYears = [1990, 2000, 2010, 2020, 2023];
-  const demoChartData = chartYears
-    .map(yr => {
-      const rows = tract_ids
-        .map(id => DEMO_BY_RY.get(`${id}_${yr}`))
-        .filter(Boolean);
-      const pop = _.sumBy(rows, "total_population");
-      if (pop === 0) return null;
+  // ═══ CULTURE TAB — tipping points ═══
 
-      const pW =
-        _.sumBy(
-          rows,
-          r => (r.pct_white_non_hispanic || 0) * r.total_population
-        ) / pop;
-      const pB =
-        _.sumBy(
-          rows,
-          r => (r.pct_black_non_hispanic || 0) * r.total_population
-        ) / pop;
-      const pH =
-        _.sumBy(rows, r => (r.pct_hispanic || 0) * r.total_population) / pop;
-      const pA =
-        _.sumBy(rows, r => (r.pct_asian || 0) * r.total_population) / pop;
-      const pO = Math.max(0, 100 - pW - pB - pH - pA);
-
-      return {
-        year: yr,
-        White: pW / 100,
-        Black: pB / 100,
-        Hispanic: pH / 100,
-        Asian: pA / 100,
-        Other: pO / 100,
-        total: pop,
-        popWhite: Math.round((pop * pW) / 100),
-        popBlack: Math.round((pop * pB) / 100),
-        popHispanic: Math.round((pop * pH) / 100),
-      };
+  const tippingPoints = tract_ids
+    .map(tid => {
+      const name = ID_TO_NAME.get(tid);
+      return TIPPING_POINTS.find(t => t.region === name);
     })
     .filter(Boolean);
+
+  // ═══ RETURN ═══
 
   return {
     id: hood.id,
     name: hood.name,
-    tractCount: tract_ids.length,
     tract_ids,
-    totalPopulation: totalPop,
+    tractCount: tract_ids.length,
     aggDvi,
-    demographics,
-    property,
-    socioeconomic,
+    demoChartData,
+    narrativeCallouts,
+    propertyNow,
+    propertyPrev,
+    socioNow,
+    socioPrev,
     bizOpen,
     bizClosed,
+    anchorDensity,
     paItems,
-    demoChartData,
+    tippingPoints,
   };
-}
-
-/**
- * Population-weighted average where data and population come from
- * different row sets (e.g., property rows weighted by demo populations).
- */
-function popWeightedAvgFrom(dataRows, demoRows, field) {
-  const popMap = new Map();
-  demoRows.forEach(r => {
-    if (r.region_id) popMap.set(r.region_id, r.total_population || 0);
-  });
-
-  let totalWeight = 0;
-  let weightedSum = 0;
-  dataRows.forEach(r => {
-    const pop = popMap.get(r.region_id) || 0;
-    const val = r[field];
-    if (val != null && pop > 0) {
-      weightedSum += val * pop;
-      totalWeight += pop;
-    }
-  });
-  return totalWeight > 0 ? weightedSum / totalWeight : 0;
 }

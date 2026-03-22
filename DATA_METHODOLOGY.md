@@ -416,12 +416,41 @@ Each census tract is assigned to **exactly one neighborhood** based on which NPA
 | Population | Sum of constituent tract populations | Absolute count — additive. |
 | DVI | Population-weighted average across tracts | Prevents small-population tracts from disproportionately influencing the score. |
 | Demographic percentages | Population-weighted average | A tract of 500 people and a tract of 5,000 shouldn't weight equally. |
-| Median home value | Population-weighted average | Approximation. True median would require household-level data. |
+| Demographic composition chart | Population-weighted average per year (1990, 2000, 2010, 2020, 2023) | Combined populations produce a single stacked area chart for the neighborhood. |
+| Median home value | Population-weighted average | Approximation. True median would require household-level data (see §10). |
 | Median rent | Population-weighted average | Same approximation. |
 | Median income | Population-weighted average | Same approximation. |
 | Poverty rate | Population-weighted average | Rates are weighted so larger communities drive the aggregate. |
+| Rent burden | Population-weighted average | Same as poverty rate. |
+| Narrative callouts | Computed from aggregated neighborhood populations | Thresholds (25% population loss, 100% home value surge) applied to combined totals, not per-tract (see below). |
+| Anchor density | Combined: total surviving ÷ (surviving + closed) across all tracts | Treats the neighborhood's business inventory as a single pool rather than averaging per-tract densities. |
 | Businesses | Union of all businesses in constituent tracts | No weighting needed — businesses are counted, not averaged. |
 | PA items | Union of all PA items near any constituent tract centroid | Uses the same 0.012-degree proximity threshold as tract-level matching. |
+| Tipping point narratives | All narratives from constituent tracts, shown individually | Not aggregated — each tract's narrative displayed with its origin identified (see below). |
+
+### Temporal Alignment for Economics Data
+
+When aggregating property or socioeconomic data across tracts, different tracts may have different "closest available years" to the slider position. For example, if the slider is at 2015, three tracts in a neighborhood might have 2015 data while a fourth only has 2014 data.
+
+The aggregation resolves this by using the **most common closest year** across constituent tracts as the aggregate year. In the example above, the aggregate would report year 2015 (the majority). All tracts are then weighted using their closest available data, even if one tract's data is from a slightly different year. This keeps the change arrows and inflation adjustments coherent — they compare two specific aggregate years rather than a blend.
+
+The tradeoff: a tract whose closest year is 1–2 years offset from the majority is still included in the weighted average, which introduces a small temporal imprecision. This is preferable to excluding the tract entirely, which would change the population weights and potentially misrepresent the neighborhood.
+
+### Narrative Callouts in Neighborhood Mode
+
+The Demographics tab generates narrative callouts when significant changes are detected (e.g., "Lost 34% of its Black population between 2000 and 2010"). In neighborhood mode, these thresholds are applied to the **aggregated neighborhood-level populations**, not to individual tracts.
+
+This means:
+- A neighborhood can trigger the 25% Black population loss callout even if no single constituent tract individually crosses 25% — because the combined population loss across all tracts exceeds the threshold.
+- Conversely, a single tract's sharp decline might be diluted below the threshold when combined with stable tracts in the same neighborhood.
+
+This is intentional: neighborhood-mode callouts describe what happened to the neighborhood as a whole, not to individual tracts within it. For tract-level precision on population changes, users should switch to Census Tracts view.
+
+The home value surge callout (>100% increase) works similarly — it compares aggregated population-weighted median home values across tracts at each time period, not individual tract values.
+
+### Tipping Point Narratives in Neighborhood Mode
+
+Tipping point narratives are hand-written per tract (stored in `data/tippingPoints.js`). In neighborhood mode, the panel displays **all** tipping point narratives from constituent tracts, labeled with the originating tract name. A neighborhood spanning five tracts might show zero, one, or multiple tipping point narratives depending on how many of its tracts have them. These are not aggregated or merged — each is shown as written, with its tract of origin identified.
 
 ### Source
 
@@ -529,6 +558,8 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 - **Neighborhood aggregation** assigns each tract entirely to one neighborhood via centroid matching. Tracts straddling neighborhood boundaries are fully attributed to one side. This is standard practice (used by HUD, Census Bureau) but introduces error at boundaries.
 - **Population-weighted averaging** for percentages and rates means small-population tracts (under 500 people) have minimal influence on neighborhood-level metrics. This is methodologically correct but means that a small enclave of a specific community within a larger neighborhood may not be visible in the aggregate.
 - **Median averaging** is an approximation. Population-weighted averages of median home values across tracts are not the same as the true median across all homes in the neighborhood. The true median would require household-level microdata, which is not publicly available at the tract level.
+- **Temporal misalignment in economics data:** When constituent tracts have different "closest available years" to the slider position, the aggregation uses the most common year across tracts as the reported aggregate year but includes all tracts in the weighted average regardless of their individual closest year. A tract reporting 2014 data may be averaged with tracts reporting 2015 data under a "2015" aggregate label. The offset is typically 1–2 years and is preferable to excluding the tract, which would change the population weights.
+- **Narrative callout dilution:** Population change callouts (e.g., "lost 25% of its Black population") are computed from aggregated neighborhood totals, not per-tract. A sharp decline in one tract may be diluted below the 25% threshold when combined with stable tracts in the same neighborhood. Conversely, modest per-tract declines can sum to a threshold-crossing loss at the neighborhood level. Both effects are inherent to aggregation. For tract-level population change analysis, use Census Tracts view.
 
 ### DVI Limitations
 
