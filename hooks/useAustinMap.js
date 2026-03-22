@@ -186,9 +186,9 @@ export default function useAustinMap({
         const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
         return {
           fillColor: yr < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
-          fillOpacity: 0.4,
-          color: isActive ? "#1a1a1a" : "#d6d3cd",
-          weight: isActive ? 3 : 1.5,
+          fillOpacity: 0.25,
+          color: isActive ? "#1a1a1a" : "#a8a49c",
+          weight: isActive ? 3 : 1,
         };
       },
       onEachFeature: (feature, layer) => {
@@ -198,7 +198,7 @@ export default function useAustinMap({
           mouseover: (e) => {
             const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
             if (!isActive) {
-              e.target.setStyle({ weight: 2.5, color: "#444", fillOpacity: 0.2 });
+              e.target.setStyle({ weight: 2.5, color: "#444", fillOpacity: 0 });
             }
             e.target.openTooltip();
           },
@@ -209,9 +209,9 @@ export default function useAustinMap({
             const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
             e.target.setStyle({
               fillColor: yr < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
-              fillOpacity: 0.4,
-              color: isActive ? "#1a1a1a" : "#d6d3cd",
-              weight: isActive ? 3 : 1.5,
+              fillOpacity: 0.25,
+              color: isActive ? "#1a1a1a" : "#a8a49c",
+              weight: isActive ? 3 : 1,
             });
           },
           click: () => {
@@ -328,9 +328,9 @@ export default function useAustinMap({
       const isActive = activeNeighborhoodId === feature.properties.neighborhood_id;
       return {
         fillColor: year < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
-        fillOpacity: 0.4,
-        color: isActive ? "#1a1a1a" : "#d6d3cd",
-        weight: isActive ? 3 : 1.5,
+        fillOpacity: 0.25,
+        color: isActive ? "#1a1a1a" : "#a8a49c",
+        weight: isActive ? 3 : 1,
       };
     });
   }, [year, activeNeighborhoodId, boundaryMode]);
