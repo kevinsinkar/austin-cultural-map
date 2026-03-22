@@ -155,7 +155,6 @@ export default function MapView({
               ))}
             </div>
             {[
-              { on: showHeritage, toggle: () => setShowHeritage(!showHeritage), label: "Heritage", icon: <span style={{ width: 12, height: 0, borderTop: "2px dashed currentColor" }} /> },
               { on: showPins, toggle: () => setShowPins(!showPins), label: "Businesses", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPins ? "#4ade80" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
               { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Project Connect", icon: <svg width="12" height="10" viewBox="0 0 12 10"><path d="M1 9L6 1L11 9" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg> },
               { on: showPreservationAustin, toggle: () => setShowPreservationAustin(!showPreservationAustin), label: "Preservation Austin", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPreservationAustin ? "#7c3aed" : "#a8a49c", border: "1.5px solid currentColor" }} /> },

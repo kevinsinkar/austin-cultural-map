@@ -1,9 +1,12 @@
 import * as d3 from "d3";
 import _ from "lodash";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi.js";
-import { AUDITED_SOCIO_BY_ID, AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID } from "../data/auditedData.js";
-import { LEGACY_OPERATING, LEGACY_CLOSED } from "../data";
-import { NAME_TO_ID } from "../data/regionLookup";
+import {
+  AUDITED_SOCIO_BY_ID, AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID,
+  DEMO_BY_RY, SOCIO_BY_RY, PROP_BY_RY, closestRow,
+} from "../data/auditedData.js";
+import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, REGION_INDEX } from "../data";
+import { NAME_TO_ID, getMergedIds } from "../data/regionLookup";
 
 // ── DVI interpolation ──
 
@@ -186,4 +189,294 @@ export function getAnchorBadge(density) {
   if (density > 0.7) return { label: "Strong anchor base", color: "#16a34a", bg: "#dcfce7" };
   if (density >= 0.4) return { label: "Eroding anchor base", color: "#ca8a04", bg: "#fef9c3" };
   return { label: "Critical anchor loss", color: "#dc2626", bg: "#fee2e2" };
+}
+
+// ── Helper: closest demo/socio/prop row for a region ──
+
+function closestDemo(regionId, year) {
+  return DEMO_BY_RY.get(`${regionId}_${year}`)
+    || closestRow(AUDITED_DEMO_BY_ID.get(regionId), year);
+}
+
+function closestSocio(regionId, year) {
+  return SOCIO_BY_RY.get(`${regionId}_${year}`)
+    || closestRow(AUDITED_SOCIO_BY_ID.get(regionId), year);
+}
+
+function closestProp(regionId, year) {
+  return PROP_BY_RY.get(`${regionId}_${year}`)
+    || closestRow(AUDITED_PROP_BY_ID.get(regionId), year);
+}
+
+function paCountNear(regionId) {
+  const regionEntry = REGION_INDEX.find(r => r.region_id === regionId);
+  if (!regionEntry) return 0;
+  return PA_ALL.filter(item => {
+    if (!item.lat || !item.lng) return false;
+    const dlat = item.lat - regionEntry.lat;
+    const dlng = item.lng - regionEntry.lng;
+    return Math.sqrt(dlat * dlat + dlng * dlng) < 0.012;
+  }).length;
+}
+
+// ── Lens 1: Displacement Trajectory ──
+
+export function calcTrajectory(regionId) {
+  const series = AUDITED_DVI_LOOKUP[regionId];
+  if (!series || series.length === 0) return null;
+
+  const dvi2023 = interpolateDvi(regionId, 2023);
+  const dvi2010 = interpolateDvi(regionId, 2010);
+  const dvi2000 = interpolateDvi(regionId, 2000);
+
+  const dviPoint = series.find(p => p.year >= 2020) || series[series.length - 1];
+  const isExcluded = dviPoint?.isExcluded ?? false;
+  if (isExcluded) {
+    return {
+      velocity: 0, acceleration: 0, interventionWindow: 0,
+      priority: 0, dvi2023, dvi2010, dvi2000,
+      category: "Affluent / Appreciated",
+    };
+  }
+
+  const velocityRecent = (dvi2023 - dvi2010) / 13;
+  const velocityPrior = (dvi2010 - dvi2000) / 10;
+
+  const MAX_VELOCITY = 3.0;
+  const velocity = Math.max(0, Math.min(velocityRecent / MAX_VELOCITY * 100, 100));
+
+  const accelRaw = velocityRecent - velocityPrior;
+  const MAX_ACCEL = 2.0;
+  const acceleration = Math.max(0, Math.min(accelRaw / MAX_ACCEL * 100, 100));
+
+  const d = closestDemo(regionId, 2023);
+  const s = closestSocio(regionId, 2023);
+  const renterShare = d ? (100 - (d.pct_owner_occupied ?? 50)) / 75 : 0.5;
+  const povertyNorm = s ? (s.poverty_rate ?? 0) / 30 : 0;
+  const bipocShare = d ? ((d.pct_hispanic ?? 0) + (d.pct_black_non_hispanic ?? 0)) / 100 : 0;
+  const rentBurdenNorm = d ? (d.rent_burden_pct ?? 0) / 55 : 0;
+  const foreignBornNorm = d ? (d.pct_foreign_born ?? 0) / 40 : 0;
+
+  const remainingVuln = Math.min(100,
+    (0.30 * renterShare + 0.25 * povertyNorm + 0.20 * bipocShare
+     + 0.15 * rentBurdenNorm + 0.10 * foreignBornNorm) * 100
+  );
+
+  let windowMultiplier;
+  if (dvi2023 < 20)      windowMultiplier = dvi2023 / 20 * 0.3;
+  else if (dvi2023 <= 55) windowMultiplier = 0.3 + 0.7 * ((dvi2023 - 20) / 35);
+  else if (dvi2023 <= 70) windowMultiplier = 0.7;
+  else                    windowMultiplier = 0.3;
+
+  const interventionWindow = Math.min(100,
+    windowMultiplier * (0.5 * velocity + 0.5 * remainingVuln)
+  );
+
+  const priority = +(
+    0.35 * interventionWindow +
+    0.30 * velocity +
+    0.20 * Math.min(dvi2023 / 80 * 100, 100) +
+    0.15 * acceleration
+  ).toFixed(1);
+
+  let category;
+  if (priority >= 75)      category = "Urgent — Active Window";
+  else if (priority >= 55) category = "High Priority — Accelerating";
+  else if (priority >= 35) category = "Emerging — Monitor Closely";
+  else if (priority >= 15) category = "Stable — Low Priority";
+  else                     category = "Post-Displacement or Stable";
+
+  return {
+    velocity: +velocity.toFixed(1),
+    acceleration: +acceleration.toFixed(1),
+    interventionWindow: +interventionWindow.toFixed(1),
+    priority,
+    dvi2023: +dvi2023.toFixed(1),
+    dvi2010: +dvi2010.toFixed(1),
+    dvi2000: +dvi2000.toFixed(1),
+    category,
+  };
+}
+
+// ── Lens 2: Equity-Weighted Vulnerability ──
+
+export function calcEquityPriority(regionId) {
+  const dvi = interpolateDvi(regionId, 2023);
+
+  const series = AUDITED_DVI_LOOKUP[regionId];
+  const dviPoint = series?.find(p => p.year >= 2020) || series?.[series.length - 1];
+  const isExcluded = dviPoint?.isExcluded ?? false;
+  if (isExcluded) {
+    return {
+      demoVuln: 0, econPrecarity: 0, equityDeficit: 0, preservationGap: 0,
+      priority: 0, dvi, category: "Affluent / Appreciated",
+    };
+  }
+
+  const d = closestDemo(regionId, 2023);
+  const s = closestSocio(regionId, 2023);
+  const p = closestProp(regionId, 2023);
+
+  // Demographic Vulnerability
+  const rentBurden = d ? Math.min((d.rent_burden_pct ?? 0) / 55 * 100, 100) : 50;
+  const renterShare = d ? Math.min((100 - (d.pct_owner_occupied ?? 50)) / 75 * 100, 100) : 50;
+  const foreignBorn = d ? Math.min((d.pct_foreign_born ?? 0) / 40 * 100, 100) : 0;
+  const elderly = d ? Math.min((d.pct_65_and_over ?? 0) / 25 * 100, 100) : 0;
+  const demoVuln = +(0.40 * rentBurden + 0.30 * renterShare + 0.15 * foreignBorn + 0.15 * elderly).toFixed(1);
+
+  // Economic Precarity
+  const poverty = s ? Math.min((s.poverty_rate ?? 0) / 30 * 100, 100) : 0;
+  const snap = s ? Math.min((s.snap_participation_rate ?? 0) / 25 * 100, 100) : 0;
+  const homeValueChange = p ? Math.min((p.pct_home_value_change_yoy ?? 0) / 15 * 100, 100) : 0;
+  const incomeGap = s ? Math.min((1 - (s.median_household_income ?? 86000) / 86000) * 100, 100) : 0;
+  const econPrecarity = +(0.30 * poverty + 0.25 * Math.max(0, snap) + 0.25 * homeValueChange + 0.20 * Math.max(0, incomeGap)).toFixed(1);
+
+  // Equity Deficit
+  const bipocPct = d ? ((d.pct_hispanic ?? 0) + (d.pct_black_non_hispanic ?? 0)) : 0;
+  const bipocScore = Math.min(bipocPct / 100 * 100, 100);
+
+  const allIds = getMergedIds(regionId);
+  const regionBiz = [...LEGACY_OPERATING, ...LEGACY_CLOSED].filter(
+    b => allIds.includes(b.region_id)
+  );
+  const hasHeritage = regionBiz.some(b =>
+    b.heritage && b.heritage !== "None" && b.heritage !== ""
+  );
+  const heritageScore = hasHeritage ? 80 : 20;
+
+  const regionEntry = REGION_INDEX.find(r => r.region_id === regionId);
+  const centroidLng = regionEntry?.lng ?? -97.74;
+  const eastOfI35 = centroidLng > -97.735;
+  const eastScore = eastOfI35 ? 70 : 30;
+
+  const foreignBornScore = d ? Math.min((d.pct_foreign_born ?? 0) / 40 * 100, 100) : 0;
+
+  const equityDeficit = +(0.35 * bipocScore + 0.25 * heritageScore + 0.20 * eastScore + 0.20 * foreignBornScore).toFixed(1);
+
+  // Preservation Gap
+  const paCount = paCountNear(regionId);
+  const preservationGap = +Math.max(0, 100 - paCount * 15).toFixed(1);
+
+  // Final priority
+  const normalizedDvi = Math.min(dvi / 80 * 100, 100);
+  const priority = +(
+    0.25 * normalizedDvi +
+    0.20 * demoVuln +
+    0.20 * econPrecarity +
+    0.20 * equityDeficit +
+    0.15 * preservationGap
+  ).toFixed(1);
+
+  let category;
+  if (priority >= 75)      category = "Equity Priority — Underserved";
+  else if (priority >= 55) category = "Heritage at Risk";
+  else if (priority >= 35) category = "Moderate Need";
+  else if (priority >= 15) category = "Lower Priority";
+  else                     category = "Affluent / Appreciated";
+
+  return { demoVuln, econPrecarity, equityDeficit, preservationGap, priority, dvi, category };
+}
+
+// ── Lens 3: Risk Matrix (Multi-Dimensional) ──
+
+export function calcRiskMatrix(regionId) {
+  const dvi = interpolateDvi(regionId, 2023);
+
+  const series = AUDITED_DVI_LOOKUP[regionId];
+  const dviPoint = series?.find(p => p.year >= 2020) || series?.[series.length - 1];
+  const isExcluded = dviPoint?.isExcluded ?? false;
+  if (isExcluded) {
+    return {
+      marketPressure: 0, communityVuln: 0, culturalSig: 0, feasibility: 0,
+      quadrant: "Q3", grantType: "None needed", category: "Affluent / Appreciated",
+    };
+  }
+
+  const d = closestDemo(regionId, 2023);
+  const p = closestProp(regionId, 2023);
+  const s = closestSocio(regionId, 2023);
+
+  // Axis 1: Market Displacement Pressure
+  const appreciation = p ? Math.min((p.pct_home_value_change_yoy ?? 0) / 15 * 100, 100) : 0;
+  const rent = p ? (p.median_rent_monthly ?? 0) : 0;
+  const income = s ? (s.median_household_income ?? 30000) : 30000;
+  const rentIncomeRatio = Math.min((rent * 12 / Math.max(income, 1)) / 0.50 * 100, 100);
+  const giniScore = s ? Math.min((s.gini_coefficient ?? 0) / 0.55 * 100, 100) : 0;
+  const permits = p ? Math.min((p.new_construction_permits ?? 0) / 500 * 100, 100) : 0;
+  const marketPressure = +(0.35 * appreciation + 0.25 * rentIncomeRatio + 0.20 * permits + 0.20 * giniScore).toFixed(1);
+
+  // Axis 2: Community Vulnerability
+  const rentBurden = d ? Math.min((d.rent_burden_pct ?? 0) / 55 * 100, 100) : 50;
+  const renterShare = d ? Math.min((100 - (d.pct_owner_occupied ?? 50)) / 75 * 100, 100) : 50;
+  const poverty = s ? Math.min((s.poverty_rate ?? 0) / 30 * 100, 100) : 0;
+  const foreignBorn = d ? Math.min((d.pct_foreign_born ?? 0) / 40 * 100, 100) : 0;
+  const elderly = d ? Math.min((d.pct_65_and_over ?? 0) / 25 * 100, 100) : 0;
+  const communityVuln = +(0.30 * rentBurden + 0.25 * renterShare + 0.20 * poverty + 0.15 * foreignBorn + 0.10 * elderly).toFixed(1);
+
+  // Axis 3: Cultural Significance
+  const bipocPct = d ? ((d.pct_hispanic ?? 0) + (d.pct_black_non_hispanic ?? 0)) : 0;
+  const bipocScore = Math.min(bipocPct / 100 * 100, 100);
+
+  const allIds = getMergedIds(regionId);
+  const regionBiz = [...LEGACY_OPERATING, ...LEGACY_CLOSED].filter(
+    b => allIds.includes(b.region_id)
+  );
+  const hasHeritage = regionBiz.some(b => b.heritage && b.heritage !== "None" && b.heritage !== "");
+  const heritageScore = hasHeritage ? 80 : (regionBiz.length > 0 ? 40 : 0);
+
+  const anchorDensity = calcAnchorDensity(regionId);
+  const anchorScore = anchorDensity != null ? anchorDensity * 100 : 50;
+
+  const paCount = paCountNear(regionId);
+  const paScore = Math.min(paCount * 10, 100);
+
+  const totalPop = d?.total_population ?? 0;
+  const popScore = Math.min(totalPop / 15000 * 100, 100);
+
+  const culturalSig = +(0.25 * bipocScore + 0.25 * heritageScore + 0.20 * anchorScore + 0.15 * paScore + 0.15 * popScore).toFixed(1);
+
+  // Axis 4: Intervention Feasibility
+  let dviWindowScore;
+  if (dvi < 15)      dviWindowScore = 10;
+  else if (dvi < 25) dviWindowScore = 10 + (dvi - 15) / 10 * 60;
+  else if (dvi <= 55) dviWindowScore = 70 + (1 - Math.abs(dvi - 40) / 15) * 30;
+  else if (dvi <= 70) dviWindowScore = 50;
+  else                dviWindowScore = 25;
+
+  const vacancy = p ? (p.vacancy_rate ?? 5) : 5;
+  const vacancyScore = vacancy < 10 ? 80 : 40;
+  const ownerOccupied = d ? (d.pct_owner_occupied ?? 50) : 50;
+  const tenureMixScore = (ownerOccupied >= 20 && ownerOccupied <= 60) ? 80 : 40;
+  const eviction = s ? (s.eviction_filing_rate ?? 0) : 0;
+  const evictionScore = eviction < 5 ? 70 : 30;
+
+  const feasibility = +(0.30 * dviWindowScore + 0.25 * vacancyScore + 0.25 * tenureMixScore + 0.20 * evictionScore).toFixed(1);
+
+  // Quadrant assignment
+  const marketHigh = marketPressure >= 50;
+  const vulnHigh = communityVuln >= 50;
+  let quadrant, grantType, category;
+
+  if (marketHigh && vulnHigh) {
+    quadrant = "Q1";
+    category = feasibility >= 50 ? "Crisis — Fund Now" : "Crisis — Document";
+    grantType = feasibility >= 50 ? "Emergency stabilization" : "Oral history & commemoration";
+  } else if (marketHigh && !vulnHigh) {
+    quadrant = "Q2";
+    category = "Urgent — Prevent";
+    grantType = "Proactive preservation";
+  } else if (!marketHigh && vulnHigh) {
+    quadrant = "Q4";
+    category = feasibility >= 50 ? "Chronic — Invest" : "Chronic — Systemic";
+    grantType = feasibility >= 50 ? "Community capacity building" : "Policy advocacy";
+  } else {
+    quadrant = "Q3";
+    category = "Monitor";
+    grantType = "No immediate action";
+  }
+
+  return {
+    marketPressure, communityVuln, culturalSig, feasibility,
+    quadrant, grantType, category, dvi,
+  };
 }
