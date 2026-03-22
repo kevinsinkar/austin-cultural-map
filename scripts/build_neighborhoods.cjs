@@ -543,6 +543,43 @@ async function main() {
   }
   console.log(`  Clusters formed: ${clustersMerged}`);
 
+  // Safety net: ensure no tracts are orphaned after clustering
+  const allAssignedIds = new Set(
+    Object.values(neighborhoodMap).flatMap(h => h.tract_ids)
+  );
+  let orphanCount = 0;
+  for (const tract of VISIBLE_REGIONS) {
+    if (!allAssignedIds.has(tract.region_id)) {
+      // Assign to nearest existing neighborhood
+      let bestHood = null;
+      let bestDist = Infinity;
+      for (const hood of Object.values(neighborhoodMap)) {
+        if (hood.tract_ids.length === 0) continue;
+        const hoodTracts = hood.tract_ids.map(id => REGION_INDEX.find(r => r.region_id === id)).filter(Boolean);
+        const avgLat = hoodTracts.reduce((s, t) => s + t.lat, 0) / hoodTracts.length;
+        const avgLng = hoodTracts.reduce((s, t) => s + t.lng, 0) / hoodTracts.length;
+        const dist = haversineKm(tract.lat, tract.lng, avgLat, avgLng);
+        if (dist < bestDist) { bestDist = dist; bestHood = hood; }
+      }
+      if (bestHood) {
+        bestHood.tract_ids.push(tract.region_id);
+        orphanCount++;
+      }
+    }
+  }
+  if (orphanCount > 0) console.log(`  Orphaned tracts reassigned: ${orphanCount}`);
+
+  // Mark non-NPA neighborhoods as "(under review)"
+  const npaSources = new Set(["City of Austin NPA", "City of Austin NPA (nearest)", "manual"]);
+  let underReviewCount = 0;
+  for (const hood of Object.values(neighborhoodMap)) {
+    if (!npaSources.has(hood.source)) {
+      hood.name = hood.name + " (under review)";
+      underReviewCount++;
+    }
+  }
+  console.log(`  Neighborhoods marked "(under review)": ${underReviewCount}`);
+
   // Compute centroids for each neighborhood
   const neighborhoods = Object.values(neighborhoodMap).map(hood => {
     const tracts = hood.tract_ids.map(id =>
