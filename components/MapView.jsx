@@ -201,9 +201,9 @@ export default function MapView({
               </button>
             </div>
             <input type="range" min={1990} max={2025} value={year} onChange={handleSliderChange} className="slider-track" style={{ width: "100%", background: `linear-gradient(to right,#0f766e ${((year - 1990) / 35) * 100}%,#d6d3cd ${((year - 1990) / 35) * 100}%)` }} aria-label="Select year" aria-valuenow={year} aria-valuemin={1990} aria-valuemax={2025} />
-            <div style={{ display: "flex", justifyContent: "space-between", marginTop: 4 }}>
+            <div style={{ position: "relative", height: 24, marginTop: 4 }}>
               {SNAP_YEARS.map((sy) => (
-                <button key={sy} onClick={() => { setYear(sy); setIsPlaying(false); }} style={{ fontSize: 11, color: year === sy ? "#0f766e" : "#a8a49c", fontWeight: year === sy ? 700 : 400, background: "none", border: "none", cursor: "pointer", padding: "2px 4px", minHeight: 24 }} aria-label={`Jump to ${sy}`}>{sy}</button>
+                <button key={sy} onClick={() => { setYear(sy); setIsPlaying(false); }} style={{ position: "absolute", left: `${((sy - 1990) / 35) * 100}%`, transform: "translateX(-50%)", fontSize: 11, color: year === sy ? "#0f766e" : "#a8a49c", fontWeight: year === sy ? 700 : 400, background: "none", border: "none", cursor: "pointer", padding: "2px 4px", minHeight: 24 }} aria-label={`Jump to ${sy}`}>{sy}</button>
               ))}
             </div>
             <div style={{ position: "relative", height: 36, marginTop: 8, borderTop: "1px solid #e8e5e0" }} aria-hidden="true">
