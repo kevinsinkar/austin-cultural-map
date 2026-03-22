@@ -19,17 +19,67 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "allandale-area",
-    "name": "Allandale Area",
+    "id": "anderson-mill",
+    "name": "Anderson Mill",
     "tract_ids": [
-      144,
-      158,
-      218
+      25
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "suburban-community",
     "centroid": [
-      30.3516,
-      -97.7899
+      30.4292,
+      -97.7925
+    ]
+  },
+  {
+    "id": "austin-bergstrom-international-airport",
+    "name": "Austin-Bergstrom International Airport",
+    "tract_ids": [
+      254
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1953,
+      -97.6648
+    ]
+  },
+  {
+    "id": "avery-ranch",
+    "name": "Avery Ranch",
+    "tract_ids": [
+      135
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4455,
+      -97.7772
+    ]
+  },
+  {
+    "id": "balcones-woods",
+    "name": "Balcones Woods",
+    "tract_ids": [
+      32,
+      36,
+      200,
+      249
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4133,
+      -97.7232
+    ]
+  },
+  {
+    "id": "barton-creek-west",
+    "name": "Barton Creek West",
+    "tract_ids": [
+      63,
+      208
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.2086,
+      -97.845
     ]
   },
   {
@@ -46,32 +96,15 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "barton-hills-area",
-    "name": "Barton Hills Area",
-    "tract_ids": [
-      96,
-      243
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.2757,
-      -97.7952
-    ]
-  },
-  {
     "id": "bee-cave",
     "name": "Bee Cave",
     "tract_ids": [
-      7,
-      10,
-      49,
-      173,
       189
     ],
-    "source": "city-lookup",
+    "source": "suburban-community",
     "centroid": [
-      30.1867,
-      -97.8854
+      30.1529,
+      -97.9065
     ]
   },
   {
@@ -101,16 +134,42 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "canyon-creek",
+    "name": "Canyon Creek",
+    "tract_ids": [
+      134,
+      190
+    ],
+    "source": "name-cluster",
+    "centroid": [
+      30.458,
+      -97.7982
+    ]
+  },
+  {
+    "id": "cat-mountain",
+    "name": "Cat Mountain",
+    "tract_ids": [
+      27,
+      46
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3987,
+      -97.7585
+    ]
+  },
+  {
     "id": "cedar-park",
     "name": "Cedar Park",
     "tract_ids": [
       22,
-      70
+      75
     ],
-    "source": "city-lookup",
+    "source": "suburban-community",
     "centroid": [
-      30.4454,
-      -97.8237
+      30.4221,
+      -97.8284
     ]
   },
   {
@@ -127,16 +186,29 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "cherry-creek",
+    "name": "Cherry Creek",
+    "tract_ids": [
+      55,
+      159,
+      224
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.1586,
+      -97.8136
+    ]
+  },
+  {
     "id": "cherrywood",
     "name": "Cherrywood",
     "tract_ids": [
-      79,
       121
     ],
     "source": "manual",
     "centroid": [
-      30.2866,
-      -97.7208
+      30.288,
+      -97.7246
     ]
   },
   {
@@ -152,6 +224,19 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "circle-c-ranch",
+    "name": "Circle C Ranch",
+    "tract_ids": [
+      10,
+      156
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.1939,
+      -97.8541
+    ]
+  },
+  {
     "id": "coronado-hills",
     "name": "Coronado Hills",
     "tract_ids": [
@@ -161,18 +246,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.327,
       -97.6843
-    ]
-  },
-  {
-    "id": "coronado-hills-area",
-    "name": "Coronado Hills Area",
-    "tract_ids": [
-      153
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.3358,
-      -97.6652
     ]
   },
   {
@@ -188,6 +261,19 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "davenport-ranch",
+    "name": "Davenport Ranch",
+    "tract_ids": [
+      110,
+      243
+    ],
+    "source": "name-cluster",
+    "centroid": [
+      30.2973,
+      -97.798
+    ]
+  },
+  {
     "id": "dawson",
     "name": "Dawson",
     "tract_ids": [
@@ -197,6 +283,33 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2325,
       -97.7615
+    ]
+  },
+  {
+    "id": "del-valle",
+    "name": "Del Valle",
+    "tract_ids": [
+      18,
+      72,
+      185
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.1702,
+      -97.6136
+    ]
+  },
+  {
+    "id": "dessau",
+    "name": "Dessau",
+    "tract_ids": [
+      17,
+      52
+    ],
+    "source": "name-cluster",
+    "centroid": [
+      30.4101,
+      -97.6525
     ]
   },
   {
@@ -240,32 +353,29 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "four-points",
+    "name": "Four Points",
+    "tract_ids": [
+      191
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4774,
+      -97.8093
+    ]
+  },
+  {
     "id": "franklin-park",
     "name": "Franklin Park",
     "tract_ids": [
       261,
       262,
-      263,
-      264
+      263
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.195,
-      -97.7499
-    ]
-  },
-  {
-    "id": "franklin-park-area",
-    "name": "Franklin Park Area",
-    "tract_ids": [
-      60,
-      66,
-      235
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.1716,
-      -97.7536
+      30.1964,
+      -97.747
     ]
   },
   {
@@ -287,73 +397,24 @@ export const NEIGHBORHOODS = [
       213,
       259,
       260,
-      23,
-      156,
-      167,
-      267
+      23
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.2053,
-      -97.8072
-    ]
-  },
-  {
-    "id": "garrison-park-area",
-    "name": "Garrison Park Area",
-    "tract_ids": [
-      53,
-      55,
-      63,
-      148,
-      159,
-      208,
-      266
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.1801,
-      -97.8294
+      30.2114,
+      -97.8009
     ]
   },
   {
     "id": "gateway",
     "name": "Gateway",
     "tract_ids": [
-      13,
-      26,
-      27
+      13
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3897,
-      -97.7484
-    ]
-  },
-  {
-    "id": "gateway-area",
-    "name": "Gateway Area",
-    "tract_ids": [
-      25,
-      29,
-      31,
-      45,
-      46,
-      75,
-      133,
-      134,
-      135,
-      137,
-      190,
-      191,
-      222,
-      230,
-      249
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.434,
-      -97.7813
+      30.3895,
+      -97.738
     ]
   },
   {
@@ -381,6 +442,31 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "gracywoods",
+    "name": "Gracywoods",
+    "tract_ids": [
+      34,
+      41
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4299,
+      -97.7015
+    ]
+  },
+  {
+    "id": "great-hills",
+    "name": "Great Hills",
+    "tract_ids": [
+      31
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4338,
+      -97.7507
+    ]
+  },
+  {
     "id": "hancock",
     "name": "Hancock",
     "tract_ids": [
@@ -393,6 +479,36 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "harris-branch",
+    "name": "Harris Branch",
+    "tract_ids": [
+      6,
+      8,
+      9,
+      11,
+      44
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3881,
+      -97.667
+    ]
+  },
+  {
+    "id": "harris-ridge",
+    "name": "Harris Ridge",
+    "tract_ids": [
+      30,
+      38,
+      51
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4636,
+      -97.6747
+    ]
+  },
+  {
     "id": "highland",
     "name": "Highland",
     "tract_ids": [
@@ -402,6 +518,18 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3272,
       -97.7163
+    ]
+  },
+  {
+    "id": "highland-east",
+    "name": "Highland — East",
+    "tract_ids": [
+      153
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3358,
+      -97.6652
     ]
   },
   {
@@ -430,6 +558,18 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "jester-estates",
+    "name": "Jester Estates",
+    "tract_ids": [
+      222
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4055,
+      -97.7786
+    ]
+  },
+  {
     "id": "johnston-terrace",
     "name": "Johnston Terrace",
     "tract_ids": [
@@ -442,40 +582,54 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "johnston-terrace-area",
-    "name": "Johnston Terrace Area",
+    "id": "lakeline",
+    "name": "Lakeline",
     "tract_ids": [
-      227
+      230
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "suburban-community",
     "centroid": [
-      30.2392,
-      -97.6416
+      30.4653,
+      -97.7593
+    ]
+  },
+  {
+    "id": "lakeway",
+    "name": "Lakeway",
+    "tract_ids": [
+      45
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3897,
+      -97.8079
+    ]
+  },
+  {
+    "id": "manor",
+    "name": "Manor",
+    "tract_ids": [
+      151,
+      168,
+      169,
+      183
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3468,
+      -97.6094
     ]
   },
   {
     "id": "mckinney",
     "name": "Mckinney",
     "tract_ids": [
-      1,
-      228
+      1
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.1963,
-      -97.7207
-    ]
-  },
-  {
-    "id": "mckinney-area",
-    "name": "Mckinney Area",
-    "tract_ids": [
-      250
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.1591,
-      -97.7102
+      30.203,
+      -97.7264
     ]
   },
   {
@@ -505,22 +659,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "mlk-183-area",
-    "name": "Mlk-183 Area",
-    "tract_ids": [
-      12,
-      68,
-      73,
-      77,
-      248
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.2891,
-      -97.6135
-    ]
-  },
-  {
     "id": "montopolis",
     "name": "Montopolis",
     "tract_ids": [
@@ -534,17 +672,40 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "montopolis-northeast",
+    "name": "Montopolis — Northeast",
+    "tract_ids": [
+      237
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1994,
+      -97.6447
+    ]
+  },
+  {
+    "id": "montopolis-northeast-moderate",
+    "name": "Montopolis — Northeast (Moderate)",
+    "tract_ids": [
+      227
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.2392,
+      -97.6416
+    ]
+  },
+  {
     "id": "mueller",
     "name": "Mueller",
     "tract_ids": [
       3,
-      74,
-      242
+      74
     ],
     "source": "manual",
     "centroid": [
-      30.2974,
-      -97.704
+      30.2972,
+      -97.6993
     ]
   },
   {
@@ -567,66 +728,37 @@ export const NEIGHBORHOODS = [
     "id": "north-burnet",
     "name": "North Burnet",
     "tract_ids": [
-      176,
-      200,
-      201
+      176
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3921,
-      -97.7091
+      30.392,
+      -97.7259
     ]
   },
   {
-    "id": "north-burnet-area",
-    "name": "North Burnet Area",
+    "id": "north-burnet-south",
+    "name": "North Burnet — South",
     "tract_ids": [
-      5,
-      32,
-      34,
-      35,
-      36,
-      41,
-      42,
-      52,
-      59,
-      61,
-      182,
-      229
+      201
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "tract-display-name",
     "centroid": [
-      30.4216,
-      -97.6909
+      30.3879,
+      -97.6998
     ]
   },
   {
     "id": "north-lamar",
     "name": "North Lamar",
     "tract_ids": [
-      14
+      14,
+      186
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3701,
-      -97.6866
-    ]
-  },
-  {
-    "id": "north-lamar-area",
-    "name": "North Lamar Area",
-    "tract_ids": [
-      6,
-      8,
-      9,
-      11,
-      54,
-      220
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.3981,
-      -97.6607
+      30.3428,
+      -97.661
     ]
   },
   {
@@ -646,26 +778,12 @@ export const NEIGHBORHOODS = [
     "name": "North Shoal Creek",
     "tract_ids": [
       178,
-      145,
-      147
+      145
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3658,
-      -97.744
-    ]
-  },
-  {
-    "id": "north-shoal-creek-area",
-    "name": "North Shoal Creek Area",
-    "tract_ids": [
-      43,
-      146
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.3675,
-      -97.7661
+      30.3698,
+      -97.741
     ]
   },
   {
@@ -678,6 +796,46 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2955,
       -97.7347
+    ]
+  },
+  {
+    "id": "northwest-hills",
+    "name": "Northwest Hills",
+    "tract_ids": [
+      43,
+      117,
+      146,
+      218
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.355,
+      -97.7821
+    ]
+  },
+  {
+    "id": "northwood",
+    "name": "Northwood",
+    "tract_ids": [
+      71,
+      187
+    ],
+    "source": "name-cluster",
+    "centroid": [
+      30.456,
+      -97.7213
+    ]
+  },
+  {
+    "id": "oak-hill",
+    "name": "Oak Hill",
+    "tract_ids": [
+      49
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.1928,
+      -97.8563
     ]
   },
   {
@@ -702,6 +860,19 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.274,
       -97.7609
+    ]
+  },
+  {
+    "id": "onion-creek",
+    "name": "Onion Creek",
+    "tract_ids": [
+      66,
+      235
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.1754,
+      -97.7554
     ]
   },
   {
@@ -730,20 +901,16 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "pflugerville",
-    "name": "Pflugerville",
+    "id": "pilot-knob",
+    "name": "Pilot Knob",
     "tract_ids": [
-      30,
-      38,
-      51,
-      58,
-      71,
-      187
+      47,
+      250
     ],
-    "source": "city-lookup",
+    "source": "suburban-community",
     "centroid": [
-      30.4597,
-      -97.6888
+      30.1589,
+      -97.6807
     ]
   },
   {
@@ -775,6 +942,30 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "redbud",
+    "name": "Redbud",
+    "tract_ids": [
+      233
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.2913,
+      -97.8093
+    ]
+  },
+  {
+    "id": "river-place",
+    "name": "River Place",
+    "tract_ids": [
+      40
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3425,
+      -97.8686
+    ]
+  },
+  {
     "id": "riverside",
     "name": "Riverside",
     "tract_ids": [
@@ -789,6 +980,18 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "rob-roy",
+    "name": "Rob Roy",
+    "tract_ids": [
+      130
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3242,
+      -97.8131
+    ]
+  },
+  {
     "id": "rosedale",
     "name": "Rosedale",
     "tract_ids": [
@@ -799,18 +1002,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3141,
       -97.7494
-    ]
-  },
-  {
-    "id": "rosedale-area",
-    "name": "Rosedale Area",
-    "tract_ids": [
-      117
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.3258,
-      -97.7683
     ]
   },
   {
@@ -833,27 +1024,49 @@ export const NEIGHBORHOODS = [
       188,
       244
     ],
-    "source": "city-lookup",
+    "source": "suburban-community",
     "centroid": [
       30.4927,
       -97.7824
     ]
   },
   {
-    "id": "south-austin-etj",
-    "name": "South Austin ETJ",
+    "id": "scofield-farms",
+    "name": "Scofield Farms",
     "tract_ids": [
-      56,
-      64,
-      97,
-      185,
-      192,
-      247
+      137
     ],
-    "source": "city-lookup",
+    "source": "suburban-community",
     "centroid": [
-      30.1234,
-      -97.7583
+      30.4579,
+      -97.7445
+    ]
+  },
+  {
+    "id": "shadowglen",
+    "name": "ShadowGlen",
+    "tract_ids": [
+      68
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3032,
+      -97.5778
+    ]
+  },
+  {
+    "id": "shady-hollow",
+    "name": "Shady Hollow",
+    "tract_ids": [
+      53,
+      56,
+      148,
+      167
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.1721,
+      -97.8144
     ]
   },
   {
@@ -875,12 +1088,13 @@ export const NEIGHBORHOODS = [
     "name": "South Manchaca",
     "tract_ids": [
       91,
-      128
+      128,
+      97
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.221,
-      -97.7809
+      30.1897,
+      -97.79
     ]
   },
   {
@@ -897,19 +1111,49 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "southeast-area",
-    "name": "Southeast Area",
+    "id": "southpark-meadows",
+    "name": "Southpark Meadows",
     "tract_ids": [
-      18,
-      47,
-      72,
-      237,
-      254
+      192,
+      247
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "suburban-community",
     "centroid": [
-      30.1841,
-      -97.6367
+      30.0912,
+      -97.7981
+    ]
+  },
+  {
+    "id": "southwood",
+    "name": "Southwood",
+    "tract_ids": [
+      60,
+      64,
+      193,
+      225,
+      264,
+      265,
+      266,
+      267
+    ],
+    "source": "name-cluster",
+    "centroid": [
+      30.175,
+      -97.7743
+    ]
+  },
+  {
+    "id": "springdale",
+    "name": "Springdale",
+    "tract_ids": [
+      12,
+      73,
+      248
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.2897,
+      -97.6306
     ]
   },
   {
@@ -926,6 +1170,18 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "st-elmo",
+    "name": "St. Elmo",
+    "tract_ids": [
+      228
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1896,
+      -97.7151
+    ]
+  },
+  {
     "id": "st-john",
     "name": "St. John",
     "tract_ids": [
@@ -939,31 +1195,66 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "steiner-ranch",
+    "name": "Steiner Ranch",
+    "tract_ids": [
+      70,
+      133
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4567,
+      -97.8191
+    ]
+  },
+  {
     "id": "sweetbriar",
     "name": "Sweetbriar",
     "tract_ids": [
       202,
-      205,
-      225,
-      265
+      205
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.1919,
-      -97.7755
+      30.2024,
+      -97.7749
     ]
   },
   {
-    "id": "sweetbriar-area",
-    "name": "Sweetbriar Area",
+    "id": "tech-ridge",
+    "name": "Tech Ridge",
     "tract_ids": [
-      193,
-      224
+      35
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "suburban-community",
     "centroid": [
-      30.1633,
-      -97.7855
+      30.4341,
+      -97.6904
+    ]
+  },
+  {
+    "id": "the-arboretum",
+    "name": "The Arboretum",
+    "tract_ids": [
+      29,
+      147
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3822,
+      -97.7436
+    ]
+  },
+  {
+    "id": "treemont",
+    "name": "Treemont",
+    "tract_ids": [
+      96
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.2728,
+      -97.7956
     ]
   },
   {
@@ -992,17 +1283,16 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "university-hills-area",
-    "name": "University Hills Area",
+    "id": "upper-boggy-creek",
+    "name": "Upper Boggy Creek",
     "tract_ids": [
-      169,
-      183,
-      186
+      79,
+      242
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "name-cluster",
     "centroid": [
-      30.3262,
-      -97.6098
+      30.2915,
+      -97.7152
     ]
   },
   {
@@ -1030,6 +1320,22 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "wells-branch",
+    "name": "Wells Branch",
+    "tract_ids": [
+      54,
+      58,
+      59,
+      182,
+      229
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4277,
+      -97.6619
+    ]
+  },
+  {
     "id": "west-austin-neighborhood-group",
     "name": "West Austin Neighborhood Group",
     "tract_ids": [
@@ -1041,21 +1347,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2979,
       -97.7701
-    ]
-  },
-  {
-    "id": "west-austin-neighborhood-group-area",
-    "name": "West Austin Neighborhood Group Area",
-    "tract_ids": [
-      40,
-      110,
-      130,
-      233
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.3185,
-      -97.8231
     ]
   },
   {
@@ -1071,19 +1362,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2351,
       -97.8918
-    ]
-  },
-  {
-    "id": "west-oak-hill-area",
-    "name": "West Oak Hill Area",
-    "tract_ids": [
-      143,
-      221
-    ],
-    "source": "City of Austin NPA (extended)",
-    "centroid": [
-      30.2746,
-      -97.8996
     ]
   },
   {
@@ -1113,6 +1391,31 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "westlake-hills",
+    "name": "Westlake Hills",
+    "tract_ids": [
+      143,
+      221
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.2746,
+      -97.8996
+    ]
+  },
+  {
+    "id": "wildhorse-ranch",
+    "name": "Wildhorse Ranch",
+    "tract_ids": [
+      77
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.2736,
+      -97.5979
+    ]
+  },
+  {
     "id": "windsor-hills",
     "name": "Windsor Hills",
     "tract_ids": [
@@ -1125,18 +1428,15 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "windsor-hills-area",
-    "name": "Windsor Hills Area",
+    "id": "windsor-hills-northwest",
+    "name": "Windsor Hills — Northwest",
     "tract_ids": [
-      17,
-      44,
-      151,
-      168
+      5
     ],
-    "source": "City of Austin NPA (extended)",
+    "source": "tract-display-name",
     "centroid": [
-      30.3737,
-      -97.6322
+      30.3928,
+      -97.6904
     ]
   },
   {

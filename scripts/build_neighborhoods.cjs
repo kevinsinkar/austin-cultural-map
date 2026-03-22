@@ -178,20 +178,69 @@ function findNearestNPA(centroid, npaFeatures, nameField, maxKm = 2) {
   return null;
 }
 
-function determineOutsideCity(lat, lng) {
-  // Rough bounding boxes for surrounding cities
-  if (lat > 30.44 && lng > -97.74) return "Pflugerville";
-  if (lat > 30.48) return "Round Rock";
-  if (lat > 30.42 && lng < -97.82) return "Cedar Park";
-  if (lat < 30.25 && lng < -97.85) return "Bee Cave";
-  if (lat < 30.20 && lng < -97.85) return "Lakeway";
-  if (lat < 30.15 && lng > -97.60) return "Del Valle";
-  if (lat > 30.35 && lng > -97.60) return "Manor";
-  // Far south
-  if (lat < 30.15) return "South Austin ETJ";
-  // Far north
-  if (lat > 30.48) return "North Austin ETJ";
-  return null;
+// ── Suburban community reference table ──────────────────────────────────────
+// For tracts outside COA NPA coverage, assign to recognizable community names
+// based on centroid proximity. Ordered from most specific to most general.
+const SUBURBAN_COMMUNITIES = [
+  // Northwest Austin
+  { name: "Anderson Mill", center: [30.429, -97.793], radius: 3.0 },
+  { name: "The Arboretum", center: [30.400, -97.745], radius: 2.5 },
+  { name: "Great Hills", center: [30.425, -97.755], radius: 3.0 },
+  { name: "Balcones Woods", center: [30.418, -97.756], radius: 2.0 },
+  { name: "Northwest Hills", center: [30.355, -97.775], radius: 2.5 },
+  { name: "Jester Estates", center: [30.406, -97.779], radius: 2.0 },
+  { name: "River Place", center: [30.343, -97.869], radius: 3.0 },
+  { name: "Steiner Ranch", center: [30.455, -97.816], radius: 3.0 },
+  { name: "Four Points", center: [30.477, -97.809], radius: 3.0 },
+  { name: "Cat Mountain", center: [30.398, -97.762], radius: 2.0 },
+  { name: "Rob Roy", center: [30.324, -97.813], radius: 2.5 },
+  // North Austin
+  { name: "Wells Branch", center: [30.440, -97.665], radius: 3.5 },
+  { name: "Scofield Farms", center: [30.445, -97.745], radius: 3.0 },
+  { name: "Gracywoods", center: [30.430, -97.700], radius: 3.0 },
+  { name: "Tech Ridge", center: [30.434, -97.690], radius: 2.5 },
+  { name: "Canyon Creek", center: [30.458, -97.795], radius: 3.0 },
+  { name: "Avery Ranch", center: [30.446, -97.777], radius: 2.5 },
+  { name: "Lakeline", center: [30.475, -97.765], radius: 3.0 },
+  // Northeast
+  { name: "Harris Ridge", center: [30.465, -97.680], radius: 3.5 },
+  { name: "Harris Branch", center: [30.383, -97.658], radius: 3.0 },
+  { name: "Springdale", center: [30.288, -97.639], radius: 2.5 },
+  { name: "Wildhorse Ranch", center: [30.274, -97.598], radius: 3.0 },
+  // East
+  { name: "ShadowGlen", center: [30.303, -97.578], radius: 3.0 },
+  { name: "Del Valle", center: [30.177, -97.591], radius: 5.0 },
+  { name: "Pilot Knob", center: [30.159, -97.680], radius: 3.0 },
+  // Southwest
+  { name: "Oak Hill", center: [30.195, -97.850], radius: 4.0 },
+  { name: "Circle C Ranch", center: [30.185, -97.879], radius: 3.0 },
+  { name: "Shady Hollow", center: [30.170, -97.830], radius: 3.5 },
+  { name: "Cherry Creek", center: [30.155, -97.815], radius: 3.0 },
+  { name: "Barton Creek West", center: [30.206, -97.849], radius: 2.5 },
+  { name: "Westlake Hills", center: [30.275, -97.900], radius: 3.0 },
+  // South
+  { name: "Onion Creek", center: [30.172, -97.755], radius: 3.0 },
+  { name: "Southpark Meadows", center: [30.087, -97.799], radius: 4.0 },
+  { name: "South Manchaca", center: [30.130, -97.800], radius: 4.0 },
+  // Surrounding cities
+  { name: "Pflugerville", center: [30.460, -97.688], radius: 5.0 },
+  { name: "Round Rock", center: [30.495, -97.785], radius: 5.0 },
+  { name: "Cedar Park", center: [30.445, -97.825], radius: 4.0 },
+  { name: "Bee Cave", center: [30.165, -97.906], radius: 4.0 },
+  { name: "Manor", center: [30.350, -97.590], radius: 5.0 },
+];
+
+function assignToSuburbanCommunity(lat, lng) {
+  let bestMatch = null;
+  let bestDist = Infinity;
+  for (const comm of SUBURBAN_COMMUNITIES) {
+    const dist = haversineKm(lat, lng, comm.center[0], comm.center[1]);
+    if (dist <= comm.radius && dist < bestDist) {
+      bestDist = dist;
+      bestMatch = comm;
+    }
+  }
+  return bestMatch;
 }
 
 // Manual neighborhoods for well-known areas
@@ -322,10 +371,8 @@ async function main() {
     const stillUnassigned = [];
 
     for (const tract of unassigned) {
-      const centroid = [tract.lat, tract.lng];
-
-      // Try nearest NPA within 2km
-      const nearest = findNearestNPA(centroid, npa.features, nameField, 2);
+      // Try nearest NPA within 1.5km (tight match only)
+      const nearest = findNearestNPA([tract.lat, tract.lng], npa.features, nameField, 1.5);
       if (nearest) {
         if (!neighborhoodMap[nearest.id]) {
           neighborhoodMap[nearest.id] = {
@@ -339,59 +386,43 @@ async function main() {
         continue;
       }
 
-      // Try outside-city assignment
-      const city = determineOutsideCity(tract.lat, tract.lng);
-      if (city) {
-        // Determine directional quadrant within the city
-        const cityId = slugify(city);
-        if (!neighborhoodMap[cityId]) {
-          neighborhoodMap[cityId] = {
-            id: cityId,
-            name: city,
+      // Try suburban community reference table
+      const community = assignToSuburbanCommunity(tract.lat, tract.lng);
+      if (community) {
+        const commId = slugify(community.name);
+        if (!neighborhoodMap[commId]) {
+          neighborhoodMap[commId] = {
+            id: commId,
+            name: community.name,
             tract_ids: [],
-            source: "city-lookup",
+            source: "suburban-community",
           };
         }
-        neighborhoodMap[cityId].tract_ids.push(tract.region_id);
+        neighborhoodMap[commId].tract_ids.push(tract.region_id);
         continue;
       }
 
       stillUnassigned.push(tract);
     }
 
-    // Last resort: assign to nearest NPA with no distance limit
+    // Last resort: use tract's own display_name as a standalone neighborhood
     for (const tract of stillUnassigned) {
-      const nearest = findNearestNPA([tract.lat, tract.lng], npa.features, nameField, 50);
-      if (nearest) {
-        const extId = slugify(nearest.name + " area");
-        if (!neighborhoodMap[extId]) {
-          neighborhoodMap[extId] = {
-            id: extId,
-            name: nearest.name + " Area",
-            tract_ids: [],
-            source: "City of Austin NPA (extended)",
-          };
-        }
-        neighborhoodMap[extId].tract_ids.push(tract.region_id);
-      } else {
-        // Truly unassigned — group as "Unassigned"
-        if (!neighborhoodMap["unassigned"]) {
-          neighborhoodMap["unassigned"] = {
-            id: "unassigned",
-            name: "Unassigned",
-            tract_ids: [],
-            source: "none",
-          };
-        }
-        neighborhoodMap["unassigned"].tract_ids.push(tract.region_id);
+      const name = tract.display_name || `Tract ${tract.region_id}`;
+      const id = slugify(name);
+      if (!neighborhoodMap[id]) {
+        neighborhoodMap[id] = {
+          id,
+          name,
+          tract_ids: [],
+          source: "tract-display-name",
+        };
       }
+      neighborhoodMap[id].tract_ids.push(tract.region_id);
     }
 
-    const reassigned = unassigned.length - (neighborhoodMap["unassigned"]?.tract_ids.length || 0);
-    console.log(`  Secondary assignment: ${reassigned} tracts assigned`);
-    if (neighborhoodMap["unassigned"]) {
-      console.log(`  Still unassigned: ${neighborhoodMap["unassigned"].tract_ids.length} tracts`);
-    }
+    const reassigned = unassigned.length - stillUnassigned.length;
+    console.log(`  Suburban community matches: ${reassigned}`);
+    console.log(`  Standalone tract names: ${stillUnassigned.length}`);
   }
 
   // Check manual neighborhoods
@@ -439,6 +470,78 @@ async function main() {
   for (const [id, hood] of Object.entries(neighborhoodMap)) {
     if (hood.tract_ids.length === 0) delete neighborhoodMap[id];
   }
+
+  // ── Name-based clustering ─────────────────────────────────────────────
+  // Find tracts sharing a base name (before " — " directional suffix)
+  // that are within 8km of each other, and merge them into one neighborhood.
+  console.log("\n  Name-based clustering...");
+  let clustersMerged = 0;
+
+  function extractBaseName(displayName) {
+    return displayName
+      .replace(/\s*[—–-]\s*(North|South|East|West|Northeast|Northwest|Southeast|Southwest|Inner|Outer|Central).*$/i, "")
+      .replace(/\s*#\d+$/, "")
+      .replace(/\s*\(.*\)$/, "")
+      .trim();
+  }
+
+  // Group all visible tracts by base name
+  const baseNameGroups = {};
+  VISIBLE_REGIONS.forEach(r => {
+    const base = extractBaseName(r.display_name);
+    if (!baseNameGroups[base]) baseNameGroups[base] = [];
+    baseNameGroups[base].push(r);
+  });
+
+  for (const [base, tracts] of Object.entries(baseNameGroups)) {
+    if (tracts.length < 2) continue;
+
+    // Check max spread
+    let maxDist = 0;
+    for (let i = 0; i < tracts.length; i++) {
+      for (let j = i + 1; j < tracts.length; j++) {
+        maxDist = Math.max(maxDist, haversineKm(tracts[i].lat, tracts[i].lng, tracts[j].lat, tracts[j].lng));
+      }
+    }
+    if (maxDist > 8) continue; // Too spread out to be one neighborhood
+
+    // Skip if this base name already matches an existing NPA neighborhood
+    // (those tracts are already correctly assigned)
+    const tractIds = tracts.map(t => t.region_id);
+
+    // Check if all these tracts are already in the SAME neighborhood
+    const currentHoods = new Set();
+    for (const [, hood] of Object.entries(neighborhoodMap)) {
+      for (const tid of tractIds) {
+        if (hood.tract_ids.includes(tid)) currentHoods.add(hood.id);
+      }
+    }
+    if (currentHoods.size <= 1) continue; // Already together
+
+    // Merge: create a new neighborhood with this base name, pulling tracts from their current hoods
+    const clusterId = slugify(base);
+    // Don't overwrite a direct NPA match
+    if (neighborhoodMap[clusterId]?.source === "City of Austin NPA") continue;
+
+    // Remove these tracts from their current neighborhoods
+    for (const hood of Object.values(neighborhoodMap)) {
+      hood.tract_ids = hood.tract_ids.filter(id => !tractIds.includes(id));
+    }
+
+    neighborhoodMap[clusterId] = {
+      id: clusterId,
+      name: base,
+      tract_ids: tractIds,
+      source: neighborhoodMap[clusterId]?.source || "name-cluster",
+    };
+    clustersMerged++;
+  }
+
+  // Clean up empty neighborhoods after clustering
+  for (const [id, hood] of Object.entries(neighborhoodMap)) {
+    if (hood.tract_ids.length === 0) delete neighborhoodMap[id];
+  }
+  console.log(`  Clusters formed: ${clustersMerged}`);
 
   // Compute centroids for each neighborhood
   const neighborhoods = Object.values(neighborhoodMap).map(hood => {
