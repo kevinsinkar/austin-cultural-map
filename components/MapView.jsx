@@ -54,6 +54,11 @@ export default function MapView({
   regionBizClosed,
   tippingPoint,
   narrativeCallouts,
+  // Boundary mode
+  boundaryMode,
+  setBoundaryMode,
+  activeNeighborhoodId,
+  setActiveNeighborhoodId,
 }) {
   const mapRef = useRef(null);
 
@@ -77,6 +82,9 @@ export default function MapView({
     setPanelTab,
     setBizTab,
     setSelectedPA,
+    boundaryMode,
+    activeNeighborhoodId,
+    setActiveNeighborhoodId,
   });
 
   const activeRegionName = activeFeature?.properties?.region_name;
@@ -117,8 +125,35 @@ export default function MapView({
       <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: "row" }}>
         {/* ═══ LEFT: MAP ═══ */}
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
-          {/* Toggles */}
-          <div style={{ display: "flex", gap: 6, marginBottom: 10, flexWrap: "wrap" }} role="toolbar" aria-label="Map overlays">
+          {/* Boundary mode toggle + overlay toggles */}
+          <div style={{ display: "flex", gap: 6, marginBottom: 10, flexWrap: "wrap", alignItems: "center" }} role="toolbar" aria-label="Map overlays">
+            {/* Boundary mode toggle */}
+            <div style={{ display: "flex", background: "#edeae4", borderRadius: 8, padding: 3, marginRight: 6 }}>
+              {[
+                { key: "tracts", label: "Census Tracts" },
+                { key: "neighborhoods", label: "Neighborhoods" },
+              ].map(mode => (
+                <button
+                  key={mode.key}
+                  onClick={() => setBoundaryMode(mode.key)}
+                  aria-current={boundaryMode === mode.key ? "page" : undefined}
+                  style={{
+                    padding: "4px 12px",
+                    borderRadius: 6,
+                    fontSize: 11,
+                    fontWeight: boundaryMode === mode.key ? 600 : 400,
+                    background: boundaryMode === mode.key ? "#fffffe" : "transparent",
+                    color: boundaryMode === mode.key ? "#0f766e" : "#7c6f5e",
+                    border: "none",
+                    cursor: "pointer",
+                    boxShadow: boundaryMode === mode.key ? "0 1px 3px rgba(0,0,0,.08)" : "none",
+                    minHeight: 32,
+                  }}
+                >
+                  {mode.label}
+                </button>
+              ))}
+            </div>
             {[
               { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Regions", icon: <span style={{ width: 10, height: 10, borderRadius: 2, background: showRegions ? "linear-gradient(135deg, #4ade80, #facc15, #fb923c, #ef4444)" : "#a8a49c", border: "1px solid currentColor" }} /> },
               { on: showHeritage, toggle: () => setShowHeritage(!showHeritage), label: "Heritage", icon: <span style={{ width: 12, height: 0, borderTop: "2px dashed currentColor" }} /> },
@@ -131,6 +166,12 @@ export default function MapView({
               </button>
             ))}
           </div>
+
+          {boundaryMode === "neighborhoods" && (
+            <div style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic", lineHeight: 1.4, marginBottom: 6, maxWidth: 420 }}>
+              Neighborhood boundaries follow City of Austin planning areas. Data is aggregated from census tracts assigned by centroid location — each tract contributes to exactly one neighborhood. For precise tract-level data, switch to Census Tracts view.
+            </div>
+          )}
 
           {/* MAP CONTAINER */}
           <div ref={mapRef} style={{ position: "relative", background: "#f5f3f0", borderRadius: 10, overflow: "hidden", border: "1px solid #d6d3cd", boxShadow: "0 1px 3px rgba(0,0,0,.06)", height: "600px" }} id="map-container" />
@@ -261,6 +302,8 @@ export default function MapView({
           panelTab={panelTab}
           setPanelTab={setPanelTab}
           selectedPA={selectedPA}
+          boundaryMode={boundaryMode}
+          activeNeighborhoodId={activeNeighborhoodId}
         />
       </div>
     </section>

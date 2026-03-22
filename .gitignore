@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# NPA boundary cache (fetched at build time)
+data/_cached_npa_boundaries.geojson

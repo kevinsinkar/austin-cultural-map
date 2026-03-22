@@ -1,11 +1,14 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import _ from "lodash";
 import { REGION_INDEX } from "../data";
 import { regionLookupMap } from "../data/regionIndex";
 import { REGIONS_GEOJSON } from "../data/final_updated_regions";
+import { NEIGHBORHOODS_GEOJSON } from "../data/neighborhoods_geojson";
+import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
-import { AUDITED_PROP_BY_ID } from "../data/auditedData";
+import { AUDITED_PROP_BY_ID, DEMO_BY_RY } from "../data/auditedData";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
@@ -31,9 +34,13 @@ export default function useAustinMap({
   setPanelTab,
   setBizTab,
   setSelectedPA,
+  boundaryMode,
+  activeNeighborhoodId,
+  setActiveNeighborhoodId,
 }) {
   const leafletMapRef = useRef(null);
-  const geojsonLayerRef = useRef(null); // Leaflet layer for regions
+  const geojsonLayerRef = useRef(null); // Leaflet layer for tract regions
+  const neighborhoodLayerRef = useRef(null); // Leaflet layer for neighborhoods
   const musicLayer = useRef(null);
   const businessLayerRef = useRef({ operating: null, closed: null });
   const bizMarkersRef = useRef(new Map());
@@ -47,6 +54,13 @@ export default function useAustinMap({
   // Same for year so mouseout can recompute the correct fill.
   const yearRef = useRef(year);
   yearRef.current = year;
+
+  // Boundary mode ref for event handlers created once in init
+  const boundaryModeRef = useRef(boundaryMode);
+  boundaryModeRef.current = boundaryMode;
+
+  const activeNeighborhoodIdRef = useRef(activeNeighborhoodId);
+  activeNeighborhoodIdRef.current = activeNeighborhoodId;
 
 
   // utility: round coordinates in GeoJSON to reduce precision
@@ -64,6 +78,18 @@ export default function useAustinMap({
       f.geometry.coordinates = recurse(f.geometry.coordinates);
     });
     return clone;
+  }
+
+  // Compute population-weighted DVI for a neighborhood at a given year
+  function computeNeighborhoodDvi(hood, yr) {
+    if (!hood) return 0;
+    const entries = hood.tract_ids.map(id => {
+      const dvi = interpolateDvi(id, yr);
+      const pop = DEMO_BY_RY.get(`${id}_${yr}`)?.total_population || 0;
+      return { dvi, pop };
+    }).filter(e => e.dvi != null);
+    const totalPop = _.sumBy(entries, "pop");
+    return totalPop > 0 ? _.sumBy(entries, e => e.dvi * e.pop) / totalPop : 0;
   }
 
   // ── Initialize Leaflet map with GeoJSON layer ──
@@ -150,6 +176,53 @@ export default function useAustinMap({
 
     geojsonLayerRef.current = geojsonLayer;
 
+    // ── Neighborhood layer (not added to map initially) ──
+    const neighborhoodLayer = L.geoJSON(NEIGHBORHOODS_GEOJSON, {
+      style: (feature) => {
+        const hood = NEIGHBORHOOD_BY_ID.get(feature.properties.neighborhood_id);
+        const yr = yearRef.current;
+        const aggDvi = computeNeighborhoodDvi(hood, yr);
+        const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
+        return {
+          fillColor: yr < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
+          fillOpacity: 0.4,
+          color: isActive ? "#1a1a1a" : "#d6d3cd",
+          weight: isActive ? 3 : 1.5,
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const name = feature.properties.neighborhood_name;
+        layer.bindTooltip(name, { direction: "auto", sticky: true });
+        layer.on({
+          mouseover: (e) => {
+            const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
+            if (!isActive) {
+              e.target.setStyle({ weight: 2.5, color: "#444", fillOpacity: 0.2 });
+            }
+            e.target.openTooltip();
+          },
+          mouseout: (e) => {
+            const hood = NEIGHBORHOOD_BY_ID.get(feature.properties.neighborhood_id);
+            const yr = yearRef.current;
+            const aggDvi = computeNeighborhoodDvi(hood, yr);
+            const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
+            e.target.setStyle({
+              fillColor: yr < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
+              fillOpacity: 0.4,
+              color: isActive ? "#1a1a1a" : "#d6d3cd",
+              weight: isActive ? 3 : 1.5,
+            });
+          },
+          click: () => {
+            setActiveNeighborhoodId(feature.properties.neighborhood_id);
+            setActiveRegionId(null);
+            setActiveFeature(null);
+          },
+        });
+      },
+    });
+    neighborhoodLayerRef.current = neighborhoodLayer;
+
     // Layer groups for overlays
     const operatingLayer = L.layerGroup().addTo(map);
     const closedLayer = L.layerGroup().addTo(map);
@@ -177,6 +250,7 @@ export default function useAustinMap({
       map.remove();
       leafletMapRef.current = null;
       geojsonLayerRef.current = null;
+      neighborhoodLayerRef.current = null;
     };
   }, []);
 
@@ -223,17 +297,60 @@ export default function useAustinMap({
     });
   }, [year, activeRegionId]);
 
+  // ── Switch between tract and neighborhood layers ──
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    const tractLayer = geojsonLayerRef.current;
+    const neighborhoodLayer = neighborhoodLayerRef.current;
+    if (!map || !tractLayer || !neighborhoodLayer) return;
+
+    if (boundaryMode === "tracts") {
+      if (map.hasLayer(neighborhoodLayer)) map.removeLayer(neighborhoodLayer);
+      if (showRegions && !map.hasLayer(tractLayer)) tractLayer.addTo(map);
+      setActiveNeighborhoodId(null);
+    } else {
+      if (map.hasLayer(tractLayer)) map.removeLayer(tractLayer);
+      if (showRegions && !map.hasLayer(neighborhoodLayer)) neighborhoodLayer.addTo(map);
+      setActiveRegionId(null);
+      setActiveFeature(null);
+    }
+  }, [boundaryMode]);
+
+  // ── Update neighborhood styles when year or selection changes ──
+  useEffect(() => {
+    const layer = neighborhoodLayerRef.current;
+    if (!layer || boundaryMode !== "neighborhoods") return;
+
+    layer.setStyle((feature) => {
+      const hood = NEIGHBORHOOD_BY_ID.get(feature.properties.neighborhood_id);
+      const aggDvi = computeNeighborhoodDvi(hood, year);
+      const isActive = activeNeighborhoodId === feature.properties.neighborhood_id;
+      return {
+        fillColor: year < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
+        fillOpacity: 0.4,
+        color: isActive ? "#1a1a1a" : "#d6d3cd",
+        weight: isActive ? 3 : 1.5,
+      };
+    });
+  }, [year, activeNeighborhoodId, boundaryMode]);
+
   // ── Toggle region polygon visibility ──
   useEffect(() => {
-    const layer = geojsonLayerRef.current;
     const map = leafletMapRef.current;
-    if (!layer || !map) return;
+    const tractLayer = geojsonLayerRef.current;
+    const neighborhoodLayer = neighborhoodLayerRef.current;
+    if (!map) return;
+
     if (showRegions) {
-      if (!map.hasLayer(layer)) map.addLayer(layer);
+      const activeLayer = boundaryMode === "tracts" ? tractLayer : neighborhoodLayer;
+      const inactiveLayer = boundaryMode === "tracts" ? neighborhoodLayer : tractLayer;
+      if (activeLayer && !map.hasLayer(activeLayer)) activeLayer.addTo(map);
+      if (inactiveLayer && map.hasLayer(inactiveLayer)) map.removeLayer(inactiveLayer);
     } else {
-      if (map.hasLayer(layer)) map.removeLayer(layer);
+      if (tractLayer && map.hasLayer(tractLayer)) map.removeLayer(tractLayer);
+      if (neighborhoodLayer && map.hasLayer(neighborhoodLayer)) map.removeLayer(neighborhoodLayer);
     }
-  }, [showRegions]);
+  }, [showRegions, boundaryMode]);
 
   // ── Update overlays (business markers, music venues, PC lines, dev pressure) ──
   useEffect(() => {

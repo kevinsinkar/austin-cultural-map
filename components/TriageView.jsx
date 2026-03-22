@@ -69,7 +69,7 @@ const TRIAGE_ORDER = [
 
 // ── Component ──
 
-export default function TriageView() {
+export default function TriageView({ boundaryMode }) {
   const [sortCol, setSortCol] = useState("triage");
   const [sortDir, setSortDir] = useState("asc");
   const [showAdvanced, setShowAdvanced] = useState(false);

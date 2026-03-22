@@ -100,6 +100,19 @@ export default function AboutModal({ onClose }) {
             Region-to-tract mappings for earlier decades are approximate.
           </p>
           <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
+            Neighborhood Aggregation
+          </h3>
+          <p style={{ margin: "0 0 16px" }}>
+            Neighborhood boundaries are based on City of Austin Neighborhood Planning
+            Areas. Census tracts are assigned to neighborhoods using centroid-in-polygon
+            matching — each tract belongs to exactly one neighborhood, and its full
+            population and metrics are attributed to that neighborhood. This avoids
+            double-counting but means tracts that straddle two neighborhoods are
+            assigned entirely to one. For boundary-sensitive analysis, use the
+            Census Tracts view, which shows the underlying data at its native
+            resolution.
+          </p>
+          <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
             Sources
           </h3>
           <p style={{ margin: "0 0 4px" }}>

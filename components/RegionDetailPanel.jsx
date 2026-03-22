@@ -1,15 +1,18 @@
+import { useMemo } from "react";
 import _ from "lodash";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 import { DEMO_COLORS } from "../data/constants";
-import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge } from "../utils/math";
+import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge, interpolateDvi } from "../utils/math";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
+import { ID_TO_NAME } from "../data/regionLookup";
 import { fmtPct, fmtChange, pressureColor, pressureDots } from "../utils/formatters";
 import { adjustForInflation } from "../utils/cpi";
 import ChartTooltip from "./ChartTooltip";
+import { aggregateNeighborhood } from "../utils/aggregation";
 
 export default function RegionDetailPanel({
   activeFeature,
@@ -39,7 +42,175 @@ export default function RegionDetailPanel({
   panelTab,
   setPanelTab,
   selectedPA,
+  boundaryMode,
+  activeNeighborhoodId,
 }) {
+  // Compute neighborhood aggregation when in neighborhood mode
+  const neighborhoodData = useMemo(() => {
+    if (boundaryMode !== "neighborhoods" || !activeNeighborhoodId) return null;
+    return aggregateNeighborhood(activeNeighborhoodId, year);
+  }, [boundaryMode, activeNeighborhoodId, year]);
+
+  // In neighborhood mode without a selection, show prompt
+  if (boundaryMode === "neighborhoods" && !activeNeighborhoodId) {
+    return (
+      <div
+        className="detail-panel"
+        style={{ flex: "0 1 380px", minWidth: 300, maxHeight: "calc(100vh - 100px)", overflowY: "auto", position: "sticky", top: 16 }}
+        role="region"
+        aria-label="Region detail panel"
+      >
+        <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
+          <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">🏘️</div>
+          <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a neighborhood</div>
+          <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>Click any neighborhood on the map to explore its aggregated demographic history, displacement metrics, and cultural story.</div>
+        </div>
+      </div>
+    );
+  }
+
+  // In neighborhood mode with a selection
+  if (boundaryMode === "neighborhoods" && activeNeighborhoodId && neighborhoodData) {
+    const nd = neighborhoodData;
+    const d = nd.aggDvi;
+    const hoodDemoChart = nd.demoChartData;
+    const nearest = _.minBy(hoodDemoChart, dd => Math.abs(dd.year - year));
+
+    return (
+      <div
+        className="detail-panel"
+        style={{ flex: "0 1 380px", minWidth: 300, maxHeight: "calc(100vh - 100px)", overflowY: "auto", position: "sticky", top: 16 }}
+        role="region"
+        aria-label="Neighborhood detail panel"
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {/* Header */}
+          <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+            <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 20, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 }}>
+              {nd.name}
+              <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [{nd.tractCount} tracts]</span>
+            </h2>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 12 }}>
+              <div style={{ width: 40, height: 40, borderRadius: 8, background: getDviColor(d), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 15, fontWeight: 700, color: "#1a1a1a" }}>{d.toFixed(0)}</span>
+              </div>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: getDviBandColor(d) }}>{getDviBand(d)}</div>
+                <div style={{ fontSize: 11, color: "#a8a49c" }}>Aggregated DVI at {year}</div>
+              </div>
+              <div style={{ marginLeft: "auto", fontSize: 12, color: "#64615b" }}>
+                Pop. <strong>{nd.totalPopulation?.toLocaleString()}</strong>
+              </div>
+            </div>
+          </div>
+
+          {/* Demographics */}
+          {hoodDemoChart.length > 0 && (
+            <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+              <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Demographic Composition</h3>
+              <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Population-weighted aggregate, 1990-2023</p>
+              <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${nd.name}`}>
+                <ResponsiveContainer>
+                  <AreaChart data={hoodDemoChart} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
+                    <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} />
+                    <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                    <Tooltip content={<ChartTooltip />} />
+                    <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
+                    <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" />
+                    <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" />
+                    <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" />
+                    <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" />
+                    <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 8 }}>
+                {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
+                  <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                    <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
+                    <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
+                  </div>
+                ))}
+              </div>
+              {nearest && (
+                <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
+                  In <strong>{nearest.year}</strong>, total pop. was <strong>{nearest.total?.toLocaleString()}</strong>.
+                  {" "}Black: <strong style={{ color: DEMO_COLORS.Black }}>{nearest.popBlack?.toLocaleString()}</strong>.
+                  {" "}Hispanic: <strong style={{ color: DEMO_COLORS.Hispanic }}>{nearest.popHispanic?.toLocaleString()}</strong>.
+                  {" "}White: <strong style={{ color: DEMO_COLORS.White }}>{nearest.popWhite?.toLocaleString()}</strong>.
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Economics summary */}
+          {(nd.property || nd.socioeconomic) && (
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              {nd.property && [
+                { label: "Median Home Value", value: nd.property.median_home_value, fmt: v => v ? "$" + (v / 1000).toFixed(0) + "k" : "N/A" },
+                { label: "Median Rent", value: nd.property.median_rent, fmt: v => v ? "$" + Math.round(v).toLocaleString() : "N/A" },
+              ].map(c => (
+                <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                  <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{c.fmt(c.value)}</span>
+                  <div style={{ fontSize: 10, color: "#a8a49c" }}>Pop-weighted avg</div>
+                </div>
+              ))}
+              {nd.socioeconomic && [
+                { label: "Median HH Income", value: nd.socioeconomic.median_household_income, fmt: v => v ? "$" + (v / 1000).toFixed(0) + "k" : "N/A" },
+                { label: "Poverty Rate", value: nd.socioeconomic.poverty_rate, fmt: v => v != null ? v.toFixed(1) + "%" : "N/A" },
+              ].map(c => (
+                <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                  <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{c.fmt(c.value)}</span>
+                  <div style={{ fontSize: 10, color: "#a8a49c" }}>Pop-weighted avg</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Businesses */}
+          {(nd.bizOpen.length > 0 || nd.bizClosed.length > 0) && (
+            <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+              <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Legacy Businesses</h3>
+              <div style={{ fontSize: 12, color: "#64615b" }}>
+                <strong style={{ color: "#16a34a" }}>{nd.bizOpen.length}</strong> still open · <strong style={{ color: "#a8a49c" }}>{nd.bizClosed.length}</strong> closed
+              </div>
+            </div>
+          )}
+
+          {/* Contributing tracts */}
+          <details style={{ marginTop: 4 }}>
+            <summary style={{ fontSize: 12, color: "#7c6f5e", cursor: "pointer", fontWeight: 500 }}>
+              Contributing census tracts ({nd.tract_ids.length})
+            </summary>
+            <div style={{ marginTop: 8 }}>
+              {nd.tract_ids.map(tid => {
+                const tractDvi = interpolateDvi(tid, year);
+                const tractName = ID_TO_NAME.get(tid);
+                return (
+                  <div key={tid} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 11, padding: "3px 0", borderBottom: "1px solid #f0ede8" }}>
+                    <span style={{ color: "#44403c" }}>
+                      {tractName} <span style={{ color: "#a8a49c" }}>[id. {tid}]</span>
+                    </span>
+                    <span style={{ fontWeight: 600, color: getDviColor(tractDvi), fontSize: 10 }}>
+                      DVI {tractDvi?.toFixed(0) ?? "—"}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </details>
+
+          <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "8px 4px" }}>
+            Neighborhood data aggregated from constituent census tracts using population-weighted averages.
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (!activeFeature) {
     return (
       <div

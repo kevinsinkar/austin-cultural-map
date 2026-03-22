@@ -11,6 +11,7 @@
     "propagate": "node archive/data/propagateRegionIds.js"
   },
   "dependencies": {
+    "@turf/turf": "^7.3.4",
     "d3": "^7.9.0",
     "leaflet": "^1.9.4",
     "lodash": "^4.17.23",

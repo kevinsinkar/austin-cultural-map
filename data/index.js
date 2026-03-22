@@ -22,3 +22,5 @@ export {
   DEMO_COLORS,
 } from "./constants";
 export { PA_ALL, PA_COLORS, PA_LABELS } from "./preservationAustin";
+// Neighborhood aggregation (NEIGHBORHOODS_GEOJSON is NOT barrel-exported, same as REGIONS_GEOJSON)
+export { NEIGHBORHOODS, TRACT_TO_NEIGHBORHOOD, NEIGHBORHOOD_BY_ID, NEIGHBORHOOD_NAMES } from "./neighborhoods";

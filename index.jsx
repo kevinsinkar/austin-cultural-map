@@ -56,6 +56,8 @@ export default function AustinCulturalMap() {
   const [tlFilter, setTlFilter] = useState("all");
   const [activeRegionId, setActiveRegionId] = useState(null);
   const [activeFeature, setActiveFeature] = useState(null);
+  const [boundaryMode, setBoundaryMode] = useState("tracts");
+  const [activeNeighborhoodId, setActiveNeighborhoodId] = useState(null);
 
   const playRef = useRef(null);
   const activeRegionName = activeFeature?.properties?.region_name;
@@ -241,11 +243,12 @@ export default function AustinCulturalMap() {
             setCompA={setCompA}
             compB={compB}
             setCompB={setCompB}
+            boundaryMode={boundaryMode}
           />
         )}
 
         {viewMode === "triage" && (
-          <TriageView />
+          <TriageView boundaryMode={boundaryMode} />
         )}
 
         {viewMode === "map" && (
@@ -292,6 +295,10 @@ export default function AustinCulturalMap() {
               regionBizClosed={regionBizClosed}
               tippingPoint={tippingPoint}
               narrativeCallouts={narrativeCallouts}
+              boundaryMode={boundaryMode}
+              setBoundaryMode={setBoundaryMode}
+              activeNeighborhoodId={activeNeighborhoodId}
+              setActiveNeighborhoodId={setActiveNeighborhoodId}
             />
           </ErrorBoundary>
         )}

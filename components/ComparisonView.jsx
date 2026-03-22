@@ -4,13 +4,14 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { SOCIOECONOMIC, DEMOGRAPHICS, LEGACY_OPERATING, LEGACY_CLOSED } from "../data";
+import { SOCIOECONOMIC, DEMOGRAPHICS, LEGACY_OPERATING, LEGACY_CLOSED, NEIGHBORHOOD_NAMES, NEIGHBORHOOD_BY_ID } from "../data";
 import { REGION_NAMES, DEMO_COLORS } from "../data/constants";
 import { NAME_TO_ID } from "../data/regionLookup";
 import { interpolateDvi, calcAnchorDensity } from "../utils/math";
 import { fmtPct } from "../utils/formatters";
+import { aggregateNeighborhood } from "../utils/aggregation";
 
-export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
+export default function ComparisonView({ compA, setCompA, compB, setCompB, boundaryMode }) {
   const [demoMode, setDemoMode] = useState("focused"); // "focused" = Black & Hispanic, "all" = all groups
   // Resolve region_ids from names once
   const idA = NAME_TO_ID.get(compA);
@@ -170,7 +171,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
                 aria-label={`Select ${sel.label}`}
                 style={{ width: "100%", padding: "8px 12px 8px 28px", borderRadius: 8, border: "1.5px solid #d6d3cd", background: "#fffffe", fontSize: 13, fontWeight: 500, color: "#1a1a1a", cursor: "pointer", appearance: "none", backgroundImage: `url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237c6f5e' stroke-width='1.5' fill='none'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 10px center", minHeight: 40 }}
               >
-                {REGION_NAMES.map((rn) => <option key={rn} value={rn}>{rn}</option>)}
+                {(boundaryMode === "neighborhoods" ? NEIGHBORHOOD_NAMES : REGION_NAMES).map((rn) => <option key={rn} value={rn}>{rn}</option>)}
               </select>
             </div>
           </div>
