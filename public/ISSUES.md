@@ -59,12 +59,18 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 
 ### Open Work
 
-#### Region Naming
+#### Region Naming — In Progress
+
+115 tracts inside COA Neighborhood Planning Areas use verified NPA names. 117 tracts outside NPA coverage currently display their census tract number (e.g., "Tract 308.0") as a placeholder. These need to be mapped to recognizable neighborhood names via manual review.
+
+**Audit file:** `data/region_name_audit.csv` — 232 rows with `region_id`, `display_name`, `npa_name`, `source`, coordinates, and `needs_review` flag. All 117 tracts marked `needs_review=YES` need neighborhood name assignments.
+
+**Process:** Review the CSV, assign neighborhood names to the 117 census-tract-numbered regions, then update `data/regionIndex.js` with the corrected `region_name` and `display_name` values. Neighborhoods outside NPA will show "(under review)" in the Neighborhoods toggle until resolved.
 
 | Priority | Task | Status |
 | --- | --- | --- |
-| Med | Re-audit remaining ~149 region names outside COA official coverage | Not Started — suburbs, ETJ areas still have census-tract labels |
-| Med | Apply user override corrections via `build_master_remap.py` | Not Started |
+| High | Assign neighborhood names to 117 census-tract-numbered regions | In Progress — `data/region_name_audit.csv` ready for review |
+| Med | Rebuild neighborhoods after name audit complete | Blocked — waiting on CSV review |
 
 #### Narrative & Context
 

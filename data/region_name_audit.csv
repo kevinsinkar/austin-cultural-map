@@ -1,233 +1,233 @@
-region_id,region_name_original,display_name_current,npa_match,lat,lng,name_changed,google_maps_name
-1,"St. Elmo District","Mckinney","MCKINNEY",30.2030,-97.7264,YES,"Mckinney"
-2,"North Loop","North Loop","NORTH AUSTIN CIVIC ASSOCIATION",30.3720,-97.7147,,""
-3,"Cherrywood","RMMA — Inner South","RMMA",30.2979,-97.7056,YES,"RMMA"
-4,"Blackland","Blackland — East","",30.2823,-97.6520,YES,""
-5,"Windsor Hills","Windsor Hills — Northwest","",30.3928,-97.6904,YES,""
-6,"North Shoal Creek","North Shoal Creek — Northeast","",30.3861,-97.6795,YES,""
-7,"Barton Creek","Barton Creek","",30.1955,-97.9026,,""
-8,"St. John's","St. John's","",30.3977,-97.6631,,""
-9,"Windsor Park","Windsor Park — North","",30.3934,-97.6663,YES,""
-10,"Circle C Ranch","Circle C Ranch","",30.1854,-97.8793,,""
-11,"Georgian Acres","Georgian Acres — North","",30.3804,-97.6684,YES,""
-12,"Springdale","Springdale","",30.2881,-97.6389,,""
-13,"Northwood","Gateway — Southeast","GATEWAY",30.3895,-97.7380,YES,"Gateway"
-14,"Cherrywood","North Lamar — North","NORTH LAMAR",30.3701,-97.6866,YES,"North Lamar"
-15,"Zilker","Bouldin Creek — Northeast","BOULDIN CREEK",30.2497,-97.7588,YES,"Bouldin Creek"
-16,"Riverside","Montopolis","MONTOPOLIS",30.2234,-97.6976,YES,"Montopolis"
-17,"Dessau","Dessau — Southeast","",30.3876,-97.6274,YES,""
-18,"Creedmoor","Creedmoor","",30.1774,-97.5914,,""
-19,"North Austin","Windsor Hills — Northeast","WINDSOR HILLS",30.3639,-97.6770,YES,"Windsor Hills"
-21,"St. Edward's","Pleasant Valley — Southeast #21","PLEASANT VALLEY",30.2409,-97.7041,YES,"Pleasant Valley"
-22,"Milwood","Milwood","",30.4322,-97.8256,,""
-23,"Oak Hill","Oak Hill — Northeast","",30.2215,-97.8186,YES,""
-24,"Pleasant Valley","Pleasant Valley — East","PLEASANT VALLEY",30.2311,-97.7074,YES,""
-25,"Anderson Mill","Anderson Mill","",30.4292,-97.7925,,""
-26,"Brentwood","Allandale — North","",30.3806,-97.7525,YES,"Allandale"
-27,"The Domain","The Domain — Northwest","",30.3991,-97.7546,YES,""
-29,"The Arboretum","The Arboretum — North","",30.4068,-97.7373,YES,""
-30,"Walnut Creek","Harris Ridge — East","",30.4654,-97.6828,YES,"Harris Ridge"
-31,"Great Hills","Great Hills — Northeast","",30.4338,-97.7507,YES,""
-32,"The Arboretum","Balcones Woods — Northeast","",30.4221,-97.7218,YES,"Balcones Woods"
-33,"St. Johns","Georgian Acres — Northwest","GEORGIAN ACRES",30.3509,-97.7014,YES,"Georgian Acres"
-34,"North Burnet","Gracywoods — North","",30.4369,-97.7137,YES,"Gracywoods"
-35,"Tech Ridge","Tech Ridge","",30.4341,-97.6904,,""
-36,"Northwood","Balcones Woods — East","",30.4167,-97.7132,YES,"Balcones Woods"
-38,"Harris Ridge","Harris Ridge — North","",30.4702,-97.6698,YES,""
-39,"North Shoal Creek","Coronado Hills — South","CORONADO HILLS",30.3270,-97.6843,YES,"Coronado Hills"
-40,"River Place","River Place","",30.3425,-97.8686,,""
-41,"Gracywoods","Gracywoods","",30.4230,-97.6893,,""
-42,"North Shoal Creek","North Burnet — Outer North","",30.4128,-97.7012,YES,"North Burnet"
-43,"Great Hills","Northwest Hills — Inner South","",30.3717,-97.7743,YES,"Northwest Hills"
-44,"Harris Branch","Harris Branch","",30.3830,-97.6578,,""
-45,"Lakeway","Lakeway","",30.3897,-97.8079,,""
-46,"Cat Mountain","Cat Mountain","",30.3984,-97.7624,,""
-47,"Montopolis","Pilot Knob — South","",30.1586,-97.6511,YES,"Pilot Knob"
-48,"East Cesar Chavez","Bouldin Creek — Southwest","BOULDIN CREEK",30.2572,-97.7511,YES,"Bouldin Creek"
-49,"Oak Hill","Oak Hill — Inner West","",30.1928,-97.8563,YES,""
-51,"Harris Ridge","Harris Ridge — Northwest","",30.4553,-97.6715,YES,""
-52,"Dessau Valley","Dessau — Northwest","",30.4325,-97.6776,YES,"Dessau"
-53,"Shady Hollow","Shady Hollow — West","",30.1697,-97.8381,YES,""
-54,"Wells Branch","Wells Branch — Southeast #54","",30.4135,-97.6385,YES,""
-55,"Cherry Creek","Cherry Creek — West","",30.1516,-97.8368,YES,""
-56,"Shady Hollow","Shady Hollow — Southeast","",30.1404,-97.7777,YES,""
-57,"North Shoal Creek","St. John — South (Moderate)","ST. JOHN",30.3327,-97.6953,YES,"St. John"
-58,"Wells Branch","Wells Branch — North","",30.4552,-97.6661,YES,"Wells Branch"
-59,"Wells Branch","Wells Branch — Southeast","",30.4392,-97.6580,YES,"Wells Branch"
-60,"Southwood","Southwood — East","",30.1640,-97.7501,YES,""
-61,"Pflugerville","Pflugerville","",30.4178,-97.6880,,""
-63,"Barton Creek West","Barton Creek West","",30.2055,-97.8493,,""
-64,"Southwood","Southwood — Southeast","",30.1475,-97.7495,YES,""
-66,"Montopolis","Montopolis — West","",30.1787,-97.7553,YES,""
-68,"St. John's Neighborhood","ShadowGlen","",30.3032,-97.5778,YES,"ShadowGlen"
-70,"Jollyville","Jollyville","",30.4587,-97.8218,,""
-71,"Northwood","Northwood — Northeast","",30.4443,-97.7377,YES,""
-72,"Montopolis","Montopolis — East","",30.1897,-97.6313,YES,""
-73,"Windsor Hills","Windsor Hills — South","",30.2996,-97.6336,YES,""
-74,"Cherrywood","Windsor Park — Outer South","WINDSOR PARK",30.2965,-97.6931,YES,"Windsor Park"
-75,"Great Hills","Great Hills — West","",30.4120,-97.8312,YES,""
-76,"Montopolis","Montopolis — Northwest","MONTOPOLIS",30.2330,-97.6943,YES,""
-77,"Wildhorse Ranch","Wildhorse Ranch","",30.2736,-97.5979,,""
-78,"East Riverside","Pleasant Valley — Northwest","PLEASANT VALLEY",30.2439,-97.7098,YES,"Pleasant Valley"
-79,"Blackland","Upper Boggy Creek — West","UPPER BOGGY CREEK",30.2851,-97.7170,YES,"Upper Boggy Creek"
-80,"North University","North University","NORTH UNIVERSITY",30.2955,-97.7347,,""
-81,"North Campus","UT","UT",30.2882,-97.7380,YES,"UT"
-82,"Eastview","Govalle","GOVALLE",30.2671,-97.7024,YES,"Govalle"
-83,"Rosewood","Rosewood — South","ROSEWOOD",30.2728,-97.7069,YES,""
-84,"Chestnut","Chestnut","CHESTNUT",30.2768,-97.7205,,""
-85,"Foster Heights","Central East Austin","CENTRAL EAST AUSTIN",30.2698,-97.7236,YES,"Central East Austin"
-86,"Central East Austin","Central East Austin — Southeast (High Risk) #86","CENTRAL EAST AUSTIN",30.2660,-97.7237,YES,""
-87,"Old West Austin- Tarrytown East","Windsor Road — East","WINDSOR ROAD",30.2988,-97.7577,YES,"Windsor Road"
-88,"Old Enfield - Central West Austin","Old Enfield","OLD ENFIELD",30.2866,-97.7611,YES,"Old Enfield"
-89,"Oakmont Heights*","West Austin Neighborhood Group — Northeast","WEST AUSTIN NEIGHBORHOOD GROUP",30.3054,-97.7610,YES,"West Austin Neighborhood Group"
-90,"Parker Lane West","Parker Lane West","PARKER LANE",30.2246,-97.7425,,""
-91,"West Congress","South Manchaca","SOUTH MANCHACA",30.2189,-97.7767,YES,"South Manchaca"
-92,"Allandale South-Rosedale","Rosedale — Southwest","ROSEDALE",30.3211,-97.7549,YES,"Rosedale"
-93,"Parker Lane East","Parker Lane East","PARKER LANE",30.2220,-97.7231,,""
-94,"Northside","Downtown — North #94","DOWNTOWN",30.2779,-97.7411,YES,"Downtown"
-95,"Tarrytown West","Tarrytown West","WEST AUSTIN NEIGHBORHOOD GROUP",30.3026,-97.7743,,""
-96,"Treemont","Treemont","",30.2728,-97.7956,,""
-97,"Akins","Akins","",30.1269,-97.8083,,""
-98,"East Riverside - Pleasant Valley","East Riverside - Pleasant Valley","RIVERSIDE",30.2340,-97.7321,,""
-99,"Dawson","Dawson — East","DAWSON",30.2325,-97.7615,YES,""
-100,"Bartons Bluff","Barton Hills","BARTON HILLS",30.2577,-97.7825,YES,"Barton Hills"
-101,"East Boggy Creek","MLK-183","MLK-183",30.2750,-97.6783,YES,"MLK-183"
-102,"Johnston Terrace","Johnston Terrace","JOHNSTON TERRACE",30.2595,-97.6830,,""
-103,"Windsor Park West","Windsor Park West","WINDSOR PARK",30.3131,-97.7052,,""
-104,"Windsor Park East","Windsor Park East","WINDSOR PARK",30.3077,-97.6901,,""
-105,"MLK North","MLK North","MLK",30.2964,-97.6838,,""
-106,"MLK South","MLK South","MLK",30.2813,-97.6879,,""
-107,"West University","Rosedale","ROSEDALE",30.3072,-97.7438,YES,"Rosedale"
-108,"Riverside - I35","East Riverside — West (High Risk)","RIVERSIDE",30.2401,-97.7353,YES,"East Riverside"
-109,"East MLK","Pecan Springs-springdale — South","PECAN SPRINGS-SPRINGDALE",30.3009,-97.6717,YES,"Pecan Springs-springdale"
-110,"Davenport Ranch","Davenport Ranch — North","",30.3160,-97.8013,YES,""
-111,"East Austin","Holly — Southeast (High Risk) #111","HOLLY",30.2592,-97.7176,YES,"Holly"
-112,"East Cesar Chavez -Holly","East Cesar Chavez -Holly","HOLLY",30.2539,-97.7208,,""
-113,"Clarksville","Old West Austin","OLD WEST AUSTIN",30.2740,-97.7609,YES,"Old West Austin"
-114,"Zilker-Bouldin","Zilker — Southwest","ZILKER",30.2477,-97.7730,YES,"Zilker"
-115,"Galindo","Galindo","GALINDO",30.2363,-97.7681,,""
-116,"Travis Heights East","South River City — Northwest","SOUTH RIVER CITY",30.2507,-97.7460,YES,"South River City"
-117,"Colorado Foothills*","Northwest Hills — Southeast","",30.3258,-97.7683,YES,"Northwest Hills"
-118,"Ridgetop","Windsor Park","WINDSOR PARK",30.3139,-97.6970,YES,"Windsor Park"
-119,"Triangle State","Triangle State","TRIANGLE STATE",30.3130,-97.7371,,""
-120,"Hyde Park South","Hancock — Southwest","HANCOCK",30.3026,-97.7267,YES,"Hancock"
-121,"Hancock","Hancock","HANCOCK",30.2880,-97.7246,,""
-122,"Highland South","Highland — Southwest","HIGHLAND",30.3272,-97.7163,YES,"Highland"
-123,"Travis Heights West","South River City — Southeast","SOUTH RIVER CITY",30.2434,-97.7413,YES,"South River City"
-124,"Crestview","Crestview","CRESTVIEW",30.3464,-97.7253,,""
-125,"Brentwood North","Brentwood — North","BRENTWOOD",30.3357,-97.7297,YES,"Brentwood"
-126,"Allandale North","Allandale — South","ALLANDALE",30.3472,-97.7430,YES,"Allandale"
-127,"Deep Eddy","West Austin Neighborhood Group — Southwest","WEST AUSTIN NEIGHBORHOOD GROUP",30.2856,-97.7749,YES,"West Austin Neighborhood Group"
-128,"South Manchaca","South Manchaca — North","SOUTH MANCHACA",30.2232,-97.7851,YES,""
-129,"Lakehills Plaza","South Lamar","SOUTH LAMAR",30.2368,-97.7891,YES,"South Lamar"
-130,"Rob Roy","Rob Roy","",30.3242,-97.8131,,""
-133,"Steiner Ranch","Steiner Ranch","",30.4546,-97.8164,,""
-134,"Northwood","Canyon Creek — Northwest","",30.4455,-97.7890,YES,"Canyon Creek"
-135,"Avery Ranch","Avery Ranch","",30.4455,-97.7772,,""
-137,"Northwood","Scofield Farms — North","",30.4579,-97.7445,YES,"Scofield Farms"
-138,"Lakeline Area","Lakeline Area","",30.4908,-97.7679,,""
-140,"Zilker","Zilker — West","ZILKER",30.2543,-97.7759,YES,""
-141,"West Lake Hills","West Oak Hill — Southwest","WEST OAK HILL",30.2446,-97.8999,YES,"West Oak Hill"
-142,"Old West Austin","Zilker — Northeast","ZILKER",30.2603,-97.7637,YES,"Zilker"
-143,"Rollingwood","Bee Cave — North","",30.2678,-97.9173,YES,"Bee Cave"
-144,"Great Hills","Great Hills — Outer South","",30.3475,-97.7817,YES,""
-145,"Arboretum Area","Arboretum Area","",30.3723,-97.7467,,""
-146,"Allandale","Northwest Hills — Northeast","",30.3634,-97.7579,YES,"Northwest Hills"
-147,"The Arboretum","The Arboretum — Southwest","",30.3577,-97.7500,YES,""
-148,"Shady Hollow","Shady Hollow — Northwest","",30.1817,-97.8240,YES,""
-149,"Stratford Hills","East Oak Hill — Southwest","EAST OAK HILL",30.2285,-97.8448,YES,"East Oak Hill"
-151,"Windsor Hills","Windsor Hills — East","",30.3555,-97.6121,YES,""
-153,"Highland","Highland — East","",30.3358,-97.6652,YES,""
-154,"South Congress","St. Edward's","ST. EDWARDS",30.2230,-97.7557,YES,"St. Edward's"
-156,"Barton Hills","Circle C Ranch — Southwest","",30.2024,-97.8289,YES,"Circle C Ranch"
-157,"Bouldin Creek","St. Edward's — East","ST. EDWARDS",30.2326,-97.7507,YES,"St. Edward's"
-158,"Northwood","Great Hills — South","",30.3479,-97.7600,YES,"Great Hills"
-159,"Oak Hill","Oak Hill — Southeast","",30.1610,-97.8106,YES,""
-160,"East 11th Street","West University — Northwest","WEST UNIVERSITY",30.2848,-97.7434,YES,"West University"
-161,"University of Texas at Austin","University of Texas at Austin","WEST UNIVERSITY",30.2918,-97.7445,,""
-162,"West Campus","West Campus","WEST UNIVERSITY",30.2843,-97.7496,,""
-163,"Capitol Complex","Downtown — South","DOWNTOWN",30.2711,-97.7423,YES,"Downtown"
-164,"Bouldin Creek","Zilker — East","ZILKER",30.2556,-97.7624,YES,"Zilker"
-165,"East Cesar Chavez","Downtown — North #165","DOWNTOWN",30.2661,-97.7477,YES,"Downtown"
-167,"Shady Hollow","Shady Hollow — North","",30.1964,-97.8177,YES,""
-168,"Harris Ridge","Harris Ridge — Southeast","",30.3687,-97.6314,YES,""
-169,"Georgian Acres","Georgian Acres — Southeast","",30.3199,-97.6148,YES,""
-170,"Dawson","South Lamar — West","SOUTH LAMAR",30.2333,-97.7788,YES,"South Lamar"
-171,"University of Texas at Austin Campus","Windsor Road","WINDSOR ROAD",30.2935,-97.7486,YES,"Windsor Road"
-172,"Zilker","South Lamar — Northwest","SOUTH LAMAR",30.2376,-97.7823,YES,"South Lamar"
-173,"Oak Hill","Oak Hill — Outer West","",30.2070,-97.8823,YES,""
-176,"The Arboretum","North Burnet — East","NORTH BURNET",30.3920,-97.7259,YES,"North Burnet"
-178,"Great Hills","North Shoal Creek — Southeast","NORTH SHOAL CREEK",30.3674,-97.7352,YES,"North Shoal Creek"
-179,"West Lake Hills","West Oak Hill — Northeast","WEST OAK HILL",30.2573,-97.8877,YES,"West Oak Hill"
-181,"Travis Heights","Pleasant Valley — West","PLEASANT VALLEY",30.2353,-97.7189,YES,"Pleasant Valley"
-182,"Wells Branch","Wells Branch — Southwest","",30.4003,-97.6847,YES,""
-183,"Del Valle","Del Valle","",30.3430,-97.5793,,""
-185,"Montopolis","Creedmoor — Southeast","",30.1434,-97.6180,YES,"Creedmoor"
-186,"North Lamar","North Lamar","",30.3156,-97.6354,,""
-187,"Walnut Creek","Northwood — West","",30.4677,-97.7049,YES,"Northwood"
-188,"Fern Bluff","Fern Bluff","",30.5003,-97.7950,,""
-189,"Bee Cave","Bee Cave — South","",30.1529,-97.9065,YES,""
-190,"Canyon Creek","Canyon Creek","",30.4706,-97.8074,,""
-191,"Four Points","Four Points","",30.4774,-97.8093,,""
-192,"Southpark Meadows","Southpark Meadows","",30.0871,-97.7988,,""
-193,"Southwood","Southwood — West","",30.1633,-97.7776,YES,""
-194,"The Domain","Wooten — Southeast","WOOTEN",30.3600,-97.7217,YES,"Wooten"
-195,"Westlake","West Oak Hill — West","WEST OAK HILL",30.2172,-97.9002,YES,"West Oak Hill"
-198,"North Lamar / Rundberg Area","North Austin Civic Association — North","NORTH AUSTIN CIVIC ASSOCIATION",30.3813,-97.7086,YES,"North Austin Civic Association"
-199,"Quail Creek","North Austin Civic Association — South","NORTH AUSTIN CIVIC ASSOCIATION",30.3567,-97.7090,YES,"North Austin Civic Association"
-200,"North Shoal Creek","Balcones Woods — Inner North","",30.3963,-97.7017,YES,"Balcones Woods"
-201,"North Burnet","North Burnet — South","",30.3879,-97.6998,YES,""
-202,"Bouldin Creek","Sweetbriar — East","SWEETBRIAR",30.2005,-97.7702,YES,"Sweetbriar"
-203,"Travis Country","West Oak Hill — East","WEST OAK HILL",30.2214,-97.8793,YES,"West Oak Hill"
-205,"Zilker","Sweetbriar — West","SWEETBRIAR",30.2043,-97.7796,YES,"Sweetbriar"
-206,"Georgian Acres","North Austin Civic Association — Northwest","NORTH AUSTIN CIVIC ASSOCIATION",30.3738,-97.6966,YES,"North Austin Civic Association"
-207,"North Shoal Creek","North Austin Civic Association — Southwest","NORTH AUSTIN CIVIC ASSOCIATION",30.3634,-97.7028,YES,"North Austin Civic Association"
-208,"Oak Hill","Oak Hill — North","",30.2117,-97.8407,YES,""
-209,"Barton Hills","Barton Hills — Northeast","BARTON HILLS",30.2454,-97.7924,YES,""
-210,"East Cesar Chavez","Downtown — East","DOWNTOWN",30.2593,-97.7399,YES,"Downtown"
-212,"Zilker","Westgate — Southwest","WESTGATE",30.2238,-97.7977,YES,"Westgate"
-213,"Westlake Hills","Garrison Park — Southeast #213","GARRISON PARK",30.2103,-97.8045,YES,"Garrison Park"
-218,"Northwest Hills","Northwest Hills — West","",30.3592,-97.8278,YES,""
-220,"Scofield Farms","Scofield Farms","",30.4177,-97.6482,,""
-221,"Westlake Hills","Westlake Hills — Northwest #221","",30.2814,-97.8818,YES,""
-222,"Northwood","Jester Estates — West","",30.4055,-97.7786,YES,"Jester Estates"
-223,"Rosewood","St. John — North","ST. JOHN",30.3272,-97.6996,YES,"St. John"
-224,"Cherry Creek","Cherry Creek — East","",30.1632,-97.7934,YES,""
-225,"Southwood","Southwood — North","",30.1808,-97.7673,YES,""
-227,"Montopolis","Montopolis — Northeast (Moderate)","",30.2392,-97.6416,YES,""
-228,"St. Elmo","St. Elmo","",30.1896,-97.7151,,""
-229,"Wells Branch","Wells Branch — South","",30.4304,-97.6622,YES,"Wells Branch"
-230,"Lakeline","Lakeline","",30.4653,-97.7593,,""
-233,"Redbud","Redbud","",30.2913,-97.8093,,""
-234,"Regents","East Oak Hill — Northwest #234","EAST OAK HILL",30.2570,-97.8399,YES,"East Oak Hill"
-235,"Yarabee Bend","Onion Creek","",30.1722,-97.7554,YES,"Onion Creek"
-236,"Hyde Park East","Hyde Park — East","HYDE PARK",30.3092,-97.7170,YES,"Hyde Park"
-237,"Montopolis","Montopolis — Northeast","",30.1994,-97.6447,YES,"Montopolis"
-238,"Lost Creek","East Oak Hill — Northeast","EAST OAK HILL",30.2682,-97.8274,YES,"East Oak Hill"
-239,"Rosedale","Allandale — Northeast","ALLANDALE",30.3256,-97.7445,YES,"Allandale"
-240,"Hyde Park West","Triangle State — Northwest","TRIANGLE STATE",30.3150,-97.7258,YES,"Triangle State"
-241,"Brentwood South","Brentwood — South","BRENTWOOD",30.3263,-97.7332,YES,"Brentwood"
-242,"Cherrywood","Upper Boggy Creek — Southwest","UPPER BOGGY CREEK",30.2978,-97.7134,YES,"Upper Boggy Creek"
-243,"Eanes Creek","Davenport Ranch — South","",30.2785,-97.7947,YES,"Davenport Ranch"
-244,"Great Hills","Great Hills — North","",30.4870,-97.7843,YES,""
-246,"St. Andrews","East Oak Hill — Southeast #246","EAST OAK HILL",30.2434,-97.8314,YES,"East Oak Hill"
-247,"South Manchaca","South Manchaca — South","",30.0953,-97.7975,YES,""
-248,"Thunderbird","Windsor Hills","",30.2813,-97.6192,YES,"Windsor Hills"
-249,"Raintree Estates","Balcones Woods","",30.4180,-97.7563,YES,"Balcones Woods"
-250,"Pilot Knob","Pilot Knob","",30.1591,-97.7102,,""
-251,"University Hills West","Windsor Park — West","WINDSOR PARK",30.3138,-97.6812,YES,"Windsor Park"
-252,"University Hills East","University Hills — East","UNIVERSITY HILLS",30.3171,-97.6723,YES,"University Hills"
-253,"Walnut Bend","Walnut Bend","",30.3159,-97.6586,,""
-254,"Austin-Bergstrom International Airport","Austin-Bergstrom International Airport","",30.1953,-97.6648,,""
-256,"East Riverside - Oltorf","Pleasant Valley — Southeast #256","PLEASANT VALLEY",30.2245,-97.7156,YES,"Pleasant Valley"
-257,"East Riverside - Heritage Oaks","East Riverside — West (Moderate)","RIVERSIDE",30.2353,-97.7279,YES,"East Riverside"
-258,"East Congress","East Congress — Southwest","EAST CONGRESS",30.2123,-97.7617,YES,"East Congress"
-259,"Garrison Park East","Garrison Park — West","GARRISON PARK",30.2079,-97.7941,YES,"Garrison Park"
-260,"Armadillo Park","Garrison Park — East","GARRISON PARK",30.2060,-97.7863,YES,"Garrison Park"
-261,"Franklin Park West","Franklin Park — Northwest","FRANKLIN PARK",30.2050,-97.7484,YES,"Franklin Park"
-262,"William Cannon","Franklin Park — East (High Risk)","FRANKLIN PARK",30.1889,-97.7529,YES,"Franklin Park"
-263,"Frankline Park East","Franklin Park — Southeast","FRANKLIN PARK",30.1954,-97.7397,YES,"Franklin Park"
-264,"Comal Bluff","Southwood — East (Moderate)","",30.1907,-97.7584,YES,"Southwood"
-265,"Parkridge Gardens","Southwood — Southwest","",30.1821,-97.7847,YES,"Southwood"
-266,"Buckingham Estates","Southwood — Outer West","",30.1792,-97.8063,YES,"Southwood"
-267,"Elmwood Estates","Southwood — Inner West","",30.1927,-97.8003,YES,"Southwood"
+region_id,display_name,npa_name,source,lat,lng,needs_review
+1,"Mckinney","MCKINNEY",NPA,30.2030,-97.7264,
+2,"North Austin Civic Association [2]","NORTH AUSTIN CIVIC ASSOCIATION",NPA,30.3720,-97.7147,
+3,"RMMA","RMMA",NPA,30.2979,-97.7056,
+4,"Tract 22.14","",census-tract,30.2823,-97.6520,YES
+5,"Tract 419.0","",census-tract,30.3928,-97.6904,YES
+6,"Tract 411.0","",census-tract,30.3861,-97.6795,YES
+7,"Tract 367.0","",census-tract,30.1955,-97.9026,YES
+8,"Tract 440.0","",census-tract,30.3977,-97.6631,YES
+9,"Tract 437.0","",census-tract,30.3934,-97.6663,YES
+10,"Tract 368.0","",census-tract,30.1854,-97.8793,YES
+11,"Tract 415.0","",census-tract,30.3804,-97.6684,YES
+12,"Tract 22.13","",census-tract,30.2881,-97.6389,YES
+13,"Gateway","GATEWAY",NPA,30.3895,-97.7380,
+14,"North Lamar","NORTH LAMAR",NPA,30.3701,-97.6866,
+15,"Bouldin Creek [15]","BOULDIN CREEK",NPA,30.2497,-97.7588,
+16,"Montopolis [16]","MONTOPOLIS",NPA,30.2234,-97.6976,
+17,"Tract 449.0","",census-tract,30.3876,-97.6274,YES
+18,"Tract 24.53","",census-tract,30.1774,-97.5914,YES
+19,"Windsor Hills","WINDSOR HILLS",NPA,30.3639,-97.6770,
+21,"Pleasant Valley [21]","PLEASANT VALLEY",NPA,30.2409,-97.7041,
+22,"Tract 345.0","",census-tract,30.4322,-97.8256,YES
+23,"Tract 321.0","",census-tract,30.2215,-97.8186,YES
+24,"Pleasant Valley [24]","PLEASANT VALLEY",NPA,30.2311,-97.7074,
+25,"Tract 338.0","",census-tract,30.4292,-97.7925,YES
+26,"Tract 301.0","",census-tract,30.3806,-97.7525,YES
+27,"Tract 308.0","",census-tract,30.3991,-97.7546,YES
+29,"Tract 325.0","",census-tract,30.4068,-97.7373,YES
+30,"Tract 456.0","",census-tract,30.4654,-97.6828,YES
+31,"Tract 342.0","",census-tract,30.4338,-97.7507,YES
+32,"Tract 413.0","",census-tract,30.4221,-97.7218,YES
+33,"Georgian Acres","GEORGIAN ACRES",NPA,30.3509,-97.7014,
+34,"Tract 420.0","",census-tract,30.4369,-97.7137,YES
+35,"Tract 451.0","",census-tract,30.4341,-97.6904,YES
+36,"Tract 414.0","",census-tract,30.4167,-97.7132,YES
+38,"Tract 464.0","",census-tract,30.4702,-97.6698,YES
+39,"Coronado Hills","CORONADO HILLS",NPA,30.3270,-97.6843,
+40,"Tract 339.0","",census-tract,30.3425,-97.8686,YES
+41,"Tract 452.0","",census-tract,30.4230,-97.6893,YES
+42,"Tract 422.0","",census-tract,30.4128,-97.7012,YES
+43,"Tract 300.0","",census-tract,30.3717,-97.7743,YES
+44,"Tract 438.0","",census-tract,30.3830,-97.6578,YES
+45,"Tract 305.0","",census-tract,30.3897,-97.8079,YES
+46,"Tract 328.0","",census-tract,30.3984,-97.7624,YES
+47,"Tract 24.49","",census-tract,30.1586,-97.6511,YES
+48,"Bouldin Creek [48]","BOULDIN CREEK",NPA,30.2572,-97.7511,
+49,"Tract 313.0","",census-tract,30.1928,-97.8563,YES
+51,"Tract 457.0","",census-tract,30.4553,-97.6715,YES
+52,"Tract 429.0","",census-tract,30.4325,-97.6776,YES
+53,"Tract 319.0","",census-tract,30.1697,-97.8381,YES
+54,"Tract 446.0","",census-tract,30.4135,-97.6385,YES
+55,"Tract 332.0","",census-tract,30.1516,-97.8368,YES
+56,"Tract 24.45","",census-tract,30.1404,-97.7777,YES
+57,"St. John [57]","ST. JOHN",NPA,30.3327,-97.6953,
+58,"Tract 465.0","",census-tract,30.4552,-97.6661,YES
+59,"Tract 441.0","",census-tract,30.4392,-97.6580,YES
+60,"Tract 24.39","",census-tract,30.1640,-97.7501,YES
+61,"Tract 421.0","",census-tract,30.4178,-97.6880,YES
+63,"Tract 335.0","",census-tract,30.2055,-97.8493,YES
+64,"Tract 24.4","",census-tract,30.1475,-97.7495,YES
+66,"Tract 24.42","",census-tract,30.1787,-97.7553,YES
+68,"Tract 22.19","",census-tract,30.3032,-97.5778,YES
+70,"Tract 203.33","",census-tract,30.4587,-97.8218,YES
+71,"Tract 341.0","",census-tract,30.4443,-97.7377,YES
+72,"Tract 24.52","",census-tract,30.1897,-97.6313,YES
+73,"Tract 22.22","",census-tract,30.2996,-97.6336,YES
+74,"Windsor Park [74]","WINDSOR PARK",NPA,30.2965,-97.6931,
+75,"Tract 346.0","",census-tract,30.4120,-97.8312,YES
+76,"Montopolis [76]","MONTOPOLIS",NPA,30.2330,-97.6943,
+77,"Tract 22.15","",census-tract,30.2736,-97.5979,YES
+78,"Pleasant Valley [78]","PLEASANT VALLEY",NPA,30.2439,-97.7098,
+79,"Upper Boggy Creek [79]","UPPER BOGGY CREEK",NPA,30.2851,-97.7170,
+80,"North University","NORTH UNIVERSITY",NPA,30.2955,-97.7347,
+81,"UT","UT",NPA,30.2882,-97.7380,
+82,"Govalle","GOVALLE",NPA,30.2671,-97.7024,
+83,"Rosewood","ROSEWOOD",NPA,30.2728,-97.7069,
+84,"Chestnut","CHESTNUT",NPA,30.2768,-97.7205,
+85,"Central East Austin [85]","CENTRAL EAST AUSTIN",NPA,30.2698,-97.7236,
+86,"Central East Austin [86]","CENTRAL EAST AUSTIN",NPA,30.2660,-97.7237,
+87,"Windsor Road [87]","WINDSOR ROAD",NPA,30.2988,-97.7577,
+88,"Old Enfield","OLD ENFIELD",NPA,30.2866,-97.7611,
+89,"West Austin Neighborhood Group [89]","WEST AUSTIN NEIGHBORHOOD GROUP",NPA,30.3054,-97.7610,
+90,"Parker Lane [90]","PARKER LANE",NPA,30.2246,-97.7425,
+91,"South Manchaca [91]","SOUTH MANCHACA",NPA,30.2189,-97.7767,
+92,"Rosedale [92]","ROSEDALE",NPA,30.3211,-97.7549,
+93,"Parker Lane [93]","PARKER LANE",NPA,30.2220,-97.7231,
+94,"Downtown [94]","DOWNTOWN",NPA,30.2779,-97.7411,
+95,"West Austin Neighborhood Group [95]","WEST AUSTIN NEIGHBORHOOD GROUP",NPA,30.3026,-97.7743,
+96,"Tract 19.1","",census-tract,30.2728,-97.7956,YES
+97,"Tract 24.07","",census-tract,30.1269,-97.8083,YES
+98,"Riverside [98]","RIVERSIDE",NPA,30.2340,-97.7321,
+99,"Dawson","DAWSON",NPA,30.2325,-97.7615,
+100,"Barton Hills [100]","BARTON HILLS",NPA,30.2577,-97.7825,
+101,"MLK-183","MLK-183",NPA,30.2750,-97.6783,
+102,"Johnston Terrace","JOHNSTON TERRACE",NPA,30.2595,-97.6830,
+103,"Windsor Park [103]","WINDSOR PARK",NPA,30.3131,-97.7052,
+104,"Windsor Park [104]","WINDSOR PARK",NPA,30.3077,-97.6901,
+105,"MLK [105]","MLK",NPA,30.2964,-97.6838,
+106,"MLK [106]","MLK",NPA,30.2813,-97.6879,
+107,"Rosedale [107]","ROSEDALE",NPA,30.3072,-97.7438,
+108,"Riverside [108]","RIVERSIDE",NPA,30.2401,-97.7353,
+109,"Pecan Springs-springdale","PECAN SPRINGS-SPRINGDALE",NPA,30.3009,-97.6717,
+110,"Tract 19.13","",census-tract,30.3160,-97.8013,YES
+111,"Holly [111]","HOLLY",NPA,30.2592,-97.7176,
+112,"Holly [112]","HOLLY",NPA,30.2539,-97.7208,
+113,"Old West Austin","OLD WEST AUSTIN",NPA,30.2740,-97.7609,
+114,"Zilker [114]","ZILKER",NPA,30.2477,-97.7730,
+115,"Galindo","GALINDO",NPA,30.2363,-97.7681,
+116,"South River City [116]","SOUTH RIVER CITY",NPA,30.2507,-97.7460,
+117,"Tract 1.02","",census-tract,30.3258,-97.7683,YES
+118,"Windsor Park [118]","WINDSOR PARK",NPA,30.3139,-97.6970,
+119,"Triangle State [119]","TRIANGLE STATE",NPA,30.3130,-97.7371,
+120,"Hancock [120]","HANCOCK",NPA,30.3026,-97.7267,
+121,"Hancock [121]","HANCOCK",NPA,30.2880,-97.7246,
+122,"Highland","HIGHLAND",NPA,30.3272,-97.7163,
+123,"South River City [123]","SOUTH RIVER CITY",NPA,30.2434,-97.7413,
+124,"Crestview","CRESTVIEW",NPA,30.3464,-97.7253,
+125,"Brentwood [125]","BRENTWOOD",NPA,30.3357,-97.7297,
+126,"Allandale [126]","ALLANDALE",NPA,30.3472,-97.7430,
+127,"West Austin Neighborhood Group [127]","WEST AUSTIN NEIGHBORHOOD GROUP",NPA,30.2856,-97.7749,
+128,"South Manchaca [128]","SOUTH MANCHACA",NPA,30.2232,-97.7851,
+129,"South Lamar [129]","SOUTH LAMAR",NPA,30.2368,-97.7891,
+130,"Tract 19.12","",census-tract,30.3242,-97.8131,YES
+133,"Tract 204.04","",census-tract,30.4546,-97.8164,YES
+134,"Tract 204.05","",census-tract,30.4455,-97.7890,YES
+135,"Tract 204.06","",census-tract,30.4455,-97.7772,YES
+137,"Tract 204.11","",census-tract,30.4579,-97.7445,YES
+138,"Tract 205.08","",census-tract,30.4908,-97.7679,YES
+140,"Zilker [140]","ZILKER",NPA,30.2543,-97.7759,
+141,"West Oak Hill [141]","WEST OAK HILL",NPA,30.2446,-97.8999,
+142,"Zilker [142]","ZILKER",NPA,30.2603,-97.7637,
+143,"Tract 366.0","",census-tract,30.2678,-97.9173,YES
+144,"Tract 307.0","",census-tract,30.3475,-97.7817,YES
+145,"Tract 302.0","",census-tract,30.3723,-97.7467,YES
+146,"Tract 322.0","",census-tract,30.3634,-97.7579,YES
+147,"Tract 323.0","",census-tract,30.3577,-97.7500,YES
+148,"Tract 318.0","",census-tract,30.1817,-97.8240,YES
+149,"East Oak Hill [149]","EAST OAK HILL",NPA,30.2285,-97.8448,
+151,"Tract 424.0","",census-tract,30.3555,-97.6121,YES
+153,"Tract 436.0","",census-tract,30.3358,-97.6652,YES
+154,"St. Edwards [154]","ST. EDWARDS",NPA,30.2230,-97.7557,
+156,"Tract 310.0","",census-tract,30.2024,-97.8289,YES
+157,"St. Edwards [157]","ST. EDWARDS",NPA,30.2326,-97.7507,
+158,"Tract 306.0","",census-tract,30.3479,-97.7600,YES
+159,"Tract 24.38","",census-tract,30.1610,-97.8106,YES
+160,"West University [160]","WEST UNIVERSITY",NPA,30.2848,-97.7434,
+161,"West University [161]","WEST UNIVERSITY",NPA,30.2918,-97.7445,
+162,"West University [162]","WEST UNIVERSITY",NPA,30.2843,-97.7496,
+163,"Downtown [163]","DOWNTOWN",NPA,30.2711,-97.7423,
+164,"Zilker [164]","ZILKER",NPA,30.2556,-97.7624,
+165,"Downtown [165]","DOWNTOWN",NPA,30.2661,-97.7477,
+167,"Tract 309.0","",census-tract,30.1964,-97.8177,YES
+168,"Tract 450.0","",census-tract,30.3687,-97.6314,YES
+169,"Tract 22.21","",census-tract,30.3199,-97.6148,YES
+170,"South Lamar [170]","SOUTH LAMAR",NPA,30.2333,-97.7788,
+171,"Windsor Road [171]","WINDSOR ROAD",NPA,30.2935,-97.7486,
+172,"South Lamar [172]","SOUTH LAMAR",NPA,30.2376,-97.7823,
+173,"Tract 348.0","",census-tract,30.2070,-97.8823,YES
+176,"North Burnet","NORTH BURNET",NPA,30.3920,-97.7259,
+178,"North Shoal Creek","NORTH SHOAL CREEK",NPA,30.3674,-97.7352,
+179,"West Oak Hill [179]","WEST OAK HILL",NPA,30.2573,-97.8877,
+181,"Pleasant Valley [181]","PLEASANT VALLEY",NPA,30.2353,-97.7189,
+182,"Tract 412.0","",census-tract,30.4003,-97.6847,YES
+183,"Tract 22.17","",census-tract,30.3430,-97.5793,YES
+185,"Tract 24.5","",census-tract,30.1434,-97.6180,YES
+186,"Tract 22.2","",census-tract,30.3156,-97.6354,YES
+187,"Tract 205.13","",census-tract,30.4677,-97.7049,YES
+188,"Tract 203.47","",census-tract,30.5003,-97.7950,YES
+189,"Tract 109.12","",census-tract,30.1529,-97.9065,YES
+190,"Tract 203.34","",census-tract,30.4706,-97.8074,YES
+191,"Tract 203.56","",census-tract,30.4774,-97.8093,YES
+192,"Tract 109.23","",census-tract,30.0871,-97.7988,YES
+193,"Tract 24.51","",census-tract,30.1633,-97.7776,YES
+194,"Wooten","WOOTEN",NPA,30.3600,-97.7217,
+195,"West Oak Hill [195]","WEST OAK HILL",NPA,30.2172,-97.9002,
+198,"North Austin Civic Association [198]","NORTH AUSTIN CIVIC ASSOCIATION",NPA,30.3813,-97.7086,
+199,"North Austin Civic Association [199]","NORTH AUSTIN CIVIC ASSOCIATION",NPA,30.3567,-97.7090,
+200,"Tract 418.0","",census-tract,30.3963,-97.7017,YES
+201,"Tract 417.0","",census-tract,30.3879,-97.6998,YES
+202,"Sweetbriar [202]","SWEETBRIAR",NPA,30.2005,-97.7702,
+203,"West Oak Hill [203]","WEST OAK HILL",NPA,30.2214,-97.8793,
+205,"Sweetbriar [205]","SWEETBRIAR",NPA,30.2043,-97.7796,
+206,"North Austin Civic Association [206]","NORTH AUSTIN CIVIC ASSOCIATION",NPA,30.3738,-97.6966,
+207,"North Austin Civic Association [207]","NORTH AUSTIN CIVIC ASSOCIATION",NPA,30.3634,-97.7028,
+208,"Tract 334.0","",census-tract,30.2117,-97.8407,YES
+209,"Barton Hills [209]","BARTON HILLS",NPA,30.2454,-97.7924,
+210,"Downtown [210]","DOWNTOWN",NPA,30.2593,-97.7399,
+212,"Westgate","WESTGATE",NPA,30.2238,-97.7977,
+213,"Garrison Park [213]","GARRISON PARK",NPA,30.2103,-97.8045,
+218,"Tract 329.0","",census-tract,30.3592,-97.8278,YES
+220,"Tract 443.0","",census-tract,30.4177,-97.6482,YES
+221,"Tract 19.21","",census-tract,30.2814,-97.8818,YES
+222,"Tract 326.0","",census-tract,30.4055,-97.7786,YES
+223,"St. John [223]","ST. JOHN",NPA,30.3272,-97.6996,
+224,"Tract 24.37","",census-tract,30.1632,-97.7934,YES
+225,"Tract 24.41","",census-tract,30.1808,-97.7673,YES
+227,"Tract 22.16","",census-tract,30.2392,-97.6416,YES
+228,"Tract 24.48","",census-tract,30.1896,-97.7151,YES
+229,"Tract 442.0","",census-tract,30.4304,-97.6622,YES
+230,"Tract 204.09","",census-tract,30.4653,-97.7593,YES
+233,"Tract 19.18","",census-tract,30.2913,-97.8093,YES
+234,"East Oak Hill [234]","EAST OAK HILL",NPA,30.2570,-97.8399,
+235,"Tract 24.3","",census-tract,30.1722,-97.7554,YES
+236,"Hyde Park","HYDE PARK",NPA,30.3092,-97.7170,
+237,"Tract 23.19","",census-tract,30.1994,-97.6447,YES
+238,"East Oak Hill [238]","EAST OAK HILL",NPA,30.2682,-97.8274,
+239,"Allandale [239]","ALLANDALE",NPA,30.3256,-97.7445,
+240,"Triangle State [240]","TRIANGLE STATE",NPA,30.3150,-97.7258,
+241,"Brentwood [241]","BRENTWOOD",NPA,30.3263,-97.7332,
+242,"Upper Boggy Creek [242]","UPPER BOGGY CREEK",NPA,30.2978,-97.7134,
+243,"Tract 19.19","",census-tract,30.2785,-97.7947,YES
+244,"Tract 203.11","",census-tract,30.4870,-97.7843,YES
+246,"East Oak Hill [246]","EAST OAK HILL",NPA,30.2434,-97.8314,
+247,"Tract 24.34","",census-tract,30.0953,-97.7975,YES
+248,"Tract 22.11","",census-tract,30.2813,-97.6192,YES
+249,"Tract 25.0","",census-tract,30.4180,-97.7563,YES
+250,"Tract 24.32","",census-tract,30.1591,-97.7102,YES
+251,"Windsor Park [251]","WINDSOR PARK",NPA,30.3138,-97.6812,
+252,"University Hills","UNIVERSITY HILLS",NPA,30.3171,-97.6723,
+253,"Tract 22.01","",census-tract,30.3159,-97.6586,YES
+254,"Tract 9800","",census-tract,30.1953,-97.6648,YES
+256,"Pleasant Valley [256]","PLEASANT VALLEY",NPA,30.2245,-97.7156,
+257,"Riverside [257]","RIVERSIDE",NPA,30.2353,-97.7279,
+258,"East Congress","EAST CONGRESS",NPA,30.2123,-97.7617,
+259,"Garrison Park [259]","GARRISON PARK",NPA,30.2079,-97.7941,
+260,"Garrison Park [260]","GARRISON PARK",NPA,30.2060,-97.7863,
+261,"Franklin Park [261]","FRANKLIN PARK",NPA,30.2050,-97.7484,
+262,"Franklin Park [262]","FRANKLIN PARK",NPA,30.1889,-97.7529,
+263,"Franklin Park [263]","FRANKLIN PARK",NPA,30.1954,-97.7397,
+264,"Tract 24.19","",census-tract,30.1907,-97.7584,YES
+265,"Tract 24.22","",census-tract,30.1821,-97.7847,YES
+266,"Tract 24.23","",census-tract,30.1792,-97.8063,YES
+267,"Tract 24.24","",census-tract,30.1927,-97.8003,YES

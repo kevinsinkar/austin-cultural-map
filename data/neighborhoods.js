@@ -31,18 +31,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "austin-bergstrom-international-airport",
-    "name": "Austin-Bergstrom International Airport (under review)",
-    "tract_ids": [
-      254
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.1953,
-      -97.6648
-    ]
-  },
-  {
     "id": "avery-ranch",
     "name": "Avery Ranch (under review)",
     "tract_ids": [
@@ -189,12 +177,13 @@ export const NEIGHBORHOODS = [
     "id": "cherrywood",
     "name": "Cherrywood",
     "tract_ids": [
+      79,
       121
     ],
     "source": "manual",
     "centroid": [
-      30.288,
-      -97.7246
+      30.2866,
+      -97.7208
     ]
   },
   {
@@ -221,18 +210,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.1959,
       -97.8881
-    ]
-  },
-  {
-    "id": "colorado-foothills",
-    "name": "Colorado Foothills* (under review)",
-    "tract_ids": [
-      117
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.3258,
-      -97.7683
     ]
   },
   {
@@ -299,18 +276,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "eanes-creek",
-    "name": "Eanes Creek (under review)",
-    "tract_ids": [
-      243
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.2785,
-      -97.7947
-    ]
-  },
-  {
     "id": "east-congress",
     "name": "East Congress",
     "tract_ids": [
@@ -335,18 +300,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2493,
       -97.8359
-    ]
-  },
-  {
-    "id": "elmwood-estates",
-    "name": "Elmwood Estates (under review)",
-    "tract_ids": [
-      267
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.1927,
-      -97.8003
     ]
   },
   {
@@ -444,6 +397,7 @@ export const NEIGHBORHOODS = [
     "id": "gracywoods",
     "name": "Gracywoods (under review)",
     "tract_ids": [
+      32,
       34,
       36,
       42,
@@ -451,8 +405,8 @@ export const NEIGHBORHOODS = [
     ],
     "source": "suburban-community",
     "centroid": [
-      30.4211,
-      -97.704
+      30.4213,
+      -97.7076
     ]
   },
   {
@@ -500,13 +454,14 @@ export const NEIGHBORHOODS = [
     "id": "harris-ridge",
     "name": "Harris Ridge (under review)",
     "tract_ids": [
+      30,
       38,
       51
     ],
     "source": "suburban-community",
     "centroid": [
-      30.4628,
-      -97.6706
+      30.4636,
+      -97.6747
     ]
   },
   {
@@ -519,18 +474,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3272,
       -97.7163
-    ]
-  },
-  {
-    "id": "highland-153",
-    "name": "Highland [153] (under review)",
-    "tract_ids": [
-      153
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.3358,
-      -97.6652
     ]
   },
   {
@@ -592,18 +535,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.4653,
       -97.7593
-    ]
-  },
-  {
-    "id": "lakeway",
-    "name": "Lakeway (under review)",
-    "tract_ids": [
-      45
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.3897,
-      -97.8079
     ]
   },
   {
@@ -673,40 +604,17 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "montopolis-tract-22-16",
-    "name": "Montopolis (Tract 22.16) (under review)",
-    "tract_ids": [
-      227
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.2392,
-      -97.6416
-    ]
-  },
-  {
-    "id": "montopolis-tract-23-19",
-    "name": "Montopolis (Tract 23.19) (under review)",
-    "tract_ids": [
-      237
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.1994,
-      -97.6447
-    ]
-  },
-  {
     "id": "mueller",
     "name": "Mueller",
     "tract_ids": [
       3,
-      74
+      74,
+      242
     ],
     "source": "manual",
     "centroid": [
-      30.2972,
-      -97.6993
+      30.2974,
+      -97.704
     ]
   },
   {
@@ -739,18 +647,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "north-burnet-tract-417-0",
-    "name": "North Burnet (Tract 417.0) (under review)",
-    "tract_ids": [
-      201
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.3879,
-      -97.6998
-    ]
-  },
-  {
     "id": "north-lamar",
     "name": "North Lamar",
     "tract_ids": [
@@ -760,18 +656,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3701,
       -97.6866
-    ]
-  },
-  {
-    "id": "north-lamar-186",
-    "name": "North Lamar [186] (under review)",
-    "tract_ids": [
-      186
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.3156,
-      -97.6354
     ]
   },
   {
@@ -791,13 +675,12 @@ export const NEIGHBORHOODS = [
     "name": "North Shoal Creek",
     "tract_ids": [
       178,
-      145,
-      26
+      145
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3734,
-      -97.7448
+      30.3698,
+      -97.741
     ]
   },
   {
@@ -819,25 +702,26 @@ export const NEIGHBORHOODS = [
       43,
       144,
       146,
-      158,
-      218
+      147,
+      158
     ],
     "source": "suburban-community",
     "centroid": [
-      30.3579,
-      -97.7804
+      30.3576,
+      -97.7648
     ]
   },
   {
     "id": "oak-hill",
     "name": "Oak Hill (under review)",
     "tract_ids": [
-      49
+      49,
+      167
     ],
     "source": "suburban-community",
     "centroid": [
-      30.1928,
-      -97.8563
+      30.1946,
+      -97.837
     ]
   },
   {
@@ -895,18 +779,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "parkridge-gardens",
-    "name": "Parkridge Gardens (under review)",
-    "tract_ids": [
-      265
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.1821,
-      -97.7847
-    ]
-  },
-  {
     "id": "pecan-springs-springdale",
     "name": "Pecan Springs-springdale",
     "tract_ids": [
@@ -916,6 +788,18 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3009,
       -97.6717
+    ]
+  },
+  {
+    "id": "pflugerville",
+    "name": "Pflugerville (under review)",
+    "tract_ids": [
+      187
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4677,
+      -97.7049
     ]
   },
   {
@@ -957,18 +841,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2593,
       -97.7399
-    ]
-  },
-  {
-    "id": "redbud",
-    "name": "Redbud (under review)",
-    "tract_ids": [
-      233
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.2913,
-      -97.8093
     ]
   },
   {
@@ -1079,15 +951,13 @@ export const NEIGHBORHOODS = [
     "name": "Shady Hollow (under review)",
     "tract_ids": [
       53,
-      56,
       148,
-      167,
       266
     ],
     "source": "suburban-community",
     "centroid": [
-      30.1735,
-      -97.8128
+      30.1769,
+      -97.8228
     ]
   },
   {
@@ -1110,12 +980,13 @@ export const NEIGHBORHOODS = [
     "tract_ids": [
       91,
       128,
+      56,
       97
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.1897,
-      -97.79
+      30.1773,
+      -97.787
     ]
   },
   {
@@ -1169,18 +1040,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2278,
       -97.7532
-    ]
-  },
-  {
-    "id": "st-elmo",
-    "name": "St. Elmo (under review)",
-    "tract_ids": [
-      228
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.1896,
-      -97.7151
     ]
   },
   {
@@ -1240,19 +1099,30 @@ export const NEIGHBORHOODS = [
     "id": "the-arboretum",
     "name": "The Arboretum (under review)",
     "tract_ids": [
-      29,
-      32,
-      147
+      26,
+      29
     ],
     "source": "suburban-community",
     "centroid": [
-      30.3955,
-      -97.7364
+      30.3937,
+      -97.7449
     ]
   },
   {
-    "id": "treemont",
-    "name": "Treemont (under review)",
+    "id": "tract-1-02",
+    "name": "Tract 1.02 (under review)",
+    "tract_ids": [
+      117
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3258,
+      -97.7683
+    ]
+  },
+  {
+    "id": "tract-19-1",
+    "name": "Tract 19.1 (under review)",
     "tract_ids": [
       96
     ],
@@ -1260,6 +1130,198 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2728,
       -97.7956
+    ]
+  },
+  {
+    "id": "tract-19-18",
+    "name": "Tract 19.18 (under review)",
+    "tract_ids": [
+      233
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.2913,
+      -97.8093
+    ]
+  },
+  {
+    "id": "tract-19-19",
+    "name": "Tract 19.19 (under review)",
+    "tract_ids": [
+      243
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.2785,
+      -97.7947
+    ]
+  },
+  {
+    "id": "tract-22-16",
+    "name": "Tract 22.16 (under review)",
+    "tract_ids": [
+      227
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.2392,
+      -97.6416
+    ]
+  },
+  {
+    "id": "tract-22-2",
+    "name": "Tract 22.2 (under review)",
+    "tract_ids": [
+      186
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3156,
+      -97.6354
+    ]
+  },
+  {
+    "id": "tract-23-19",
+    "name": "Tract 23.19 (under review)",
+    "tract_ids": [
+      237
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1994,
+      -97.6447
+    ]
+  },
+  {
+    "id": "tract-24-22",
+    "name": "Tract 24.22 (under review)",
+    "tract_ids": [
+      265
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1821,
+      -97.7847
+    ]
+  },
+  {
+    "id": "tract-24-24",
+    "name": "Tract 24.24 (under review)",
+    "tract_ids": [
+      267
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1927,
+      -97.8003
+    ]
+  },
+  {
+    "id": "tract-24-48",
+    "name": "Tract 24.48 (under review)",
+    "tract_ids": [
+      228
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1896,
+      -97.7151
+    ]
+  },
+  {
+    "id": "tract-305-0",
+    "name": "Tract 305.0 (under review)",
+    "tract_ids": [
+      45
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3897,
+      -97.8079
+    ]
+  },
+  {
+    "id": "tract-329-0",
+    "name": "Tract 329.0 (under review)",
+    "tract_ids": [
+      218
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3592,
+      -97.8278
+    ]
+  },
+  {
+    "id": "tract-412-0",
+    "name": "Tract 412.0 (under review)",
+    "tract_ids": [
+      182
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.4003,
+      -97.6847
+    ]
+  },
+  {
+    "id": "tract-417-0",
+    "name": "Tract 417.0 (under review)",
+    "tract_ids": [
+      201
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3879,
+      -97.6998
+    ]
+  },
+  {
+    "id": "tract-419-0",
+    "name": "Tract 419.0 (under review)",
+    "tract_ids": [
+      5
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3928,
+      -97.6904
+    ]
+  },
+  {
+    "id": "tract-436-0",
+    "name": "Tract 436.0 (under review)",
+    "tract_ids": [
+      153
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.3358,
+      -97.6652
+    ]
+  },
+  {
+    "id": "tract-446-0",
+    "name": "Tract 446.0 (under review)",
+    "tract_ids": [
+      54
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.4135,
+      -97.6385
+    ]
+  },
+  {
+    "id": "tract-9800",
+    "name": "Tract 9800 (under review)",
+    "tract_ids": [
+      254
+    ],
+    "source": "tract-display-name",
+    "centroid": [
+      30.1953,
+      -97.6648
     ]
   },
   {
@@ -1288,19 +1350,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "upper-boggy-creek",
-    "name": "Upper Boggy Creek (under review)",
-    "tract_ids": [
-      79,
-      242
-    ],
-    "source": "name-cluster",
-    "centroid": [
-      30.2915,
-      -97.7152
-    ]
-  },
-  {
     "id": "ut",
     "name": "Ut",
     "tract_ids": [
@@ -1310,19 +1359,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2882,
       -97.738
-    ]
-  },
-  {
-    "id": "walnut-creek",
-    "name": "Walnut Creek (under review)",
-    "tract_ids": [
-      30,
-      187
-    ],
-    "source": "name-cluster",
-    "centroid": [
-      30.4665,
-      -97.6938
     ]
   },
   {
@@ -1341,17 +1377,15 @@ export const NEIGHBORHOODS = [
     "id": "wells-branch",
     "name": "Wells Branch (under review)",
     "tract_ids": [
-      54,
       58,
       59,
-      182,
-      229,
-      220
+      220,
+      229
     ],
     "source": "suburban-community",
     "centroid": [
-      30.4261,
-      -97.6596
+      30.4356,
+      -97.6586
     ]
   },
   {
@@ -1444,18 +1478,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3639,
       -97.677
-    ]
-  },
-  {
-    "id": "windsor-hills-tract-419-0",
-    "name": "Windsor Hills (Tract 419.0) (under review)",
-    "tract_ids": [
-      5
-    ],
-    "source": "tract-display-name",
-    "centroid": [
-      30.3928,
-      -97.6904
     ]
   },
   {
