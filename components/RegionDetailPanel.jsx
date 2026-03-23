@@ -182,30 +182,33 @@ export default function RegionDetailPanel({
                   );
                 }
 
-                const breakdownSums = demoChartData.map((d) => (d.White || 0) + (d.Black || 0) + (d.Hispanic || 0) + (d.Asian || 0));
-                const avgBreakdown = breakdownSums.reduce((a, b) => a + b, 0) / breakdownSums.length;
+                const withData = demoChartData.filter((d) => d.White != null);
+                const breakdownSums = withData.map((d) => (d.White || 0) + (d.Black || 0) + (d.Hispanic || 0) + (d.Asian || 0));
+                const avgBreakdown = breakdownSums.length ? breakdownSums.reduce((a, b) => a + b, 0) / breakdownSums.length : 0;
                 const hasBreakdown = avgBreakdown >= 0.5;
-                const hasPop = demoChartData.some((d) => d.total > 0);
-                const nearest = _.minBy(demoChartData, (dd) => Math.abs(dd.year - year));
+                const hasPop = withData.some((d) => d.total > 0);
+                const nearest = _.minBy(withData, (dd) => Math.abs(dd.year - year));
+                const dataYears = withData.map((d) => d.year);
+                const missingYears = demoChartData.filter((d) => d.White == null).length > 0;
 
                 return (
                   <>
                     {hasBreakdown ? (
                       <>
-                        <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2023</p>
+                        <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2025</p>
                         <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${activeRegionName}`}>
                           <ResponsiveContainer>
                             <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
                               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
-                              <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} />
+                              <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} domain={[1990, 2025]} />
                               <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
                               <Tooltip content={<ChartTooltip />} />
                               <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
-                              <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" />
-                              <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" />
-                              <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" />
-                              <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" />
-                              <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" />
+                              <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" connectNulls={false} />
+                              <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" connectNulls={false} />
+                              <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" connectNulls={false} />
+                              <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" connectNulls={false} />
+                              <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" connectNulls={false} />
                             </AreaChart>
                           </ResponsiveContainer>
                         </div>
@@ -217,6 +220,11 @@ export default function RegionDetailPanel({
                             </div>
                           ))}
                         </div>
+                        {missingYears && (
+                          <div style={{ fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                            Data available for {dataYears.join(", ")} only. 1990–{dataYears[0] - 1} not yet available from Census sources for this tract.
+                          </div>
+                        )}
                       </>
                     ) : (
                       <div style={{ padding: "20px 0", textAlign: "center" }}>
@@ -257,6 +265,18 @@ export default function RegionDetailPanel({
           <>
             {(propertyNow || socioNow) ? (
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                {/* Data year mismatch note */}
+                {(() => {
+                  const actualYear = propertyNow?.year ?? socioNow?.year;
+                  if (actualYear && Math.abs(actualYear - year) > 1) {
+                    return (
+                      <div style={{ gridColumn: "1 / -1", fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                        Showing nearest available data from {actualYear}. No census data available for {year} in this tract.
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
                 {/* Property Metrics */}
                 {propertyNow && [
                   { label: "Median Home Value", value: propertyNow.median_home_value, fmt: (v) => v != null ? "$" + (v / 1000).toFixed(0) + "k" : "N/A", prevVal: propertyPrev?.median_home_value },
@@ -290,7 +310,7 @@ export default function RegionDetailPanel({
                         )}
                       </div>
                       <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
-                        (nominal / 2023$)
+                        {propertyNow.year} (nominal / 2023$)
                         {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
                       </div>
                     </div>
@@ -332,7 +352,7 @@ export default function RegionDetailPanel({
                         )}
                       </div>
                       <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
-                        {c.isCurrency ? "(nominal / 2023$)" : c.sub}
+                        {socioNow.year} {c.isCurrency ? "(nominal / 2023$)" : c.sub}
                         {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
                       </div>
                     </div>

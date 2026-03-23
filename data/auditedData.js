@@ -259,11 +259,16 @@ export function priorRow(rows, targetYear, gapYears = 5) {
  * Uses the pre-normalized AUDITED_DEMO_BY_ID data — the same source
  * as interim_demographics.js — so the pct→fraction math is done once.
  */
+// Standard year range for all charts
+const CHART_YEARS = [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023, 2025];
+
 export function toDemoChartData(regionId) {
   const rows = AUDITED_DEMO_BY_ID.get(regionId);
   if (!rows || !rows.length) return [];
 
-  return rows.map((d) => {
+  // Build a map of actual data keyed by year
+  const byYear = new Map();
+  rows.forEach((d) => {
     const pW = d.pct_white_non_hispanic ?? 0;
     const pB = d.pct_black_non_hispanic ?? 0;
     const pH = d.pct_hispanic ?? 0;
@@ -271,7 +276,7 @@ export function toDemoChartData(regionId) {
     const pO = Math.max(0, 100 - pW - pB - pH - pA);
     const tot = d.total_population ?? 0;
 
-    return {
+    byYear.set(d.year, {
       year: d.year,
       White: pW / 100,
       Black: pB / 100,
@@ -289,6 +294,9 @@ export function toDemoChartData(regionId) {
       pct_65_and_over: d.pct_65_and_over,
       pct_bachelors: d.pct_bachelors_degree_or_higher,
       audit_confidence: d.audit_confidence,
-    };
+    });
   });
+
+  // Return full range — null fields for years without data
+  return CHART_YEARS.map((yr) => byYear.get(yr) || { year: yr });
 }
