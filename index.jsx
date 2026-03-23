@@ -16,6 +16,7 @@ import {
 // the files live in public/ so fetch('/ISSUES.md') works
 import { PLAY_YEARS } from "./data/constants";
 import { ID_TO_NAME } from "./data/regionLookup";
+import { REGIONS_GEOJSON } from "./data/final_updated_regions";
 
 // Utils
 import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
@@ -185,6 +186,18 @@ export default function AustinCulturalMap() {
     return out;
   }, [activeRegionId, activeDisplayName, activeRegionName]);
 
+  // Navigate from triage/compare to map, selecting a specific tract
+  const handleLocateOnMap = useCallback((regionId) => {
+    const feature = REGIONS_GEOJSON.features.find(
+      (f) => f.properties.region_id === regionId
+    );
+    setBoundaryMode("tracts");
+    setActiveRegionId(regionId);
+    setSelectedRegion(regionId);
+    setActiveFeature(feature || null);
+    setViewMode("map");
+  }, []);
+
   return (
     <div
       style={{
@@ -254,7 +267,7 @@ export default function AustinCulturalMap() {
         )}
 
         {viewMode === "triage" && (
-          <TriageView boundaryMode={boundaryMode} />
+          <TriageView boundaryMode={boundaryMode} onLocateOnMap={handleLocateOnMap} />
         )}
 
         {viewMode === "map" && (

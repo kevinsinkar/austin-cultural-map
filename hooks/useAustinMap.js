@@ -527,6 +527,25 @@ export default function useAustinMap({
     }
   }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter]);
 
+  // ── Auto-zoom to selected region when activeRegionId changes ──
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    const layer = geojsonLayerRef.current;
+    if (!map || !layer || !activeRegionId) return;
+
+    let targetLayer = null;
+    layer.eachLayer((lyr) => {
+      if (lyr.feature?.properties?.region_id === activeRegionId) {
+        targetLayer = lyr;
+      }
+    });
+
+    if (targetLayer) {
+      map.fitBounds(targetLayer.getBounds(), { padding: [80, 80], maxZoom: 14 });
+      targetLayer.bringToFront();
+    }
+  }, [activeRegionId]);
+
   // ── Clear active feature when selectedRegion is cleared ──
   useEffect(() => {
     if (selectedRegion === null) {

@@ -122,7 +122,7 @@ const AXIS_LABELS = {
 
 // ── Component ──
 
-export default function TriageView({ boundaryMode }) {
+export default function TriageView({ boundaryMode, onLocateOnMap }) {
   const [lens, setLens] = useState("equity");
   const [sortCol, setSortCol] = useState("priority");
   const [sortDir, setSortDir] = useState("desc");
@@ -418,6 +418,31 @@ export default function TriageView({ boundaryMode }) {
           {lens === "equity" && "Dot size = preservation gap (larger = less PA investment). Upper-right = high displacement with underserved communities."}
           {lens === "matrix" && "Dot size = cultural significance. Quadrant lines at 50. Q1 (upper-right) = crisis. Q2 (lower-right) = urgent prevention. Q4 (upper-left) = chronic underinvestment."}
         </p>
+        {selectedRegionId && onLocateOnMap && (() => {
+          const sel = activeData.find(r => r.regionId === selectedRegionId);
+          if (!sel) return null;
+          return (
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10, padding: "8px 12px", background: "#f0fdfa", borderRadius: 6, border: "1px solid #99f6e4" }}>
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a" }}>{sel.name}</span>
+              <span style={{ fontSize: 11, color: "#64615b" }}>
+                {sel.category}
+              </span>
+              <button
+                onClick={() => onLocateOnMap(selectedRegionId)}
+                style={{
+                  marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 5,
+                  padding: "5px 12px", borderRadius: 6, fontSize: 11, fontWeight: 600,
+                  background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/>
+                </svg>
+                Locate on Map
+              </button>
+            </div>
+          );
+        })()}
       </div>
 
       {/* Table */}
@@ -468,7 +493,31 @@ export default function TriageView({ boundaryMode }) {
                       );
                     }
                     if (col.key === "name") {
-                      return <td key={col.key} style={{ padding: "6px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap" }}>{val}</td>;
+                      return (
+                        <td key={col.key} style={{ padding: "6px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap" }}>
+                          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                            {val}
+                            {onLocateOnMap && selectedRegionId === r.regionId && (
+                              <button
+                                onClick={(e) => { e.stopPropagation(); onLocateOnMap(r.regionId); }}
+                                title="Locate on map"
+                                aria-label={`Locate ${val} on map`}
+                                style={{
+                                  display: "inline-flex", alignItems: "center", gap: 4,
+                                  padding: "2px 8px", borderRadius: 4, fontSize: 10, fontWeight: 600,
+                                  background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
+                                  whiteSpace: "nowrap", lineHeight: 1.4,
+                                }}
+                              >
+                                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                  <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/>
+                                </svg>
+                                Map
+                              </button>
+                            )}
+                          </span>
+                        </td>
+                      );
                     }
                     if (col.key === "grantType") {
                       return (
