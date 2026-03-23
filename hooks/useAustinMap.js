@@ -115,8 +115,9 @@ export default function useAustinMap({
         fillColor: "#e0ddd7",
       }),
       onEachFeature: (feature, layer) => {
-        const displayName = regionLookupMap.get(feature.properties.region_id)?.display_name || feature.properties.region_name;
-        layer.bindTooltip(displayName, { direction: "auto", sticky: true });
+        const meta = regionLookupMap.get(feature.properties.region_id);
+        const tractLabel = meta?.tract_label || meta?.display_name || feature.properties.region_name;
+        layer.bindTooltip(tractLabel, { direction: "auto", sticky: true });
         layer.on({
           mouseover: (e) => {
             const l = e.target;
