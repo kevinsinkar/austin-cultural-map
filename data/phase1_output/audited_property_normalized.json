@@ -13,7 +13,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -29,7 +30,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 21.02
   },
   {
     "year": 2020,
@@ -45,7 +47,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -61,7 +64,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 21.54
   },
   {
     "year": 2020,
@@ -77,7 +81,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -93,7 +98,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7
   },
   {
     "year": 2020,
@@ -109,7 +115,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -125,7 +132,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -141,7 +149,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -157,7 +166,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 16.64
   },
   {
     "year": 2020,
@@ -173,7 +183,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -189,7 +200,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.49
   },
   {
     "year": 2020,
@@ -205,7 +217,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -221,7 +234,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 11.92
   },
   {
     "year": 2020,
@@ -237,7 +251,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -253,7 +268,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 24.11
   },
   {
     "year": 2020,
@@ -269,7 +285,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -285,7 +302,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 25.17
   },
   {
     "year": 2020,
@@ -301,7 +319,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -317,7 +336,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.91
   },
   {
     "year": 2020,
@@ -333,7 +353,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -349,7 +370,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.16
   },
   {
     "year": 2020,
@@ -365,7 +387,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -381,7 +404,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 28.06
   },
   {
     "year": 2020,
@@ -397,7 +421,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -413,7 +438,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -429,7 +455,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -445,7 +472,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 16.45
   },
   {
     "year": 2020,
@@ -461,7 +489,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -477,7 +506,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.47
   },
   {
     "year": 2020,
@@ -493,7 +523,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -509,7 +540,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.23
   },
   {
     "year": 2020,
@@ -525,7 +557,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -541,7 +574,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7.41
   },
   {
     "year": 2020,
@@ -557,7 +591,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -573,7 +608,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 11.09
   },
   {
     "year": 2020,
@@ -589,7 +625,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -605,7 +642,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.7
   },
   {
     "year": 2020,
@@ -621,7 +659,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -637,7 +676,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7.77
   },
   {
     "year": 2020,
@@ -653,7 +693,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -669,7 +710,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -685,7 +727,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -701,7 +744,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.59
   },
   {
     "year": 2020,
@@ -717,7 +761,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -733,7 +778,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7.4
   },
   {
     "year": 2020,
@@ -749,7 +795,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -765,7 +812,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.14
   },
   {
     "year": 2020,
@@ -781,7 +829,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -797,7 +846,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 9.28
   },
   {
     "year": 2020,
@@ -813,7 +863,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -829,7 +880,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7.05
   },
   {
     "year": 2020,
@@ -845,7 +897,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -861,7 +914,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 2.78
   },
   {
     "year": 2020,
@@ -877,7 +931,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -893,7 +948,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.93
   },
   {
     "year": 2020,
@@ -909,7 +965,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -925,7 +982,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.69
   },
   {
     "year": 2020,
@@ -941,7 +999,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -957,7 +1016,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.91
   },
   {
     "year": 2020,
@@ -973,7 +1033,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -989,7 +1050,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.18
   },
   {
     "year": 2020,
@@ -1005,7 +1067,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1021,7 +1084,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.1
   },
   {
     "year": 2020,
@@ -1037,7 +1101,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1053,7 +1118,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -1069,7 +1135,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1085,7 +1152,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.57
   },
   {
     "year": 2020,
@@ -1101,7 +1169,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1117,7 +1186,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.1
   },
   {
     "year": 2020,
@@ -1133,7 +1203,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1149,7 +1220,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.38
   },
   {
     "year": 2020,
@@ -1165,7 +1237,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1181,7 +1254,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 6.93
   },
   {
     "year": 2020,
@@ -1197,7 +1271,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1213,7 +1288,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 9.4
   },
   {
     "year": 2020,
@@ -1229,7 +1305,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1245,7 +1322,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7.11
   },
   {
     "year": 2020,
@@ -1261,7 +1339,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1277,7 +1356,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 17.63
   },
   {
     "year": 2020,
@@ -1293,7 +1373,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1309,7 +1390,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 19.43
   },
   {
     "year": 2020,
@@ -1325,7 +1407,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1341,7 +1424,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 8.95
   },
   {
     "year": 2020,
@@ -1357,7 +1441,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1373,7 +1458,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 11.69
   },
   {
     "year": 2020,
@@ -1389,7 +1475,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1405,7 +1492,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.91
   },
   {
     "year": 2020,
@@ -1421,7 +1509,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1437,7 +1526,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 8.86
   },
   {
     "year": 2020,
@@ -1453,7 +1543,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1469,7 +1560,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 9.44
   },
   {
     "year": 2020,
@@ -1485,7 +1577,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1501,7 +1594,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.31
   },
   {
     "year": 2020,
@@ -1517,7 +1611,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1533,7 +1628,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -1549,7 +1645,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1565,7 +1662,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.61
   },
   {
     "year": 2020,
@@ -1581,7 +1679,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1597,7 +1696,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 11.75
   },
   {
     "year": 2020,
@@ -1613,7 +1713,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1629,7 +1730,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 6.55
   },
   {
     "year": 2020,
@@ -1645,7 +1747,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1661,7 +1764,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -1677,7 +1781,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1693,7 +1798,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 16.27
   },
   {
     "year": 2020,
@@ -1709,7 +1815,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1725,7 +1832,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 16.28
   },
   {
     "year": 2020,
@@ -1741,7 +1849,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1757,7 +1866,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.98
   },
   {
     "year": 2020,
@@ -1773,7 +1883,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1789,7 +1900,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14
   },
   {
     "year": 2020,
@@ -1805,7 +1917,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1821,7 +1934,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": -1.06
   },
   {
     "year": 2020,
@@ -1837,7 +1951,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1853,7 +1968,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.29
   },
   {
     "year": 2020,
@@ -1869,7 +1985,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1885,7 +2002,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 22.9
   },
   {
     "year": 2020,
@@ -1901,7 +2019,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1917,7 +2036,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 9.06
   },
   {
     "year": 2020,
@@ -1933,7 +2053,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1949,7 +2070,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 17.73
   },
   {
     "year": 2020,
@@ -1965,7 +2087,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -1981,7 +2104,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.63
   },
   {
     "year": 2020,
@@ -1997,7 +2121,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2013,7 +2138,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.51
   },
   {
     "year": 2020,
@@ -2029,7 +2155,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2045,7 +2172,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 19.77
   },
   {
     "year": 2020,
@@ -2061,7 +2189,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2077,7 +2206,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.64
   },
   {
     "year": 2020,
@@ -2093,7 +2223,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2109,7 +2240,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 17.09
   },
   {
     "year": 2020,
@@ -2125,7 +2257,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2141,7 +2274,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 0.52
   },
   {
     "year": 2020,
@@ -2157,7 +2291,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2173,7 +2308,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.48
   },
   {
     "year": 2020,
@@ -2189,7 +2325,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2205,7 +2342,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.33
   },
   {
     "year": 2020,
@@ -2221,7 +2359,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2237,7 +2376,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.35
   },
   {
     "year": 2020,
@@ -2253,7 +2393,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2269,7 +2410,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 3.21
   },
   {
     "year": 2020,
@@ -2285,7 +2427,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2301,7 +2444,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 9.94
   },
   {
     "year": 2020,
@@ -2317,7 +2461,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2333,7 +2478,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 44.29
   },
   {
     "year": 2020,
@@ -2349,7 +2495,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2365,7 +2512,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 6.25
   },
   {
     "year": 2020,
@@ -2381,7 +2529,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2397,7 +2546,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 1.53
   },
   {
     "year": 2020,
@@ -2413,7 +2563,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2429,7 +2580,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 25.17
   },
   {
     "year": 2020,
@@ -2445,7 +2597,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2461,7 +2614,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 17.82
   },
   {
     "year": 2020,
@@ -2477,7 +2631,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2493,7 +2648,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -2509,7 +2665,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2525,7 +2682,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 7.04
   },
   {
     "year": 2020,
@@ -2541,7 +2699,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": 11.64
   },
   {
     "year": 2023,
@@ -2557,7 +2716,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 11.84
   },
   {
     "year": 2010,
@@ -2573,7 +2733,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2589,7 +2750,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.94
   },
   {
     "year": 2020,
@@ -2605,7 +2767,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": 1.83
   },
   {
     "year": 2023,
@@ -2621,7 +2784,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 17.51
   },
   {
     "year": 2010,
@@ -2637,7 +2801,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2653,7 +2818,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -2669,7 +2835,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -2685,7 +2852,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -2701,7 +2869,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2717,7 +2886,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 7.1
   },
   {
     "year": 2020,
@@ -2733,7 +2903,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.442Z"
+    "audit_timestamp": "2026-03-23T16:38:22.442Z",
+    "pct_home_value_change_yoy": 17.19
   },
   {
     "year": 2023,
@@ -2749,7 +2920,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.5
   },
   {
     "year": 2010,
@@ -2765,7 +2937,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2781,7 +2954,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 12.91
   },
   {
     "year": 2020,
@@ -2797,7 +2971,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 14
   },
   {
     "year": 2023,
@@ -2813,7 +2988,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 19.24
   },
   {
     "year": 2010,
@@ -2829,7 +3005,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2845,7 +3022,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 12.39
   },
   {
     "year": 2020,
@@ -2861,7 +3039,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.12
   },
   {
     "year": 2023,
@@ -2877,7 +3056,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 11.24
   },
   {
     "year": 2010,
@@ -2893,7 +3073,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2909,7 +3090,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.8
   },
   {
     "year": 2020,
@@ -2925,7 +3107,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 13.45
   },
   {
     "year": 2023,
@@ -2941,7 +3124,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7
   },
   {
     "year": 2010,
@@ -2957,7 +3141,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -2973,7 +3158,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.82
   },
   {
     "year": 2020,
@@ -2989,7 +3175,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 21.96
   },
   {
     "year": 2023,
@@ -3005,7 +3192,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7.34
   },
   {
     "year": 2010,
@@ -3021,7 +3209,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3037,7 +3226,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.24
   },
   {
     "year": 2020,
@@ -3053,7 +3243,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 5.48
   },
   {
     "year": 2023,
@@ -3069,7 +3260,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 16.56
   },
   {
     "year": 2010,
@@ -3085,7 +3277,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3101,7 +3294,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.64
   },
   {
     "year": 2020,
@@ -3117,7 +3311,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 11.12
   },
   {
     "year": 2023,
@@ -3133,7 +3328,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.76
   },
   {
     "year": 2010,
@@ -3149,7 +3345,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3165,7 +3362,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -3181,7 +3379,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -3197,7 +3396,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -3213,7 +3413,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3229,7 +3430,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.32
   },
   {
     "year": 2020,
@@ -3245,7 +3447,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 15.08
   },
   {
     "year": 2023,
@@ -3261,7 +3464,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.07
   },
   {
     "year": 2010,
@@ -3277,7 +3481,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3293,7 +3498,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.85
   },
   {
     "year": 2020,
@@ -3309,7 +3515,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.67
   },
   {
     "year": 2023,
@@ -3325,7 +3532,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.31
   },
   {
     "year": 2010,
@@ -3341,7 +3549,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3357,7 +3566,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.41
   },
   {
     "year": 2020,
@@ -3373,7 +3583,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.18
   },
   {
     "year": 2023,
@@ -3389,7 +3600,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 7
   },
   {
     "year": 2010,
@@ -3405,7 +3617,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3421,7 +3634,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.43
   },
   {
     "year": 2020,
@@ -3437,7 +3651,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 12.5
   },
   {
     "year": 2023,
@@ -3453,7 +3668,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.3
   },
   {
     "year": 2010,
@@ -3469,7 +3685,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3485,7 +3702,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.19
   },
   {
     "year": 2020,
@@ -3501,7 +3719,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": -1.66
   },
   {
     "year": 2023,
@@ -3517,7 +3736,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.42
   },
   {
     "year": 2010,
@@ -3533,7 +3753,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3549,7 +3770,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.2
   },
   {
     "year": 2020,
@@ -3565,7 +3787,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 6.08
   },
   {
     "year": 2023,
@@ -3581,7 +3804,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.13
   },
   {
     "year": 2010,
@@ -3597,7 +3821,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3613,7 +3838,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.24
   },
   {
     "year": 2020,
@@ -3629,7 +3855,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 6.58
   },
   {
     "year": 2023,
@@ -3645,7 +3872,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.27
   },
   {
     "year": 2010,
@@ -3661,7 +3889,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3677,7 +3906,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.08
   },
   {
     "year": 2020,
@@ -3693,7 +3923,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.48
   },
   {
     "year": 2023,
@@ -3709,7 +3940,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.43
   },
   {
     "year": 2010,
@@ -3725,7 +3957,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3741,7 +3974,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 13.71
   },
   {
     "year": 2020,
@@ -3757,7 +3991,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -3773,7 +4008,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -3789,7 +4025,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3805,7 +4042,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.93
   },
   {
     "year": 2020,
@@ -3821,7 +4059,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.06
   },
   {
     "year": 2023,
@@ -3837,7 +4076,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.57
   },
   {
     "year": 2010,
@@ -3853,7 +4093,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3869,7 +4110,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.47
   },
   {
     "year": 2020,
@@ -3885,7 +4127,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 4.8
   },
   {
     "year": 2023,
@@ -3901,7 +4144,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -3917,7 +4161,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3933,7 +4178,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.19
   },
   {
     "year": 2020,
@@ -3949,7 +4195,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 13.22
   },
   {
     "year": 2023,
@@ -3965,7 +4212,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 22.85
   },
   {
     "year": 2010,
@@ -3981,7 +4229,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -3997,7 +4246,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 8.49
   },
   {
     "year": 2020,
@@ -4013,7 +4263,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 14.35
   },
   {
     "year": 2023,
@@ -4029,7 +4280,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.87
   },
   {
     "year": 2010,
@@ -4045,7 +4297,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4061,7 +4314,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.15
   },
   {
     "year": 2020,
@@ -4077,7 +4331,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 11.52
   },
   {
     "year": 2023,
@@ -4093,7 +4348,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 5.33
   },
   {
     "year": 2010,
@@ -4109,7 +4365,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4125,7 +4382,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.36
   },
   {
     "year": 2020,
@@ -4141,7 +4399,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.89
   },
   {
     "year": 2023,
@@ -4157,7 +4416,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 8.79
   },
   {
     "year": 2010,
@@ -4173,7 +4433,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4189,7 +4450,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 10.03
   },
   {
     "year": 2020,
@@ -4205,7 +4467,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 11.3
   },
   {
     "year": 2023,
@@ -4221,7 +4484,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 12.67
   },
   {
     "year": 2010,
@@ -4237,7 +4501,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4253,7 +4518,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 8.18
   },
   {
     "year": 2020,
@@ -4269,7 +4535,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 16.93
   },
   {
     "year": 2023,
@@ -4285,7 +4552,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10
   },
   {
     "year": 2010,
@@ -4301,7 +4569,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4317,7 +4586,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.3
   },
   {
     "year": 2020,
@@ -4333,7 +4603,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.06
   },
   {
     "year": 2023,
@@ -4349,7 +4620,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.33
   },
   {
     "year": 2010,
@@ -4365,7 +4637,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4381,7 +4654,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": -0.68
   },
   {
     "year": 2020,
@@ -4397,7 +4671,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.13
   },
   {
     "year": 2023,
@@ -4413,7 +4688,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 26.87
   },
   {
     "year": 2010,
@@ -4429,7 +4705,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4445,7 +4722,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.52
   },
   {
     "year": 2020,
@@ -4461,7 +4739,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 17.38
   },
   {
     "year": 2023,
@@ -4477,7 +4756,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 10.94
   },
   {
     "year": 2010,
@@ -4493,7 +4773,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4509,7 +4790,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.1
   },
   {
     "year": 2020,
@@ -4525,7 +4807,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 3.61
   },
   {
     "year": 2023,
@@ -4541,7 +4824,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 13.11
   },
   {
     "year": 2010,
@@ -4557,7 +4841,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4573,7 +4858,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 9.48
   },
   {
     "year": 2020,
@@ -4589,7 +4875,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 13.67
   },
   {
     "year": 2023,
@@ -4605,7 +4892,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 15.9
   },
   {
     "year": 2010,
@@ -4621,7 +4909,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4637,7 +4926,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 15.67
   },
   {
     "year": 2020,
@@ -4653,7 +4943,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.77
   },
   {
     "year": 2023,
@@ -4669,7 +4960,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 14.4
   },
   {
     "year": 2010,
@@ -4685,7 +4977,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4701,7 +4994,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.42
   },
   {
     "year": 2020,
@@ -4717,7 +5011,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 14.99
   },
   {
     "year": 2023,
@@ -4733,7 +5028,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.001Z"
+    "audit_timestamp": "2026-03-23T16:38:33.001Z",
+    "pct_home_value_change_yoy": 6.01
   },
   {
     "year": 2010,
@@ -4749,7 +5045,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4765,7 +5062,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.8
   },
   {
     "year": 2020,
@@ -4781,7 +5079,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.59
   },
   {
     "year": 2023,
@@ -4797,7 +5096,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.79
   },
   {
     "year": 2010,
@@ -4813,7 +5113,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4829,7 +5130,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.55
   },
   {
     "year": 2020,
@@ -4845,7 +5147,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.69
   },
   {
     "year": 2023,
@@ -4861,7 +5164,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.42
   },
   {
     "year": 2010,
@@ -4877,7 +5181,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4893,7 +5198,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.12
   },
   {
     "year": 2020,
@@ -4909,7 +5215,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.28
   },
   {
     "year": 2023,
@@ -4925,7 +5232,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.11
   },
   {
     "year": 2010,
@@ -4941,7 +5249,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -4957,7 +5266,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.6
   },
   {
     "year": 2020,
@@ -4973,7 +5283,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 4.39
   },
   {
     "year": 2023,
@@ -4989,7 +5300,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.79
   },
   {
     "year": 2010,
@@ -5005,7 +5317,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5021,7 +5334,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.09
   },
   {
     "year": 2020,
@@ -5037,7 +5351,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9
   },
   {
     "year": 2023,
@@ -5053,7 +5368,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.59
   },
   {
     "year": 2010,
@@ -5069,7 +5385,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5085,7 +5402,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -5101,7 +5419,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -5117,7 +5436,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -5133,7 +5453,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5149,7 +5470,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.92
   },
   {
     "year": 2020,
@@ -5165,7 +5487,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.41
   },
   {
     "year": 2023,
@@ -5181,7 +5504,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 7.04
   },
   {
     "year": 2010,
@@ -5197,7 +5521,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5213,7 +5538,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": -0.31
   },
   {
     "year": 2020,
@@ -5229,7 +5555,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 6.46
   },
   {
     "year": 2023,
@@ -5245,7 +5572,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.54
   },
   {
     "year": 2010,
@@ -5261,7 +5589,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5277,7 +5606,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.57
   },
   {
     "year": 2020,
@@ -5293,7 +5623,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.44
   },
   {
     "year": 2023,
@@ -5309,7 +5640,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 16.66
   },
   {
     "year": 2010,
@@ -5325,7 +5657,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5341,7 +5674,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.59
   },
   {
     "year": 2020,
@@ -5357,7 +5691,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 12.96
   },
   {
     "year": 2023,
@@ -5373,7 +5708,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.94
   },
   {
     "year": 2010,
@@ -5389,7 +5725,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5405,7 +5742,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.38
   },
   {
     "year": 2020,
@@ -5421,7 +5759,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 10.4
   },
   {
     "year": 2023,
@@ -5437,7 +5776,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.49
   },
   {
     "year": 2010,
@@ -5453,7 +5793,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5469,7 +5810,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.57
   },
   {
     "year": 2020,
@@ -5485,7 +5827,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.77
   },
   {
     "year": 2023,
@@ -5501,7 +5844,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.43
   },
   {
     "year": 2010,
@@ -5517,7 +5861,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5533,7 +5878,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.33
   },
   {
     "year": 2020,
@@ -5549,7 +5895,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.89
   },
   {
     "year": 2023,
@@ -5565,7 +5912,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.72
   },
   {
     "year": 2010,
@@ -5581,7 +5929,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5597,7 +5946,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.97
   },
   {
     "year": 2020,
@@ -5613,7 +5963,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 3.4
   },
   {
     "year": 2023,
@@ -5629,7 +5980,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.57
   },
   {
     "year": 2010,
@@ -5645,7 +5997,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5661,7 +6014,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.15
   },
   {
     "year": 2020,
@@ -5677,7 +6031,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 10.29
   },
   {
     "year": 2023,
@@ -5693,7 +6048,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.07
   },
   {
     "year": 2010,
@@ -5709,7 +6065,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5725,7 +6082,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": -2.66
   },
   {
     "year": 2020,
@@ -5741,7 +6099,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.97
   },
   {
     "year": 2023,
@@ -5757,7 +6116,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": -1.76
   },
   {
     "year": 2010,
@@ -5773,7 +6133,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5789,7 +6150,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.98
   },
   {
     "year": 2020,
@@ -5805,7 +6167,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 6
   },
   {
     "year": 2023,
@@ -5821,7 +6184,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.45
   },
   {
     "year": 2010,
@@ -5837,7 +6201,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5853,7 +6218,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 0.89
   },
   {
     "year": 2020,
@@ -5869,7 +6235,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.71
   },
   {
     "year": 2023,
@@ -5885,7 +6252,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 17.65
   },
   {
     "year": 2010,
@@ -5901,7 +6269,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5917,7 +6286,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.38
   },
   {
     "year": 2020,
@@ -5933,7 +6303,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 7.83
   },
   {
     "year": 2023,
@@ -5949,7 +6320,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.13
   },
   {
     "year": 2010,
@@ -5965,7 +6337,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -5981,7 +6354,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.42
   },
   {
     "year": 2020,
@@ -5997,7 +6371,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.61
   },
   {
     "year": 2023,
@@ -6013,7 +6388,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.58
   },
   {
     "year": 2010,
@@ -6029,7 +6405,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -6045,7 +6422,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.24
   },
   {
     "year": 2020,
@@ -6061,7 +6439,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 6.15
   },
   {
     "year": 2023,
@@ -6077,7 +6456,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.5
   },
   {
     "year": 2010,
@@ -6093,7 +6473,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -6109,7 +6490,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.63
   },
   {
     "year": 2020,
@@ -6125,7 +6507,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 9.58
   },
   {
     "year": 2023,
@@ -6141,7 +6524,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 4.99
   },
   {
     "year": 2010,
@@ -6157,7 +6541,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -6173,7 +6558,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.33
   },
   {
     "year": 2020,
@@ -6189,7 +6575,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 5.59
   },
   {
     "year": 2023,
@@ -6205,7 +6592,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 16.77
   },
   {
     "year": 2010,
@@ -6221,7 +6609,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -6237,7 +6626,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.02
   },
   {
     "year": 2020,
@@ -6253,7 +6643,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.98
   },
   {
     "year": 2023,
@@ -6269,7 +6660,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.95
   },
   {
     "year": 2010,
@@ -6285,7 +6677,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -6301,7 +6694,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 0.44
   },
   {
     "year": 2020,
@@ -6317,7 +6711,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": 8.82
   },
   {
     "year": 2023,
@@ -6333,7 +6728,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.77
   },
   {
     "year": 2020,
@@ -6349,7 +6745,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6365,7 +6762,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.41
   },
   {
     "year": 2020,
@@ -6381,7 +6779,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6397,7 +6796,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 20.46
   },
   {
     "year": 2020,
@@ -6413,7 +6813,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6429,7 +6830,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.45
   },
   {
     "year": 2020,
@@ -6445,7 +6847,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6461,7 +6864,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.69
   },
   {
     "year": 2020,
@@ -6477,7 +6881,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6493,7 +6898,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 6.14
   },
   {
     "year": 2020,
@@ -6509,7 +6915,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6525,7 +6932,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.35
   },
   {
     "year": 2020,
@@ -6541,7 +6949,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6557,7 +6966,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 17.47
   },
   {
     "year": 2020,
@@ -6573,7 +6983,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6589,7 +7000,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.54
   },
   {
     "year": 2020,
@@ -6605,7 +7017,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6621,7 +7034,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -6637,7 +7051,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6653,7 +7068,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.01
   },
   {
     "year": 2020,
@@ -6669,7 +7085,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6685,7 +7102,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.42
   },
   {
     "year": 2020,
@@ -6701,7 +7119,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6717,7 +7136,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.35
   },
   {
     "year": 2020,
@@ -6733,7 +7153,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6749,7 +7170,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.83
   },
   {
     "year": 2020,
@@ -6765,7 +7187,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6781,7 +7204,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 25.39
   },
   {
     "year": 2020,
@@ -6797,7 +7221,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6813,7 +7238,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 2.46
   },
   {
     "year": 2020,
@@ -6829,7 +7255,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6845,7 +7272,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -6861,7 +7289,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6877,7 +7306,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.48
   },
   {
     "year": 2020,
@@ -6893,7 +7323,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6909,7 +7340,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.18
   },
   {
     "year": 2020,
@@ -6925,7 +7357,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6941,7 +7374,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 3.93
   },
   {
     "year": 2020,
@@ -6957,7 +7391,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -6973,7 +7408,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.11
   },
   {
     "year": 2020,
@@ -6989,7 +7425,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7005,7 +7442,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.26
   },
   {
     "year": 2020,
@@ -7021,7 +7459,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7037,7 +7476,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -7053,7 +7493,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7069,7 +7510,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.49
   },
   {
     "year": 2020,
@@ -7085,7 +7527,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7101,7 +7544,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 1.01
   },
   {
     "year": 2020,
@@ -7117,7 +7561,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7133,7 +7578,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.11
   },
   {
     "year": 2020,
@@ -7149,7 +7595,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7165,7 +7612,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.98
   },
   {
     "year": 2020,
@@ -7181,7 +7629,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7197,7 +7646,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.72
   },
   {
     "year": 2020,
@@ -7213,7 +7663,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7229,7 +7680,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.53
   },
   {
     "year": 2020,
@@ -7245,7 +7697,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7261,7 +7714,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.28
   },
   {
     "year": 2020,
@@ -7277,7 +7731,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7293,7 +7748,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.3
   },
   {
     "year": 2020,
@@ -7309,7 +7765,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7325,7 +7782,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 59.34
   },
   {
     "year": 2020,
@@ -7341,7 +7799,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7357,7 +7816,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 19.05
   },
   {
     "year": 2020,
@@ -7373,7 +7833,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7389,7 +7850,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 81.92
   },
   {
     "year": 2020,
@@ -7405,7 +7867,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7421,7 +7884,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.44
   },
   {
     "year": 2020,
@@ -7437,7 +7901,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7453,7 +7918,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 17.73
   },
   {
     "year": 2020,
@@ -7469,7 +7935,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7485,7 +7952,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.5
   },
   {
     "year": 2020,
@@ -7501,7 +7969,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7517,7 +7986,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.43
   },
   {
     "year": 2020,
@@ -7533,7 +8003,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7549,7 +8020,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -7565,7 +8037,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.443Z"
+    "audit_timestamp": "2026-03-23T16:38:22.443Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7581,7 +8054,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -7597,7 +8071,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7613,7 +8088,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.43
   },
   {
     "year": 2020,
@@ -7629,7 +8105,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7645,7 +8122,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 16.75
   },
   {
     "year": 2020,
@@ -7661,7 +8139,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7677,7 +8156,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.77
   },
   {
     "year": 2020,
@@ -7693,7 +8173,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7709,7 +8190,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -7725,7 +8207,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7741,7 +8224,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 19.65
   },
   {
     "year": 2020,
@@ -7757,7 +8241,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7773,7 +8258,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 24.37
   },
   {
     "year": 2020,
@@ -7789,7 +8275,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7805,7 +8292,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 35.4
   },
   {
     "year": 2020,
@@ -7821,7 +8309,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7837,7 +8326,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 3.82
   },
   {
     "year": 2020,
@@ -7853,7 +8343,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7869,7 +8360,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 82.86
   },
   {
     "year": 2020,
@@ -7885,7 +8377,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7901,7 +8394,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -7917,7 +8411,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7933,7 +8428,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.55
   },
   {
     "year": 2020,
@@ -7949,7 +8445,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7965,7 +8462,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.85
   },
   {
     "year": 2020,
@@ -7981,7 +8479,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -7997,7 +8496,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.93
   },
   {
     "year": 2020,
@@ -8013,7 +8513,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8029,7 +8530,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 7.91
   },
   {
     "year": 2020,
@@ -8045,7 +8547,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8061,7 +8564,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 7.24
   },
   {
     "year": 2020,
@@ -8077,7 +8581,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8093,7 +8598,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.14
   },
   {
     "year": 2020,
@@ -8109,7 +8615,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8125,7 +8632,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 7.66
   },
   {
     "year": 2020,
@@ -8141,7 +8649,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8157,7 +8666,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.38
   },
   {
     "year": 2020,
@@ -8173,7 +8683,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8189,7 +8700,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 1.63
   },
   {
     "year": 2020,
@@ -8205,7 +8717,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8221,7 +8734,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.79
   },
   {
     "year": 2020,
@@ -8237,7 +8751,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8253,7 +8768,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.32
   },
   {
     "year": 2020,
@@ -8269,7 +8785,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8285,7 +8802,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.64
   },
   {
     "year": 2020,
@@ -8301,7 +8819,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8317,7 +8836,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 19.96
   },
   {
     "year": 2020,
@@ -8333,7 +8853,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8349,7 +8870,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.19
   },
   {
     "year": 2020,
@@ -8365,7 +8887,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8381,7 +8904,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.2
   },
   {
     "year": 2020,
@@ -8397,7 +8921,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8413,7 +8938,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.06
   },
   {
     "year": 2020,
@@ -8429,7 +8955,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8445,7 +8972,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.48
   },
   {
     "year": 2020,
@@ -8461,7 +8989,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8477,7 +9006,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.49
   },
   {
     "year": 2020,
@@ -8493,7 +9023,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8509,7 +9040,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 19.09
   },
   {
     "year": 2020,
@@ -8525,7 +9057,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8541,7 +9074,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 19.11
   },
   {
     "year": 2020,
@@ -8557,7 +9091,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8573,7 +9108,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.82
   },
   {
     "year": 2020,
@@ -8589,7 +9125,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8605,7 +9142,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 6.55
   },
   {
     "year": 2020,
@@ -8621,7 +9159,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8637,7 +9176,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 4.54
   },
   {
     "year": 2020,
@@ -8653,7 +9193,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8669,7 +9210,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 3.08
   },
   {
     "year": 2020,
@@ -8685,7 +9227,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8701,7 +9244,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.82
   },
   {
     "year": 2020,
@@ -8717,7 +9261,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8733,7 +9278,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 16.22
   },
   {
     "year": 2020,
@@ -8749,7 +9295,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8765,7 +9312,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 7.66
   },
   {
     "year": 2020,
@@ -8781,7 +9329,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8797,7 +9346,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 16.1
   },
   {
     "year": 2020,
@@ -8813,7 +9363,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8829,7 +9380,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.27
   },
   {
     "year": 2020,
@@ -8845,7 +9397,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8861,7 +9414,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.08
   },
   {
     "year": 2020,
@@ -8877,7 +9431,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8893,7 +9448,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.62
   },
   {
     "year": 2020,
@@ -8909,7 +9465,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8925,7 +9482,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.39
   },
   {
     "year": 2020,
@@ -8941,7 +9499,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8957,7 +9516,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 12.51
   },
   {
     "year": 2020,
@@ -8973,7 +9533,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -8989,7 +9550,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.55
   },
   {
     "year": 2020,
@@ -9005,7 +9567,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9021,7 +9584,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.21
   },
   {
     "year": 2020,
@@ -9037,7 +9601,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9053,7 +9618,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -9069,7 +9635,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9085,7 +9652,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 6.67
   },
   {
     "year": 2020,
@@ -9101,7 +9669,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9117,7 +9686,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": -1.41
   },
   {
     "year": 2020,
@@ -9133,7 +9703,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9149,7 +9720,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.5
   },
   {
     "year": 2020,
@@ -9165,7 +9737,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9181,7 +9754,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 17.59
   },
   {
     "year": 2020,
@@ -9197,7 +9771,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9213,7 +9788,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.74
   },
   {
     "year": 2020,
@@ -9229,7 +9805,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9245,7 +9822,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 16.5
   },
   {
     "year": 2010,
@@ -9261,7 +9839,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9277,7 +9856,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.49
   },
   {
     "year": 2020,
@@ -9293,7 +9873,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 9.23
   },
   {
     "year": 2023,
@@ -9309,7 +9890,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.64
   },
   {
     "year": 2010,
@@ -9325,7 +9907,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9341,7 +9924,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.62
   },
   {
     "year": 2020,
@@ -9357,7 +9941,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 4.93
   },
   {
     "year": 2023,
@@ -9373,7 +9958,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.66
   },
   {
     "year": 2010,
@@ -9389,7 +9975,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9405,7 +9992,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.17
   },
   {
     "year": 2020,
@@ -9421,7 +10009,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 4.96
   },
   {
     "year": 2023,
@@ -9437,7 +10026,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 8.96
   },
   {
     "year": 2010,
@@ -9453,7 +10043,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9469,7 +10060,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.25
   },
   {
     "year": 2020,
@@ -9485,7 +10077,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 7.08
   },
   {
     "year": 2023,
@@ -9501,7 +10094,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.73
   },
   {
     "year": 2010,
@@ -9517,7 +10111,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9533,7 +10128,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.56
   },
   {
     "year": 2020,
@@ -9549,7 +10145,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 6.03
   },
   {
     "year": 2023,
@@ -9565,7 +10162,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.09
   },
   {
     "year": 2010,
@@ -9581,7 +10179,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9597,7 +10196,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.01
   },
   {
     "year": 2020,
@@ -9613,7 +10213,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 3.06
   },
   {
     "year": 2023,
@@ -9629,7 +10230,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -9645,7 +10247,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9661,7 +10264,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.4
   },
   {
     "year": 2020,
@@ -9677,7 +10281,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 9.18
   },
   {
     "year": 2023,
@@ -9693,7 +10298,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.75
   },
   {
     "year": 2010,
@@ -9709,7 +10315,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9725,7 +10332,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -9741,7 +10349,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -9757,7 +10366,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -9773,7 +10383,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9789,7 +10400,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.23
   },
   {
     "year": 2020,
@@ -9805,7 +10417,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 7.07
   },
   {
     "year": 2023,
@@ -9821,7 +10434,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.53
   },
   {
     "year": 2010,
@@ -9837,7 +10451,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9853,7 +10468,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 7.35
   },
   {
     "year": 2020,
@@ -9869,7 +10485,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 6.97
   },
   {
     "year": 2023,
@@ -9885,7 +10502,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.49
   },
   {
     "year": 2010,
@@ -9901,7 +10519,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9917,7 +10536,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.33
   },
   {
     "year": 2020,
@@ -9933,7 +10553,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 6.48
   },
   {
     "year": 2023,
@@ -9949,7 +10570,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.54
   },
   {
     "year": 2010,
@@ -9965,7 +10587,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -9981,7 +10604,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.11
   },
   {
     "year": 2020,
@@ -9997,7 +10621,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 6.98
   },
   {
     "year": 2023,
@@ -10013,7 +10638,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 11.37
   },
   {
     "year": 2010,
@@ -10029,7 +10655,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10045,7 +10672,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.16
   },
   {
     "year": 2020,
@@ -10061,7 +10689,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 5.38
   },
   {
     "year": 2023,
@@ -10077,7 +10706,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.56
   },
   {
     "year": 2010,
@@ -10093,7 +10723,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10109,7 +10740,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.85
   },
   {
     "year": 2020,
@@ -10125,7 +10757,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 7.12
   },
   {
     "year": 2023,
@@ -10141,7 +10774,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 17.31
   },
   {
     "year": 2010,
@@ -10157,7 +10791,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10173,7 +10808,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.22
   },
   {
     "year": 2020,
@@ -10189,7 +10825,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 8.29
   },
   {
     "year": 2023,
@@ -10205,7 +10842,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 18.46
   },
   {
     "year": 2010,
@@ -10221,7 +10859,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10237,7 +10876,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.7
   },
   {
     "year": 2020,
@@ -10253,7 +10893,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 9.16
   },
   {
     "year": 2023,
@@ -10269,7 +10910,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.9
   },
   {
     "year": 2010,
@@ -10285,7 +10927,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10301,7 +10944,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.26
   },
   {
     "year": 2020,
@@ -10317,7 +10961,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 12.33
   },
   {
     "year": 2023,
@@ -10333,7 +10978,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 21.62
   },
   {
     "year": 2010,
@@ -10349,7 +10995,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10365,7 +11012,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.18
   },
   {
     "year": 2020,
@@ -10381,7 +11029,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 5.64
   },
   {
     "year": 2023,
@@ -10397,7 +11046,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.7
   },
   {
     "year": 2010,
@@ -10413,7 +11063,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10429,7 +11080,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.61
   },
   {
     "year": 2020,
@@ -10445,7 +11097,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 6.04
   },
   {
     "year": 2023,
@@ -10461,7 +11114,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.42
   },
   {
     "year": 2010,
@@ -10477,7 +11131,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10493,7 +11148,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 2.76
   },
   {
     "year": 2020,
@@ -10509,7 +11165,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 6.76
   },
   {
     "year": 2023,
@@ -10525,7 +11182,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.42
   },
   {
     "year": 2010,
@@ -10541,7 +11199,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10557,7 +11216,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.97
   },
   {
     "year": 2020,
@@ -10573,7 +11233,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 14.42
   },
   {
     "year": 2023,
@@ -10589,7 +11250,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 20.45
   },
   {
     "year": 2010,
@@ -10605,7 +11267,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10621,7 +11284,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 1.13
   },
   {
     "year": 2020,
@@ -10637,7 +11301,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 18.75
   },
   {
     "year": 2023,
@@ -10653,7 +11318,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 10.17
   },
   {
     "year": 2010,
@@ -10669,7 +11335,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10685,7 +11352,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 6.87
   },
   {
     "year": 2020,
@@ -10701,7 +11369,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 11.59
   },
   {
     "year": 2023,
@@ -10717,7 +11386,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 15.55
   },
   {
     "year": 2010,
@@ -10733,7 +11403,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10749,7 +11420,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 0.79
   },
   {
     "year": 2020,
@@ -10765,7 +11437,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 15.93
   },
   {
     "year": 2023,
@@ -10781,7 +11454,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 13.7
   },
   {
     "year": 2010,
@@ -10797,7 +11471,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10813,7 +11488,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -10829,7 +11505,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -10845,7 +11522,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -10861,7 +11539,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10877,7 +11556,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 4.59
   },
   {
     "year": 2020,
@@ -10893,7 +11573,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 10.48
   },
   {
     "year": 2023,
@@ -10909,7 +11590,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 35.32
   },
   {
     "year": 2010,
@@ -10925,7 +11607,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -10941,7 +11624,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 5.7
   },
   {
     "year": 2020,
@@ -10957,7 +11641,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 10
   },
   {
     "year": 2023,
@@ -10973,7 +11658,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 7.97
   },
   {
     "year": 2010,
@@ -10989,7 +11675,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11005,7 +11692,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -11021,7 +11709,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -11037,7 +11726,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -11053,7 +11743,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11069,7 +11760,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.56
   },
   {
     "year": 2020,
@@ -11085,7 +11777,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 11.29
   },
   {
     "year": 2023,
@@ -11101,7 +11794,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 14.96
   },
   {
     "year": 2010,
@@ -11117,7 +11811,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11133,7 +11828,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.034Z"
+    "audit_timestamp": "2026-03-23T16:38:12.034Z",
+    "pct_home_value_change_yoy": 3.28
   },
   {
     "year": 2020,
@@ -11149,7 +11845,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 14.44
   },
   {
     "year": 2023,
@@ -11165,7 +11862,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 9.61
   },
   {
     "year": 2010,
@@ -11181,7 +11879,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11197,7 +11896,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": 2.55
   },
   {
     "year": 2020,
@@ -11213,7 +11913,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 13.83
   },
   {
     "year": 2023,
@@ -11229,7 +11930,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 17.11
   },
   {
     "year": 2010,
@@ -11245,7 +11947,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11261,7 +11964,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": -0.25
   },
   {
     "year": 2020,
@@ -11277,7 +11981,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 3.85
   },
   {
     "year": 2023,
@@ -11293,7 +11998,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.002Z"
+    "audit_timestamp": "2026-03-23T16:38:33.002Z",
+    "pct_home_value_change_yoy": 33.06
   },
   {
     "year": 2010,
@@ -11309,7 +12015,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11325,7 +12032,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": -0.4
   },
   {
     "year": 2020,
@@ -11341,7 +12049,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 10.06
   },
   {
     "year": 2023,
@@ -11357,7 +12066,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 24.81
   },
   {
     "year": 2010,
@@ -11373,7 +12083,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11389,7 +12100,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": 1.97
   },
   {
     "year": 2020,
@@ -11405,7 +12117,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 7.46
   },
   {
     "year": 2023,
@@ -11421,7 +12134,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 22.89
   },
   {
     "year": 2010,
@@ -11437,7 +12151,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11453,7 +12168,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2020,
@@ -11469,7 +12185,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -11485,7 +12202,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2010,
@@ -11501,7 +12219,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11517,7 +12236,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": 2.5
   },
   {
     "year": 2020,
@@ -11533,7 +12253,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 10.9
   },
   {
     "year": 2023,
@@ -11549,7 +12270,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 17.07
   },
   {
     "year": 2010,
@@ -11565,7 +12287,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11581,7 +12304,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": 2.87
   },
   {
     "year": 2020,
@@ -11597,7 +12321,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 11.16
   },
   {
     "year": 2023,
@@ -11613,7 +12338,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 10.08
   },
   {
     "year": 2010,
@@ -11629,7 +12355,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11645,7 +12372,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": 4.78
   },
   {
     "year": 2020,
@@ -11661,7 +12389,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 10.32
   },
   {
     "year": 2023,
@@ -11677,7 +12406,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 11.57
   },
   {
     "year": 2010,
@@ -11693,7 +12423,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:01.264Z"
+    "audit_timestamp": "2026-03-23T16:38:01.264Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2015,
@@ -11709,7 +12440,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:12.035Z"
+    "audit_timestamp": "2026-03-23T16:38:12.035Z",
+    "pct_home_value_change_yoy": 11.43
   },
   {
     "year": 2020,
@@ -11725,7 +12457,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": 10.74
   },
   {
     "year": 2023,
@@ -11741,7 +12474,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 12.52
   },
   {
     "year": 2020,
@@ -11757,7 +12491,8 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:22.444Z"
+    "audit_timestamp": "2026-03-23T16:38:22.444Z",
+    "pct_home_value_change_yoy": null
   },
   {
     "year": 2023,
@@ -11773,6 +12508,7 @@
       "median_rent_monthly": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T16:38:33.003Z"
+    "audit_timestamp": "2026-03-23T16:38:33.003Z",
+    "pct_home_value_change_yoy": 2.21
   }
 ]
