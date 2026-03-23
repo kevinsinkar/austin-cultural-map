@@ -119,17 +119,23 @@ for (const [regionId, years] of regionYears) {
     const S = socioScore(s);
 
     // Data Confidence Score: average audit_confidence across available sources.
-    // If confidence is low, boost Socioeconomic Stress weight because it tracks
-    // displacement more reliably than property appreciation in "data deserts."
-    const confParts = [
-      d?.audit_confidence,
-      p?.audit_confidence,
-      s?.audit_confidence,
-    ].filter((c) => c != null);
-    const confidence =
-      confParts.length > 0
-        ? confParts.reduce((a, b) => a + b, 0) / confParts.length
-        : 0;
+    // audit_confidence can be a string ("high"/"medium"/"low"), an object of
+    // per-field strings, or a number. Normalize to 0–1.
+    function confToNum(c) {
+      if (typeof c === "number") return c;
+      if (typeof c === "string") return c === "high" ? 1 : c === "medium" ? 0.5 : 0.25;
+      if (typeof c === "object" && c !== null) {
+        const vals = Object.values(c).map(v => v === "high" ? 1 : v === "medium" ? 0.5 : 0.25);
+        return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : 0.5;
+      }
+      return 0.5;
+    }
+    const confParts = [d?.audit_confidence, p?.audit_confidence, s?.audit_confidence]
+      .filter(c => c != null)
+      .map(confToNum);
+    const confidence = confParts.length > 0
+      ? confParts.reduce((a, b) => a + b, 0) / confParts.length
+      : 0.5;
 
     // Re-weight across available sub-indices when data is missing,
     // instead of treating absent sub-indices as zero.
