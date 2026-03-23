@@ -87,7 +87,7 @@ export default function AustinCulturalMap() {
   const currentDvi = useMemo(() => {
     const m = {};
     REGION_INDEX.forEach((r) => {
-      m[r.display_name] = interpolateDvi(r.region_id, year);
+      m[r.region_id] = interpolateDvi(r.region_id, year);
     });
     return m;
   }, [year]);
@@ -157,11 +157,10 @@ export default function AustinCulturalMap() {
     if (!activeRegionId) return [];
     const out = [];
     const rd = DEMOGRAPHICS.filter((d) => d.region_id === activeRegionId);
-    const isDove = activeRegionName === "Dove Springs";
     for (let i = 1; i < rd.length; i++) {
       const p = rd[i - 1];
       const c = rd[i];
-      if (!isDove && p.popBlack > 0) {
+      if (p.popBlack > 0) {
         const drop = (p.popBlack - c.popBlack) / p.popBlack;
         if (drop > 0.25)
           out.push({
@@ -215,7 +214,7 @@ export default function AustinCulturalMap() {
         style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}
       >
         {activeDisplayName
-          ? `Viewing ${activeDisplayName}, DVI ${(currentDvi[activeDisplayName] || 0).toFixed(0)} at year ${year}`
+          ? `Viewing ${activeDisplayName}, DVI ${(currentDvi[activeRegionId] || 0).toFixed(0)} at year ${year}`
           : `${viewMode} view, year ${year}`}
       </div>
 

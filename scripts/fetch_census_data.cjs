@@ -122,19 +122,22 @@ const SOCIO_VARS_ACS = [
   "B23025_002E", "B23025_005E", "B19083_001E",
 ];
 
-// Decennial 2020 PL variables
+// Decennial 2020 PL variables — use P2 table for non-Hispanic breakdowns
+// P2_005N = White alone, Not Hispanic/Latino
+// P2_006N = Black alone, Not Hispanic/Latino
+// P2_008N = Asian alone, Not Hispanic/Latino
 const DEMO_VARS_DEC2020 = [
-  "P1_001N", "P1_003N", "P1_004N", "P1_006N", "P2_002N",
+  "P1_001N", "P2_002N", "P2_005N", "P2_006N", "P2_008N",
 ];
 
-// Decennial 2010 SF1 variables
+// Decennial 2010 SF1 variables — use P005 (Not Hispanic by Race)
 const DEMO_VARS_DEC2010 = [
-  "P001001", "P003002", "P003003", "P003005", "P004003",
+  "P001001", "P005003", "P005004", "P005006", "P004003",
 ];
 
-// Decennial 2000 SF1 variables
+// Decennial 2000 SF1 variables — use P007 (Not Hispanic by Race)
 const DEMO_VARS_DEC2000 = [
-  "P001001", "P003003", "P003004", "P003006", "P004002",
+  "P001001", "P007003", "P007004", "P007006", "P004002",
 ];
 
 // ── Row builders ──
@@ -350,7 +353,7 @@ async function main() {
     const dec2020 = await fetchAllTracts("2020/dec/pl", DEMO_VARS_DEC2020);
     for (const r of ROSETTA) {
       const row = buildDecennialDemoRow(r.region_id, r.tractce22, dec2020, 2020,
-        { pop: "P1_001N", white: "P1_003N", black: "P1_004N", asian: "P1_006N", hispanic: "P2_002N" },
+        { pop: "P1_001N", white: "P2_005N", black: "P2_006N", asian: "P2_008N", hispanic: "P2_002N" },
         "Decennial Census 2020 PL");
       if (row) allDemo.push(row);
     }
@@ -364,7 +367,7 @@ async function main() {
     const before = allDemo.length;
     for (const r of ROSETTA) {
       const row = buildDecennialDemoRow(r.region_id, r.tractce22, dec2010, 2010,
-        { pop: "P001001", white: "P003002", black: "P003003", asian: "P003005", hispanic: "P004003" },
+        { pop: "P001001", white: "P005003", black: "P005004", asian: "P005006", hispanic: "P004003" },
         "Decennial Census 2010 SF1");
       if (row) allDemo.push(row);
     }
@@ -378,7 +381,7 @@ async function main() {
     const before = allDemo.length;
     for (const r of ROSETTA) {
       const row = buildDecennialDemoRow(r.region_id, r.tractce22, dec2000, 2000,
-        { pop: "P001001", white: "P003003", black: "P003004", asian: "P003006", hispanic: "P004002" },
+        { pop: "P001001", white: "P007003", black: "P007004", asian: "P007006", hispanic: "P004002" },
         "Decennial Census 2000 SF1");
       if (row) allDemo.push(row);
     }

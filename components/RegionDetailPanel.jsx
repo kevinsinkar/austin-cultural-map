@@ -67,10 +67,10 @@ export default function RegionDetailPanel({
     );
   }
 
-  const nd = !isNeighborhoodMode && activeRegionName === "The Domain / North Burnet";
+  const nd = false; // The Domain special case removed — NPA names now correct
   const d = isNeighborhoodMode && neighborhoodAgg
     ? neighborhoodAgg.aggDvi
-    : (currentDvi[activeRegionName] || 0);
+    : (currentDvi[activeRegionId] || 0);
 
   const panelTabs = [
     { key: "demographics", label: "Demographics" },
@@ -390,13 +390,6 @@ export default function RegionDetailPanel({
                 <div style={{ fontSize: 11, color: "#78716c", lineHeight: 1.4, borderTop: "1px solid #e6dfc8", paddingTop: 8 }}>
                   <strong style={{ color: "#92400e" }}>Catalyst:</strong> {tippingPoint.event} <span style={{ color: "#a8a49c" }}>({tippingPoint.eventYear})</span>
                 </div>
-                {activeRegionName === "Dove Springs" && <div style={{ fontSize: 11, color: "#7c6f5e", fontStyle: "italic", marginTop: 8 }}>Note: Dove Springs is a receiving community. Changes reflect inflow of displaced families, not gentrification.</div>}
-              </div>
-            )}
-            {activeRegionName === "The Domain / North Burnet" && (
-              <div style={{ background: "#f5f0ea", borderRadius: 10, border: "1px solid #e6dfc8", padding: "16px 18px" }}>
-                <div style={{ fontSize: 12, fontWeight: 600, color: "#7c6f5e", marginBottom: 4 }}>Greenfield Development</div>
-                <p style={{ fontSize: 12, color: "#64615b", margin: 0, lineHeight: 1.5 }}>Developed on non-residential land. DVI not applicable — included as comparison reference.</p>
               </div>
             )}
 
