@@ -1,0 +1,1885 @@
+[
+  {
+    "region_id": 1,
+    "region_name": "Mckinney",
+    "tractce22": "002447",
+    "name22": "24.47",
+    "geoid22": "48453002447"
+  },
+  {
+    "region_id": 2,
+    "region_name": "North Austin Civic Association",
+    "tractce22": "040700",
+    "name22": "407.0",
+    "geoid22": "48453040700"
+  },
+  {
+    "region_id": 3,
+    "region_name": "RMMA",
+    "tractce22": "000309",
+    "name22": "3.09",
+    "geoid22": "48453000309"
+  },
+  {
+    "region_id": 4,
+    "region_name": "Tract 22.14",
+    "tractce22": "002214",
+    "name22": "22.14",
+    "geoid22": "48453002214"
+  },
+  {
+    "region_id": 5,
+    "region_name": "Tract 419.0",
+    "tractce22": "041900",
+    "name22": "419.0",
+    "geoid22": "48453041900"
+  },
+  {
+    "region_id": 6,
+    "region_name": "Tract 411.0",
+    "tractce22": "041100",
+    "name22": "411.0",
+    "geoid22": "48453041100"
+  },
+  {
+    "region_id": 7,
+    "region_name": "Tract 367.0",
+    "tractce22": "036700",
+    "name22": "367.0",
+    "geoid22": "48453036700"
+  },
+  {
+    "region_id": 8,
+    "region_name": "Tract 440.0",
+    "tractce22": "044000",
+    "name22": "440.0",
+    "geoid22": "48453044000"
+  },
+  {
+    "region_id": 9,
+    "region_name": "Tract 437.0",
+    "tractce22": "043700",
+    "name22": "437.0",
+    "geoid22": "48453043700"
+  },
+  {
+    "region_id": 10,
+    "region_name": "Tract 368.0",
+    "tractce22": "036800",
+    "name22": "368.0",
+    "geoid22": "48453036800"
+  },
+  {
+    "region_id": 11,
+    "region_name": "Tract 415.0",
+    "tractce22": "041500",
+    "name22": "415.0",
+    "geoid22": "48453041500"
+  },
+  {
+    "region_id": 12,
+    "region_name": "Tract 22.13",
+    "tractce22": "002213",
+    "name22": "22.13",
+    "geoid22": "48453002213"
+  },
+  {
+    "region_id": 13,
+    "region_name": "Gateway",
+    "tractce22": "032400",
+    "name22": "324.0",
+    "geoid22": "48453032400"
+  },
+  {
+    "region_id": 14,
+    "region_name": "North Lamar",
+    "tractce22": "041000",
+    "name22": "410.0",
+    "geoid22": "48453041000"
+  },
+  {
+    "region_id": 15,
+    "region_name": "Bouldin Creek",
+    "tractce22": "001312",
+    "name22": "13.12",
+    "geoid22": "48453001312"
+  },
+  {
+    "region_id": 16,
+    "region_name": "Montopolis",
+    "tractce22": "002320",
+    "name22": "23.2",
+    "geoid22": "48453002320"
+  },
+  {
+    "region_id": 17,
+    "region_name": "Tract 449.0",
+    "tractce22": "044900",
+    "name22": "449.0",
+    "geoid22": "48453044900"
+  },
+  {
+    "region_id": 18,
+    "region_name": "Tract 24.53",
+    "tractce22": "002453",
+    "name22": "24.53",
+    "geoid22": "48453002453"
+  },
+  {
+    "region_id": 19,
+    "region_name": "Windsor Hills",
+    "tractce22": "041600",
+    "name22": "416.0",
+    "geoid22": "48453041600"
+  },
+  {
+    "region_id": 20,
+    "region_name": "Tract 400.0",
+    "tractce22": "040000",
+    "name22": "400.0",
+    "geoid22": "48453040000"
+  },
+  {
+    "region_id": 21,
+    "region_name": "Pleasant Valley",
+    "tractce22": "002327",
+    "name22": "23.27",
+    "geoid22": "48453002327"
+  },
+  {
+    "region_id": 22,
+    "region_name": "Tract 345.0",
+    "tractce22": "034500",
+    "name22": "345.0",
+    "geoid22": "48453034500"
+  },
+  {
+    "region_id": 23,
+    "region_name": "Tract 321.0",
+    "tractce22": "032100",
+    "name22": "321.0",
+    "geoid22": "48453032100"
+  },
+  {
+    "region_id": 24,
+    "region_name": "Pleasant Valley",
+    "tractce22": "002325",
+    "name22": "23.25",
+    "geoid22": "48453002325"
+  },
+  {
+    "region_id": 25,
+    "region_name": "Tract 338.0",
+    "tractce22": "033800",
+    "name22": "338.0",
+    "geoid22": "48453033800"
+  },
+  {
+    "region_id": 26,
+    "region_name": "Tract 301.0",
+    "tractce22": "030100",
+    "name22": "301.0",
+    "geoid22": "48453030100"
+  },
+  {
+    "region_id": 27,
+    "region_name": "Tract 308.0",
+    "tractce22": "030800",
+    "name22": "308.0",
+    "geoid22": "48453030800"
+  },
+  {
+    "region_id": 28,
+    "region_name": "Tract 316.0",
+    "tractce22": "031600",
+    "name22": "316.0",
+    "geoid22": "48453031600"
+  },
+  {
+    "region_id": 29,
+    "region_name": "Tract 325.0",
+    "tractce22": "032500",
+    "name22": "325.0",
+    "geoid22": "48453032500"
+  },
+  {
+    "region_id": 30,
+    "region_name": "Tract 456.0",
+    "tractce22": "045600",
+    "name22": "456.0",
+    "geoid22": "48453045600"
+  },
+  {
+    "region_id": 31,
+    "region_name": "Tract 342.0",
+    "tractce22": "034200",
+    "name22": "342.0",
+    "geoid22": "48453034200"
+  },
+  {
+    "region_id": 32,
+    "region_name": "Tract 413.0",
+    "tractce22": "041300",
+    "name22": "413.0",
+    "geoid22": "48453041300"
+  },
+  {
+    "region_id": 33,
+    "region_name": "Georgian Acres",
+    "tractce22": "043200",
+    "name22": "432.0",
+    "geoid22": "48453043200"
+  },
+  {
+    "region_id": 34,
+    "region_name": "Tract 420.0",
+    "tractce22": "042000",
+    "name22": "420.0",
+    "geoid22": "48453042000"
+  },
+  {
+    "region_id": 35,
+    "region_name": "Tract 451.0",
+    "tractce22": "045100",
+    "name22": "451.0",
+    "geoid22": "48453045100"
+  },
+  {
+    "region_id": 36,
+    "region_name": "Tract 414.0",
+    "tractce22": "041400",
+    "name22": "414.0",
+    "geoid22": "48453041400"
+  },
+  {
+    "region_id": 37,
+    "region_name": "Tract 431.0",
+    "tractce22": "043100",
+    "name22": "431.0",
+    "geoid22": "48453043100"
+  },
+  {
+    "region_id": 38,
+    "region_name": "Tract 464.0",
+    "tractce22": "046400",
+    "name22": "464.0",
+    "geoid22": "48453046400"
+  },
+  {
+    "region_id": 39,
+    "region_name": "Coronado Hills",
+    "tractce22": "040200",
+    "name22": "402.0",
+    "geoid22": "48453040200"
+  },
+  {
+    "region_id": 40,
+    "region_name": "Tract 339.0",
+    "tractce22": "033900",
+    "name22": "339.0",
+    "geoid22": "48453033900"
+  },
+  {
+    "region_id": 41,
+    "region_name": "Tract 452.0",
+    "tractce22": "045200",
+    "name22": "452.0",
+    "geoid22": "48453045200"
+  },
+  {
+    "region_id": 42,
+    "region_name": "Tract 422.0",
+    "tractce22": "042200",
+    "name22": "422.0",
+    "geoid22": "48453042200"
+  },
+  {
+    "region_id": 43,
+    "region_name": "Tract 300.0",
+    "tractce22": "030000",
+    "name22": "300.0",
+    "geoid22": "48453030000"
+  },
+  {
+    "region_id": 44,
+    "region_name": "Tract 438.0",
+    "tractce22": "043800",
+    "name22": "438.0",
+    "geoid22": "48453043800"
+  },
+  {
+    "region_id": 45,
+    "region_name": "Tract 305.0",
+    "tractce22": "030500",
+    "name22": "305.0",
+    "geoid22": "48453030500"
+  },
+  {
+    "region_id": 46,
+    "region_name": "Tract 328.0",
+    "tractce22": "032800",
+    "name22": "328.0",
+    "geoid22": "48453032800"
+  },
+  {
+    "region_id": 47,
+    "region_name": "Tract 24.49",
+    "tractce22": "002449",
+    "name22": "24.49",
+    "geoid22": "48453002449"
+  },
+  {
+    "region_id": 48,
+    "region_name": "Bouldin Creek",
+    "tractce22": "001311",
+    "name22": "13.11",
+    "geoid22": "48453001311"
+  },
+  {
+    "region_id": 49,
+    "region_name": "Tract 313.0",
+    "tractce22": "031300",
+    "name22": "313.0",
+    "geoid22": "48453031300"
+  },
+  {
+    "region_id": 50,
+    "region_name": "Tract 358.0",
+    "tractce22": "035800",
+    "name22": "358.0",
+    "geoid22": "48453035800"
+  },
+  {
+    "region_id": 51,
+    "region_name": "Tract 457.0",
+    "tractce22": "045700",
+    "name22": "457.0",
+    "geoid22": "48453045700"
+  },
+  {
+    "region_id": 52,
+    "region_name": "Tract 429.0",
+    "tractce22": "042900",
+    "name22": "429.0",
+    "geoid22": "48453042900"
+  },
+  {
+    "region_id": 53,
+    "region_name": "Tract 319.0",
+    "tractce22": "031900",
+    "name22": "319.0",
+    "geoid22": "48453031900"
+  },
+  {
+    "region_id": 54,
+    "region_name": "Tract 446.0",
+    "tractce22": "044600",
+    "name22": "446.0",
+    "geoid22": "48453044600"
+  },
+  {
+    "region_id": 55,
+    "region_name": "Tract 332.0",
+    "tractce22": "033200",
+    "name22": "332.0",
+    "geoid22": "48453033200"
+  },
+  {
+    "region_id": 56,
+    "region_name": "Tract 24.45",
+    "tractce22": "002445",
+    "name22": "24.45",
+    "geoid22": "48453002445"
+  },
+  {
+    "region_id": 57,
+    "region_name": "St. John",
+    "tractce22": "043300",
+    "name22": "433.0",
+    "geoid22": "48453043300"
+  },
+  {
+    "region_id": 58,
+    "region_name": "Tract 465.0",
+    "tractce22": "046500",
+    "name22": "465.0",
+    "geoid22": "48453046500"
+  },
+  {
+    "region_id": 59,
+    "region_name": "Tract 441.0",
+    "tractce22": "044100",
+    "name22": "441.0",
+    "geoid22": "48453044100"
+  },
+  {
+    "region_id": 60,
+    "region_name": "Tract 24.39",
+    "tractce22": "002439",
+    "name22": "24.39",
+    "geoid22": "48453002439"
+  },
+  {
+    "region_id": 61,
+    "region_name": "Tract 421.0",
+    "tractce22": "042100",
+    "name22": "421.0",
+    "geoid22": "48453042100"
+  },
+  {
+    "region_id": 62,
+    "region_name": "Tract 439.0",
+    "tractce22": "043900",
+    "name22": "439.0",
+    "geoid22": "48453043900"
+  },
+  {
+    "region_id": 63,
+    "region_name": "Tract 335.0",
+    "tractce22": "033500",
+    "name22": "335.0",
+    "geoid22": "48453033500"
+  },
+  {
+    "region_id": 64,
+    "region_name": "Tract 24.4",
+    "tractce22": "002440",
+    "name22": "24.4",
+    "geoid22": "48453002440"
+  },
+  {
+    "region_id": 65,
+    "region_name": "Tract 24.46",
+    "tractce22": "002446",
+    "name22": "24.46",
+    "geoid22": "48453002446"
+  },
+  {
+    "region_id": 66,
+    "region_name": "Tract 24.42",
+    "tractce22": "002442",
+    "name22": "24.42",
+    "geoid22": "48453002442"
+  },
+  {
+    "region_id": 67,
+    "region_name": "Tract 356.0",
+    "tractce22": "035600",
+    "name22": "356.0",
+    "geoid22": "48453035600"
+  },
+  {
+    "region_id": 68,
+    "region_name": "Tract 22.19",
+    "tractce22": "002219",
+    "name22": "22.19",
+    "geoid22": "48453002219"
+  },
+  {
+    "region_id": 69,
+    "region_name": "Tract 205.17",
+    "tractce22": "020517",
+    "name22": "205.17",
+    "geoid22": "48491020517"
+  },
+  {
+    "region_id": 70,
+    "region_name": "Tract 203.33",
+    "tractce22": "020333",
+    "name22": "203.33",
+    "geoid22": "48491020333"
+  },
+  {
+    "region_id": 71,
+    "region_name": "Tract 341.0",
+    "tractce22": "034100",
+    "name22": "341.0",
+    "geoid22": "48453034100"
+  },
+  {
+    "region_id": 72,
+    "region_name": "Tract 24.52",
+    "tractce22": "002452",
+    "name22": "24.52",
+    "geoid22": "48453002452"
+  },
+  {
+    "region_id": 73,
+    "region_name": "Tract 22.22",
+    "tractce22": "002222",
+    "name22": "22.22",
+    "geoid22": "48453002222"
+  },
+  {
+    "region_id": 74,
+    "region_name": "Windsor Park",
+    "tractce22": "000308",
+    "name22": "3.08",
+    "geoid22": "48453000308"
+  },
+  {
+    "region_id": 75,
+    "region_name": "Tract 346.0",
+    "tractce22": "034600",
+    "name22": "346.0",
+    "geoid22": "48453034600"
+  },
+  {
+    "region_id": 76,
+    "region_name": "Montopolis",
+    "tractce22": "002321",
+    "name22": "23.21",
+    "geoid22": "48453002321"
+  },
+  {
+    "region_id": 77,
+    "region_name": "Tract 22.15",
+    "tractce22": "002215",
+    "name22": "22.15",
+    "geoid22": "48453002215"
+  },
+  {
+    "region_id": 78,
+    "region_name": "Pleasant Valley",
+    "tractce22": "002326",
+    "name22": "23.26",
+    "geoid22": "48453002326"
+  },
+  {
+    "region_id": 79,
+    "region_name": "Upper Boggy Creek",
+    "tractce22": "000402",
+    "name22": "4.02",
+    "geoid22": "48453000402"
+  },
+  {
+    "region_id": 80,
+    "region_name": "North University",
+    "tractce22": "000500",
+    "name22": "5.0",
+    "geoid22": "48453000500"
+  },
+  {
+    "region_id": 81,
+    "region_name": "UT",
+    "tractce22": "000601",
+    "name22": "6.01",
+    "geoid22": "48453000601"
+  },
+  {
+    "region_id": 82,
+    "region_name": "Govalle",
+    "tractce22": "000801",
+    "name22": "8.01",
+    "geoid22": "48453000801"
+  },
+  {
+    "region_id": 83,
+    "region_name": "Rosewood",
+    "tractce22": "000802",
+    "name22": "8.02",
+    "geoid22": "48453000802"
+  },
+  {
+    "region_id": 84,
+    "region_name": "Chestnut",
+    "tractce22": "000803",
+    "name22": "8.03",
+    "geoid22": "48453000803"
+  },
+  {
+    "region_id": 85,
+    "region_name": "Central East Austin",
+    "tractce22": "000804",
+    "name22": "8.04",
+    "geoid22": "48453000804"
+  },
+  {
+    "region_id": 86,
+    "region_name": "Central East Austin",
+    "tractce22": "000901",
+    "name22": "9.01",
+    "geoid22": "48453000901"
+  },
+  {
+    "region_id": 87,
+    "region_name": "Windsor Road",
+    "tractce22": "001603",
+    "name22": "16.03",
+    "geoid22": "48453001603"
+  },
+  {
+    "region_id": 88,
+    "region_name": "Old Enfield",
+    "tractce22": "001605",
+    "name22": "16.05",
+    "geoid22": "48453001605"
+  },
+  {
+    "region_id": 89,
+    "region_name": "West Austin Neighborhood Group",
+    "tractce22": "001606",
+    "name22": "16.06",
+    "geoid22": "48453001606"
+  },
+  {
+    "region_id": 90,
+    "region_name": "Parker Lane",
+    "tractce22": "002307",
+    "name22": "23.07",
+    "geoid22": "48453002307"
+  },
+  {
+    "region_id": 91,
+    "region_name": "South Manchaca",
+    "tractce22": "002003",
+    "name22": "20.03",
+    "geoid22": "48453002003"
+  },
+  {
+    "region_id": 92,
+    "region_name": "Rosedale",
+    "tractce22": "000101",
+    "name22": "1.01",
+    "geoid22": "48453000101"
+  },
+  {
+    "region_id": 93,
+    "region_name": "Parker Lane",
+    "tractce22": "002313",
+    "name22": "23.13",
+    "geoid22": "48453002313"
+  },
+  {
+    "region_id": 94,
+    "region_name": "Downtown",
+    "tractce22": "000700",
+    "name22": "7.0",
+    "geoid22": "48453000700"
+  },
+  {
+    "region_id": 95,
+    "region_name": "West Austin Neighborhood Group",
+    "tractce22": "001604",
+    "name22": "16.04",
+    "geoid22": "48453001604"
+  },
+  {
+    "region_id": 96,
+    "region_name": "Tract 19.1",
+    "tractce22": "001910",
+    "name22": "19.1",
+    "geoid22": "48453001910"
+  },
+  {
+    "region_id": 97,
+    "region_name": "Tract 24.07",
+    "tractce22": "002407",
+    "name22": "24.07",
+    "geoid22": "48453002407"
+  },
+  {
+    "region_id": 98,
+    "region_name": "Riverside",
+    "tractce22": "002315",
+    "name22": "23.15",
+    "geoid22": "48453002315"
+  },
+  {
+    "region_id": 99,
+    "region_name": "Dawson",
+    "tractce22": "001308",
+    "name22": "13.08",
+    "geoid22": "48453001308"
+  },
+  {
+    "region_id": 100,
+    "region_name": "Barton Hills",
+    "tractce22": "001911",
+    "name22": "19.11",
+    "geoid22": "48453001911"
+  },
+  {
+    "region_id": 101,
+    "region_name": "MLK-183",
+    "tractce22": "002110",
+    "name22": "21.1",
+    "geoid22": "48453002110"
+  },
+  {
+    "region_id": 102,
+    "region_name": "Johnston Terrace",
+    "tractce22": "002111",
+    "name22": "21.11",
+    "geoid22": "48453002111"
+  },
+  {
+    "region_id": 103,
+    "region_name": "Windsor Park",
+    "tractce22": "002105",
+    "name22": "21.05",
+    "geoid22": "48453002105"
+  },
+  {
+    "region_id": 104,
+    "region_name": "Windsor Park",
+    "tractce22": "002106",
+    "name22": "21.06",
+    "geoid22": "48453002106"
+  },
+  {
+    "region_id": 105,
+    "region_name": "MLK",
+    "tractce22": "002107",
+    "name22": "21.07",
+    "geoid22": "48453002107"
+  },
+  {
+    "region_id": 106,
+    "region_name": "MLK",
+    "tractce22": "002109",
+    "name22": "21.09",
+    "geoid22": "48453002109"
+  },
+  {
+    "region_id": 107,
+    "region_name": "Rosedale",
+    "tractce22": "000204",
+    "name22": "2.04",
+    "geoid22": "48453000204"
+  },
+  {
+    "region_id": 108,
+    "region_name": "Riverside",
+    "tractce22": "001403",
+    "name22": "14.03",
+    "geoid22": "48453001403"
+  },
+  {
+    "region_id": 109,
+    "region_name": "Pecan Springs-springdale",
+    "tractce22": "002108",
+    "name22": "21.08",
+    "geoid22": "48453002108"
+  },
+  {
+    "region_id": 110,
+    "region_name": "Tract 19.13",
+    "tractce22": "001913",
+    "name22": "19.13",
+    "geoid22": "48453001913"
+  },
+  {
+    "region_id": 111,
+    "region_name": "Holly",
+    "tractce22": "000902",
+    "name22": "9.02",
+    "geoid22": "48453000902"
+  },
+  {
+    "region_id": 112,
+    "region_name": "Holly",
+    "tractce22": "001000",
+    "name22": "10.0",
+    "geoid22": "48453001000"
+  },
+  {
+    "region_id": 113,
+    "region_name": "Old West Austin",
+    "tractce22": "001200",
+    "name22": "12.0",
+    "geoid22": "48453001200"
+  },
+  {
+    "region_id": 114,
+    "region_name": "Zilker",
+    "tractce22": "001304",
+    "name22": "13.04",
+    "geoid22": "48453001304"
+  },
+  {
+    "region_id": 115,
+    "region_name": "Galindo",
+    "tractce22": "001307",
+    "name22": "13.07",
+    "geoid22": "48453001307"
+  },
+  {
+    "region_id": 116,
+    "region_name": "South River City",
+    "tractce22": "001401",
+    "name22": "14.01",
+    "geoid22": "48453001401"
+  },
+  {
+    "region_id": 117,
+    "region_name": "Tract 1.02",
+    "tractce22": "000102",
+    "name22": "1.02",
+    "geoid22": "48453000102"
+  },
+  {
+    "region_id": 118,
+    "region_name": "Windsor Park",
+    "tractce22": "002104",
+    "name22": "21.04",
+    "geoid22": "48453002104"
+  },
+  {
+    "region_id": 119,
+    "region_name": "Triangle State",
+    "tractce22": "000203",
+    "name22": "2.03",
+    "geoid22": "48453000203"
+  },
+  {
+    "region_id": 120,
+    "region_name": "Hancock",
+    "tractce22": "000302",
+    "name22": "3.02",
+    "geoid22": "48453000302"
+  },
+  {
+    "region_id": 121,
+    "region_name": "Hancock",
+    "tractce22": "000401",
+    "name22": "4.01",
+    "geoid22": "48453000401"
+  },
+  {
+    "region_id": 122,
+    "region_name": "Highland",
+    "tractce22": "001503",
+    "name22": "15.03",
+    "geoid22": "48453001503"
+  },
+  {
+    "region_id": 123,
+    "region_name": "South River City",
+    "tractce22": "001402",
+    "name22": "14.02",
+    "geoid22": "48453001402"
+  },
+  {
+    "region_id": 124,
+    "region_name": "Crestview",
+    "tractce22": "001504",
+    "name22": "15.04",
+    "geoid22": "48453001504"
+  },
+  {
+    "region_id": 125,
+    "region_name": "Brentwood",
+    "tractce22": "001505",
+    "name22": "15.05",
+    "geoid22": "48453001505"
+  },
+  {
+    "region_id": 126,
+    "region_name": "Allandale",
+    "tractce22": "001501",
+    "name22": "15.01",
+    "geoid22": "48453001501"
+  },
+  {
+    "region_id": 127,
+    "region_name": "West Austin Neighborhood Group",
+    "tractce22": "001602",
+    "name22": "16.02",
+    "geoid22": "48453001602"
+  },
+  {
+    "region_id": 128,
+    "region_name": "South Manchaca",
+    "tractce22": "002002",
+    "name22": "20.02",
+    "geoid22": "48453002002"
+  },
+  {
+    "region_id": 129,
+    "region_name": "South Lamar",
+    "tractce22": "002004",
+    "name22": "20.04",
+    "geoid22": "48453002004"
+  },
+  {
+    "region_id": 130,
+    "region_name": "Tract 19.12",
+    "tractce22": "001912",
+    "name22": "19.12",
+    "geoid22": "48453001912"
+  },
+  {
+    "region_id": 131,
+    "region_name": "Tract 204.1",
+    "tractce22": "020410",
+    "name22": "204.1",
+    "geoid22": "48491020410"
+  },
+  {
+    "region_id": 132,
+    "region_name": "Tract 204.03",
+    "tractce22": "020403",
+    "name22": "204.03",
+    "geoid22": "48491020403"
+  },
+  {
+    "region_id": 133,
+    "region_name": "Tract 204.04",
+    "tractce22": "020404",
+    "name22": "204.04",
+    "geoid22": "48491020404"
+  },
+  {
+    "region_id": 134,
+    "region_name": "Tract 204.05",
+    "tractce22": "020405",
+    "name22": "204.05",
+    "geoid22": "48491020405"
+  },
+  {
+    "region_id": 135,
+    "region_name": "Tract 204.06",
+    "tractce22": "020406",
+    "name22": "204.06",
+    "geoid22": "48491020406"
+  },
+  {
+    "region_id": 136,
+    "region_name": "Tract 205.03",
+    "tractce22": "020503",
+    "name22": "205.03",
+    "geoid22": "48491020503"
+  },
+  {
+    "region_id": 137,
+    "region_name": "Tract 204.11",
+    "tractce22": "020411",
+    "name22": "204.11",
+    "geoid22": "48491020411"
+  },
+  {
+    "region_id": 138,
+    "region_name": "Tract 205.08",
+    "tractce22": "020508",
+    "name22": "205.08",
+    "geoid22": "48491020508"
+  },
+  {
+    "region_id": 139,
+    "region_name": "Tract 340.0",
+    "tractce22": "034000",
+    "name22": "340.0",
+    "geoid22": "48453034000"
+  },
+  {
+    "region_id": 140,
+    "region_name": "Zilker",
+    "tractce22": "001923",
+    "name22": "19.23",
+    "geoid22": "48453001923"
+  },
+  {
+    "region_id": 141,
+    "region_name": "West Oak Hill",
+    "tractce22": "033000",
+    "name22": "330.0",
+    "geoid22": "48453033000"
+  },
+  {
+    "region_id": 142,
+    "region_name": "Zilker",
+    "tractce22": "001309",
+    "name22": "13.09",
+    "geoid22": "48453001309"
+  },
+  {
+    "region_id": 143,
+    "region_name": "Tract 366.0",
+    "tractce22": "036600",
+    "name22": "366.0",
+    "geoid22": "48453036600"
+  },
+  {
+    "region_id": 144,
+    "region_name": "Tract 307.0",
+    "tractce22": "030700",
+    "name22": "307.0",
+    "geoid22": "48453030700"
+  },
+  {
+    "region_id": 145,
+    "region_name": "Tract 302.0",
+    "tractce22": "030200",
+    "name22": "302.0",
+    "geoid22": "48453030200"
+  },
+  {
+    "region_id": 146,
+    "region_name": "Tract 322.0",
+    "tractce22": "032200",
+    "name22": "322.0",
+    "geoid22": "48453032200"
+  },
+  {
+    "region_id": 147,
+    "region_name": "Tract 323.0",
+    "tractce22": "032300",
+    "name22": "323.0",
+    "geoid22": "48453032300"
+  },
+  {
+    "region_id": 148,
+    "region_name": "Tract 318.0",
+    "tractce22": "031800",
+    "name22": "318.0",
+    "geoid22": "48453031800"
+  },
+  {
+    "region_id": 149,
+    "region_name": "East Oak Hill",
+    "tractce22": "032000",
+    "name22": "320.0",
+    "geoid22": "48453032000"
+  },
+  {
+    "region_id": 150,
+    "region_name": "Tract 435.0",
+    "tractce22": "043500",
+    "name22": "435.0",
+    "geoid22": "48453043500"
+  },
+  {
+    "region_id": 151,
+    "region_name": "Tract 424.0",
+    "tractce22": "042400",
+    "name22": "424.0",
+    "geoid22": "48453042400"
+  },
+  {
+    "region_id": 152,
+    "region_name": "Tract 403.0",
+    "tractce22": "040300",
+    "name22": "403.0",
+    "geoid22": "48453040300"
+  },
+  {
+    "region_id": 153,
+    "region_name": "Tract 436.0",
+    "tractce22": "043600",
+    "name22": "436.0",
+    "geoid22": "48453043600"
+  },
+  {
+    "region_id": 154,
+    "region_name": "St. Edwards",
+    "tractce22": "002322",
+    "name22": "23.22",
+    "geoid22": "48453002322"
+  },
+  {
+    "region_id": 155,
+    "region_name": "Tract 317.0",
+    "tractce22": "031700",
+    "name22": "317.0",
+    "geoid22": "48453031700"
+  },
+  {
+    "region_id": 156,
+    "region_name": "Tract 310.0",
+    "tractce22": "031000",
+    "name22": "310.0",
+    "geoid22": "48453031000"
+  },
+  {
+    "region_id": 157,
+    "region_name": "St. Edwards",
+    "tractce22": "002323",
+    "name22": "23.23",
+    "geoid22": "48453002323"
+  },
+  {
+    "region_id": 158,
+    "region_name": "Tract 306.0",
+    "tractce22": "030600",
+    "name22": "306.0",
+    "geoid22": "48453030600"
+  },
+  {
+    "region_id": 159,
+    "region_name": "Tract 24.38",
+    "tractce22": "002438",
+    "name22": "24.38",
+    "geoid22": "48453002438"
+  },
+  {
+    "region_id": 160,
+    "region_name": "West University",
+    "tractce22": "000608",
+    "name22": "6.08",
+    "geoid22": "48453000608"
+  },
+  {
+    "region_id": 161,
+    "region_name": "West University",
+    "tractce22": "000606",
+    "name22": "6.06",
+    "geoid22": "48453000606"
+  },
+  {
+    "region_id": 162,
+    "region_name": "West University",
+    "tractce22": "000607",
+    "name22": "6.07",
+    "geoid22": "48453000607"
+  },
+  {
+    "region_id": 163,
+    "region_name": "Downtown",
+    "tractce22": "001101",
+    "name22": "11.01",
+    "geoid22": "48453001101"
+  },
+  {
+    "region_id": 164,
+    "region_name": "Zilker",
+    "tractce22": "001310",
+    "name22": "13.1",
+    "geoid22": "48453001310"
+  },
+  {
+    "region_id": 165,
+    "region_name": "Downtown",
+    "tractce22": "001102",
+    "name22": "11.02",
+    "geoid22": "48453001102"
+  },
+  {
+    "region_id": 166,
+    "region_name": "Tract 333.0",
+    "tractce22": "033300",
+    "name22": "333.0",
+    "geoid22": "48453033300"
+  },
+  {
+    "region_id": 167,
+    "region_name": "Tract 309.0",
+    "tractce22": "030900",
+    "name22": "309.0",
+    "geoid22": "48453030900"
+  },
+  {
+    "region_id": 168,
+    "region_name": "Tract 450.0",
+    "tractce22": "045000",
+    "name22": "450.0",
+    "geoid22": "48453045000"
+  },
+  {
+    "region_id": 169,
+    "region_name": "Tract 22.21",
+    "tractce22": "002221",
+    "name22": "22.21",
+    "geoid22": "48453002221"
+  },
+  {
+    "region_id": 170,
+    "region_name": "South Lamar",
+    "tractce22": "002006",
+    "name22": "20.06",
+    "geoid22": "48453002006"
+  },
+  {
+    "region_id": 171,
+    "region_name": "Windsor Road",
+    "tractce22": "000605",
+    "name22": "6.05",
+    "geoid22": "48453000605"
+  },
+  {
+    "region_id": 172,
+    "region_name": "South Lamar",
+    "tractce22": "002007",
+    "name22": "20.07",
+    "geoid22": "48453002007"
+  },
+  {
+    "region_id": 173,
+    "region_name": "Tract 348.0",
+    "tractce22": "034800",
+    "name22": "348.0",
+    "geoid22": "48453034800"
+  },
+  {
+    "region_id": 174,
+    "region_name": "Tract 349.0",
+    "tractce22": "034900",
+    "name22": "349.0",
+    "geoid22": "48453034900"
+  },
+  {
+    "region_id": 175,
+    "region_name": "Tract 312.0",
+    "tractce22": "031200",
+    "name22": "312.0",
+    "geoid22": "48453031200"
+  },
+  {
+    "region_id": 176,
+    "region_name": "North Burnet",
+    "tractce22": "045400",
+    "name22": "454.0",
+    "geoid22": "48453045400"
+  },
+  {
+    "region_id": 177,
+    "region_name": "Tract 453.0",
+    "tractce22": "045300",
+    "name22": "453.0",
+    "geoid22": "48453045300"
+  },
+  {
+    "region_id": 178,
+    "region_name": "North Shoal Creek",
+    "tractce22": "040400",
+    "name22": "404.0",
+    "geoid22": "48453040400"
+  },
+  {
+    "region_id": 179,
+    "region_name": "West Oak Hill",
+    "tractce22": "001920",
+    "name22": "19.2",
+    "geoid22": "48453001920"
+  },
+  {
+    "region_id": 180,
+    "region_name": "Tract 205.16",
+    "tractce22": "020516",
+    "name22": "205.16",
+    "geoid22": "48491020516"
+  },
+  {
+    "region_id": 181,
+    "region_name": "Pleasant Valley",
+    "tractce22": "002324",
+    "name22": "23.24",
+    "geoid22": "48453002324"
+  },
+  {
+    "region_id": 182,
+    "region_name": "Tract 412.0",
+    "tractce22": "041200",
+    "name22": "412.0",
+    "geoid22": "48453041200"
+  },
+  {
+    "region_id": 183,
+    "region_name": "Tract 22.17",
+    "tractce22": "002217",
+    "name22": "22.17",
+    "geoid22": "48453002217"
+  },
+  {
+    "region_id": 184,
+    "region_name": "Tract 447.0",
+    "tractce22": "044700",
+    "name22": "447.0",
+    "geoid22": "48453044700"
+  },
+  {
+    "region_id": 185,
+    "region_name": "Tract 24.5",
+    "tractce22": "002450",
+    "name22": "24.5",
+    "geoid22": "48453002450"
+  },
+  {
+    "region_id": 186,
+    "region_name": "Tract 22.2",
+    "tractce22": "002220",
+    "name22": "22.2",
+    "geoid22": "48453002220"
+  },
+  {
+    "region_id": 187,
+    "region_name": "Tract 205.13",
+    "tractce22": "020513",
+    "name22": "205.13",
+    "geoid22": "48491020513"
+  },
+  {
+    "region_id": 188,
+    "region_name": "Tract 203.47",
+    "tractce22": "020347",
+    "name22": "203.47",
+    "geoid22": "48491020347"
+  },
+  {
+    "region_id": 189,
+    "region_name": "Tract 109.12",
+    "tractce22": "010912",
+    "name22": "109.12",
+    "geoid22": "48209010912"
+  },
+  {
+    "region_id": 190,
+    "region_name": "Tract 203.34",
+    "tractce22": "020334",
+    "name22": "203.34",
+    "geoid22": "48491020334"
+  },
+  {
+    "region_id": 191,
+    "region_name": "Tract 203.56",
+    "tractce22": "020356",
+    "name22": "203.56",
+    "geoid22": "48491020356"
+  },
+  {
+    "region_id": 192,
+    "region_name": "Tract 109.23",
+    "tractce22": "010923",
+    "name22": "109.23",
+    "geoid22": "48209010923"
+  },
+  {
+    "region_id": 193,
+    "region_name": "Tract 24.51",
+    "tractce22": "002451",
+    "name22": "24.51",
+    "geoid22": "48453002451"
+  },
+  {
+    "region_id": 194,
+    "region_name": "Wooten",
+    "tractce22": "040500",
+    "name22": "405.0",
+    "geoid22": "48453040500"
+  },
+  {
+    "region_id": 195,
+    "region_name": "West Oak Hill",
+    "tractce22": "031100",
+    "name22": "311.0",
+    "geoid22": "48453031100"
+  },
+  {
+    "region_id": 196,
+    "region_name": "Tract 314.0",
+    "tractce22": "031400",
+    "name22": "314.0",
+    "geoid22": "48453031400"
+  },
+  {
+    "region_id": 197,
+    "region_name": "Tract 357.0",
+    "tractce22": "035700",
+    "name22": "357.0",
+    "geoid22": "48453035700"
+  },
+  {
+    "region_id": 198,
+    "region_name": "North Austin Civic Association",
+    "tractce22": "040800",
+    "name22": "408.0",
+    "geoid22": "48453040800"
+  },
+  {
+    "region_id": 199,
+    "region_name": "North Austin Civic Association",
+    "tractce22": "040100",
+    "name22": "401.0",
+    "geoid22": "48453040100"
+  },
+  {
+    "region_id": 200,
+    "region_name": "Tract 418.0",
+    "tractce22": "041800",
+    "name22": "418.0",
+    "geoid22": "48453041800"
+  },
+  {
+    "region_id": 201,
+    "region_name": "Tract 417.0",
+    "tractce22": "041700",
+    "name22": "417.0",
+    "geoid22": "48453041700"
+  },
+  {
+    "region_id": 202,
+    "region_name": "Sweetbriar",
+    "tractce22": "002443",
+    "name22": "24.43",
+    "geoid22": "48453002443"
+  },
+  {
+    "region_id": 203,
+    "region_name": "West Oak Hill",
+    "tractce22": "034700",
+    "name22": "347.0",
+    "geoid22": "48453034700"
+  },
+  {
+    "region_id": 204,
+    "region_name": "Tract 372.0",
+    "tractce22": "037200",
+    "name22": "372.0",
+    "geoid22": "48453037200"
+  },
+  {
+    "region_id": 205,
+    "region_name": "Sweetbriar",
+    "tractce22": "002444",
+    "name22": "24.44",
+    "geoid22": "48453002444"
+  },
+  {
+    "region_id": 206,
+    "region_name": "North Austin Civic Association",
+    "tractce22": "040900",
+    "name22": "409.0",
+    "geoid22": "48453040900"
+  },
+  {
+    "region_id": 207,
+    "region_name": "North Austin Civic Association",
+    "tractce22": "040600",
+    "name22": "406.0",
+    "geoid22": "48453040600"
+  },
+  {
+    "region_id": 208,
+    "region_name": "Tract 334.0",
+    "tractce22": "033400",
+    "name22": "334.0",
+    "geoid22": "48453033400"
+  },
+  {
+    "region_id": 209,
+    "region_name": "Barton Hills",
+    "tractce22": "001922",
+    "name22": "19.22",
+    "geoid22": "48453001922"
+  },
+  {
+    "region_id": 210,
+    "region_name": "Downtown",
+    "tractce22": "001103",
+    "name22": "11.03",
+    "geoid22": "48453001103"
+  },
+  {
+    "region_id": 211,
+    "region_name": "Tract 351.0",
+    "tractce22": "035100",
+    "name22": "351.0",
+    "geoid22": "48453035100"
+  },
+  {
+    "region_id": 212,
+    "region_name": "Westgate",
+    "tractce22": "030300",
+    "name22": "303.0",
+    "geoid22": "48453030300"
+  },
+  {
+    "region_id": 213,
+    "region_name": "Garrison Park",
+    "tractce22": "030400",
+    "name22": "304.0",
+    "geoid22": "48453030400"
+  },
+  {
+    "region_id": 214,
+    "region_name": "Tract 343.0",
+    "tractce22": "034300",
+    "name22": "343.0",
+    "geoid22": "48453034300"
+  },
+  {
+    "region_id": 215,
+    "region_name": "Tract 344.0",
+    "tractce22": "034400",
+    "name22": "344.0",
+    "geoid22": "48453034400"
+  },
+  {
+    "region_id": 216,
+    "region_name": "Tract 337.0",
+    "tractce22": "033700",
+    "name22": "337.0",
+    "geoid22": "48453033700"
+  },
+  {
+    "region_id": 217,
+    "region_name": "Tract 327.0",
+    "tractce22": "032700",
+    "name22": "327.0",
+    "geoid22": "48453032700"
+  },
+  {
+    "region_id": 218,
+    "region_name": "Tract 329.0",
+    "tractce22": "032900",
+    "name22": "329.0",
+    "geoid22": "48453032900"
+  },
+  {
+    "region_id": 219,
+    "region_name": "Tract 371.0",
+    "tractce22": "037100",
+    "name22": "371.0",
+    "geoid22": "48453037100"
+  },
+  {
+    "region_id": 220,
+    "region_name": "Tract 443.0",
+    "tractce22": "044300",
+    "name22": "443.0",
+    "geoid22": "48453044300"
+  },
+  {
+    "region_id": 221,
+    "region_name": "Tract 19.21",
+    "tractce22": "001921",
+    "name22": "19.21",
+    "geoid22": "48453001921"
+  },
+  {
+    "region_id": 222,
+    "region_name": "Tract 326.0",
+    "tractce22": "032600",
+    "name22": "326.0",
+    "geoid22": "48453032600"
+  },
+  {
+    "region_id": 223,
+    "region_name": "St. John",
+    "tractce22": "043400",
+    "name22": "434.0",
+    "geoid22": "48453043400"
+  },
+  {
+    "region_id": 224,
+    "region_name": "Tract 24.37",
+    "tractce22": "002437",
+    "name22": "24.37",
+    "geoid22": "48453002437"
+  },
+  {
+    "region_id": 225,
+    "region_name": "Tract 24.41",
+    "tractce22": "002441",
+    "name22": "24.41",
+    "geoid22": "48453002441"
+  },
+  {
+    "region_id": 226,
+    "region_name": "Tract 350.0",
+    "tractce22": "035000",
+    "name22": "350.0",
+    "geoid22": "48453035000"
+  },
+  {
+    "region_id": 227,
+    "region_name": "Tract 22.16",
+    "tractce22": "002216",
+    "name22": "22.16",
+    "geoid22": "48453002216"
+  },
+  {
+    "region_id": 228,
+    "region_name": "Tract 24.48",
+    "tractce22": "002448",
+    "name22": "24.48",
+    "geoid22": "48453002448"
+  },
+  {
+    "region_id": 229,
+    "region_name": "Tract 442.0",
+    "tractce22": "044200",
+    "name22": "442.0",
+    "geoid22": "48453044200"
+  },
+  {
+    "region_id": 230,
+    "region_name": "Tract 204.09",
+    "tractce22": "020409",
+    "name22": "204.09",
+    "geoid22": "48491020409"
+  },
+  {
+    "region_id": 231,
+    "region_name": "Tract 205.09",
+    "tractce22": "020509",
+    "name22": "205.09",
+    "geoid22": "48491020509"
+  },
+  {
+    "region_id": 232,
+    "region_name": "Tract 19.16",
+    "tractce22": "001916",
+    "name22": "19.16",
+    "geoid22": "48453001916"
+  },
+  {
+    "region_id": 233,
+    "region_name": "Tract 19.18",
+    "tractce22": "001918",
+    "name22": "19.18",
+    "geoid22": "48453001918"
+  },
+  {
+    "region_id": 234,
+    "region_name": "East Oak Hill",
+    "tractce22": "001914",
+    "name22": "19.14",
+    "geoid22": "48453001914"
+  },
+  {
+    "region_id": 235,
+    "region_name": "Tract 24.3",
+    "tractce22": "002430",
+    "name22": "24.3",
+    "geoid22": "48453002430"
+  },
+  {
+    "region_id": 236,
+    "region_name": "Hyde Park",
+    "tractce22": "000304",
+    "name22": "3.04",
+    "geoid22": "48453000304"
+  },
+  {
+    "region_id": 237,
+    "region_name": "Tract 23.19",
+    "tractce22": "002319",
+    "name22": "23.19",
+    "geoid22": "48453002319"
+  },
+  {
+    "region_id": 238,
+    "region_name": "East Oak Hill",
+    "tractce22": "001917",
+    "name22": "19.17",
+    "geoid22": "48453001917"
+  },
+  {
+    "region_id": 239,
+    "region_name": "Allandale",
+    "tractce22": "000206",
+    "name22": "2.06",
+    "geoid22": "48453000206"
+  },
+  {
+    "region_id": 240,
+    "region_name": "Triangle State",
+    "tractce22": "000305",
+    "name22": "3.05",
+    "geoid22": "48453000305"
+  },
+  {
+    "region_id": 241,
+    "region_name": "Brentwood",
+    "tractce22": "000205",
+    "name22": "2.05",
+    "geoid22": "48453000205"
+  },
+  {
+    "region_id": 242,
+    "region_name": "Upper Boggy Creek",
+    "tractce22": "000307",
+    "name22": "3.07",
+    "geoid22": "48453000307"
+  },
+  {
+    "region_id": 243,
+    "region_name": "Tract 19.19",
+    "tractce22": "001919",
+    "name22": "19.19",
+    "geoid22": "48453001919"
+  },
+  {
+    "region_id": 244,
+    "region_name": "Tract 203.11",
+    "tractce22": "020311",
+    "name22": "203.11",
+    "geoid22": "48491020311"
+  },
+  {
+    "region_id": 245,
+    "region_name": "Tract 204.08",
+    "tractce22": "020408",
+    "name22": "204.08",
+    "geoid22": "48491020408"
+  },
+  {
+    "region_id": 246,
+    "region_name": "East Oak Hill",
+    "tractce22": "001915",
+    "name22": "19.15",
+    "geoid22": "48453001915"
+  },
+  {
+    "region_id": 247,
+    "region_name": "Tract 24.34",
+    "tractce22": "002434",
+    "name22": "24.34",
+    "geoid22": "48453002434"
+  },
+  {
+    "region_id": 248,
+    "region_name": "Tract 22.11",
+    "tractce22": "002211",
+    "name22": "22.11",
+    "geoid22": "48453002211"
+  },
+  {
+    "region_id": 249,
+    "region_name": "Tract 25.0",
+    "tractce22": "002500",
+    "name22": "25.0",
+    "geoid22": "48453002500"
+  },
+  {
+    "region_id": 250,
+    "region_name": "Tract 24.32",
+    "tractce22": "002432",
+    "name22": "24.32",
+    "geoid22": "48453002432"
+  },
+  {
+    "region_id": 251,
+    "region_name": "Windsor Park",
+    "tractce22": "002112",
+    "name22": "21.12",
+    "geoid22": "48453002112"
+  },
+  {
+    "region_id": 252,
+    "region_name": "University Hills",
+    "tractce22": "002113",
+    "name22": "21.13",
+    "geoid22": "48453002113"
+  },
+  {
+    "region_id": 253,
+    "region_name": "Tract 22.01",
+    "tractce22": "002201",
+    "name22": "22.01",
+    "geoid22": "48453002201"
+  },
+  {
+    "region_id": 254,
+    "region_name": "Tract 9800",
+    "tractce22": "980000",
+    "name22": "9800",
+    "geoid22": "48453980000"
+  },
+  {
+    "region_id": 255,
+    "region_name": "Tract 23.04",
+    "tractce22": "002304",
+    "name22": "23.04",
+    "geoid22": "48453002304"
+  },
+  {
+    "region_id": 256,
+    "region_name": "Pleasant Valley",
+    "tractce22": "002314",
+    "name22": "23.14",
+    "geoid22": "48453002314"
+  },
+  {
+    "region_id": 257,
+    "region_name": "Riverside",
+    "tractce22": "002316",
+    "name22": "23.16",
+    "geoid22": "48453002316"
+  },
+  {
+    "region_id": 258,
+    "region_name": "East Congress",
+    "tractce22": "002403",
+    "name22": "24.03",
+    "geoid22": "48453002403"
+  },
+  {
+    "region_id": 259,
+    "region_name": "Garrison Park",
+    "tractce22": "002409",
+    "name22": "24.09",
+    "geoid22": "48453002409"
+  },
+  {
+    "region_id": 260,
+    "region_name": "Garrison Park",
+    "tractce22": "002410",
+    "name22": "24.1",
+    "geoid22": "48453002410"
+  },
+  {
+    "region_id": 261,
+    "region_name": "Franklin Park",
+    "tractce22": "002411",
+    "name22": "24.11",
+    "geoid22": "48453002411"
+  },
+  {
+    "region_id": 262,
+    "region_name": "Franklin Park",
+    "tractce22": "002412",
+    "name22": "24.12",
+    "geoid22": "48453002412"
+  },
+  {
+    "region_id": 263,
+    "region_name": "Franklin Park",
+    "tractce22": "002413",
+    "name22": "24.13",
+    "geoid22": "48453002413"
+  },
+  {
+    "region_id": 264,
+    "region_name": "Tract 24.19",
+    "tractce22": "002419",
+    "name22": "24.19",
+    "geoid22": "48453002419"
+  },
+  {
+    "region_id": 265,
+    "region_name": "Tract 24.22",
+    "tractce22": "002422",
+    "name22": "24.22",
+    "geoid22": "48453002422"
+  },
+  {
+    "region_id": 266,
+    "region_name": "Tract 24.23",
+    "tractce22": "002423",
+    "name22": "24.23",
+    "geoid22": "48453002423"
+  },
+  {
+    "region_id": 267,
+    "region_name": "Tract 24.24",
+    "tractce22": "002424",
+    "name22": "24.24",
+    "geoid22": "48453002424"
+  },
+  {
+    "region_id": 268,
+    "region_name": "Tract 23.1",
+    "tractce22": "002310",
+    "name22": "23.1",
+    "geoid22": "48453002310"
+  },
+  {
+    "region_id": 269,
+    "region_name": "Tract 9503.03",
+    "tractce22": "950303",
+    "name22": "9503.03",
+    "geoid22": "48021950303"
+  }
+]
