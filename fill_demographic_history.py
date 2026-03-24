@@ -206,7 +206,7 @@ def chain_crosswalk_2000_to_2020(xw_2000_2010, fwd_2010_2020):
 
 # ─── Census API ──────────────────────────────────────────────────────────
 
-DECENNIAL_2000_VARS = ["P001001", "P003003", "P003004", "P003006", "P004002", "H004001", "H004002"]
+DECENNIAL_2000_VARS = ["P001001", "P004005", "P004006", "P004008", "P004002", "H004001", "H004002"]
 
 def query_decennial_2000(api_key):
     """Get all Travis County tract data from Decennial 2000."""
@@ -253,20 +253,20 @@ def transform_2000(raw, from_parent=False):
     occ = raw.get("H004001")
     own = raw.get("H004002")
     
-    flags = ["RACE_NOT_NH_ADJUSTED"]
-    notes = "Backfilled from Decennial Census 2000"
+    flags = []
+    notes = "Backfilled from Decennial Census 2000 (P004 Not-Hispanic-by-Race)"
     if from_parent:
         flags.append("COMPUTED_FROM_PARENT_TRACT")
         notes += ". *Computed from parent tract — this tract did not exist in 2000. Demographics are proportionally estimated from the larger tract it was later split from."
-    
+
     return {
         "year": 2000,
         "total_population": int(round(total_pop)),
         "median_age": None,
         "pct_hispanic": safe_pct(raw.get("P004002"), total_pop),
-        "pct_white_non_hispanic": safe_pct(raw.get("P003003"), total_pop),
-        "pct_black_non_hispanic": safe_pct(raw.get("P003004"), total_pop),
-        "pct_asian": safe_pct(raw.get("P003006"), total_pop),
+        "pct_white_non_hispanic": safe_pct(raw.get("P004005"), total_pop),
+        "pct_black_non_hispanic": safe_pct(raw.get("P004006"), total_pop),
+        "pct_asian": safe_pct(raw.get("P004008"), total_pop),
         "pct_foreign_born": None,
         "pct_owner_occupied": safe_pct(own, occ),
         "rent_burden_pct": None,

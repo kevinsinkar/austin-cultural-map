@@ -153,9 +153,9 @@ def get_socio_acs_vars(year):
 
 DECENNIAL_2000_VARS = {
     "P001001": "total_population",
-    "P003003": "_pop_white",
-    "P003004": "_pop_black",
-    "P003006": "_pop_asian",
+    "P004005": "_pop_white_nh",
+    "P004006": "_pop_black_nh",
+    "P004008": "_pop_asian_nh",
     "P004002": "_pop_hispanic",
     "H004001": "_occupied_units",
     "H004002": "_owner_occupied",
@@ -560,10 +560,10 @@ def transform_demo_decennial(raw, year, is_2000=False):
     total_pop = raw.get("P001001")
     if is_2000:
         pct_hispanic = safe_pct(raw.get("P004002"), total_pop)
-        pct_white = safe_pct(raw.get("P003003"), total_pop)
-        pct_black = safe_pct(raw.get("P003004"), total_pop)
-        pct_asian = safe_pct(raw.get("P003006"), total_pop)
-        flags = ["RACE_NOT_NH_ADJUSTED"]
+        pct_white = safe_pct(raw.get("P004005"), total_pop)
+        pct_black = safe_pct(raw.get("P004006"), total_pop)
+        pct_asian = safe_pct(raw.get("P004008"), total_pop)
+        flags = []
     else:
         pct_hispanic = safe_pct(raw.get("P004003"), total_pop)
         pct_white = safe_pct(raw.get("P005003"), total_pop)
