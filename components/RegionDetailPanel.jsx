@@ -222,7 +222,9 @@ export default function RegionDetailPanel({
                         </div>
                         {missingYears && (
                           <div style={{ fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
-                            Data available for {dataYears.join(", ")} only. 1990–{dataYears[0] - 1} not yet available from Census sources for this tract.
+                            Census data available for {dataYears.join(", ")} only. {dataYears[0] > 2000
+                              ? `This tract was created after ${dataYears[0] - 1} (suburban expansion / tract split) — no earlier Census data exists.`
+                              : "Earlier decades not available from Census API for this tract."}
                           </div>
                         )}
                       </>

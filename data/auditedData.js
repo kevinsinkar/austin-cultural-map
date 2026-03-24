@@ -259,7 +259,8 @@ export function priorRow(rows, targetYear, gapYears = 5) {
  * Uses the pre-normalized AUDITED_DEMO_BY_ID data — the same source
  * as interim_demographics.js — so the pct→fraction math is done once.
  */
-// Standard year range for all charts
+// Standard year range for all charts (1990–2025)
+// Census data starts at 2000 for most tracts; gaps render as empty space
 const CHART_YEARS = [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023, 2025];
 
 export function toDemoChartData(regionId) {

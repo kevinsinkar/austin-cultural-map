@@ -2964,6 +2964,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.463Z"
   },
   {
+    "year": 2010,
+    "region_id": 79,
+    "region": "Upper Boggy Creek",
+    "median_household_income": 34109,
+    "poverty_rate": 16.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.387,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 79,
     "region": "Upper Boggy Creek",
@@ -2980,7 +2999,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.548Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3021,6 +3040,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.463Z"
   },
   {
+    "year": 2010,
+    "region_id": 80,
+    "region": "North University",
+    "median_household_income": 25780,
+    "poverty_rate": 40.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.643,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 80,
     "region": "North University",
@@ -3037,7 +3075,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.548Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3078,6 +3116,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.463Z"
   },
   {
+    "year": 2010,
+    "region_id": 81,
+    "region": "UT",
+    "median_household_income": 8321,
+    "poverty_rate": 84.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.572,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 81,
     "region": "UT",
@@ -3094,7 +3151,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.548Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3135,6 +3192,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 82,
+    "region": "Govalle",
+    "median_household_income": 36034,
+    "poverty_rate": 11.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.368,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 82,
     "region": "Govalle",
@@ -3151,7 +3227,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3192,6 +3268,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 83,
+    "region": "Rosewood",
+    "median_household_income": 20391,
+    "poverty_rate": 41.9,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.522,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 83,
     "region": "Rosewood",
@@ -3208,7 +3303,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3249,6 +3344,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 84,
+    "region": "Chestnut",
+    "median_household_income": 44698,
+    "poverty_rate": 28.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.427,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 84,
     "region": "Chestnut",
@@ -3265,7 +3379,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3306,6 +3420,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 85,
+    "region": "Central East Austin",
+    "median_household_income": 30813,
+    "poverty_rate": 38.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.634,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 85,
     "region": "Central East Austin",
@@ -3322,7 +3455,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3363,6 +3496,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 86,
+    "region": "Central East Austin",
+    "median_household_income": 37552,
+    "poverty_rate": 28.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.478,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 86,
     "region": "Central East Austin",
@@ -3379,7 +3531,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3420,6 +3572,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 87,
+    "region": "Windsor Road",
+    "median_household_income": 116007,
+    "poverty_rate": 2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.495,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 87,
     "region": "Windsor Road",
@@ -3436,7 +3607,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -3477,6 +3648,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 88,
+    "region": "Old Enfield",
+    "median_household_income": 57644,
+    "poverty_rate": 19,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.578,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 88,
     "region": "Old Enfield",
@@ -3493,7 +3683,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -3591,6 +3781,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 90,
+    "region": "Parker Lane",
+    "median_household_income": 31597,
+    "poverty_rate": 17.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.325,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 90,
     "region": "Parker Lane",
@@ -3607,7 +3816,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3648,6 +3857,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 91,
+    "region": "South Manchaca",
+    "median_household_income": 40846,
+    "poverty_rate": 29.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.374,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 91,
     "region": "South Manchaca",
@@ -3664,7 +3892,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3705,6 +3933,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 92,
+    "region": "Rosedale",
+    "median_household_income": 71944,
+    "poverty_rate": 17.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.404,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 92,
     "region": "Rosedale",
@@ -3721,7 +3968,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3762,6 +4009,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 93,
+    "region": "Parker Lane",
+    "median_household_income": 31798,
+    "poverty_rate": 19.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.411,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 93,
     "region": "Parker Lane",
@@ -3778,7 +4044,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3819,6 +4085,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 94,
+    "region": "Downtown",
+    "median_household_income": 37708,
+    "poverty_rate": 36.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.781,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 94,
     "region": "Downtown",
@@ -3835,7 +4120,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3876,6 +4161,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 95,
+    "region": "West Austin Neighborhood Group",
+    "median_household_income": 125000,
+    "poverty_rate": 7.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.471,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 95,
     "region": "West Austin Neighborhood Group",
@@ -3892,7 +4196,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3933,6 +4237,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 96,
+    "region": "Tract 19.1",
+    "median_household_income": 99091,
+    "poverty_rate": 4.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.533,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 96,
     "region": "Tract 19.1",
@@ -3949,7 +4272,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -3990,6 +4313,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 97,
+    "region": "Tract 24.07",
+    "median_household_income": 84302,
+    "poverty_rate": 2.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.306,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 97,
     "region": "Tract 24.07",
@@ -4006,7 +4348,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4047,6 +4389,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 98,
+    "region": "Riverside",
+    "median_household_income": 28034,
+    "poverty_rate": 35.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.428,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 98,
     "region": "Riverside",
@@ -4063,7 +4424,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -4104,6 +4465,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 99,
+    "region": "Dawson",
+    "median_household_income": 41432,
+    "poverty_rate": 18.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.436,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 99,
     "region": "Dawson",
@@ -4120,7 +4500,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4161,6 +4541,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 100,
+    "region": "Barton Hills",
+    "median_household_income": 52895,
+    "poverty_rate": 8.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.409,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 100,
     "region": "Barton Hills",
@@ -4177,7 +4576,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4218,6 +4617,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 101,
+    "region": "MLK-183",
+    "median_household_income": 31656,
+    "poverty_rate": 35.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.393,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 101,
     "region": "MLK-183",
@@ -4234,7 +4652,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -4275,6 +4693,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 102,
+    "region": "Johnston Terrace",
+    "median_household_income": 23611,
+    "poverty_rate": 40.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.491,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 102,
     "region": "Johnston Terrace",
@@ -4291,7 +4728,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4332,6 +4769,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 103,
+    "region": "Windsor Park",
+    "median_household_income": 24550,
+    "poverty_rate": 44.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.484,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 103,
     "region": "Windsor Park",
@@ -4348,7 +4804,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4389,6 +4845,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 104,
+    "region": "Windsor Park",
+    "median_household_income": 54833,
+    "poverty_rate": 17.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.342,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 104,
     "region": "Windsor Park",
@@ -4405,7 +4880,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4446,6 +4921,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 105,
+    "region": "MLK",
+    "median_household_income": 37644,
+    "poverty_rate": 38,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.485,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 105,
     "region": "MLK",
@@ -4462,7 +4956,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4503,6 +4997,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 106,
+    "region": "MLK",
+    "median_household_income": 35044,
+    "poverty_rate": 15.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.401,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 106,
     "region": "MLK",
@@ -4519,7 +5032,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4560,6 +5073,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 107,
+    "region": "Rosedale",
+    "median_household_income": 53472,
+    "poverty_rate": 17.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.531,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 107,
     "region": "Rosedale",
@@ -4576,7 +5108,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4617,6 +5149,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 108,
+    "region": "Riverside",
+    "median_household_income": 37799,
+    "poverty_rate": 31.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.42,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 108,
     "region": "Riverside",
@@ -4633,7 +5184,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4674,6 +5225,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 109,
+    "region": "Pecan Springs-springdale",
+    "median_household_income": 29551,
+    "poverty_rate": 28.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.439,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 109,
     "region": "Pecan Springs-springdale",
@@ -4690,7 +5260,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4731,6 +5301,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 110,
+    "region": "Tract 19.13",
+    "median_household_income": 223098,
+    "poverty_rate": 3.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.453,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 110,
     "region": "Tract 19.13",
@@ -4747,7 +5336,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4788,6 +5377,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 111,
+    "region": "Holly",
+    "median_household_income": 31662,
+    "poverty_rate": 41.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.443,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 111,
     "region": "Holly",
@@ -4804,7 +5412,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4845,6 +5453,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 112,
+    "region": "Holly",
+    "median_household_income": 30313,
+    "poverty_rate": 21.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.46,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 112,
     "region": "Holly",
@@ -4861,7 +5488,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4902,6 +5529,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 113,
+    "region": "Old West Austin",
+    "median_household_income": 48357,
+    "poverty_rate": 13.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.545,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 113,
     "region": "Old West Austin",
@@ -4918,7 +5564,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -4959,6 +5605,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 114,
+    "region": "Zilker",
+    "median_household_income": 59615,
+    "poverty_rate": 16.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.407,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 114,
     "region": "Zilker",
@@ -4975,7 +5640,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5016,6 +5681,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 115,
+    "region": "Galindo",
+    "median_household_income": 34875,
+    "poverty_rate": 20.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.446,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 115,
     "region": "Galindo",
@@ -5032,7 +5716,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5073,6 +5757,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 116,
+    "region": "South River City",
+    "median_household_income": 67629,
+    "poverty_rate": 10.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.444,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 116,
     "region": "South River City",
@@ -5089,7 +5792,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5130,6 +5833,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 117,
+    "region": "Tract 1.02",
+    "median_household_income": 142188,
+    "poverty_rate": 4.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.519,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 117,
     "region": "Tract 1.02",
@@ -5146,7 +5868,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5187,6 +5909,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 118,
+    "region": "Windsor Park",
+    "median_household_income": 59552,
+    "poverty_rate": 20.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.352,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 118,
     "region": "Windsor Park",
@@ -5203,7 +5944,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5244,6 +5985,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 119,
+    "region": "Triangle State",
+    "median_household_income": 35208,
+    "poverty_rate": 67.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.549,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 119,
     "region": "Triangle State",
@@ -5260,7 +6020,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5301,6 +6061,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 120,
+    "region": "Hancock",
+    "median_household_income": 32406,
+    "poverty_rate": 26.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.529,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 120,
     "region": "Hancock",
@@ -5317,7 +6096,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5358,6 +6137,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 121,
+    "region": "Hancock",
+    "median_household_income": 35573,
+    "poverty_rate": 27.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.565,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 121,
     "region": "Hancock",
@@ -5374,7 +6172,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5415,6 +6213,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 122,
+    "region": "Highland",
+    "median_household_income": 37594,
+    "poverty_rate": 21.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.468,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 122,
     "region": "Highland",
@@ -5431,7 +6248,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5472,6 +6289,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 123,
+    "region": "South River City",
+    "median_household_income": 52868,
+    "poverty_rate": 13.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.464,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 123,
     "region": "South River City",
@@ -5488,7 +6324,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5529,6 +6365,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 124,
+    "region": "Crestview",
+    "median_household_income": 58964,
+    "poverty_rate": 7.9,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.384,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 124,
     "region": "Crestview",
@@ -5545,7 +6400,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5586,6 +6441,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 125,
+    "region": "Brentwood",
+    "median_household_income": 46855,
+    "poverty_rate": 11.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.451,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 125,
     "region": "Brentwood",
@@ -5602,7 +6476,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5643,6 +6517,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 126,
+    "region": "Allandale",
+    "median_household_income": 73523,
+    "poverty_rate": 7.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.378,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 126,
     "region": "Allandale",
@@ -5659,7 +6552,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.549Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5700,6 +6593,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 127,
+    "region": "West Austin Neighborhood Group",
+    "median_household_income": 49038,
+    "poverty_rate": 12.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.591,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 127,
     "region": "West Austin Neighborhood Group",
@@ -5716,7 +6628,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5757,6 +6669,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 128,
+    "region": "South Manchaca",
+    "median_household_income": 53207,
+    "poverty_rate": 16.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.373,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 128,
     "region": "South Manchaca",
@@ -5773,7 +6704,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5814,6 +6745,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 129,
+    "region": "South Lamar",
+    "median_household_income": 32679,
+    "poverty_rate": 10.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.419,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 129,
     "region": "South Lamar",
@@ -5830,7 +6780,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5871,6 +6821,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 130,
+    "region": "Tract 19.12",
+    "median_household_income": 148869,
+    "poverty_rate": 4.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.535,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 130,
     "region": "Tract 19.12",
@@ -5887,7 +6856,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -5928,6 +6897,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 131,
+    "region": "Tract 204.1",
+    "median_household_income": 55203,
+    "poverty_rate": 9.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.424,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 131,
     "region": "Tract 204.1",
@@ -5944,7 +6932,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -5985,6 +6973,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 132,
+    "region": "Tract 204.03",
+    "median_household_income": 48464,
+    "poverty_rate": 3.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.318,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 132,
     "region": "Tract 204.03",
@@ -6001,7 +7008,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -6042,6 +7049,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 133,
+    "region": "Tract 204.04",
+    "median_household_income": 85298,
+    "poverty_rate": 3.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.324,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 133,
     "region": "Tract 204.04",
@@ -6058,7 +7084,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -6099,6 +7125,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 134,
+    "region": "Tract 204.05",
+    "median_household_income": 46106,
+    "poverty_rate": 11,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.358,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 134,
     "region": "Tract 204.05",
@@ -6115,7 +7160,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -6156,6 +7201,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 135,
+    "region": "Tract 204.06",
+    "median_household_income": 46094,
+    "poverty_rate": 6.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.327,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 135,
     "region": "Tract 204.06",
@@ -6172,7 +7236,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -6213,6 +7277,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 136,
+    "region": "Tract 205.03",
+    "median_household_income": 85000,
+    "poverty_rate": 2.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.322,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 136,
     "region": "Tract 205.03",
@@ -6229,7 +7312,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -6270,6 +7353,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 137,
+    "region": "Tract 204.11",
+    "median_household_income": 79517,
+    "poverty_rate": 4.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.335,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 137,
     "region": "Tract 204.11",
@@ -6286,7 +7388,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -6327,6 +7429,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.464Z"
   },
   {
+    "year": 2010,
+    "region_id": 138,
+    "region": "Tract 205.08",
+    "median_household_income": 64649,
+    "poverty_rate": 8.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.32,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 138,
     "region": "Tract 205.08",
@@ -6343,7 +7464,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -9842,6 +10963,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 230,
+    "region": "Tract 204.09",
+    "median_household_income": 58161,
+    "poverty_rate": 9,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.338,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 230,
     "region": "Tract 204.09",
@@ -9858,7 +10998,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -9899,6 +11039,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 231,
+    "region": "Tract 205.09",
+    "median_household_income": 103648,
+    "poverty_rate": 1.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.307,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 231,
     "region": "Tract 205.09",
@@ -9915,7 +11074,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -9956,6 +11115,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 232,
+    "region": "Tract 19.16",
+    "median_household_income": 172054,
+    "poverty_rate": 6.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.461,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 232,
     "region": "Tract 19.16",
@@ -9972,7 +11150,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10013,6 +11191,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 233,
+    "region": "Tract 19.18",
+    "median_household_income": 160625,
+    "poverty_rate": 3.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.513,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 233,
     "region": "Tract 19.18",
@@ -10029,7 +11226,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10070,6 +11267,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 234,
+    "region": "East Oak Hill",
+    "median_household_income": 82701,
+    "poverty_rate": 0.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.415,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 234,
     "region": "East Oak Hill",
@@ -10086,7 +11302,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10127,6 +11343,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 235,
+    "region": "Tract 24.3",
+    "median_household_income": 38015,
+    "poverty_rate": 20.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.366,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 235,
     "region": "Tract 24.3",
@@ -10143,7 +11378,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10184,6 +11419,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 236,
+    "region": "Hyde Park",
+    "median_household_income": 36393,
+    "poverty_rate": 33.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.493,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 236,
     "region": "Hyde Park",
@@ -10200,7 +11454,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10298,6 +11552,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 238,
+    "region": "East Oak Hill",
+    "median_household_income": 150568,
+    "poverty_rate": 0.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.341,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 238,
     "region": "East Oak Hill",
@@ -10314,7 +11587,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10355,6 +11628,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 239,
+    "region": "Allandale",
+    "median_household_income": 59408,
+    "poverty_rate": 5.1,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.407,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 239,
     "region": "Allandale",
@@ -10371,7 +11663,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10412,6 +11704,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 240,
+    "region": "Triangle State",
+    "median_household_income": 47105,
+    "poverty_rate": 27.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.47,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 240,
     "region": "Triangle State",
@@ -10428,7 +11739,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10469,6 +11780,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 241,
+    "region": "Brentwood",
+    "median_household_income": 37989,
+    "poverty_rate": 22.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.457,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 241,
     "region": "Brentwood",
@@ -10485,7 +11815,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10526,6 +11856,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 242,
+    "region": "Upper Boggy Creek",
+    "median_household_income": 59087,
+    "poverty_rate": 13.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.396,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 242,
     "region": "Upper Boggy Creek",
@@ -10542,7 +11891,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10583,6 +11932,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 243,
+    "region": "Tract 19.19",
+    "median_household_income": 136964,
+    "poverty_rate": 0.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.414,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 243,
     "region": "Tract 19.19",
@@ -10599,7 +11967,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10640,6 +12008,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 244,
+    "region": "Tract 203.11",
+    "median_household_income": 78688,
+    "poverty_rate": 4.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.302,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 244,
     "region": "Tract 203.11",
@@ -10656,7 +12043,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -10697,6 +12084,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 245,
+    "region": "Tract 204.08",
+    "median_household_income": 59653,
+    "poverty_rate": 7.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.368,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 245,
     "region": "Tract 204.08",
@@ -10713,7 +12119,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.083Z"
   },
   {
     "year": 2020,
@@ -10754,6 +12160,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 246,
+    "region": "East Oak Hill",
+    "median_household_income": 49788,
+    "poverty_rate": 3.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.404,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 246,
     "region": "East Oak Hill",
@@ -10770,7 +12195,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10811,6 +12236,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 247,
+    "region": "Tract 24.34",
+    "median_household_income": 60313,
+    "poverty_rate": 8.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.423,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 247,
     "region": "Tract 24.34",
@@ -10827,7 +12271,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10868,6 +12312,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 248,
+    "region": "Tract 22.11",
+    "median_household_income": 50054,
+    "poverty_rate": 23.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.456,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 248,
     "region": "Tract 22.11",
@@ -10884,7 +12347,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10925,6 +12388,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 249,
+    "region": "Tract 25.0",
+    "median_household_income": 60221,
+    "poverty_rate": 7.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.476,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 249,
     "region": "Tract 25.0",
@@ -10941,7 +12423,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -10982,6 +12464,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 250,
+    "region": "Tract 24.32",
+    "median_household_income": 46283,
+    "poverty_rate": 12.9,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.344,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 250,
     "region": "Tract 24.32",
@@ -10998,7 +12499,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11039,6 +12540,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 251,
+    "region": "Windsor Park",
+    "median_household_income": 35605,
+    "poverty_rate": 29.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.485,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 251,
     "region": "Windsor Park",
@@ -11055,7 +12575,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11096,6 +12616,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 252,
+    "region": "University Hills",
+    "median_household_income": 53152,
+    "poverty_rate": 15.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.396,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 252,
     "region": "University Hills",
@@ -11112,7 +12651,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11153,6 +12692,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.466Z"
   },
   {
+    "year": 2010,
+    "region_id": 253,
+    "region": "Tract 22.01",
+    "median_household_income": 41472,
+    "poverty_rate": 15.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.296,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 253,
     "region": "Tract 22.01",
@@ -11169,7 +12727,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11267,6 +12825,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 255,
+    "region": "Tract 23.04",
+    "median_household_income": 36701,
+    "poverty_rate": 26,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.388,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 255,
     "region": "Tract 23.04",
@@ -11283,7 +12860,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11324,6 +12901,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 256,
+    "region": "Pleasant Valley",
+    "median_household_income": 29020,
+    "poverty_rate": 27.5,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.439,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 256,
     "region": "Pleasant Valley",
@@ -11340,7 +12936,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11381,6 +12977,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 257,
+    "region": "Riverside",
+    "median_household_income": 23468,
+    "poverty_rate": 52.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.391,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 257,
     "region": "Riverside",
@@ -11397,7 +13012,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11438,6 +13053,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 258,
+    "region": "East Congress",
+    "median_household_income": 43042,
+    "poverty_rate": 17.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.375,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 258,
     "region": "East Congress",
@@ -11454,7 +13088,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11495,6 +13129,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 259,
+    "region": "Garrison Park",
+    "median_household_income": 48654,
+    "poverty_rate": 17.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.333,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 259,
     "region": "Garrison Park",
@@ -11511,7 +13164,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11552,6 +13205,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 260,
+    "region": "Garrison Park",
+    "median_household_income": 32440,
+    "poverty_rate": 25.8,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.451,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 260,
     "region": "Garrison Park",
@@ -11568,7 +13240,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11609,6 +13281,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 261,
+    "region": "Franklin Park",
+    "median_household_income": 31936,
+    "poverty_rate": 34.2,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.389,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 261,
     "region": "Franklin Park",
@@ -11625,7 +13316,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11666,6 +13357,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 262,
+    "region": "Franklin Park",
+    "median_household_income": 50672,
+    "poverty_rate": 15.7,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.298,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 262,
     "region": "Franklin Park",
@@ -11682,7 +13392,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11723,6 +13433,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 263,
+    "region": "Franklin Park",
+    "median_household_income": 32615,
+    "poverty_rate": 38.6,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.369,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 263,
     "region": "Franklin Park",
@@ -11739,7 +13468,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11780,6 +13509,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 264,
+    "region": "Tract 24.19",
+    "median_household_income": 27839,
+    "poverty_rate": 24.3,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.321,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 264,
     "region": "Tract 24.19",
@@ -11796,7 +13544,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11837,6 +13585,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 265,
+    "region": "Tract 24.22",
+    "median_household_income": 32440,
+    "poverty_rate": 24.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.415,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 265,
     "region": "Tract 24.22",
@@ -11853,7 +13620,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11894,6 +13661,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 266,
+    "region": "Tract 24.23",
+    "median_household_income": 64667,
+    "poverty_rate": 8.9,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.303,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 266,
     "region": "Tract 24.23",
@@ -11910,7 +13696,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -11951,6 +13737,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 267,
+    "region": "Tract 24.24",
+    "median_household_income": 40746,
+    "poverty_rate": 19,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.388,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 267,
     "region": "Tract 24.24",
@@ -11967,7 +13772,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
@@ -12008,6 +13813,25 @@
     "audit_timestamp": "2026-03-23T22:20:29.467Z"
   },
   {
+    "year": 2010,
+    "region_id": 268,
+    "region": "Tract 23.1",
+    "median_household_income": 24223,
+    "poverty_rate": 47.4,
+    "unemployment_rate": null,
+    "gini_coefficient": 0.428,
+    "eviction_filing_rate": null,
+    "snap_participation_rate": null,
+    "audit_source": "ACS 2006-2010",
+    "audit_confidence": {
+      "median_household_income": "high",
+      "poverty_rate": "high",
+      "unemployment_rate": "high"
+    },
+    "audit_flags": [],
+    "audit_timestamp": "2026-03-24T01:43:31.188Z"
+  },
+  {
     "year": 2015,
     "region_id": 268,
     "region": "Tract 23.1",
@@ -12024,7 +13848,7 @@
       "unemployment_rate": "high"
     },
     "audit_flags": [],
-    "audit_timestamp": "2026-03-23T22:20:08.550Z"
+    "audit_timestamp": "2026-03-24T01:43:36.082Z"
   },
   {
     "year": 2020,
