@@ -10,6 +10,7 @@ USAGE:
   python geocode_businesses_google.py --input data/businesses.js
 """
 
+import os
 import re
 import sys
 import time
@@ -24,7 +25,7 @@ except ImportError:
     print("ERROR: 'requests' library required. Run: pip install requests")
     sys.exit(1)
 
-GOOGLE_API_KEY = "AIzaSyA_4xEW0iaGYHLZwWFBqc8zU54QeSX2FCc"
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
 
 
 def geocode_google(address, city="Austin", state="TX"):

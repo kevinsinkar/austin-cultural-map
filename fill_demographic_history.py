@@ -33,7 +33,7 @@ except ImportError:
     print("ERROR: 'requests' library required. Run: pip install requests")
     sys.exit(1)
 
-CENSUS_API_KEY = "e0d5d0e847730ccb12949d9b18449b2180124203"
+CENSUS_API_KEY = os.environ.get("CENSUS_API_KEY", "")
 STATE_FIPS = "48"
 COUNTY_FIPS = "453"
 FULL_COUNTY = "48453"
