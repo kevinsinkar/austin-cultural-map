@@ -1,6 +1,6 @@
 # Austin's Shifting Ground — Data Methodology & Sources
 
-> **Last updated:** March 23, 2026
+> **Last updated:** March 24, 2026
 > **Purpose:** Comprehensive reference for all data sources, calculations, and assumptions. For anyone asking "where did these numbers come from?"
 
 ---
@@ -35,15 +35,15 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 | File | Rows | Regions | Years | Primary Sources |
 |------|------|---------|-------|-----------------|
-| `audited_demographics_normalized.json` | 873 | 269 | 2000–2023 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2019–2023) |
-| `audited_property_normalized.json` | 736 | 269 | 2010–2023 | Census/ACS (home values, rent, housing units, vacancy), City of Austin Construction Permits (new permits, commercial sqft) |
-| `audited_socioeconomic_normalized.json` | 733 | 269 | 2010–2023 | Census/ACS (income, poverty, unemployment, Gini), Eviction Lab (pending), Texas HHSC (SNAP, pending) |
+| `audited_demographics_normalized.json` | 1,542 | 269 | 2000–2023 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2019–2023) |
+| `audited_property_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (home values, rent, housing units, vacancy), City of Austin Construction Permits (new permits, commercial sqft) |
+| `audited_socioeconomic_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (income, poverty, unemployment, Gini, SNAP participation), BASTA Austin (eviction filings, pending) |
 
-**Important:** All data comes from observed Census, ACS, and administrative records. Intermediate years (e.g., 2005) are linearly interpolated from adjacent anchor years and flagged with `INTERPOLATED` audit flag.
+**Important:** All data comes from observed Census, ACS, and administrative records. Intermediate years (e.g., 2005) are linearly interpolated from adjacent anchor years and flagged with `INTERPOLATED` audit flag. Rows computed from parent tracts (where a 2020 tract didn't exist in earlier Census vintages) are flagged with `COMPUTED_FROM_PARENT_TRACT`.
 
-**Historical coverage:** 171 of 269 regions are missing pre-2020 data because their census tracts were created after 2010 (suburban expansion, tract splits). The `fill_census_gaps_v2.py` script is backfilling these gaps using Decennial 2000/2010 SF1 data and ACS 5-Year estimates with 2010→2020 tract crosswalking. Currently, 70 tracts have 2000 data and ~99 have 2010/2015 data.
+**Historical coverage:** Pre-2020 data was backfilled using `fill_census_gaps_v2.py` (Census API queries with 2010→2020 and 2000→2010→2020 tract crosswalking) and `fill_demographic_history.py` (chained crosswalk + interpolation). Current coverage: 247 regions at 2000, 246 at 2005, 256 at 2010/2015, 269 at 2020/2023. The ~22 regions missing at 2000 are tracts that did not exist in any form until after 2010 (genuinely new development with no historical population).
 
-**Geography:** 269 census tracts covering the Austin-Round Rock MSA (247 Travis County, 22 Williamson County), mapped to the 2020 Census tract boundaries via `region_tract_rosetta.json`. Pre-2010 data uses matching tract codes where available; tracts that didn't exist before 2020 show gaps in historical charts.
+**Geography:** 269 census tracts covering the Austin-Round Rock MSA, mapped to the 2020 Census tract boundaries. Pre-2010 data is crosswalked from earlier tract definitions using Census Bureau relationship files (area-weighted proportional assignment). Business locations geocoded to building-level precision via Google Maps Geocoding API.
 
 ### 1.2 Cultural & Business Data
 
@@ -73,11 +73,13 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 | Data Type | Regions Covered | % of 269 | Notes |
 |-----------|----------------|----------|-------|
-| Demographics | 269 | 100% | All regions at 2020/2023; 70 tracts back to 2000, ~99 back to 2010 |
-| Property | 269 | 100% | All regions at 2020/2023; ~99 back to 2010. Permits data (2005–2023) for ~700 rows. |
-| Socioeconomic | 269 | 100% | All regions at 2020/2023; ~99 back to 2010 |
+| Demographics | 269 | 100% | All regions at 2020/2023; 247 at 2000, 246 at 2005, 256 at 2010/2015 |
+| Property | 269 | 100% | All regions at 2020/2023; 257 at 2010/2015. Permits + commercial sqft for 1,000 rows. |
+| Socioeconomic | 269 | 100% | All regions at 2020/2023; 257 at 2010/2015. SNAP for 479 rows. |
 | DVI Score | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.2) |
 | Legacy Businesses | ~40 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
+| Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
+| Eviction Filings | 0 | 0% | Pending — requested from BASTA Austin (2014–present, census tract level) |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 
 ---
@@ -590,7 +592,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | UT Austin "Uprooted" Study | Gentrification typology, displacement patterns | 2018 | sites.utexas.edu |
 | Eviction Lab (Princeton University) | Eviction filing rates by tract | 2010–2023 | evictionlab.org |
 | Texas Justice Court Training Center | Eviction filing data | 2015–2023 | tjctc.org |
-| Texas Health & Human Services Commission | SNAP participation rates | 2010–2023 | hhs.texas.gov |
+| Texas Health & Human Services Commission | SNAP participation rates | 2010–2023 | hhs.texas.gov (supplemented by ACS B22003 via Census API) |
 
 ### Community & Organizational Sources
 
@@ -611,3 +613,13 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 ---
 
 *The data is imperfect. Imperfect data, honestly presented, is more valuable than no data at all.*
+
+### Data Pipeline Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020) |
+| `fill_demographic_history.py` | Chains crosswalks for deep history + interpolates 2005 from 2000/2010 |
+| `extract_permits.py` | Extracts new construction permits and commercial sqft from COA 1.5GB permit CSV |
+| `merge_permits_and_evictions.py` | Merges permit data and (future) eviction data into phase1_output JSONs |
+| `geocode_businesses_google.py` | Geocodes business locations to rooftop precision via Google Maps API |
