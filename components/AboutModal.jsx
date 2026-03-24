@@ -123,8 +123,18 @@ export default function AboutModal({ onClose }) {
             Month · Chapter 380 Economic Development Agreements · HOME Amendments (AustinTexas.gov) ·
             Community business inventories compiled February 2026.
           </p>
+          <p style={{ margin: "16px 0 0" }}>
+            <a
+              href="/DATA_METHODOLOGY.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: 12, fontWeight: 600, color: "#0f766e", textDecoration: "underline" }}
+            >
+              Full Data Methodology &amp; Sources →
+            </a>
+          </p>
           <p
-            style={{ margin: "16px 0 0", fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}
+            style={{ margin: "12px 0 0", fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}
           >
             The data is imperfect. Imperfect data, honestly presented, is more valuable than no data
             at all.

@@ -1,6 +1,6 @@
 # Austin Cultural Map — Architecture & File Dependencies
 
-> **Last updated**: March 21, 2026 (post-Preservation Austin overlay)
+> **Last updated**: March 23, 2026 (post-historical Census data integration)
 > **Purpose**: Machine-readable project structure for AI assistants and new contributors.
 
 ---
@@ -31,6 +31,7 @@ austin-cultural-map/
 ├── package.json            # Dependencies & scripts
 ├── ARCHITECTURE.md         # This file
 ├── agent-todo-list.md      # Task tracker for AI agents
+├── census_variable_discovery.json  # Census API variable availability scan
 │
 ├── src/
 │   ├── main.jsx            # React DOM bootstrap (renders <App />)
@@ -38,12 +39,14 @@ austin-cultural-map/
 │   └── index.css           # Base CSS (Vite scaffold)
 │
 ├── components/
-│   ├── Header.jsx          # Tab navigation + title bar
+│   ├── Header.jsx          # Tab navigation + title bar (Map, Compare, Triage)
 │   ├── MapView.jsx         # Leaflet map + slider + overlays + detail sidebar
 │   ├── RegionDetailPanel.jsx  # Region detail sidebar (DVI, charts, businesses, PA)
 │   ├── ComparisonView.jsx  # Side-by-side region comparison
-│   ├── TriageView.jsx      # Grant triage & prioritisation (scatter + table)
-│   ├── TimelineView.jsx    # "River of Time" business timeline
+│   ├── TriageView.jsx      # Grant triage & prioritisation (3 lenses: Trajectory, Equity, Risk Matrix)
+│   ├── TimelineView.jsx    # "River of Time" business timeline (inactive — button removed from header)
+│   ├── TimelineDashboard.jsx  # Timeline dashboard component (WIP)
+│   ├── TimelineEras.jsx    # Timeline eras component (WIP)
 │   ├── AboutModal.jsx      # Data sources & methodology modal
 │   ├── AgendaModal.jsx     # ISSUES.md agenda modal
 │   ├── ChartTooltip.jsx    # Custom Recharts tooltip (for area charts)
@@ -53,51 +56,69 @@ austin-cultural-map/
 │   └── useAustinMap.js     # Leaflet map lifecycle hook
 │
 ├── utils/
-│   ├── math.js             # DVI interpolation, anchor density, scoring
+│   ├── math.js             # DVI interpolation, triage scoring (trajectory, equity, risk matrix)
 │   ├── mapHelpers.js       # Music data lookup, dev-pressure color ramp
 │   ├── formatters.js       # fmtPct, fmtChange, pressureDots, catColor
-│   └── cpi.js              # CPI-U inflation adjustment (→ 2023 dollars)
+│   ├── cpi.js              # CPI-U inflation adjustment (→ 2023 dollars)
+│   └── aggregation.js      # Neighborhood aggregation (pop-weighted DVI, demographics, economics)
 │
 ├── data/
 │   ├── index.js            # Barrel re-export (central data import point)
 │   ├── phase1_output/      # Source-of-truth: 3 audited normalized JSONs
-│   │   ├── audited_demographics_normalized.json
-│   │   ├── audited_property_normalized.json
-│   │   └── audited_socioeconomic_normalized.json
+│   │   ├── audited_demographics_normalized.json   (873 rows, 269 regions, years: 2000–2023)
+│   │   ├── audited_property_normalized.json       (736 rows, 269 regions, years: 2010–2023)
+│   │   └── audited_socioeconomic_normalized.json  (733 rows, 269 regions, years: 2010–2023)
 │   ├── auditedData.js      # Central normaliser: imports phase1 JSONs once,
 │   │                        #   exports Maps + flat arrays + (regionId,year) lookups
+│   │                        #   Also defines CHART_YEARS and toDemoChartData()
 │   ├── auditedDvi.js       # Computes DVI from auditedData.js pre-normalised data
 │   ├── interim_demographics.js   # Enriches demos with derived pct/pop fields
 │   ├── interim_property.js       # Pass-through from normalised property rows
 │   ├── interim_socioeconomic.js  # Joins socio+property+demo via auditedData Maps
 │   ├── businesses.js       # Static legacy business data (41 operating, 52 closed)
-│   ├── preservationAustin.js  # ★ PA grants, merit awards, legacy businesses, advocacy (156 entries)
+│   ├── preservationAustin.js  # PA grants, merit awards, legacy businesses, advocacy (156 entries)
 │   ├── constants.js        # REGION_NAMES, SNAP_YEARS, PLAY_YEARS, DEMO_COLORS
 │   ├── final_updated_regions.js  # Canonical GeoJSON (269 regions, full polygons)
 │   │                        #   Only imported by hooks/useAustinMap.js
+│   ├── neighborhoods.js    # Neighborhood definitions, TRACT_TO_NEIGHBORHOOD, NEIGHBORHOOD_BY_ID
+│   ├── neighborhoods_geojson.js  # Neighborhood GeoJSON polygons (only imported by useAustinMap.js)
 │   ├── regionIndex.js      # Lightweight region metadata (centroids, DVI — no geometry)
 │   ├── regionLookup.js     # Name↔ID maps, MERGE_LOOKUP, VISIBLE_REGIONS
+│   ├── region_tract_rosetta.json  # region_id ↔ Census tract code ↔ GEOID mapping (269 entries)
 │   ├── musicNightlife.js   # Music/nightlife venue counts per region/year
 │   ├── projectConnect.js   # Transit line polylines + proximity regions
 │   ├── timelineInfra.js    # Infrastructure/policy timeline events
 │   ├── tippingPoints.js    # Tipping-point narratives per region
-│   ├── 01_MASTER_Grants Summary.xlsx - Grants.csv  # Source CSV for PA grants
-│   ├── preservation-austin-data-and-prompt.md       # PA data consolidation doc
+│   ├── _cached_npa_boundaries.geojson  # Cached City of Austin NPA boundaries
 │   └── _archive/           # Obsolete pipeline artifacts (do not import)
 │
 ├── scripts/
-│   ├── audit_region_names.py          # City of Austin official name validation
-│   ├── apply_google_maps_names.py     # Google Maps name reconciliation
-│   ├── build_master_remap.py          # Duplicate region name disambiguation
-│   ├── gemini_google_maps_names.py    # Gemini API semantic name matching
-│   ├── gemini_phase3_tasks.py         # Gemini audit recommendations
-│   ├── gemini_retry_failed.py         # Retry failed Gemini API calls
-│   └── gemini_output/                 # Gemini API output cache
+│   ├── fetch_census_data.cjs        # Census Bureau API fetcher (2020/2023 ACS)
+│   ├── fetch_historical_census.cjs  # Historical Census data fetcher (2000 SF1, 2010 SF1+ACS, 2015 ACS)
+│   ├── build_neighborhoods.cjs      # Builds neighborhood definitions from NPA boundaries
+│   ├── generate_name_candidates.cjs # Region name candidate generation
+│   └── _archive/                    # Archived automation scripts
 │
-├── archive/                # Legacy pre-refactor code & data
+├── (root-level data scripts)
+│   ├── fill_census_gaps_v2.py       # Census Bureau API backfill for historical gaps (Decennial + ACS + crosswalk)
+│   ├── extract_permits.py           # Extracts COA construction permit CSV into region-year aggregates
+│   └── merge_permits_and_evictions.py  # Merges permits and (future) eviction data into phase1_output JSONs
 │
-└── public/
-    └── ISSUES.md           # Project issues/agenda
+├── public/
+│   ├── ISSUES.md           # Project issues/agenda
+│   └── vite.svg            # Vite favicon
+│
+└── (root-level reference files)
+    ├── COA_NPA_REFERENCE.md         # City of Austin NPA reference
+    ├── DATA_INTEGRITY_FINDINGS.md   # Data audit findings
+    ├── DATA_METHODOLOGY.md          # Data methodology documentation
+    ├── FILL_GAPS_README.md          # Census gap-fill documentation
+    ├── README.md                    # Project overview
+    ├── fill_census_gaps.py          # Python Census gap-fill script v1
+    ├── fill_census_gaps_v2.py       # Python Census gap-fill script v2
+    ├── extract_permits.py           # Permit data extraction
+    ├── inspect_permits.py           # Permit data inspection
+    └── merge_permits.py             # Permit data merge
 ```
 
 ---
@@ -106,6 +127,9 @@ austin-cultural-map/
 
 ```
 data/phase1_output/*.json          (3 audited, normalized JSON files — source of truth)
+│                                    Demographics: 2000, 2005, 2010, 2015, 2020, 2023
+│                                    Property: 2010, 2015, 2020, 2023
+│                                    Socioeconomic: 2010, 2015, 2020, 2023
 │
 └──► data/auditedData.js           ★ SINGLE ENTRY POINT — imports 3 JSONs once, normalises
        │                             field names, then exports:
@@ -113,6 +137,7 @@ data/phase1_output/*.json          (3 audited, normalized JSON files — source 
        │                             • NORMALIZED_DEMO, NORMALIZED_PROP, NORMALIZED_SOCIO (flat arrays)
        │                             • DEMO_BY_RY, PROP_BY_RY, SOCIO_BY_RY (regionId_year → row Maps)
        │                             • closestRow(), priorRow(), toDemoChartData() helpers
+       │                             • CHART_YEARS constant [1990..2025]
        │
        ├──► data/auditedDvi.js            Consumes DEMO_BY_RY, PROP_BY_RY, SOCIO_BY_RY
        │      Computes AUDITED_DVI_LOOKUP {[region_id]: [{year, dvi}]}
@@ -133,11 +158,11 @@ data/phase1_output/*.json          (3 audited, normalized JSON files — source 
 data/regionLookup.js               Builds NAME_TO_ID, ID_TO_NAME, MERGE_LOOKUP (from REGION_INDEX)
          │
          ▼
-data/index.js                      Barrel re-export (excludes REGIONS_GEOJSON)
+data/index.js                      Barrel re-export (excludes REGIONS_GEOJSON, NEIGHBORHOODS_GEOJSON)
          │
          ▼
 components/*, utils/*              Consume data via  import { ... } from "../data"
-hooks/useAustinMap.js              Imports REGIONS_GEOJSON directly from final_updated_regions.js
+hooks/useAustinMap.js              Imports REGIONS_GEOJSON and NEIGHBORHOODS_GEOJSON directly
 
 
 data/preservationAustin.js         ★ STANDALONE — no dependencies on phase1 data
@@ -154,16 +179,29 @@ data/preservationAustin.js         ★ STANDALONE — no dependencies on phase1 
 ## 4. Phase 1 Output JSON Schemas
 
 ### audited_demographics_normalized.json
-- **Rows**: ~4811 | **Regions**: 269 unique region_ids
-- **Fields**: `year`, `total_population`, `median_age`, `pct_hispanic`, `pct_white_non_hispanic`, `pct_black_non_hispanic`, `pct_asian`, `pct_foreign_born`, `pct_owner_occupied`, `rent_burden_pct`, `pct_65_and_over`, `pct_bachelors_degree_or_higher`, `region`, `region_id`, `audit_source`, `audit_confidence`
+- **Rows**: 873 | **Regions**: 269 unique region_ids
+- **Years**: 2000 (70 tracts), 2005 (70, interpolated), 2010 (98), 2015 (98), 2020 (269), 2023 (268)
+- **Fields**: `year`, `total_population`, `median_age`, `pct_hispanic`, `pct_white_non_hispanic`, `pct_black_non_hispanic`, `pct_asian`, `pct_foreign_born`, `pct_owner_occupied`, `rent_burden_pct`, `pct_65_and_over`, `pct_bachelors_degree_or_higher`, `region`, `region_id`, `audit_source`, `audit_confidence`, `audit_flags`, `audit_timestamp`
+- **Sources**: Decennial Census 2000 SF1, Decennial 2010 SF1 + ACS 2006-2010, ACS 2011-2015, Decennial Census 2020 PL + ACS 2016-2020, ACS 2019-2023
 
 ### audited_property_normalized.json
-- **Rows**: ~2645 | **Regions**: 209 unique region_ids
-- **Fields**: `year`, `median_home_value`, `median_rent_monthly`, `commercial_sqft`, `median_property_tax`, `pct_home_value_change_yoy`, `vacancy_rate`, `new_construction_permits`, `total_housing_units`, `region`, `region_id`, `audit_source`, `audit_confidence`
+- **Rows**: 736 | **Regions**: 269 unique region_ids
+- **Years**: 2010 (99), 2015 (99), 2020 (269), 2023 (269)
+- **Fields**: `year`, `median_home_value`, `median_rent_monthly`, `total_housing_units`, `vacancy_rate`, `pct_home_value_change_yoy`, `new_construction_permits`, `commercial_sqft`, `region`, `region_id`, `audit_source`, `audit_confidence`, `audit_flags`, `audit_timestamp`
+- **Permits data**: `new_construction_permits` populated for ~700 rows, `commercial_sqft` for ~643 rows, sourced from City of Austin Issued Construction Permits (dataset `3syk-w9eu`, 2005–2023)
 
 ### audited_socioeconomic_normalized.json
-- **Rows**: ~2544 | **Regions**: 209 unique region_ids
-- **Fields**: `year`, `median_household_income`, `poverty_rate`, `unemployment_rate`, `gini_coefficient`, `pct_uninsured`, `eviction_filing_rate`, `snap_participation_rate`, `dominant_industries[]`, `region`, `region_id`, `audit_source`, `audit_confidence`
+- **Rows**: 733 | **Regions**: 269 unique region_ids
+- **Years**: 2010 (96), 2015 (99), 2020 (269), 2023 (269)
+- **Fields**: `year`, `median_household_income`, `poverty_rate`, `unemployment_rate`, `gini_coefficient`, `eviction_filing_rate`, `snap_participation_rate`, `region`, `region_id`, `audit_source`, `audit_confidence`, `audit_flags`, `audit_timestamp`
+
+### Historical data coverage notes
+- Pre-2020 data only available for tracts whose Census codes match across decades
+- 70 tracts have 2000 data (Decennial SF1, non-Hispanic race breakdown)
+- ~99 tracts have 2010/2015 data (tracts that existed in 2010 boundaries)
+- 269 tracts have 2020/2023 data (full coverage, 2020 boundaries)
+- ~170 tracts created after 2010 (suburban expansion, tract splits) have no pre-2020 data
+- 2005 data is linearly interpolated from 2000 and 2010
 
 ### preservationAustin.js (Preservation Austin Overlay)
 - **Entries**: 156 total across 4 categories
@@ -194,12 +232,16 @@ index.html
 | `REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS, SOCIOECONOMIC, TIPPING_POINTS` | ./data |
 | `PLAY_YEARS` | ./data/constants |
 | `ID_TO_NAME` | ./data/regionLookup |
+| `REGIONS_GEOJSON` | ./data/final_updated_regions |
 | `interpolateDvi, interpolateSocio, findPriorSocio` | ./utils/math |
+| `aggregateNeighborhood` | ./utils/aggregation |
 | `Header, AboutModal, AgendaModal, MapView, ErrorBoundary, ComparisonView, TriageView, TimelineView` | ./components/* |
 
-**State managed**: `year`, `viewMode`, `activeRegionId`, `selectedRegion`, `activeFeature`, `hoveredRegion`, `selectedBiz`, `bizTab`, `panelTab`, `showAbout`, `showAgenda`, `isPlaying`, `showHeritage`, `showPins`, `showProjectConnect`, `showMusicVenues`, `showDevPressure`, `showPreservationAustin`, `paFilter`, `selectedPA`, `compA`, `compB`, `tlFilter`
+**State managed**: `year`, `viewMode`, `activeRegionId`, `selectedRegion`, `activeFeature`, `hoveredRegion`, `selectedBiz`, `bizTab`, `panelTab`, `showAbout`, `showAgenda`, `isPlaying`, `showHeritage`, `showPins`, `showProjectConnect`, `showMusicVenues`, `showDevPressure`, `showRegions`, `showPreservationAustin`, `paFilter`, `selectedPA`, `compA`, `compB`, `tlFilter`, `boundaryMode`, `activeNeighborhoodId`
 
 **View routing**: `viewMode` state → one of `"map"` | `"compare"` | `"triage"` | `"timeline"`
+
+**Cross-view navigation**: `handleLocateOnMap(regionId)` — called from TriageView to switch to map, select a tract, and zoom to it.
 
 ---
 
@@ -213,10 +255,12 @@ index.html
 | `RegionDetailPanel` | ./RegionDetailPanel |
 | `SNAP_YEARS, PLAY_YEARS, TIMELINE_EVENTS` | ../data/constants |
 | `ID_TO_NAME` | ../data/regionLookup |
+| `regionLookupMap` | ../data/regionIndex |
 | `AUDITED_PROP_BY_ID, AUDITED_SOCIO_BY_ID, closestRow, priorRow, toDemoChartData` | ../data/auditedData |
 
 **Key responsibilities**:
 - Overlay toggle toolbar (Heritage, Businesses, Project Connect, Preservation Austin)
+- Boundary mode toggle (Census Tracts / Neighborhoods)
 - PA sub-toggles in legend (Grant, Merit Award, Legacy Business, Advocacy)
 - Time slider with snap years and playback animation
 - Passes `leafletMapRef`, `bizMarkersRef`, `paMarkersRef` to RegionDetailPanel for bidirectional linking
@@ -227,20 +271,33 @@ index.html
 | `_` | lodash |
 | `AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine` | recharts |
 | `DEMO_COLORS` | ../data/constants |
-| `getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge` | ../utils/math |
+| `getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge, interpolateDvi` | ../utils/math |
 | `PA_ALL, PA_COLORS, PA_LABELS` | ../data |
 | `REGION_INDEX` | ../data |
+| `ID_TO_NAME` | ../data/regionLookup |
 | `fmtPct, fmtChange, pressureColor, pressureDots` | ../utils/formatters |
 | `adjustForInflation` | ../utils/cpi |
 | `ChartTooltip` | ./ChartTooltip |
 
 **Tabs**: Demographics, Economics, Culture
 
+**Demographics tab features**:
+- Stacked area chart (1990–2025 range, `connectNulls={false}` for gaps)
+- Missing-data note explaining why data is absent (tract created after 2010, etc.)
+- Population breakdown at nearest year
+
+**Economics tab features**:
+- Metric cards showing actual data year when it differs from slider
+- Missing-data banner when slider year has no census data
+- Inflation-adjusted values (nominal / 2023$) with change arrows
+
 **Culture tab features**:
 - Tipping point narratives
 - Legacy businesses (Still Here / What We Lost sub-tabs)
 - Preservation Austin section (proximity-matched PA items when overlay active)
 - Bidirectional linking: card click → flyTo + openPopup; map dot click → switch to Culture tab + highlight
+
+**Neighborhood mode**: When `boundaryMode === "neighborhoods"`, displays aggregated data from `neighborhoodAgg` (pop-weighted DVI, combined demographics, contributing tract list).
 
 #### ComparisonView.jsx
 | Import | Source |
@@ -259,13 +316,18 @@ index.html
 |--------|--------|
 | `useState, useMemo, useCallback` | react |
 | `_` | lodash |
-| `ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ZAxis, Cell` | recharts |
-| `REGION_INDEX, LEGACY_OPERATING, LEGACY_CLOSED, DEMOGRAPHICS` | ../data |
-| `interpolateDvi, calcAnchorDensity, calcAnchorPressureScore, getDviBandColor` | ../utils/math |
+| `ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ZAxis, Cell, ReferenceLine` | recharts |
+| `VISIBLE_REGIONS` | ../data/regionLookup |
+| `calcTrajectory, calcEquityPriority, calcRiskMatrix, getDviBandColor` | ../utils/math |
 
-**Features**: DVI weight sliders (demographic 35%, market 35%, socioeconomic 30%), scatter plot (anchor density vs DVI), sortable triage table, 5 categories (Active Displacement, High Risk/Data Gap, Critical Near Tipping, Monitor, Exclusive/Appreciated)
+**Three analysis lenses**:
+- **Trajectory**: Where is displacement accelerating fastest? (DVI velocity vs DVI score)
+- **Equity**: Which underserved communities need investment most? (equity deficit vs DVI)
+- **Risk Matrix**: What type of intervention does each area need? (market pressure vs community vulnerability)
 
-#### TimelineView.jsx
+**Features**: DVI weight sliders, scatter plot with category-colored dots, sortable triage table, "Locate on Map" button (calls `onLocateOnMap` prop to navigate to map view)
+
+#### TimelineView.jsx (inactive — button removed from Header)
 | Import | Source |
 |--------|--------|
 | `useMemo, useState, useRef, useCallback` | react |
@@ -297,18 +359,24 @@ index.html
 | `REGION_INDEX` | ../data |
 | `regionLookupMap` | ../data/regionIndex |
 | `REGIONS_GEOJSON` | ../data/final_updated_regions |
+| `NEIGHBORHOODS_GEOJSON` | ../data/neighborhoods_geojson |
+| `NEIGHBORHOOD_BY_ID` | ../data/neighborhoods |
 | `LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES` | ../data |
-| `AUDITED_PROP_BY_ID` | ../data/auditedData |
+| `AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID, closestRow` | ../data/auditedData |
 | `AUDITED_DVI_LOOKUP` | ../data/auditedDvi |
 | `interpolateDvi, getDviColor` | ../utils/math |
 | `getDevPressureColor` | ../utils/mapHelpers |
 | `PA_ALL, PA_COLORS` | ../data |
 
-**Lifecycle**: 4 useEffect hooks:
-1. Map init + GeoJSON layer creation (runs once)
+**Lifecycle**: 7 useEffect hooks:
+1. Map init + GeoJSON tract layer + neighborhood layer creation (runs once)
 2. Region style update (runs on `year`/`activeRegionId` change)
-3. Overlay redraw — business pins, music venues, transit lines, dev-pressure, PA dots (runs on `year`/toggle changes)
-4. Cleanup when `selectedRegion` becomes null
+3. Boundary mode switch — swap tract ↔ neighborhood layers (runs on `boundaryMode`)
+4. Neighborhood style update (runs on `year`/`activeNeighborhoodId`/`boundaryMode`)
+5. Region polygon visibility toggle (runs on `showRegions`/`boundaryMode`)
+6. Overlay redraw — business pins, music venues, transit lines, dev-pressure, PA dots (runs on `year`/toggle changes)
+7. Auto-zoom to selected region (runs on `activeRegionId` change)
+8. Cleanup when `selectedRegion` becomes null
 
 **Overlay layer groups** (created in init, stored in `_overlayLayers`):
 - `operatingLayer` — green/amber business pins
@@ -338,7 +406,19 @@ index.html
 | `LEGACY_OPERATING, LEGACY_CLOSED` | ../data |
 | `NAME_TO_ID` | ../data/regionLookup |
 
-**Exports**: `lerp`, `interpolateDvi`, `getDviColor`, `getDviBand`, `getDviBandColor`, `getDviTimeSeries`, `interpolateSocio`, `findPriorSocio`, `calcAnchorDensity`, `calcAnchorPressureScore`, `getAnchorBadge`
+**Exports**: `lerp`, `interpolateDvi`, `getDviColor`, `getDviBand`, `getDviBandColor`, `getDviTimeSeries`, `interpolateSocio`, `findPriorSocio`, `calcAnchorDensity`, `getAnchorBadge`, `calcTrajectory`, `calcEquityPriority`, `calcRiskMatrix`
+
+#### aggregation.js
+| Import | Source |
+|--------|--------|
+| `_` | lodash |
+| `NEIGHBORHOOD_BY_ID` | ../data/neighborhoods |
+| `AUDITED_DEMO_BY_ID, AUDITED_PROP_BY_ID, AUDITED_SOCIO_BY_ID, closestRow, priorRow` | ../data/auditedData |
+| `LEGACY_OPERATING, LEGACY_CLOSED` | ../data |
+| `ID_TO_NAME` | ../data/regionLookup |
+| `interpolateDvi` | ./math |
+
+**Exports**: `aggregateNeighborhood(neighborhoodId, year)` — returns pop-weighted DVI, aggregated demographics, property, socioeconomic data, PA items, and contributing tract list.
 
 #### mapHelpers.js
 | Import | Source |
@@ -378,13 +458,13 @@ index.html
 | `REGION_NAMES, TIMELINE_EVENTS, SNAP_YEARS, PLAY_YEARS, DEMO_COLORS` | ./constants |
 | `PA_ALL, PA_COLORS, PA_LABELS` | ./preservationAustin |
 
-> **Note**: `REGIONS_GEOJSON` (~7.6 MB) is intentionally excluded from the barrel.
-> Only `hooks/useAustinMap.js` imports it directly from `./final_updated_regions`
-> for Leaflet polygon rendering.
+> **Note**: `REGIONS_GEOJSON` (~7.6 MB) and `NEIGHBORHOODS_GEOJSON` are intentionally excluded from the barrel.
+> Only `hooks/useAustinMap.js` imports them directly for Leaflet polygon rendering.
 
 #### Static Data Modules (no imports)
 - `businesses.js` → `LEGACY_OPERATING`, `LEGACY_CLOSED`
 - `final_updated_regions.js` → `REGIONS_GEOJSON` (269 regions, canonical — only used by useAustinMap.js)
+- `neighborhoods_geojson.js` → `NEIGHBORHOODS_GEOJSON` (only used by useAustinMap.js)
 - `regionIndex.js` → `REGION_INDEX` (61 KB lightweight metadata, no geometry), `regionLookupMap`
 - `musicNightlife.js` → `MUSIC_NIGHTLIFE`
 - `projectConnect.js` → `PROJECT_CONNECT_LINES`, `PC_PROXIMITY_REGIONS`
@@ -400,6 +480,7 @@ index.html
 | `interim_demographics.js` | auditedData.js (NORMALIZED_DEMO) | `DEMOGRAPHICS` |
 | `interim_property.js` | auditedData.js (NORMALIZED_PROP) | `PROPERTY_DATA` |
 | `interim_socioeconomic.js` | auditedData.js (AUDITED_*_BY_ID Maps) | `SOCIOECONOMIC` |
+| `neighborhoods.js` | (static data) | `NEIGHBORHOODS`, `TRACT_TO_NEIGHBORHOOD`, `NEIGHBORHOOD_BY_ID`, `NEIGHBORHOOD_NAMES` |
 | `regionLookup.js` | regionIndex.js | `NAME_TO_ID`, `ID_TO_NAME`, `toId`, `toName`, `VISIBLE_REGIONS`, `MERGE_LOOKUP`, `toPrimaryId`, `getMergedIds` |
 | `constants.js` | regionIndex.js | `REGION_NAMES`, `TIMELINE_EVENTS`, `SNAP_YEARS`, `PLAY_YEARS`, `DEMO_COLORS` |
 
@@ -411,12 +492,12 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 
 | viewMode | Component | Description |
 |----------|-----------|-------------|
-| `"map"` | `MapView` | Leaflet choropleth map with time slider, overlay toggles (Heritage, Businesses, Project Connect, Preservation Austin), and RegionDetailPanel sidebar |
+| `"map"` | `MapView` | Leaflet choropleth map with time slider, overlay toggles (Heritage, Businesses, Project Connect, Preservation Austin), boundary mode toggle (Tracts/Neighborhoods), and RegionDetailPanel sidebar |
 | `"compare"` | `ComparisonView` | Side-by-side region comparison with line charts, all-groups demographic toggle, and summary table |
-| `"triage"` | `TriageView` | Grant triage: scatter plot + sortable table classifying 269 regions by DVI tier with adjustable weights |
-| `"timeline"` | `TimelineView` | Gantt-style business timeline with DVI overlay, infrastructure event markers, and horizontal scroll |
+| `"triage"` | `TriageView` | Grant triage: 3 analysis lenses (Trajectory, Equity, Risk Matrix) with scatter plots, sortable tables, "Locate on Map" navigation, and adjustable DVI weights |
+| `"timeline"` | `TimelineView` | Business timeline (inactive — button removed from Header, component still exists) |
 
-`Header.jsx` renders the tab bar that sets `viewMode`. `AboutModal` and `AgendaModal` are always-available overlays toggled by `showAbout`/`showAgenda` state.
+`Header.jsx` renders the tab bar (Map, Compare, Triage) that sets `viewMode`. `AboutModal` and `AgendaModal` are always-available overlays toggled by `showAbout`/`showAgenda` state.
 
 ---
 
@@ -425,45 +506,29 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 | Concept | Description |
 |---------|-------------|
 | **Region** | One of 269 census-tract-level neighborhoods in Austin. Identified by `region_id` (1–269) and `region_name`. Some have `merge_into` redirects via `MERGE_LOOKUP`. |
+| **Neighborhood** | City of Austin Neighborhood Planning Area (NPA). Each contains multiple tracts. Aggregated data computed by `utils/aggregation.js`. |
 | **DVI** | Displacement Vulnerability Index (0–100). Computed from 3 sub-indices: demographic change (35%), market pressure (35%), socioeconomic stress (30%). Higher = more vulnerable. Adjustable weights in TriageView. |
 | **DVI Bands** | Stable (0–20), Early Pressure (20–35), Active Displacement (35–55), Historic Displacement (55+). Affluent/excluded regions capped at DVI 20 and shown in neutral slate. |
 | **Anchor Density** | `surviving_businesses / (surviving + closed)`. Ratio 0–1. Badge: Strong (>70%), Eroding (40–70%), Critical (<40%). |
-| **Anchor Pressure Score** | `(high_pressure_count * 2 + moderate_pressure_count) / surviving_count`. Higher = more threat. |
 | **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `pressure` rating, `lat/lng`. 41 operating + 52 closed. |
-| **Triage Categories** | Active Displacement, High Risk/Data Gap, Critical Near Tipping, Monitor, Exclusive/Appreciated. Assigned per region based on DVI + anchor metrics + income threshold. |
-| **Preservation Austin** | Overlay layer showing 156 geocoded entries: grants ($284K+ since 2016), merit awards (2022–2025), Legacy Business Month participants (2023–2025), and advocacy milestones. Private residences shown at neighborhood-level centroids. |
-| **Phase 1 Data** | Gemini-audited normalized datasets in `data/phase1_output/`. The single source of truth for all demographic, property, and socioeconomic data. |
+| **Triage Lenses** | Trajectory (displacement velocity), Equity (underserved communities), Risk Matrix (intervention type matching). Each lens produces categories and a priority score per region. |
+| **Preservation Austin** | Overlay layer showing 156 geocoded entries: grants ($284K+ since 2016), merit awards (2022–2025), Legacy Business Month participants (2023–2025), and advocacy milestones. |
+| **Census Data** | Real Census Bureau data fetched via API. Demographics from Decennial SF1 (2000, 2010, 2020) and ACS 5-Year (2010, 2015, 2020, 2023). Race variables use Not-Hispanic-by-Race tables (P004/P005) to avoid double-counting. |
+| **Tract Rosetta** | `region_tract_rosetta.json` maps region_id ↔ Census tract code (tractce22) ↔ full GEOID. Essential for Census API queries. |
 
 ---
 
-## 8. Preservation Austin Overlay Architecture
+## 8. Scripts
 
-The PA overlay is architecturally independent from the census/DVI data pipeline:
-
-```
-data/preservationAustin.js          (standalone, no phase1 dependencies)
-  │
-  ├── PA_GRANTS (72)               type:"grant", with amount field
-  ├── PA_MERIT_AWARDS (41)         type:"merit_award"
-  ├── PA_LEGACY_BUSINESSES (33)    type:"legacy_business"
-  ├── PA_ADVOCACY (10)             type:"advocacy"
-  ├── PA_ALL (combined flat array)
-  ├── PA_COLORS                    { grant:#7c3aed, merit_award:#2563eb,
-  │                                  legacy_business:#d97706, advocacy:#059669 }
-  └── PA_LABELS                    Display names per type
-```
-
-**State flow** (index.jsx):
-- `showPreservationAustin` — master toggle
-- `paFilter` — `{ grant: bool, merit_award: bool, legacy_business: bool, advocacy: bool }` sub-toggles
-- `selectedPA` — highlighted PA card (set from map dot click)
-- `panelTab` — lifted from RegionDetailPanel to enable map→panel navigation
-
-**Bidirectional linking**:
-- **Card → Map**: `leafletMapRef.current.flyTo()` + `paMarkersRef.current.get(id).openPopup()` (850ms delay for animation)
-- **Map → Panel**: dot click sets `setPanelTab("culture")` + `setSelectedPA(item)`, highlighting the card
-
-**Proximity matching** (RegionDetailPanel Culture tab): PA items within ~0.012 degrees (~1.3 km) of region centroid are shown.
+| Script | Purpose |
+|--------|---------|
+| `scripts/fetch_census_data.cjs` | Fetches ACS 2020/2023 data for all 269 tracts from Census Bureau API |
+| `scripts/fetch_historical_census.cjs` | Fetches historical data: 2000 SF1 (P004 non-Hispanic race), 2010 SF1+ACS, 2015 ACS. Merges into existing data files. Interpolates 2005 from 2000+2010. |
+| `scripts/build_neighborhoods.cjs` | Builds neighborhood definitions by assigning tracts to NPA polygons |
+| `scripts/generate_name_candidates.cjs` | Generates region display name candidates |
+| `fill_census_gaps_v2.py` | Census Bureau API backfill for 171 regions missing pre-2020 data. Uses Decennial 2000/2010 SF1 and ACS 5-Year estimates with 2010→2020 tract crosswalking. |
+| `extract_permits.py` | Extracts City of Austin 1.5GB construction permit CSV (dataset `3syk-w9eu`) into region-year aggregates |
+| `merge_permits_and_evictions.py` | Merges permit counts and commercial sqft into `audited_property_normalized.json`. Prepared for future eviction data merge. |
 
 ---
 
@@ -471,7 +536,7 @@ data/preservationAustin.js          (standalone, no phase1 dependencies)
 
 1. **Single data entry point**: `auditedData.js` is the sole importer of the 3 phase1_output JSONs. All downstream modules consume pre-normalised Maps and arrays from it, eliminating redundant JSON parsing.
 
-2. **GeoJSON isolation**: The ~7.6 MB `final_updated_regions.js` (REGIONS_GEOJSON) is NOT exported from the barrel (`data/index.js`). Only `hooks/useAustinMap.js` imports it directly for Leaflet polygon rendering. All other consumers use `REGION_INDEX` (61 KB, no geometry).
+2. **GeoJSON isolation**: The ~7.6 MB `final_updated_regions.js` (REGIONS_GEOJSON) and `neighborhoods_geojson.js` (NEIGHBORHOODS_GEOJSON) are NOT exported from the barrel (`data/index.js`). Only `hooks/useAustinMap.js` imports them directly for Leaflet polygon rendering.
 
 3. **O(1) lookups throughout**: `AUDITED_DEMO_BY_ID`, `AUDITED_PROP_BY_ID`, `AUDITED_SOCIO_BY_ID` (Map<region_id, rows[]>) and `DEMO_BY_RY`, `PROP_BY_RY`, `SOCIO_BY_RY` (Map<"regionId_year", row>) provide constant-time access.
 
@@ -481,12 +546,16 @@ data/preservationAustin.js          (standalone, no phase1 dependencies)
 
 6. **Lifted panel tab state**: `panelTab` was lifted from local state in RegionDetailPanel to index.jsx to allow map dot clicks to switch the panel to the Culture tab.
 
-7. **Bundle size**: ~13.6 MB (minified). The GeoJSON polygons dominate. For further reduction, `MapView` could be wrapped in `React.lazy()` to code-split the GeoJSON into an async chunk.
+7. **Dual boundary mode**: Map supports "tracts" (269 census tracts) and "neighborhoods" (NPA areas). Neighborhood data is aggregated on-the-fly by `utils/aggregation.js` using population-weighted averages.
 
-8. **Business coverage**: Only ~40 of 269 regions have associated legacy business data. The triage logic accounts for this — regions without businesses are classified purely by DVI.
+8. **Cross-view navigation**: TriageView's "Locate on Map" button calls `handleLocateOnMap(regionId)` in index.jsx, which sets `viewMode="map"`, `boundaryMode="tracts"`, selects the region, and triggers auto-zoom in useAustinMap.
 
-9. **Property/Socio coverage**: 209 of 269 regions have property and socioeconomic data. 269 regions have demographic data.
+9. **Historical data gaps**: Pre-2020 census data only exists for tracts whose codes match across decades (~70 for 2000, ~99 for 2010/2015). Charts use `connectNulls={false}` to show gaps honestly. Panel shows amber notes explaining missing data.
 
-10. **Region merging**: Some regions are marked `merge_into` (secondary IDs redirect to primary IDs via `MERGE_LOOKUP`). `VISIBLE_REGIONS` excludes merged secondaries.
+10. **Census variable compatibility**: The Census Bureau API has different variable tables across decades. 2010 ACS lacks B15003 (use B15002) and B23025 (unemployment unavailable). See `census_variable_discovery.json` for full compatibility matrix.
 
 11. **Inflation adjustment**: `utils/cpi.js` provides `adjustForInflation()` using CPI-U Austin MSA data. Property and income metrics display both nominal and 2023-constant values.
+
+12. **Region merging**: Some regions are marked `merge_into` (secondary IDs redirect to primary IDs via `MERGE_LOOKUP`). `VISIBLE_REGIONS` excludes merged secondaries.
+
+13. **Bundle size**: ~7.5 MB (minified). The GeoJSON polygons dominate. For further reduction, `MapView` could be wrapped in `React.lazy()` to code-split the GeoJSON into an async chunk.
