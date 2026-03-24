@@ -1,0 +1,80 @@
+NEIGHBORHOOD CONTIGUITY AUDIT
+Generated: 2026-03-24T21:10:36.895Z
+Spread threshold: 4 km
+Orphan threshold: 2 km
+Total neighborhoods: 137
+Total tracts: 232
+
+================================================================================
+
+FLAGGED: East Oak Hill
+  ID: east-oak-hill
+  Source: City of Austin NPA
+  Tracts: 4
+  Max spread: 4.72 km
+  Max pair: East Oak Hill [149] (id 149) <-> East Oak Hill [238] (id 238)
+  All tracts:
+    *** id 149: East Oak Hill [149] (30.2285, -97.8448) ← ORPHAN
+        id 234: East Oak Hill [234] (30.2570, -97.8399)
+        id 238: East Oak Hill [238] (30.2682, -97.8274)
+        id 246: East Oak Hill [246] (30.2434, -97.8314)
+  Orphan tracts (nearest neighbor > 2 km):
+    id 149: East Oak Hill [149]
+      Nearest in hood: East Oak Hill [246] (id 246) at 2.09 km
+
+FLAGGED: Onion Creek (under review)
+  ID: onion-creek
+  Source: suburban-community
+  Tracts: 5
+  Max spread: 4.09 km
+  Max pair: Tract 24.4 (id 64) <-> Tract 24.41 (id 225)
+  All tracts:
+        id 60: Tract 24.39 (30.1640, -97.7501)
+        id 64: Tract 24.4 (30.1475, -97.7495)
+        id 66: Tract 24.42 (30.1787, -97.7553)
+        id 225: Tract 24.41 (30.1808, -97.7673)
+        id 235: Tract 24.3 (30.1722, -97.7554)
+  No orphan tracts (all within 2 km of at least one neighbor)
+
+FLAGGED: Wells Branch (under review)
+  ID: wells-branch
+  Source: suburban-community
+  Tracts: 4
+  Max spread: 4.51 km
+  Max pair: Tract 465.0 (id 58) <-> Tract 443.0 (id 220)
+  All tracts:
+        id 58: Tract 465.0 (30.4552, -97.6661)
+        id 59: Tract 441.0 (30.4392, -97.6580)
+        id 220: Tract 443.0 (30.4177, -97.6482)
+        id 229: Tract 442.0 (30.4304, -97.6622)
+  No orphan tracts (all within 2 km of at least one neighbor)
+
+FLAGGED: West Oak Hill
+  ID: west-oak-hill
+  Source: City of Austin NPA
+  Tracts: 4
+  Max spread: 4.62 km
+  Max pair: West Oak Hill [179] (id 179) <-> West Oak Hill [195] (id 195)
+  All tracts:
+        id 141: West Oak Hill [141] (30.2446, -97.8999)
+        id 179: West Oak Hill [179] (30.2573, -97.8877)
+    *** id 195: West Oak Hill [195] (30.2172, -97.9002) ← ORPHAN
+    *** id 203: West Oak Hill [203] (30.2214, -97.8793) ← ORPHAN
+  Orphan tracts (nearest neighbor > 2 km):
+    id 195: West Oak Hill [195]
+      Nearest in hood: West Oak Hill [203] (id 203) at 2.06 km
+    id 203: West Oak Hill [203]
+      Nearest in hood: West Oak Hill [195] (id 195) at 2.06 km
+
+================================================================================
+
+SUMMARY
+  Neighborhoods audited: 137
+  Flagged (spread > 4 km): 4
+  Total orphan tracts: 3
+
+FLAGGED NEIGHBORHOODS (sorted by max spread):
+     4.7 km |   4 tracts |  1 orphans | East Oak Hill [City of Austin NPA]
+     4.6 km |   4 tracts |  2 orphans | West Oak Hill [City of Austin NPA]
+     4.5 km |   4 tracts |  0 orphans | Wells Branch (under review) [suburban-community]
+     4.1 km |   5 tracts |  0 orphans | Onion Creek (under review) [suburban-community]

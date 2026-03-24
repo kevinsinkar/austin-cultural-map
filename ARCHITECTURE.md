@@ -95,7 +95,8 @@ austin-cultural-map/
 ├── scripts/
 │   ├── fetch_census_data.cjs        # Census Bureau API fetcher (2020/2023 ACS)
 │   ├── fetch_historical_census.cjs  # Historical Census data fetcher (2000 SF1, 2010 SF1+ACS, 2015 ACS)
-│   ├── build_neighborhoods.cjs      # Builds neighborhood definitions from NPA boundaries
+│   ├── build_neighborhoods.cjs      # Builds neighborhood definitions from NPA boundaries + contiguity enforcement
+│   ├── audit_neighborhoods.cjs      # Audits neighborhood contiguity (spread, orphan detection)
 │   ├── generate_name_candidates.cjs # Region name candidate generation
 │   └── _archive/                    # Archived automation scripts
 │
@@ -524,7 +525,8 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 |--------|---------|
 | `scripts/fetch_census_data.cjs` | Fetches ACS 2020/2023 data for all 269 tracts from Census Bureau API |
 | `scripts/fetch_historical_census.cjs` | Fetches historical data: 2000 SF1 (P004 non-Hispanic race), 2010 SF1+ACS, 2015 ACS. Merges into existing data files. Interpolates 2005 from 2000+2010. |
-| `scripts/build_neighborhoods.cjs` | Builds neighborhood definitions by assigning tracts to NPA polygons |
+| `scripts/build_neighborhoods.cjs` | Builds neighborhood definitions by assigning tracts to NPA polygons. Includes contiguity enforcement that ejects orphan tracts (>2km from nearest neighbor for non-NPA, >3km for NPA) into standalone neighborhoods. |
+| `scripts/audit_neighborhoods.cjs` | Audits neighborhood contiguity — reports max spread, orphan tracts, and non-contiguous suspects |
 | `scripts/generate_name_candidates.cjs` | Generates region display name candidates |
 | `fill_census_gaps_v2.py` | Census Bureau API backfill for 171 regions missing pre-2020 data. Uses Decennial 2000/2010 SF1 and ACS 5-Year estimates with 2010→2020 tract crosswalking. |
 | `extract_permits.py` | Extracts City of Austin 1.5GB construction permit CSV (dataset `3syk-w9eu`) into region-year aggregates |
@@ -546,7 +548,9 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 
 6. **Lifted panel tab state**: `panelTab` was lifted from local state in RegionDetailPanel to index.jsx to allow map dot clicks to switch the panel to the Culture tab.
 
-7. **Dual boundary mode**: Map supports "tracts" (269 census tracts) and "neighborhoods" (NPA areas). Neighborhood data is aggregated on-the-fly by `utils/aggregation.js` using population-weighted averages.
+7. **Dual boundary mode**: Map supports "tracts" (269 census tracts) and "neighborhoods" (137 areas). Neighborhood data is aggregated on-the-fly by `utils/aggregation.js` using population-weighted averages.
+
+8. **Neighborhood contiguity enforcement**: `build_neighborhoods.cjs` ejects orphan tracts whose nearest neighbor in the same neighborhood exceeds a distance threshold (2.0 km for non-NPA sources, 3.0 km for NPA). Ejected tracts become standalone neighborhoods. This prevents distant tracts from being grouped together by radius-based suburban community matching. Audit via `scripts/audit_neighborhoods.cjs`.
 
 8. **Cross-view navigation**: TriageView's "Locate on Map" button calls `handleLocateOnMap(regionId)` in index.jsx, which sets `viewMode="map"`, `boundaryMode="tracts"`, selects the region, and triggers auto-zoom in useAustinMap.
 

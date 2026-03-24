@@ -549,31 +549,139 @@ async function main() {
   }
   console.log(`  Clusters formed: ${clustersMerged}`);
 
-  // Safety net: ensure no tracts are orphaned after clustering
+  // Safety net: any unassigned tracts become standalone neighborhoods
   const allAssignedIds = new Set(
     Object.values(neighborhoodMap).flatMap(h => h.tract_ids)
   );
-  let orphanCount = 0;
+  let unassignedCount = 0;
   for (const tract of VISIBLE_REGIONS) {
     if (!allAssignedIds.has(tract.region_id)) {
-      // Assign to nearest existing neighborhood
-      let bestHood = null;
-      let bestDist = Infinity;
-      for (const hood of Object.values(neighborhoodMap)) {
-        if (hood.tract_ids.length === 0) continue;
-        const hoodTracts = hood.tract_ids.map(id => REGION_INDEX.find(r => r.region_id === id)).filter(Boolean);
-        const avgLat = hoodTracts.reduce((s, t) => s + t.lat, 0) / hoodTracts.length;
-        const avgLng = hoodTracts.reduce((s, t) => s + t.lng, 0) / hoodTracts.length;
-        const dist = haversineKm(tract.lat, tract.lng, avgLat, avgLng);
-        if (dist < bestDist) { bestDist = dist; bestHood = hood; }
-      }
-      if (bestHood) {
-        bestHood.tract_ids.push(tract.region_id);
-        orphanCount++;
-      }
+      const name = tract.display_name || `Tract ${tract.region_id}`;
+      const id = slugify(name) + "-standalone";
+      neighborhoodMap[id] = {
+        id,
+        name,
+        tract_ids: [tract.region_id],
+        source: "unassigned",
+      };
+      unassignedCount++;
     }
   }
-  if (orphanCount > 0) console.log(`  Orphaned tracts reassigned: ${orphanCount}`);
+  if (unassignedCount > 0) console.log(`  Unassigned tracts made standalone: ${unassignedCount}`);
+
+  // ── Contiguity enforcement ──────────────────────────────────────────
+  // Eject orphan tracts whose nearest neighbor in the same neighborhood
+  // is > 2.5 km away. Each ejected tract becomes a standalone neighborhood.
+  console.log("\n  Contiguity enforcement...");
+  const ORPHAN_DIST_NPA = 3.0;  // km — lenient for NPA-sourced neighborhoods (authoritative)
+  const ORPHAN_DIST_OTHER = 2.0; // km — strict for suburban/name-cluster assignments
+  let ejectedTotal = 0;
+
+  for (const [hoodId, hood] of Object.entries(neighborhoodMap)) {
+    if (hood.tract_ids.length < 2) continue;
+
+    const tracts = hood.tract_ids
+      .map(id => REGION_INDEX.find(r => r.region_id === id))
+      .filter(Boolean);
+
+    // Use lenient threshold for NPA-sourced neighborhoods, strict for others
+    const isNPA = hood.source === "City of Austin NPA" || hood.source === "City of Austin NPA (nearest)" || hood.source === "manual";
+    const threshold = isNPA ? ORPHAN_DIST_NPA : ORPHAN_DIST_OTHER;
+
+    // Find orphans: tracts whose nearest neighbor in this hood > threshold
+    const toEject = [];
+    for (const tract of tracts) {
+      let nearestDist = Infinity;
+      for (const other of tracts) {
+        if (other.region_id === tract.region_id) continue;
+        const d = haversineKm(tract.lat, tract.lng, other.lat, other.lng);
+        if (d < nearestDist) nearestDist = d;
+      }
+      if (nearestDist > threshold) {
+        toEject.push(tract);
+      }
+    }
+
+    if (toEject.length === 0) continue;
+
+    // If ALL tracts are orphans of each other, split entire neighborhood
+    // into standalones (no core cluster exists)
+    if (toEject.length === tracts.length) {
+      // Check if the closest pair is within threshold — if so keep them
+      let minDist = Infinity;
+      let keepPair = [0, 1];
+      for (let i = 0; i < tracts.length; i++) {
+        for (let j = i + 1; j < tracts.length; j++) {
+          const d = haversineKm(tracts[i].lat, tracts[i].lng, tracts[j].lat, tracts[j].lng);
+          if (d < minDist) { minDist = d; keepPair = [i, j]; }
+        }
+      }
+      if (minDist <= threshold) {
+        // Keep the closest pair, eject the rest
+        const keepIds = new Set([tracts[keepPair[0]].region_id, tracts[keepPair[1]].region_id]);
+        toEject.length = 0;
+        for (const t of tracts) {
+          if (!keepIds.has(t.region_id)) toEject.push(t);
+        }
+      }
+      // else: all tracts are far from each other — eject all, hood becomes empty
+    }
+
+    // Eject
+    const ejectIds = new Set(toEject.map(t => t.region_id));
+    hood.tract_ids = hood.tract_ids.filter(id => !ejectIds.has(id));
+
+    for (const tract of toEject) {
+      const name = tract.display_name || `Tract ${tract.region_id}`;
+      const standaloneId = slugify(name) + "-ejected";
+      neighborhoodMap[standaloneId] = {
+        id: standaloneId,
+        name,
+        tract_ids: [tract.region_id],
+        source: "ejected-orphan",
+      };
+      ejectedTotal++;
+    }
+
+    if (toEject.length > 0) {
+      console.log(`    ${hood.name}: ejected ${toEject.length} orphan(s) — ${toEject.map(t => `id ${t.region_id}`).join(", ")}`);
+    }
+  }
+
+  // After ejecting, convert single-tract suburban-community hoods to standalone
+  let suburbanConverted = 0;
+  for (const [hoodId, hood] of Object.entries(neighborhoodMap)) {
+    if (hood.tract_ids.length === 1 && hood.source === "suburban-community") {
+      const tract = REGION_INDEX.find(r => r.region_id === hood.tract_ids[0]);
+      const name = tract?.display_name || hood.name;
+      hood.name = name;
+      hood.source = "ejected-orphan";
+      suburbanConverted++;
+    }
+  }
+  if (suburbanConverted > 0) console.log(`    Single-tract suburban communities converted: ${suburbanConverted}`);
+
+  // Warn about remaining high-spread neighborhoods (NPA boundaries are authoritative)
+  for (const hood of Object.values(neighborhoodMap)) {
+    if (hood.tract_ids.length < 2) continue;
+    const tracts = hood.tract_ids.map(id => REGION_INDEX.find(r => r.region_id === id)).filter(Boolean);
+    let maxDist = 0;
+    for (let i = 0; i < tracts.length; i++) {
+      for (let j = i + 1; j < tracts.length; j++) {
+        maxDist = Math.max(maxDist, haversineKm(tracts[i].lat, tracts[i].lng, tracts[j].lat, tracts[j].lng));
+      }
+    }
+    if (maxDist > 6) {
+      console.warn(`    WARNING: ${hood.name} still has ${maxDist.toFixed(1)} km spread (${hood.tract_ids.length} tracts, source: ${hood.source})`);
+    }
+  }
+
+  // Clean up empty neighborhoods
+  for (const [id, hood] of Object.entries(neighborhoodMap)) {
+    if (hood.tract_ids.length === 0) delete neighborhoodMap[id];
+  }
+
+  console.log(`  Total orphan tracts ejected: ${ejectedTotal}`);
 
   // Mark non-NPA neighborhoods as "(under review)"
   const npaSources = new Set(["City of Austin NPA", "City of Austin NPA (nearest)", "manual"]);

@@ -2,7 +2,7 @@
 
 Our goal is to move the **Austin Cultural Map** from a retrospective tool to a predictive, action-oriented platform for Preservation Austin's 2026 strategy.
 
-> **Last updated:** March 24, 2026
+> **Last updated:** March 24, 2026 (evening)
 
 ---
 
@@ -24,7 +24,7 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 
 * **Three-Lens Grant Triage:** Trajectory (displacement velocity), Equity (underserved communities), Risk Matrix (intervention type matching). Scatter plots + sortable tables for all 269 regions.
 * **Locate on Map:** Clicking a region in triage shows a "Locate on Map" button that navigates to the map, zooms to the tract, and opens the data panel.
-* **Dual Boundary System:** Census Tracts (269) and City of Austin Neighborhood Planning Areas (~87) with toggle. Population-weighted aggregation for neighborhood mode.
+* **Dual Boundary System:** Census Tracts (269) and 137 neighborhoods with toggle. Population-weighted aggregation for neighborhood mode. Contiguity enforcement ejects orphan tracts (>2km from nearest neighbor) into standalone neighborhoods to prevent non-contiguous groupings.
 * **Standardized charts:** Demographics chart spans 1990–2025 with `connectNulls={false}` for honest gaps. Missing-data notes explain why (tract created after 2010, etc.). Economics cards show actual data year when it differs from the slider.
 * **DVI Weight Sliders:** Advanced panel for adjusting DVI sub-index weights (demographic 35%, market 35%, socioeconomic 30%).
 * **Inflation-adjusted values:** Dual nominal / 2023$ display for home values, rent, and income via CPI-U Austin MSA data.
