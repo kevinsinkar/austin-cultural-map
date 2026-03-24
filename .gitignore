@@ -25,3 +25,13 @@ dist-ssr
 
 # NPA boundary cache (fetched at build time)
 data/_cached_npa_boundaries.geojson
+
+# Data backups and intermediates
+*.bak
+.census_cache/
+data/phase1_output_patched/
+
+# Large raw data files (not needed in repo)
+*.xlsx
+*.csv
+!data/region_tract_rosetta.json

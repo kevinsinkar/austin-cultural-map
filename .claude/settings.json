@@ -6,7 +6,18 @@
       "Bash(node -e \":*)",
       "Bash(grep -r \"region_id\" /c/Users/k1s4l/OneDrive/Desktop/Repos/austin-cultural-map/data/*.js --include=\"*.js\")",
       "Bash(node -e \"const j=JSON.parse\\(require\\(''''fs''''\\).readFileSync\\(''''/dev/stdin'''',''''utf8''''\\)\\); const dn=Object.values\\(j\\).filter\\(v=>!v.merge_into\\).map\\(v=>v.display_name\\); const unique = new Set\\(dn\\); console.log\\(''''Total display entries \\(excl merged secondaries\\):'''', dn.length\\); console.log\\(''''Unique display names:'''', unique.size\\); const dupes = dn.filter\\(\\(v,i,a\\) => a.indexOf\\(v\\) !== i\\); console.log\\(''''Remaining duplicates:'''', [...new Set\\(dupes\\)]\\);\")",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''scripts/gemini_google_maps_names.py''\\).read\\(\\)\\); print\\(''gemini script: OK''\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''scripts/apply_google_maps_names.py''\\).read\\(\\)\\); print\\(''apply script: OK''\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(python scripts/gemini_google_maps_names.py)",
+      "Bash(python scripts/gemini_retry_failed.py)",
+      "Bash(python scripts/apply_google_maps_names.py --dry-run)",
+      "Bash(python scripts/audit_region_names.py)",
+      "Bash(curl -sI \"https://data.austintexas.gov/api/views/a7ap-j2yt/rows.csv?accessType=DOWNLOAD\")",
+      "Bash(curl -sL \"https://data.austintexas.gov/resource/inrm-c3ee.geojson?$limit=5\")",
+      "Bash(python scripts/build_master_remap.py)",
+      "Bash(python scripts/apply_google_maps_names.py)"
     ]
   }
 }
