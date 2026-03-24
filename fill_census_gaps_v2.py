@@ -306,40 +306,65 @@ def download_crosswalk_2010_2020(cache_dir):
       tract2010_to_2020: { '48453XXXXXX': [('48453YYYYYY', area_weight), ...] }
       tract2020_to_2010: { '48453YYYYYY': [('48453XXXXXX', area_weight), ...] }
     """
-    cache_path = os.path.join(cache_dir, "crosswalk_2010_2020.json")
+    cache_path = os.path.join(cache_dir, "crosswalk_2010_2020_v2.json")
     if os.path.exists(cache_path):
         log.info("Loading cached 2010→2020 crosswalk...")
         with open(cache_path) as f:
             data = json.load(f)
-        return data["fwd"], data["rev"]
+        if data.get("fwd"):  # Only use cache if it actually has data
+            return data["fwd"], data["rev"]
+        else:
+            log.info("  Cache was empty, re-downloading...")
 
     log.info("Downloading 2010→2020 tract crosswalk (one-time, ~30MB)...")
     resp = requests.get(CROSSWALK_2010_2020_URL, timeout=120)
     resp.raise_for_status()
+    
+    # Strip BOM if present
+    text = resp.text
+    if text.startswith('\ufeff'):
+        text = text[1:]
 
     fwd = defaultdict(list)  # 2010 → [(2020, weight)]
     rev = defaultdict(list)  # 2020 → [(2010, weight)]
 
-    lines = resp.text.strip().split("\n")
+    lines = text.strip().split("\n")
     header = lines[0]
-    
+
+    # Actual columns (pipe-delimited):
+    # [0]  OID_TRACT_20
+    # [1]  GEOID_TRACT_20
+    # [2]  NAMELSAD_TRACT_20
+    # [3]  AREALAND_TRACT_20
+    # [4]  AREAWATER_TRACT_20
+    # [5]  MTFCC_TRACT_20
+    # [6]  FUNCSTAT_TRACT_20
+    # [7]  OID_TRACT_10
+    # [8]  GEOID_TRACT_10
+    # [9]  NAMELSAD_TRACT_10
+    # [10] AREALAND_TRACT_10   ← denominator for weight
+    # [11] AREAWATER_TRACT_10
+    # [12] MTFCC_TRACT_10
+    # [13] FUNCSTAT_TRACT_10
+    # [14] AREALAND_PART       ← numerator for weight
+    # [15] AREAWATER_PART
+
     for line in lines[1:]:
         fields = line.split("|")
-        if len(fields) < 8:
+        if len(fields) < 15:
             continue
 
-        # Fields: GEOID_TRACT_20|GEOID_TRACT_10|...
-        geoid_2020 = fields[0].strip()
-        geoid_2010 = fields[1].strip()
+        geoid_2020 = fields[1].strip()
+        geoid_2010 = fields[8].strip()
 
         # Only keep Travis County
         if not geoid_2020.startswith(FULL_COUNTY_FIPS):
             continue
 
-        # AREALAND_PART field (area of intersection)
+        # Area-weighted: weight = area of intersection / area of 2010 tract
         try:
-            area_part = float(fields[4].strip()) if fields[4].strip() else 0
-            area_2010 = float(fields[6].strip()) if fields[6].strip() else 0
+            area_part = float(fields[14].strip()) if fields[14].strip() else 0
+            area_2010 = float(fields[10].strip()) if fields[10].strip() else 0
         except (ValueError, IndexError):
             continue
 
