@@ -205,25 +205,25 @@ const ACS_SOCIO_VARS_2010 = [
   "B19083_001E", // gini coefficient
 ];
 
-// 2000 SF1 uses different variable names
+// 2000 SF1 — use P004 table for Not-Hispanic race breakdown
 const SF1_2000_VARS = [
   "P001001", // total population
-  "P003003", // white alone
-  "P003004", // black alone
-  "P003006", // asian alone
+  "P004005", // not hispanic, white alone
+  "P004006", // not hispanic, black alone
+  "P004008", // not hispanic, asian alone
   "P004002", // hispanic/latino
   "H001001", // total housing units
   "H003001", // total occupied housing
   "H003002", // owner-occupied
 ];
 
-// 2010 SF1 variables
+// 2010 SF1 — use P005 table for Not-Hispanic race breakdown
 const SF1_2010_VARS = [
   "P001001", // total population
-  "P003002", // white alone
-  "P003003", // black alone
-  "P003005", // asian alone
-  "P004003", // hispanic/latino
+  "P005003", // not hispanic, white alone
+  "P005004", // not hispanic, black alone
+  "P005006", // not hispanic, asian alone
+  "P005010", // hispanic/latino
   "H001001", // total housing units
   "H003001", // total occupied housing
   "H003002", // owner-occupied
@@ -289,10 +289,10 @@ function buildDemoRowFromSF1_2010(regionId, regionName, d) {
   const totalPop = d.P001001;
   if (!totalPop || totalPop <= 0) return null;
 
-  const white = d.P003002 ?? 0;
-  const black = d.P003003 ?? 0;
-  const asian = d.P003005 ?? 0;
-  const hispanic = d.P004003 ?? 0;
+  const white = d.P005003 ?? 0;    // Not Hispanic, White alone
+  const black = d.P005004 ?? 0;    // Not Hispanic, Black alone
+  const asian = d.P005006 ?? 0;    // Not Hispanic, Asian alone
+  const hispanic = d.P005010 ?? 0; // Hispanic/Latino
 
   const totalOccupied = d.H003001;
   const ownerOccupied = d.H003002;
@@ -326,10 +326,10 @@ function buildDemoRowFromSF1_2000(regionId, regionName, d) {
   const totalPop = d.P001001;
   if (!totalPop || totalPop <= 0) return null;
 
-  const white = d.P003003 ?? 0;
-  const black = d.P003004 ?? 0;
-  const asian = d.P003006 ?? 0;
-  const hispanic = d.P004002 ?? 0;
+  const white = d.P004005 ?? 0;    // Not Hispanic, White alone
+  const black = d.P004006 ?? 0;    // Not Hispanic, Black alone
+  const asian = d.P004008 ?? 0;    // Not Hispanic, Asian alone
+  const hispanic = d.P004002 ?? 0; // Hispanic/Latino
 
   const totalOccupied = d.H003001;
   const ownerOccupied = d.H003002;
@@ -543,22 +543,78 @@ async function main() {
   console.log(`  Existing: demo=${existingDemo.length}, prop=${existingProp.length}, socio=${existingSocio.length}`);
   console.log(`  New:      demo=${newDemo.length}, prop=${newProp.length}, socio=${newSocio.length}`);
 
-  // Remove duplicates: if new data has same region_id+year as existing, skip existing
+  // Remove duplicates: new data replaces existing for same region_id+year.
+  // Also strip old interpolated 2005 rows — we'll re-interpolate below.
   function dedup(existing, additions) {
     const newKeys = new Set(additions.map((r) => `${r.region_id}_${r.year}`));
-    const kept = existing.filter((r) => !newKeys.has(`${r.region_id}_${r.year}`));
+    const kept = existing.filter((r) => {
+      if (newKeys.has(`${r.region_id}_${r.year}`)) return false;
+      // Remove stale 2005 interpolated rows — will be re-created
+      if (r.year === 2005 && r.audit_source?.includes("Interpolated")) return false;
+      return true;
+    });
     return [...kept, ...additions];
   }
 
-  const mergedDemo = dedup(existingDemo, newDemo);
-  const mergedProp = dedup(existingProp, newProp);
-  const mergedSocio = dedup(existingSocio, newSocio);
+  let mergedDemo = dedup(existingDemo, newDemo);
+  let mergedProp = dedup(existingProp, newProp);
+  let mergedSocio = dedup(existingSocio, newSocio);
 
   // Sort by region_id then year
   const sortFn = (a, b) => a.region_id - b.region_id || a.year - b.year;
   mergedDemo.sort(sortFn);
   mergedProp.sort(sortFn);
   mergedSocio.sort(sortFn);
+
+  // ── Interpolate 2005 from corrected 2000 and 2010 data ──────────────
+  console.log("\n--- Interpolating 2005 ---");
+  function interpolateRows(rows, targetYear) {
+    const byRegion = new Map();
+    rows.forEach((r) => {
+      if (!byRegion.has(r.region_id)) byRegion.set(r.region_id, []);
+      byRegion.get(r.region_id).push(r);
+    });
+
+    const interpolated = [];
+    for (const [rid, regionRows] of byRegion) {
+      regionRows.sort((a, b) => a.year - b.year);
+      // Skip if already has this year
+      if (regionRows.some((r) => r.year === targetYear)) continue;
+      const before = regionRows.filter((r) => r.year < targetYear).pop();
+      const after = regionRows.find((r) => r.year > targetYear);
+      if (!before || !after) continue;
+
+      const t = (targetYear - before.year) / (after.year - before.year);
+      const interp = { ...before, year: targetYear };
+      const numericFields = [
+        "total_population", "median_age",
+        "pct_hispanic", "pct_white_non_hispanic", "pct_black_non_hispanic", "pct_asian",
+        "pct_foreign_born", "pct_owner_occupied", "rent_burden_pct",
+        "pct_bachelors_degree_or_higher", "pct_65_and_over",
+        "median_home_value", "median_rent_monthly", "total_housing_units", "vacancy_rate",
+        "median_household_income", "poverty_rate", "unemployment_rate", "gini_coefficient",
+      ];
+      for (const f of numericFields) {
+        const a = before[f], b = after[f];
+        if (a != null && b != null) {
+          interp[f] = +(a + t * (b - a)).toFixed(2);
+        } else {
+          interp[f] = a ?? b ?? null;
+        }
+      }
+      interp.audit_source = `Interpolated from ${before.year} and ${after.year}`;
+      interp.audit_confidence = "medium";
+      interp.audit_notes = `Linear interpolation between ${before.year} and ${after.year}`;
+      interp.audit_flags = ["INTERPOLATED"];
+      interp.audit_timestamp = new Date().toISOString();
+      interpolated.push(interp);
+    }
+    return interpolated;
+  }
+
+  const demo2005 = interpolateRows(mergedDemo, 2005);
+  mergedDemo = [...mergedDemo, ...demo2005].sort(sortFn);
+  console.log(`  Demo 2005 interpolated: ${demo2005.length} rows`);
 
   console.log(`  Merged:   demo=${mergedDemo.length}, prop=${mergedProp.length}, socio=${mergedSocio.length}`);
 
@@ -603,7 +659,7 @@ async function main() {
 
   // ── Summary ───────────────────────────────────────────────────────────
   console.log("\n=== Summary ===");
-  const years = [2000, 2010, 2015, 2020, 2023];
+  const years = [2000, 2005, 2010, 2015, 2020, 2023];
   for (const yr of years) {
     const dc = mergedDemo.filter((r) => r.year === yr).length;
     const pc = mergedProp.filter((r) => r.year === yr).length;
