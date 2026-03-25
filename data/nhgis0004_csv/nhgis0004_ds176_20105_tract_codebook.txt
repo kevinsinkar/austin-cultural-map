@@ -1,0 +1,387 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0004_ds176_20105_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2006-2010
+Geographic level: Census Tract (by State--County)
+Extent:           All areas
+Dataset:          2010 American Community Survey: 5-Year Data [2006-2010, Block Groups & Larger Areas]
+   NHGIS code:    2006_2010_ACS5a
+   NHGIS ID:      ds176
+Breakdown(s):     Geographic Component:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  JLZ
+ 
+2. Median Age by Sex
+   Universe:    Total population
+   Source code: B01002
+   NHGIS code:  JL0
+ 
+3. Sex by Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: B15002
+   NHGIS code:  JN9
+ 
+4. Gross Rent as a Percentage of Household Income in the Past 12 Months
+   Universe:    Renter-occupied housing units
+   Source code: B25070
+   NHGIS code:  JTB
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State Postal Abbreviation
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIHHTLI:     American Indian Trust Land/ Hawaiian Home Land Indicator
+        AITSCEA:     Tribal Subdivision/Remainder Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (111th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PCI:         Principal City Indicator
+        PUMAA:       Public Use Microdata Area Code
+        GEOID:       Geographic Identifier
+        BTTRA:       Tribal Census Tract Code
+        BTBGA:       Tribal Block Group Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  JLZ
+        JLZE001:     Total
+        JLZE002:     Male
+        JLZE003:     Male: Under 5 years
+        JLZE004:     Male: 5 to 9 years
+        JLZE005:     Male: 10 to 14 years
+        JLZE006:     Male: 15 to 17 years
+        JLZE007:     Male: 18 and 19 years
+        JLZE008:     Male: 20 years
+        JLZE009:     Male: 21 years
+        JLZE010:     Male: 22 to 24 years
+        JLZE011:     Male: 25 to 29 years
+        JLZE012:     Male: 30 to 34 years
+        JLZE013:     Male: 35 to 39 years
+        JLZE014:     Male: 40 to 44 years
+        JLZE015:     Male: 45 to 49 years
+        JLZE016:     Male: 50 to 54 years
+        JLZE017:     Male: 55 to 59 years
+        JLZE018:     Male: 60 and 61 years
+        JLZE019:     Male: 62 to 64 years
+        JLZE020:     Male: 65 and 66 years
+        JLZE021:     Male: 67 to 69 years
+        JLZE022:     Male: 70 to 74 years
+        JLZE023:     Male: 75 to 79 years
+        JLZE024:     Male: 80 to 84 years
+        JLZE025:     Male: 85 years and over
+        JLZE026:     Female
+        JLZE027:     Female: Under 5 years
+        JLZE028:     Female: 5 to 9 years
+        JLZE029:     Female: 10 to 14 years
+        JLZE030:     Female: 15 to 17 years
+        JLZE031:     Female: 18 and 19 years
+        JLZE032:     Female: 20 years
+        JLZE033:     Female: 21 years
+        JLZE034:     Female: 22 to 24 years
+        JLZE035:     Female: 25 to 29 years
+        JLZE036:     Female: 30 to 34 years
+        JLZE037:     Female: 35 to 39 years
+        JLZE038:     Female: 40 to 44 years
+        JLZE039:     Female: 45 to 49 years
+        JLZE040:     Female: 50 to 54 years
+        JLZE041:     Female: 55 to 59 years
+        JLZE042:     Female: 60 and 61 years
+        JLZE043:     Female: 62 to 64 years
+        JLZE044:     Female: 65 and 66 years
+        JLZE045:     Female: 67 to 69 years
+        JLZE046:     Female: 70 to 74 years
+        JLZE047:     Female: 75 to 79 years
+        JLZE048:     Female: 80 to 84 years
+        JLZE049:     Female: 85 years and over
+ 
+    Table 2:     Median Age by Sex
+    Universe:    Total population
+    Source code: B01002
+    NHGIS code:  JL0
+        JL0E001:     Median age: Total
+        JL0E002:     Median age: Male
+        JL0E003:     Median age: Female
+ 
+    Table 3:     Sex by Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15002
+    NHGIS code:  JN9
+        JN9E001:     Total
+        JN9E002:     Male
+        JN9E003:     Male: No schooling completed
+        JN9E004:     Male: Nursery to 4th grade
+        JN9E005:     Male: 5th and 6th grade
+        JN9E006:     Male: 7th and 8th grade
+        JN9E007:     Male: 9th grade
+        JN9E008:     Male: 10th grade
+        JN9E009:     Male: 11th grade
+        JN9E010:     Male: 12th grade, no diploma
+        JN9E011:     Male: High school graduate, GED, or alternative
+        JN9E012:     Male: Some college, less than 1 year
+        JN9E013:     Male: Some college, 1 or more years, no degree
+        JN9E014:     Male: Associate's degree
+        JN9E015:     Male: Bachelor's degree
+        JN9E016:     Male: Master's degree
+        JN9E017:     Male: Professional school degree
+        JN9E018:     Male: Doctorate degree
+        JN9E019:     Female
+        JN9E020:     Female: No schooling completed
+        JN9E021:     Female: Nursery to 4th grade
+        JN9E022:     Female: 5th and 6th grade
+        JN9E023:     Female: 7th and 8th grade
+        JN9E024:     Female: 9th grade
+        JN9E025:     Female: 10th grade
+        JN9E026:     Female: 11th grade
+        JN9E027:     Female: 12th grade, no diploma
+        JN9E028:     Female: High school graduate, GED, or alternative
+        JN9E029:     Female: Some college, less than 1 year
+        JN9E030:     Female: Some college, 1 or more years, no degree
+        JN9E031:     Female: Associate's degree
+        JN9E032:     Female: Bachelor's degree
+        JN9E033:     Female: Master's degree
+        JN9E034:     Female: Professional school degree
+        JN9E035:     Female: Doctorate degree
+ 
+    Table 4:     Gross Rent as a Percentage of Household Income in the Past 12 Months
+    Universe:    Renter-occupied housing units
+    Source code: B25070
+    NHGIS code:  JTB
+        JTBE001:     Total
+        JTBE002:     Less than 10.0 percent
+        JTBE003:     10.0 to 14.9 percent
+        JTBE004:     15.0 to 19.9 percent
+        JTBE005:     20.0 to 24.9 percent
+        JTBE006:     25.0 to 29.9 percent
+        JTBE007:     30.0 to 34.9 percent
+        JTBE008:     35.0 to 39.9 percent
+        JTBE009:     40.0 to 49.9 percent
+        JTBE010:     50.0 percent or more
+        JTBE011:     Not computed
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  JLZ
+        JLZM001:     Total
+        JLZM002:     Male
+        JLZM003:     Male: Under 5 years
+        JLZM004:     Male: 5 to 9 years
+        JLZM005:     Male: 10 to 14 years
+        JLZM006:     Male: 15 to 17 years
+        JLZM007:     Male: 18 and 19 years
+        JLZM008:     Male: 20 years
+        JLZM009:     Male: 21 years
+        JLZM010:     Male: 22 to 24 years
+        JLZM011:     Male: 25 to 29 years
+        JLZM012:     Male: 30 to 34 years
+        JLZM013:     Male: 35 to 39 years
+        JLZM014:     Male: 40 to 44 years
+        JLZM015:     Male: 45 to 49 years
+        JLZM016:     Male: 50 to 54 years
+        JLZM017:     Male: 55 to 59 years
+        JLZM018:     Male: 60 and 61 years
+        JLZM019:     Male: 62 to 64 years
+        JLZM020:     Male: 65 and 66 years
+        JLZM021:     Male: 67 to 69 years
+        JLZM022:     Male: 70 to 74 years
+        JLZM023:     Male: 75 to 79 years
+        JLZM024:     Male: 80 to 84 years
+        JLZM025:     Male: 85 years and over
+        JLZM026:     Female
+        JLZM027:     Female: Under 5 years
+        JLZM028:     Female: 5 to 9 years
+        JLZM029:     Female: 10 to 14 years
+        JLZM030:     Female: 15 to 17 years
+        JLZM031:     Female: 18 and 19 years
+        JLZM032:     Female: 20 years
+        JLZM033:     Female: 21 years
+        JLZM034:     Female: 22 to 24 years
+        JLZM035:     Female: 25 to 29 years
+        JLZM036:     Female: 30 to 34 years
+        JLZM037:     Female: 35 to 39 years
+        JLZM038:     Female: 40 to 44 years
+        JLZM039:     Female: 45 to 49 years
+        JLZM040:     Female: 50 to 54 years
+        JLZM041:     Female: 55 to 59 years
+        JLZM042:     Female: 60 and 61 years
+        JLZM043:     Female: 62 to 64 years
+        JLZM044:     Female: 65 and 66 years
+        JLZM045:     Female: 67 to 69 years
+        JLZM046:     Female: 70 to 74 years
+        JLZM047:     Female: 75 to 79 years
+        JLZM048:     Female: 80 to 84 years
+        JLZM049:     Female: 85 years and over
+ 
+    Table 2:     Median Age by Sex
+    Universe:    Total population
+    Source code: B01002
+    NHGIS code:  JL0
+        JL0M001:     Median age: Total
+        JL0M002:     Median age: Male
+        JL0M003:     Median age: Female
+ 
+    Table 3:     Sex by Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15002
+    NHGIS code:  JN9
+        JN9M001:     Total
+        JN9M002:     Male
+        JN9M003:     Male: No schooling completed
+        JN9M004:     Male: Nursery to 4th grade
+        JN9M005:     Male: 5th and 6th grade
+        JN9M006:     Male: 7th and 8th grade
+        JN9M007:     Male: 9th grade
+        JN9M008:     Male: 10th grade
+        JN9M009:     Male: 11th grade
+        JN9M010:     Male: 12th grade, no diploma
+        JN9M011:     Male: High school graduate, GED, or alternative
+        JN9M012:     Male: Some college, less than 1 year
+        JN9M013:     Male: Some college, 1 or more years, no degree
+        JN9M014:     Male: Associate's degree
+        JN9M015:     Male: Bachelor's degree
+        JN9M016:     Male: Master's degree
+        JN9M017:     Male: Professional school degree
+        JN9M018:     Male: Doctorate degree
+        JN9M019:     Female
+        JN9M020:     Female: No schooling completed
+        JN9M021:     Female: Nursery to 4th grade
+        JN9M022:     Female: 5th and 6th grade
+        JN9M023:     Female: 7th and 8th grade
+        JN9M024:     Female: 9th grade
+        JN9M025:     Female: 10th grade
+        JN9M026:     Female: 11th grade
+        JN9M027:     Female: 12th grade, no diploma
+        JN9M028:     Female: High school graduate, GED, or alternative
+        JN9M029:     Female: Some college, less than 1 year
+        JN9M030:     Female: Some college, 1 or more years, no degree
+        JN9M031:     Female: Associate's degree
+        JN9M032:     Female: Bachelor's degree
+        JN9M033:     Female: Master's degree
+        JN9M034:     Female: Professional school degree
+        JN9M035:     Female: Doctorate degree
+ 
+    Table 4:     Gross Rent as a Percentage of Household Income in the Past 12 Months
+    Universe:    Renter-occupied housing units
+    Source code: B25070
+    NHGIS code:  JTB
+        JTBM001:     Total
+        JTBM002:     Less than 10.0 percent
+        JTBM003:     10.0 to 14.9 percent
+        JTBM004:     15.0 to 19.9 percent
+        JTBM005:     20.0 to 24.9 percent
+        JTBM006:     25.0 to 29.9 percent
+        JTBM007:     30.0 to 34.9 percent
+        JTBM008:     35.0 to 39.9 percent
+        JTBM009:     40.0 to 49.9 percent
+        JTBM010:     50.0 percent or more
+        JTBM011:     Not computed
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Jonathan Schroeder, David Van Riper, Steven Manson, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 20.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2025. 
+        http://doi.org/10.18128/D050.V20.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

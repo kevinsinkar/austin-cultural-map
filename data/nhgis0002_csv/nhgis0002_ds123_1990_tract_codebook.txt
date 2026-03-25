@@ -1,0 +1,389 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0002_ds123_1990_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             1990
+Geographic level: Census Tract (by State--County)
+Extent:           All areas
+Dataset:          1990 Census: STF 3 - Sample-Based Data
+   NHGIS code:    1990_STF3
+   NHGIS ID:      ds123
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Persons
+   Universe:    Persons
+   Source code: NP1
+   NHGIS code:  E0H
+ 
+2. Urban and Rural
+   Universe:    Persons
+   Source code: NP6
+   NHGIS code:  E36
+ 
+3. Race
+   Universe:    Persons
+   Source code: NP8
+   NHGIS code:  E4S
+ 
+4. Hispanic Origin by Race
+   Universe:    Persons
+   Source code: NP12
+   NHGIS code:  E1A
+ 
+5. Sex by Age
+   Universe:    Persons of Hispanic Origin
+   Source code: NP15
+   NHGIS code:  E17
+ 
+6. Age by Citizenship
+   Universe:    Persons
+   Source code: NP37
+   NHGIS code:  E3G
+ 
+7. Place of Birth
+   Universe:    Persons
+   Source code: NP42
+   NHGIS code:  E3N
+ 
+8. Educational Attainment
+   Universe:    Persons 25 years and over
+   Source code: NP57
+   NHGIS code:  E33
+ 
+9. Median Household Income in 1989
+   Universe:    Households
+   Source code: NP80A
+   NHGIS code:  E4U
+ 
+10. Poverty Status in 1989 by Age
+    Universe:    Persons for whom poverty status is determined
+    Source code: NP117
+    NHGIS code:  E07
+ 
+11. Tenure
+    Universe:    Occupied housing units
+    Source code: NH8
+    NHGIS code:  EZ2
+ 
+12. Gross Rent
+    Universe:    Specified renter-occupied housing units
+    Source code: NH43
+    NHGIS code:  EYT
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State/US Abbreviation
+        ANRCA:       Alaska Native Regional Corporation Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Reservation [excluding trust lands] Code
+        TRUSTA:      American Indian Reservation [trust lands only] Code
+        AIANCC:      American Indian/Alaska Native Area Class Code
+        RES_TRSTA:   Reservation/Trust Lands Code
+        BLCK_GRPA:   Block Group Code
+        TRACTA:      Census Tract Code
+        CD101A:      Congressional District (101st) Code
+        C_CITYA:     Consolidated City Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    County Subdivision Class Code
+        DIVISIONA:   Division Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        PLACEA:      Place Code
+        PLACECC:     Place Class Code
+        PLACEDC:     Place Description Code
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        REGIONA:     Region Code
+        STATE:       State Name
+        STATEA:      State Code
+        URBRURALA:   Urban/Rural Code
+        URB_AREAA:   Urban Area Code
+        ZIPA:        5-Digit ZIP Code Code
+        CD103A:      Congressional District (103rd) Code
+        AREALAND:    Area (land)
+        AREAWAT:     Area (Water)
+        ANPSADPI:    Area Name/PSAD Term/Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (latitude)
+        INTPTLNG:    Internal Point (longitude)
+        PSADC:       Political/Statistical Area Description Code
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Persons
+    Universe:    Persons
+    Source code: NP1
+    NHGIS code:  E0H
+        E0H001:      Total
+ 
+    Table 2:     Urban and Rural
+    Universe:    Persons
+    Source code: NP6
+    NHGIS code:  E36
+        E36001:      Urban: Inside urbanized area
+        E36002:      Urban: Outside urbanized area
+        E36003:      Rural: Farm
+        E36004:      Rural: Nonfarm
+ 
+    Table 3:     Race
+    Universe:    Persons
+    Source code: NP8
+    NHGIS code:  E4S
+        E4S001:      White
+        E4S002:      Black
+        E4S003:      American Indian, Eskimo, or Aleut
+        E4S004:      Asian or Pacific Islander
+        E4S005:      Other race
+ 
+    Table 4:     Hispanic Origin by Race
+    Universe:    Persons
+    Source code: NP12
+    NHGIS code:  E1A
+        E1A001:      Not of Hispanic origin >> White
+        E1A002:      Not of Hispanic origin >> Black
+        E1A003:      Not of Hispanic origin >> American Indian, Eskimo, or Aleut
+        E1A004:      Not of Hispanic origin >> Asian or Pacific Islander
+        E1A005:      Not of Hispanic origin >> Other race
+        E1A006:      Hispanic origin >> White
+        E1A007:      Hispanic origin >> Black
+        E1A008:      Hispanic origin >> American Indian, Eskimo, or Aleut
+        E1A009:      Hispanic origin >> Asian or Pacific Islander
+        E1A010:      Hispanic origin >> Other race
+ 
+    Table 5:     Sex by Age
+    Universe:    Persons of Hispanic Origin
+    Source code: NP15
+    NHGIS code:  E17
+        E17001:      Male >> Under 1 year
+        E17002:      Male >> 1 and 2 years
+        E17003:      Male >> 3 and 4 years
+        E17004:      Male >> 5 years
+        E17005:      Male >> 6 years
+        E17006:      Male >> 7 to 9 years
+        E17007:      Male >> 10 and 11 years
+        E17008:      Male >> 12 and 13 years
+        E17009:      Male >> 14 years
+        E17010:      Male >> 15 years
+        E17011:      Male >> 16 years
+        E17012:      Male >> 17 years
+        E17013:      Male >> 18 years
+        E17014:      Male >> 19 years
+        E17015:      Male >> 20 years
+        E17016:      Male >> 21 years
+        E17017:      Male >> 22 to 24 years
+        E17018:      Male >> 25 to 29 years
+        E17019:      Male >> 30 to 34 years
+        E17020:      Male >> 35 to 39 years
+        E17021:      Male >> 40 to 44 years
+        E17022:      Male >> 45 to 49 years
+        E17023:      Male >> 50 to 54 years
+        E17024:      Male >> 55 to 59 years
+        E17025:      Male >> 60 and 61 years
+        E17026:      Male >> 62 to 64 years
+        E17027:      Male >> 65 to 69 years
+        E17028:      Male >> 70 to 74 years
+        E17029:      Male >> 75 to 79 years
+        E17030:      Male >> 80 to 84 years
+        E17031:      Male >> 85 years and over
+        E17032:      Female >> Under 1 year
+        E17033:      Female >> 1 and 2 years
+        E17034:      Female >> 3 and 4 years
+        E17035:      Female >> 5 years
+        E17036:      Female >> 6 years
+        E17037:      Female >> 7 to 9 years
+        E17038:      Female >> 10 and 11 years
+        E17039:      Female >> 12 and 13 years
+        E17040:      Female >> 14 years
+        E17041:      Female >> 15 years
+        E17042:      Female >> 16 years
+        E17043:      Female >> 17 years
+        E17044:      Female >> 18 years
+        E17045:      Female >> 19 years
+        E17046:      Female >> 20 years
+        E17047:      Female >> 21 years
+        E17048:      Female >> 22 to 24 years
+        E17049:      Female >> 25 to 29 years
+        E17050:      Female >> 30 to 34 years
+        E17051:      Female >> 35 to 39 years
+        E17052:      Female >> 40 to 44 years
+        E17053:      Female >> 45 to 49 years
+        E17054:      Female >> 50 to 54 years
+        E17055:      Female >> 55 to 59 years
+        E17056:      Female >> 60 and 61 years
+        E17057:      Female >> 62 to 64 years
+        E17058:      Female >> 65 to 69 years
+        E17059:      Female >> 70 to 74 years
+        E17060:      Female >> 75 to 79 years
+        E17061:      Female >> 80 to 84 years
+        E17062:      Female >> 85 years and over
+ 
+    Table 6:     Age by Citizenship
+    Universe:    Persons
+    Source code: NP37
+    NHGIS code:  E3G
+        E3G001:      Under 18 years >> Native
+        E3G002:      Under 18 years >> Foreign born: Naturalized citizen
+        E3G003:      Under 18 years >> Foreign born: Not a citizen
+        E3G004:      18 years and over >> Native
+        E3G005:      18 years and over >> Foreign born: Naturalized citizen
+        E3G006:      18 years and over >> Foreign born: Not a citizen
+ 
+    Table 7:     Place of Birth
+    Universe:    Persons
+    Source code: NP42
+    NHGIS code:  E3N
+        E3N001:      Native (001-099): Born in State of residence
+        E3N002:      Native (001-099): Born in other State in the United States (001-059): Northeast (009, 023, 025, 033-034, 036, 042-044, 050)
+        E3N003:      Native (001-099): Born in other State in the United States (001-059): Midwest (017-020, 026-027, 029, 031, 038-039, 046, 055)
+        E3N004:      Native (001-099): Born in other State in the United States (001-059): South (001, 005, 010-014, 021-022, 024, 028, 037, 040, 045, 047-048, 051-052, 054)
+        E3N005:      Native (001-099): Born in other State in the United States (001-059): West (002-004, 006-008, 015-016, 030, 032, 035, 041, 049, 053, 056-059)
+        E3N006:      Native (001-099): Born outside the United States (060-099): Puerto Rico (072-075)
+        E3N007:      Native (001-099): Born outside the United States (060-099): U.S. outlying area (060-071, 076-099)
+        E3N008:      Native (001-099): Born outside the United States (060-099): Born abroad of American parent(s)
+        E3N009:      Foreign born (100-999)
+ 
+    Table 8:     Educational Attainment
+    Universe:    Persons 25 years and over
+    Source code: NP57
+    NHGIS code:  E33
+        E33001:      Less than 9th grade
+        E33002:      9th to 12th grade, no diploma
+        E33003:      High school graduate (includes equivalency)
+        E33004:      Some college, no degree
+        E33005:      Associate degree
+        E33006:      Bachelor's degree
+        E33007:      Graduate or professional degree
+ 
+    Table 9:     Median Household Income in 1989
+    Universe:    Households
+    Source code: NP80A
+    NHGIS code:  E4U
+        E4U001:      Median household income in 1989
+ 
+    Table 10:    Poverty Status in 1989 by Age
+    Universe:    Persons for whom poverty status is determined
+    Source code: NP117
+    NHGIS code:  E07
+        E07001:      Income in 1989 above poverty level >> Under 5 years
+        E07002:      Income in 1989 above poverty level >> 5 years
+        E07003:      Income in 1989 above poverty level >> 6 to 11 years
+        E07004:      Income in 1989 above poverty level >> 12 to 17 years
+        E07005:      Income in 1989 above poverty level >> 18 to 24 years
+        E07006:      Income in 1989 above poverty level >> 25 to 34 years
+        E07007:      Income in 1989 above poverty level >> 35 to 44 years
+        E07008:      Income in 1989 above poverty level >> 45 to 54 years
+        E07009:      Income in 1989 above poverty level >> 55 to 59 years
+        E07010:      Income in 1989 above poverty level >> 60 to 64 years
+        E07011:      Income in 1989 above poverty level >> 65 to 74 years
+        E07012:      Income in 1989 above poverty level >> 75 years and over
+        E07013:      Income in 1989 below poverty level >> Under 5 years
+        E07014:      Income in 1989 below poverty level >> 5 years
+        E07015:      Income in 1989 below poverty level >> 6 to 11 years
+        E07016:      Income in 1989 below poverty level >> 12 to 17 years
+        E07017:      Income in 1989 below poverty level >> 18 to 24 years
+        E07018:      Income in 1989 below poverty level >> 25 to 34 years
+        E07019:      Income in 1989 below poverty level >> 35 to 44 years
+        E07020:      Income in 1989 below poverty level >> 45 to 54 years
+        E07021:      Income in 1989 below poverty level >> 55 to 59 years
+        E07022:      Income in 1989 below poverty level >> 60 to 64 years
+        E07023:      Income in 1989 below poverty level >> 65 to 74 years
+        E07024:      Income in 1989 below poverty level >> 75 years and over
+ 
+    Table 11:    Tenure
+    Universe:    Occupied housing units
+    Source code: NH8
+    NHGIS code:  EZ2
+        EZ2001:      Owner occupied
+        EZ2002:      Renter occupied
+ 
+    Table 12:    Gross Rent
+    Universe:    Specified renter-occupied housing units
+    Source code: NH43
+    NHGIS code:  EYT
+        EYT001:      With cash rent: Less than $100
+        EYT002:      With cash rent: $100 to $149
+        EYT003:      With cash rent: $150 to $199
+        EYT004:      With cash rent: $200 to $249
+        EYT005:      With cash rent: $250 to $299
+        EYT006:      With cash rent: $300 to $349
+        EYT007:      With cash rent: $350 to $399
+        EYT008:      With cash rent: $400 to $449
+        EYT009:      With cash rent: $450 to $499
+        EYT010:      With cash rent: $500 to $549
+        EYT011:      With cash rent: $550 to $599
+        EYT012:      With cash rent: $600 to $649
+        EYT013:      With cash rent: $650 to $699
+        EYT014:      With cash rent: $700 to $749
+        EYT015:      With cash rent: $750 to $999
+        EYT016:      With cash rent: $1,000 or more
+        EYT017:      With cash rent: No cash rent
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Jonathan Schroeder, David Van Riper, Steven Manson, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 20.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2025. 
+        http://doi.org/10.18128/D050.V20.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

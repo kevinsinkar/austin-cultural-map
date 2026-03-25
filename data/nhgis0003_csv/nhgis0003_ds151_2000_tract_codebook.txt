@@ -1,0 +1,327 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0003_ds151_2000_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2000
+Geographic level: Census Tract (by State--County)
+Extent:           All areas
+Dataset:          2000 Census: SF 3a - Sample-Based Data [Areas Larger Than Block Groups]
+   NHGIS code:    2000_SF3a
+   NHGIS ID:      ds151
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Population by Sex by Age
+   Universe:    Persons
+   Source code: NP008B
+   NHGIS code:  GHL
+ 
+2. Nativity
+   Universe:    Persons
+   Source code: NP021A
+   NHGIS code:  GI8
+ 
+3. Population 25 Years and Over by Sex by Educational Attainment
+   Universe:    Persons 25 Years and Over
+   Source code: NP037C
+   NHGIS code:  GKT
+ 
+4. Median Household Income in 1999
+   Universe:    Households
+   Source code: NP053A
+   NHGIS code:  GMY
+ 
+5. Poverty Status in 1999
+   Universe:    Persons for Whom Poverty Status Is Determined
+   Source code: NP087B
+   NHGIS code:  GN6
+ 
+6. Tenure
+   Universe:    Occupied Housing Units
+   Source code: NH007A
+   NHGIS code:  F9C
+ 
+7. Gross Rent as a Percentage of Household Income in 1999
+   Universe:    Specified Renter-Occupied Housing Units
+   Source code: NH069A
+   NHGIS code:  GBW
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      File Identification
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    FIPS County Subdivion Class Code
+        PLACEA:      Place Code
+        PLACECC:     FIPS Place Class Code
+        PLACEDC:     Place Description Code
+        TRACTA:      Census Tract Code
+        TRBL_CTA:    Tribal Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        TRBL_BGA:    Tribal Block Group Code
+        C_CITYA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIANHHCC:    FIPS American Indian Area/Alaska Native Area/Hawaiian Home Land Class Code
+        AITSCE:      American Indian Tribal Subdivision (Census)
+        TRBL_SUBA:   Tribal Subdivision Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        MACCI:       Metropolitan Area Central City Indicator
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        NECMAA:      New England County Metropolitan Area Code
+        NECMACCI:    New England County Metropolitan Area Central City Indicator
+        URB_AREAA:   Urban Area Code
+        UATYPE:      Urban Area Type
+        URBRURALA:   Urban/Rural Code
+        CD106A:      Congressional District (106th) Code
+        CD108A:      Congressional District (108th) Code
+        CD109A:      Congressional District (109th) Code
+        ZIP3A:       3-Digit ZIP Code Tabulation Area Code
+        ZCTAA:       5-Digit ZIP Code Tabulation Area Code
+        AREALAND:    Area (Land)
+        AREAWATR:    Area (Water)
+        NAME:        Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (Latitude)
+        INTPLON:     Internal Point (Longitude)
+        LSADC:       Legal/Statistical Area Description Code
+        MACC:        Metropolitan Area Central City
+        UACP:        Urban Area Central Place
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Population by Sex by Age
+    Universe:    Persons
+    Source code: NP008B
+    NHGIS code:  GHL
+        GHL001:      Male >> Under 1 year
+        GHL002:      Male >> 1 year
+        GHL003:      Male >> 2 years
+        GHL004:      Male >> 3 years
+        GHL005:      Male >> 4 years
+        GHL006:      Male >> 5 years
+        GHL007:      Male >> 6 years
+        GHL008:      Male >> 7 years
+        GHL009:      Male >> 8 years
+        GHL010:      Male >> 9 years
+        GHL011:      Male >> 10 years
+        GHL012:      Male >> 11 years
+        GHL013:      Male >> 12 years
+        GHL014:      Male >> 13 years
+        GHL015:      Male >> 14 years
+        GHL016:      Male >> 15 years
+        GHL017:      Male >> 16 years
+        GHL018:      Male >> 17 years
+        GHL019:      Male >> 18 years
+        GHL020:      Male >> 19 years
+        GHL021:      Male >> 20 years
+        GHL022:      Male >> 21 years
+        GHL023:      Male >> 22 to 24 years
+        GHL024:      Male >> 25 to 29 years
+        GHL025:      Male >> 30 to 34 years
+        GHL026:      Male >> 35 to 39 years
+        GHL027:      Male >> 40 to 44 years
+        GHL028:      Male >> 45 to 49 years
+        GHL029:      Male >> 50 to 54 years
+        GHL030:      Male >> 55 to 59 years
+        GHL031:      Male >> 60 and 61 years
+        GHL032:      Male >> 62 to 64 years
+        GHL033:      Male >> 65 and 66 years
+        GHL034:      Male >> 67 to 69 years
+        GHL035:      Male >> 70 to 74 years
+        GHL036:      Male >> 75 to 79 years
+        GHL037:      Male >> 80 to 84 years
+        GHL038:      Male >> 85 years and over
+        GHL039:      Female >> Under 1 year
+        GHL040:      Female >> 1 year
+        GHL041:      Female >> 2 years
+        GHL042:      Female >> 3 years
+        GHL043:      Female >> 4 years
+        GHL044:      Female >> 5 years
+        GHL045:      Female >> 6 years
+        GHL046:      Female >> 7 years
+        GHL047:      Female >> 8 years
+        GHL048:      Female >> 9 years
+        GHL049:      Female >> 10 years
+        GHL050:      Female >> 11 years
+        GHL051:      Female >> 12 years
+        GHL052:      Female >> 13 years
+        GHL053:      Female >> 14 years
+        GHL054:      Female >> 15 years
+        GHL055:      Female >> 16 years
+        GHL056:      Female >> 17 years
+        GHL057:      Female >> 18 years
+        GHL058:      Female >> 19 years
+        GHL059:      Female >> 20 years
+        GHL060:      Female >> 21 years
+        GHL061:      Female >> 22 to 24 years
+        GHL062:      Female >> 25 to 29 years
+        GHL063:      Female >> 30 to 34 years
+        GHL064:      Female >> 35 to 39 years
+        GHL065:      Female >> 40 to 44 years
+        GHL066:      Female >> 45 to 49 years
+        GHL067:      Female >> 50 to 54 years
+        GHL068:      Female >> 55 to 59 years
+        GHL069:      Female >> 60 and 61 years
+        GHL070:      Female >> 62 to 64 years
+        GHL071:      Female >> 65 and 66 years
+        GHL072:      Female >> 67 to 69 years
+        GHL073:      Female >> 70 to 74 years
+        GHL074:      Female >> 75 to 79 years
+        GHL075:      Female >> 80 to 84 years
+        GHL076:      Female >> 85 years and over
+ 
+    Table 2:     Nativity
+    Universe:    Persons
+    Source code: NP021A
+    NHGIS code:  GI8
+        GI8001:      Native
+        GI8002:      Foreign born
+ 
+    Table 3:     Population 25 Years and Over by Sex by Educational Attainment
+    Universe:    Persons 25 Years and Over
+    Source code: NP037C
+    NHGIS code:  GKT
+        GKT001:      Male >> No schooling completed
+        GKT002:      Male >> Nursery to 4th grade
+        GKT003:      Male >> 5th and 6th grade
+        GKT004:      Male >> 7th and 8th grade
+        GKT005:      Male >> 9th grade
+        GKT006:      Male >> 10th grade
+        GKT007:      Male >> 11th grade
+        GKT008:      Male >> 12th grade, no diploma
+        GKT009:      Male >> High school graduate (includes equivalency)
+        GKT010:      Male >> Some college, less than 1 year
+        GKT011:      Male >> Some college, 1 or more years, no degree
+        GKT012:      Male >> Associate degree
+        GKT013:      Male >> Bachelor's degree
+        GKT014:      Male >> Master's degree
+        GKT015:      Male >> Professional school degree
+        GKT016:      Male >> Doctorate degree
+        GKT017:      Female >> No schooling completed
+        GKT018:      Female >> Nursery to 4th grade
+        GKT019:      Female >> 5th and 6th grade
+        GKT020:      Female >> 7th and 8th grade
+        GKT021:      Female >> 9th grade
+        GKT022:      Female >> 10th grade
+        GKT023:      Female >> 11th grade
+        GKT024:      Female >> 12th grade, no diploma
+        GKT025:      Female >> High school graduate (includes equivalency)
+        GKT026:      Female >> Some college, less than 1 year
+        GKT027:      Female >> Some college, 1 or more years, no degree
+        GKT028:      Female >> Associate degree
+        GKT029:      Female >> Bachelor's degree
+        GKT030:      Female >> Master's degree
+        GKT031:      Female >> Professional school degree
+        GKT032:      Female >> Doctorate degree
+ 
+    Table 4:     Median Household Income in 1999
+    Universe:    Households
+    Source code: NP053A
+    NHGIS code:  GMY
+        GMY001:      Median income in 1999
+ 
+    Table 5:     Poverty Status in 1999
+    Universe:    Persons for Whom Poverty Status Is Determined
+    Source code: NP087B
+    NHGIS code:  GN6
+        GN6001:      Income in 1999 below poverty level
+        GN6002:      Income in 1999 at or above poverty level
+ 
+    Table 6:     Tenure
+    Universe:    Occupied Housing Units
+    Source code: NH007A
+    NHGIS code:  F9C
+        F9C001:      Owner-occupied
+        F9C002:      Renter-occupied
+ 
+    Table 7:     Gross Rent as a Percentage of Household Income in 1999
+    Universe:    Specified Renter-Occupied Housing Units
+    Source code: NH069A
+    NHGIS code:  GBW
+        GBW001:      Less than 10.0 percent
+        GBW002:      10.0 to 14.9 percent
+        GBW003:      15.0 to 19.9 percent
+        GBW004:      20.0 to 24.9 percent
+        GBW005:      25.0 to 29.9 percent
+        GBW006:      30.0 to 34.9 percent
+        GBW007:      35.0 to 39.9 percent
+        GBW008:      40.0 to 49.9 percent
+        GBW009:      50.0 percent or more
+        GBW010:      Not computed
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Jonathan Schroeder, David Van Riper, Steven Manson, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 20.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2025. 
+        http://doi.org/10.18128/D050.V20.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
