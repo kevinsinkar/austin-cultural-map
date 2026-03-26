@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import methodologyText from "../DATA_METHODOLOGY.md?raw";
 
 export default function AboutModal({ onClose }) {
   const [showMethodology, setShowMethodology] = useState(false);
+  const panelRef = useRef(null);
 
   return (
     <div
@@ -35,6 +36,7 @@ export default function AboutModal({ onClose }) {
           boxShadow: "0 16px 48px rgba(0,0,0,.2)",
           transition: "max-width 0.2s",
         }}
+        ref={panelRef}
         onClick={(e) => e.stopPropagation()}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
@@ -61,7 +63,7 @@ export default function AboutModal({ onClose }) {
         {showMethodology ? (
           <>
             <button
-              onClick={() => setShowMethodology(false)}
+              onClick={() => { setShowMethodology(false); panelRef.current?.scrollTo(0, 0); }}
               style={{ fontSize: 12, color: "#0f766e", background: "none", border: "none", cursor: "pointer", padding: "8px 0 4px", fontWeight: 500 }}
             >
               ← Back to summary
@@ -202,7 +204,7 @@ export default function AboutModal({ onClose }) {
             </p>
             <p style={{ margin: "16px 0 0" }}>
               <button
-                onClick={() => setShowMethodology(true)}
+                onClick={() => { setShowMethodology(true); panelRef.current?.scrollTo(0, 0); }}
                 style={{
                   fontSize: 12, fontWeight: 600, color: "#0f766e", background: "none",
                   border: "none", cursor: "pointer", padding: 0, textDecoration: "underline",
