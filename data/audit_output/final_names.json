@@ -1,0 +1,930 @@
+{
+  "1": {
+    "name": "Mckinney",
+    "basis": "npa-majority 99.1%"
+  },
+  "2": {
+    "name": "North Austin Civic Association",
+    "basis": "npa-majority 83.5%"
+  },
+  "3": {
+    "name": "RMMA",
+    "basis": "npa-majority 93.7%"
+  },
+  "4": {
+    "name": "MLK-183",
+    "basis": "gemini+npa"
+  },
+  "5": {
+    "name": "Windsor Hills",
+    "basis": "gemini+current"
+  },
+  "6": {
+    "name": "North Shoal Creek",
+    "basis": "gemini+current"
+  },
+  "7": {
+    "name": "Barton Creek",
+    "basis": "gemini+current"
+  },
+  "8": {
+    "name": "St. John's",
+    "basis": "gemini+current"
+  },
+  "9": {
+    "name": "Windsor Park",
+    "basis": "gemini+current"
+  },
+  "10": {
+    "name": "Circle C",
+    "basis": "gemini+current"
+  },
+  "11": {
+    "name": "Georgian Acres",
+    "basis": "gemini+current"
+  },
+  "12": {
+    "name": "Springdale",
+    "basis": "gemini+current"
+  },
+  "13": {
+    "name": "Gateway",
+    "basis": "npa-majority 80.1%"
+  },
+  "14": {
+    "name": "North Lamar",
+    "basis": "npa-majority 99.8%"
+  },
+  "15": {
+    "name": "Bouldin Creek",
+    "basis": "npa-majority 99.9%"
+  },
+  "16": {
+    "name": "Montopolis",
+    "basis": "npa-majority 96.9%"
+  },
+  "17": {
+    "name": "Dessau",
+    "basis": "gemini+current"
+  },
+  "18": {
+    "name": "Creedmoor",
+    "basis": "gemini+current"
+  },
+  "19": {
+    "name": "Windsor Hills",
+    "basis": "npa-majority 97.6%"
+  },
+  "21": {
+    "name": "Pleasant Valley",
+    "basis": "npa-majority 77.7%"
+  },
+  "22": {
+    "name": "Milwood",
+    "basis": "gemini+current"
+  },
+  "23": {
+    "name": "Oak Hill",
+    "basis": "gemini+current"
+  },
+  "24": {
+    "name": "Montopolis",
+    "basis": "npa-majority 52.2% (renamed)"
+  },
+  "25": {
+    "name": "Anderson Mill",
+    "basis": "gemini+current"
+  },
+  "26": {
+    "name": "Allandale",
+    "basis": "gemini+current"
+  },
+  "27": {
+    "name": "The Domain",
+    "basis": "gemini+current"
+  },
+  "29": {
+    "name": "Arboretum",
+    "basis": "gemini+current"
+  },
+  "30": {
+    "name": "Harris Ridge",
+    "basis": "gemini+current"
+  },
+  "31": {
+    "name": "Great Hills",
+    "basis": "gemini+current"
+  },
+  "32": {
+    "name": "Balcones Woods",
+    "basis": "gemini+current"
+  },
+  "33": {
+    "name": "Georgian Acres",
+    "basis": "npa-majority 100%"
+  },
+  "34": {
+    "name": "Gracywoods",
+    "basis": "gemini+current"
+  },
+  "35": {
+    "name": "Tech Ridge",
+    "basis": "gemini+current"
+  },
+  "36": {
+    "name": "Balcones Woods",
+    "basis": "gemini+current"
+  },
+  "38": {
+    "name": "Harris Ridge",
+    "basis": "gemini+current"
+  },
+  "39": {
+    "name": "Coronado Hills",
+    "basis": "npa-majority 97.8%"
+  },
+  "40": {
+    "name": "Steiner Ranch",
+    "basis": "gemini+osm"
+  },
+  "41": {
+    "name": "Gracywoods",
+    "basis": "gemini+current"
+  },
+  "42": {
+    "name": "North Burnet",
+    "basis": "gemini+npa"
+  },
+  "43": {
+    "name": "Northwest Hills",
+    "basis": "gemini+current"
+  },
+  "44": {
+    "name": "Harris Branch",
+    "basis": "gemini+current"
+  },
+  "45": {
+    "name": "Lakeway",
+    "basis": "gemini+current"
+  },
+  "46": {
+    "name": "Cat Mountain",
+    "basis": "gemini-high-solo"
+  },
+  "47": {
+    "name": "Pilot Knob",
+    "basis": "gemini+current"
+  },
+  "48": {
+    "name": "Bouldin Creek",
+    "basis": "npa-majority 95.6%"
+  },
+  "49": {
+    "name": "Oak Hill",
+    "basis": "gemini+current"
+  },
+  "51": {
+    "name": "Wells Branch",
+    "basis": "gemini+osm"
+  },
+  "52": {
+    "name": "Wells Branch",
+    "basis": "gemini+osm"
+  },
+  "53": {
+    "name": "Shady Hollow",
+    "basis": "gemini+current"
+  },
+  "54": {
+    "name": "Pflugerville",
+    "basis": "gemini-high-solo"
+  },
+  "55": {
+    "name": "Cherry Creek",
+    "basis": "gemini+current"
+  },
+  "56": {
+    "name": "Shady Hollow",
+    "basis": "gemini+current"
+  },
+  "57": {
+    "name": "St. John",
+    "basis": "npa-majority 99.9%"
+  },
+  "58": {
+    "name": "Wells Branch",
+    "basis": "gemini+current"
+  },
+  "59": {
+    "name": "Pflugerville",
+    "basis": "gemini-high-solo"
+  },
+  "60": {
+    "name": "Onion Creek",
+    "basis": "gemini-high-solo"
+  },
+  "61": {
+    "name": "Pflugerville",
+    "basis": "gemini-high-solo"
+  },
+  "63": {
+    "name": "Barton Creek",
+    "basis": "gemini+current"
+  },
+  "64": {
+    "name": "Onion Creek",
+    "basis": "gemini-high-solo"
+  },
+  "66": {
+    "name": "Montopolis",
+    "basis": "gemini+current"
+  },
+  "68": {
+    "name": "Manor",
+    "basis": "gemini-high-solo"
+  },
+  "70": {
+    "name": "Jollyville",
+    "basis": "gemini+current"
+  },
+  "71": {
+    "name": "Northwood",
+    "basis": "gemini+current"
+  },
+  "72": {
+    "name": "Austin-Bergstrom International Airport",
+    "basis": "gemini-high-solo"
+  },
+  "73": {
+    "name": "Windsor Hills",
+    "basis": "gemini+current"
+  },
+  "74": {
+    "name": "RMMA",
+    "basis": "npa-majority 82.4% (renamed)"
+  },
+  "75": {
+    "name": "Great Hills",
+    "basis": "gemini+current"
+  },
+  "76": {
+    "name": "Montopolis",
+    "basis": "npa-majority 100%"
+  },
+  "77": {
+    "name": "Wildhorse",
+    "basis": "gemini+current"
+  },
+  "78": {
+    "name": "Pleasant Valley",
+    "basis": "npa-majority 84.8%"
+  },
+  "79": {
+    "name": "Upper Boggy Creek",
+    "basis": "npa-majority 64.3%"
+  },
+  "80": {
+    "name": "North University",
+    "basis": "npa-majority 65.5%"
+  },
+  "81": {
+    "name": "UT",
+    "basis": "npa-majority 75.8%"
+  },
+  "82": {
+    "name": "Govalle",
+    "basis": "npa-majority 100%"
+  },
+  "83": {
+    "name": "Rosewood",
+    "basis": "npa-majority 99.3%"
+  },
+  "84": {
+    "name": "Chestnut",
+    "basis": "npa-majority 50.5%"
+  },
+  "85": {
+    "name": "Central East Austin",
+    "basis": "npa-majority 80.6%"
+  },
+  "86": {
+    "name": "Central East Austin",
+    "basis": "npa-majority 98.5%"
+  },
+  "87": {
+    "name": "Windsor Road",
+    "basis": "npa-majority 69.8%"
+  },
+  "88": {
+    "name": "Old Enfield",
+    "basis": "gemini+npa"
+  },
+  "89": {
+    "name": "West Austin Neighborhood Group",
+    "basis": "npa-majority 99.9%"
+  },
+  "90": {
+    "name": "Parker Lane",
+    "basis": "npa-majority 99.1%"
+  },
+  "91": {
+    "name": "South Manchaca",
+    "basis": "npa-majority 54.5%"
+  },
+  "92": {
+    "name": "Allandale",
+    "basis": "gemini+npa"
+  },
+  "93": {
+    "name": "Parker Lane",
+    "basis": "npa-majority 99.3%"
+  },
+  "94": {
+    "name": "Downtown",
+    "basis": "npa-majority 99.5%"
+  },
+  "95": {
+    "name": "West Austin Neighborhood Group",
+    "basis": "npa-majority 99.4%"
+  },
+  "96": {
+    "name": "Treemont",
+    "basis": "gemini+current"
+  },
+  "97": {
+    "name": "Akins",
+    "basis": "gemini+current"
+  },
+  "98": {
+    "name": "Riverside",
+    "basis": "npa-majority 99.8%"
+  },
+  "99": {
+    "name": "Dawson",
+    "basis": "npa-majority 99.9%"
+  },
+  "100": {
+    "name": "Barton Hills",
+    "basis": "npa-majority 97.4%"
+  },
+  "101": {
+    "name": "MLK-183",
+    "basis": "npa-majority 99.9%"
+  },
+  "102": {
+    "name": "Johnston Terrace",
+    "basis": "gemini+npa"
+  },
+  "103": {
+    "name": "Windsor Park",
+    "basis": "npa-majority 69.9%"
+  },
+  "104": {
+    "name": "Windsor Park",
+    "basis": "npa-majority 99.7%"
+  },
+  "105": {
+    "name": "MLK",
+    "basis": "npa-majority 51.1%"
+  },
+  "106": {
+    "name": "MLK",
+    "basis": "npa-majority 71.5%"
+  },
+  "107": {
+    "name": "Rosedale",
+    "basis": "npa-majority 54.8%"
+  },
+  "108": {
+    "name": "Riverside",
+    "basis": "npa-majority 99.4%"
+  },
+  "109": {
+    "name": "Pecan Springs-springdale",
+    "basis": "npa-majority 72.9%"
+  },
+  "110": {
+    "name": "Davenport Ranch",
+    "basis": "gemini+current"
+  },
+  "111": {
+    "name": "Govalle",
+    "basis": "gemini+npa"
+  },
+  "112": {
+    "name": "Holly",
+    "basis": "gemini+current"
+  },
+  "113": {
+    "name": "Old West Austin",
+    "basis": "npa-majority 78.1%"
+  },
+  "114": {
+    "name": "Zilker",
+    "basis": "npa-majority 64.3%"
+  },
+  "115": {
+    "name": "Galindo",
+    "basis": "npa-majority 99.6%"
+  },
+  "116": {
+    "name": "South River City",
+    "basis": "npa-majority 91.9%"
+  },
+  "117": {
+    "name": "Northwest Hills",
+    "basis": "gemini+current"
+  },
+  "118": {
+    "name": "Windsor Park",
+    "basis": "npa-majority 100%"
+  },
+  "119": {
+    "name": "Triangle State",
+    "basis": "npa-majority 63%"
+  },
+  "120": {
+    "name": "Hancock",
+    "basis": "npa-majority 54.1%"
+  },
+  "121": {
+    "name": "Hancock",
+    "basis": "gemini+current"
+  },
+  "122": {
+    "name": "Highland",
+    "basis": "npa-majority 70.6%"
+  },
+  "123": {
+    "name": "South River City",
+    "basis": "npa-majority 96.3%"
+  },
+  "124": {
+    "name": "Crestview",
+    "basis": "npa-majority 99.5%"
+  },
+  "125": {
+    "name": "Brentwood",
+    "basis": "npa-majority 99.8%"
+  },
+  "126": {
+    "name": "Allandale",
+    "basis": "npa-majority 99.9%"
+  },
+  "127": {
+    "name": "West Austin Neighborhood Group",
+    "basis": "npa-majority 98.7%"
+  },
+  "128": {
+    "name": "South Manchaca",
+    "basis": "npa-majority 98.1%"
+  },
+  "129": {
+    "name": "South Lamar",
+    "basis": "npa-majority 98.8%"
+  },
+  "130": {
+    "name": "Rob Roy",
+    "basis": "gemini+current"
+  },
+  "133": {
+    "name": "Steiner Ranch",
+    "basis": "gemini-high-solo"
+  },
+  "134": {
+    "name": "Canyon Creek",
+    "basis": "gemini+current"
+  },
+  "135": {
+    "name": "Jollyville",
+    "basis": "gemini+osm"
+  },
+  "137": {
+    "name": "Jollyville",
+    "basis": "gemini+osm"
+  },
+  "138": {
+    "name": "Avery Ranch",
+    "basis": "gemini+osm"
+  },
+  "140": {
+    "name": "Barton Hills",
+    "basis": "npa-majority 91.6% (renamed)"
+  },
+  "141": {
+    "name": "West Oak Hill",
+    "basis": "npa-majority 100%"
+  },
+  "142": {
+    "name": "Zilker",
+    "basis": "npa-majority 94.6%"
+  },
+  "143": {
+    "name": "Bee Cave",
+    "basis": "gemini+current"
+  },
+  "144": {
+    "name": "Great Hills",
+    "basis": "gemini+current"
+  },
+  "145": {
+    "name": "Arboretum",
+    "basis": "gemini+current"
+  },
+  "146": {
+    "name": "Northwest Hills",
+    "basis": "gemini+current"
+  },
+  "147": {
+    "name": "Arboretum",
+    "basis": "gemini+current"
+  },
+  "148": {
+    "name": "Shady Hollow",
+    "basis": "gemini+current"
+  },
+  "149": {
+    "name": "East Oak Hill",
+    "basis": "npa-majority 100%"
+  },
+  "151": {
+    "name": "Windsor Hills",
+    "basis": "gemini+current"
+  },
+  "153": {
+    "name": "Highland",
+    "basis": "gemini+current"
+  },
+  "154": {
+    "name": "St. Edwards",
+    "basis": "npa-majority 99.1%"
+  },
+  "156": {
+    "name": "Circle C Ranch",
+    "basis": "gemini+current"
+  },
+  "157": {
+    "name": "St. Edwards",
+    "basis": "npa-majority 82.7%"
+  },
+  "158": {
+    "name": "Great Hills",
+    "basis": "gemini+current"
+  },
+  "159": {
+    "name": "Oak Hill",
+    "basis": "gemini+current"
+  },
+  "160": {
+    "name": "West University",
+    "basis": "npa-majority 99.3%"
+  },
+  "161": {
+    "name": "West University",
+    "basis": "npa-majority 99.6%"
+  },
+  "162": {
+    "name": "West University",
+    "basis": "npa-majority 85.2%"
+  },
+  "163": {
+    "name": "Downtown",
+    "basis": "npa-majority 100%"
+  },
+  "164": {
+    "name": "Zilker",
+    "basis": "npa-majority 99.7%"
+  },
+  "165": {
+    "name": "Downtown",
+    "basis": "npa-majority 87.8%"
+  },
+  "167": {
+    "name": "Shady Hollow",
+    "basis": "gemini+current"
+  },
+  "168": {
+    "name": "Harris Ridge",
+    "basis": "gemini+current"
+  },
+  "169": {
+    "name": "Georgian Acres",
+    "basis": "gemini+current"
+  },
+  "170": {
+    "name": "South Lamar",
+    "basis": "npa-majority 100%"
+  },
+  "171": {
+    "name": "West University",
+    "basis": "npa-majority 85.3% (renamed)"
+  },
+  "172": {
+    "name": "South Lamar",
+    "basis": "npa-majority 99.9%"
+  },
+  "173": {
+    "name": "Oak Hill",
+    "basis": "gemini+current"
+  },
+  "176": {
+    "name": "North Burnet",
+    "basis": "npa-majority 85.6%"
+  },
+  "178": {
+    "name": "North Shoal Creek",
+    "basis": "npa-majority 92%"
+  },
+  "179": {
+    "name": "West Oak Hill",
+    "basis": "npa-majority 68.8%"
+  },
+  "181": {
+    "name": "Pleasant Valley",
+    "basis": "npa-majority 100%"
+  },
+  "182": {
+    "name": "Wells Branch",
+    "basis": "gemini+current"
+  },
+  "183": {
+    "name": "Del Valle",
+    "basis": "gemini+current"
+  },
+  "185": {
+    "name": "Creedmoor",
+    "basis": "gemini+current"
+  },
+  "186": {
+    "name": "Georgian Acres",
+    "basis": "gemini-high-solo"
+  },
+  "187": {
+    "name": "Northwood",
+    "basis": "gemini+current"
+  },
+  "188": {
+    "name": "Avery Ranch",
+    "basis": "gemini+osm"
+  },
+  "189": {
+    "name": "Bee Cave",
+    "basis": "gemini+current"
+  },
+  "190": {
+    "name": "Canyon Creek",
+    "basis": "gemini+current"
+  },
+  "191": {
+    "name": "Four Points",
+    "basis": "gemini+current"
+  },
+  "192": {
+    "name": "Southpark Meadows",
+    "basis": "gemini+current"
+  },
+  "193": {
+    "name": "Southwood",
+    "basis": "gemini+current"
+  },
+  "194": {
+    "name": "Wooten",
+    "basis": "npa-majority 96.1%"
+  },
+  "195": {
+    "name": "West Oak Hill",
+    "basis": "npa-majority 100%"
+  },
+  "198": {
+    "name": "North Austin Civic Association",
+    "basis": "npa-majority 76.8%"
+  },
+  "199": {
+    "name": "North Austin Civic Association",
+    "basis": "npa-majority 99.9%"
+  },
+  "200": {
+    "name": "Balcones Woods",
+    "basis": "gemini+current"
+  },
+  "201": {
+    "name": "North Burnet",
+    "basis": "gemini+current"
+  },
+  "202": {
+    "name": "Sweetbriar",
+    "basis": "npa-majority 68.9%"
+  },
+  "203": {
+    "name": "West Oak Hill",
+    "basis": "npa-majority 81.2%"
+  },
+  "205": {
+    "name": "Sweetbriar",
+    "basis": "npa-majority 65.8%"
+  },
+  "206": {
+    "name": "North Austin Civic Association",
+    "basis": "npa-majority 99.9%"
+  },
+  "207": {
+    "name": "North Austin Civic Association",
+    "basis": "npa-majority 100%"
+  },
+  "208": {
+    "name": "Oak Hill",
+    "basis": "gemini+current"
+  },
+  "209": {
+    "name": "Barton Hills",
+    "basis": "npa-majority 100%"
+  },
+  "210": {
+    "name": "Downtown",
+    "basis": "npa-majority 84.3%"
+  },
+  "212": {
+    "name": "Westgate",
+    "basis": "npa-majority 83.9%"
+  },
+  "213": {
+    "name": "Garrison Park",
+    "basis": "npa-majority 99.6%"
+  },
+  "218": {
+    "name": "Northwest Hills",
+    "basis": "gemini+current"
+  },
+  "220": {
+    "name": "Scofield Farms",
+    "basis": "gemini-high-solo"
+  },
+  "221": {
+    "name": "Westlake Hills",
+    "basis": "gemini+current"
+  },
+  "222": {
+    "name": "Jollyville",
+    "basis": "gemini+osm"
+  },
+  "223": {
+    "name": "St. John",
+    "basis": "npa-majority 99.9%"
+  },
+  "224": {
+    "name": "Cherry Creek",
+    "basis": "gemini+current"
+  },
+  "225": {
+    "name": "Southwood",
+    "basis": "gemini+current"
+  },
+  "227": {
+    "name": "Montopolis",
+    "basis": "gemini+current"
+  },
+  "228": {
+    "name": "St. Elmo",
+    "basis": "gemini+current"
+  },
+  "229": {
+    "name": "Wells Branch",
+    "basis": "gemini+current"
+  },
+  "230": {
+    "name": "Lakeline",
+    "basis": "gemini+current"
+  },
+  "233": {
+    "name": "Redbud",
+    "basis": "gemini+current"
+  },
+  "234": {
+    "name": "East Oak Hill",
+    "basis": "npa-majority 90.9%"
+  },
+  "235": {
+    "name": "Onion Creek",
+    "basis": "gemini+current"
+  },
+  "236": {
+    "name": "North Loop",
+    "basis": "npa-majority 60.1% (renamed)"
+  },
+  "237": {
+    "name": "Montopolis",
+    "basis": "gemini+current"
+  },
+  "238": {
+    "name": "East Oak Hill",
+    "basis": "gemini+current"
+  },
+  "239": {
+    "name": "Allandale",
+    "basis": "npa-majority 59.8%"
+  },
+  "240": {
+    "name": "Hyde Park",
+    "basis": "gemini+npa"
+  },
+  "241": {
+    "name": "Brentwood",
+    "basis": "npa-majority 99.6%"
+  },
+  "242": {
+    "name": "Upper Boggy Creek",
+    "basis": "npa-majority 95.7%"
+  },
+  "243": {
+    "name": "Davenport Ranch",
+    "basis": "gemini+current"
+  },
+  "244": {
+    "name": "Avery Ranch",
+    "basis": "gemini+osm"
+  },
+  "246": {
+    "name": "East Oak Hill",
+    "basis": "npa-majority 81.2%"
+  },
+  "247": {
+    "name": "South Manchaca",
+    "basis": "gemini+current"
+  },
+  "248": {
+    "name": "Windsor Hills",
+    "basis": "gemini+current"
+  },
+  "249": {
+    "name": "Jollyville",
+    "basis": "gemini+osm"
+  },
+  "250": {
+    "name": "Pilot Knob",
+    "basis": "gemini+current"
+  },
+  "251": {
+    "name": "Windsor Park",
+    "basis": "npa-majority 99.3%"
+  },
+  "252": {
+    "name": "University Hills",
+    "basis": "npa-majority 98.9%"
+  },
+  "253": {
+    "name": "Walnut Bend",
+    "basis": "gemini+current"
+  },
+  "254": {
+    "name": "ABIA",
+    "basis": "gemini+current"
+  },
+  "256": {
+    "name": "Pleasant Valley",
+    "basis": "npa-majority 91.2%"
+  },
+  "257": {
+    "name": "Riverside",
+    "basis": "npa-majority 98.9%"
+  },
+  "258": {
+    "name": "East Congress",
+    "basis": "npa-majority 99%"
+  },
+  "259": {
+    "name": "Garrison Park",
+    "basis": "npa-majority 81.3%"
+  },
+  "260": {
+    "name": "Garrison Park",
+    "basis": "npa-majority 74.7%"
+  },
+  "261": {
+    "name": "Franklin Park",
+    "basis": "npa-majority 71.5%"
+  },
+  "262": {
+    "name": "Franklin Park",
+    "basis": "npa-majority 93.4%"
+  },
+  "263": {
+    "name": "Franklin Park",
+    "basis": "npa-majority 99.8%"
+  },
+  "264": {
+    "name": "Southwood",
+    "basis": "gemini+current"
+  },
+  "265": {
+    "name": "Southwood",
+    "basis": "gemini+current"
+  },
+  "266": {
+    "name": "Southwood",
+    "basis": "gemini+current"
+  },
+  "267": {
+    "name": "Southwood",
+    "basis": "gemini+current"
+  }
+}

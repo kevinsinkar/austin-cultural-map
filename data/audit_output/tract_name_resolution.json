@@ -1,0 +1,2002 @@
+[
+  {
+    "region_id": 4,
+    "tract_label": "Tract 22.14",
+    "verdict_npa": "ambiguous",
+    "current_name": "Blackland",
+    "candidates": {
+      "osm": null,
+      "gemini": "MLK-183",
+      "npa_plurality": "MLK-183",
+      "current": "Blackland"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "MLK-183",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 5,
+    "tract_label": "Tract 419.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Windsor Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Windsor Hills",
+      "npa_plurality": null,
+      "current": "Windsor Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Windsor Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 6,
+    "tract_label": "Tract 411.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "North Shoal Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "North Shoal Creek",
+      "npa_plurality": null,
+      "current": "North Shoal Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "North Shoal Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 7,
+    "tract_label": "Tract 367.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Barton Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "Barton Creek",
+      "npa_plurality": null,
+      "current": "Barton Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Barton Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 8,
+    "tract_label": "Tract 440.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "St. John's",
+    "candidates": {
+      "osm": null,
+      "gemini": "St. John's",
+      "npa_plurality": null,
+      "current": "St. John's"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "St. John's",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 9,
+    "tract_label": "Tract 437.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Windsor Park",
+    "candidates": {
+      "osm": null,
+      "gemini": "Windsor Park",
+      "npa_plurality": null,
+      "current": "Windsor Park"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Windsor Park",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 10,
+    "tract_label": "Tract 368.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Circle C",
+    "candidates": {
+      "osm": null,
+      "gemini": "Circle C",
+      "npa_plurality": null,
+      "current": "Circle C"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Circle C",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 11,
+    "tract_label": "Tract 415.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Georgian Acres",
+    "candidates": {
+      "osm": "Sprinkle Corner",
+      "gemini": "Georgian Acres",
+      "npa_plurality": null,
+      "current": "Georgian Acres"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Georgian Acres",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 12,
+    "tract_label": "Tract 22.13",
+    "verdict_npa": "outside-npa",
+    "current_name": "Springdale",
+    "candidates": {
+      "osm": null,
+      "gemini": "Springdale",
+      "npa_plurality": null,
+      "current": "Springdale"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Springdale",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 17,
+    "tract_label": "Tract 449.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Dessau",
+    "candidates": {
+      "osm": null,
+      "gemini": "Dessau",
+      "npa_plurality": null,
+      "current": "Dessau"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Dessau",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 18,
+    "tract_label": "Tract 24.53",
+    "verdict_npa": "outside-npa",
+    "current_name": "Creedmoor",
+    "candidates": {
+      "osm": null,
+      "gemini": "Creedmoor",
+      "npa_plurality": null,
+      "current": "Creedmoor"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Creedmoor",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 22,
+    "tract_label": "Tract 345.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Milwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Milwood",
+      "npa_plurality": null,
+      "current": "Milwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Milwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 23,
+    "tract_label": "Tract 321.0",
+    "verdict_npa": "ambiguous",
+    "current_name": "Oak Hill",
+    "candidates": {
+      "osm": null,
+      "gemini": "Oak Hill",
+      "npa_plurality": "East Oak Hill",
+      "current": "Oak Hill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Oak Hill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 25,
+    "tract_label": "Tract 338.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Anderson Mill",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Anderson Mill",
+      "npa_plurality": null,
+      "current": "Anderson Mill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Anderson Mill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 26,
+    "tract_label": "Tract 301.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Allandale",
+    "candidates": {
+      "osm": null,
+      "gemini": "Allandale",
+      "npa_plurality": null,
+      "current": "Allandale"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Allandale",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 27,
+    "tract_label": "Tract 308.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "The Domain",
+    "candidates": {
+      "osm": null,
+      "gemini": "The Domain",
+      "npa_plurality": "Gateway",
+      "current": "The Domain"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "The Domain",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 29,
+    "tract_label": "Tract 325.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Arboretum",
+    "candidates": {
+      "osm": null,
+      "gemini": "Arboretum",
+      "npa_plurality": "North Burnet",
+      "current": "Arboretum"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Arboretum",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 30,
+    "tract_label": "Tract 456.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Harris Ridge",
+    "candidates": {
+      "osm": null,
+      "gemini": "Harris Ridge",
+      "npa_plurality": null,
+      "current": "Harris Ridge"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Harris Ridge",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 31,
+    "tract_label": "Tract 342.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Great Hills",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Great Hills",
+      "npa_plurality": null,
+      "current": "Great Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Great Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 32,
+    "tract_label": "Tract 413.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Balcones Woods",
+    "candidates": {
+      "osm": null,
+      "gemini": "Balcones Woods",
+      "npa_plurality": null,
+      "current": "Balcones Woods"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Balcones Woods",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 34,
+    "tract_label": "Tract 420.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Gracywoods",
+    "candidates": {
+      "osm": "McNeil",
+      "gemini": "Gracywoods",
+      "npa_plurality": null,
+      "current": "Gracywoods"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Gracywoods",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 35,
+    "tract_label": "Tract 451.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Tech Ridge",
+    "candidates": {
+      "osm": null,
+      "gemini": "Tech Ridge",
+      "npa_plurality": null,
+      "current": "Tech Ridge"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Tech Ridge",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 36,
+    "tract_label": "Tract 414.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Balcones Woods",
+    "candidates": {
+      "osm": null,
+      "gemini": "Balcones Woods",
+      "npa_plurality": null,
+      "current": "Balcones Woods"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Balcones Woods",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 38,
+    "tract_label": "Tract 464.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Harris Ridge",
+    "candidates": {
+      "osm": "Round Rock",
+      "gemini": "Harris Ridge",
+      "npa_plurality": null,
+      "current": "Harris Ridge"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Harris Ridge",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 40,
+    "tract_label": "Tract 339.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "River Place",
+    "candidates": {
+      "osm": "Steiner Ranch",
+      "gemini": "Steiner Ranch",
+      "npa_plurality": null,
+      "current": "River Place"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Steiner Ranch",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 41,
+    "tract_label": "Tract 452.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Gracywoods",
+    "candidates": {
+      "osm": null,
+      "gemini": "Gracywoods",
+      "npa_plurality": null,
+      "current": "Gracywoods"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Gracywoods",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 42,
+    "tract_label": "Tract 422.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "North Burnet",
+    "candidates": {
+      "osm": null,
+      "gemini": "North Burnet",
+      "npa_plurality": "North Burnet",
+      "current": "North Burnet"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "North Burnet",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 43,
+    "tract_label": "Tract 300.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Northwest Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Northwest Hills",
+      "npa_plurality": null,
+      "current": "Northwest Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Northwest Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 44,
+    "tract_label": "Tract 438.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Harris Branch",
+    "candidates": {
+      "osm": "Sprinkle Corner",
+      "gemini": "Harris Branch",
+      "npa_plurality": null,
+      "current": "Harris Branch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Harris Branch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 45,
+    "tract_label": "Tract 305.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Lakeway",
+    "candidates": {
+      "osm": null,
+      "gemini": "Lakeway",
+      "npa_plurality": null,
+      "current": "Lakeway"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Lakeway",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 46,
+    "tract_label": "Tract 328.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Cat Mtn",
+    "candidates": {
+      "osm": null,
+      "gemini": "Cat Mountain",
+      "npa_plurality": null,
+      "current": "Cat Mtn"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Cat Mountain",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 47,
+    "tract_label": "Tract 24.49",
+    "verdict_npa": "outside-npa",
+    "current_name": "Pilot Knob",
+    "candidates": {
+      "osm": "Moores Crossing",
+      "gemini": "Pilot Knob",
+      "npa_plurality": null,
+      "current": "Pilot Knob"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Pilot Knob",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 49,
+    "tract_label": "Tract 313.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Oak Hill",
+    "candidates": {
+      "osm": null,
+      "gemini": "Oak Hill",
+      "npa_plurality": null,
+      "current": "Oak Hill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Oak Hill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 51,
+    "tract_label": "Tract 457.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Harris Ridge",
+    "candidates": {
+      "osm": "Wells Branch",
+      "gemini": "Wells Branch",
+      "npa_plurality": null,
+      "current": "Harris Ridge"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Wells Branch",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 52,
+    "tract_label": "Tract 429.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Dessau",
+    "candidates": {
+      "osm": "Wells Branch",
+      "gemini": "Wells Branch",
+      "npa_plurality": null,
+      "current": "Dessau"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Wells Branch",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 53,
+    "tract_label": "Tract 319.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Shady Hollow",
+    "candidates": {
+      "osm": null,
+      "gemini": "Shady Hollow",
+      "npa_plurality": null,
+      "current": "Shady Hollow"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Shady Hollow",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 54,
+    "tract_label": "Tract 446.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Wells Branch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Pflugerville",
+      "npa_plurality": null,
+      "current": "Wells Branch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Pflugerville",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 55,
+    "tract_label": "Tract 332.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Cherry Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "Cherry Creek",
+      "npa_plurality": null,
+      "current": "Cherry Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Cherry Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 56,
+    "tract_label": "Tract 24.45",
+    "verdict_npa": "outside-npa",
+    "current_name": "Shady Hollow",
+    "candidates": {
+      "osm": null,
+      "gemini": "Shady Hollow",
+      "npa_plurality": null,
+      "current": "Shady Hollow"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Shady Hollow",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 58,
+    "tract_label": "Tract 465.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Wells Branch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Wells Branch",
+      "npa_plurality": null,
+      "current": "Wells Branch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Wells Branch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 59,
+    "tract_label": "Tract 441.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Wells Branch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Pflugerville",
+      "npa_plurality": null,
+      "current": "Wells Branch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Pflugerville",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 60,
+    "tract_label": "Tract 24.39",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Onion Creek",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Onion Creek",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 61,
+    "tract_label": "Tract 421.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Pville",
+    "candidates": {
+      "osm": null,
+      "gemini": "Pflugerville",
+      "npa_plurality": null,
+      "current": "Pville"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Pflugerville",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 63,
+    "tract_label": "Tract 335.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Barton Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "Barton Creek",
+      "npa_plurality": null,
+      "current": "Barton Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Barton Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 64,
+    "tract_label": "Tract 24.4",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Onion Creek",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Onion Creek",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 66,
+    "tract_label": "Tract 24.42",
+    "verdict_npa": "outside-npa",
+    "current_name": "Montopolis",
+    "candidates": {
+      "osm": null,
+      "gemini": "Montopolis",
+      "npa_plurality": null,
+      "current": "Montopolis"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Montopolis",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 68,
+    "tract_label": "Tract 22.19",
+    "verdict_npa": "outside-npa",
+    "current_name": "ShadowGlen",
+    "candidates": {
+      "osm": null,
+      "gemini": "Manor",
+      "npa_plurality": null,
+      "current": "ShadowGlen"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Manor",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 70,
+    "tract_label": "Tract 203.33",
+    "verdict_npa": "outside-npa",
+    "current_name": "Jollyville",
+    "candidates": {
+      "osm": null,
+      "gemini": "Jollyville",
+      "npa_plurality": null,
+      "current": "Jollyville"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Jollyville",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 71,
+    "tract_label": "Tract 341.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Northwood",
+    "candidates": {
+      "osm": "McNeil",
+      "gemini": "Northwood",
+      "npa_plurality": null,
+      "current": "Northwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Northwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 72,
+    "tract_label": "Tract 24.52",
+    "verdict_npa": "outside-npa",
+    "current_name": "Montopolis",
+    "candidates": {
+      "osm": null,
+      "gemini": "Austin-Bergstrom International Airport",
+      "npa_plurality": null,
+      "current": "Montopolis"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Austin-Bergstrom International Airport",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 73,
+    "tract_label": "Tract 22.22",
+    "verdict_npa": "outside-npa",
+    "current_name": "Windsor Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Windsor Hills",
+      "npa_plurality": null,
+      "current": "Windsor Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Windsor Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 75,
+    "tract_label": "Tract 346.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Great Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Great Hills",
+      "npa_plurality": null,
+      "current": "Great Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Great Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 77,
+    "tract_label": "Tract 22.15",
+    "verdict_npa": "outside-npa",
+    "current_name": "Wildhorse",
+    "candidates": {
+      "osm": null,
+      "gemini": "Wildhorse",
+      "npa_plurality": null,
+      "current": "Wildhorse"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Wildhorse",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 88,
+    "tract_label": "Tract 16.05",
+    "verdict_npa": "ambiguous",
+    "current_name": "Old Enfield",
+    "candidates": {
+      "osm": null,
+      "gemini": "Old Enfield",
+      "npa_plurality": "Old Enfield",
+      "current": "Old Enfield"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Old Enfield",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 92,
+    "tract_label": "Tract 1.01",
+    "verdict_npa": "ambiguous",
+    "current_name": "Rosedale",
+    "candidates": {
+      "osm": null,
+      "gemini": "Allandale",
+      "npa_plurality": "Allandale",
+      "current": "Rosedale"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Allandale",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 96,
+    "tract_label": "Tract 19.1",
+    "verdict_npa": "outside-npa",
+    "current_name": "Treemont",
+    "candidates": {
+      "osm": null,
+      "gemini": "Treemont",
+      "npa_plurality": "West Austin Neighborhood Group",
+      "current": "Treemont"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Treemont",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 97,
+    "tract_label": "Tract 24.07",
+    "verdict_npa": "outside-npa",
+    "current_name": "Akins",
+    "candidates": {
+      "osm": null,
+      "gemini": "Akins",
+      "npa_plurality": null,
+      "current": "Akins"
+    },
+    "gemini_confidence": "medium",
+    "resolved_name": "Akins",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 102,
+    "tract_label": "Tract 21.11",
+    "verdict_npa": "ambiguous",
+    "current_name": "Johnston Terrace",
+    "candidates": {
+      "osm": null,
+      "gemini": "Johnston Terrace",
+      "npa_plurality": "Johnston Terrace",
+      "current": "Johnston Terrace"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Johnston Terrace",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 110,
+    "tract_label": "Tract 19.13",
+    "verdict_npa": "outside-npa",
+    "current_name": "Davenport Ranch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Davenport Ranch",
+      "npa_plurality": null,
+      "current": "Davenport Ranch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Davenport Ranch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 111,
+    "tract_label": "Tract 9.02",
+    "verdict_npa": "ambiguous",
+    "current_name": "Holly",
+    "candidates": {
+      "osm": null,
+      "gemini": "Govalle",
+      "npa_plurality": "Govalle",
+      "current": "Holly"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Govalle",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 112,
+    "tract_label": "Tract 10.0",
+    "verdict_npa": "ambiguous",
+    "current_name": "Holly",
+    "candidates": {
+      "osm": null,
+      "gemini": "Holly",
+      "npa_plurality": "East Cesar Chavez",
+      "current": "Holly"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Holly",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 117,
+    "tract_label": "Tract 1.02",
+    "verdict_npa": "outside-npa",
+    "current_name": "Northwest Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Northwest Hills",
+      "npa_plurality": null,
+      "current": "Northwest Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Northwest Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 121,
+    "tract_label": "Tract 4.01",
+    "verdict_npa": "ambiguous",
+    "current_name": "Hancock",
+    "candidates": {
+      "osm": null,
+      "gemini": "Hancock",
+      "npa_plurality": "UT",
+      "current": "Hancock"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Hancock",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 130,
+    "tract_label": "Tract 19.12",
+    "verdict_npa": "outside-npa",
+    "current_name": "Rob Roy",
+    "candidates": {
+      "osm": null,
+      "gemini": "Rob Roy",
+      "npa_plurality": null,
+      "current": "Rob Roy"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Rob Roy",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 133,
+    "tract_label": "Tract 204.04",
+    "verdict_npa": "outside-npa",
+    "current_name": "Steiner",
+    "candidates": {
+      "osm": null,
+      "gemini": "Steiner Ranch",
+      "npa_plurality": null,
+      "current": "Steiner"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Steiner Ranch",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 134,
+    "tract_label": "Tract 204.05",
+    "verdict_npa": "outside-npa",
+    "current_name": "Canyon Creek",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Canyon Creek",
+      "npa_plurality": null,
+      "current": "Canyon Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Canyon Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 135,
+    "tract_label": "Tract 204.06",
+    "verdict_npa": "outside-npa",
+    "current_name": "Avery Ranch",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Jollyville",
+      "npa_plurality": null,
+      "current": "Avery Ranch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Jollyville",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 137,
+    "tract_label": "Tract 204.11",
+    "verdict_npa": "outside-npa",
+    "current_name": "Scofield Farms",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Jollyville",
+      "npa_plurality": null,
+      "current": "Scofield Farms"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Jollyville",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 138,
+    "tract_label": "Tract 205.08",
+    "verdict_npa": "outside-npa",
+    "current_name": "Lakeline",
+    "candidates": {
+      "osm": "Avery Ranch",
+      "gemini": "Avery Ranch",
+      "npa_plurality": null,
+      "current": "Lakeline"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Avery Ranch",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 143,
+    "tract_label": "Tract 366.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Bee Cave",
+    "candidates": {
+      "osm": null,
+      "gemini": "Bee Cave",
+      "npa_plurality": null,
+      "current": "Bee Cave"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Bee Cave",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 144,
+    "tract_label": "Tract 307.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Great Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Great Hills",
+      "npa_plurality": null,
+      "current": "Great Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Great Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 145,
+    "tract_label": "Tract 302.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Arboretum",
+    "candidates": {
+      "osm": null,
+      "gemini": "Arboretum",
+      "npa_plurality": "North Shoal Creek",
+      "current": "Arboretum"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Arboretum",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 146,
+    "tract_label": "Tract 322.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Northwest Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Northwest Hills",
+      "npa_plurality": null,
+      "current": "Northwest Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Northwest Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 147,
+    "tract_label": "Tract 323.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Arboretum",
+    "candidates": {
+      "osm": null,
+      "gemini": "Arboretum",
+      "npa_plurality": "Allandale",
+      "current": "Arboretum"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Arboretum",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 148,
+    "tract_label": "Tract 318.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Shady Hollow",
+    "candidates": {
+      "osm": null,
+      "gemini": "Shady Hollow",
+      "npa_plurality": null,
+      "current": "Shady Hollow"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Shady Hollow",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 151,
+    "tract_label": "Tract 424.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Windsor Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Windsor Hills",
+      "npa_plurality": null,
+      "current": "Windsor Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Windsor Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 153,
+    "tract_label": "Tract 436.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Highland",
+    "candidates": {
+      "osm": null,
+      "gemini": "Highland",
+      "npa_plurality": null,
+      "current": "Highland"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Highland",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 156,
+    "tract_label": "Tract 310.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Circle C Ranch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Circle C Ranch",
+      "npa_plurality": null,
+      "current": "Circle C Ranch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Circle C Ranch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 158,
+    "tract_label": "Tract 306.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Great Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Great Hills",
+      "npa_plurality": "Allandale",
+      "current": "Great Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Great Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 159,
+    "tract_label": "Tract 24.38",
+    "verdict_npa": "outside-npa",
+    "current_name": "Oak Hill",
+    "candidates": {
+      "osm": null,
+      "gemini": "Oak Hill",
+      "npa_plurality": null,
+      "current": "Oak Hill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Oak Hill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 167,
+    "tract_label": "Tract 309.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Shady Hollow",
+    "candidates": {
+      "osm": null,
+      "gemini": "Shady Hollow",
+      "npa_plurality": null,
+      "current": "Shady Hollow"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Shady Hollow",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 168,
+    "tract_label": "Tract 450.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Harris Ridge",
+    "candidates": {
+      "osm": null,
+      "gemini": "Harris Ridge",
+      "npa_plurality": null,
+      "current": "Harris Ridge"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Harris Ridge",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 169,
+    "tract_label": "Tract 22.21",
+    "verdict_npa": "outside-npa",
+    "current_name": "Georgian Acres",
+    "candidates": {
+      "osm": null,
+      "gemini": "Georgian Acres",
+      "npa_plurality": null,
+      "current": "Georgian Acres"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Georgian Acres",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 173,
+    "tract_label": "Tract 348.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Oak Hill",
+    "candidates": {
+      "osm": null,
+      "gemini": "Oak Hill",
+      "npa_plurality": null,
+      "current": "Oak Hill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Oak Hill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 182,
+    "tract_label": "Tract 412.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Wells Branch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Wells Branch",
+      "npa_plurality": null,
+      "current": "Wells Branch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Wells Branch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 183,
+    "tract_label": "Tract 22.17",
+    "verdict_npa": "outside-npa",
+    "current_name": "Del Valle",
+    "candidates": {
+      "osm": null,
+      "gemini": "Del Valle",
+      "npa_plurality": null,
+      "current": "Del Valle"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Del Valle",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 185,
+    "tract_label": "Tract 24.5",
+    "verdict_npa": "outside-npa",
+    "current_name": "Creedmoor",
+    "candidates": {
+      "osm": null,
+      "gemini": "Creedmoor",
+      "npa_plurality": null,
+      "current": "Creedmoor"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Creedmoor",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 186,
+    "tract_label": "Tract 22.2",
+    "verdict_npa": "outside-npa",
+    "current_name": "N Lamar",
+    "candidates": {
+      "osm": null,
+      "gemini": "Georgian Acres",
+      "npa_plurality": null,
+      "current": "N Lamar"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Georgian Acres",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 187,
+    "tract_label": "Tract 205.13",
+    "verdict_npa": "outside-npa",
+    "current_name": "Northwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Northwood",
+      "npa_plurality": null,
+      "current": "Northwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Northwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 188,
+    "tract_label": "Tract 203.47",
+    "verdict_npa": "outside-npa",
+    "current_name": "Fern Bluff",
+    "candidates": {
+      "osm": "Avery Ranch",
+      "gemini": "Avery Ranch",
+      "npa_plurality": null,
+      "current": "Fern Bluff"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Avery Ranch",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 189,
+    "tract_label": "Tract 109.12",
+    "verdict_npa": "outside-npa",
+    "current_name": "Bee Cave",
+    "candidates": {
+      "osm": null,
+      "gemini": "Bee Cave",
+      "npa_plurality": null,
+      "current": "Bee Cave"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Bee Cave",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 190,
+    "tract_label": "Tract 203.34",
+    "verdict_npa": "outside-npa",
+    "current_name": "Canyon Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "Canyon Creek",
+      "npa_plurality": null,
+      "current": "Canyon Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Canyon Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 191,
+    "tract_label": "Tract 203.56",
+    "verdict_npa": "outside-npa",
+    "current_name": "Four Points",
+    "candidates": {
+      "osm": "Cedar Park",
+      "gemini": "Four Points",
+      "npa_plurality": null,
+      "current": "Four Points"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Four Points",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 192,
+    "tract_label": "Tract 109.23",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southpark Meadows",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southpark Meadows",
+      "npa_plurality": null,
+      "current": "Southpark Meadows"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southpark Meadows",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 193,
+    "tract_label": "Tract 24.51",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southwood",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 200,
+    "tract_label": "Tract 418.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Balcones Woods",
+    "candidates": {
+      "osm": null,
+      "gemini": "Balcones Woods",
+      "npa_plurality": "North Burnet",
+      "current": "Balcones Woods"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Balcones Woods",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 201,
+    "tract_label": "Tract 417.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "North Burnet",
+    "candidates": {
+      "osm": null,
+      "gemini": "North Burnet",
+      "npa_plurality": null,
+      "current": "North Burnet"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "North Burnet",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 208,
+    "tract_label": "Tract 334.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Oak Hill",
+    "candidates": {
+      "osm": null,
+      "gemini": "Oak Hill",
+      "npa_plurality": "East Oak Hill",
+      "current": "Oak Hill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Oak Hill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 218,
+    "tract_label": "Tract 329.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Northwest Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Northwest Hills",
+      "npa_plurality": null,
+      "current": "Northwest Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Northwest Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 220,
+    "tract_label": "Tract 443.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Scofield",
+    "candidates": {
+      "osm": null,
+      "gemini": "Scofield Farms",
+      "npa_plurality": null,
+      "current": "Scofield"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Scofield Farms",
+    "basis": "gemini-high-solo",
+    "status": "confident"
+  },
+  {
+    "region_id": 221,
+    "tract_label": "Tract 19.21",
+    "verdict_npa": "outside-npa",
+    "current_name": "Westlake Hills",
+    "candidates": {
+      "osm": "Barton Creek",
+      "gemini": "Westlake Hills",
+      "npa_plurality": null,
+      "current": "Westlake Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Westlake Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 222,
+    "tract_label": "Tract 326.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Jester Estates",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Jollyville",
+      "npa_plurality": null,
+      "current": "Jester Estates"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Jollyville",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 224,
+    "tract_label": "Tract 24.37",
+    "verdict_npa": "outside-npa",
+    "current_name": "Cherry Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "Cherry Creek",
+      "npa_plurality": null,
+      "current": "Cherry Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Cherry Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 225,
+    "tract_label": "Tract 24.41",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southwood",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 227,
+    "tract_label": "Tract 22.16",
+    "verdict_npa": "outside-npa",
+    "current_name": "Montopolis",
+    "candidates": {
+      "osm": null,
+      "gemini": "Montopolis",
+      "npa_plurality": null,
+      "current": "Montopolis"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Montopolis",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 228,
+    "tract_label": "Tract 24.48",
+    "verdict_npa": "ambiguous",
+    "current_name": "St. Elmo",
+    "candidates": {
+      "osm": null,
+      "gemini": "St. Elmo",
+      "npa_plurality": "Southeast",
+      "current": "St. Elmo"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "St. Elmo",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 229,
+    "tract_label": "Tract 442.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Wells Branch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Wells Branch",
+      "npa_plurality": null,
+      "current": "Wells Branch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Wells Branch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 230,
+    "tract_label": "Tract 204.09",
+    "verdict_npa": "outside-npa",
+    "current_name": "Lakeline",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Lakeline",
+      "npa_plurality": null,
+      "current": "Lakeline"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Lakeline",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 233,
+    "tract_label": "Tract 19.18",
+    "verdict_npa": "outside-npa",
+    "current_name": "Redbud",
+    "candidates": {
+      "osm": null,
+      "gemini": "Redbud",
+      "npa_plurality": null,
+      "current": "Redbud"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Redbud",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 235,
+    "tract_label": "Tract 24.3",
+    "verdict_npa": "outside-npa",
+    "current_name": "Onion Creek",
+    "candidates": {
+      "osm": null,
+      "gemini": "Onion Creek",
+      "npa_plurality": null,
+      "current": "Onion Creek"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Onion Creek",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 237,
+    "tract_label": "Tract 23.19",
+    "verdict_npa": "outside-npa",
+    "current_name": "Montopolis",
+    "candidates": {
+      "osm": null,
+      "gemini": "Montopolis",
+      "npa_plurality": null,
+      "current": "Montopolis"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Montopolis",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 238,
+    "tract_label": "Tract 19.17",
+    "verdict_npa": "outside-npa",
+    "current_name": "East Oak Hill",
+    "candidates": {
+      "osm": null,
+      "gemini": "East Oak Hill",
+      "npa_plurality": null,
+      "current": "East Oak Hill"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "East Oak Hill",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 240,
+    "tract_label": "Tract 3.05",
+    "verdict_npa": "ambiguous",
+    "current_name": "Triangle State",
+    "candidates": {
+      "osm": null,
+      "gemini": "Hyde Park",
+      "npa_plurality": "Hyde Park",
+      "current": "Triangle State"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Hyde Park",
+    "basis": "gemini+npa",
+    "status": "confident"
+  },
+  {
+    "region_id": 243,
+    "tract_label": "Tract 19.19",
+    "verdict_npa": "outside-npa",
+    "current_name": "Davenport Ranch",
+    "candidates": {
+      "osm": null,
+      "gemini": "Davenport Ranch",
+      "npa_plurality": null,
+      "current": "Davenport Ranch"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Davenport Ranch",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 244,
+    "tract_label": "Tract 203.11",
+    "verdict_npa": "outside-npa",
+    "current_name": "Great Hills",
+    "candidates": {
+      "osm": "Avery Ranch",
+      "gemini": "Avery Ranch",
+      "npa_plurality": null,
+      "current": "Great Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Avery Ranch",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 247,
+    "tract_label": "Tract 24.34",
+    "verdict_npa": "outside-npa",
+    "current_name": "South Manchaca",
+    "candidates": {
+      "osm": "Turnersville",
+      "gemini": "South Manchaca",
+      "npa_plurality": null,
+      "current": "South Manchaca"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "South Manchaca",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 248,
+    "tract_label": "Tract 22.11",
+    "verdict_npa": "outside-npa",
+    "current_name": "Windsor Hills",
+    "candidates": {
+      "osm": null,
+      "gemini": "Windsor Hills",
+      "npa_plurality": null,
+      "current": "Windsor Hills"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Windsor Hills",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 249,
+    "tract_label": "Tract 25.0",
+    "verdict_npa": "outside-npa",
+    "current_name": "Balcones Woods",
+    "candidates": {
+      "osm": "Jollyville",
+      "gemini": "Jollyville",
+      "npa_plurality": null,
+      "current": "Balcones Woods"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Jollyville",
+    "basis": "gemini+osm",
+    "status": "confident"
+  },
+  {
+    "region_id": 250,
+    "tract_label": "Tract 24.32",
+    "verdict_npa": "outside-npa",
+    "current_name": "Pilot Knob",
+    "candidates": {
+      "osm": "Colton",
+      "gemini": "Pilot Knob",
+      "npa_plurality": "Southeast",
+      "current": "Pilot Knob"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Pilot Knob",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 253,
+    "tract_label": "Tract 22.01",
+    "verdict_npa": "outside-npa",
+    "current_name": "Walnut Bend",
+    "candidates": {
+      "osm": null,
+      "gemini": "Walnut Bend",
+      "npa_plurality": null,
+      "current": "Walnut Bend"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Walnut Bend",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 254,
+    "tract_label": "Tract 9800",
+    "verdict_npa": "outside-npa",
+    "current_name": "ABIA",
+    "candidates": {
+      "osm": null,
+      "gemini": "ABIA",
+      "npa_plurality": null,
+      "current": "ABIA"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "ABIA",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 264,
+    "tract_label": "Tract 24.19",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southwood",
+      "npa_plurality": "Franklin Park",
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 265,
+    "tract_label": "Tract 24.22",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southwood",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 266,
+    "tract_label": "Tract 24.23",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southwood",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  },
+  {
+    "region_id": 267,
+    "tract_label": "Tract 24.24",
+    "verdict_npa": "outside-npa",
+    "current_name": "Southwood",
+    "candidates": {
+      "osm": null,
+      "gemini": "Southwood",
+      "npa_plurality": null,
+      "current": "Southwood"
+    },
+    "gemini_confidence": "high",
+    "resolved_name": "Southwood",
+    "basis": "gemini+current",
+    "status": "confident"
+  }
+]

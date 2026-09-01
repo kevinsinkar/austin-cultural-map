@@ -17,12 +17,12 @@ export const REGION_INDEX = [
   {
     "region_id": 2,
     "region_name": "North Austin Civic Association",
-    "short_name": "North Loop",
+    "short_name": "North Austin Civic Association",
     "lat": 30.371992499903996,
     "lng": -97.71470699992807,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "North Austin Civic Association [2]",
+    "display_name": "North Austin Civic Association",
     "merged_ids": [
       20
     ],
@@ -42,13 +42,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 4,
-    "region_name": "Blackland",
-    "short_name": "Blackland",
+    "region_name": "MLK-183",
+    "short_name": "MLK-183",
     "lat": 30.282295078605046,
     "lng": -97.65199484728433,
     "dvi_score": 72.4,
     "gentrification_status": "Historical Displacement",
-    "display_name": "Mckinney [4]",
+    "display_name": "MLK-183",
     "tract_label": "Tract 22.14"
   },
   {
@@ -59,7 +59,7 @@ export const REGION_INDEX = [
     "lng": -97.69043849998675,
     "dvi_score": 12.4,
     "gentrification_status": "Stable",
-    "display_name": "Windsor Hills [5]",
+    "display_name": "Windsor Hills",
     "tract_label": "Tract 419.0"
   },
   {
@@ -70,7 +70,7 @@ export const REGION_INDEX = [
     "lng": -97.67947000004042,
     "dvi_score": 17.8,
     "gentrification_status": "Stable",
-    "display_name": "North Shoal Creek [6]",
+    "display_name": "North Shoal Creek",
     "tract_label": "Tract 411.0"
   },
   {
@@ -139,7 +139,7 @@ export const REGION_INDEX = [
     "lng": -97.66835049987566,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Georgian Acres [11]",
+    "display_name": "Georgian Acres",
     "tract_label": "Tract 415.0"
   },
   {
@@ -185,7 +185,7 @@ export const REGION_INDEX = [
     "lng": -97.75881849987383,
     "dvi_score": 85.7,
     "gentrification_status": "Continued Loss",
-    "display_name": "Bouldin Creek [15]",
+    "display_name": "Bouldin Creek",
     "google_maps_name": "Bouldin Creek",
     "tract_label": "Tract 13.12"
   },
@@ -197,7 +197,7 @@ export const REGION_INDEX = [
     "lng": -97.69763449998214,
     "dvi_score": 88.9,
     "gentrification_status": "Dynamic",
-    "display_name": "Montopolis [16]",
+    "display_name": "Montopolis",
     "merged_ids": [
       255
     ],
@@ -212,7 +212,7 @@ export const REGION_INDEX = [
     "lng": -97.62735643595073,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Gateway [17]",
+    "display_name": "Dessau",
     "tract_label": "Tract 449.0"
   },
   {
@@ -234,7 +234,7 @@ export const REGION_INDEX = [
     "lng": -97.67696600013076,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Windsor Hills",
+    "display_name": "Windsor Hills [19]",
     "google_maps_name": "Windsor Hills",
     "tract_label": "Tract 416.0"
   },
@@ -259,7 +259,7 @@ export const REGION_INDEX = [
     "lng": -97.7041155002801,
     "dvi_score": 48.6,
     "gentrification_status": "N/A",
-    "display_name": "Pleasant Valley [21]",
+    "display_name": "Pleasant Valley",
     "google_maps_name": "Pleasant Valley",
     "tract_label": "Tract 23.27"
   },
@@ -271,7 +271,7 @@ export const REGION_INDEX = [
     "lng": -97.82558299990549,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Pleasant Valley",
+    "display_name": "Milwood",
     "merged_ids": [
       28,
       69,
@@ -293,13 +293,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 24,
-    "region_name": "Pleasant Valley",
-    "short_name": "Pleasant Valley",
+    "region_name": "Montopolis",
+    "short_name": "Montopolis",
     "lat": 30.23109900016877,
     "lng": -97.70737700004847,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Pleasant Valley [24]",
+    "display_name": "Montopolis [24]",
     "tract_label": "Tract 23.25"
   },
   {
@@ -310,7 +310,7 @@ export const REGION_INDEX = [
     "lng": -97.79252100004408,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Pleasant Valley [25]",
+    "display_name": "Anderson Mill",
     "merged_ids": [
       67
     ],
@@ -405,7 +405,7 @@ export const REGION_INDEX = [
     "lng": -97.70137749992165,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Georgian Acres",
+    "display_name": "Georgian Acres [33]",
     "google_maps_name": "Georgian Acres",
     "tract_label": "Tract 432.0"
   },
@@ -417,7 +417,7 @@ export const REGION_INDEX = [
     "lng": -97.71369249990892,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Georgian Acres [34]",
+    "display_name": "Gracywoods",
     "google_maps_name": "Gracywoods",
     "tract_label": "Tract 420.0"
   },
@@ -485,13 +485,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 40,
-    "region_name": "River Place",
-    "short_name": "River Place",
+    "region_name": "Steiner Ranch",
+    "short_name": "Steiner Ranch",
     "lat": 30.342540429097568,
     "lng": -97.86859299986702,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Coronado Hills [40]",
+    "display_name": "Steiner Ranch",
     "merged_ids": [
       50,
       132,
@@ -509,7 +509,7 @@ export const REGION_INDEX = [
     "lng": -97.68929195431022,
     "dvi_score": 12.4,
     "gentrification_status": "Stable",
-    "display_name": "Gracywoods",
+    "display_name": "Gracywoods [41]",
     "merged_ids": [
       62,
       231
@@ -524,7 +524,7 @@ export const REGION_INDEX = [
     "lng": -97.70124350003746,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "North Burnet [42]",
+    "display_name": "North Burnet",
     "google_maps_name": "North Burnet",
     "tract_label": "Tract 422.0"
   },
@@ -564,13 +564,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 46,
-    "region_name": "Cat Mtn",
-    "short_name": "Cat Mtn",
+    "region_name": "Cat Mountain",
+    "short_name": "Cat Mountain",
     "lat": 30.39839799991782,
     "lng": -97.76237399971029,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Cat Mtn",
+    "display_name": "Cat Mountain",
     "tract_label": "Tract 328.0"
   },
   {
@@ -605,7 +605,7 @@ export const REGION_INDEX = [
     "lng": -97.85630350015637,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Bouldin Creek",
+    "display_name": "Oak Hill [49]",
     "tract_label": "Tract 313.0"
   },
   {
@@ -622,25 +622,25 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 51,
-    "region_name": "Harris Ridge",
-    "short_name": "Harris Ridge",
+    "region_name": "Wells Branch",
+    "short_name": "Wells Branch",
     "lat": 30.455301138736615,
     "lng": -97.67148100034785,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Harris Ridge [51]",
+    "display_name": "Wells Branch",
     "tract_label": "Tract 457.0"
   },
   {
     "region_id": 52,
-    "region_name": "Dessau",
-    "short_name": "Dessau",
+    "region_name": "Wells Branch",
+    "short_name": "Wells Branch",
     "lat": 30.43250549987897,
     "lng": -97.67760950012831,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Dessau",
-    "google_maps_name": "Dessau",
+    "display_name": "Wells Branch [52]",
+    "google_maps_name": "Wells Branch",
     "tract_label": "Tract 429.0"
   },
   {
@@ -656,13 +656,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 54,
-    "region_name": "Wells Branch",
-    "short_name": "Wells Branch",
+    "region_name": "Pflugerville",
+    "short_name": "Pflugerville",
     "lat": 30.41346303139383,
     "lng": -97.63853829780419,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Wells Branch",
+    "display_name": "Pflugerville",
     "tract_label": "Tract 446.0"
   },
   {
@@ -695,7 +695,7 @@ export const REGION_INDEX = [
     "lng": -97.69532949980655,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "St. John [57]",
+    "display_name": "St. John",
     "google_maps_name": "St. John",
     "tract_label": "Tract 433.0"
   },
@@ -707,42 +707,42 @@ export const REGION_INDEX = [
     "lng": -97.66607282605005,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "St. John",
+    "display_name": "Wells Branch [58]",
     "google_maps_name": "Wells Branch",
     "tract_label": "Tract 465.0"
   },
   {
     "region_id": 59,
-    "region_name": "Wells Branch",
-    "short_name": "Wells Branch",
+    "region_name": "Pflugerville",
+    "short_name": "Pflugerville",
     "lat": 30.439172126542474,
     "lng": -97.6579889042645,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Wells Branch [59]",
-    "google_maps_name": "Wells Branch",
+    "display_name": "Pflugerville [59]",
+    "google_maps_name": "Pflugerville",
     "tract_label": "Tract 441.0"
   },
   {
     "region_id": 60,
-    "region_name": "Southwood",
-    "short_name": "Southwood",
+    "region_name": "Onion Creek",
+    "short_name": "Onion Creek",
     "lat": 30.164002000092296,
     "lng": -97.75009358270265,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Southwood",
+    "display_name": "Onion Creek",
     "tract_label": "Tract 24.39"
   },
   {
     "region_id": 61,
-    "region_name": "Pville",
-    "short_name": "Pville",
+    "region_name": "Pflugerville",
+    "short_name": "Pflugerville",
     "lat": 30.417838000223583,
     "lng": -97.68796600018072,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Pville",
+    "display_name": "Pflugerville [61]",
     "merged_ids": [
       184
     ],
@@ -773,13 +773,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 64,
-    "region_name": "Southwood",
-    "short_name": "Southwood",
+    "region_name": "Onion Creek",
+    "short_name": "Onion Creek",
     "lat": 30.147464534710565,
     "lng": -97.74947582534904,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Southwood [64]",
+    "display_name": "Onion Creek [64]",
     "tract_label": "Tract 24.4"
   },
   {
@@ -802,7 +802,7 @@ export const REGION_INDEX = [
     "lng": -97.75528300006036,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Montopolis",
+    "display_name": "Montopolis [66]",
     "tract_label": "Tract 24.42"
   },
   {
@@ -819,14 +819,14 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 68,
-    "region_name": "ShadowGlen",
-    "short_name": "ShadowGlen",
+    "region_name": "Manor",
+    "short_name": "Manor",
     "lat": 30.30319522133246,
     "lng": -97.57776949871337,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "ShadowGlen",
-    "google_maps_name": "ShadowGlen",
+    "display_name": "Manor",
+    "google_maps_name": "Manor",
     "tract_label": "Tract 22.19"
   },
   {
@@ -870,13 +870,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 72,
-    "region_name": "Montopolis",
-    "short_name": "Montopolis",
+    "region_name": "Austin-Bergstrom Airport",
+    "short_name": "Austin-Bergstrom Airport",
     "lat": 30.18967999983218,
     "lng": -97.6313192751644,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Montopolis [72]",
+    "display_name": "Austin-Bergstrom Airport",
     "tract_label": "Tract 24.52"
   },
   {
@@ -892,14 +892,14 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 74,
-    "region_name": "Windsor Park",
-    "short_name": "Windsor Park",
+    "region_name": "RMMA",
+    "short_name": "RMMA",
     "lat": 30.296498000182623,
     "lng": -97.69314350017234,
     "dvi_score": 21.1,
     "gentrification_status": "Stable",
-    "display_name": "Windsor Park [74]",
-    "google_maps_name": "Windsor Park",
+    "display_name": "RMMA [74]",
+    "google_maps_name": "RMMA",
     "tract_label": "Tract 3.08"
   },
   {
@@ -910,7 +910,7 @@ export const REGION_INDEX = [
     "lng": -97.83118058806366,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Windsor Park [75]",
+    "display_name": "Great Hills [75]",
     "tract_label": "Tract 346.0"
   },
   {
@@ -932,7 +932,7 @@ export const REGION_INDEX = [
     "lng": -97.59789649202946,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Montopolis [77]",
+    "display_name": "Wildhorse",
     "tract_label": "Tract 22.15"
   },
   {
@@ -953,19 +953,19 @@ export const REGION_INDEX = [
   {
     "region_id": 79,
     "region_name": "Upper Boggy Creek",
-    "short_name": "Upper Boggy Cre",
+    "short_name": "Upper Boggy Creek",
     "lat": 30.28512749968442,
     "lng": -97.71699649983856,
     "dvi_score": 100,
     "gentrification_status": "Late",
-    "display_name": "Upper Boggy Creek [79]",
+    "display_name": "Upper Boggy Creek",
     "google_maps_name": "Upper Boggy Creek",
     "tract_label": "Tract 4.02"
   },
   {
     "region_id": 80,
     "region_name": "North University",
-    "short_name": "North Universit",
+    "short_name": "North University",
     "lat": 30.29546050000212,
     "lng": -97.73469099968986,
     "dvi_score": 4.9,
@@ -1022,19 +1022,19 @@ export const REGION_INDEX = [
   {
     "region_id": 85,
     "region_name": "Central East Austin",
-    "short_name": "Central East Au",
+    "short_name": "Central East Austin",
     "lat": 30.269772499801064,
     "lng": -97.72362150003215,
     "dvi_score": 100,
     "gentrification_status": "Late",
-    "display_name": "Central East Austin [85]",
+    "display_name": "Central East Austin",
     "google_maps_name": "Central East Austin",
     "tract_label": "Tract 8.04"
   },
   {
     "region_id": 86,
     "region_name": "Central East Austin",
-    "short_name": "Central East Au",
+    "short_name": "Central East Austin",
     "lat": 30.265970000265355,
     "lng": -97.72370600033162,
     "dvi_score": 85.7,
@@ -1050,7 +1050,7 @@ export const REGION_INDEX = [
     "lng": -97.7576845001895,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Windsor Road [87]",
+    "display_name": "Windsor Road",
     "google_maps_name": "Windsor Road",
     "tract_label": "Tract 16.03"
   },
@@ -1069,24 +1069,24 @@ export const REGION_INDEX = [
   {
     "region_id": 89,
     "region_name": "West Austin Neighborhood Group",
-    "short_name": "West Austin Nei",
+    "short_name": "West Austin Neighborhood Group",
     "lat": 30.305439000159765,
     "lng": -97.76104049981916,
     "dvi_score": 0,
     "gentrification_status": "N/A",
-    "display_name": "West Austin Neighborhood Group [89]",
+    "display_name": "West Austin Neighborhood Group",
     "google_maps_name": "West Austin Neighborhood Group",
     "tract_label": "Tract 16.06"
   },
   {
     "region_id": 90,
     "region_name": "Parker Lane",
-    "short_name": "Parker Lane Wes",
+    "short_name": "Parker Lane",
     "lat": 30.224560999940252,
     "lng": -97.74247950002888,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Parker Lane [90]",
+    "display_name": "Parker Lane",
     "tract_label": "Tract 23.07"
   },
   {
@@ -1097,26 +1097,26 @@ export const REGION_INDEX = [
     "lng": -97.77669800016255,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "South Manchaca [91]",
+    "display_name": "South Manchaca",
     "google_maps_name": "South Manchaca",
     "tract_label": "Tract 20.03"
   },
   {
     "region_id": 92,
-    "region_name": "Rosedale",
-    "short_name": "Rosedale",
+    "region_name": "Allandale",
+    "short_name": "Allandale",
     "lat": 30.321075499984403,
     "lng": -97.75490049995807,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Rosedale [92]",
-    "google_maps_name": "Rosedale",
+    "display_name": "Allandale [92]",
+    "google_maps_name": "Allandale",
     "tract_label": "Tract 1.01"
   },
   {
     "region_id": 93,
     "region_name": "Parker Lane",
-    "short_name": "Parker Lane Eas",
+    "short_name": "Parker Lane",
     "lat": 30.22199850003082,
     "lng": -97.72310850020708,
     "dvi_score": 70.3,
@@ -1132,14 +1132,14 @@ export const REGION_INDEX = [
     "lng": -97.74108199988436,
     "dvi_score": 21.1,
     "gentrification_status": "Stable",
-    "display_name": "Downtown [94]",
+    "display_name": "Downtown",
     "google_maps_name": "Downtown",
     "tract_label": "Tract 7.0"
   },
   {
     "region_id": 95,
     "region_name": "West Austin Neighborhood Group",
-    "short_name": "Tarrytown West",
+    "short_name": "West Austin Neighborhood Group",
     "lat": 30.302563499755763,
     "lng": -97.77429749962985,
     "dvi_score": 4.9,
@@ -1155,7 +1155,7 @@ export const REGION_INDEX = [
     "lng": -97.79564099958242,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Pleasant Valley [96]",
+    "display_name": "Treemont",
     "tract_label": "Tract 19.1"
   },
   {
@@ -1172,12 +1172,12 @@ export const REGION_INDEX = [
   {
     "region_id": 98,
     "region_name": "Riverside",
-    "short_name": "East Riverside ",
+    "short_name": "Riverside",
     "lat": 30.233972999604305,
     "lng": -97.73210700013792,
     "dvi_score": 48.6,
     "gentrification_status": "N/A",
-    "display_name": "Riverside [98]",
+    "display_name": "Riverside",
     "tract_label": "Tract 23.15"
   },
   {
@@ -1199,7 +1199,7 @@ export const REGION_INDEX = [
     "lng": -97.78254900018618,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Barton Hills [100]",
+    "display_name": "Barton Hills",
     "google_maps_name": "Barton Hills",
     "tract_label": "Tract 19.11"
   },
@@ -1211,14 +1211,14 @@ export const REGION_INDEX = [
     "lng": -97.67832950005635,
     "dvi_score": 59.5,
     "gentrification_status": "N/A",
-    "display_name": "MLK-183",
+    "display_name": "MLK-183 [101]",
     "google_maps_name": "MLK-183",
     "tract_label": "Tract 21.1"
   },
   {
     "region_id": 102,
     "region_name": "Johnston Terrace",
-    "short_name": "Johnston Terrac",
+    "short_name": "Johnston Terrace",
     "lat": 30.259527999967275,
     "lng": -97.68303887819164,
     "dvi_score": 100,
@@ -1229,7 +1229,7 @@ export const REGION_INDEX = [
   {
     "region_id": 103,
     "region_name": "Windsor Park",
-    "short_name": "Windsor Park We",
+    "short_name": "Windsor Park",
     "lat": 30.31312799995729,
     "lng": -97.70522800032191,
     "dvi_score": 70.3,
@@ -1240,7 +1240,7 @@ export const REGION_INDEX = [
   {
     "region_id": 104,
     "region_name": "Windsor Park",
-    "short_name": "Windsor Park Ea",
+    "short_name": "Windsor Park",
     "lat": 30.30766400024345,
     "lng": -97.69009449986123,
     "dvi_score": 79.5,
@@ -1251,18 +1251,18 @@ export const REGION_INDEX = [
   {
     "region_id": 105,
     "region_name": "MLK",
-    "short_name": "MLK North",
+    "short_name": "MLK",
     "lat": 30.29635800002174,
     "lng": -97.68381550033504,
     "dvi_score": 79.5,
     "gentrification_status": "Rapid Loss",
-    "display_name": "MLK [105]",
+    "display_name": "MLK",
     "tract_label": "Tract 21.07"
   },
   {
     "region_id": 106,
     "region_name": "MLK",
-    "short_name": "MLK South",
+    "short_name": "MLK",
     "lat": 30.28132250003341,
     "lng": -97.6878600002388,
     "dvi_score": 85.7,
@@ -1278,26 +1278,26 @@ export const REGION_INDEX = [
     "lng": -97.74383050027734,
     "dvi_score": 21.1,
     "gentrification_status": "Stable",
-    "display_name": "Rosedale [107]",
+    "display_name": "Rosedale",
     "google_maps_name": "Rosedale",
     "tract_label": "Tract 2.04"
   },
   {
     "region_id": 108,
     "region_name": "Riverside",
-    "short_name": "East Riverside",
+    "short_name": "Riverside",
     "lat": 30.240101499834395,
     "lng": -97.7352790002756,
     "dvi_score": 72.4,
     "gentrification_status": "Historical Displacement",
     "display_name": "Riverside [108]",
-    "google_maps_name": "East Riverside",
+    "google_maps_name": "Riverside",
     "tract_label": "Tract 14.03"
   },
   {
     "region_id": 109,
     "region_name": "Pecan Springs-springdale",
-    "short_name": "Pecan Springs-s",
+    "short_name": "Pecan Springs-springdale",
     "lat": 30.300858500269612,
     "lng": -97.67166850000123,
     "dvi_score": 70.3,
@@ -1314,30 +1314,30 @@ export const REGION_INDEX = [
     "lng": -97.80132099981424,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Riverside",
+    "display_name": "Davenport Ranch",
     "tract_label": "Tract 19.13"
   },
   {
     "region_id": 111,
-    "region_name": "Holly",
-    "short_name": "Holly",
+    "region_name": "Govalle",
+    "short_name": "Govalle",
     "lat": 30.25921900010681,
     "lng": -97.71763249993987,
     "dvi_score": 100,
     "gentrification_status": "Late",
-    "display_name": "Holly [111]",
-    "google_maps_name": "Holly",
+    "display_name": "Govalle [111]",
+    "google_maps_name": "Govalle",
     "tract_label": "Tract 9.02"
   },
   {
     "region_id": 112,
     "region_name": "Holly",
-    "short_name": "East Cesar Chav",
+    "short_name": "Holly",
     "lat": 30.253904999666048,
     "lng": -97.72082450010055,
     "dvi_score": 85.7,
     "gentrification_status": "Continued Loss",
-    "display_name": "Holly [112]",
+    "display_name": "Holly",
     "tract_label": "Tract 10.0"
   },
   {
@@ -1360,7 +1360,7 @@ export const REGION_INDEX = [
     "lng": -97.77299149965793,
     "dvi_score": 21.1,
     "gentrification_status": "Stable",
-    "display_name": "Zilker [114]",
+    "display_name": "Zilker",
     "google_maps_name": "Zilker",
     "tract_label": "Tract 13.04"
   },
@@ -1378,12 +1378,12 @@ export const REGION_INDEX = [
   {
     "region_id": 116,
     "region_name": "South River City",
-    "short_name": "S River City",
+    "short_name": "South River City",
     "lat": 30.25066399994367,
     "lng": -97.74598899999233,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "South River City [116]",
+    "display_name": "South River City",
     "google_maps_name": "South River City",
     "tract_label": "Tract 14.01"
   },
@@ -1395,7 +1395,7 @@ export const REGION_INDEX = [
     "lng": -97.76833200017163,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Holly",
+    "display_name": "Northwest Hills [117]",
     "google_maps_name": "Northwest Hills",
     "tract_label": "Tract 1.02"
   },
@@ -1419,7 +1419,7 @@ export const REGION_INDEX = [
     "lng": -97.73712150025699,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Triangle State [119]",
+    "display_name": "Triangle State",
     "tract_label": "Tract 2.03"
   },
   {
@@ -1430,7 +1430,7 @@ export const REGION_INDEX = [
     "lng": -97.7267069997782,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Hancock [120]",
+    "display_name": "Hancock",
     "google_maps_name": "Hancock",
     "tract_label": "Tract 3.02"
   },
@@ -1460,7 +1460,7 @@ export const REGION_INDEX = [
   {
     "region_id": 123,
     "region_name": "South River City",
-    "short_name": "S River City",
+    "short_name": "South River City",
     "lat": 30.243431000040687,
     "lng": -97.74129199967601,
     "dvi_score": 4.9,
@@ -1488,7 +1488,7 @@ export const REGION_INDEX = [
     "lng": -97.7296884996745,
     "dvi_score": 34.6,
     "gentrification_status": "Historical Displacement",
-    "display_name": "Brentwood [125]",
+    "display_name": "Brentwood",
     "google_maps_name": "Brentwood",
     "tract_label": "Tract 15.05"
   },
@@ -1507,7 +1507,7 @@ export const REGION_INDEX = [
   {
     "region_id": 127,
     "region_name": "West Austin Neighborhood Group",
-    "short_name": "West Austin Nei",
+    "short_name": "West Austin Neighborhood Group",
     "lat": 30.28557099990175,
     "lng": -97.77485950036564,
     "dvi_score": 4.9,
@@ -1535,7 +1535,7 @@ export const REGION_INDEX = [
     "lng": -97.78911100017248,
     "dvi_score": 72.4,
     "gentrification_status": "Historical Displacement",
-    "display_name": "South Lamar [129]",
+    "display_name": "South Lamar",
     "google_maps_name": "South Lamar",
     "tract_label": "Tract 20.04"
   },
@@ -1547,7 +1547,7 @@ export const REGION_INDEX = [
     "lng": -97.81314899982647,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Windsor Park [130]",
+    "display_name": "Rob Roy",
     "tract_label": "Tract 19.12"
   },
   {
@@ -1576,13 +1576,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 133,
-    "region_name": "Steiner",
-    "short_name": "Steiner",
+    "region_name": "Steiner Ranch",
+    "short_name": "Steiner Ranch",
     "lat": 30.45464450009365,
     "lng": -97.81639799991771,
     "dvi_score": 12.4,
     "gentrification_status": "Stable",
-    "display_name": "Steiner",
+    "display_name": "Steiner Ranch [133]",
     "merged_ids": [
       139,
       196,
@@ -1606,13 +1606,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 135,
-    "region_name": "Avery Ranch",
-    "short_name": "Avery Ranch",
+    "region_name": "Jollyville",
+    "short_name": "Jollyville",
     "lat": 30.445526882259855,
     "lng": -97.7772109999876,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Avery Ranch",
+    "display_name": "Jollyville [135]",
     "merged_ids": [
       180,
       245
@@ -1633,25 +1633,25 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 137,
-    "region_name": "Scofield Farms",
-    "short_name": "Scofield Farms",
+    "region_name": "Jollyville",
+    "short_name": "Jollyville",
     "lat": 30.457946499931097,
     "lng": -97.7445334998711,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Scofield Farms",
-    "google_maps_name": "Scofield Farms",
+    "display_name": "Jollyville [137]",
+    "google_maps_name": "Jollyville",
     "tract_label": "Tract 204.11"
   },
   {
     "region_id": 138,
-    "region_name": "Lakeline",
-    "short_name": "Lakeline",
+    "region_name": "Avery Ranch",
+    "short_name": "Avery Ranch",
     "lat": 30.490786395126094,
     "lng": -97.76789399975826,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Lakeline",
+    "display_name": "Avery Ranch",
     "merged_ids": [
       214
     ],
@@ -1671,13 +1671,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 140,
-    "region_name": "Zilker",
-    "short_name": "Zilker",
+    "region_name": "Barton Hills",
+    "short_name": "Barton Hills",
     "lat": 30.25434150001027,
     "lng": -97.77586600001584,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Zilker [140]",
+    "display_name": "Barton Hills [140]",
     "tract_label": "Tract 19.23"
   },
   {
@@ -1688,7 +1688,7 @@ export const REGION_INDEX = [
     "lng": -97.8998871349333,
     "dvi_score": 23.2,
     "gentrification_status": "Stable",
-    "display_name": "West Oak Hill [141]",
+    "display_name": "West Oak Hill",
     "google_maps_name": "West Oak Hill",
     "tract_label": "Tract 330.0"
   },
@@ -1712,7 +1712,7 @@ export const REGION_INDEX = [
     "lng": -97.91731695396422,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Zilker",
+    "display_name": "Bee Cave",
     "google_maps_name": "Bee Cave",
     "tract_label": "Tract 366.0"
   },
@@ -1780,7 +1780,7 @@ export const REGION_INDEX = [
     "lng": -97.8447899998086,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "East Oak Hill [149]",
+    "display_name": "East Oak Hill",
     "google_maps_name": "East Oak Hill",
     "tract_label": "Tract 320.0"
   },
@@ -1834,13 +1834,13 @@ export const REGION_INDEX = [
   {
     "region_id": 154,
     "region_name": "St. Edwards",
-    "short_name": "St. Edward's",
+    "short_name": "St. Edwards",
     "lat": 30.222998000257576,
     "lng": -97.75570500018557,
     "dvi_score": 54.1,
     "gentrification_status": "N/A",
-    "display_name": "St. Edwards [154]",
-    "google_maps_name": "St. Edward's",
+    "display_name": "St. Edwards",
+    "google_maps_name": "St. Edwards",
     "tract_label": "Tract 23.22"
   },
   {
@@ -1870,13 +1870,13 @@ export const REGION_INDEX = [
   {
     "region_id": 157,
     "region_name": "St. Edwards",
-    "short_name": "St. Edward's",
+    "short_name": "St. Edwards",
     "lat": 30.23261099974789,
     "lng": -97.75074050012395,
     "dvi_score": 72.4,
     "gentrification_status": "Historical Displacement",
     "display_name": "St. Edwards [157]",
-    "google_maps_name": "St. Edward's",
+    "google_maps_name": "St. Edwards",
     "tract_label": "Tract 23.23"
   },
   {
@@ -1887,7 +1887,7 @@ export const REGION_INDEX = [
     "lng": -97.7600294999614,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "St. Edwards [158]",
+    "display_name": "Great Hills [158]",
     "google_maps_name": "Great Hills",
     "tract_label": "Tract 306.0"
   },
@@ -1910,14 +1910,14 @@ export const REGION_INDEX = [
     "lng": -97.74336250027912,
     "dvi_score": 48.6,
     "gentrification_status": "N/A",
-    "display_name": "West University [160]",
+    "display_name": "West University",
     "google_maps_name": "West University",
     "tract_label": "Tract 6.08"
   },
   {
     "region_id": 161,
     "region_name": "West University",
-    "short_name": "UT Austin",
+    "short_name": "West University",
     "lat": 30.29182049986622,
     "lng": -97.74449300025171,
     "dvi_score": 10.8,
@@ -1928,7 +1928,7 @@ export const REGION_INDEX = [
   {
     "region_id": 162,
     "region_name": "West University",
-    "short_name": "West Campus",
+    "short_name": "West University",
     "lat": 30.284326499618317,
     "lng": -97.74960299982854,
     "dvi_score": 3.2,
@@ -2031,14 +2031,14 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 171,
-    "region_name": "Windsor Road",
-    "short_name": "Windsor Road",
+    "region_name": "West University",
+    "short_name": "West University",
     "lat": 30.293512000078778,
     "lng": -97.74861599972854,
     "dvi_score": 16.2,
     "gentrification_status": "N/A",
-    "display_name": "Windsor Road [171]",
-    "google_maps_name": "Windsor Road",
+    "display_name": "West University [171]",
+    "google_maps_name": "West University",
     "tract_label": "Tract 6.05"
   },
   {
@@ -2061,7 +2061,7 @@ export const REGION_INDEX = [
     "lng": -97.88234254846978,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "South Lamar",
+    "display_name": "Oak Hill [173]",
     "tract_label": "Tract 348.0"
   },
   {
@@ -2096,7 +2096,7 @@ export const REGION_INDEX = [
     "lng": -97.72589149994272,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "North Burnet",
+    "display_name": "North Burnet [176]",
     "google_maps_name": "North Burnet",
     "tract_label": "Tract 454.0"
   },
@@ -2116,12 +2116,12 @@ export const REGION_INDEX = [
   {
     "region_id": 178,
     "region_name": "North Shoal Creek",
-    "short_name": "N Shoal Creek",
+    "short_name": "North Shoal Creek",
     "lat": 30.367414500129115,
     "lng": -97.7352135004027,
     "dvi_score": 23.2,
     "gentrification_status": "Stable",
-    "display_name": "North Shoal Creek",
+    "display_name": "North Shoal Creek [178]",
     "google_maps_name": "North Shoal Creek",
     "tract_label": "Tract 404.0"
   },
@@ -2169,7 +2169,7 @@ export const REGION_INDEX = [
     "lng": -97.6846894997206,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Pleasant Valley [182]",
+    "display_name": "Wells Branch [182]",
     "tract_label": "Tract 412.0"
   },
   {
@@ -2212,13 +2212,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 186,
-    "region_name": "N Lamar",
-    "short_name": "N Lamar",
+    "region_name": "Georgian Acres",
+    "short_name": "Georgian Acres",
     "lat": 30.31558950015534,
     "lng": -97.63544273644311,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "N Lamar",
+    "display_name": "Georgian Acres [186]",
     "tract_label": "Tract 22.2"
   },
   {
@@ -2235,13 +2235,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 188,
-    "region_name": "Fern Bluff",
-    "short_name": "Fern Bluff",
+    "region_name": "Avery Ranch",
+    "short_name": "Avery Ranch",
     "lat": 30.500283317321276,
     "lng": -97.79495101452767,
     "dvi_score": 23.2,
     "gentrification_status": "Stable",
-    "display_name": "Fern Bluff",
+    "display_name": "Avery Ranch [188]",
     "tract_label": "Tract 203.47"
   },
   {
@@ -2252,7 +2252,7 @@ export const REGION_INDEX = [
     "lng": -97.90647841504679,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Bee Cave",
+    "display_name": "Bee Cave [189]",
     "tract_label": "Tract 109.12"
   },
   {
@@ -2296,7 +2296,7 @@ export const REGION_INDEX = [
     "lng": -97.77757399964031,
     "dvi_score": 63.2,
     "gentrification_status": "Rapid Loss",
-    "display_name": "Southwood [193]",
+    "display_name": "Southwood",
     "tract_label": "Tract 24.51"
   },
   {
@@ -2350,7 +2350,7 @@ export const REGION_INDEX = [
   {
     "region_id": 198,
     "region_name": "North Austin Civic Association",
-    "short_name": "North Austin Ci",
+    "short_name": "North Austin Civic Association",
     "lat": 30.381267499995175,
     "lng": -97.70856399992863,
     "dvi_score": 70.3,
@@ -2362,7 +2362,7 @@ export const REGION_INDEX = [
   {
     "region_id": 199,
     "region_name": "North Austin Civic Association",
-    "short_name": "North Austin Ci",
+    "short_name": "North Austin Civic Association",
     "lat": 30.35670900017027,
     "lng": -97.70904350000748,
     "dvi_score": 70.3,
@@ -2379,7 +2379,7 @@ export const REGION_INDEX = [
     "lng": -97.70165850028954,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "North Austin Civic Association",
+    "display_name": "Balcones Woods [200]",
     "google_maps_name": "Balcones Woods",
     "tract_label": "Tract 418.0"
   },
@@ -2402,7 +2402,7 @@ export const REGION_INDEX = [
     "lng": -97.77024749992216,
     "dvi_score": 69.5,
     "gentrification_status": "Continued Loss",
-    "display_name": "Sweetbriar [202]",
+    "display_name": "Sweetbriar",
     "google_maps_name": "Sweetbriar",
     "tract_label": "Tract 24.43"
   },
@@ -2445,7 +2445,7 @@ export const REGION_INDEX = [
   {
     "region_id": 206,
     "region_name": "North Austin Civic Association",
-    "short_name": "North Austin Ci",
+    "short_name": "North Austin Civic Association",
     "lat": 30.37379100010463,
     "lng": -97.69659200002076,
     "dvi_score": 72.4,
@@ -2457,7 +2457,7 @@ export const REGION_INDEX = [
   {
     "region_id": 207,
     "region_name": "North Austin Civic Association",
-    "short_name": "North Austin Ci",
+    "short_name": "North Austin Civic Association",
     "lat": 30.363448999821514,
     "lng": -97.70284849985833,
     "dvi_score": 72.4,
@@ -2474,7 +2474,7 @@ export const REGION_INDEX = [
     "lng": -97.8406765003202,
     "dvi_score": 17.8,
     "gentrification_status": "Stable",
-    "display_name": "Sweetbriar [208]",
+    "display_name": "Oak Hill [208]",
     "tract_label": "Tract 334.0"
   },
   {
@@ -2532,7 +2532,7 @@ export const REGION_INDEX = [
     "lng": -97.8045490002861,
     "dvi_score": 69.5,
     "gentrification_status": "Continued Loss",
-    "display_name": "Garrison Park [213]",
+    "display_name": "Garrison Park",
     "google_maps_name": "Garrison Park",
     "tract_label": "Tract 304.0"
   },
@@ -2609,13 +2609,13 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 220,
-    "region_name": "Scofield",
-    "short_name": "Scofield",
+    "region_name": "Scofield Farms",
+    "short_name": "Scofield Farms",
     "lat": 30.417715999993447,
     "lng": -97.64821638168064,
     "dvi_score": 12.4,
     "gentrification_status": "Stable",
-    "display_name": "Scofield",
+    "display_name": "Scofield Farms",
     "tract_label": "Tract 443.0"
   },
   {
@@ -2631,14 +2631,14 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 222,
-    "region_name": "Jester Estates",
-    "short_name": "Jester Estates",
+    "region_name": "Jollyville",
+    "short_name": "Jollyville",
     "lat": 30.405544999901878,
     "lng": -97.7785620002361,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Jester Estates",
-    "google_maps_name": "Jester Estates",
+    "display_name": "Jollyville [222]",
+    "google_maps_name": "Jollyville",
     "tract_label": "Tract 326.0"
   },
   {
@@ -2661,7 +2661,7 @@ export const REGION_INDEX = [
     "lng": -97.7934159999484,
     "dvi_score": 23.8,
     "gentrification_status": "Historical Displacement",
-    "display_name": "St. John [224]",
+    "display_name": "Cherry Creek [224]",
     "tract_label": "Tract 24.37"
   },
   {
@@ -2729,7 +2729,7 @@ export const REGION_INDEX = [
     "lng": -97.75932699994104,
     "dvi_score": 12.4,
     "gentrification_status": "Stable",
-    "display_name": "Lakeline [230]",
+    "display_name": "Lakeline",
     "tract_label": "Tract 204.09"
   },
   {
@@ -2787,20 +2787,20 @@ export const REGION_INDEX = [
     "lng": -97.75543900005977,
     "dvi_score": 37.8,
     "gentrification_status": "N/A",
-    "display_name": "East Oak Hill [235]",
+    "display_name": "Onion Creek [235]",
     "google_maps_name": "Onion Creek",
     "tract_label": "Tract 24.3"
   },
   {
     "region_id": 236,
-    "region_name": "Hyde Park",
-    "short_name": "Hyde Park",
+    "region_name": "North Loop",
+    "short_name": "North Loop",
     "lat": 30.30921649989162,
     "lng": -97.71701849995375,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Hyde Park",
-    "google_maps_name": "Hyde Park",
+    "display_name": "North Loop",
+    "google_maps_name": "North Loop",
     "tract_label": "Tract 3.04"
   },
   {
@@ -2811,7 +2811,7 @@ export const REGION_INDEX = [
     "lng": -97.64467449982828,
     "dvi_score": 0,
     "gentrification_status": "N/A",
-    "display_name": "Hyde Park [237]",
+    "display_name": "Montopolis [237]",
     "google_maps_name": "Montopolis",
     "tract_label": "Tract 23.19"
   },
@@ -2841,14 +2841,14 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 240,
-    "region_name": "Triangle State",
-    "short_name": "Triangle State",
+    "region_name": "Hyde Park",
+    "short_name": "Hyde Park",
     "lat": 30.314972999604294,
     "lng": -97.72575199980491,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Triangle State [240]",
-    "google_maps_name": "Triangle State",
+    "display_name": "Hyde Park",
+    "google_maps_name": "Hyde Park",
     "tract_label": "Tract 3.05"
   },
   {
@@ -2866,7 +2866,7 @@ export const REGION_INDEX = [
   {
     "region_id": 242,
     "region_name": "Upper Boggy Creek",
-    "short_name": "Upper Boggy Cre",
+    "short_name": "Upper Boggy Creek",
     "lat": 30.297838000373474,
     "lng": -97.71343350010591,
     "dvi_score": 21.1,
@@ -2883,19 +2883,19 @@ export const REGION_INDEX = [
     "lng": -97.79474900026611,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "East Oak Hill [243]",
+    "display_name": "Davenport Ranch [243]",
     "google_maps_name": "Davenport Ranch",
     "tract_label": "Tract 19.19"
   },
   {
     "region_id": 244,
-    "region_name": "Great Hills",
-    "short_name": "Great Hills",
+    "region_name": "Avery Ranch",
+    "short_name": "Avery Ranch",
     "lat": 30.48698099977338,
     "lng": -97.78428126082147,
     "dvi_score": 61.1,
     "gentrification_status": "Stable",
-    "display_name": "Great Hills [244]",
+    "display_name": "Avery Ranch [244]",
     "tract_label": "Tract 203.11"
   },
   {
@@ -2930,7 +2930,7 @@ export const REGION_INDEX = [
     "lng": -97.79748800876456,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "East Oak Hill [247]",
+    "display_name": "South Manchaca [247]",
     "tract_label": "Tract 24.34"
   },
   {
@@ -2947,14 +2947,14 @@ export const REGION_INDEX = [
   },
   {
     "region_id": 249,
-    "region_name": "Balcones Woods",
-    "short_name": "Balcones Woods",
+    "region_name": "Jollyville",
+    "short_name": "Jollyville",
     "lat": 30.418011999704078,
     "lng": -97.75627100020645,
     "dvi_score": 4.9,
     "gentrification_status": "Stable",
-    "display_name": "Balcones Woods [249]",
-    "google_maps_name": "Balcones Woods",
+    "display_name": "Jollyville [249]",
+    "google_maps_name": "Jollyville",
     "tract_label": "Tract 25.0"
   },
   {
@@ -2983,7 +2983,7 @@ export const REGION_INDEX = [
   {
     "region_id": 252,
     "region_name": "University Hills",
-    "short_name": "University Hill",
+    "short_name": "University Hills",
     "lat": 30.317125999964986,
     "lng": -97.67230250001035,
     "dvi_score": 69.5,
@@ -3000,7 +3000,7 @@ export const REGION_INDEX = [
     "lng": -97.65861300003988,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Windsor Park [253]",
+    "display_name": "Walnut Bend",
     "tract_label": "Tract 22.01"
   },
   {
@@ -3042,13 +3042,13 @@ export const REGION_INDEX = [
   {
     "region_id": 257,
     "region_name": "Riverside",
-    "short_name": "East Riverside",
+    "short_name": "Riverside",
     "lat": 30.235333999864253,
     "lng": -97.72789700024632,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
     "display_name": "Riverside [257]",
-    "google_maps_name": "East Riverside",
+    "google_maps_name": "Riverside",
     "tract_label": "Tract 23.16"
   },
   {
@@ -3095,7 +3095,7 @@ export const REGION_INDEX = [
     "lng": -97.74836449982178,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Franklin Park [261]",
+    "display_name": "Franklin Park",
     "google_maps_name": "Franklin Park",
     "tract_label": "Tract 24.11"
   },
@@ -3131,7 +3131,7 @@ export const REGION_INDEX = [
     "lng": -97.75840599973705,
     "dvi_score": 53.5,
     "gentrification_status": "Susceptible",
-    "display_name": "Pleasant Valley [264]",
+    "display_name": "Southwood [264]",
     "google_maps_name": "Southwood",
     "tract_label": "Tract 24.19"
   },

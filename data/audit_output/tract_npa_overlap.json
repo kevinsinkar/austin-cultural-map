@@ -1,0 +1,4042 @@
+[
+  {
+    "region_id": 1,
+    "tract_label": "Tract 24.47",
+    "current_name": "Mckinney",
+    "current_display": "Mckinney",
+    "lat": 30.203028500265134,
+    "lng": -97.72639199964104,
+    "npa_overlaps": [
+      {
+        "npa": "Mckinney",
+        "pct": 99.1
+      },
+      {
+        "npa": "Parker Lane",
+        "pct": 0.7
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Mckinney",
+    "majority_pct": 99.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 2,
+    "tract_label": "Tract 407.0",
+    "current_name": "North Austin Civic Association",
+    "current_display": "North Austin Civic Association [2]",
+    "lat": 30.371992499903996,
+    "lng": -97.71470699992807,
+    "npa_overlaps": [
+      {
+        "npa": "North Austin Civic Association",
+        "pct": 83.5
+      },
+      {
+        "npa": "North Burnet",
+        "pct": 16.5
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "North Austin Civic Association",
+    "majority_pct": 83.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 3,
+    "tract_label": "Tract 3.09",
+    "current_name": "RMMA",
+    "current_display": "RMMA",
+    "lat": 30.297927500004164,
+    "lng": -97.70555450009007,
+    "npa_overlaps": [
+      {
+        "npa": "RMMA",
+        "pct": 93.7
+      },
+      {
+        "npa": "MLK",
+        "pct": 5.8
+      }
+    ],
+    "npa_coverage_pct": 99.5,
+    "majority_npa": "RMMA",
+    "majority_pct": 93.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 4,
+    "tract_label": "Tract 22.14",
+    "current_name": "Blackland",
+    "current_display": "Mckinney [4]",
+    "lat": 30.282295078605046,
+    "lng": -97.65199484728433,
+    "npa_overlaps": [
+      {
+        "npa": "MLK-183",
+        "pct": 38.2
+      }
+    ],
+    "npa_coverage_pct": 38.2,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 5,
+    "tract_label": "Tract 419.0",
+    "current_name": "Windsor Hills",
+    "current_display": "Windsor Hills [5]",
+    "lat": 30.392759000227727,
+    "lng": -97.69043849998675,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 6,
+    "tract_label": "Tract 411.0",
+    "current_name": "North Shoal Creek",
+    "current_display": "North Shoal Creek [6]",
+    "lat": 30.386088000161124,
+    "lng": -97.67947000004042,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 7,
+    "tract_label": "Tract 367.0",
+    "current_name": "Barton Creek",
+    "current_display": "Barton Creek",
+    "lat": 30.1954525002827,
+    "lng": -97.90259269314825,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 8,
+    "tract_label": "Tract 440.0",
+    "current_name": "St. John's",
+    "current_display": "St. John's",
+    "lat": 30.39774750004713,
+    "lng": -97.66305399979223,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 9,
+    "tract_label": "Tract 437.0",
+    "current_name": "Windsor Park",
+    "current_display": "Windsor Park",
+    "lat": 30.393390000098492,
+    "lng": -97.66631650005638,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 10,
+    "tract_label": "Tract 368.0",
+    "current_name": "Circle C",
+    "current_display": "Circle C",
+    "lat": 30.18538100033294,
+    "lng": -97.87926639987441,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 11,
+    "tract_label": "Tract 415.0",
+    "current_name": "Georgian Acres",
+    "current_display": "Georgian Acres [11]",
+    "lat": 30.380421500102216,
+    "lng": -97.66835049987566,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 12,
+    "tract_label": "Tract 22.13",
+    "current_name": "Springdale",
+    "current_display": "Springdale",
+    "lat": 30.28808150011119,
+    "lng": -97.63888300030018,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 13,
+    "tract_label": "Tract 324.0",
+    "current_name": "Gateway",
+    "current_display": "Gateway",
+    "lat": 30.389513500297852,
+    "lng": -97.73796450001163,
+    "npa_overlaps": [
+      {
+        "npa": "Gateway",
+        "pct": 80.1
+      },
+      {
+        "npa": "North Burnet",
+        "pct": 19.1
+      }
+    ],
+    "npa_coverage_pct": 99.2,
+    "majority_npa": "Gateway",
+    "majority_pct": 80.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 14,
+    "tract_label": "Tract 410.0",
+    "current_name": "North Lamar",
+    "current_display": "North Lamar",
+    "lat": 30.370094500061185,
+    "lng": -97.6865525001977,
+    "npa_overlaps": [
+      {
+        "npa": "North Lamar",
+        "pct": 99.8
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "North Lamar",
+    "majority_pct": 99.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 15,
+    "tract_label": "Tract 13.12",
+    "current_name": "Bouldin Creek",
+    "current_display": "Bouldin Creek [15]",
+    "lat": 30.249683999716865,
+    "lng": -97.75881849987383,
+    "npa_overlaps": [
+      {
+        "npa": "Bouldin Creek",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Bouldin Creek",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 16,
+    "tract_label": "Tract 23.2",
+    "current_name": "Montopolis",
+    "current_display": "Montopolis [16]",
+    "lat": 30.223395500152265,
+    "lng": -97.69763449998214,
+    "npa_overlaps": [
+      {
+        "npa": "Montopolis",
+        "pct": 96.9
+      }
+    ],
+    "npa_coverage_pct": 96.9,
+    "majority_npa": "Montopolis",
+    "majority_pct": 96.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 17,
+    "tract_label": "Tract 449.0",
+    "current_name": "Dessau",
+    "current_display": "Gateway [17]",
+    "lat": 30.38760926230765,
+    "lng": -97.62735643595073,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 18,
+    "tract_label": "Tract 24.53",
+    "current_name": "Creedmoor",
+    "current_display": "Creedmoor",
+    "lat": 30.177359016205656,
+    "lng": -97.5914042254746,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 19,
+    "tract_label": "Tract 416.0",
+    "current_name": "Windsor Hills",
+    "current_display": "Windsor Hills",
+    "lat": 30.36394799990032,
+    "lng": -97.67696600013076,
+    "npa_overlaps": [
+      {
+        "npa": "Windsor Hills",
+        "pct": 97.6
+      },
+      {
+        "npa": "North Lamar",
+        "pct": 2.3
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Windsor Hills",
+    "majority_pct": 97.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 21,
+    "tract_label": "Tract 23.27",
+    "current_name": "Pleasant Valley",
+    "current_display": "Pleasant Valley [21]",
+    "lat": 30.240895000004286,
+    "lng": -97.7041155002801,
+    "npa_overlaps": [
+      {
+        "npa": "Pleasant Valley",
+        "pct": 77.7
+      },
+      {
+        "npa": "Montopolis",
+        "pct": 18.9
+      }
+    ],
+    "npa_coverage_pct": 96.6,
+    "majority_npa": "Pleasant Valley",
+    "majority_pct": 77.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 22,
+    "tract_label": "Tract 345.0",
+    "current_name": "Milwood",
+    "current_display": "Pleasant Valley",
+    "lat": 30.43217499992636,
+    "lng": -97.82558299990549,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 23,
+    "tract_label": "Tract 321.0",
+    "current_name": "Oak Hill",
+    "current_display": "Oak Hill",
+    "lat": 30.22146200002132,
+    "lng": -97.81855999979413,
+    "npa_overlaps": [
+      {
+        "npa": "East Oak Hill",
+        "pct": 30.1
+      },
+      {
+        "npa": "Garrison Park",
+        "pct": 20
+      },
+      {
+        "npa": "Westgate",
+        "pct": 8.3
+      }
+    ],
+    "npa_coverage_pct": 58.4,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 24,
+    "tract_label": "Tract 23.25",
+    "current_name": "Pleasant Valley",
+    "current_display": "Pleasant Valley [24]",
+    "lat": 30.23109900016877,
+    "lng": -97.70737700004847,
+    "npa_overlaps": [
+      {
+        "npa": "Montopolis",
+        "pct": 52.2
+      },
+      {
+        "npa": "Pleasant Valley",
+        "pct": 47.8
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Montopolis",
+    "majority_pct": 52.2,
+    "verdict": "rename"
+  },
+  {
+    "region_id": 25,
+    "tract_label": "Tract 338.0",
+    "current_name": "Anderson Mill",
+    "current_display": "Pleasant Valley [25]",
+    "lat": 30.429205499684116,
+    "lng": -97.79252100004408,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 26,
+    "tract_label": "Tract 301.0",
+    "current_name": "Allandale",
+    "current_display": "Allandale",
+    "lat": 30.38058699964037,
+    "lng": -97.75253800027843,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 27,
+    "tract_label": "Tract 308.0",
+    "current_name": "The Domain",
+    "current_display": "The Domain",
+    "lat": 30.39907649973071,
+    "lng": -97.75457749990164,
+    "npa_overlaps": [
+      {
+        "npa": "Gateway",
+        "pct": 0.9
+      }
+    ],
+    "npa_coverage_pct": 0.9,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 29,
+    "tract_label": "Tract 325.0",
+    "current_name": "Arboretum",
+    "current_display": "Arboretum",
+    "lat": 30.40676399990872,
+    "lng": -97.73727550016415,
+    "npa_overlaps": [
+      {
+        "npa": "North Burnet",
+        "pct": 6.2
+      }
+    ],
+    "npa_coverage_pct": 6.2,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 30,
+    "tract_label": "Tract 456.0",
+    "current_name": "Harris Ridge",
+    "current_display": "Harris Ridge",
+    "lat": 30.46539018715748,
+    "lng": -97.68276813594068,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 31,
+    "tract_label": "Tract 342.0",
+    "current_name": "Great Hills",
+    "current_display": "Great Hills",
+    "lat": 30.433842499931473,
+    "lng": -97.75074599992791,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 32,
+    "tract_label": "Tract 413.0",
+    "current_name": "Balcones Woods",
+    "current_display": "Balcones Woods",
+    "lat": 30.42213299998801,
+    "lng": -97.7218434998776,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 33,
+    "tract_label": "Tract 432.0",
+    "current_name": "Georgian Acres",
+    "current_display": "Georgian Acres",
+    "lat": 30.350906500134926,
+    "lng": -97.70137749992165,
+    "npa_overlaps": [
+      {
+        "npa": "Georgian Acres",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Georgian Acres",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 34,
+    "tract_label": "Tract 420.0",
+    "current_name": "Gracywoods",
+    "current_display": "Georgian Acres [34]",
+    "lat": 30.436892499839047,
+    "lng": -97.71369249990892,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 35,
+    "tract_label": "Tract 451.0",
+    "current_name": "Tech Ridge",
+    "current_display": "Tech Ridge",
+    "lat": 30.434074500288006,
+    "lng": -97.6904070529431,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 36,
+    "tract_label": "Tract 414.0",
+    "current_name": "Balcones Woods",
+    "current_display": "Balcones Woods [36]",
+    "lat": 30.41672249959373,
+    "lng": -97.71318699998002,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 38,
+    "tract_label": "Tract 464.0",
+    "current_name": "Harris Ridge",
+    "current_display": "Harris Ridge [38]",
+    "lat": 30.470232775572185,
+    "lng": -97.66977740605242,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 39,
+    "tract_label": "Tract 402.0",
+    "current_name": "Coronado Hills",
+    "current_display": "Coronado Hills",
+    "lat": 30.326969500192348,
+    "lng": -97.68430800011407,
+    "npa_overlaps": [
+      {
+        "npa": "Coronado Hills",
+        "pct": 97.8
+      },
+      {
+        "npa": "St. John",
+        "pct": 0.5
+      }
+    ],
+    "npa_coverage_pct": 98.3,
+    "majority_npa": "Coronado Hills",
+    "majority_pct": 97.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 40,
+    "tract_label": "Tract 339.0",
+    "current_name": "River Place",
+    "current_display": "Coronado Hills [40]",
+    "lat": 30.342540429097568,
+    "lng": -97.86859299986702,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 41,
+    "tract_label": "Tract 452.0",
+    "current_name": "Gracywoods",
+    "current_display": "Gracywoods",
+    "lat": 30.42298099997322,
+    "lng": -97.68929195431022,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 42,
+    "tract_label": "Tract 422.0",
+    "current_name": "North Burnet",
+    "current_display": "North Burnet [42]",
+    "lat": 30.412813000069946,
+    "lng": -97.70124350003746,
+    "npa_overlaps": [
+      {
+        "npa": "North Burnet",
+        "pct": 0.9
+      }
+    ],
+    "npa_coverage_pct": 0.9,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 43,
+    "tract_label": "Tract 300.0",
+    "current_name": "Northwest Hills",
+    "current_display": "Northwest Hills",
+    "lat": 30.37167799978991,
+    "lng": -97.77428750006806,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 44,
+    "tract_label": "Tract 438.0",
+    "current_name": "Harris Branch",
+    "current_display": "Harris Branch",
+    "lat": 30.383049999907627,
+    "lng": -97.65782099993916,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 45,
+    "tract_label": "Tract 305.0",
+    "current_name": "Lakeway",
+    "current_display": "Lakeway",
+    "lat": 30.389690462594842,
+    "lng": -97.80786800000817,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 46,
+    "tract_label": "Tract 328.0",
+    "current_name": "Cat Mtn",
+    "current_display": "Cat Mtn",
+    "lat": 30.39839799991782,
+    "lng": -97.76237399971029,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 47,
+    "tract_label": "Tract 24.49",
+    "current_name": "Pilot Knob",
+    "current_display": "Pilot Knob",
+    "lat": 30.158610500124553,
+    "lng": -97.65114974311612,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 48,
+    "tract_label": "Tract 13.11",
+    "current_name": "Bouldin Creek",
+    "current_display": "Bouldin Creek [48]",
+    "lat": 30.257246999999097,
+    "lng": -97.75112400027234,
+    "npa_overlaps": [
+      {
+        "npa": "Bouldin Creek",
+        "pct": 95.6
+      }
+    ],
+    "npa_coverage_pct": 95.6,
+    "majority_npa": "Bouldin Creek",
+    "majority_pct": 95.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 49,
+    "tract_label": "Tract 313.0",
+    "current_name": "Oak Hill",
+    "current_display": "Bouldin Creek",
+    "lat": 30.192782182002162,
+    "lng": -97.85630350015637,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 51,
+    "tract_label": "Tract 457.0",
+    "current_name": "Harris Ridge",
+    "current_display": "Harris Ridge [51]",
+    "lat": 30.455301138736615,
+    "lng": -97.67148100034785,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 52,
+    "tract_label": "Tract 429.0",
+    "current_name": "Dessau",
+    "current_display": "Dessau",
+    "lat": 30.43250549987897,
+    "lng": -97.67760950012831,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 53,
+    "tract_label": "Tract 319.0",
+    "current_name": "Shady Hollow",
+    "current_display": "Shady Hollow",
+    "lat": 30.16969450359852,
+    "lng": -97.8380744608177,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 54,
+    "tract_label": "Tract 446.0",
+    "current_name": "Wells Branch",
+    "current_display": "Wells Branch",
+    "lat": 30.41346303139383,
+    "lng": -97.63853829780419,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 55,
+    "tract_label": "Tract 332.0",
+    "current_name": "Cherry Creek",
+    "current_display": "Cherry Creek",
+    "lat": 30.15156217060772,
+    "lng": -97.83675100275653,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 56,
+    "tract_label": "Tract 24.45",
+    "current_name": "Shady Hollow",
+    "current_display": "Shady Hollow [56]",
+    "lat": 30.140401889785437,
+    "lng": -97.77771891009957,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 57,
+    "tract_label": "Tract 433.0",
+    "current_name": "St. John",
+    "current_display": "St. John [57]",
+    "lat": 30.3327100000665,
+    "lng": -97.69532949980655,
+    "npa_overlaps": [
+      {
+        "npa": "St. John",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "St. John",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 58,
+    "tract_label": "Tract 465.0",
+    "current_name": "Wells Branch",
+    "current_display": "St. John",
+    "lat": 30.45523399984927,
+    "lng": -97.66607282605005,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 59,
+    "tract_label": "Tract 441.0",
+    "current_name": "Wells Branch",
+    "current_display": "Wells Branch [59]",
+    "lat": 30.439172126542474,
+    "lng": -97.6579889042645,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 60,
+    "tract_label": "Tract 24.39",
+    "current_name": "Southwood",
+    "current_display": "Southwood",
+    "lat": 30.164002000092296,
+    "lng": -97.75009358270265,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 61,
+    "tract_label": "Tract 421.0",
+    "current_name": "Pville",
+    "current_display": "Pville",
+    "lat": 30.417838000223583,
+    "lng": -97.68796600018072,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 63,
+    "tract_label": "Tract 335.0",
+    "current_name": "Barton Creek",
+    "current_display": "Barton Creek [63]",
+    "lat": 30.205545499874972,
+    "lng": -97.84929900044847,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 64,
+    "tract_label": "Tract 24.4",
+    "current_name": "Southwood",
+    "current_display": "Southwood [64]",
+    "lat": 30.147464534710565,
+    "lng": -97.74947582534904,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 66,
+    "tract_label": "Tract 24.42",
+    "current_name": "Montopolis",
+    "current_display": "Montopolis",
+    "lat": 30.178674499978257,
+    "lng": -97.75528300006036,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 68,
+    "tract_label": "Tract 22.19",
+    "current_name": "ShadowGlen",
+    "current_display": "ShadowGlen",
+    "lat": 30.30319522133246,
+    "lng": -97.57776949871337,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 70,
+    "tract_label": "Tract 203.33",
+    "current_name": "Jollyville",
+    "current_display": "Jollyville",
+    "lat": 30.458679684369997,
+    "lng": -97.82178140149045,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 71,
+    "tract_label": "Tract 341.0",
+    "current_name": "Northwood",
+    "current_display": "Northwood",
+    "lat": 30.444266999972115,
+    "lng": -97.73769150001266,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 72,
+    "tract_label": "Tract 24.52",
+    "current_name": "Montopolis",
+    "current_display": "Montopolis [72]",
+    "lat": 30.18967999983218,
+    "lng": -97.6313192751644,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 73,
+    "tract_label": "Tract 22.22",
+    "current_name": "Windsor Hills",
+    "current_display": "Windsor Hills [73]",
+    "lat": 30.29955877576694,
+    "lng": -97.63359949991695,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 74,
+    "tract_label": "Tract 3.08",
+    "current_name": "Windsor Park",
+    "current_display": "Windsor Park [74]",
+    "lat": 30.296498000182623,
+    "lng": -97.69314350017234,
+    "npa_overlaps": [
+      {
+        "npa": "RMMA",
+        "pct": 82.4
+      },
+      {
+        "npa": "Windsor Park",
+        "pct": 17.5
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "RMMA",
+    "majority_pct": 82.4,
+    "verdict": "rename"
+  },
+  {
+    "region_id": 75,
+    "tract_label": "Tract 346.0",
+    "current_name": "Great Hills",
+    "current_display": "Windsor Park [75]",
+    "lat": 30.411954000027123,
+    "lng": -97.83118058806366,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 76,
+    "tract_label": "Tract 23.21",
+    "current_name": "Montopolis",
+    "current_display": "Montopolis [76]",
+    "lat": 30.233031999826977,
+    "lng": -97.69429150005266,
+    "npa_overlaps": [
+      {
+        "npa": "Montopolis",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Montopolis",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 77,
+    "tract_label": "Tract 22.15",
+    "current_name": "Wildhorse",
+    "current_display": "Montopolis [77]",
+    "lat": 30.273562136783255,
+    "lng": -97.59789649202946,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 78,
+    "tract_label": "Tract 23.26",
+    "current_name": "Pleasant Valley",
+    "current_display": "Pleasant Valley [78]",
+    "lat": 30.24394499991186,
+    "lng": -97.70979349997,
+    "npa_overlaps": [
+      {
+        "npa": "Pleasant Valley",
+        "pct": 84.8
+      },
+      {
+        "npa": "Govalle",
+        "pct": 0.6
+      }
+    ],
+    "npa_coverage_pct": 85.4,
+    "majority_npa": "Pleasant Valley",
+    "majority_pct": 84.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 79,
+    "tract_label": "Tract 4.02",
+    "current_name": "Upper Boggy Creek",
+    "current_display": "Upper Boggy Creek [79]",
+    "lat": 30.28512749968442,
+    "lng": -97.71699649983856,
+    "npa_overlaps": [
+      {
+        "npa": "Upper Boggy Creek",
+        "pct": 64.3
+      },
+      {
+        "npa": "Rosewood",
+        "pct": 26
+      },
+      {
+        "npa": "UT",
+        "pct": 9.5
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Upper Boggy Creek",
+    "majority_pct": 64.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 80,
+    "tract_label": "Tract 5.0",
+    "current_name": "North University",
+    "current_display": "North University",
+    "lat": 30.29546050000212,
+    "lng": -97.73469099968986,
+    "npa_overlaps": [
+      {
+        "npa": "North University",
+        "pct": 65.5
+      },
+      {
+        "npa": "Hancock",
+        "pct": 33.5
+      },
+      {
+        "npa": "UT",
+        "pct": 1
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "North University",
+    "majority_pct": 65.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 81,
+    "tract_label": "Tract 6.01",
+    "current_name": "UT",
+    "current_display": "UT",
+    "lat": 30.288240499799286,
+    "lng": -97.73803850027653,
+    "npa_overlaps": [
+      {
+        "npa": "UT",
+        "pct": 75.8
+      },
+      {
+        "npa": "North University",
+        "pct": 17.5
+      },
+      {
+        "npa": "West University",
+        "pct": 6.6
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "UT",
+    "majority_pct": 75.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 82,
+    "tract_label": "Tract 8.01",
+    "current_name": "Govalle",
+    "current_display": "Govalle",
+    "lat": 30.2671104997998,
+    "lng": -97.70240850025206,
+    "npa_overlaps": [
+      {
+        "npa": "Govalle",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Govalle",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 83,
+    "tract_label": "Tract 8.02",
+    "current_name": "Rosewood",
+    "current_display": "Rosewood",
+    "lat": 30.27280749991624,
+    "lng": -97.70694250024616,
+    "npa_overlaps": [
+      {
+        "npa": "Rosewood",
+        "pct": 99.3
+      },
+      {
+        "npa": "Govalle",
+        "pct": 0.5
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Rosewood",
+    "majority_pct": 99.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 84,
+    "tract_label": "Tract 8.03",
+    "current_name": "Chestnut",
+    "current_display": "Chestnut",
+    "lat": 30.276835999981444,
+    "lng": -97.72049750030936,
+    "npa_overlaps": [
+      {
+        "npa": "Chestnut",
+        "pct": 50.5
+      },
+      {
+        "npa": "Central East Austin",
+        "pct": 48.7
+      },
+      {
+        "npa": "Downtown",
+        "pct": 0.7
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Chestnut",
+    "majority_pct": 50.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 85,
+    "tract_label": "Tract 8.04",
+    "current_name": "Central East Austin",
+    "current_display": "Central East Austin [85]",
+    "lat": 30.269772499801064,
+    "lng": -97.72362150003215,
+    "npa_overlaps": [
+      {
+        "npa": "Central East Austin",
+        "pct": 80.6
+      },
+      {
+        "npa": "Rosewood",
+        "pct": 19.3
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Central East Austin",
+    "majority_pct": 80.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 86,
+    "tract_label": "Tract 9.01",
+    "current_name": "Central East Austin",
+    "current_display": "Central East Austin [86]",
+    "lat": 30.265970000265355,
+    "lng": -97.72370600033162,
+    "npa_overlaps": [
+      {
+        "npa": "Central East Austin",
+        "pct": 98.5
+      },
+      {
+        "npa": "Rosewood",
+        "pct": 1
+      }
+    ],
+    "npa_coverage_pct": 99.5,
+    "majority_npa": "Central East Austin",
+    "majority_pct": 98.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 87,
+    "tract_label": "Tract 16.03",
+    "current_name": "Windsor Road",
+    "current_display": "Windsor Road [87]",
+    "lat": 30.298826999666346,
+    "lng": -97.7576845001895,
+    "npa_overlaps": [
+      {
+        "npa": "Windsor Road",
+        "pct": 69.8
+      },
+      {
+        "npa": "West Austin Neighborhood Group",
+        "pct": 30.1
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Windsor Road",
+    "majority_pct": 69.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 88,
+    "tract_label": "Tract 16.05",
+    "current_name": "Old Enfield",
+    "current_display": "Old Enfield",
+    "lat": 30.286596499978543,
+    "lng": -97.76109900026862,
+    "npa_overlaps": [
+      {
+        "npa": "Old Enfield",
+        "pct": 41.2
+      },
+      {
+        "npa": "West Austin Neighborhood Group",
+        "pct": 37.2
+      },
+      {
+        "npa": "Old West Austin",
+        "pct": 20.9
+      },
+      {
+        "npa": "Downtown",
+        "pct": 0.6
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 89,
+    "tract_label": "Tract 16.06",
+    "current_name": "West Austin Neighborhood Group",
+    "current_display": "West Austin Neighborhood Group [89]",
+    "lat": 30.305439000159765,
+    "lng": -97.76104049981916,
+    "npa_overlaps": [
+      {
+        "npa": "West Austin Neighborhood Group",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "West Austin Neighborhood Group",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 90,
+    "tract_label": "Tract 23.07",
+    "current_name": "Parker Lane",
+    "current_display": "Parker Lane [90]",
+    "lat": 30.224560999940252,
+    "lng": -97.74247950002888,
+    "npa_overlaps": [
+      {
+        "npa": "Parker Lane",
+        "pct": 99.1
+      },
+      {
+        "npa": "Mckinney",
+        "pct": 0.7
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Parker Lane",
+    "majority_pct": 99.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 91,
+    "tract_label": "Tract 20.03",
+    "current_name": "South Manchaca",
+    "current_display": "South Manchaca [91]",
+    "lat": 30.218911000192577,
+    "lng": -97.77669800016255,
+    "npa_overlaps": [
+      {
+        "npa": "South Manchaca",
+        "pct": 54.5
+      },
+      {
+        "npa": "West Congress",
+        "pct": 44.8
+      }
+    ],
+    "npa_coverage_pct": 99.3,
+    "majority_npa": "South Manchaca",
+    "majority_pct": 54.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 92,
+    "tract_label": "Tract 1.01",
+    "current_name": "Rosedale",
+    "current_display": "Rosedale [92]",
+    "lat": 30.321075499984403,
+    "lng": -97.75490049995807,
+    "npa_overlaps": [
+      {
+        "npa": "Allandale",
+        "pct": 44.8
+      },
+      {
+        "npa": "Rosedale",
+        "pct": 32.1
+      },
+      {
+        "npa": "Windsor Road",
+        "pct": 1.5
+      }
+    ],
+    "npa_coverage_pct": 78.4,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 93,
+    "tract_label": "Tract 23.13",
+    "current_name": "Parker Lane",
+    "current_display": "Parker Lane [93]",
+    "lat": 30.22199850003082,
+    "lng": -97.72310850020708,
+    "npa_overlaps": [
+      {
+        "npa": "Parker Lane",
+        "pct": 99.3
+      }
+    ],
+    "npa_coverage_pct": 99.3,
+    "majority_npa": "Parker Lane",
+    "majority_pct": 99.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 94,
+    "tract_label": "Tract 7.0",
+    "current_name": "Downtown",
+    "current_display": "Downtown [94]",
+    "lat": 30.27788650031181,
+    "lng": -97.74108199988436,
+    "npa_overlaps": [
+      {
+        "npa": "Downtown",
+        "pct": 99.5
+      }
+    ],
+    "npa_coverage_pct": 99.5,
+    "majority_npa": "Downtown",
+    "majority_pct": 99.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 95,
+    "tract_label": "Tract 16.04",
+    "current_name": "West Austin Neighborhood Group",
+    "current_display": "West Austin Neighborhood Group [95]",
+    "lat": 30.302563499755763,
+    "lng": -97.77429749962985,
+    "npa_overlaps": [
+      {
+        "npa": "West Austin Neighborhood Group",
+        "pct": 99.4
+      }
+    ],
+    "npa_coverage_pct": 99.4,
+    "majority_npa": "West Austin Neighborhood Group",
+    "majority_pct": 99.4,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 96,
+    "tract_label": "Tract 19.1",
+    "current_name": "Treemont",
+    "current_display": "Pleasant Valley [96]",
+    "lat": 30.272815500285162,
+    "lng": -97.79564099958242,
+    "npa_overlaps": [
+      {
+        "npa": "West Austin Neighborhood Group",
+        "pct": 1.3
+      },
+      {
+        "npa": "Barton Hills",
+        "pct": 0.8
+      }
+    ],
+    "npa_coverage_pct": 2.1,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 97,
+    "tract_label": "Tract 24.07",
+    "current_name": "Akins",
+    "current_display": "Akins",
+    "lat": 30.126863991679926,
+    "lng": -97.80831338745281,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 98,
+    "tract_label": "Tract 23.15",
+    "current_name": "Riverside",
+    "current_display": "Riverside [98]",
+    "lat": 30.233972999604305,
+    "lng": -97.73210700013792,
+    "npa_overlaps": [
+      {
+        "npa": "Riverside",
+        "pct": 99.8
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Riverside",
+    "majority_pct": 99.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 99,
+    "tract_label": "Tract 13.08",
+    "current_name": "Dawson",
+    "current_display": "Dawson",
+    "lat": 30.232477500336415,
+    "lng": -97.76149249997886,
+    "npa_overlaps": [
+      {
+        "npa": "Dawson",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Dawson",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 100,
+    "tract_label": "Tract 19.11",
+    "current_name": "Barton Hills",
+    "current_display": "Barton Hills [100]",
+    "lat": 30.257736000066387,
+    "lng": -97.78254900018618,
+    "npa_overlaps": [
+      {
+        "npa": "Barton Hills",
+        "pct": 97.4
+      }
+    ],
+    "npa_coverage_pct": 97.4,
+    "majority_npa": "Barton Hills",
+    "majority_pct": 97.4,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 101,
+    "tract_label": "Tract 21.1",
+    "current_name": "MLK-183",
+    "current_display": "MLK-183",
+    "lat": 30.275000499873215,
+    "lng": -97.67832950005635,
+    "npa_overlaps": [
+      {
+        "npa": "MLK-183",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "MLK-183",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 102,
+    "tract_label": "Tract 21.11",
+    "current_name": "Johnston Terrace",
+    "current_display": "Johnston Terrace",
+    "lat": 30.259527999967275,
+    "lng": -97.68303887819164,
+    "npa_overlaps": [
+      {
+        "npa": "Johnston Terrace",
+        "pct": 37.5
+      },
+      {
+        "npa": "Govalle",
+        "pct": 20.7
+      },
+      {
+        "npa": "MLK-183",
+        "pct": 8.3
+      },
+      {
+        "npa": "MLK",
+        "pct": 4.9
+      }
+    ],
+    "npa_coverage_pct": 71.4,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 103,
+    "tract_label": "Tract 21.05",
+    "current_name": "Windsor Park",
+    "current_display": "Windsor Park [103]",
+    "lat": 30.31312799995729,
+    "lng": -97.70522800032191,
+    "npa_overlaps": [
+      {
+        "npa": "Windsor Park",
+        "pct": 69.9
+      },
+      {
+        "npa": "North Loop",
+        "pct": 29.6
+      }
+    ],
+    "npa_coverage_pct": 99.5,
+    "majority_npa": "Windsor Park",
+    "majority_pct": 69.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 104,
+    "tract_label": "Tract 21.06",
+    "current_name": "Windsor Park",
+    "current_display": "Windsor Park [104]",
+    "lat": 30.30766400024345,
+    "lng": -97.69009449986123,
+    "npa_overlaps": [
+      {
+        "npa": "Windsor Park",
+        "pct": 99.7
+      }
+    ],
+    "npa_coverage_pct": 99.7,
+    "majority_npa": "Windsor Park",
+    "majority_pct": 99.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 105,
+    "tract_label": "Tract 21.07",
+    "current_name": "MLK",
+    "current_display": "MLK [105]",
+    "lat": 30.29635800002174,
+    "lng": -97.68381550033504,
+    "npa_overlaps": [
+      {
+        "npa": "MLK",
+        "pct": 51.1
+      },
+      {
+        "npa": "Pecan Springs-springdale",
+        "pct": 48.7
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "MLK",
+    "majority_pct": 51.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 106,
+    "tract_label": "Tract 21.09",
+    "current_name": "MLK",
+    "current_display": "MLK [106]",
+    "lat": 30.28132250003341,
+    "lng": -97.6878600002388,
+    "npa_overlaps": [
+      {
+        "npa": "MLK",
+        "pct": 71.5
+      },
+      {
+        "npa": "MLK-183",
+        "pct": 28.5
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "MLK",
+    "majority_pct": 71.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 107,
+    "tract_label": "Tract 2.04",
+    "current_name": "Rosedale",
+    "current_display": "Rosedale [107]",
+    "lat": 30.307152500037887,
+    "lng": -97.74383050027734,
+    "npa_overlaps": [
+      {
+        "npa": "Rosedale",
+        "pct": 54.8
+      },
+      {
+        "npa": "West University",
+        "pct": 28.6
+      },
+      {
+        "npa": "Windsor Road",
+        "pct": 16.5
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Rosedale",
+    "majority_pct": 54.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 108,
+    "tract_label": "Tract 14.03",
+    "current_name": "Riverside",
+    "current_display": "Riverside [108]",
+    "lat": 30.240101499834395,
+    "lng": -97.7352790002756,
+    "npa_overlaps": [
+      {
+        "npa": "Riverside",
+        "pct": 99.4
+      },
+      {
+        "npa": "South River City",
+        "pct": 0.5
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Riverside",
+    "majority_pct": 99.4,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 109,
+    "tract_label": "Tract 21.08",
+    "current_name": "Pecan Springs-springdale",
+    "current_display": "Pecan Springs-springdale",
+    "lat": 30.300858500269612,
+    "lng": -97.67166850000123,
+    "npa_overlaps": [
+      {
+        "npa": "Pecan Springs-springdale",
+        "pct": 72.9
+      },
+      {
+        "npa": "University Hills",
+        "pct": 25.6
+      },
+      {
+        "npa": "MLK-183",
+        "pct": 0.8
+      }
+    ],
+    "npa_coverage_pct": 99.3,
+    "majority_npa": "Pecan Springs-springdale",
+    "majority_pct": 72.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 110,
+    "tract_label": "Tract 19.13",
+    "current_name": "Davenport Ranch",
+    "current_display": "Riverside",
+    "lat": 30.315973480541743,
+    "lng": -97.80132099981424,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 111,
+    "tract_label": "Tract 9.02",
+    "current_name": "Holly",
+    "current_display": "Holly [111]",
+    "lat": 30.25921900010681,
+    "lng": -97.71763249993987,
+    "npa_overlaps": [
+      {
+        "npa": "Govalle",
+        "pct": 42.2
+      },
+      {
+        "npa": "Holly",
+        "pct": 30.1
+      },
+      {
+        "npa": "East Cesar Chavez",
+        "pct": 24.1
+      },
+      {
+        "npa": "Central East Austin",
+        "pct": 3.4
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 112,
+    "tract_label": "Tract 10.0",
+    "current_name": "Holly",
+    "current_display": "Holly [112]",
+    "lat": 30.253904999666048,
+    "lng": -97.72082450010055,
+    "npa_overlaps": [
+      {
+        "npa": "East Cesar Chavez",
+        "pct": 44.2
+      },
+      {
+        "npa": "Holly",
+        "pct": 39.7
+      },
+      {
+        "npa": "Govalle",
+        "pct": 4.8
+      },
+      {
+        "npa": "Downtown",
+        "pct": 1.1
+      }
+    ],
+    "npa_coverage_pct": 89.8,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 113,
+    "tract_label": "Tract 12.0",
+    "current_name": "Old West Austin",
+    "current_display": "Old West Austin",
+    "lat": 30.27401250017681,
+    "lng": -97.76088599988896,
+    "npa_overlaps": [
+      {
+        "npa": "Old West Austin",
+        "pct": 78.1
+      },
+      {
+        "npa": "Downtown",
+        "pct": 14.9
+      },
+      {
+        "npa": "Barton Hills",
+        "pct": 0.6
+      }
+    ],
+    "npa_coverage_pct": 93.6,
+    "majority_npa": "Old West Austin",
+    "majority_pct": 78.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 114,
+    "tract_label": "Tract 13.04",
+    "current_name": "Zilker",
+    "current_display": "Zilker [114]",
+    "lat": 30.247696499793705,
+    "lng": -97.77299149965793,
+    "npa_overlaps": [
+      {
+        "npa": "Zilker",
+        "pct": 64.3
+      },
+      {
+        "npa": "South Lamar",
+        "pct": 35.6
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Zilker",
+    "majority_pct": 64.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 115,
+    "tract_label": "Tract 13.07",
+    "current_name": "Galindo",
+    "current_display": "Galindo",
+    "lat": 30.23626699972229,
+    "lng": -97.76805700008046,
+    "npa_overlaps": [
+      {
+        "npa": "Galindo",
+        "pct": 99.6
+      }
+    ],
+    "npa_coverage_pct": 99.6,
+    "majority_npa": "Galindo",
+    "majority_pct": 99.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 116,
+    "tract_label": "Tract 14.01",
+    "current_name": "South River City",
+    "current_display": "South River City [116]",
+    "lat": 30.25066399994367,
+    "lng": -97.74598899999233,
+    "npa_overlaps": [
+      {
+        "npa": "South River City",
+        "pct": 91.9
+      }
+    ],
+    "npa_coverage_pct": 91.9,
+    "majority_npa": "South River City",
+    "majority_pct": 91.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 117,
+    "tract_label": "Tract 1.02",
+    "current_name": "Northwest Hills",
+    "current_display": "Holly",
+    "lat": 30.325771499804915,
+    "lng": -97.76833200017163,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 118,
+    "tract_label": "Tract 21.04",
+    "current_name": "Windsor Park",
+    "current_display": "Windsor Park [118]",
+    "lat": 30.313916499896607,
+    "lng": -97.69697749981174,
+    "npa_overlaps": [
+      {
+        "npa": "Windsor Park",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Windsor Park",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 119,
+    "tract_label": "Tract 2.03",
+    "current_name": "Triangle State",
+    "current_display": "Triangle State [119]",
+    "lat": 30.313010499934677,
+    "lng": -97.73712150025699,
+    "npa_overlaps": [
+      {
+        "npa": "Triangle State",
+        "pct": 63
+      },
+      {
+        "npa": "Brentwood",
+        "pct": 36.8
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Triangle State",
+    "majority_pct": 63,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 120,
+    "tract_label": "Tract 3.02",
+    "current_name": "Hancock",
+    "current_display": "Hancock [120]",
+    "lat": 30.302563499755763,
+    "lng": -97.7267069997782,
+    "npa_overlaps": [
+      {
+        "npa": "Hancock",
+        "pct": 54.1
+      },
+      {
+        "npa": "Hyde Park",
+        "pct": 45.8
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Hancock",
+    "majority_pct": 54.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 121,
+    "tract_label": "Tract 4.01",
+    "current_name": "Hancock",
+    "current_display": "Hancock [121]",
+    "lat": 30.287995999765627,
+    "lng": -97.72463650007441,
+    "npa_overlaps": [
+      {
+        "npa": "UT",
+        "pct": 35.5
+      },
+      {
+        "npa": "Upper Boggy Creek",
+        "pct": 33.4
+      },
+      {
+        "npa": "Hancock",
+        "pct": 31
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 122,
+    "tract_label": "Tract 15.03",
+    "current_name": "Highland",
+    "current_display": "Highland",
+    "lat": 30.32718150007622,
+    "lng": -97.71626350021035,
+    "npa_overlaps": [
+      {
+        "npa": "Highland",
+        "pct": 70.6
+      },
+      {
+        "npa": "North Loop",
+        "pct": 19
+      },
+      {
+        "npa": "St. John",
+        "pct": 10.3
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Highland",
+    "majority_pct": 70.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 123,
+    "tract_label": "Tract 14.02",
+    "current_name": "South River City",
+    "current_display": "South River City [123]",
+    "lat": 30.243431000040687,
+    "lng": -97.74129199967601,
+    "npa_overlaps": [
+      {
+        "npa": "South River City",
+        "pct": 96.3
+      }
+    ],
+    "npa_coverage_pct": 96.3,
+    "majority_npa": "South River City",
+    "majority_pct": 96.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 124,
+    "tract_label": "Tract 15.04",
+    "current_name": "Crestview",
+    "current_display": "Crestview",
+    "lat": 30.34642449984085,
+    "lng": -97.7253159999334,
+    "npa_overlaps": [
+      {
+        "npa": "Crestview",
+        "pct": 99.5
+      }
+    ],
+    "npa_coverage_pct": 99.5,
+    "majority_npa": "Crestview",
+    "majority_pct": 99.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 125,
+    "tract_label": "Tract 15.05",
+    "current_name": "Brentwood",
+    "current_display": "Brentwood [125]",
+    "lat": 30.335687999801394,
+    "lng": -97.7296884996745,
+    "npa_overlaps": [
+      {
+        "npa": "Brentwood",
+        "pct": 99.8
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Brentwood",
+    "majority_pct": 99.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 126,
+    "tract_label": "Tract 15.01",
+    "current_name": "Allandale",
+    "current_display": "Allandale [126]",
+    "lat": 30.3471779999648,
+    "lng": -97.7429580000616,
+    "npa_overlaps": [
+      {
+        "npa": "Allandale",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Allandale",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 127,
+    "tract_label": "Tract 16.02",
+    "current_name": "West Austin Neighborhood Group",
+    "current_display": "West Austin Neighborhood Group [127]",
+    "lat": 30.28557099990175,
+    "lng": -97.77485950036564,
+    "npa_overlaps": [
+      {
+        "npa": "West Austin Neighborhood Group",
+        "pct": 98.7
+      },
+      {
+        "npa": "Old West Austin",
+        "pct": 0.9
+      }
+    ],
+    "npa_coverage_pct": 99.6,
+    "majority_npa": "West Austin Neighborhood Group",
+    "majority_pct": 98.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 128,
+    "tract_label": "Tract 20.02",
+    "current_name": "South Manchaca",
+    "current_display": "South Manchaca [128]",
+    "lat": 30.22317850003779,
+    "lng": -97.78512749993413,
+    "npa_overlaps": [
+      {
+        "npa": "South Manchaca",
+        "pct": 98.1
+      },
+      {
+        "npa": "South Lamar",
+        "pct": 1.8
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "South Manchaca",
+    "majority_pct": 98.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 129,
+    "tract_label": "Tract 20.04",
+    "current_name": "South Lamar",
+    "current_display": "South Lamar [129]",
+    "lat": 30.236777000308365,
+    "lng": -97.78911100017248,
+    "npa_overlaps": [
+      {
+        "npa": "South Lamar",
+        "pct": 98.8
+      },
+      {
+        "npa": "Barton Hills",
+        "pct": 1
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "South Lamar",
+    "majority_pct": 98.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 130,
+    "tract_label": "Tract 19.12",
+    "current_name": "Rob Roy",
+    "current_display": "Windsor Park [130]",
+    "lat": 30.324151936362824,
+    "lng": -97.81314899982647,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 133,
+    "tract_label": "Tract 204.04",
+    "current_name": "Steiner",
+    "current_display": "Steiner",
+    "lat": 30.45464450009365,
+    "lng": -97.81639799991771,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 134,
+    "tract_label": "Tract 204.05",
+    "current_name": "Canyon Creek",
+    "current_display": "Canyon Creek",
+    "lat": 30.445502999863606,
+    "lng": -97.78899899995383,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 135,
+    "tract_label": "Tract 204.06",
+    "current_name": "Avery Ranch",
+    "current_display": "Avery Ranch",
+    "lat": 30.445526882259855,
+    "lng": -97.7772109999876,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 137,
+    "tract_label": "Tract 204.11",
+    "current_name": "Scofield Farms",
+    "current_display": "Scofield Farms",
+    "lat": 30.457946499931097,
+    "lng": -97.7445334998711,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 138,
+    "tract_label": "Tract 205.08",
+    "current_name": "Lakeline",
+    "current_display": "Lakeline",
+    "lat": 30.490786395126094,
+    "lng": -97.76789399975826,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 140,
+    "tract_label": "Tract 19.23",
+    "current_name": "Zilker",
+    "current_display": "Zilker [140]",
+    "lat": 30.25434150001027,
+    "lng": -97.77586600001584,
+    "npa_overlaps": [
+      {
+        "npa": "Barton Hills",
+        "pct": 91.6
+      },
+      {
+        "npa": "Zilker",
+        "pct": 8.4
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Barton Hills",
+    "majority_pct": 91.6,
+    "verdict": "rename"
+  },
+  {
+    "region_id": 141,
+    "tract_label": "Tract 330.0",
+    "current_name": "West Oak Hill",
+    "current_display": "West Oak Hill [141]",
+    "lat": 30.244552500047888,
+    "lng": -97.8998871349333,
+    "npa_overlaps": [
+      {
+        "npa": "West Oak Hill",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "West Oak Hill",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 142,
+    "tract_label": "Tract 13.09",
+    "current_name": "Zilker",
+    "current_display": "Zilker [142]",
+    "lat": 30.26026349971079,
+    "lng": -97.76365699997055,
+    "npa_overlaps": [
+      {
+        "npa": "Zilker",
+        "pct": 94.6
+      },
+      {
+        "npa": "Barton Hills",
+        "pct": 1.2
+      }
+    ],
+    "npa_coverage_pct": 95.8,
+    "majority_npa": "Zilker",
+    "majority_pct": 94.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 143,
+    "tract_label": "Tract 366.0",
+    "current_name": "Bee Cave",
+    "current_display": "Zilker",
+    "lat": 30.267808924542294,
+    "lng": -97.91731695396422,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 144,
+    "tract_label": "Tract 307.0",
+    "current_name": "Great Hills",
+    "current_display": "Great Hills [144]",
+    "lat": 30.34751450019408,
+    "lng": -97.78172499995873,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 145,
+    "tract_label": "Tract 302.0",
+    "current_name": "Arboretum",
+    "current_display": "Arboretum [145]",
+    "lat": 30.37227100015656,
+    "lng": -97.74669949993194,
+    "npa_overlaps": [
+      {
+        "npa": "North Shoal Creek",
+        "pct": 12.7
+      }
+    ],
+    "npa_coverage_pct": 12.7,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 146,
+    "tract_label": "Tract 322.0",
+    "current_name": "Northwest Hills",
+    "current_display": "Northwest Hills [146]",
+    "lat": 30.363365999591252,
+    "lng": -97.75794500006165,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 147,
+    "tract_label": "Tract 323.0",
+    "current_name": "Arboretum",
+    "current_display": "Arboretum [147]",
+    "lat": 30.357711000062636,
+    "lng": -97.75001800008062,
+    "npa_overlaps": [
+      {
+        "npa": "Allandale",
+        "pct": 9.7
+      }
+    ],
+    "npa_coverage_pct": 9.7,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 148,
+    "tract_label": "Tract 318.0",
+    "current_name": "Shady Hollow",
+    "current_display": "Shady Hollow [148]",
+    "lat": 30.18174549995493,
+    "lng": -97.82403550003826,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 149,
+    "tract_label": "Tract 320.0",
+    "current_name": "East Oak Hill",
+    "current_display": "East Oak Hill [149]",
+    "lat": 30.22854999998256,
+    "lng": -97.8447899998086,
+    "npa_overlaps": [
+      {
+        "npa": "East Oak Hill",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "East Oak Hill",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 151,
+    "tract_label": "Tract 424.0",
+    "current_name": "Windsor Hills",
+    "current_display": "Windsor Hills [151]",
+    "lat": 30.355484678425228,
+    "lng": -97.61205510805675,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 153,
+    "tract_label": "Tract 436.0",
+    "current_name": "Highland",
+    "current_display": "Highland [153]",
+    "lat": 30.335787999916334,
+    "lng": -97.66518749970331,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 154,
+    "tract_label": "Tract 23.22",
+    "current_name": "St. Edwards",
+    "current_display": "St. Edwards [154]",
+    "lat": 30.222998000257576,
+    "lng": -97.75570500018557,
+    "npa_overlaps": [
+      {
+        "npa": "St. Edwards",
+        "pct": 99.1
+      },
+      {
+        "npa": "East Congress",
+        "pct": 0.6
+      }
+    ],
+    "npa_coverage_pct": 99.7,
+    "majority_npa": "St. Edwards",
+    "majority_pct": 99.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 156,
+    "tract_label": "Tract 310.0",
+    "current_name": "Circle C Ranch",
+    "current_display": "Circle C Ranch",
+    "lat": 30.20242000008301,
+    "lng": -97.8288860002387,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 157,
+    "tract_label": "Tract 23.23",
+    "current_name": "St. Edwards",
+    "current_display": "St. Edwards [157]",
+    "lat": 30.23261099974789,
+    "lng": -97.75074050012395,
+    "npa_overlaps": [
+      {
+        "npa": "St. Edwards",
+        "pct": 82.7
+      },
+      {
+        "npa": "South River City",
+        "pct": 17.2
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "St. Edwards",
+    "majority_pct": 82.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 158,
+    "tract_label": "Tract 306.0",
+    "current_name": "Great Hills",
+    "current_display": "St. Edwards [158]",
+    "lat": 30.347939500007982,
+    "lng": -97.7600294999614,
+    "npa_overlaps": [
+      {
+        "npa": "Allandale",
+        "pct": 3.2
+      }
+    ],
+    "npa_coverage_pct": 3.2,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 159,
+    "tract_label": "Tract 24.38",
+    "current_name": "Oak Hill",
+    "current_display": "Oak Hill [159]",
+    "lat": 30.16103750592623,
+    "lng": -97.8105801340659,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 160,
+    "tract_label": "Tract 6.08",
+    "current_name": "West University",
+    "current_display": "West University [160]",
+    "lat": 30.284835500158238,
+    "lng": -97.74336250027912,
+    "npa_overlaps": [
+      {
+        "npa": "West University",
+        "pct": 99.3
+      },
+      {
+        "npa": "Downtown",
+        "pct": 0.7
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "West University",
+    "majority_pct": 99.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 161,
+    "tract_label": "Tract 6.06",
+    "current_name": "West University",
+    "current_display": "West University [161]",
+    "lat": 30.29182049986622,
+    "lng": -97.74449300025171,
+    "npa_overlaps": [
+      {
+        "npa": "West University",
+        "pct": 99.6
+      }
+    ],
+    "npa_coverage_pct": 99.6,
+    "majority_npa": "West University",
+    "majority_pct": 99.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 162,
+    "tract_label": "Tract 6.07",
+    "current_name": "West University",
+    "current_display": "West University [162]",
+    "lat": 30.284326499618317,
+    "lng": -97.74960299982854,
+    "npa_overlaps": [
+      {
+        "npa": "West University",
+        "pct": 85.2
+      },
+      {
+        "npa": "Old Enfield",
+        "pct": 13.4
+      },
+      {
+        "npa": "Downtown",
+        "pct": 1.4
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "West University",
+    "majority_pct": 85.2,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 163,
+    "tract_label": "Tract 11.01",
+    "current_name": "Downtown",
+    "current_display": "Downtown [163]",
+    "lat": 30.27114250002643,
+    "lng": -97.74229149990276,
+    "npa_overlaps": [
+      {
+        "npa": "Downtown",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Downtown",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 164,
+    "tract_label": "Tract 13.1",
+    "current_name": "Zilker",
+    "current_display": "Zilker [164]",
+    "lat": 30.25558649986712,
+    "lng": -97.7624225001482,
+    "npa_overlaps": [
+      {
+        "npa": "Zilker",
+        "pct": 99.7
+      }
+    ],
+    "npa_coverage_pct": 99.7,
+    "majority_npa": "Zilker",
+    "majority_pct": 99.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 165,
+    "tract_label": "Tract 11.02",
+    "current_name": "Downtown",
+    "current_display": "Downtown [165]",
+    "lat": 30.266094500161103,
+    "lng": -97.74769399992812,
+    "npa_overlaps": [
+      {
+        "npa": "Downtown",
+        "pct": 87.8
+      }
+    ],
+    "npa_coverage_pct": 87.8,
+    "majority_npa": "Downtown",
+    "majority_pct": 87.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 167,
+    "tract_label": "Tract 309.0",
+    "current_name": "Shady Hollow",
+    "current_display": "Shady Hollow [167]",
+    "lat": 30.196404500117637,
+    "lng": -97.81768599995888,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 168,
+    "tract_label": "Tract 450.0",
+    "current_name": "Harris Ridge",
+    "current_display": "Harris Ridge [168]",
+    "lat": 30.36869742034972,
+    "lng": -97.63139800001764,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 169,
+    "tract_label": "Tract 22.21",
+    "current_name": "Georgian Acres",
+    "current_display": "Georgian Acres [169]",
+    "lat": 30.319864499896795,
+    "lng": -97.61476709642434,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 170,
+    "tract_label": "Tract 20.06",
+    "current_name": "South Lamar",
+    "current_display": "South Lamar [170]",
+    "lat": 30.2333445002985,
+    "lng": -97.77875099995865,
+    "npa_overlaps": [
+      {
+        "npa": "South Lamar",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "South Lamar",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 171,
+    "tract_label": "Tract 6.05",
+    "current_name": "Windsor Road",
+    "current_display": "Windsor Road [171]",
+    "lat": 30.293512000078778,
+    "lng": -97.74861599972854,
+    "npa_overlaps": [
+      {
+        "npa": "West University",
+        "pct": 85.3
+      },
+      {
+        "npa": "Windsor Road",
+        "pct": 14.7
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "West University",
+    "majority_pct": 85.3,
+    "verdict": "rename"
+  },
+  {
+    "region_id": 172,
+    "tract_label": "Tract 20.07",
+    "current_name": "South Lamar",
+    "current_display": "South Lamar [172]",
+    "lat": 30.23759550028217,
+    "lng": -97.7822640000835,
+    "npa_overlaps": [
+      {
+        "npa": "South Lamar",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "South Lamar",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 173,
+    "tract_label": "Tract 348.0",
+    "current_name": "Oak Hill",
+    "current_display": "South Lamar",
+    "lat": 30.20699428970474,
+    "lng": -97.88234254846978,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 176,
+    "tract_label": "Tract 454.0",
+    "current_name": "North Burnet",
+    "current_display": "North Burnet",
+    "lat": 30.391965999631225,
+    "lng": -97.72589149994272,
+    "npa_overlaps": [
+      {
+        "npa": "North Burnet",
+        "pct": 85.6
+      }
+    ],
+    "npa_coverage_pct": 85.6,
+    "majority_npa": "North Burnet",
+    "majority_pct": 85.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 178,
+    "tract_label": "Tract 404.0",
+    "current_name": "North Shoal Creek",
+    "current_display": "North Shoal Creek",
+    "lat": 30.367414500129115,
+    "lng": -97.7352135004027,
+    "npa_overlaps": [
+      {
+        "npa": "North Shoal Creek",
+        "pct": 92
+      },
+      {
+        "npa": "Allandale",
+        "pct": 7.2
+      }
+    ],
+    "npa_coverage_pct": 99.2,
+    "majority_npa": "North Shoal Creek",
+    "majority_pct": 92,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 179,
+    "tract_label": "Tract 19.2",
+    "current_name": "West Oak Hill",
+    "current_display": "West Oak Hill [179]",
+    "lat": 30.257305499998893,
+    "lng": -97.88771299980505,
+    "npa_overlaps": [
+      {
+        "npa": "West Oak Hill",
+        "pct": 68.8
+      }
+    ],
+    "npa_coverage_pct": 68.8,
+    "majority_npa": "West Oak Hill",
+    "majority_pct": 68.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 181,
+    "tract_label": "Tract 23.24",
+    "current_name": "Pleasant Valley",
+    "current_display": "Pleasant Valley [181]",
+    "lat": 30.235259000002884,
+    "lng": -97.71894350014239,
+    "npa_overlaps": [
+      {
+        "npa": "Pleasant Valley",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Pleasant Valley",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 182,
+    "tract_label": "Tract 412.0",
+    "current_name": "Wells Branch",
+    "current_display": "Pleasant Valley [182]",
+    "lat": 30.40033350014096,
+    "lng": -97.6846894997206,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 183,
+    "tract_label": "Tract 22.17",
+    "current_name": "Del Valle",
+    "current_display": "Del Valle",
+    "lat": 30.34303997461518,
+    "lng": -97.57932237922438,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 185,
+    "tract_label": "Tract 24.5",
+    "current_name": "Creedmoor",
+    "current_display": "Creedmoor [185]",
+    "lat": 30.143445414124614,
+    "lng": -97.61798675028825,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 186,
+    "tract_label": "Tract 22.2",
+    "current_name": "N Lamar",
+    "current_display": "N Lamar",
+    "lat": 30.31558950015534,
+    "lng": -97.63544273644311,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 187,
+    "tract_label": "Tract 205.13",
+    "current_name": "Northwood",
+    "current_display": "Northwood [187]",
+    "lat": 30.46767414454621,
+    "lng": -97.70490200867073,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 188,
+    "tract_label": "Tract 203.47",
+    "current_name": "Fern Bluff",
+    "current_display": "Fern Bluff",
+    "lat": 30.500283317321276,
+    "lng": -97.79495101452767,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 189,
+    "tract_label": "Tract 109.12",
+    "current_name": "Bee Cave",
+    "current_display": "Bee Cave",
+    "lat": 30.1529015844406,
+    "lng": -97.90647841504679,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 190,
+    "tract_label": "Tract 203.34",
+    "current_name": "Canyon Creek",
+    "current_display": "Canyon Creek [190]",
+    "lat": 30.47058299990556,
+    "lng": -97.80736545839915,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 191,
+    "tract_label": "Tract 203.56",
+    "current_name": "Four Points",
+    "current_display": "Four Points",
+    "lat": 30.47736951968764,
+    "lng": -97.80927615981687,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 192,
+    "tract_label": "Tract 109.23",
+    "current_name": "Southpark Meadows",
+    "current_display": "Southpark Meadows",
+    "lat": 30.087114730210686,
+    "lng": -97.79880895726754,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 193,
+    "tract_label": "Tract 24.51",
+    "current_name": "Southwood",
+    "current_display": "Southwood [193]",
+    "lat": 30.163298000002754,
+    "lng": -97.77757399964031,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 194,
+    "tract_label": "Tract 405.0",
+    "current_name": "Wooten",
+    "current_display": "Wooten",
+    "lat": 30.360034500192086,
+    "lng": -97.72167100001661,
+    "npa_overlaps": [
+      {
+        "npa": "Wooten",
+        "pct": 96.1
+      },
+      {
+        "npa": "North Austin Civic Association",
+        "pct": 3
+      },
+      {
+        "npa": "Crestview",
+        "pct": 0.6
+      }
+    ],
+    "npa_coverage_pct": 99.7,
+    "majority_npa": "Wooten",
+    "majority_pct": 96.1,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 195,
+    "tract_label": "Tract 311.0",
+    "current_name": "West Oak Hill",
+    "current_display": "West Oak Hill [195]",
+    "lat": 30.217153620593166,
+    "lng": -97.90017951082572,
+    "npa_overlaps": [
+      {
+        "npa": "West Oak Hill",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "West Oak Hill",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 198,
+    "tract_label": "Tract 408.0",
+    "current_name": "North Austin Civic Association",
+    "current_display": "North Austin Civic Association [198]",
+    "lat": 30.381267499995175,
+    "lng": -97.70856399992863,
+    "npa_overlaps": [
+      {
+        "npa": "North Austin Civic Association",
+        "pct": 76.8
+      },
+      {
+        "npa": "North Burnet",
+        "pct": 23.2
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "North Austin Civic Association",
+    "majority_pct": 76.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 199,
+    "tract_label": "Tract 401.0",
+    "current_name": "North Austin Civic Association",
+    "current_display": "North Austin Civic Association [199]",
+    "lat": 30.35670900017027,
+    "lng": -97.70904350000748,
+    "npa_overlaps": [
+      {
+        "npa": "North Austin Civic Association",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "North Austin Civic Association",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 200,
+    "tract_label": "Tract 418.0",
+    "current_name": "Balcones Woods",
+    "current_display": "North Austin Civic Association",
+    "lat": 30.396317500202514,
+    "lng": -97.70165850028954,
+    "npa_overlaps": [
+      {
+        "npa": "North Burnet",
+        "pct": 1.6
+      }
+    ],
+    "npa_coverage_pct": 1.6,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 201,
+    "tract_label": "Tract 417.0",
+    "current_name": "North Burnet",
+    "current_display": "North Burnet [201]",
+    "lat": 30.387893500234895,
+    "lng": -97.69975349967422,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 202,
+    "tract_label": "Tract 24.43",
+    "current_name": "Sweetbriar",
+    "current_display": "Sweetbriar [202]",
+    "lat": 30.200534499917268,
+    "lng": -97.77024749992216,
+    "npa_overlaps": [
+      {
+        "npa": "Sweetbriar",
+        "pct": 68.9
+      },
+      {
+        "npa": "East Congress",
+        "pct": 31.1
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Sweetbriar",
+    "majority_pct": 68.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 203,
+    "tract_label": "Tract 347.0",
+    "current_name": "West Oak Hill",
+    "current_display": "West Oak Hill [203]",
+    "lat": 30.221390500321377,
+    "lng": -97.87927660223338,
+    "npa_overlaps": [
+      {
+        "npa": "West Oak Hill",
+        "pct": 81.2
+      }
+    ],
+    "npa_coverage_pct": 81.2,
+    "majority_npa": "West Oak Hill",
+    "majority_pct": 81.2,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 205,
+    "tract_label": "Tract 24.44",
+    "current_name": "Sweetbriar",
+    "current_display": "Sweetbriar [205]",
+    "lat": 30.204327999937306,
+    "lng": -97.77963150009361,
+    "npa_overlaps": [
+      {
+        "npa": "Sweetbriar",
+        "pct": 65.8
+      },
+      {
+        "npa": "West Congress",
+        "pct": 33
+      },
+      {
+        "npa": "South Manchaca",
+        "pct": 1.1
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Sweetbriar",
+    "majority_pct": 65.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 206,
+    "tract_label": "Tract 409.0",
+    "current_name": "North Austin Civic Association",
+    "current_display": "North Austin Civic Association [206]",
+    "lat": 30.37379100010463,
+    "lng": -97.69659200002076,
+    "npa_overlaps": [
+      {
+        "npa": "North Austin Civic Association",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "North Austin Civic Association",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 207,
+    "tract_label": "Tract 406.0",
+    "current_name": "North Austin Civic Association",
+    "current_display": "North Austin Civic Association [207]",
+    "lat": 30.363448999821514,
+    "lng": -97.70284849985833,
+    "npa_overlaps": [
+      {
+        "npa": "North Austin Civic Association",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "North Austin Civic Association",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 208,
+    "tract_label": "Tract 334.0",
+    "current_name": "Oak Hill",
+    "current_display": "Sweetbriar [208]",
+    "lat": 30.211718999931975,
+    "lng": -97.8406765003202,
+    "npa_overlaps": [
+      {
+        "npa": "East Oak Hill",
+        "pct": 0.5
+      }
+    ],
+    "npa_coverage_pct": 0.5,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 209,
+    "tract_label": "Tract 19.22",
+    "current_name": "Barton Hills",
+    "current_display": "Barton Hills [209]",
+    "lat": 30.245444999836934,
+    "lng": -97.79242350004446,
+    "npa_overlaps": [
+      {
+        "npa": "Barton Hills",
+        "pct": 100
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "Barton Hills",
+    "majority_pct": 100,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 210,
+    "tract_label": "Tract 11.03",
+    "current_name": "Downtown",
+    "current_display": "Downtown [210]",
+    "lat": 30.259338500221673,
+    "lng": -97.73994850022305,
+    "npa_overlaps": [
+      {
+        "npa": "Downtown",
+        "pct": 84.3
+      }
+    ],
+    "npa_coverage_pct": 84.3,
+    "majority_npa": "Downtown",
+    "majority_pct": 84.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 212,
+    "tract_label": "Tract 303.0",
+    "current_name": "Westgate",
+    "current_display": "Westgate",
+    "lat": 30.223810499954652,
+    "lng": -97.7977349999203,
+    "npa_overlaps": [
+      {
+        "npa": "Westgate",
+        "pct": 83.9
+      },
+      {
+        "npa": "South Manchaca",
+        "pct": 14.8
+      },
+      {
+        "npa": "Barton Hills",
+        "pct": 0.5
+      }
+    ],
+    "npa_coverage_pct": 99.2,
+    "majority_npa": "Westgate",
+    "majority_pct": 83.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 213,
+    "tract_label": "Tract 304.0",
+    "current_name": "Garrison Park",
+    "current_display": "Garrison Park [213]",
+    "lat": 30.210264499856834,
+    "lng": -97.8045490002861,
+    "npa_overlaps": [
+      {
+        "npa": "Garrison Park",
+        "pct": 99.6
+      }
+    ],
+    "npa_coverage_pct": 99.6,
+    "majority_npa": "Garrison Park",
+    "majority_pct": 99.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 218,
+    "tract_label": "Tract 329.0",
+    "current_name": "Northwest Hills",
+    "current_display": "Northwest Hills [218]",
+    "lat": 30.359229000368117,
+    "lng": -97.82783549990836,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 220,
+    "tract_label": "Tract 443.0",
+    "current_name": "Scofield",
+    "current_display": "Scofield",
+    "lat": 30.417715999993447,
+    "lng": -97.64821638168064,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 221,
+    "tract_label": "Tract 19.21",
+    "current_name": "Westlake Hills",
+    "current_display": "Westlake Hills",
+    "lat": 30.28143153024098,
+    "lng": -97.88181913899203,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 222,
+    "tract_label": "Tract 326.0",
+    "current_name": "Jester Estates",
+    "current_display": "Jester Estates",
+    "lat": 30.405544999901878,
+    "lng": -97.7785620002361,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 223,
+    "tract_label": "Tract 434.0",
+    "current_name": "St. John",
+    "current_display": "St. John [223]",
+    "lat": 30.327151500041737,
+    "lng": -97.6996175001475,
+    "npa_overlaps": [
+      {
+        "npa": "St. John",
+        "pct": 99.9
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "St. John",
+    "majority_pct": 99.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 224,
+    "tract_label": "Tract 24.37",
+    "current_name": "Cherry Creek",
+    "current_display": "St. John [224]",
+    "lat": 30.163229499991473,
+    "lng": -97.7934159999484,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 225,
+    "tract_label": "Tract 24.41",
+    "current_name": "Southwood",
+    "current_display": "Southwood [225]",
+    "lat": 30.18082777733011,
+    "lng": -97.76733949981801,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 227,
+    "tract_label": "Tract 22.16",
+    "current_name": "Montopolis",
+    "current_display": "Montopolis [227]",
+    "lat": 30.239245922611275,
+    "lng": -97.64164716553421,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 228,
+    "tract_label": "Tract 24.48",
+    "current_name": "St. Elmo",
+    "current_display": "St. Elmo",
+    "lat": 30.18957650000553,
+    "lng": -97.71505250012277,
+    "npa_overlaps": [
+      {
+        "npa": "Southeast",
+        "pct": 37.8
+      },
+      {
+        "npa": "Mckinney",
+        "pct": 11.4
+      }
+    ],
+    "npa_coverage_pct": 49.2,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 229,
+    "tract_label": "Tract 442.0",
+    "current_name": "Wells Branch",
+    "current_display": "Wells Branch [229]",
+    "lat": 30.4304004999332,
+    "lng": -97.66221250010676,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 230,
+    "tract_label": "Tract 204.09",
+    "current_name": "Lakeline",
+    "current_display": "Lakeline [230]",
+    "lat": 30.465271500029758,
+    "lng": -97.75932699994104,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 233,
+    "tract_label": "Tract 19.18",
+    "current_name": "Redbud",
+    "current_display": "Redbud",
+    "lat": 30.29132067555878,
+    "lng": -97.80933878770486,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 234,
+    "tract_label": "Tract 19.14",
+    "current_name": "East Oak Hill",
+    "current_display": "East Oak Hill [234]",
+    "lat": 30.25703600016135,
+    "lng": -97.83994449983877,
+    "npa_overlaps": [
+      {
+        "npa": "East Oak Hill",
+        "pct": 90.9
+      }
+    ],
+    "npa_coverage_pct": 90.9,
+    "majority_npa": "East Oak Hill",
+    "majority_pct": 90.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 235,
+    "tract_label": "Tract 24.3",
+    "current_name": "Onion Creek",
+    "current_display": "East Oak Hill [235]",
+    "lat": 30.172166999807246,
+    "lng": -97.75543900005977,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 236,
+    "tract_label": "Tract 3.04",
+    "current_name": "Hyde Park",
+    "current_display": "Hyde Park",
+    "lat": 30.30921649989162,
+    "lng": -97.71701849995375,
+    "npa_overlaps": [
+      {
+        "npa": "North Loop",
+        "pct": 60.1
+      },
+      {
+        "npa": "Hyde Park",
+        "pct": 39.8
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "North Loop",
+    "majority_pct": 60.1,
+    "verdict": "rename"
+  },
+  {
+    "region_id": 237,
+    "tract_label": "Tract 23.19",
+    "current_name": "Montopolis",
+    "current_display": "Hyde Park [237]",
+    "lat": 30.199442500371163,
+    "lng": -97.64467449982828,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 238,
+    "tract_label": "Tract 19.17",
+    "current_name": "East Oak Hill",
+    "current_display": "East Oak Hill [238]",
+    "lat": 30.268231897733955,
+    "lng": -97.8274461995824,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 239,
+    "tract_label": "Tract 2.06",
+    "current_name": "Allandale",
+    "current_display": "Allandale [239]",
+    "lat": 30.325605499794023,
+    "lng": -97.74446649992899,
+    "npa_overlaps": [
+      {
+        "npa": "Allandale",
+        "pct": 59.8
+      },
+      {
+        "npa": "Rosedale",
+        "pct": 40.1
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Allandale",
+    "majority_pct": 59.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 240,
+    "tract_label": "Tract 3.05",
+    "current_name": "Triangle State",
+    "current_display": "Triangle State [240]",
+    "lat": 30.314972999604294,
+    "lng": -97.72575199980491,
+    "npa_overlaps": [
+      {
+        "npa": "Hyde Park",
+        "pct": 37.2
+      },
+      {
+        "npa": "North Loop",
+        "pct": 34.8
+      },
+      {
+        "npa": "Triangle State",
+        "pct": 28
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "ambiguous"
+  },
+  {
+    "region_id": 241,
+    "tract_label": "Tract 2.05",
+    "current_name": "Brentwood",
+    "current_display": "Brentwood [241]",
+    "lat": 30.326255000068244,
+    "lng": -97.73321099978776,
+    "npa_overlaps": [
+      {
+        "npa": "Brentwood",
+        "pct": 99.6
+      }
+    ],
+    "npa_coverage_pct": 99.6,
+    "majority_npa": "Brentwood",
+    "majority_pct": 99.6,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 242,
+    "tract_label": "Tract 3.07",
+    "current_name": "Upper Boggy Creek",
+    "current_display": "Upper Boggy Creek [242]",
+    "lat": 30.297838000373474,
+    "lng": -97.71343350010591,
+    "npa_overlaps": [
+      {
+        "npa": "Upper Boggy Creek",
+        "pct": 95.7
+      },
+      {
+        "npa": "RMMA",
+        "pct": 2.3
+      },
+      {
+        "npa": "Hancock",
+        "pct": 1.4
+      },
+      {
+        "npa": "North Loop",
+        "pct": 0.7
+      }
+    ],
+    "npa_coverage_pct": 100.1,
+    "majority_npa": "Upper Boggy Creek",
+    "majority_pct": 95.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 243,
+    "tract_label": "Tract 19.19",
+    "current_name": "Davenport Ranch",
+    "current_display": "East Oak Hill [243]",
+    "lat": 30.27853399959446,
+    "lng": -97.79474900026611,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 244,
+    "tract_label": "Tract 203.11",
+    "current_name": "Great Hills",
+    "current_display": "Great Hills [244]",
+    "lat": 30.48698099977338,
+    "lng": -97.78428126082147,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 246,
+    "tract_label": "Tract 19.15",
+    "current_name": "East Oak Hill",
+    "current_display": "East Oak Hill [246]",
+    "lat": 30.243353885423517,
+    "lng": -97.83143900015969,
+    "npa_overlaps": [
+      {
+        "npa": "East Oak Hill",
+        "pct": 81.2
+      },
+      {
+        "npa": "Barton Hills",
+        "pct": 18.5
+      }
+    ],
+    "npa_coverage_pct": 99.7,
+    "majority_npa": "East Oak Hill",
+    "majority_pct": 81.2,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 247,
+    "tract_label": "Tract 24.34",
+    "current_name": "South Manchaca",
+    "current_display": "East Oak Hill [247]",
+    "lat": 30.095344313389404,
+    "lng": -97.79748800876456,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 248,
+    "tract_label": "Tract 22.11",
+    "current_name": "Windsor Hills",
+    "current_display": "Windsor Hills [248]",
+    "lat": 30.281317872571805,
+    "lng": -97.61921419852641,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 249,
+    "tract_label": "Tract 25.0",
+    "current_name": "Balcones Woods",
+    "current_display": "Balcones Woods [249]",
+    "lat": 30.418011999704078,
+    "lng": -97.75627100020645,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 250,
+    "tract_label": "Tract 24.32",
+    "current_name": "Pilot Knob",
+    "current_display": "Pilot Knob [250]",
+    "lat": 30.15909700232484,
+    "lng": -97.71022350001448,
+    "npa_overlaps": [
+      {
+        "npa": "Southeast",
+        "pct": 9.7
+      }
+    ],
+    "npa_coverage_pct": 9.7,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 251,
+    "tract_label": "Tract 21.12",
+    "current_name": "Windsor Park",
+    "current_display": "Windsor Park [251]",
+    "lat": 30.313836999827743,
+    "lng": -97.68118099980325,
+    "npa_overlaps": [
+      {
+        "npa": "Windsor Park",
+        "pct": 99.3
+      }
+    ],
+    "npa_coverage_pct": 99.3,
+    "majority_npa": "Windsor Park",
+    "majority_pct": 99.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 252,
+    "tract_label": "Tract 21.13",
+    "current_name": "University Hills",
+    "current_display": "University Hills",
+    "lat": 30.317125999964986,
+    "lng": -97.67230250001035,
+    "npa_overlaps": [
+      {
+        "npa": "University Hills",
+        "pct": 98.9
+      }
+    ],
+    "npa_coverage_pct": 98.9,
+    "majority_npa": "University Hills",
+    "majority_pct": 98.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 253,
+    "tract_label": "Tract 22.01",
+    "current_name": "Walnut Bend",
+    "current_display": "Windsor Park [253]",
+    "lat": 30.315889500050446,
+    "lng": -97.65861300003988,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 254,
+    "tract_label": "Tract 9800",
+    "current_name": "ABIA",
+    "current_display": "ABIA",
+    "lat": 30.1953425001563,
+    "lng": -97.66482500007368,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 256,
+    "tract_label": "Tract 23.14",
+    "current_name": "Pleasant Valley",
+    "current_display": "Pleasant Valley [256]",
+    "lat": 30.22453899982503,
+    "lng": -97.71558399990164,
+    "npa_overlaps": [
+      {
+        "npa": "Pleasant Valley",
+        "pct": 91.2
+      },
+      {
+        "npa": "Montopolis",
+        "pct": 8.7
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Pleasant Valley",
+    "majority_pct": 91.2,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 257,
+    "tract_label": "Tract 23.16",
+    "current_name": "Riverside",
+    "current_display": "Riverside [257]",
+    "lat": 30.235333999864253,
+    "lng": -97.72789700024632,
+    "npa_overlaps": [
+      {
+        "npa": "Riverside",
+        "pct": 98.9
+      },
+      {
+        "npa": "Pleasant Valley",
+        "pct": 0.9
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Riverside",
+    "majority_pct": 98.9,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 258,
+    "tract_label": "Tract 24.03",
+    "current_name": "East Congress",
+    "current_display": "East Congress",
+    "lat": 30.212263000287294,
+    "lng": -97.76167149968992,
+    "npa_overlaps": [
+      {
+        "npa": "East Congress",
+        "pct": 99
+      },
+      {
+        "npa": "St. Edwards",
+        "pct": 1
+      }
+    ],
+    "npa_coverage_pct": 100,
+    "majority_npa": "East Congress",
+    "majority_pct": 99,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 259,
+    "tract_label": "Tract 24.09",
+    "current_name": "Garrison Park",
+    "current_display": "Garrison Park [259]",
+    "lat": 30.207891000119588,
+    "lng": -97.7940684999113,
+    "npa_overlaps": [
+      {
+        "npa": "Garrison Park",
+        "pct": 81.3
+      },
+      {
+        "npa": "South Manchaca",
+        "pct": 18.6
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Garrison Park",
+    "majority_pct": 81.3,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 260,
+    "tract_label": "Tract 24.1",
+    "current_name": "Garrison Park",
+    "current_display": "Garrison Park [260]",
+    "lat": 30.205959000057874,
+    "lng": -97.78629649988355,
+    "npa_overlaps": [
+      {
+        "npa": "Garrison Park",
+        "pct": 74.7
+      },
+      {
+        "npa": "South Manchaca",
+        "pct": 25.2
+      }
+    ],
+    "npa_coverage_pct": 99.9,
+    "majority_npa": "Garrison Park",
+    "majority_pct": 74.7,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 261,
+    "tract_label": "Tract 24.11",
+    "current_name": "Franklin Park",
+    "current_display": "Franklin Park [261]",
+    "lat": 30.205006499750226,
+    "lng": -97.74836449982178,
+    "npa_overlaps": [
+      {
+        "npa": "Franklin Park",
+        "pct": 71.5
+      },
+      {
+        "npa": "Mckinney",
+        "pct": 27.6
+      },
+      {
+        "npa": "Parker Lane",
+        "pct": 0.7
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Franklin Park",
+    "majority_pct": 71.5,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 262,
+    "tract_label": "Tract 24.12",
+    "current_name": "Franklin Park",
+    "current_display": "Franklin Park [262]",
+    "lat": 30.188945000111715,
+    "lng": -97.75294699980415,
+    "npa_overlaps": [
+      {
+        "npa": "Franklin Park",
+        "pct": 93.4
+      }
+    ],
+    "npa_coverage_pct": 93.4,
+    "majority_npa": "Franklin Park",
+    "majority_pct": 93.4,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 263,
+    "tract_label": "Tract 24.13",
+    "current_name": "Franklin Park",
+    "current_display": "Franklin Park [263]",
+    "lat": 30.195395499902446,
+    "lng": -97.73970449976281,
+    "npa_overlaps": [
+      {
+        "npa": "Franklin Park",
+        "pct": 99.8
+      }
+    ],
+    "npa_coverage_pct": 99.8,
+    "majority_npa": "Franklin Park",
+    "majority_pct": 99.8,
+    "verdict": "confirmed"
+  },
+  {
+    "region_id": 264,
+    "tract_label": "Tract 24.19",
+    "current_name": "Southwood",
+    "current_display": "Pleasant Valley [264]",
+    "lat": 30.190691000139594,
+    "lng": -97.75840599973705,
+    "npa_overlaps": [
+      {
+        "npa": "Franklin Park",
+        "pct": 13.8
+      },
+      {
+        "npa": "Sweetbriar",
+        "pct": 1.7
+      },
+      {
+        "npa": "East Congress",
+        "pct": 0.6
+      }
+    ],
+    "npa_coverage_pct": 16.1,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 265,
+    "tract_label": "Tract 24.22",
+    "current_name": "Southwood",
+    "current_display": "Southwood [265]",
+    "lat": 30.182082499757627,
+    "lng": -97.78471349972818,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 266,
+    "tract_label": "Tract 24.23",
+    "current_name": "Southwood",
+    "current_display": "Southwood [266]",
+    "lat": 30.17917749979182,
+    "lng": -97.80633499991029,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  },
+  {
+    "region_id": 267,
+    "tract_label": "Tract 24.24",
+    "current_name": "Southwood",
+    "current_display": "Southwood [267]",
+    "lat": 30.19269700001658,
+    "lng": -97.80029500016411,
+    "npa_overlaps": [],
+    "npa_coverage_pct": 0,
+    "majority_npa": null,
+    "majority_pct": null,
+    "verdict": "outside-npa"
+  }
+]
