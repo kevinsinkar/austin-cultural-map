@@ -115,11 +115,9 @@ export default function useAustinMap({
         fillColor: "#e0ddd7",
       }),
       onEachFeature: (feature, layer) => {
+        // Census identity is primary in tracts mode
         const meta = regionLookupMap.get(feature.properties.region_id);
-        const communityName = meta?.region_name || meta?.display_name || feature.properties.region_name;
-        const tooltipText = meta?.tract_label && meta.tract_label !== communityName
-          ? `${communityName} (${meta.tract_label})`
-          : communityName;
+        const tooltipText = meta?.tract_label || meta?.display_name || feature.properties.region_name;
         layer.bindTooltip(tooltipText, { direction: "auto", sticky: true });
         layer.on({
           mouseover: (e) => {

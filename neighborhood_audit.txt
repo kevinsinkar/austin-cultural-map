@@ -1,7 +1,7 @@
 NEIGHBORHOOD CONTIGUITY AUDIT (polygon adjacency)
-Generated: 2026-09-01T02:12:48.925Z
+Generated: 2026-09-01T03:17:16.191Z
 Adjacency test: turf.booleanIntersects with 50 m gap tolerance
-Total neighborhoods: 123
+Total neighborhoods: 195
 Total tracts: 232
 
 ================================================================================
@@ -9,8 +9,8 @@ Total tracts: 232
 ================================================================================
 
 SUMMARY
-  Neighborhoods audited: 123
-  Multi-tract neighborhoods: 60
+  Neighborhoods audited: 195
+  Multi-tract neighborhoods: 23
   NON-CONTIGUOUS (flagged): 0
   Tracts with missing geometry: 0
 

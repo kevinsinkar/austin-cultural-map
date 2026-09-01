@@ -95,7 +95,7 @@ export default function RegionDetailPanel({
                 {activeRegionName}
                 {isNeighborhoodMode && neighborhoodAgg
                   ? <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [{neighborhoodAgg.tractCount} tracts]</span>
-                  : activeFeature && <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [{REGION_INDEX.find(r => r.region_id === activeFeature.properties.region_id)?.tract_label || `id. ${activeFeature.properties.region_id}`}]</span>
+                  : activeFeature && <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [id. {activeFeature.properties.region_id}]</span>
                 }
               </h2>
               {activeFeature?.properties?.heritage && (
@@ -583,7 +583,7 @@ export default function RegionDetailPanel({
             <div style={{ marginTop: 8 }}>
               {neighborhoodAgg.tract_ids.map(tid => {
                 const tractDvi = interpolateDvi(tid, year);
-                const tractName = ID_TO_NAME.get(tid);
+                const tractName = REGION_INDEX.find(r => r.region_id === tid)?.tract_label || ID_TO_NAME.get(tid);
                 return (
                   <div key={tid} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, fontSize: 11, padding: "3px 0", borderBottom: "1px solid #f0ede8" }}>
                     <span style={{ color: "#44403c", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
