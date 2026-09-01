@@ -54,6 +54,9 @@ import argparse
 from collections import defaultdict
 from pathlib import Path
 
+# Study-area counties: Travis, Bastrop, Hays, Williamson
+STUDY_COUNTY_FIPS = ("48453", "48021", "48209", "48491")
+
 # ─── Permit Merge ────────────────────────────────────────────────────────
 
 def merge_permits(permits_path, property_path, output_path=None):
@@ -141,8 +144,8 @@ def load_hud_crosswalk(crosswalk_path):
             if len(row) <= max(zip_col, tract_col, ratio_col):
                 continue
             tract = str(row[tract_col] or "").strip()
-            # Filter to Travis County (48453)
-            if not tract.startswith("48453"):
+            # Filter to study-area counties: Travis, Williamson, Hays, Bastrop
+            if not tract.startswith(STUDY_COUNTY_FIPS):
                 continue
             zipcode = str(row[zip_col] or "").strip()
             try:
@@ -162,9 +165,9 @@ def load_hud_crosswalk(crosswalk_path):
             reader = csv.DictReader(f)
             for row in reader:
                 # Try various column names
-                tract = (row.get("TRACT") or row.get("tract") or 
+                tract = (row.get("TRACT") or row.get("tract") or
                         row.get("GEOID") or row.get("geoid") or "").strip()
-                if not tract.startswith("48453"):
+                if not tract.startswith(STUDY_COUNTY_FIPS):
                     continue
                 zipcode = (row.get("ZIP") or row.get("zip") or 
                           row.get("ZIPCODE") or row.get("zipcode") or "").strip()
@@ -188,12 +191,32 @@ def load_hud_crosswalk(crosswalk_path):
 def build_geoid_to_region_id(region_index_path, demo_data=None):
     """
     Build tract_geoid → region_id mapping.
-    Uses regionIndex.js centroids + FCC geocoder, same as the census scripts.
-    For speed, also builds from known "Tract xxx" names in the data.
+
+    PRIMARY: data/region_tract_rosetta.json — authoritative region_id ↔ GEOID
+    mapping for all 269 regions. Immune to region display-name changes.
+
+    Fallbacks (legacy): "Tract xxx" names in demo data, manual mapping file,
+    and the census scripts' cached mapping.
     """
     mapping = {}  # geoid → region_id
-    
-    # From property data: "Tract xxx" names → GEOID
+
+    # PRIMARY: region_tract_rosetta.json (all 269 regions)
+    rosetta_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "data", "region_tract_rosetta.json"
+    )
+    if os.path.exists(rosetta_path):
+        with open(rosetta_path) as f:
+            rosetta = json.load(f)
+        for entry in rosetta:
+            geoid = entry.get("geoid22", "")
+            rid = entry.get("region_id")
+            if geoid and rid is not None:
+                mapping[geoid] = rid
+        print(f"  Loaded rosetta: {len(mapping)} region_id <-> GEOID mappings")
+
+    # Fallback: "Tract xxx" names in demo data (legacy; region names may no
+    # longer use Tract format after the 2026-08 naming audit)
     if demo_data:
         for r in demo_data:
             name = r.get("region", "")
@@ -206,7 +229,7 @@ def build_geoid_to_region_id(region_index_path, demo_data=None):
                 else:
                     fips = f"{int(float(parts[0])):04d}00"
                 geoid = f"48453{fips}"
-                mapping[geoid] = rid
+                mapping.setdefault(geoid, rid)
 
     # From regionIndex.js: centroid → GEOID (if manual mapping exists)
     manual_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "region_geoid_manual.json")
@@ -231,7 +254,130 @@ def build_geoid_to_region_id(region_index_path, demo_data=None):
     return mapping
 
 
-# ─── Eviction Data Loading ───────────────────────────────────────────────
+# ─── Tract-Level Eviction Data (e.g., BASTA Austin) ─────────────────────
+
+def load_tract_eviction_data(eviction_path, geoid_to_rid):
+    """
+    Load TRACT-level eviction data from CSV (no crosswalk needed).
+    Auto-detects the tract identifier column and format:
+      - 11-digit GEOID  (e.g., 48453002447)
+      - 6-digit tractce (e.g., 002447 — assumed Travis County)
+      - decimal tract name (e.g., 24.47 — matched via rosetta name22)
+    Returns: { (region_id, snap_year): eviction_filing_rate }
+    """
+    # Build supplemental resolvers from the rosetta
+    rosetta_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "data", "region_tract_rosetta.json"
+    )
+    name_to_rid = {}
+    tractce_to_rid = {}
+    if os.path.exists(rosetta_path):
+        with open(rosetta_path) as f:
+            for entry in json.load(f):
+                rid = entry.get("region_id")
+                if entry.get("name22"):
+                    name_to_rid[entry["name22"]] = rid
+                if entry.get("tractce22"):
+                    tractce_to_rid[entry["tractce22"]] = rid
+
+    def resolve_tract(raw):
+        """Resolve a raw tract identifier to a region_id, or None."""
+        s = str(raw).strip()
+        digits = re.sub(r"[^0-9]", "", s)
+        if len(digits) == 11:                      # full GEOID
+            return geoid_to_rid.get(digits)
+        if len(digits) == 6 and "." not in s:      # tractce (assume Travis)
+            return geoid_to_rid.get("48453" + digits) or tractce_to_rid.get(digits)
+        if "." in s:                               # decimal name e.g. "24.47"
+            try:
+                normalized = f"{float(s):.2f}".rstrip("0").rstrip(".")
+                # rosetta name22 uses e.g. "24.47" and "419.00" → try both forms
+                return (name_to_rid.get(s) or name_to_rid.get(normalized)
+                        or name_to_rid.get(f"{float(s):.2f}"))
+            except ValueError:
+                return None
+        return None
+
+    def snap_year(year):
+        if year <= 2007: return 2005
+        if year <= 2012: return 2010
+        if year <= 2017: return 2015
+        if year <= 2022: return 2020
+        return 2023
+
+    # rate accumulators: (rid, snap) → [rates]
+    acc = defaultdict(list)
+    unresolved = set()
+
+    with open(eviction_path, "r", encoding="utf-8", errors="replace") as f:
+        reader = csv.DictReader(f)
+        header_lower = {h.lower().strip(): h for h in reader.fieldnames}
+        print(f"  Tract eviction CSV columns: {reader.fieldnames}")
+
+        tract_col = next((header_lower[n] for n in
+                          ["geoid", "tract", "tract_geoid", "census_tract",
+                           "tractce", "fips", "tract_id"] if n in header_lower), None)
+        year_col = next((header_lower[n] for n in
+                         ["year", "filing_year", "eviction_year"] if n in header_lower), None)
+        rate_col = next((header_lower[n] for n in
+                         ["eviction_filing_rate", "filing_rate", "eviction_rate",
+                          "filings_rate"] if n in header_lower), None)
+        filings_col = next((header_lower[n] for n in
+                            ["filings", "eviction_filings", "eviction_count",
+                             "total_filings", "filing_count"] if n in header_lower), None)
+        renters_col = next((header_lower[n] for n in
+                            ["renter_households", "renter_occupied", "renters",
+                             "renter_occupied_households", "total_renters"] if n in header_lower), None)
+
+        if tract_col is None:
+            print(f"  ERROR: No tract identifier column found in {reader.fieldnames}")
+            return {}
+        print(f"  Detected: tract={tract_col}, year={year_col}, rate={rate_col}, "
+              f"filings={filings_col}, renters={renters_col}")
+
+        for row in reader:
+            rid = resolve_tract(row.get(tract_col, ""))
+            if rid is None:
+                unresolved.add(str(row.get(tract_col, "")).strip())
+                continue
+
+            if year_col:
+                try:
+                    year = int(float(row.get(year_col, "")))
+                except (ValueError, TypeError):
+                    continue
+            else:
+                year = 2023
+
+            rate = None
+            if rate_col:
+                try:
+                    rate = float(row.get(rate_col, ""))
+                except (ValueError, TypeError):
+                    pass
+            if rate is None and filings_col and renters_col:
+                try:
+                    filings = float(row.get(filings_col, ""))
+                    renters = float(row.get(renters_col, ""))
+                    if renters > 0:
+                        rate = (filings / renters) * 100
+                except (ValueError, TypeError):
+                    pass
+
+            if rate is not None and rate >= 0:
+                acc[(rid, snap_year(year))].append(rate)
+
+    result = {k: round(sum(v) / len(v), 2) for k, v in acc.items()}
+    print(f"  Resolved: {len(result)} (region, year) pairs "
+          f"across {len(set(k[0] for k in result))} regions")
+    if unresolved:
+        print(f"  WARNING: {len(unresolved)} unresolved tract identifiers "
+              f"(sample: {sorted(unresolved)[:5]})")
+    return result
+
+
+# ─── Eviction Data Loading (ZIP-level) ──────────────────────────────────
 
 def load_eviction_data(eviction_path):
     """
@@ -425,9 +571,11 @@ def main():
     parser.add_argument("--property", help="Path to audited_property_normalized.json")
     
     # Evictions
-    parser.add_argument("--evictions", help="Path to eviction data CSV (by ZIP code)")
+    parser.add_argument("--evictions", help="Path to eviction data CSV (ZIP-level, or tract-level with --tract-level)")
+    parser.add_argument("--tract-level", action="store_true",
+                        help="Eviction CSV is keyed by census tract (e.g., BASTA data) — no crosswalk needed")
     parser.add_argument("--socio", help="Path to audited_socioeconomic_normalized.json")
-    parser.add_argument("--crosswalk", help="Path to HUD ZIP-to-Tract crosswalk file (.xlsx or .csv)")
+    parser.add_argument("--crosswalk", help="Path to HUD ZIP-to-Tract crosswalk file (.xlsx or .csv) — ZIP-level only")
     parser.add_argument("--region-index", help="Path to regionIndex.js")
     
     # Output control
@@ -455,23 +603,17 @@ def main():
         if not args.socio:
             print("ERROR: --evictions requires --socio")
             sys.exit(1)
-        if not args.crosswalk:
-            print("ERROR: --evictions requires --crosswalk (HUD ZIP-to-Tract file)")
+        if not args.tract_level and not args.crosswalk:
+            print("ERROR: ZIP-level --evictions requires --crosswalk (HUD ZIP-to-Tract file)")
             print("  Download from: https://www.huduser.gov/portal/datasets/usps_crosswalk.html")
             print("  Select: ZIP → TRACT, Year: latest, State: Texas")
+            print("  (Or pass --tract-level if the CSV is keyed by census tract.)")
             sys.exit(1)
-        
+
         print("\n" + "=" * 60)
-        print("MERGING EVICTIONS")
+        print("MERGING EVICTIONS" + (" (TRACT-LEVEL)" if args.tract_level else " (ZIP-LEVEL)"))
         print("=" * 60)
-        
-        # Load crosswalk
-        print("\nLoading HUD ZIP→Tract crosswalk...")
-        crosswalk = load_hud_crosswalk(args.crosswalk)
-        if not crosswalk:
-            print("ERROR: No crosswalk data loaded")
-            sys.exit(1)
-        
+
         # Build GEOID → region_id mapping
         print("\nBuilding GEOID → region_id mapping...")
         # Try to load demo data for tract name mapping
@@ -484,25 +626,38 @@ def main():
         elif args.socio:
             d = Path(args.socio).parent
             demo_path = d / "audited_demographics_normalized.json"
-        
+
         if demo_path and demo_path.exists():
             with open(demo_path) as f:
                 demo_data = json.load(f)
             print(f"  Loaded {len(demo_data)} demo rows for tract name mapping")
-        
+
         geoid_to_rid = build_geoid_to_region_id(args.region_index, demo_data)
-        
-        # Load eviction data
-        print("\nLoading eviction data...")
-        eviction_data = load_eviction_data(args.evictions)
-        if not eviction_data:
-            print("ERROR: No eviction data loaded")
-            sys.exit(1)
-        
-        # Distribute ZIP → tract
-        print("\nDistributing eviction rates from ZIPs to census tracts...")
-        eviction_rates = distribute_evictions_to_tracts(eviction_data, crosswalk, geoid_to_rid)
-        
+
+        if args.tract_level:
+            # Direct tract → region mapping via rosetta (no crosswalk)
+            print("\nLoading tract-level eviction data...")
+            eviction_rates = load_tract_eviction_data(args.evictions, geoid_to_rid)
+            if not eviction_rates:
+                print("ERROR: No eviction data resolved")
+                sys.exit(1)
+        else:
+            # ZIP-level path: crosswalk-distribute to tracts
+            print("\nLoading HUD ZIP→Tract crosswalk...")
+            crosswalk = load_hud_crosswalk(args.crosswalk)
+            if not crosswalk:
+                print("ERROR: No crosswalk data loaded")
+                sys.exit(1)
+
+            print("\nLoading eviction data...")
+            eviction_data = load_eviction_data(args.evictions)
+            if not eviction_data:
+                print("ERROR: No eviction data loaded")
+                sys.exit(1)
+
+            print("\nDistributing eviction rates from ZIPs to census tracts...")
+            eviction_rates = distribute_evictions_to_tracts(eviction_data, crosswalk, geoid_to_rid)
+
         # Merge into socio JSON
         print("\nMerging into socioeconomic data...")
         out = args.socio if args.in_place else args.socio.replace(".json", "_patched.json")
