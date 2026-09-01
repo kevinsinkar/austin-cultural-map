@@ -165,6 +165,65 @@ export function aggregateNeighborhood(neighborhoodId, year) {
     }
   }
 
+  // Poverty rate increases (>5%)
+  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, 2023]]) {
+    const povA = popWeightedAvg(tract_ids, yrA, getClosestSocio, "poverty_rate");
+    const povB = popWeightedAvg(tract_ids, yrB, getClosestSocio, "poverty_rate");
+    if (povA != null && povB != null && povB - povA > 5) {
+      narrativeCallouts.push({
+        type: "poverty_increase",
+        text: `Poverty rate increased from ${povA.toFixed(1)}% to ${povB.toFixed(1)}% between ${yrA} and ${yrB}, indicating growing economic stress.`,
+      });
+    }
+  }
+
+  // Income decline (>10%)
+  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, 2023]]) {
+    const incA = popWeightedAvg(tract_ids, yrA, getClosestSocio, "median_household_income");
+    const incB = popWeightedAvg(tract_ids, yrB, getClosestSocio, "median_household_income");
+    if (incA > 0 && incB > 0) {
+      const dec = (incA - incB) / incA;
+      if (dec > 0.10) {
+        narrativeCallouts.push({
+          type: "income_decline",
+          text: `Median household income fell ${(dec * 100).toFixed(0)}%, from $${(incA / 1000).toFixed(0)}k to $${(incB / 1000).toFixed(0)}k, between ${yrA} and ${yrB}.`,
+        });
+      }
+    }
+  }
+
+  // Rent burden increases (>5%)
+  for (let i = 1; i < demoChartData.length; i++) {
+    const prev = demoChartData[i - 1];
+    const curr = demoChartData[i];
+    const rbIncrease = curr.rent_burden_pct - prev.rent_burden_pct;
+    if (rbIncrease > 5) {
+      narrativeCallouts.push({
+        type: "rent_burden",
+        text: `Rent burden increased from ${prev.rent_burden_pct.toFixed(1)}% to ${curr.rent_burden_pct.toFixed(1)}% between ${prev.year} and ${curr.year}, affecting housing affordability.`,
+      });
+    }
+  }
+
+  // Deduplicate and prioritize callouts by severity
+  // Priority: income_decline > poverty_increase > home_value > rent_burden > pop_loss
+  const calloutPriority = {
+    income_decline: 0,
+    poverty_increase: 1,
+    home_value: 2,
+    rent_burden: 3,
+    pop_loss: 4,
+  };
+  const uniqueCallouts = new Map();
+  for (const callout of narrativeCallouts) {
+    const key = callout.type;
+    if (!uniqueCallouts.has(key) || calloutPriority[callout.type] < calloutPriority[uniqueCallouts.get(key).type]) {
+      uniqueCallouts.set(key, callout);
+    }
+  }
+  const deduplicatedCallouts = Array.from(uniqueCallouts.values())
+    .sort((a, b) => (calloutPriority[a.type] ?? 999) - (calloutPriority[b.type] ?? 999));
+
   // ═══ ECONOMICS TAB — propertyNow / propertyPrev ═══
 
   const propRowsNow = tract_ids
@@ -256,6 +315,14 @@ export function aggregateNeighborhood(neighborhoodId, year) {
     })
   );
 
+  // ═══ DATA AVAILABILITY — pre-2020 census coverage per tract ═══
+
+  const dataAvailability = [2000, 2010, 2020].map(yr => ({
+    year: yr,
+    tractsWithData: tract_ids.filter(tid => DEMO_BY_RY.get(`${tid}_${yr}`)).length,
+    totalTracts: tract_ids.length,
+  }));
+
   // ═══ CULTURE TAB — tipping points ═══
 
   const tippingPoints = tract_ids
@@ -274,7 +341,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
     tractCount: tract_ids.length,
     aggDvi,
     demoChartData,
-    narrativeCallouts,
+    narrativeCallouts: deduplicatedCallouts,
     propertyNow,
     propertyPrev,
     socioNow,
@@ -282,6 +349,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
     bizOpen,
     bizClosed,
     anchorDensity,
+    dataAvailability,
     paItems,
     tippingPoints,
   };

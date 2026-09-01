@@ -8,9 +8,10 @@ import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorB
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
 import { ID_TO_NAME } from "../data/regionLookup";
-import { fmtPct, fmtChange, pressureColor, pressureDots } from "../utils/formatters";
+import { fmtChange, pressureColor, pressureDots } from "../utils/formatters";
 import { adjustForInflation } from "../utils/cpi";
 import ChartTooltip from "./ChartTooltip";
+import TractSparkline from "./TractSparkline";
 
 export default function RegionDetailPanel({
   activeFeature,
@@ -94,7 +95,7 @@ export default function RegionDetailPanel({
                 {activeRegionName}
                 {isNeighborhoodMode && neighborhoodAgg
                   ? <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [{neighborhoodAgg.tractCount} tracts]</span>
-                  : activeFeature && <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [id. {activeFeature.properties.region_id}]</span>
+                  : activeFeature && <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [{REGION_INDEX.find(r => r.region_id === activeFeature.properties.region_id)?.tract_label || `id. ${activeFeature.properties.region_id}`}]</span>
                 }
               </h2>
               {activeFeature?.properties?.heritage && (
@@ -249,16 +250,72 @@ export default function RegionDetailPanel({
               })()}
             </div>
 
-            {/* Narrative callouts */}
-            {narrativeCallouts.length > 0 && (
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {narrativeCallouts.map((c, i) => (
-                  <div key={i} style={{ background: c.type === "pop_loss" ? "#faf5ff" : "#fffbeb", borderRadius: 8, padding: "12px 14px", borderLeft: `3px solid ${c.type === "pop_loss" ? "#7c3aed" : "#f59e0b"}` }} role="note">
-                    <p style={{ fontSize: 12, color: "#1a1a1a", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{c.text}</p>
+            {/* Neighborhood composition card (neighborhood mode only) */}
+            {isNeighborhoodMode && neighborhoodAgg?.tract_ids && (() => {
+              const highDvi = neighborhoodAgg.tract_ids.filter(tid => {
+                const dvi = interpolateDvi(tid, year);
+                return dvi != null && dvi >= 50;
+              }).length;
+              const mediumDvi = neighborhoodAgg.tract_ids.filter(tid => {
+                const dvi = interpolateDvi(tid, year);
+                return dvi != null && dvi >= 25 && dvi < 50;
+              }).length;
+              const lowDvi = neighborhoodAgg.tract_ids.filter(tid => {
+                const dvi = interpolateDvi(tid, year);
+                return dvi != null && dvi < 25;
+              }).length;
+
+              return (
+                <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 16px" }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 8 }}>
+                    Neighborhood Composition ({year})
                   </div>
-                ))}
-              </div>
-            )}
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                    {highDvi > 0 && (
+                      <div style={{ fontSize: 11, color: "#44403c" }}>
+                        <span style={{ fontWeight: 600, color: "#dc2626" }}>High DVI (50+):</span> {highDvi} tract{highDvi !== 1 ? "s" : ""}
+                      </div>
+                    )}
+                    {mediumDvi > 0 && (
+                      <div style={{ fontSize: 11, color: "#44403c" }}>
+                        <span style={{ fontWeight: 600, color: "#f59e0b" }}>Medium DVI (25–50):</span> {mediumDvi} tract{mediumDvi !== 1 ? "s" : ""}
+                      </div>
+                    )}
+                    {lowDvi > 0 && (
+                      <div style={{ fontSize: 11, color: "#44403c" }}>
+                        <span style={{ fontWeight: 600, color: "#10b981" }}>Low DVI (&lt;25):</span> {lowDvi} tract{lowDvi !== 1 ? "s" : ""}
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ fontSize: 9, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
+                    Neighborhood data is aggregated from these tracts. For tract-level precision, switch to Census Tracts view.
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Narrative callouts */}
+            {narrativeCallouts.length > 0 && (() => {
+              const calloutColors = {
+                pop_loss: { bg: "#faf5ff", border: "#7c3aed" },
+                income_decline: { bg: "#fee2e2", border: "#dc2626" },
+                poverty_increase: { bg: "#fef3c7", border: "#f59e0b" },
+                home_value: { bg: "#fffbeb", border: "#f59e0b" },
+                rent_burden: { bg: "#dbeafe", border: "#3b82f6" },
+              };
+              return (
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  {narrativeCallouts.map((c, i) => {
+                    const colors = calloutColors[c.type] || { bg: "#f3f4f6", border: "#9ca3af" };
+                    return (
+                      <div key={i} style={{ background: colors.bg, borderRadius: 8, padding: "12px 14px", borderLeft: `3px solid ${colors.border}` }} role="note">
+                        <p style={{ fontSize: 12, color: "#1a1a1a", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{c.text}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })()}
           </>
         )}
 
@@ -528,19 +585,40 @@ export default function RegionDetailPanel({
                 const tractDvi = interpolateDvi(tid, year);
                 const tractName = ID_TO_NAME.get(tid);
                 return (
-                  <div key={tid} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 11, padding: "3px 0", borderBottom: "1px solid #f0ede8" }}>
-                    <span style={{ color: "#44403c" }}>
+                  <div key={tid} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, fontSize: 11, padding: "3px 0", borderBottom: "1px solid #f0ede8" }}>
+                    <span style={{ color: "#44403c", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                       {tractName} <span style={{ color: "#a8a49c" }}>[id. {tid}]</span>
                     </span>
-                    <span style={{ fontWeight: 600, color: getDviBandColor(tractDvi), fontSize: 10 }}>
+                    <TractSparkline regionId={tid} />
+                    <span style={{ fontWeight: 600, color: getDviBandColor(tractDvi), fontSize: 10, width: 42, textAlign: "right" }}>
                       DVI {tractDvi?.toFixed(0) ?? "\u2014"}
                     </span>
                   </div>
                 );
               })}
             </div>
+            {/* Historical data coverage */}
+            {neighborhoodAgg.dataAvailability && (() => {
+              const gaps = neighborhoodAgg.dataAvailability.filter(d => d.tractsWithData < d.totalTracts);
+              if (gaps.length === 0) {
+                return (
+                  <div style={{ fontSize: 10, color: "#16a34a", marginTop: 8, lineHeight: 1.4 }}>
+                    ✓ Full census coverage for all {neighborhoodAgg.tractCount} tracts (2000–2023).
+                  </div>
+                );
+              }
+              return (
+                <div style={{ fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                  <strong>Historical data gaps:</strong>{" "}
+                  {neighborhoodAgg.dataAvailability.map(d =>
+                    `${d.year}: ${d.tractsWithData}/${d.totalTracts} tracts`
+                  ).join(" · ")}
+                  {". "}Aggregates for early years reflect only the tracts with data (often tracts created after 2010 in redistricting).
+                </div>
+              );
+            })()}
             <div style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
-              Neighborhood data is aggregated from these tracts using population-weighted averages. For tract-level precision, switch to Census Tracts view.
+              Neighborhood data is aggregated from these tracts using population-weighted averages. Sparklines show each tract's DVI trend (2000–2023, actual data points only). For tract-level precision, switch to Census Tracts view.
             </div>
           </details>
         )}
