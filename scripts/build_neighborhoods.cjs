@@ -569,84 +569,163 @@ async function main() {
   }
   if (unassignedCount > 0) console.log(`  Unassigned tracts made standalone: ${unassignedCount}`);
 
-  // ── Contiguity enforcement ──────────────────────────────────────────
-  // Eject orphan tracts whose nearest neighbor in the same neighborhood
-  // is > 2.5 km away. Each ejected tract becomes a standalone neighborhood.
-  console.log("\n  Contiguity enforcement...");
-  const ORPHAN_DIST_NPA = 3.0;  // km — lenient for NPA-sourced neighborhoods (authoritative)
-  const ORPHAN_DIST_OTHER = 2.0; // km — strict for suburban/name-cluster assignments
-  let ejectedTotal = 0;
+  // ── Contiguity enforcement (true polygon adjacency) ─────────────────
+  // A neighborhood must be a single connected component: every tract must
+  // share a boundary (directly or transitively) with the others. Uses actual
+  // tract polygons, not centroid distances. Non-contiguous components are
+  // split off: single tracts become standalones, multi-tract components
+  // become their own directional neighborhoods.
+  console.log("\n  Contiguity enforcement (polygon adjacency)...");
 
-  for (const [hoodId, hood] of Object.entries(neighborhoodMap)) {
+  console.log("  Loading REGIONS_GEOJSON for adjacency tests...");
+  const REGIONS_GEOJSON = loadRegionsGeoJSON();
+  console.log(`  Loaded ${REGIONS_GEOJSON.features.length} tract features`);
+
+  // primary_id → [secondary_ids] for merged tracts (a primary's footprint
+  // includes its merged secondaries' polygons)
+  const mergedSecondaries = new Map();
+  REGION_INDEX.filter(r => r.merge_into).forEach(r => {
+    if (!mergedSecondaries.has(r.merge_into)) mergedSecondaries.set(r.merge_into, []);
+    mergedSecondaries.get(r.merge_into).push(r.region_id);
+  });
+
+  const featureById = new Map(
+    REGIONS_GEOJSON.features.map(f => [f.properties.region_id, f])
+  );
+
+  function footprintFeatures(regionId) {
+    const ids = [regionId, ...(mergedSecondaries.get(regionId) || [])];
+    return ids.map(id => featureById.get(id)).filter(Boolean);
+  }
+
+  // Small buffer (in km) absorbs hairline gaps from coordinate rounding
+  const GAP_TOLERANCE_KM = 0.05;
+  const adjacencyCache = new Map();
+
+  function tractsAdjacent(idA, idB) {
+    const key = idA < idB ? `${idA}_${idB}` : `${idB}_${idA}`;
+    if (adjacencyCache.has(key)) return adjacencyCache.get(key);
+
+    // Cheap reject: centroids > 15 km apart cannot be adjacent tracts
+    const a = REGION_INDEX.find(r => r.region_id === idA);
+    const b = REGION_INDEX.find(r => r.region_id === idB);
+    if (a && b && haversineKm(a.lat, a.lng, b.lat, b.lng) > 15) {
+      adjacencyCache.set(key, false);
+      return false;
+    }
+
+    const featsA = footprintFeatures(idA);
+    const featsB = footprintFeatures(idB);
+    let touching = false;
+    outer:
+    for (const fa of featsA) {
+      for (const fb of featsB) {
+        try {
+          if (turf.booleanIntersects(fa, fb)) { touching = true; break outer; }
+          // Retry with a tiny buffer to absorb precision gaps
+          const buffered = turf.buffer(fa, GAP_TOLERANCE_KM, { units: "kilometers" });
+          if (buffered && turf.booleanIntersects(buffered, fb)) { touching = true; break outer; }
+        } catch (e) { /* invalid geometry — treat as not touching */ }
+      }
+    }
+    adjacencyCache.set(key, touching);
+    return touching;
+  }
+
+  function connectedComponents(tractIds) {
+    const remaining = new Set(tractIds);
+    const components = [];
+    while (remaining.size > 0) {
+      const seed = remaining.values().next().value;
+      const comp = [seed];
+      remaining.delete(seed);
+      const queue = [seed];
+      while (queue.length > 0) {
+        const cur = queue.shift();
+        for (const other of [...remaining]) {
+          if (tractsAdjacent(cur, other)) {
+            remaining.delete(other);
+            comp.push(other);
+            queue.push(other);
+          }
+        }
+      }
+      components.push(comp);
+    }
+    return components;
+  }
+
+  function directionLabel(fromLat, fromLng, toLat, toLng) {
+    const dLat = toLat - fromLat;
+    const dLng = toLng - fromLng;
+    const ns = dLat > 0 ? "North" : "South";
+    const ew = dLng > 0 ? "East" : "West";
+    return Math.abs(dLat) * 1.2 > Math.abs(dLng) ? ns : ew;
+  }
+
+  let ejectedTotal = 0;
+  let splitTotal = 0;
+
+  for (const hood of Object.values(neighborhoodMap)) {
     if (hood.tract_ids.length < 2) continue;
 
-    const tracts = hood.tract_ids
-      .map(id => REGION_INDEX.find(r => r.region_id === id))
-      .filter(Boolean);
+    const components = connectedComponents(hood.tract_ids);
+    if (components.length === 1) continue; // fully contiguous
 
-    // Use lenient threshold for NPA-sourced neighborhoods, strict for others
-    const isNPA = hood.source === "City of Austin NPA" || hood.source === "City of Austin NPA (nearest)" || hood.source === "manual";
-    const threshold = isNPA ? ORPHAN_DIST_NPA : ORPHAN_DIST_OTHER;
+    // Keep the largest component under the hood's identity
+    // (tie-break: component containing the lowest region_id, for determinism)
+    components.sort((x, y) => y.length - x.length || Math.min(...x) - Math.min(...y));
+    const kept = components[0];
+    hood.tract_ids = kept;
 
-    // Find orphans: tracts whose nearest neighbor in this hood > threshold
-    const toEject = [];
-    for (const tract of tracts) {
-      let nearestDist = Infinity;
-      for (const other of tracts) {
-        if (other.region_id === tract.region_id) continue;
-        const d = haversineKm(tract.lat, tract.lng, other.lat, other.lng);
-        if (d < nearestDist) nearestDist = d;
-      }
-      if (nearestDist > threshold) {
-        toEject.push(tract);
-      }
-    }
+    const keptTracts = kept.map(id => REGION_INDEX.find(r => r.region_id === id)).filter(Boolean);
+    const keptLat = keptTracts.reduce((s, t) => s + t.lat, 0) / keptTracts.length;
+    const keptLng = keptTracts.reduce((s, t) => s + t.lng, 0) / keptTracts.length;
 
-    if (toEject.length === 0) continue;
-
-    // If ALL tracts are orphans of each other, split entire neighborhood
-    // into standalones (no core cluster exists)
-    if (toEject.length === tracts.length) {
-      // Check if the closest pair is within threshold — if so keep them
-      let minDist = Infinity;
-      let keepPair = [0, 1];
-      for (let i = 0; i < tracts.length; i++) {
-        for (let j = i + 1; j < tracts.length; j++) {
-          const d = haversineKm(tracts[i].lat, tracts[i].lng, tracts[j].lat, tracts[j].lng);
-          if (d < minDist) { minDist = d; keepPair = [i, j]; }
+    for (const comp of components.slice(1)) {
+      if (comp.length === 1) {
+        // Single detached tract → standalone neighborhood
+        const tract = REGION_INDEX.find(r => r.region_id === comp[0]);
+        const name = tract?.display_name || `Tract ${comp[0]}`;
+        const standaloneId = slugify(name) + "-ejected";
+        neighborhoodMap[standaloneId] = {
+          id: standaloneId,
+          name,
+          tract_ids: comp,
+          source: "ejected-orphan",
+        };
+        ejectedTotal++;
+      } else {
+        // Multi-tract detached component → own neighborhood, directional name
+        const compTracts = comp.map(id => REGION_INDEX.find(r => r.region_id === id)).filter(Boolean);
+        const cLat = compTracts.reduce((s, t) => s + t.lat, 0) / compTracts.length;
+        const cLng = compTracts.reduce((s, t) => s + t.lng, 0) / compTracts.length;
+        const dir = directionLabel(keptLat, keptLng, cLat, cLng);
+        let name = `${hood.name} — ${dir}`;
+        let splitId = slugify(name);
+        // Avoid id collisions if two components split in the same direction
+        while (neighborhoodMap[splitId]) {
+          splitId += "-x";
+          name += " ";
         }
+        neighborhoodMap[splitId] = {
+          id: splitId,
+          name: name.trim(),
+          tract_ids: comp,
+          source: "split-noncontiguous",
+        };
+        splitTotal++;
       }
-      if (minDist <= threshold) {
-        // Keep the closest pair, eject the rest
-        const keepIds = new Set([tracts[keepPair[0]].region_id, tracts[keepPair[1]].region_id]);
-        toEject.length = 0;
-        for (const t of tracts) {
-          if (!keepIds.has(t.region_id)) toEject.push(t);
-        }
-      }
-      // else: all tracts are far from each other — eject all, hood becomes empty
     }
 
-    // Eject
-    const ejectIds = new Set(toEject.map(t => t.region_id));
-    hood.tract_ids = hood.tract_ids.filter(id => !ejectIds.has(id));
-
-    for (const tract of toEject) {
-      const name = tract.display_name || `Tract ${tract.region_id}`;
-      const standaloneId = slugify(name) + "-ejected";
-      neighborhoodMap[standaloneId] = {
-        id: standaloneId,
-        name,
-        tract_ids: [tract.region_id],
-        source: "ejected-orphan",
-      };
-      ejectedTotal++;
-    }
-
-    if (toEject.length > 0) {
-      console.log(`    ${hood.name}: ejected ${toEject.length} orphan(s) — ${toEject.map(t => `id ${t.region_id}`).join(", ")}`);
-    }
+    console.log(
+      `    ${hood.name}: ${components.length} disconnected component(s) — kept ${kept.length} tract(s), ` +
+      `split off ${components.slice(1).map(c => `[${c.join(", ")}]`).join(" ")}`
+    );
   }
+
+  console.log(`  Detached single tracts made standalone: ${ejectedTotal}`);
+  console.log(`  Multi-tract components split off: ${splitTotal}`);
 
   // After ejecting, convert single-tract suburban-community hoods to standalone
   let suburbanConverted = 0;
@@ -680,8 +759,6 @@ async function main() {
   for (const [id, hood] of Object.entries(neighborhoodMap)) {
     if (hood.tract_ids.length === 0) delete neighborhoodMap[id];
   }
-
-  console.log(`  Total orphan tracts ejected: ${ejectedTotal}`);
 
   // Mark non-NPA neighborhoods as "(under review)"
   const npaSources = new Set(["City of Austin NPA", "City of Austin NPA (nearest)", "manual"]);
@@ -758,17 +835,7 @@ export const NEIGHBORHOOD_NAMES = NEIGHBORHOODS
 
   // ── Output neighborhoods_geojson.js ──────────────────────────────────────
   console.log("\nStep 3: Building neighborhood GeoJSON polygons...");
-
-  console.log("  Loading REGIONS_GEOJSON (this may take a moment)...");
-  const REGIONS_GEOJSON = loadRegionsGeoJSON();
-  console.log(`  Loaded ${REGIONS_GEOJSON.features.length} tract features`);
-
-  // Build map: primary_id → [secondary_ids] for merged tracts
-  const mergedSecondaries = new Map();
-  REGION_INDEX.filter(r => r.merge_into).forEach(r => {
-    if (!mergedSecondaries.has(r.merge_into)) mergedSecondaries.set(r.merge_into, []);
-    mergedSecondaries.get(r.merge_into).push(r.region_id);
-  });
+  console.log(`  Reusing REGIONS_GEOJSON loaded during contiguity enforcement`);
   console.log(`  Merged secondary tracts: ${REGION_INDEX.filter(r => r.merge_into).length} (across ${mergedSecondaries.size} primary tracts)`);
 
   const neighborhoodFeatures = [];

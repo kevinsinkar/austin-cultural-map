@@ -18,18 +18,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "akins-ejected",
-    "name": "Akins (under review)",
-    "tract_ids": [
-      97
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1269,
-      -97.8083
-    ]
-  },
-  {
     "id": "allandale",
     "name": "Allandale",
     "tract_ids": [
@@ -43,7 +31,7 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "allandale-ejected",
+    "id": "the-arboretum",
     "name": "Allandale (under review)",
     "tract_ids": [
       26
@@ -89,18 +77,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.418,
       -97.7563
-    ]
-  },
-  {
-    "id": "barton-creek-ejected",
-    "name": "Barton Creek (under review)",
-    "tract_ids": [
-      7
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1955,
-      -97.9026
     ]
   },
   {
@@ -156,7 +132,7 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "bouldin-creek-ejected",
+    "id": "oak-hill",
     "name": "Bouldin Creek (under review)",
     "tract_ids": [
       49
@@ -191,6 +167,19 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3987,
       -97.7585
+    ]
+  },
+  {
+    "id": "cedar-park",
+    "name": "Cedar Park (under review)",
+    "tract_ids": [
+      22,
+      75
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.4221,
+      -97.8284
     ]
   },
   {
@@ -257,15 +246,17 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "circle-c-ejected",
-    "name": "Circle C (under review)",
+    "id": "circle-c-ranch",
+    "name": "Circle C Ranch (under review)",
     "tract_ids": [
-      10
+      7,
+      10,
+      173
     ],
-    "source": "ejected-orphan",
+    "source": "suburban-community",
     "centroid": [
-      30.1854,
-      -97.8793
+      30.1959,
+      -97.8881
     ]
   },
   {
@@ -293,30 +284,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "creedmoor-ejected",
-    "name": "Creedmoor (under review)",
-    "tract_ids": [
-      18
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1774,
-      -97.5914
-    ]
-  },
-  {
-    "id": "creedmoor-185-ejected",
-    "name": "Creedmoor [185] (under review)",
-    "tract_ids": [
-      185
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1434,
-      -97.618
-    ]
-  },
-  {
     "id": "crestview",
     "name": "Crestview",
     "tract_ids": [
@@ -341,15 +308,17 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "del-valle-ejected",
+    "id": "del-valle",
     "name": "Del Valle (under review)",
     "tract_ids": [
-      183
+      18,
+      72,
+      185
     ],
-    "source": "ejected-orphan",
+    "source": "suburban-community",
     "centroid": [
-      30.343,
-      -97.5793
+      30.1702,
+      -97.6136
     ]
   },
   {
@@ -472,18 +441,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "gateway-17-ejected",
-    "name": "Gateway [17] (under review)",
-    "tract_ids": [
-      17
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.3876,
-      -97.6274
-    ]
-  },
-  {
     "id": "georgian-acres",
     "name": "Georgian Acres",
     "tract_ids": [
@@ -493,18 +450,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3509,
       -97.7014
-    ]
-  },
-  {
-    "id": "georgian-acres-169-ejected",
-    "name": "Georgian Acres [169] (under review)",
-    "tract_ids": [
-      169
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.3199,
-      -97.6148
     ]
   },
   {
@@ -548,18 +493,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "great-hills-144-ejected",
-    "name": "Great Hills [144] (under review)",
-    "tract_ids": [
-      144
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.3475,
-      -97.7817
-    ]
-  },
-  {
     "id": "hancock",
     "name": "Hancock",
     "tract_ids": [
@@ -579,12 +512,13 @@ export const NEIGHBORHOODS = [
       8,
       9,
       11,
+      17,
       44
     ],
     "source": "suburban-community",
     "centroid": [
       30.3881,
-      -97.667
+      -97.6604
     ]
   },
   {
@@ -599,18 +533,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.4636,
       -97.6747
-    ]
-  },
-  {
-    "id": "harris-ridge-168-ejected",
-    "name": "Harris Ridge [168] (under review)",
-    "tract_ids": [
-      168
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.3687,
-      -97.6314
     ]
   },
   {
@@ -735,6 +657,21 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "manor",
+    "name": "Manor (under review)",
+    "tract_ids": [
+      151,
+      168,
+      169,
+      183
+    ],
+    "source": "suburban-community",
+    "centroid": [
+      30.3468,
+      -97.6094
+    ]
+  },
+  {
     "id": "mckinney",
     "name": "Mckinney",
     "tract_ids": [
@@ -798,18 +735,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "montopolis-72-ejected",
-    "name": "Montopolis [72] (under review)",
-    "tract_ids": [
-      72
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1897,
-      -97.6313
-    ]
-  },
-  {
     "id": "wildhorse-ranch",
     "name": "Montopolis [77] (under review)",
     "tract_ids": [
@@ -864,16 +789,27 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
+    "id": "north-austin-civic-association-ejected",
+    "name": "North Austin Civic Association (under review)",
+    "tract_ids": [
+      200
+    ],
+    "source": "ejected-orphan",
+    "centroid": [
+      30.3963,
+      -97.7017
+    ]
+  },
+  {
     "id": "north-burnet",
     "name": "North Burnet",
     "tract_ids": [
-      176,
-      200
+      176
     ],
     "source": "City of Austin NPA",
     "centroid": [
-      30.3941,
-      -97.7138
+      30.392,
+      -97.7259
     ]
   },
   {
@@ -942,14 +878,15 @@ export const NEIGHBORHOODS = [
     "name": "Northwest Hills (under review)",
     "tract_ids": [
       43,
+      144,
       146,
       147,
       158
     ],
     "source": "suburban-community",
     "centroid": [
-      30.3602,
-      -97.7606
+      30.3576,
+      -97.7648
     ]
   },
   {
@@ -1007,13 +944,14 @@ export const NEIGHBORHOODS = [
       60,
       64,
       66,
+      193,
       225,
       235
     ],
     "source": "suburban-community",
     "centroid": [
-      30.1686,
-      -97.7555
+      30.1677,
+      -97.7592
     ]
   },
   {
@@ -1042,27 +980,16 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "pilot-knob-ejected",
+    "id": "pilot-knob",
     "name": "Pilot Knob (under review)",
     "tract_ids": [
-      47
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1586,
-      -97.6511
-    ]
-  },
-  {
-    "id": "pilot-knob-250-ejected",
-    "name": "Pilot Knob [250] (under review)",
-    "tract_ids": [
+      47,
       250
     ],
-    "source": "ejected-orphan",
+    "source": "suburban-community",
     "centroid": [
-      30.1591,
-      -97.7102
+      30.1589,
+      -97.6807
     ]
   },
   {
@@ -1079,18 +1006,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2351,
       -97.7112
-    ]
-  },
-  {
-    "id": "pleasant-valley-ejected",
-    "name": "Pleasant Valley (under review)",
-    "tract_ids": [
-      22
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.4322,
-      -97.8256
     ]
   },
   {
@@ -1271,18 +1186,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "shady-hollow-56-ejected",
-    "name": "Shady Hollow [56] (under review)",
-    "tract_ids": [
-      56
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1404,
-      -97.7777
-    ]
-  },
-  {
     "id": "south-lamar",
     "name": "South Lamar",
     "tract_ids": [
@@ -1297,25 +1200,26 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "south-lamar-ejected",
-    "name": "South Lamar (under review)",
+    "id": "south-manchaca",
+    "name": "South Manchaca",
     "tract_ids": [
-      173
+      56,
+      97
     ],
-    "source": "ejected-orphan",
+    "source": "City of Austin NPA",
     "centroid": [
-      30.207,
-      -97.8823
+      30.1336,
+      -97.793
     ]
   },
   {
-    "id": "south-manchaca",
-    "name": "South Manchaca",
+    "id": "south-manchaca-north",
+    "name": "South Manchaca — North (under review)",
     "tract_ids": [
       91,
       128
     ],
-    "source": "City of Austin NPA",
+    "source": "split-noncontiguous",
     "centroid": [
       30.221,
       -97.7809
@@ -1348,18 +1252,6 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "southwood-193-ejected",
-    "name": "Southwood [193] (under review)",
-    "tract_ids": [
-      193
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.1633,
-      -97.7776
-    ]
-  },
-  {
     "id": "southwood-265",
     "name": "Southwood [265] (under review)",
     "tract_ids": [
@@ -1388,12 +1280,13 @@ export const NEIGHBORHOODS = [
     "name": "Springdale (under review)",
     "tract_ids": [
       12,
-      73
+      73,
+      248
     ],
     "source": "suburban-community",
     "centroid": [
-      30.2938,
-      -97.6362
+      30.2897,
+      -97.6306
     ]
   },
   {
@@ -1595,15 +1488,16 @@ export const NEIGHBORHOODS = [
     ]
   },
   {
-    "id": "westlake-hills-ejected",
+    "id": "westlake-hills",
     "name": "Westlake Hills (under review)",
     "tract_ids": [
+      143,
       221
     ],
-    "source": "ejected-orphan",
+    "source": "suburban-community",
     "centroid": [
-      30.2814,
-      -97.8818
+      30.2746,
+      -97.8996
     ]
   },
   {
@@ -1616,30 +1510,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3639,
       -97.677
-    ]
-  },
-  {
-    "id": "windsor-hills-151-ejected",
-    "name": "Windsor Hills [151] (under review)",
-    "tract_ids": [
-      151
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.3555,
-      -97.6121
-    ]
-  },
-  {
-    "id": "windsor-hills-248-ejected",
-    "name": "Windsor Hills [248] (under review)",
-    "tract_ids": [
-      248
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.2813,
-      -97.6192
     ]
   },
   {
@@ -1667,18 +1537,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.3121,
       -97.6934
-    ]
-  },
-  {
-    "id": "windsor-park-75-ejected",
-    "name": "Windsor Park [75] (under review)",
-    "tract_ids": [
-      75
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.412,
-      -97.8312
     ]
   },
   {
@@ -1719,18 +1577,6 @@ export const NEIGHBORHOODS = [
     "centroid": [
       30.2545,
       -97.7687
-    ]
-  },
-  {
-    "id": "zilker-ejected",
-    "name": "Zilker (under review)",
-    "tract_ids": [
-      143
-    ],
-    "source": "ejected-orphan",
-    "centroid": [
-      30.2678,
-      -97.9173
     ]
   }
 ];

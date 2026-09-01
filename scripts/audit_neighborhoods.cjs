@@ -1,11 +1,14 @@
 // audit_neighborhoods.cjs
-// Audits neighborhood assignments for non-contiguous tracts.
+// Audits neighborhood assignments for true contiguity: every neighborhood
+// must form a single connected component by POLYGON ADJACENCY (tract
+// boundaries touching), not just centroid proximity.
 // Usage: node scripts/audit_neighborhoods.cjs
 //
 // Outputs: neighborhood_audit.txt
 
 const fs = require("fs");
 const path = require("path");
+const turf = require("@turf/turf");
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 
@@ -33,7 +36,14 @@ const { NEIGHBORHOODS } = loadESM(
   ["NEIGHBORHOODS"]
 );
 
-// ── Haversine ────────────────────────────────────────────────────────────
+console.log("Loading REGIONS_GEOJSON (this may take a moment)...");
+const { REGIONS_GEOJSON } = loadESM(
+  path.join(DATA_DIR, "final_updated_regions.js"),
+  ["REGIONS_GEOJSON"]
+);
+console.log(`Loaded ${REGIONS_GEOJSON.features.length} tract features\n`);
+
+// ── Helpers ──────────────────────────────────────────────────────────────
 
 function haversineKm(lat1, lng1, lat2, lng2) {
   const R = 6371;
@@ -47,22 +57,87 @@ function haversineKm(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// ── Build region lookup ──────────────────────────────────────────────────
-
 const regionById = new Map(REGION_INDEX.map(r => [r.region_id, r]));
+const featureById = new Map(
+  REGIONS_GEOJSON.features.map(f => [f.properties.region_id, f])
+);
+
+// primary_id → [secondary_ids] for merged tracts
+const mergedSecondaries = new Map();
+REGION_INDEX.filter(r => r.merge_into).forEach(r => {
+  if (!mergedSecondaries.has(r.merge_into)) mergedSecondaries.set(r.merge_into, []);
+  mergedSecondaries.get(r.merge_into).push(r.region_id);
+});
+
+function footprintFeatures(regionId) {
+  const ids = [regionId, ...(mergedSecondaries.get(regionId) || [])];
+  return ids.map(id => featureById.get(id)).filter(Boolean);
+}
+
+// Must match GAP_TOLERANCE_KM in build_neighborhoods.cjs
+const GAP_TOLERANCE_KM = 0.05;
+const adjacencyCache = new Map();
+
+function tractsAdjacent(idA, idB) {
+  const key = idA < idB ? `${idA}_${idB}` : `${idB}_${idA}`;
+  if (adjacencyCache.has(key)) return adjacencyCache.get(key);
+
+  const a = regionById.get(idA);
+  const b = regionById.get(idB);
+  if (a && b && haversineKm(a.lat, a.lng, b.lat, b.lng) > 15) {
+    adjacencyCache.set(key, false);
+    return false;
+  }
+
+  const featsA = footprintFeatures(idA);
+  const featsB = footprintFeatures(idB);
+  let touching = false;
+  outer:
+  for (const fa of featsA) {
+    for (const fb of featsB) {
+      try {
+        if (turf.booleanIntersects(fa, fb)) { touching = true; break outer; }
+        const buffered = turf.buffer(fa, GAP_TOLERANCE_KM, { units: "kilometers" });
+        if (buffered && turf.booleanIntersects(buffered, fb)) { touching = true; break outer; }
+      } catch (e) { /* invalid geometry — treat as not touching */ }
+    }
+  }
+  adjacencyCache.set(key, touching);
+  return touching;
+}
+
+function connectedComponents(tractIds) {
+  const remaining = new Set(tractIds);
+  const components = [];
+  while (remaining.size > 0) {
+    const seed = remaining.values().next().value;
+    const comp = [seed];
+    remaining.delete(seed);
+    const queue = [seed];
+    while (queue.length > 0) {
+      const cur = queue.shift();
+      for (const other of [...remaining]) {
+        if (tractsAdjacent(cur, other)) {
+          remaining.delete(other);
+          comp.push(other);
+          queue.push(other);
+        }
+      }
+    }
+    components.push(comp);
+  }
+  return components;
+}
 
 // ── Audit each neighborhood ─────────────────────────────────────────────
 
-const SPREAD_THRESHOLD = 4; // km — flag if max spread exceeds this
-const ORPHAN_THRESHOLD = 2; // km — a tract is an orphan if its nearest neighbor in the same hood is > this
-
 const lines = [];
 const flagged = [];
+let missingGeometry = 0;
 
-lines.push("NEIGHBORHOOD CONTIGUITY AUDIT");
+lines.push("NEIGHBORHOOD CONTIGUITY AUDIT (polygon adjacency)");
 lines.push(`Generated: ${new Date().toISOString()}`);
-lines.push(`Spread threshold: ${SPREAD_THRESHOLD} km`);
-lines.push(`Orphan threshold: ${ORPHAN_THRESHOLD} km`);
+lines.push(`Adjacency test: turf.booleanIntersects with ${GAP_TOLERANCE_KM * 1000} m gap tolerance`);
 lines.push(`Total neighborhoods: ${NEIGHBORHOODS.length}`);
 lines.push(`Total tracts: ${REGION_INDEX.filter(r => !r.merge_into).length}`);
 lines.push("");
@@ -70,84 +145,47 @@ lines.push("=".repeat(80));
 lines.push("");
 
 for (const hood of NEIGHBORHOODS) {
-  const tracts = hood.tract_ids
-    .map(id => regionById.get(id))
-    .filter(Boolean);
+  if (hood.tract_ids.length < 2) continue; // single-tract can't be non-contiguous
 
-  if (tracts.length < 2) continue; // Single-tract neighborhoods can't be non-contiguous
+  // Sanity: every tract needs geometry
+  const noGeom = hood.tract_ids.filter(id => footprintFeatures(id).length === 0);
+  if (noGeom.length > 0) {
+    missingGeometry += noGeom.length;
+    lines.push(`WARNING: ${hood.name} — no geometry for tract(s) ${noGeom.join(", ")}`);
+  }
 
-  // Compute max spread (max pairwise distance)
+  const components = connectedComponents(hood.tract_ids);
+  if (components.length === 1) continue; // contiguous — OK
+
+  // Max spread for context
+  const tracts = hood.tract_ids.map(id => regionById.get(id)).filter(Boolean);
   let maxDist = 0;
-  let maxPair = [null, null];
   for (let i = 0; i < tracts.length; i++) {
     for (let j = i + 1; j < tracts.length; j++) {
-      const d = haversineKm(tracts[i].lat, tracts[i].lng, tracts[j].lat, tracts[j].lng);
-      if (d > maxDist) {
-        maxDist = d;
-        maxPair = [tracts[i], tracts[j]];
-      }
+      maxDist = Math.max(maxDist, haversineKm(tracts[i].lat, tracts[i].lng, tracts[j].lat, tracts[j].lng));
     }
   }
 
-  if (maxDist <= SPREAD_THRESHOLD) continue; // Not flagged
-
-  // Find orphan tracts: tracts whose nearest neighbor in the same hood is > ORPHAN_THRESHOLD
-  const orphans = [];
-  for (const tract of tracts) {
-    let nearestDist = Infinity;
-    let nearestTract = null;
-    for (const other of tracts) {
-      if (other.region_id === tract.region_id) continue;
-      const d = haversineKm(tract.lat, tract.lng, other.lat, other.lng);
-      if (d < nearestDist) {
-        nearestDist = d;
-        nearestTract = other;
-      }
-    }
-    if (nearestDist > ORPHAN_THRESHOLD) {
-      orphans.push({
-        tract,
-        nearestDist,
-        nearestTract,
-      });
-    }
-  }
-
-  const entry = {
+  flagged.push({
     name: hood.name,
     id: hood.id,
     source: hood.source,
-    tractCount: tracts.length,
+    tractCount: hood.tract_ids.length,
+    components,
     maxSpread: maxDist,
-    maxPair,
-    orphans,
-  };
-  flagged.push(entry);
+  });
 
-  lines.push(`FLAGGED: ${hood.name}`);
+  lines.push(`FLAGGED: ${hood.name} — ${components.length} disconnected components`);
   lines.push(`  ID: ${hood.id}`);
   lines.push(`  Source: ${hood.source}`);
-  lines.push(`  Tracts: ${tracts.length}`);
-  lines.push(`  Max spread: ${maxDist.toFixed(2)} km`);
-  lines.push(`  Max pair: ${maxPair[0].display_name} (id ${maxPair[0].region_id}) <-> ${maxPair[1].display_name} (id ${maxPair[1].region_id})`);
-
-  // List all tracts with coordinates
-  lines.push(`  All tracts:`);
-  for (const t of tracts) {
-    const isOrphan = orphans.some(o => o.tract.region_id === t.region_id);
-    lines.push(`    ${isOrphan ? "*** " : "    "}id ${t.region_id}: ${t.display_name} (${t.lat.toFixed(4)}, ${t.lng.toFixed(4)})${isOrphan ? " ← ORPHAN" : ""}`);
-  }
-
-  if (orphans.length > 0) {
-    lines.push(`  Orphan tracts (nearest neighbor > ${ORPHAN_THRESHOLD} km):`);
-    for (const o of orphans) {
-      lines.push(`    id ${o.tract.region_id}: ${o.tract.display_name}`);
-      lines.push(`      Nearest in hood: ${o.nearestTract.display_name} (id ${o.nearestTract.region_id}) at ${o.nearestDist.toFixed(2)} km`);
+  lines.push(`  Tracts: ${hood.tract_ids.length} | Max spread: ${maxDist.toFixed(2)} km`);
+  components.forEach((comp, i) => {
+    lines.push(`  Component ${i + 1} (${comp.length} tract${comp.length !== 1 ? "s" : ""}):`);
+    for (const tid of comp) {
+      const t = regionById.get(tid);
+      lines.push(`    id ${tid}: ${t?.display_name ?? "?"} (${t?.lat.toFixed(4)}, ${t?.lng.toFixed(4)})`);
     }
-  } else {
-    lines.push(`  No orphan tracts (all within ${ORPHAN_THRESHOLD} km of at least one neighbor)`);
-  }
-
+  });
   lines.push("");
 }
 
@@ -157,13 +195,20 @@ lines.push("=".repeat(80));
 lines.push("");
 lines.push("SUMMARY");
 lines.push(`  Neighborhoods audited: ${NEIGHBORHOODS.length}`);
-lines.push(`  Flagged (spread > ${SPREAD_THRESHOLD} km): ${flagged.length}`);
-lines.push(`  Total orphan tracts: ${flagged.reduce((s, f) => s + f.orphans.length, 0)}`);
+lines.push(`  Multi-tract neighborhoods: ${NEIGHBORHOODS.filter(n => n.tract_ids.length > 1).length}`);
+lines.push(`  NON-CONTIGUOUS (flagged): ${flagged.length}`);
+lines.push(`  Tracts with missing geometry: ${missingGeometry}`);
 lines.push("");
-lines.push("FLAGGED NEIGHBORHOODS (sorted by max spread):");
-flagged.sort((a, b) => b.maxSpread - a.maxSpread);
-for (const f of flagged) {
-  lines.push(`  ${f.maxSpread.toFixed(1).padStart(6)} km | ${f.tractCount.toString().padStart(3)} tracts | ${f.orphans.length.toString().padStart(2)} orphans | ${f.name} [${f.source}]`);
+if (flagged.length === 0) {
+  lines.push("  ✓ All multi-tract neighborhoods are contiguous (boundaries touching).");
+} else {
+  lines.push("FLAGGED NEIGHBORHOODS:");
+  flagged.sort((a, b) => b.components.length - a.components.length);
+  for (const f of flagged) {
+    lines.push(`  ${f.components.length} components | ${f.tractCount.toString().padStart(3)} tracts | ${f.maxSpread.toFixed(1).padStart(5)} km spread | ${f.name} [${f.source}]`);
+  }
+  lines.push("");
+  lines.push("  Run: node scripts/build_neighborhoods.cjs to re-enforce contiguity.");
 }
 
 // ── Write ────────────────────────────────────────────────────────────────
