@@ -116,8 +116,11 @@ export default function useAustinMap({
       }),
       onEachFeature: (feature, layer) => {
         const meta = regionLookupMap.get(feature.properties.region_id);
-        const tractLabel = meta?.tract_label || meta?.display_name || feature.properties.region_name;
-        layer.bindTooltip(tractLabel, { direction: "auto", sticky: true });
+        const communityName = meta?.region_name || meta?.display_name || feature.properties.region_name;
+        const tooltipText = meta?.tract_label && meta.tract_label !== communityName
+          ? `${communityName} (${meta.tract_label})`
+          : communityName;
+        layer.bindTooltip(tooltipText, { direction: "auto", sticky: true });
         layer.on({
           mouseover: (e) => {
             const l = e.target;

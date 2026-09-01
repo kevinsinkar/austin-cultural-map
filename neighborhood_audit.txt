@@ -1,8 +1,8 @@
 NEIGHBORHOOD CONTIGUITY AUDIT
-Generated: 2026-03-24T21:10:36.895Z
+Generated: 2026-08-30T19:32:55.829Z
 Spread threshold: 4 km
 Orphan threshold: 2 km
-Total neighborhoods: 137
+Total neighborhoods: 136
 Total tracts: 232
 
 ================================================================================
@@ -27,26 +27,27 @@ FLAGGED: Onion Creek (under review)
   Source: suburban-community
   Tracts: 5
   Max spread: 4.09 km
-  Max pair: Tract 24.4 (id 64) <-> Tract 24.41 (id 225)
+  Max pair: Southwood [64] (id 64) <-> Southwood [225] (id 225)
   All tracts:
-        id 60: Tract 24.39 (30.1640, -97.7501)
-        id 64: Tract 24.4 (30.1475, -97.7495)
-        id 66: Tract 24.42 (30.1787, -97.7553)
-        id 225: Tract 24.41 (30.1808, -97.7673)
-        id 235: Tract 24.3 (30.1722, -97.7554)
+        id 60: Southwood (30.1640, -97.7501)
+        id 64: Southwood [64] (30.1475, -97.7495)
+        id 66: Montopolis (30.1787, -97.7553)
+        id 225: Southwood [225] (30.1808, -97.7673)
+        id 235: East Oak Hill [235] (30.1722, -97.7554)
   No orphan tracts (all within 2 km of at least one neighbor)
 
 FLAGGED: Wells Branch (under review)
   ID: wells-branch
   Source: suburban-community
-  Tracts: 4
-  Max spread: 4.51 km
-  Max pair: Tract 465.0 (id 58) <-> Tract 443.0 (id 220)
+  Tracts: 5
+  Max spread: 5.34 km
+  Max pair: St. John (id 58) <-> Wells Branch (id 54)
   All tracts:
-        id 58: Tract 465.0 (30.4552, -97.6661)
-        id 59: Tract 441.0 (30.4392, -97.6580)
-        id 220: Tract 443.0 (30.4177, -97.6482)
-        id 229: Tract 442.0 (30.4304, -97.6622)
+        id 58: St. John (30.4552, -97.6661)
+        id 59: Wells Branch [59] (30.4392, -97.6580)
+        id 220: Scofield (30.4177, -97.6482)
+        id 229: Wells Branch [229] (30.4304, -97.6622)
+        id 54: Wells Branch (30.4135, -97.6385)
   No orphan tracts (all within 2 km of at least one neighbor)
 
 FLAGGED: West Oak Hill
@@ -69,12 +70,12 @@ FLAGGED: West Oak Hill
 ================================================================================
 
 SUMMARY
-  Neighborhoods audited: 137
+  Neighborhoods audited: 136
   Flagged (spread > 4 km): 4
   Total orphan tracts: 3
 
 FLAGGED NEIGHBORHOODS (sorted by max spread):
+     5.3 km |   5 tracts |  0 orphans | Wells Branch (under review) [suburban-community]
      4.7 km |   4 tracts |  1 orphans | East Oak Hill [City of Austin NPA]
      4.6 km |   4 tracts |  2 orphans | West Oak Hill [City of Austin NPA]
-     4.5 km |   4 tracts |  0 orphans | Wells Branch (under review) [suburban-community]
      4.1 km |   5 tracts |  0 orphans | Onion Creek (under review) [suburban-community]

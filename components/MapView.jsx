@@ -91,7 +91,7 @@ export default function MapView({
 
   const activeRegionName = activeFeature?.properties?.region_name;
   const activeDisplayName = activeRegionId != null
-    ? (regionLookupMap.get(activeRegionId)?.tract_label || ID_TO_NAME.get(activeRegionId) || activeRegionName)
+    ? (regionLookupMap.get(activeRegionId)?.region_name || ID_TO_NAME.get(activeRegionId) || activeRegionName)
     : activeRegionName;
 
   // Compute demoChartData from audited demographics for the selected region
