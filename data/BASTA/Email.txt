@@ -1,0 +1,13 @@
+Hi Kevin,
+
+Please find attached the following two tables with BASTA's eviction filing data from 2014 through 2025. This data was collected on June 2, 2026, and given that our public-facing eviction dashboard updates dynamically, there may be some discrepancies.
+
+2014-2025_geography_table_2026-06-02.csv
+This table contains the number of eviction filings by year, census tract, and case outcome. We used 2020 census tracts across all years, and the table covers 2014 through 2025. Cases that we were not able to geocode based on the address information provided in the court filings are counted in the row for each year with the census tract "NO GEOGRAPHY". 
+
+2025_timeseries_table_2026-06-02.csv
+To provide some more granular time data for 2025, this table contains the total number of evictions filed each week in Travis County, divided up in several different ways. If viewing as a spreadsheet, column B indicates the total number of cases filed during the week starting on the date indicated in column A. Columns C-G show the distribution of filings by Justice of the Peace precinct (i.e. which court the case was filed in). 
+
+Columns H-M show the distribution of case outcomes. Note that there are some cases counted as "Active" -- this does not necessarily mean that cases filed at this time really were still active at the time the data was pulled, just that "Active" was the most recent available case status we were able to obtain for those cases. Defendants can request that their case be sealed by the court, which makes it impossible to determine the true case outcome in some instances. Columns N-KR show the number of cases filed each week by census tract. Again, cases we couldn't geocode to Travis County based on the address are counted under "NO GEOGRAPHY".
+
+If you have any questions about the data please let us know! September is a bit hectic since BASTA is in the final stages of becoming an independent nonprofit (we started as a project of Texas RioGrande Legal Aid). But we'd love to reconnect in the fall once things have, literally and figuratively, cooled off a little!

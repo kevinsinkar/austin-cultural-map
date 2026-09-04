@@ -37,7 +37,7 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 |------|------|---------|-------|-----------------|
 | `audited_demographics_normalized.json` | 1,542 | 269 | 2000–2023 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2019–2023) |
 | `audited_property_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (home values, rent, housing units, vacancy), City of Austin Construction Permits (new permits, commercial sqft) |
-| `audited_socioeconomic_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (income, poverty, unemployment, Gini, SNAP participation), BASTA Austin (eviction filings, pending) |
+| `audited_socioeconomic_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (income, poverty, unemployment, Gini, SNAP participation), BASTA Austin (eviction filing rates, 2014-2025) |
 
 **Important:** All data comes from observed Census, ACS, and administrative records. Intermediate years (e.g., 2005) are linearly interpolated from adjacent anchor years and flagged with `INTERPOLATED` audit flag. Rows computed from parent tracts (where a 2020 tract didn't exist in earlier Census vintages) are flagged with `COMPUTED_FROM_PARENT_TRACT`.
 
@@ -79,7 +79,7 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 | DVI Score | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.2) |
 | Legacy Businesses | ~40 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
-| Eviction Filings | 0 | 0% | Pending — requested from BASTA Austin (2014–present, census tract level) |
+| Eviction Filings | 244 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 
 ---
@@ -553,7 +553,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 ### Measurement Limitations
 
 - **Rent burden** is derived from Census/ACS self-reported housing costs — may undercount informal housing arrangements, doubled-up households, or cash rent payments.
-- **Eviction filings** lag actual displacement by 3–6 months (legal process time) and only capture formal filings — informal "cash for keys" agreements and lease non-renewals are not included.
+- **Eviction filings** lag actual displacement by 3–6 months (legal process time) and only capture formal filings — informal "cash for keys" agreements and lease non-renewals are not included. The 2020 snap-year rate averages filings over 2016–2020, which includes the 2020 COVID eviction moratorium months — rates for that window are diluted relative to normal years. Renter-household denominators are estimated from ACS housing units × occupancy × renter share, so rates in small or fast-changing tracts carry extra uncertainty.
 - **Foreign-born %** has ±2–3 percentage point margin of error in ACS 5-year estimates for small tracts (populations under 2,000).
 - **Business data** has selection bias toward historically significant areas in East Austin and downtown where Preservation Austin and community partners have conducted inventories. The tool explicitly notes this: "No Data" in the anchor density badge means no survey coverage, not no culture.
 - **Home value data** from TCAD reflects appraised values, not market transaction prices. In rapidly appreciating markets, appraisals may lag actual sales prices by 1–2 years.
@@ -588,7 +588,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | City of Austin — Neighborhood Planning Areas | NPA boundary polygons (95 areas) | Current as of Mar 2026 | data.austintexas.gov (dataset `inrm-c3ee`) |
 | City of Austin — Issued Construction Permits | New construction permit counts, commercial sqft | 2005–2025 | data.austintexas.gov (dataset `3syk-w9eu`) |
 | City of Austin — Equity-Based Preservation Plan | Policy framework, equity analysis | Adopted Nov 2024 | austintexas.gov |
-| BASTA Austin | Eviction filing rates by census tract | 2014–present (pending) | bastaaustin.org |
+| BASTA Austin | Eviction filings by census tract and case outcome (received 2026-06-02 extract) | 2014–2025 | bastaaustin.org |
 | UT Austin "Uprooted" Study | Gentrification typology, displacement patterns | 2018 | sites.utexas.edu |
 | Eviction Lab (Princeton University) | Eviction filing rates by tract | 2010–2023 | evictionlab.org |
 | Texas Justice Court Training Center | Eviction filing data | 2015–2023 | tjctc.org |
@@ -621,5 +621,6 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020) |
 | `fill_demographic_history.py` | Chains crosswalks for deep history + interpolates 2005 from 2000/2010 |
 | `extract_permits.py` | Extracts new construction permits and commercial sqft from COA 1.5GB permit CSV |
-| `merge_permits_and_evictions.py` | Merges permit data and (future) eviction data into phase1_output JSONs |
+| `merge_permits_and_evictions.py` | Merges permit data and tract-level eviction rates into phase1_output JSONs |
+| `prepare_basta_evictions.py` | Converts BASTA filing counts to rates: filings averaged over ACS-aligned windows (2015←2014–15, 2020←2016–20, 2023←2019–23) ÷ estimated renter households (occupied units × renter share) × 100. Tracts with <30 renter households excluded. |
 | `geocode_businesses_google.py` | Geocodes business locations to rooftop precision via Google Maps API |

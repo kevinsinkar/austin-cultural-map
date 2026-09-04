@@ -6,7 +6,14 @@
 
 ## 🔴 High Priority — Data Access Blockers
 
-### Eviction Filing Rate Integration
+### Eviction Filing Rate Integration ✅ COMPLETE (2026-09-04)
+BASTA delivered tract-level filings 2014–2025 (data/BASTA/). Pipeline:
+`prepare_basta_evictions.py` (counts → rates via ACS-aligned windows + renter-household denominators)
+→ `merge_permits_and_evictions.py --tract-level` → 724 socio rows filled (242×2015, 240×2020, 242×2023).
+2010 rows stay null (BASTA starts 2014); 22 non-Travis tracts have no data.
+Avg socio sub-score impact +9.1 pts; East Austin corridors (MLK, Springdale, Pleasant Valley, Georgian Acres) max the component.
+
+<details><summary>Original task list (done)</summary>
 - [ ] **Source eviction data** — Contact BASTA Austin or download from [Eviction Lab](https://evictionlab.org/)
   - Needed format: CSV with `zip`, `year`, `eviction_filing_rate` (or `filings`/`renter_households`)
   - Target: 2010–2023 Austin ZIP codes
@@ -49,6 +56,8 @@
   - Run `npm run build` to ensure no import errors
   - Check TriageView scatter plot: DVI scores should shift (eviction now 30% of socio score)
   - Commit: "feat(data): add eviction filing rates (2010–2023, ZIP→tract distribution)"
+
+</details>
 
 ---
 
