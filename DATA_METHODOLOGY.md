@@ -592,6 +592,20 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 
 > **Data vintage note:** Eviction figures come from a static BASTA extract dated **June 2, 2026**. BASTA's public-facing eviction dashboard updates dynamically, so values shown there may differ slightly from the rates used in this tool. BASTA uses 2020 census tract boundaries for all years, matching this tool's tract system. Cases that could not be geocoded from court filing addresses (counted as "NO GEOGRAPHY" in the source data) are excluded from tract-level rates.
 | UT Austin "Uprooted" Study | Gentrification typology, displacement patterns | 2018 | sites.utexas.edu |
+| Texas Legislature Online | Bill text and history for the state-legislation timeline layer (26 bills, 2006–2025) | 2000–2025 | capitol.texas.gov |
+
+### State Legislation Timeline Layer
+
+The map's "TX Legislation — Cost of Living" track shows bills passed by the Texas Legislature that materially affected Austin housing costs, property taxes, rents, utilities, or displacement pressure. Each entry was verified against at least one published source (Texas Tribune, Texas Housers, Every Texan, Texas Municipal League, TEA, Texas Comptroller, TTARA, Ballotpedia, Pew, Mercatus). Cost-direction labels ("raises costs" / "lowers costs" / "mixed") follow published Austin-specific analysis, not our own judgment — e.g., homestead-exemption bills are labeled "lowers costs" for homeowners with the caveat that Austin's renter majority receives no direct relief.
+
+Key aggregate sources for this layer:
+
+- **UT Austin "Uprooted" (2018), Part 5** — catalogs displacement-mitigation tools preempted by state law (linkage fees, source-of-income protection, rent control, inclusionary zoning)
+- **Every Texan, "Property Tax Compression" (2023)** — traces the 2006→2023 compression/exemption lineage
+- **Texas Comptroller, "Property Tax Cuts as Large as Texas" (Fiscal Notes, Dec 2023)** — official retrospective of the 2015–2023 relief packages
+- **Mercatus, "Framing Futures" (2025)** — aggregates the 89th Legislature's housing-supply package
+
+Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County district court in 2023, but the ruling was vacated on appeal in July 2025 and the law is currently in effect. SB 38 (eviction acceleration) passed in 2025 with a January 1, 2026 effective date. Bills that failed, city ordinances, and federal action are excluded; pre-2000 statutes (e.g., the rent-control ban, the 1997 homestead appraisal cap) are excluded as outside the window.
 | Eviction Lab (Princeton University) | Eviction filing rates by tract | 2010–2023 | evictionlab.org |
 | Texas Justice Court Training Center | Eviction filing data | 2015–2023 | tjctc.org |
 | Texas Health & Human Services Commission | SNAP participation rates | 2010–2023 | hhs.texas.gov (supplemented by ACS B22003 via Census API) |

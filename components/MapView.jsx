@@ -1,6 +1,7 @@
 import { useRef, useMemo } from "react";
 import useAustinMap from "../hooks/useAustinMap";
 import RegionDetailPanel from "./RegionDetailPanel";
+import LegislationTrack from "./LegislationTrack";
 import { SNAP_YEARS, PLAY_YEARS, TIMELINE_EVENTS } from "../data/constants";
 import { ID_TO_NAME } from "../data/regionLookup";
 import { regionLookupMap } from "../data/regionIndex";
@@ -220,6 +221,9 @@ export default function MapView({
                 );
               })}
             </div>
+
+            {/* Texas Legislature — cost of living track */}
+            <LegislationTrack year={year} setYear={(y) => { setYear(y); setIsPlaying(false); }} />
           </div>
 
           {/* Legend */}
