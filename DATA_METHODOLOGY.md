@@ -589,6 +589,8 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | City of Austin — Issued Construction Permits | New construction permit counts, commercial sqft | 2005–2025 | data.austintexas.gov (dataset `3syk-w9eu`) |
 | City of Austin — Equity-Based Preservation Plan | Policy framework, equity analysis | Adopted Nov 2024 | austintexas.gov |
 | BASTA Austin | Eviction filings by census tract and case outcome (received 2026-06-02 extract) | 2014–2025 | bastaaustin.org |
+
+> **Data vintage note:** Eviction figures come from a static BASTA extract dated **June 2, 2026**. BASTA's public-facing eviction dashboard updates dynamically, so values shown there may differ slightly from the rates used in this tool. BASTA uses 2020 census tract boundaries for all years, matching this tool's tract system. Cases that could not be geocoded from court filing addresses (counted as "NO GEOGRAPHY" in the source data) are excluded from tract-level rates.
 | UT Austin "Uprooted" Study | Gentrification typology, displacement patterns | 2018 | sites.utexas.edu |
 | Eviction Lab (Princeton University) | Eviction filing rates by tract | 2010–2023 | evictionlab.org |
 | Texas Justice Court Training Center | Eviction filing data | 2015–2023 | tjctc.org |
