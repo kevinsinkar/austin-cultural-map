@@ -32,6 +32,8 @@ export default function MapView({
   setShowRegions,
   showPreservationAustin,
   setShowPreservationAustin,
+  showAisdSchools,
+  setShowAisdSchools,
   paFilter,
   setPaFilter,
   activeRegionId,
@@ -75,6 +77,7 @@ export default function MapView({
     showDevPressure,
     showRegions,
     showPreservationAustin,
+    showAisdSchools,
     paFilter,
     selectedRegion,
     setActiveRegionId,
@@ -163,6 +166,7 @@ export default function MapView({
               { on: showPins, toggle: () => setShowPins(!showPins), label: "Businesses", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPins ? "#4ade80" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
               { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Project Connect", icon: <svg width="12" height="10" viewBox="0 0 12 10"><path d="M1 9L6 1L11 9" stroke="currentColor" strokeWidth="1.5" fill="none" /></svg> },
               { on: showPreservationAustin, toggle: () => setShowPreservationAustin(!showPreservationAustin), label: "Preservation Austin", icon: <span style={{ width: 7, height: 7, borderRadius: "50%", background: showPreservationAustin ? "#7c3aed" : "#a8a49c", border: "1.5px solid currentColor" }} /> },
+              { on: showAisdSchools, toggle: () => setShowAisdSchools(!showAisdSchools), label: "AISD Closures", icon: <span style={{ width: 8, height: 8, borderRadius: 2, background: showAisdSchools ? "#b91c1c" : "#a8a49c", color: "#fff", fontSize: 6, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1 }}>✕</span> },
             ].map((btn, i) => (
               <button key={i} onClick={btn.toggle} aria-pressed={btn.on} style={{ display: "flex", alignItems: "center", gap: 5, padding: "4px 10px", borderRadius: 6, border: btn.on ? "1.5px solid #0f766e" : "1.5px solid #c4c0b8", background: btn.on ? "#f0fdfa" : "#fff", color: btn.on ? "#0f766e" : "#64615b", fontSize: 11, fontWeight: 500, cursor: "pointer", minHeight: 32 }}>
                 {btn.icon}{btn.label}

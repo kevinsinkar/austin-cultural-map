@@ -594,6 +594,10 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | UT Austin "Uprooted" Study | Gentrification typology, displacement patterns | 2018 | sites.utexas.edu |
 | Texas Legislature Online | Bill text and history for the state-legislation timeline layer (26 bills, 2006–2025) | 2000–2025 | capitol.texas.gov |
 
+### AISD School Closures Layer
+
+The map's "AISD Closures" overlay shows the 15 Austin ISD campuses closed or consolidated between 2012 and 2026: Allan (2012, charter handoff to IDEA), the 2019-vote "School Changes" round (Pease and Brooke in 2020; Metz and Sims in 2021), and the ten campuses approved for closure on November 21, 2025 (effective 2026–27). Coordinates were geocoded from published campus addresses; closure details and final enrollments come from AISD repurposing pages, the Austin Chronicle, KUT, and Community Impact — each entry carries its source URL in the map popup. Campuses that were proposed but not approved for closure (Maplewood, Palm, Bryker Woods) and programs without standalone buildings (International High School) are excluded. Markers respond to the time slider: solid once the slider passes the closure year, outlined before it.
+
 ### State Legislation Timeline Layer
 
 The map's "TX Legislation — Cost of Living" track shows bills passed by the Texas Legislature that materially affected Austin housing costs, property taxes, rents, utilities, or displacement pressure. Each entry was verified against at least one published source (Texas Tribune, Texas Housers, Every Texan, Texas Municipal League, TEA, Texas Comptroller, TTARA, Ballotpedia, Pew, Mercatus). Cost-direction labels ("raises costs" / "lowers costs" / "mixed") follow published Austin-specific analysis, not our own judgment — e.g., homestead-exemption bills are labeled "lowers costs" for homeowners with the caveat that Austin's renter majority receives no direct relief.

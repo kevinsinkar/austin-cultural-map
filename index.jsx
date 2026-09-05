@@ -47,6 +47,7 @@ export default function AustinCulturalMap() {
   const [showDevPressure, setShowDevPressure] = useState(false);
   const [showRegions, setShowRegions] = useState(true);
   const [showPreservationAustin, setShowPreservationAustin] = useState(false);
+  const [showAisdSchools, setShowAisdSchools] = useState(false);
   const [paFilter, setPaFilter] = useState({ grant: true, merit_award: true, legacy_business: true, advocacy: true });
   const [bizTab, setBizTab] = useState("open");
   const [panelTab, setPanelTab] = useState("demographics");
@@ -291,6 +292,8 @@ export default function AustinCulturalMap() {
               setShowRegions={setShowRegions}
               showPreservationAustin={showPreservationAustin}
               setShowPreservationAustin={setShowPreservationAustin}
+              showAisdSchools={showAisdSchools}
+              setShowAisdSchools={setShowAisdSchools}
               paFilter={paFilter}
               setPaFilter={setPaFilter}
               activeRegionId={activeRegionId}

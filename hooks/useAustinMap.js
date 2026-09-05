@@ -13,6 +13,7 @@ import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { interpolateDvi, getDviColor } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
 import { PA_ALL, PA_COLORS } from "../data";
+import { AISD_CLOSED_SCHOOLS, AISD_COLORS } from "../data/aisdSchools";
 
 export default function useAustinMap({
   mapRef,
@@ -24,6 +25,7 @@ export default function useAustinMap({
   showDevPressure,
   showRegions,
   showPreservationAustin,
+  showAisdSchools,
   paFilter,
   selectedRegion,
   setActiveRegionId,
@@ -233,6 +235,7 @@ export default function useAustinMap({
     const pcLayer = L.layerGroup().addTo(map);
     const pressureLayer = L.layerGroup().addTo(map);
     const paLayer = L.layerGroup().addTo(map);
+    const aisdLayer = L.layerGroup().addTo(map);
 
     businessLayerRef.current = { operating: operatingLayer, closed: closedLayer };
     musicLayer.current = musicLayerGroup;
@@ -247,6 +250,7 @@ export default function useAustinMap({
       pcLayer,
       pressureLayer,
       paLayer,
+      aisdLayer,
     };
 
     return () => {
@@ -359,7 +363,7 @@ export default function useAustinMap({
   useEffect(() => {
     const mapObj = leafletMapRef.current;
     if (!mapObj) return;
-    const { operatingLayer, closedLayer, musicLayer, pcLayer, pressureLayer, paLayer } =
+    const { operatingLayer, closedLayer, musicLayer, pcLayer, pressureLayer, paLayer, aisdLayer } =
       mapObj._overlayLayers || {};
 
     operatingLayer && operatingLayer.clearLayers();
@@ -368,6 +372,7 @@ export default function useAustinMap({
     pcLayer && pcLayer.clearLayers();
     pressureLayer && pressureLayer.clearLayers();
     paLayer && paLayer.clearLayers();
+    aisdLayer && aisdLayer.clearLayers();
     bizMarkersRef.current.clear();
     paMarkersRef.current.clear();
 
@@ -526,7 +531,33 @@ export default function useAustinMap({
         paMarkersRef.current.set(item.id, m);
       });
     }
-  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter]);
+    // AISD closed/consolidated schools overlay
+    if (showAisdSchools && aisdLayer) {
+      AISD_CLOSED_SCHOOLS.forEach((school) => {
+        if (!school.lat || !school.lng) return;
+        const alreadyClosed = school.year_closed <= year;
+        const color = alreadyClosed ? AISD_COLORS.closed : AISD_COLORS.futureClosure;
+        const icon = L.divIcon({
+          className: "",
+          html: `<div style="width:13px;height:13px;background:${alreadyClosed ? color : "#fffffe"};border:2px solid ${color};border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:${alreadyClosed ? "#fff" : color};line-height:1;">✕</div>`,
+          iconSize: [13, 13],
+          iconAnchor: [7, 7],
+        });
+        const m = L.marker([school.lat, school.lng], { icon }).addTo(aisdLayer);
+        const enrollStr = school.enrollment_at_closure
+          ? `<br/>~${school.enrollment_at_closure.toLocaleString()} students at closure`
+          : "";
+        const statusStr = alreadyClosed
+          ? `Closed ${school.year_closed}`
+          : `Closes ${school.year_closed} (open in ${year})`;
+        m.bindTooltip(`${school.name} — ${statusStr}`, { direction: "top" });
+        m.bindPopup(
+          `<strong>${school.name}</strong><br/><em>AISD ${school.level} · ${statusStr}</em>${enrollStr}<br/>${school.fate}` +
+          (school.source ? `<br/><a href="${school.source}" target="_blank" rel="noopener">Source ↗</a>` : "")
+        );
+      });
+    }
+  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter, showAisdSchools]);
 
   // ── Auto-zoom to selected region when activeRegionId changes ──
   useEffect(() => {
