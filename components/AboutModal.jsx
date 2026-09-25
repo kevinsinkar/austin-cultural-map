@@ -93,6 +93,13 @@ export default function AboutModal({ onClose }) {
               music venues, Project Connect transit lines, and development pressure.
             </p>
             <p style={{ margin: "0 0 4px" }}>
+              <strong>History</strong> — A documented timeline of 112 events spanning 13,600 years
+              of who shaped, and who was displaced from, the land that became Austin — from
+              Clovis-era occupation through the 1928 Master Plan and 1935 HOLC redlining to
+              today. Each event carries a documentation flag, and events with a location can
+              jump straight onto the main map at the year they happened.
+            </p>
+            <p style={{ margin: "0 0 4px" }}>
               <strong>Compare</strong> — Place two neighborhoods side by side to contrast DVI trends,
               demographics, home values, and cultural anchors.
             </p>
@@ -197,7 +204,7 @@ export default function AboutModal({ onClose }) {
               U.S. Census Bureau (Decennial Census, ACS 5-year estimates) · NHGIS (historical
               tract crosswalks) · City of Austin Construction Permits (191k residential, 44k
               commercial) · BASTA Austin (eviction filings) · Preservation Austin (grants,
-              awards, Legacy Business Month, advocacy) · Austin Music Census · Six Square AACHD
+              awards, Legacy Business Month, advocacy, historical events package Sept 2026) · Austin Music Census · Six Square AACHD
               Cultural Plan · UT Austin "Uprooted" gentrification study · Capital Metro Project
               Connect · Chapter 380 Economic Development Agreements · HOME Amendments
               (AustinTexas.gov) · Community business inventories compiled March 2026.
