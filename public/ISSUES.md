@@ -2,7 +2,7 @@
 
 Our goal is to move the **Austin Cultural Map** from a retrospective tool to a predictive, action-oriented platform for Preservation Austin's 2026 strategy.
 
-> **Last updated:** March 24, 2026 (evening)
+> **Last updated:** September 24, 2026
 
 ---
 
@@ -35,6 +35,14 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 * **Legacy businesses geocoded:** All 93 businesses (41 operating, 52 closed) re-geocoded via Google Maps API for rooftop-level precision.
 * **Preservation Austin geocoded:** All 156 PA entries (grants, merit awards, legacy businesses, advocacy) re-geocoded via Google Maps API. Private residences kept at neighborhood centroids for privacy.
 
+#### Recent Additions (2026)
+
+* **BASTA eviction filing rates:** Integrated 2014–2025 tract-level eviction filing rates (data-vintage note in methodology).
+* **Texas Legislature cost-of-living track:** 26 bills (2006–2025) rendered as a timeline track under the map slider.
+* **AISD school closures overlay:** 15 campuses (2012–2026) on the main map.
+* **History tab:** New view built from the Preservation Austin historical data package (Sept 2026) — 112 events from Clovis-era occupation to the 2026 crosswalk removal. Warped timeline, community/era/type/documentation-flag filters, per-event perspective accounts and unverified-claims panels, plus five reference overlays (HOLC 1935, city limits 1839–2022, historic districts, Indigenous presence zones, I-35 corridor / 1884–85 Tonkawa removal route).
+* **1935 Redlining overlay on main map:** HOLC grades render beneath the DVI choropleth so displacement scores can be read against 1935 grades directly.
+
 #### Region Naming & Identity
 
 * **269 tracts mapped to 232 visible regions** with unique display names.
@@ -55,9 +63,12 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 
 | Priority | Task | Status |
 | --- | --- | --- |
+| High | Tribal consultation before public launch of Indigenous presence zones — Tonkawa Tribe of Oklahoma, Comanche Nation, Lipan Apache Tribe of Texas, Indigenous Cultures Institute | Not Started — required by data-package terms before release |
+| High | HOLC 1935 license check — CC BY-NC (Mapping Inequality). Drop layer or get permission if the tool is ever monetized | Needs Decision — attribution shown in-app; fine while non-commercial |
+| High | Geocoding pass on History-tab event coordinates — many generated from a downtown grid model, not geocoded | Not Started — verify all address/intersection points |
 | High | Backfill 22 remaining tracts missing 2000 data (92% → 100%) | In Progress — crosswalk limitations for newest tracts |
-| High | Add eviction filing rates from BASTA Austin | Pending — awaiting data access from bastaaustin.org |
 | High | Add SNAP participation rates from Texas HHSC | Pending — not yet sourced |
+| Med | Verify 44 unverified claims in historical events — each lists its resolving record (council resolutions for 1928 plan, I-35 court outcome, TxDOT letters, etc.) | Not Started — see event detail panels |
 | Med | Backfill 13 tracts missing 2010/2015 data | In Progress — Williamson County crosswalk gaps |
 
 #### Region Naming — In Progress
@@ -66,6 +77,22 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 | --- | --- | --- |
 | Med | Review ~117 tracts outside NPA coverage still showing tract numbers | In Progress — need manual neighborhood name assignments |
 | Med | Rebuild neighborhoods after name audit complete | Blocked — waiting on name review |
+
+#### History Tab — Data Verification & Enrichment
+
+Ordered by value, per the data package's own handoff notes (`Preservation Austin/files/README.md` §6).
+
+| Priority | Task | Status |
+| --- | --- | --- |
+| High | Load City of Austin annexation-history GIS layer — replaces 4 dashed proxy circles and settles the 28 events marked `undetermined_pre1990` | Not Started — city publishes the layer; Austin History Center holds period maps |
+| High | Load city landmark / historic-district inventory + National Register listings coded by era and community — makes "designated vs. removed" quantitative | Not Started — highest-value next dataset per the spec |
+| Med | Replace hand-built street-bounds polygons (Clarksville, Blackland, etc.) with City of Austin open-data or National Register shapefiles (current error ±100–300 m) | Not Started |
+| Med | Enrich the 102 index-level event records — full citations + ≥2 perspective accounts each; 35 of 45 major events are still index-level | Not Started — research work |
+| Med | Indigenous-origin accounts: 22 of 25 Indigenous-tagged events have none | Not Started — consultation work, not archival |
+| Med | East Austin cultural landscape 1930–1990 (E 11th/12th district, Victory Grill, Harlem Theater, Rosewood Park, Parque Zaragoza) — currently absent | Not Started — Six Square, Carver Museum, ATX Barrio Archive, AHC community archivists |
+| Med | LGBTQ+ history 1990–2021 gap (AIDS-era organizing, Pride, marriage litigation) | Not Started |
+| Low | Retrieve IUPRA East Austin study tract list (placeholder feature) and Mears's freedom-colonies list (≥15 colonies; only Clarksville & Wheatville mapped) | Not Started |
+| Low | Integrate Preservation Austin advocacy letters (2024, 2026 PDFs in `Preservation Austin/Advocacy Letters/`) into the PA advocacy overlay | Not Started — needs extraction + geocoding |
 
 #### Forward-Looking Features
 
@@ -83,7 +110,7 @@ Our goal is to move the **Austin Cultural Map** from a retrospective tool to a p
 
 | Priority | Issue | Notes |
 | --- | --- | --- |
-| Med | Bundle size ~8.4 MB | GeoJSON polygons dominate. Consider lazy-loading MapView or code-splitting. |
+| Med | Bundle size ~9.5 MB | GeoJSON polygons + history events dominate. Consider lazy-loading MapView/HistoryView or code-splitting. |
 | Med | Business data coverage | ~40 of 269 regions have tracked businesses. More inventories needed. |
 | Low | 65+ population field | `pct_65_and_over` requires summing 12 age bracket variables — not yet computed from Census API |
 | Low | Uninsured population | Health insurance variables (B27010/B27001) available from 2012+ ACS but not yet integrated |

@@ -35,6 +35,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
             <nav aria-label="View mode" style={{ display: "flex", background: "#edeae4", borderRadius: 8, padding: 3 }}>
               {[
                 { key: "map", label: "Map" },
+                { key: "history", label: "History" },
                 { key: "compare", label: "Compare" },
                 { key: "triage", label: "Triage" },
               ].map((tab) => (

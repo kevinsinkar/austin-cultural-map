@@ -14,6 +14,7 @@ import { interpolateDvi, getDviColor } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
 import { PA_ALL, PA_COLORS } from "../data";
 import { AISD_CLOSED_SCHOOLS, AISD_COLORS } from "../data/aisdSchools";
+import { HOLC_1935 } from "../data/history";
 
 export default function useAustinMap({
   mapRef,
@@ -26,6 +27,7 @@ export default function useAustinMap({
   showRegions,
   showPreservationAustin,
   showAisdSchools,
+  showHolc,
   paFilter,
   selectedRegion,
   setActiveRegionId,
@@ -228,6 +230,21 @@ export default function useAustinMap({
     });
     neighborhoodLayerRef.current = neighborhoodLayer;
 
+    // HOLC 1935 redlining backdrop (CC BY-NC, Mapping Inequality) — rendered in
+    // its own pane below the tract polygons so DVI fills and clicks stay on top
+    const holcPane = map.createPane("holcPane");
+    holcPane.style.zIndex = 350;
+    const holcLayer = L.geoJSON(HOLC_1935, {
+      pane: "holcPane",
+      interactive: false,
+      style: (f) => ({
+        fillColor: f.properties.fill,
+        fillOpacity: 0.45,
+        color: f.properties.fill,
+        weight: 1,
+      }),
+    });
+
     // Layer groups for overlays
     const operatingLayer = L.layerGroup().addTo(map);
     const closedLayer = L.layerGroup().addTo(map);
@@ -251,6 +268,7 @@ export default function useAustinMap({
       pressureLayer,
       paLayer,
       aisdLayer,
+      holcLayer,
     };
 
     return () => {
@@ -558,6 +576,15 @@ export default function useAustinMap({
       });
     }
   }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter, showAisdSchools]);
+
+  // ── Toggle HOLC 1935 redlining layer ──
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    const holcLayer = map?._overlayLayers?.holcLayer;
+    if (!map || !holcLayer) return;
+    if (showHolc && !map.hasLayer(holcLayer)) holcLayer.addTo(map);
+    if (!showHolc && map.hasLayer(holcLayer)) map.removeLayer(holcLayer);
+  }, [showHolc]);
 
   // ── Auto-zoom to selected region when activeRegionId changes ──
   useEffect(() => {

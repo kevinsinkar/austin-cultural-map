@@ -31,6 +31,7 @@ import { ErrorBoundary } from "./components/ErrorBoundary";
 import ComparisonView from "./components/ComparisonView";
 import TriageView from "./components/TriageView";
 import TimelineView from "./components/TimelineView";
+import HistoryView from "./components/HistoryView";
 
 export default function AustinCulturalMap() {
   // ── Core state ──
@@ -48,6 +49,7 @@ export default function AustinCulturalMap() {
   const [showRegions, setShowRegions] = useState(true);
   const [showPreservationAustin, setShowPreservationAustin] = useState(false);
   const [showAisdSchools, setShowAisdSchools] = useState(false);
+  const [showHolc, setShowHolc] = useState(false);
   const [paFilter, setPaFilter] = useState({ grant: true, merit_award: true, legacy_business: true, advocacy: true });
   const [bizTab, setBizTab] = useState("open");
   const [panelTab, setPanelTab] = useState("demographics");
@@ -257,6 +259,12 @@ export default function AustinCulturalMap() {
           <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
         )}
 
+        {viewMode === "history" && (
+          <ErrorBoundary>
+            <HistoryView />
+          </ErrorBoundary>
+        )}
+
         {viewMode === "compare" && (
           <ComparisonView
             compA={compA}
@@ -294,6 +302,8 @@ export default function AustinCulturalMap() {
               setShowPreservationAustin={setShowPreservationAustin}
               showAisdSchools={showAisdSchools}
               setShowAisdSchools={setShowAisdSchools}
+              showHolc={showHolc}
+              setShowHolc={setShowHolc}
               paFilter={paFilter}
               setPaFilter={setPaFilter}
               activeRegionId={activeRegionId}

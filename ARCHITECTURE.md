@@ -44,6 +44,7 @@ austin-cultural-map/
 │   ├── RegionDetailPanel.jsx  # Region detail sidebar (DVI, charts, businesses, PA)
 │   ├── ComparisonView.jsx  # Side-by-side region comparison
 │   ├── TriageView.jsx      # Grant triage & prioritisation (3 lenses: Trajectory, Equity, Risk Matrix)
+│   ├── HistoryView.jsx     # "History" tab: 112-event historical map + warped timeline + event detail panel
 │   ├── TimelineView.jsx    # "River of Time" business timeline (inactive — button removed from header)
 │   ├── TimelineDashboard.jsx  # Timeline dashboard component (WIP)
 │   ├── TimelineEras.jsx    # Timeline eras component (WIP)
@@ -64,6 +65,11 @@ austin-cultural-map/
 │
 ├── data/
 │   ├── index.js            # Barrel re-export (central data import point)
+│   ├── history/            # Preservation Austin historical data package (verbatim copies from /Preservation Austin/files)
+│   │   ├── events_all.json      # 112 historical events (c. 11,600 BCE – 2026), JSON Schema-validated
+│   │   ├── geo_reference.json   # 51 reference features: city limits 1839–2022, Indigenous presence zones, historic districts
+│   │   ├── holc_1935.json       # HOLC 1935 redlining polygons (CC BY-NC — Mapping Inequality, U. Richmond; non-commercial only)
+│   │   └── index.js             # Barrel: sorted events, geo partitions, era order, time-warp fn, vocab labels
 │   ├── phase1_output/      # Source-of-truth: 3 audited normalized JSONs
 │   │   ├── audited_demographics_normalized.json   (873 rows, 269 regions, years: 2000–2023)
 │   │   ├── audited_property_normalized.json       (736 rows, 269 regions, years: 2010–2023)
