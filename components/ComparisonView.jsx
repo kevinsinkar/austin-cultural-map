@@ -175,7 +175,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
           { val: compB, set: setCompB, label: "Region B", color: "#7c3aed" },
         ].map((sel, i) => (
           <div key={i} style={{ flex: "1 1 280px" }}>
-            <label style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", display: "block", marginBottom: 4 }}>{sel.label}</label>
+            <label style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", display: "block", marginBottom: 4 }}>{sel.label}</label>
             <div style={{ position: "relative" }}>
               <div style={{ position: "absolute", left: 10, top: "50%", transform: "translateY(-50%)", width: 10, height: 10, borderRadius: 2, background: sel.color }} />
               <select
@@ -200,13 +200,13 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
             <ResponsiveContainer><LineChart data={compDviChart} margin={{ top: 4, right: 8, left: -16, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} />
-              <YAxis tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, "auto"]} />
+              <YAxis tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, "auto"]} />
               <Tooltip contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #d6d3cd" }} />
               <Line type="monotone" dataKey={compA} stroke="#0f766e" strokeWidth={2} strokeOpacity={0.55} dot={makeMeasuredDot(idA, "#0f766e")} name={nameA} />
               <Line type="monotone" dataKey={compB} stroke="#7c3aed" strokeWidth={2} strokeOpacity={0.55} dot={makeMeasuredDot(idB, "#7c3aed")} name={nameB} />
             </LineChart></ResponsiveContainer>
           </div>
-          <p style={{ fontSize: 10, color: "#a8a49c", margin: "6px 0 0", lineHeight: 1.4 }}>
+          <p style={{ fontSize: 11, color: "#a8a49c", margin: "6px 0 0", lineHeight: 1.4 }}>
             Solid dots mark measured census/ACS years; the lighter line between them is interpolated.
           </p>
         </div>
@@ -218,7 +218,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
             <ResponsiveContainer><LineChart data={compHomeChart} margin={{ top: 4, right: 8, left: -4, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} />
-              <YAxis tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
+              <YAxis tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
               <Tooltip formatter={(v) => `$${(v / 1000).toFixed(0)}k`} contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #d6d3cd" }} />
               <Line type="monotone" dataKey={compA} stroke="#0f766e" strokeWidth={2.5} dot={{ r: 3 }} name={nameA} />
               <Line type="monotone" dataKey={compB} stroke="#7c3aed" strokeWidth={2.5} dot={{ r: 3 }} name={nameB} />
@@ -233,7 +233,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
             <ResponsiveContainer><LineChart data={compIncomeChart} margin={{ top: 4, right: 8, left: -4, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} />
-              <YAxis tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
+              <YAxis tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
               <Tooltip formatter={(v) => `$${(v / 1000).toFixed(0)}k`} contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #d6d3cd" }} />
               <Line type="monotone" dataKey={compA} stroke="#0f766e" strokeWidth={2.5} dot={{ r: 3 }} name={nameA} />
               <Line type="monotone" dataKey={compB} stroke="#7c3aed" strokeWidth={2.5} dot={{ r: 3 }} name={nameB} />
@@ -258,7 +258,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
                   style={{
                     padding: "3px 10px",
                     borderRadius: 4,
-                    fontSize: 10,
+                    fontSize: 11,
                     fontWeight: demoMode === opt.key ? 600 : 400,
                     background: demoMode === opt.key ? "#fffffe" : "transparent",
                     color: demoMode === opt.key ? "#0f766e" : "#7c6f5e",
@@ -276,7 +276,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
             <ResponsiveContainer><LineChart data={compDemoChart} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} />
-              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, "auto"]} />
+              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, "auto"]} />
               <Tooltip formatter={(v) => `${(v * 100).toFixed(1)}%`} contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #d6d3cd" }} />
               {/* Region A lines — solid */}
               <Line type="monotone" dataKey={`${compA}_Black`} stroke={demoMode === "all" ? DEMO_COLORS.Black : "#0f766e"} strokeWidth={2} dot={{ r: 2.5 }} name={`${nameA} Black`} />
@@ -302,21 +302,21 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
           </div>
           {demoMode === "focused" ? (
             <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px solid #0f766e" }} /><span style={{ fontSize: 10, color: "#64615b" }}>Solid = Black</span></div>
-              <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px dashed #7c3aed" }} /><span style={{ fontSize: 10, color: "#64615b" }}>Dashed = Hispanic</span></div>
+              <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px solid #0f766e" }} /><span style={{ fontSize: 11, color: "#64615b" }}>Solid = Black</span></div>
+              <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2px dashed #7c3aed" }} /><span style={{ fontSize: 11, color: "#64615b" }}>Dashed = Hispanic</span></div>
             </div>
           ) : (
             <div style={{ display: "flex", gap: 10, marginTop: 8, flexWrap: "wrap" }}>
               {[["White", DEMO_COLORS.White], ["Black", DEMO_COLORS.Black], ["Hispanic", DEMO_COLORS.Hispanic], ["Asian", DEMO_COLORS.Asian], ["Other", DEMO_COLORS.Other]].map(([label, color]) => (
                 <div key={label} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ width: 8, height: 8, borderRadius: 2, background: color }} aria-hidden="true" />
-                  <span style={{ fontSize: 10, color: "#64615b" }}>{label}</span>
+                  <span style={{ fontSize: 11, color: "#64615b" }}>{label}</span>
                 </div>
               ))}
-              <span style={{ fontSize: 10, color: "#a8a49c", marginLeft: 4 }}>Solid = {nameA}, Dashed = {nameB}</span>
+              <span style={{ fontSize: 11, color: "#a8a49c", marginLeft: 4 }}>Solid = {nameA}, Dashed = {nameB}</span>
             </div>
           )}
-          <p style={{ fontSize: 10, color: "#7c6f5e", margin: "10px 0 0", lineHeight: 1.5, fontStyle: "italic" }}>
+          <p style={{ fontSize: 11, color: "#7c6f5e", margin: "10px 0 0", lineHeight: 1.5, fontStyle: "italic" }}>
             Note: Indigenous populations are not separately tracked in Census data for these geographies. This represents a known data gap.
           </p>
         </div>
@@ -380,7 +380,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
         </div>
       )}
 
-      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "12px 4px" }}>
+      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5, padding: "12px 4px" }}>
         Charts use synchronized axes. DVI interpolated between measurement periods. Income in 2023-adjusted dollars.
       </div>
     </section>

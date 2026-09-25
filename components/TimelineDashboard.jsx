@@ -143,7 +143,7 @@ export default function TimelineDashboard({
       onMouseLeave={() => setCrosshairYear(null)}
     >
       {/* Non-linear axis note */}
-      <div style={{ fontSize: 9, color: "#a8a49c", fontStyle: "italic", marginBottom: 8 }}>
+      <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", marginBottom: 8 }}>
         Time axis is non-linear \u2014 recent decades are expanded to show more detail.
       </div>
 
@@ -183,13 +183,13 @@ export default function TimelineDashboard({
               strokeDasharray="4 3" pointerEvents="none"
             />
             <text x={timeScale(crosshairYear)} y={-4} textAnchor="middle"
-              style={{ fontSize: 10, fill: "#0f766e", fontWeight: 600 }}>{crosshairYear}</text>
+              style={{ fontSize: 11, fill: "#0f766e", fontWeight: 600 }}>{crosshairYear}</text>
           </>
         )}
 
         {/* ── Track 1: Policy ── */}
         <g transform={`translate(0, 0)`}>
-          <text x={4} y={10} style={{ fontSize: 8, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>Policy</text>
+          <text x={4} y={10} style={{ fontSize: 11, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>Policy</text>
           {events.map((ev, i) => {
             const px = timeScale(ev.year);
             const isHovered = hoveredItem === ev || selectedItem === ev;
@@ -205,7 +205,7 @@ export default function TimelineDashboard({
                   fillOpacity={isHovered ? 1 : 0.7}
                 />
                 <text x={px} y={40} textAnchor="middle"
-                  style={{ fontSize: 7, fill: "#64615b", fontWeight: 500 }}>
+                  style={{ fontSize: 11, fill: "#64615b", fontWeight: 500 }}>
                   {ev.label.length > 22 ? ev.label.slice(0, 20) + "\u2026" : ev.label}
                 </text>
                 <text x={px} y={50} textAnchor="middle"
@@ -217,7 +217,7 @@ export default function TimelineDashboard({
 
         {/* ── Track 2: Business Lifespans ── */}
         <g transform={`translate(0, ${policyH + gap})`}>
-          <text x={4} y={-2} style={{ fontSize: 8, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>Businesses</text>
+          <text x={4} y={-2} style={{ fontSize: 11, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>Businesses</text>
           {allBars.map((b, i) => {
             const bx0 = timeScale(b.x0);
             const bx1 = timeScale(Math.min(b.x1, 2026));
@@ -240,7 +240,7 @@ export default function TimelineDashboard({
                   <circle cx={bx1} cy={b.barY + BAR_H / 2} r={2.5} fill="#16a34a" />
                 )}
                 {isClosed && b.closedYear && (
-                  <text x={bx1 + 1} y={b.barY + BAR_H / 2 + 3} style={{ fontSize: 7, fill: "#dc2626", fontWeight: 700 }}>{"\u2715"}</text>
+                  <text x={bx1 + 1} y={b.barY + BAR_H / 2 + 3} style={{ fontSize: 11, fill: "#dc2626", fontWeight: 700 }}>{"\u2715"}</text>
                 )}
               </g>
             );
@@ -249,12 +249,12 @@ export default function TimelineDashboard({
 
         {/* ── Track 3: Demographics (rendered outside SVG as Recharts) — placeholder rect ── */}
         <g transform={`translate(0, ${policyH + gap + bizTrackHeight + gap})`}>
-          <text x={4} y={-2} style={{ fontSize: 8, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>Demographics (city-wide)</text>
+          <text x={4} y={-2} style={{ fontSize: 11, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>Demographics (city-wide)</text>
         </g>
 
         {/* ── Track 4: DVI Heatstrip ── */}
         <g transform={`translate(0, ${policyH + gap + bizTrackHeight + gap + demoH + gap})`}>
-          <text x={4} y={-2} style={{ fontSize: 8, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>DVI</text>
+          <text x={4} y={-2} style={{ fontSize: 11, fill: "#a8a49c", fontWeight: 600, textTransform: "uppercase" }}>DVI</text>
           {_.range(1990, 2024).map(yr => {
             const dvi = interpolateDvi(dviRegion, yr);
             const px = timeScale(yr);
@@ -275,7 +275,7 @@ export default function TimelineDashboard({
             <g key={yr}>
               <line x1={timeScale(yr)} y1={0} x2={timeScale(yr)} y2={5} stroke="#a8a49c" strokeWidth={0.5} />
               <text x={timeScale(yr)} y={16} textAnchor="middle"
-                style={{ fontSize: yr % 10 === 0 ? 9 : 7.5, fontWeight: yr % 10 === 0 ? 600 : 400, fill: "#a8a49c" }}>
+                style={{ fontSize: 11, fontWeight: yr % 10 === 0 ? 600 : 400, fill: "#a8a49c" }}>
                 {yr}
               </text>
             </g>
@@ -305,11 +305,11 @@ export default function TimelineDashboard({
 
       {/* DVI region selector */}
       <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 8 }}>
-        <span style={{ fontSize: 10, color: "#a8a49c" }}>DVI region:</span>
+        <span style={{ fontSize: 11, color: "#a8a49c" }}>DVI region:</span>
         <select
           value={dviRegion}
           onChange={(e) => setDviRegion(+e.target.value)}
-          style={{ fontSize: 10, padding: "2px 6px", borderRadius: 4, border: "1px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", cursor: "pointer" }}
+          style={{ fontSize: 11, padding: "2px 6px", borderRadius: 4, border: "1px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", cursor: "pointer" }}
         >
           {regionOptions.map(r => (
             <option key={r.id} value={r.id}>{r.name}</option>

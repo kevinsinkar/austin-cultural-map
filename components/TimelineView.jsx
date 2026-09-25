@@ -178,7 +178,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
                 }}
               >
                 <div>{m.label}</div>
-                <div style={{ fontSize: 9, fontWeight: 400, color: timelineMode === m.key ? "#0f766e" : "#a8a49c", marginTop: 1 }}>{m.sub}</div>
+                <div style={{ fontSize: 11, fontWeight: 400, color: timelineMode === m.key ? "#0f766e" : "#a8a49c", marginTop: 1 }}>{m.sub}</div>
               </button>
             ))}
           </div>
@@ -229,7 +229,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
               }}
             >
               <span style={{ width: 10, height: 4, borderRadius: 2, background: color }} />
-              <span style={{ fontSize: 9.5, color: "#44403c", fontWeight: 500 }}>{cultureLabel(culture)}</span>
+              <span style={{ fontSize: 11, color: "#44403c", fontWeight: 500 }}>{cultureLabel(culture)}</span>
             </button>
           ))}
         </div>
@@ -271,7 +271,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
             <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
               {detailItem.cat ? (
                 <>
-                  <div style={{ fontSize: 10, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>{detailItem.cat}</div>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>{detailItem.cat}</div>
                   <h3 style={{ fontSize: 15, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px", lineHeight: 1.3 }}>{detailItem.label}</h3>
                   <div style={{ fontSize: 12, color: "#7c6f5e", marginBottom: 8 }}>{detailItem.year}</div>
                   <p style={{ fontSize: 12, color: "#44403c", margin: 0, lineHeight: 1.6 }}>{detailItem.summary}</p>
@@ -285,8 +285,8 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
                       : `Est. ${detailItem.est} \u2014 Still operating`}
                   </div>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
-                    <span style={{ fontSize: 10, padding: "2px 8px", borderRadius: 4, background: cultureColor(detailItem.culture) + "22", color: cultureColor(detailItem.culture), fontWeight: 600 }}>{detailItem.culture}</span>
-                    <span style={{ fontSize: 10, padding: "2px 8px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e" }}>{detailItem.type}</span>
+                    <span style={{ fontSize: 11, padding: "2px 8px", borderRadius: 4, background: cultureColor(detailItem.culture) + "22", color: cultureColor(detailItem.culture), fontWeight: 600 }}>{detailItem.culture}</span>
+                    <span style={{ fontSize: 11, padding: "2px 8px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e" }}>{detailItem.type}</span>
                   </div>
                   {detailItem.notes && <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 6px", lineHeight: 1.5 }}>{detailItem.notes}</p>}
                   {detailItem.cause && <div style={{ fontSize: 11, color: "#991b1b", marginTop: 4 }}>Closed: {detailItem.cause}</div>}
@@ -305,7 +305,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
 
           {/* Summary stats */}
           <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 16px", marginTop: 12 }}>
-            <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8 }}>Data Summary</div>
+            <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8 }}>Data Summary</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 11 }}>
               <div><span style={{ color: "#a8a49c" }}>Operating:</span> <strong>{filteredOp.length}</strong></div>
               <div><span style={{ color: "#a8a49c" }}>Closed:</span> <strong>{filteredCl.length}</strong></div>

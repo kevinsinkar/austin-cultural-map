@@ -174,13 +174,13 @@ function EraCard({
       {/* Time axis labels */}
       <div style={{ position: "relative", height: 20, marginBottom: 4, borderBottom: "1px solid #e8e5e0" }}>
         {_.range(era.years[0], era.years[1] + 1, era.years[1] - era.years[0] > 30 ? 10 : 5).map(yr => (
-          <span key={yr} style={{ position: "absolute", left: `${xScale(yr)}%`, transform: "translateX(-50%)", fontSize: 10, color: "#a8a49c", fontWeight: yr % 10 === 0 ? 600 : 400 }}>{yr}</span>
+          <span key={yr} style={{ position: "absolute", left: `${xScale(yr)}%`, transform: "translateX(-50%)", fontSize: 11, color: "#a8a49c", fontWeight: yr % 10 === 0 ? 600 : 400 }}>{yr}</span>
         ))}
       </div>
 
       {/* Policy track */}
       <div style={{ position: "relative", minHeight: policyTrackH, marginBottom: 8 }}>
-        <div style={{ fontSize: 9, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>Policy &amp; Infrastructure</div>
+        <div style={{ fontSize: 11, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>Policy &amp; Infrastructure</div>
         {events.map((ev, i) => {
           const impactCount = clBars.filter(b => {
             const cy = closeYear(b);
@@ -210,12 +210,12 @@ function EraCard({
                 whiteSpace: "nowrap",
               }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: catColor(ev.cat), flexShrink: 0 }} />
-                <span style={{ fontSize: 9, color: "#1a1a1a", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis" }}>
+                <span style={{ fontSize: 11, color: "#1a1a1a", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis" }}>
                   {ev.label.length > 30 ? ev.label.slice(0, 28) + "\u2026" : ev.label}
                 </span>
-                <span style={{ fontSize: 8, color: "#a8a49c" }}>{ev.year}</span>
+                <span style={{ fontSize: 11, color: "#a8a49c" }}>{ev.year}</span>
                 {impactCount > 0 && (
-                  <span style={{ fontSize: 8, fontWeight: 700, color: "#dc2626", background: "#fee2e2", borderRadius: 4, padding: "0 4px" }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: "#dc2626", background: "#fee2e2", borderRadius: 4, padding: "0 4px" }}>
                     {impactCount}
                   </span>
                 )}
@@ -227,7 +227,7 @@ function EraCard({
 
       {/* Business track */}
       <div style={{ position: "relative", marginBottom: 8 }}>
-        <div style={{ fontSize: 9, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>Business Lifespans</div>
+        <div style={{ fontSize: 11, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>Business Lifespans</div>
         <svg width="100%" height={trackHeight} style={{ overflow: "visible" }}>
           {/* Connection lines from policy events to closures */}
           {connections.map((conn, i) => {
@@ -268,12 +268,12 @@ function EraCard({
                   <circle cx={`${barEnd}%`} cy={b.barY + BAR_H / 2} r={3} fill="#16a34a" />
                 )}
                 {isClosed && b.closedYear >= era.years[0] && b.closedYear < era.years[1] && (
-                  <text x={`${xScale(b.closedYear)}%`} y={b.barY + BAR_H / 2 + 3.5} textAnchor="middle" style={{ fontSize: 8, fill: "#dc2626", fontWeight: 700 }}>{"\u2715"}</text>
+                  <text x={`${xScale(b.closedYear)}%`} y={b.barY + BAR_H / 2 + 3.5} textAnchor="middle" style={{ fontSize: 11, fill: "#dc2626", fontWeight: 700 }}>{"\u2715"}</text>
                 )}
                 {/* Label */}
                 <text
                   x={`${Math.min(barEnd + 0.5, 98)}%`} y={b.barY + BAR_H / 2 + 3}
-                  style={{ fontSize: 8, fill: "#64615b", fontWeight: 500 }}
+                  style={{ fontSize: 11, fill: "#64615b", fontWeight: 500 }}
                 >
                   {b.name.length > 18 ? b.name.slice(0, 16) + "\u2026" : b.name}
                 </text>
@@ -289,7 +289,7 @@ function EraCard({
       {/* Context track — demographics */}
       {contextData.length >= 2 && (
         <div style={{ marginBottom: 8 }}>
-          <div style={{ fontSize: 9, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>
+          <div style={{ fontSize: 11, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>
             Demographic Context (city-wide)
             {dviAnnotation.start && (
               <span style={{ marginLeft: 12, fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>
@@ -300,7 +300,7 @@ function EraCard({
           <div style={{ height: 80 }}>
             <ResponsiveContainer>
               <AreaChart data={contextData} margin={{ top: 2, right: 4, left: 0, bottom: 0 }}>
-                <XAxis dataKey="year" tick={{ fontSize: 8, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
+                <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
                 <YAxis hide domain={[0, 1]} />
                 <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} />
                 <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} />

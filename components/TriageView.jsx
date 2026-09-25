@@ -329,7 +329,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             }}
           >
             <div>{l.label}</div>
-            <div style={{ fontSize: 10, fontWeight: 400, color: lens === l.key ? "#0f766e" : "#a8a49c", marginTop: 2 }}>
+            <div style={{ fontSize: 11, fontWeight: 400, color: lens === l.key ? "#0f766e" : "#a8a49c", marginTop: 2 }}>
               {l.question}
             </div>
           </button>
@@ -339,6 +339,19 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       <p style={{ fontSize: 12, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
         {LENSES.find(l => l.key === lens).description}
       </p>
+
+      {/* Recommendation — the conclusion comes first; the scatter and
+          table below are its evidence. */}
+      <div style={{ background: "#f0fdfa", borderRadius: 10, border: "1px solid #99f6e4", padding: "16px 20px", marginBottom: 16 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="7" stroke="#0f766e" strokeWidth="1.5" fill="none" />
+            <path d="M5 8l2 2 4-4" stroke="#0f766e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <span style={{ fontSize: 13, fontWeight: 700, color: "#0f766e" }}>Recommendation</span>
+        </div>
+        <p style={{ fontSize: 13, color: "#1a1a1a", margin: 0, lineHeight: 1.6 }}>{recommendation}</p>
+      </div>
 
       {/* Category legend with counts */}
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
@@ -375,8 +388,10 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
         </span>
       </div>
 
+      {/* Evidence: scatter + table, side-by-side on wide screens (≥1400px) */}
+      <div className="triage-evidence">
       {/* Scatter Plot */}
-      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px", marginBottom: 16 }}>
+      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
         <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
           {lens === "trajectory" ? "Displacement Velocity vs. DVI" : lens === "equity" ? "Equity Deficit vs. DVI" : "Market Pressure vs. Community Vulnerability"}
         </h3>
@@ -390,7 +405,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                 domain={[0, lens === "matrix" ? 100 : 80]}
               />
               <YAxis
-                type="number" dataKey="y" tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false}
+                type="number" dataKey="y" tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false}
                 label={{ value: AXIS_LABELS[lens].y, angle: -90, position: "insideLeft", offset: 10, fontSize: 11, fill: "#a8a49c" }}
                 domain={[0, 100]}
               />
@@ -416,7 +431,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <p style={{ fontSize: 10, color: "#a8a49c", margin: "8px 0 0", lineHeight: 1.4 }}>
+        <p style={{ fontSize: 11, color: "#a8a49c", margin: "8px 0 0", lineHeight: 1.4 }}>
           {lens === "trajectory" && "Dot size = intervention window score. Upper-right = fast displacement with open window for intervention."}
           {lens === "equity" && "Dot size = preservation gap (larger = less PA investment). Upper-right = high displacement with underserved communities."}
           {lens === "matrix" && "Dot size = cultural significance. Quadrant lines at 50. Q1 (upper-right) = crisis. Q2 (lower-right) = urgent prevention. Q4 (upper-left) = chronic underinvestment."}
@@ -449,7 +464,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       </div>
 
       {/* Table */}
-      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px", marginBottom: 16 }}>
+      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
         <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
           {lens === "trajectory" ? "Trajectory Rankings" : lens === "equity" ? "Equity Priority Rankings" : "Risk Matrix Rankings"}
         </h3>
@@ -467,7 +482,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     }}
                   >
                     {col.label}
-                    <span style={{ fontSize: 10, opacity: 0.6 }}>{sortIcon(col.key)}</span>
+                    <span style={{ fontSize: 11, opacity: 0.6 }}>{sortIcon(col.key)}</span>
                   </th>
                 ))}
               </tr>
@@ -489,7 +504,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     if (col.key === "category") {
                       return (
                         <td key={col.key} style={{ padding: "6px 8px" }}>
-                          <span style={{ display: "inline-block", fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 4, color: "#fff", background: activeColors[val], whiteSpace: "nowrap" }}>
+                          <span style={{ display: "inline-block", fontSize: 11, fontWeight: 600, padding: "2px 8px", borderRadius: 4, color: "#fff", background: activeColors[val], whiteSpace: "nowrap" }}>
                             {val}
                           </span>
                         </td>
@@ -507,7 +522,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                                 aria-label={`Locate ${val} on map`}
                                 style={{
                                   display: "inline-flex", alignItems: "center", gap: 4,
-                                  padding: "2px 8px", borderRadius: 4, fontSize: 10, fontWeight: 600,
+                                  padding: "2px 8px", borderRadius: 4, fontSize: 11, fontWeight: 600,
                                   background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
                                   whiteSpace: "nowrap", lineHeight: 1.4,
                                 }}
@@ -525,7 +540,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     if (col.key === "grantType") {
                       return (
                         <td key={col.key} style={{ padding: "6px 8px" }}>
-                          <span style={{ fontSize: 10, fontWeight: 500, padding: "2px 6px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e", whiteSpace: "nowrap" }}>
+                          <span style={{ fontSize: 11, fontWeight: 500, padding: "2px 6px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e", whiteSpace: "nowrap" }}>
                             {val}
                           </span>
                         </td>
@@ -545,17 +560,6 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
           </table>
         </div>
       </div>
-
-      {/* Recommendation */}
-      <div style={{ background: "#f0fdfa", borderRadius: 10, border: "1px solid #99f6e4", padding: "16px 20px", marginBottom: 16 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <circle cx="8" cy="8" r="7" stroke="#0f766e" strokeWidth="1.5" fill="none" />
-            <path d="M5 8l2 2 4-4" stroke="#0f766e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span style={{ fontSize: 13, fontWeight: 700, color: "#0f766e" }}>Recommendation</span>
-        </div>
-        <p style={{ fontSize: 13, color: "#1a1a1a", margin: 0, lineHeight: 1.6 }}>{recommendation}</p>
       </div>
 
       {/* Advanced: DVI Weight Sliders */}
@@ -610,7 +614,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                   Reset to defaults
                 </button>
               </div>
-              <p style={{ fontSize: 10, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.5 }}>
+              <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.5 }}>
                 DVI weights affect the underlying displacement index used by all three lenses. Trajectory uses DVI change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through market pressure and community vulnerability sub-scores.
               </p>
             </div>
@@ -618,7 +622,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
         )}
       </div>
 
-      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "4px 4px 0" }}>
+      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5, padding: "4px 4px 0" }}>
         All scores computed at 2023. Data: U.S. Census/ACS, TCAD, Preservation Austin surveys. All 269 regions scored using census data (no business-data gating).
       </div>
     </section>

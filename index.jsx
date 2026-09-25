@@ -400,7 +400,7 @@ export default function AustinCulturalMap() {
         <p style={{ fontSize: 11, color: "#a8a49c", margin: 0, lineHeight: 1.5 }}>
           Austin Cultural Displacement Map · Data compiled February 2026 · Sources: U.S. Census, ACS, TCAD, City of Austin, UT "Uprooted," community inventories
         </p>
-        <p style={{ fontSize: 10, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
+        <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
           Last update: {lastUpdate}
         </p>
       </footer>

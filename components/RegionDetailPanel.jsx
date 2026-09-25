@@ -116,7 +116,7 @@ export default function RegionDetailPanel({
                 }
               </h2>
               {activeFeature?.properties?.heritage && (
-                <span style={{ display: "inline-block", fontSize: 10, color: "#7c6f5e", padding: "2px 8px", background: "#f5f0ea", borderRadius: 3, fontWeight: 500, marginTop: 4 }}>
+                <span style={{ display: "inline-block", fontSize: 11, color: "#7c6f5e", padding: "2px 8px", background: "#f5f0ea", borderRadius: 3, fontWeight: 500, marginTop: 4 }}>
                   {activeFeature.properties.heritage}
                 </span>
               )}
@@ -135,7 +135,7 @@ export default function RegionDetailPanel({
                 <span style={{ fontSize: 15, fontWeight: 700, color: nd ? "#1a1a1a" : excluded ? DVI_EXCLUDED.on : getDviBin(d).on }}>{d.toFixed(0)}</span>
               </div>
               {conf?.interpolated && (
-                <span style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic", lineHeight: 1 }}>interpolated</span>
+                <span style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", lineHeight: 1 }}>interpolated</span>
               )}
             </div>
             <div>
@@ -159,7 +159,7 @@ export default function RegionDetailPanel({
                     <div style={{ fontSize: 15, fontWeight: 700, color: badge.color, textAlign: "center" }}>
                       {density != null ? `${(density * 100).toFixed(0)}%` : "—"}
                     </div>
-                    <div style={{ fontSize: 9, color: badge.color, fontWeight: 600, whiteSpace: "nowrap" }}>{badge.label}</div>
+                    <div style={{ fontSize: 11, color: badge.color, fontWeight: 600, whiteSpace: "nowrap" }}>{badge.label}</div>
                   </div>
                 </div>
               );
@@ -229,7 +229,7 @@ export default function RegionDetailPanel({
                             <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
                               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
                               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} domain={[1990, 2025]} />
-                              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
                               <Tooltip content={<ChartTooltip />} />
                               <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
                               <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" connectNulls={false} />
@@ -244,12 +244,12 @@ export default function RegionDetailPanel({
                           {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
                             <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                               <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
-                              <span style={{ fontSize: 10, color: "#64615b" }}>{l}</span>
+                              <span style={{ fontSize: 11, color: "#64615b" }}>{l}</span>
                             </div>
                           ))}
                         </div>
                         {missingYears && (
-                          <div style={{ fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                          <div style={{ fontSize: 11, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
                             Census data available for {dataYears.join(", ")} only. {dataYears[0] > 2000
                               ? `This tract was created after ${dataYears[0] - 1} (suburban expansion / tract split) — no earlier Census data exists.`
                               : "Earlier decades not available from Census API for this tract."}
@@ -314,7 +314,7 @@ export default function RegionDetailPanel({
                       </div>
                     )}
                   </div>
-                  <div style={{ fontSize: 9, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
+                  <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
                     Neighborhood data is aggregated from these tracts. For tract-level precision, switch to Census Tracts view.
                   </div>
                 </div>
@@ -386,7 +386,7 @@ export default function RegionDetailPanel({
 
                   return (
                     <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
-                      <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                      <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
                           {nominalFmt}
@@ -399,7 +399,7 @@ export default function RegionDetailPanel({
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
+                      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.3 }}>
                         {propertyNow.year} (nominal / 2023$)
                         {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
                       </div>
@@ -428,7 +428,7 @@ export default function RegionDetailPanel({
 
                   return (
                     <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
-                      <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                      <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
                           {nominalFmt}
@@ -441,7 +441,7 @@ export default function RegionDetailPanel({
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.3 }}>
+                      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.3 }}>
                         {socioNow.year} {c.isCurrency ? "(nominal / 2023$)" : c.sub}
                         {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
                       </div>
@@ -458,7 +458,7 @@ export default function RegionDetailPanel({
                   const bad = up;
                   return (
                     <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px", gridColumn: "1 / -1" }}>
-                      <div style={{ fontSize: 10, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
+                      <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{n.rent_burden_pct.toFixed(1)}%</span>
                         {ch && (
@@ -468,7 +468,7 @@ export default function RegionDetailPanel({
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5 }}>
+                      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5 }}>
                         % of renter households paying &ge;30% of income on rent
                         {ch && prev && <span> · vs {prev.year}</span>}
                       </div>
@@ -493,7 +493,7 @@ export default function RegionDetailPanel({
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#b45309" strokeWidth="1.5" fill="none" /><path d="M8 4v5M8 11v1" stroke="#b45309" strokeWidth="1.5" strokeLinecap="round" /></svg>
                   <span style={{ fontSize: 12, fontWeight: 700, color: "#92400e" }}>What Happened Here?</span>
-                  <span style={{ fontSize: 10, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
+                  <span style={{ fontSize: 11, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
                 </div>
                 <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>The tipping point: {tippingPoint.decade}</div>
                 <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.description}</p>
@@ -527,12 +527,12 @@ export default function RegionDetailPanel({
                           <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
-                              <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
+                              <span style={{ fontSize: 11, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
                             </div>
                             <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
-                              <span style={{ fontSize: 10, color: "#64615b" }}>{b.type}</span>
-                              <span style={{ fontSize: 10, color: "#7c6f5e" }}>·</span>
-                              <span style={{ fontSize: 10, color: "#7c6f5e" }}>{b.culture}</span>
+                              <span style={{ fontSize: 11, color: "#64615b" }}>{b.type}</span>
+                              <span style={{ fontSize: 11, color: "#7c6f5e" }}>·</span>
+                              <span style={{ fontSize: 11, color: "#7c6f5e" }}>{b.culture}</span>
                               <span style={{ marginLeft: "auto", display: "flex", gap: 2 }}>
                                 {pressureDots(b.pressure).map((on, i) => (
                                   <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: on ? pressureColor(b.pressure) : "#e8e5e0" }} aria-hidden="true" />
@@ -553,11 +553,11 @@ export default function RegionDetailPanel({
                           <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
-                              <span style={{ fontSize: 10, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
+                              <span style={{ fontSize: 11, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
                             </div>
-                            <div style={{ fontSize: 10, color: "#7c6f5e", marginTop: 2 }}>{b.culture} · {b.type}</div>
-                            <div style={{ fontSize: 10, color: "#991b1b", marginTop: 4, fontWeight: 500 }}>Closed: {b.cause}</div>
-                            <div style={{ fontSize: 10, color: "#64615b", marginTop: 2 }}>Now: <span style={{ fontWeight: 500 }}>{b.replacedBy}</span></div>
+                            <div style={{ fontSize: 11, color: "#7c6f5e", marginTop: 2 }}>{b.culture} · {b.type}</div>
+                            <div style={{ fontSize: 11, color: "#991b1b", marginTop: 4, fontWeight: 500 }}>Closed: {b.cause}</div>
+                            <div style={{ fontSize: 11, color: "#64615b", marginTop: 2 }}>Now: <span style={{ fontWeight: 500 }}>{b.replacedBy}</span></div>
                           </div>
                         ))}
                       </div>
@@ -591,11 +591,11 @@ export default function RegionDetailPanel({
                       <div key={item.id} onClick={() => { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); const mk = paMarkersRef?.current?.get(item.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); const mk = paMarkersRef?.current?.get(item.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }} style={{ padding: "8px 10px", borderRadius: 8, border: selectedPA?.id === item.id ? `1.5px solid ${PA_COLORS[item.type]}` : "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}`, background: selectedPA?.id === item.id ? "#f5f3ff" : "transparent", cursor: "pointer" }}>
                         <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</div>
                         <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3, flexWrap: "wrap" }}>
-                          <span style={{ fontSize: 10, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>
-                          <span style={{ fontSize: 10, color: "#a8a49c" }}>{item.year}</span>
-                          {item.amount && <span style={{ fontSize: 10, color: "#64615b", fontWeight: 500 }}>${item.amount.toLocaleString()}</span>}
+                          <span style={{ fontSize: 11, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>
+                          <span style={{ fontSize: 11, color: "#a8a49c" }}>{item.year}</span>
+                          {item.amount && <span style={{ fontSize: 11, color: "#64615b", fontWeight: 500 }}>${item.amount.toLocaleString()}</span>}
                         </div>
-                        <div style={{ fontSize: 10, color: "#7c6f5e", marginTop: 3, lineHeight: 1.4 }}>{item.description}</div>
+                        <div style={{ fontSize: 11, color: "#7c6f5e", marginTop: 3, lineHeight: 1.4 }}>{item.description}</div>
                       </div>
                     ))}
                   </div>
@@ -621,7 +621,7 @@ export default function RegionDetailPanel({
                       {tractName} <span style={{ color: "#a8a49c" }}>[id. {tid}]</span>
                     </span>
                     <TractSparkline regionId={tid} />
-                    <span style={{ fontWeight: 600, color: isRegionExcluded(tid, year) ? DVI_EXCLUDED.text : getDviBandColor(tractDvi), fontSize: 10, width: 42, textAlign: "right" }}>
+                    <span style={{ fontWeight: 600, color: isRegionExcluded(tid, year) ? DVI_EXCLUDED.text : getDviBandColor(tractDvi), fontSize: 11, width: 42, textAlign: "right" }}>
                       DVI {tractDvi?.toFixed(0) ?? "\u2014"}
                     </span>
                   </div>
@@ -633,13 +633,13 @@ export default function RegionDetailPanel({
               const gaps = neighborhoodAgg.dataAvailability.filter(d => d.tractsWithData < d.totalTracts);
               if (gaps.length === 0) {
                 return (
-                  <div style={{ fontSize: 10, color: "#16a34a", marginTop: 8, lineHeight: 1.4 }}>
+                  <div style={{ fontSize: 11, color: "#16a34a", marginTop: 8, lineHeight: 1.4 }}>
                     ✓ Full census coverage for all {neighborhoodAgg.tractCount} tracts (2000–2023).
                   </div>
                 );
               }
               return (
-                <div style={{ fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                <div style={{ fontSize: 11, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
                   <strong>Historical data gaps:</strong>{" "}
                   {neighborhoodAgg.dataAvailability.map(d =>
                     `${d.year}: ${d.tractsWithData}/${d.totalTracts} tracts`
@@ -648,7 +648,7 @@ export default function RegionDetailPanel({
                 </div>
               );
             })()}
-            <div style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
+            <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
               Neighborhood data is aggregated from these tracts using population-weighted averages. Sparklines show each tract's DVI trend (2000–2023, actual data points only). For tract-level precision, switch to Census Tracts view.
             </div>
           </details>
@@ -656,7 +656,7 @@ export default function RegionDetailPanel({
 
         {/* Boundary/interpolation caveats now live in the ConfidenceChip
             popovers at point of reading — only the source line remains. */}
-        <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "8px 4px" }}>
+        <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5, padding: "8px 4px" }}>
           Sources: U.S. Census 1990–2020; ACS 2019–2023.
         </div>
       </div>

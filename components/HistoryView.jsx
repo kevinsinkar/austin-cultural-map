@@ -73,7 +73,7 @@ const chip = (bg, color = "#fff") => ({
   borderRadius: 10,
   background: bg,
   color,
-  fontSize: 10,
+  fontSize: 11,
   fontWeight: 600,
   marginRight: 4,
   marginBottom: 4,
@@ -357,7 +357,7 @@ export default function HistoryView() {
           <div style={{ marginTop: 14 }} role="region" aria-label="Event timeline">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 2 }}>
               <span style={{ fontSize: 11, fontWeight: 600, color: "#64615b" }}>Timeline · c. 11,600 BCE – 2026</span>
-              <span style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic" }}>Axis is warped: three-quarters of it covers 1800–2026</span>
+              <span style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic" }}>Axis is warped: three-quarters of it covers 1800–2026</span>
             </div>
             <svg viewBox={`0 0 ${TL_WIDTH} ${tlHeight}`} style={{ width: "100%", height: "auto", display: "block", background: "#fffffe", borderRadius: 8, border: "1px solid #e8e5e0" }}>
               {/* era gradient axis */}
@@ -402,9 +402,9 @@ export default function HistoryView() {
             </svg>
             {undatedEvents.length > 0 && (
               <div style={{ marginTop: 6, display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
-                <span style={{ fontSize: 10, color: "#7c6f5e", fontWeight: 600 }}>Undated:</span>
+                <span style={{ fontSize: 11, color: "#7c6f5e", fontWeight: 600 }}>Undated:</span>
                 {undatedEvents.map((ev) => (
-                  <button key={ev.event_id} onClick={() => selectEvent(ev.event_id)} style={{ fontSize: 10, padding: "2px 8px", borderRadius: 10, border: `1px solid ${ev.event_id === selectedId ? "#0f766e" : "#d6d3cd"}`, background: UNDATED_COLOR + "22", color: "#4b4844", cursor: "pointer" }}>
+                  <button key={ev.event_id} onClick={() => selectEvent(ev.event_id)} style={{ fontSize: 11, padding: "2px 8px", borderRadius: 10, border: `1px solid ${ev.event_id === selectedId ? "#0f766e" : "#d6d3cd"}`, background: UNDATED_COLOR + "22", color: "#4b4844", cursor: "pointer" }}>
                     {ev.event_title}
                   </button>
                 ))}
@@ -417,7 +417,7 @@ export default function HistoryView() {
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                 <span style={{ width: 70, height: 8, borderRadius: 4, background: ERA_GRADIENT_CSS, border: "1px solid rgba(0,0,0,.1)" }} />
-                <span style={{ fontSize: 10, color: "#64615b" }}>Color = date (deep past → 2026)</span>
+                <span style={{ fontSize: 11, color: "#64615b" }}>Color = date (deep past → 2026)</span>
               </div>
               {[
                 { style: { background: "#365C8D", opacity: 1 }, label: "Well-documented" },
@@ -427,10 +427,10 @@ export default function HistoryView() {
               ].map((s, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ width: 10, height: 10, borderRadius: "50%", border: "1px solid #1a1a1a", ...s.style }} />
-                  <span style={{ fontSize: 10, color: "#64615b" }}>{s.label}</span>
+                  <span style={{ fontSize: 11, color: "#64615b" }}>{s.label}</span>
                 </div>
               ))}
-              <span style={{ fontSize: 10, color: "#64615b" }}>Large dot = major event</span>
+              <span style={{ fontSize: 11, color: "#64615b" }}>Large dot = major event</span>
             </div>
             {showHolc && (
               <div style={{ paddingTop: 8, marginTop: 8, borderTop: "1px solid #e8e5e0" }}>
@@ -438,11 +438,11 @@ export default function HistoryView() {
                   {HOLC_GRADES.map((g) => (
                     <div key={g.grade} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                       <span style={{ width: 10, height: 10, borderRadius: 2, background: g.fill, border: "1px solid rgba(0,0,0,.15)" }} />
-                      <span style={{ fontSize: 10, color: "#64615b" }}>{g.grade} — {g.category}</span>
+                      <span style={{ fontSize: 11, color: "#64615b" }}>{g.grade} — {g.category}</span>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 9.5, color: "#a8a49c", margin: "4px 0 0" }}>{HOLC_ATTRIBUTION}</p>
+                <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0" }}>{HOLC_ATTRIBUTION}</p>
               </div>
             )}
             {showZones && (
@@ -451,11 +451,11 @@ export default function HistoryView() {
                   {ZONE_LEGEND.map((z) => (
                     <div key={z.label} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                       <span style={{ width: 10, height: 10, borderRadius: 2, background: z.color, opacity: 0.4 }} />
-                      <span style={{ fontSize: 10, color: "#64615b" }}>{z.label}</span>
+                      <span style={{ fontSize: 11, color: "#64615b" }}>{z.label}</span>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 9.5, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
+                <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
                   Presence zones are schematic sketches from written descriptions — one shape per source account, not surveyed or tribally approved boundaries. Peoples overlapped and moved seasonally; overlapping fills are the point, not an error.
                 </p>
               </div>
@@ -504,7 +504,7 @@ export default function HistoryView() {
 
               {/* Documentation flags */}
               <div style={{ background: "#f8f7f4", borderRadius: 8, padding: "8px 10px", marginBottom: 10 }}>
-                <div style={{ fontSize: 10, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Documentation</div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Documentation</div>
                 <div style={{ marginBottom: 4 }}>
                   <span style={chip("#4b4844")}>{selected.documentation_validity_flag}</span>
                   {(selected.documentation_validity_secondary || []).map((s, i) => (
@@ -532,7 +532,7 @@ export default function HistoryView() {
 
               {/* Communities & impacts */}
               <div style={{ marginBottom: 10 }}>
-                <div style={{ fontSize: 10, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Communities & impact</div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Communities & impact</div>
                 <div>
                   {(selected.community_tags || []).map((t) => (
                     <span key={t} style={chip("#edeae4", "#4b4844")}>{communityLabel(t)}</span>
@@ -557,14 +557,14 @@ export default function HistoryView() {
               {/* Perspective accounts */}
               {(selected.perspective_accounts || []).length > 0 && (
                 <div style={{ marginBottom: 10 }}>
-                  <div style={{ fontSize: 10, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
                     Perspectives ({selected.perspective_accounts.length})
                   </div>
                   {selected.perspective_accounts.map((a, i) => (
                     <div key={a.account_id || i} style={{ borderLeft: "3px solid #d6d3cd", padding: "4px 0 4px 10px", marginBottom: 8 }}>
                       <div style={{ fontSize: 11, fontWeight: 700, color: "#1a1a1a" }}>{a.perspective_origin}</div>
                       <p style={{ fontSize: 11.5, color: "#4b4844", lineHeight: 1.5, margin: "2px 0 3px" }}>{a.perspective_text}</p>
-                      <div style={{ fontSize: 10, color: "#a8a49c" }}>
+                      <div style={{ fontSize: 11, color: "#a8a49c" }}>
                         {a.source_name}{a.source_date ? ` (${a.source_date})` : ""}
                         {a.source_url && <> · <a href={a.source_url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f766e" }}>source ↗</a></>}
                       </div>
@@ -576,7 +576,7 @@ export default function HistoryView() {
               {/* Unverified claims */}
               {(selected.unverified_claims || []).length > 0 && (
                 <div style={{ marginBottom: 10 }}>
-                  <div style={{ fontSize: 10, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
                     Awaiting verification ({selected.unverified_claims.length})
                   </div>
                   <ul style={{ margin: 0, paddingLeft: 16 }}>
@@ -593,7 +593,7 @@ export default function HistoryView() {
               {/* Related events */}
               {(selected.related_events || []).length > 0 && (
                 <div style={{ marginBottom: 6 }}>
-                  <div style={{ fontSize: 10, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Related events</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Related events</div>
                   {selected.related_events.map((r, i) => {
                     const target = EVENT_BY_ID.get(r.event_id);
                     if (!target) return null;
@@ -605,7 +605,7 @@ export default function HistoryView() {
                         style={{ display: "block", width: "100%", textAlign: "left", background: "#f8f7f4", border: "1px solid #e8e5e0", borderRadius: 6, padding: "5px 8px", marginBottom: 4, cursor: "pointer" }}
                         title={r.note || ""}
                       >
-                        <span style={{ fontSize: 9.5, color: documented ? "#0f766e" : "#a8a49c", fontWeight: 700, textTransform: "uppercase" }}>
+                        <span style={{ fontSize: 11, color: documented ? "#0f766e" : "#a8a49c", fontWeight: 700, textTransform: "uppercase" }}>
                           {r.causality_type.replace(/_/g, " ")}{documented ? "" : " (sequence only)"}
                         </span>
                         <span style={{ display: "block", fontSize: 11, color: "#1a1a1a", lineHeight: 1.35 }}>{target.event_title}</span>
@@ -615,7 +615,7 @@ export default function HistoryView() {
                 </div>
               )}
 
-              <p style={{ fontSize: 9.5, color: "#a8a49c", margin: "8px 0 0" }}>Source ref: {selected.context_source_ref}</p>
+              <p style={{ fontSize: 11, color: "#a8a49c", margin: "8px 0 0" }}>Source ref: {selected.context_source_ref}</p>
             </div>
           )}
         </aside>

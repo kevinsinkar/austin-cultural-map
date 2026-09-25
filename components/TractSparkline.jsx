@@ -19,7 +19,7 @@ export default function TractSparkline({ regionId, width = 72, height = 20 }) {
 
   if (series.length === 0) {
     return (
-      <span style={{ fontSize: 9, color: "#c4b5a4", width, display: "inline-block", textAlign: "center" }}>
+      <span style={{ fontSize: 11, color: "#c4b5a4", width, display: "inline-block", textAlign: "center" }}>
         no data
       </span>
     );

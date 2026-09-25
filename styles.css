@@ -46,6 +46,21 @@ html, body {
   }
 }
 
+/* Triage: scatter + table stack normally, sit side-by-side on wide screens
+   (they are selection-linked, so pairing them halves the scrolling) */
+.triage-evidence {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (min-width: 1400px) {
+  .triage-evidence {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
 .map-region {
   transition: opacity 0.15s, stroke-width 0.15s;
   cursor: pointer;
@@ -82,7 +97,7 @@ html, body {
 .timeline-action-btn, .timeline-filter-btn {
   padding: 4px 12px;
   border-radius: 20px;
-  font-size: 10px;
+  font-size: 11px;
   border: 1.5px solid #d6d3cd;
   background: #fffffe;
   color: #64615b;
@@ -127,7 +142,7 @@ html, body {
   position: absolute;
   left: -50px;
   top: -6px;
-  font-size: 9px;
+  font-size: 11px;
   color: #a8a49c;
   font-weight: 600;
   white-space: nowrap;

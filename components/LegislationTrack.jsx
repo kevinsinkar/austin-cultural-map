@@ -46,11 +46,11 @@ export default function LegislationTrack({ year, setYear }) {
           style={{ background: "none", border: "none", cursor: "pointer", fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", padding: 0, display: "flex", alignItems: "center", gap: 5 }}
           aria-expanded={expanded}
         >
-          <span style={{ display: "inline-block", transform: expanded ? "rotate(90deg)" : "none", transition: "transform .15s", fontSize: 9 }}>▶</span>
+          <span style={{ display: "inline-block", transform: expanded ? "rotate(90deg)" : "none", transition: "transform .15s", fontSize: 11 }}>▶</span>
           TX Legislation — Cost of Living ({TX_LEGISLATION.length} bills)
         </button>
         {expanded && (
-          <div style={{ display: "flex", gap: 10, fontSize: 9, color: "#7c6f5e" }} aria-hidden="true">
+          <div style={{ display: "flex", gap: 10, fontSize: 11, color: "#7c6f5e" }} aria-hidden="true">
             {Object.entries(LEG_DIRECTION_LABELS).map(([dir, label]) => (
               <span key={dir} style={{ display: "flex", alignItems: "center", gap: 3 }}>
                 <span style={{ width: 7, height: 7, borderRadius: 2, background: LEG_DIRECTION_COLORS[dir], display: "inline-block" }} />
@@ -94,7 +94,7 @@ export default function LegislationTrack({ year, setYear }) {
                       />
                     );
                   })}
-                  <span style={{ fontSize: 7.5, color: near ? "#44403c" : "#a8a49c", fontWeight: near ? 600 : 400 }}>
+                  <span style={{ fontSize: 11, color: near ? "#44403c" : "#a8a49c", fontWeight: near ? 600 : 400 }}>
                     {String(billYear).slice(2)}
                   </span>
                 </div>
@@ -111,13 +111,13 @@ export default function LegislationTrack({ year, setYear }) {
                     {selectedBill.bill} — {selectedBill.title}
                   </span>
                   <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
-                    <span style={{ fontSize: 9, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
+                    <span style={{ fontSize: 11, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
                       {selectedBill.session}
                     </span>
-                    <span style={{ fontSize: 9, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
+                    <span style={{ fontSize: 11, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
                       {LEG_CATEGORY_LABELS[selectedBill.category] || selectedBill.category}
                     </span>
-                    <span style={{ fontSize: 9, background: `${LEG_DIRECTION_COLORS[selectedBill.direction]}18`, color: LEG_DIRECTION_COLORS[selectedBill.direction], borderRadius: 3, padding: "2px 7px", fontWeight: 600 }}>
+                    <span style={{ fontSize: 11, background: `${LEG_DIRECTION_COLORS[selectedBill.direction]}18`, color: LEG_DIRECTION_COLORS[selectedBill.direction], borderRadius: 3, padding: "2px 7px", fontWeight: 600 }}>
                       {LEG_DIRECTION_LABELS[selectedBill.direction] || selectedBill.direction}
                     </span>
                   </div>
@@ -132,13 +132,13 @@ export default function LegislationTrack({ year, setYear }) {
                 {setYear && (
                   <button
                     onClick={() => setYear(Math.min(Math.max(selectedBill.year, YEAR_MIN), YEAR_MAX))}
-                    style={{ fontSize: 10, fontWeight: 600, color: "#0f766e", background: "none", border: "1px solid #0f766e", borderRadius: 5, padding: "3px 10px", cursor: "pointer" }}
+                    style={{ fontSize: 11, fontWeight: 600, color: "#0f766e", background: "none", border: "1px solid #0f766e", borderRadius: 5, padding: "3px 10px", cursor: "pointer" }}
                   >
                     View {selectedBill.year} on map
                   </button>
                 )}
                 {selectedBill.source && (
-                  <a href={selectedBill.source} target="_blank" rel="noopener noreferrer" style={{ fontSize: 10, color: "#7c6f5e" }}>
+                  <a href={selectedBill.source} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, color: "#7c6f5e" }}>
                     Source ↗
                   </a>
                 )}

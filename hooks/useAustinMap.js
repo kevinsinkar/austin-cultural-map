@@ -144,6 +144,9 @@ export default function useAustinMap({
       maxZoom: 19,
       minZoom: 10,
     }).addTo(map);
+    // The docked time bar covers the default bottom-right corner —
+    // keep the OSM attribution visible under the zoom control instead.
+    map.attributionControl.setPosition("topleft");
 
     // truncate coordinates to 6 decimal places to avoid performance issues
     const simplified = simplifyGeojsonPrecision(REGIONS_GEOJSON, 6);
