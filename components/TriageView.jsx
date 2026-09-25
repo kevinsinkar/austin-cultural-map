@@ -122,8 +122,11 @@ const AXIS_LABELS = {
 
 // ── Component ──
 
-export default function TriageView({ boundaryMode, onLocateOnMap }) {
-  const [lens, setLens] = useState("equity");
+export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp, setLens: setLensProp }) {
+  // Lens is controlled by the app (URL-synced) when provided; local otherwise.
+  const [localLens, setLocalLens] = useState("equity");
+  const lens = lensProp ?? localLens;
+  const setLens = setLensProp ?? setLocalLens;
   const [sortCol, setSortCol] = useState("priority");
   const [sortDir, setSortDir] = useState("desc");
   const [showAdvanced, setShowAdvanced] = useState(false);

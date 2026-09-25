@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback, useReducer } from "react";
 import _ from "lodash";
 import "./styles.css";
 
@@ -21,6 +21,7 @@ import { REGIONS_GEOJSON } from "./data/final_updated_regions";
 // Utils
 import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
 import { aggregateNeighborhood } from "./utils/aggregation";
+import { DEFAULT_VIEW_STATE, parseViewState, serializeViewState } from "./utils/urlState";
 
 // Components
 import Header from "./components/Header";
@@ -33,36 +34,88 @@ import TriageView from "./components/TriageView";
 import TimelineView from "./components/TimelineView";
 import HistoryView from "./components/HistoryView";
 
+// ── Consolidated, URL-serializable view state ──
+// One object holds everything a shareable link must reproduce:
+// { viewMode, year, boundaryMode, layers, activeRegionId,
+//   activeNeighborhoodId, compA, compB, triageLens }.
+// Ephemeral UI state (hover, modals, panel tabs, playback) stays in useState.
+function viewReducer(state, action) {
+  switch (action.type) {
+    case "set":
+      if (state[action.key] === action.value) return state;
+      return { ...state, [action.key]: action.value };
+    case "setLayer":
+      if (state.layers[action.key] === action.value) return state;
+      return { ...state, layers: { ...state.layers, [action.key]: action.value } };
+    default:
+      return state;
+  }
+}
+
 export default function AustinCulturalMap() {
-  // ── Core state ──
-  const [viewMode, setViewMode] = useState("map");
-  const [year, setYear] = useState(2010);
+  // ── Core view state (reducer + URL hydration) ──
+  const urlInit = useMemo(() => parseViewState(window.location.hash), []);
+  const [view, dispatch] = useReducer(viewReducer, null, () => ({
+    ...DEFAULT_VIEW_STATE,
+    ...(urlInit || {}),
+    layers: { ...DEFAULT_VIEW_STATE.layers, ...(urlInit?.layers || {}) },
+  }));
+  const {
+    viewMode, year, boundaryMode, layers,
+    activeRegionId, activeNeighborhoodId, compA, compB, triageLens,
+  } = view;
+
+  const setViewMode = useCallback((v) => dispatch({ type: "set", key: "viewMode", value: v }), []);
+  const setYear = useCallback((v) => dispatch({ type: "set", key: "year", value: v }), []);
+  const setBoundaryMode = useCallback((v) => dispatch({ type: "set", key: "boundaryMode", value: v }), []);
+  const setActiveRegionId = useCallback((v) => dispatch({ type: "set", key: "activeRegionId", value: v }), []);
+  const setActiveNeighborhoodId = useCallback((v) => dispatch({ type: "set", key: "activeNeighborhoodId", value: v }), []);
+  const setCompA = useCallback((v) => dispatch({ type: "set", key: "compA", value: v }), []);
+  const setCompB = useCallback((v) => dispatch({ type: "set", key: "compB", value: v }), []);
+  const setTriageLens = useCallback((v) => dispatch({ type: "set", key: "triageLens", value: v }), []);
+  const setShowPins = useCallback((v) => dispatch({ type: "setLayer", key: "pins", value: v }), []);
+  const setShowProjectConnect = useCallback((v) => dispatch({ type: "setLayer", key: "projectConnect", value: v }), []);
+  const setShowMusicVenues = useCallback((v) => dispatch({ type: "setLayer", key: "musicVenues", value: v }), []);
+  const setShowDevPressure = useCallback((v) => dispatch({ type: "setLayer", key: "devPressure", value: v }), []);
+  const setShowRegions = useCallback((v) => dispatch({ type: "setLayer", key: "regions", value: v }), []);
+  const setShowPreservationAustin = useCallback((v) => dispatch({ type: "setLayer", key: "preservationAustin", value: v }), []);
+  const setShowAisdSchools = useCallback((v) => dispatch({ type: "setLayer", key: "aisdSchools", value: v }), []);
+  const setShowHolc = useCallback((v) => dispatch({ type: "setLayer", key: "holc", value: v }), []);
+  const {
+    pins: showPins, projectConnect: showProjectConnect, musicVenues: showMusicVenues,
+    devPressure: showDevPressure, regions: showRegions,
+    preservationAustin: showPreservationAustin, aisdSchools: showAisdSchools, holc: showHolc,
+  } = layers;
+
+  // ── Ephemeral UI state ──
   const [hoveredRegion, setHoveredRegion] = useState(null);
-  const [selectedRegion, setSelectedRegion] = useState(null);
+  const [selectedRegion, setSelectedRegion] = useState(urlInit?.activeRegionId ?? null);
   const [selectedBiz, setSelectedBiz] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showHeritage, setShowHeritage] = useState(true);
-  const [showPins, setShowPins] = useState(true);
-  const [showProjectConnect, setShowProjectConnect] = useState(false);
-  const [showMusicVenues, setShowMusicVenues] = useState(false);
-  const [showDevPressure, setShowDevPressure] = useState(false);
-  const [showRegions, setShowRegions] = useState(true);
-  const [showPreservationAustin, setShowPreservationAustin] = useState(false);
-  const [showAisdSchools, setShowAisdSchools] = useState(false);
-  const [showHolc, setShowHolc] = useState(false);
   const [paFilter, setPaFilter] = useState({ grant: true, merit_award: true, legacy_business: true, advocacy: true });
   const [bizTab, setBizTab] = useState("open");
   const [panelTab, setPanelTab] = useState("demographics");
   const [selectedPA, setSelectedPA] = useState(null);
-  const [compA, setCompA] = useState("East 11th Street");
-  const [compB, setCompB] = useState("East Cesar Chavez -Holly");
   const [showAbout, setShowAbout] = useState(false);
   const [showAgenda, setShowAgenda] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
-  const [activeRegionId, setActiveRegionId] = useState(null);
-  const [activeFeature, setActiveFeature] = useState(null);
-  const [boundaryMode, setBoundaryMode] = useState("tracts");
-  const [activeNeighborhoodId, setActiveNeighborhoodId] = useState(null);
+  const [activeFeature, setActiveFeature] = useState(() =>
+    urlInit?.activeRegionId != null
+      ? REGIONS_GEOJSON.features.find((f) => f.properties.region_id === urlInit.activeRegionId) || null
+      : null
+  );
+
+  // ── URL sync (debounced replaceState — no history spam) ──
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const hash = serializeViewState(view);
+      if (window.location.hash !== hash) {
+        window.history.replaceState(null, "", hash);
+      }
+    }, 250);
+    return () => clearTimeout(t);
+  }, [view]);
 
   const playRef = useRef(null);
   const activeRegionName = activeFeature?.properties?.region_name;
@@ -276,7 +329,12 @@ export default function AustinCulturalMap() {
         )}
 
         {viewMode === "triage" && (
-          <TriageView boundaryMode={boundaryMode} onLocateOnMap={handleLocateOnMap} />
+          <TriageView
+            boundaryMode={boundaryMode}
+            onLocateOnMap={handleLocateOnMap}
+            lens={triageLens}
+            setLens={setTriageLens}
+          />
         )}
 
         {viewMode === "map" && (
