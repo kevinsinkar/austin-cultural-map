@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 import { DEMO_COLORS } from "../data/constants";
-import { getDviColor, getDviBand, getDviBandColor, calcAnchorDensity, getAnchorBadge, interpolateDvi } from "../utils/math";
+import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi } from "../utils/math";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
 import { ID_TO_NAME } from "../data/regionLookup";
@@ -72,6 +72,9 @@ export default function RegionDetailPanel({
   const d = isNeighborhoodMode && neighborhoodAgg
     ? neighborhoodAgg.aggDvi
     : (currentDvi[activeRegionId] || 0);
+  // Capped Affluent/Excluded tracts are a category, not a low score —
+  // render them in the same blue the map and Triage use.
+  const excluded = !isNeighborhoodMode && activeRegionId != null && isRegionExcluded(activeRegionId, year);
 
   const panelTabs = [
     { key: "demographics", label: "Demographics" },
@@ -113,11 +116,13 @@ export default function RegionDetailPanel({
             </button>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 12 }}>
-            <div style={{ width: 40, height: 40, borderRadius: 8, background: getDviColor(d, nd), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontSize: 15, fontWeight: 700, color: "#1a1a1a" }}>{d.toFixed(0)}</span>
+            <div style={{ width: 40, height: 40, borderRadius: 8, background: excluded ? DVI_EXCLUDED.fill : getDviColor(d, nd), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ fontSize: 15, fontWeight: 700, color: nd ? "#1a1a1a" : excluded ? DVI_EXCLUDED.on : getDviBin(d).on }}>{d.toFixed(0)}</span>
             </div>
             <div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: nd ? "#7c6f5e" : getDviBandColor(d) }}>{nd ? "N/A — New Development" : getDviBand(d)}</div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: nd ? "#7c6f5e" : excluded ? DVI_EXCLUDED.text : getDviBandColor(d) }}>
+                {nd ? "N/A — New Development" : excluded ? "Exclusive / Appreciated (DVI capped)" : getDviBand(d)}
+              </div>
               <div style={{ fontSize: 11, color: "#a8a49c" }}>DVI at {year}</div>
             </div>
             {/* Anchor Density Badge */}
@@ -590,7 +595,7 @@ export default function RegionDetailPanel({
                       {tractName} <span style={{ color: "#a8a49c" }}>[id. {tid}]</span>
                     </span>
                     <TractSparkline regionId={tid} />
-                    <span style={{ fontWeight: 600, color: getDviBandColor(tractDvi), fontSize: 10, width: 42, textAlign: "right" }}>
+                    <span style={{ fontWeight: 600, color: isRegionExcluded(tid, year) ? DVI_EXCLUDED.text : getDviBandColor(tractDvi), fontSize: 10, width: 42, textAlign: "right" }}>
                       DVI {tractDvi?.toFixed(0) ?? "\u2014"}
                     </span>
                   </div>

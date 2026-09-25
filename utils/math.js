@@ -1,4 +1,3 @@
-import * as d3 from "d3";
 import _ from "lodash";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi.js";
 import {
@@ -48,27 +47,65 @@ export function interpolateDvi(regionId, yr) {
   return parseFloat((prior.dvi + t * (next.dvi - prior.dvi)).toFixed(1));
 }
 
+// ── DVI color system ──
+// Binned, colorblind-safe sequential ramp (ColorBrewer YlOrRd 4-class):
+// darkness alone carries the signal, so bands stay distinguishable under
+// deuteranopia/protanopia. No green anywhere in the displacement ramp.
+//   fill — polygon/tile swatch  ·  text — darker same-hue tone readable
+//   on light backgrounds  ·  on — number color readable ON the fill.
+export const DVI_BINS = [
+  { min: 0,  max: 20,       band: "Stable",                short: "Stable",          range: "0–20",  fill: "#ffffb2", text: "#8c6d1f", on: "#1a1a1a" },
+  { min: 20, max: 35,       band: "Early Pressure",        short: "Early Pressure",  range: "20–35", fill: "#fecc5c", text: "#b45309", on: "#1a1a1a" },
+  { min: 35, max: 55,       band: "Active Displacement",   short: "Active Displ.",   range: "35–55", fill: "#fd8d3c", text: "#c2410c", on: "#1a1a1a" },
+  { min: 55, max: Infinity, band: "Historic Displacement", short: "Historic Displ.", range: "55+",   fill: "#e31a1c", text: "#b91c1c", on: "#fffffe" },
+];
+
+// Capped "Exclusive / Appreciated" tracts (isExcluded) — a categorically
+// different phenomenon, not a low score. Blue matches TriageView's
+// "Affluent / Appreciated" so the map and Triage tell one story.
+export const DVI_EXCLUDED = {
+  band: "Exclusive / Appreciated",
+  range: "DVI capped",
+  fill: "#1565C0",
+  text: "#1565C0",
+  on: "#fffffe",
+  stroke: "#455A64",
+};
+
+export const DVI_ND_COLOR = "#c4b5a4";      // New Development — no DVI
+export const DVI_NO_DATA_COLOR = "#e8e5e0"; // DVI ≤ 0 / missing
+
+export function getDviBin(dvi) {
+  return DVI_BINS.find((b) => dvi <= b.max) || DVI_BINS[DVI_BINS.length - 1];
+}
+
 export function getDviColor(dvi, nd = false) {
-  if (nd) return "#c4b5a4";
-  if (dvi <= 0) return "#e8e5e0";
-  if (dvi <= 20) return d3.interpolateRgb("#b8e6c8", "#4ade80")(dvi / 20);
-  if (dvi <= 35) return d3.interpolateRgb("#4ade80", "#facc15")((dvi - 20) / 15);
-  if (dvi <= 55) return d3.interpolateRgb("#facc15", "#fb923c")((dvi - 35) / 20);
-  return d3.interpolateRgb("#fb923c", "#ef4444")(Math.min((dvi - 55) / 30, 1));
+  if (nd) return DVI_ND_COLOR;
+  if (dvi <= 0) return DVI_NO_DATA_COLOR;
+  return getDviBin(dvi).fill;
 }
 
 export function getDviBand(d) {
-  if (d <= 20) return "Stable";
-  if (d <= 35) return "Early Pressure";
-  if (d <= 55) return "Active Displacement";
-  return "Historic Displacement";
+  return getDviBin(d).band;
 }
 
 export function getDviBandColor(d) {
-  if (d <= 20) return "#16a34a";
-  if (d <= 35) return "#ca8a04";
-  if (d <= 55) return "#ea580c";
-  return "#dc2626";
+  return getDviBin(d).text;
+}
+
+/**
+ * Whether a region is flagged Affluent/Excluded (DVI capped) at the data
+ * point closest to the given year. Used to render these tracts as a
+ * distinct category instead of on the displacement ramp.
+ */
+export function isRegionExcluded(regionId, year) {
+  const series = AUDITED_DVI_LOOKUP[regionId];
+  if (!series || !series.length) return false;
+  const pt = series.reduce(
+    (best, p) => (Math.abs(p.year - year) < Math.abs(best.year - year) ? p : best),
+    series[0]
+  );
+  return !!pt?.isExcluded;
 }
 
 export function getDviTimeSeries(regionId) {

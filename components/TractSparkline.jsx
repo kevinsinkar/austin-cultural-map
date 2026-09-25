@@ -1,5 +1,5 @@
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
-import { getDviBandColor } from "../utils/math";
+import { getDviBandColor, DVI_EXCLUDED } from "../utils/math";
 
 // Fixed domains so every sparkline in a list shares the same scale
 const X_MIN = 2000;
@@ -30,7 +30,7 @@ export default function TractSparkline({ regionId, width = 72, height = 20 }) {
   const y = (dvi) => height - pad - (Math.min(dvi, Y_MAX) / Y_MAX) * (height - pad * 2);
 
   const last = series[series.length - 1];
-  const color = getDviBandColor(last.dvi);
+  const color = last.isExcluded ? DVI_EXCLUDED.text : getDviBandColor(last.dvi);
   const points = series.map((p) => `${x(p.year).toFixed(1)},${y(p.dvi).toFixed(1)}`).join(" ");
   const summary = series.map((p) => `${p.year}: DVI ${p.dvi.toFixed(0)}`).join(" · ");
 

@@ -13,6 +13,7 @@ import {
   toDemoChartData,
 } from "../data/auditedData";
 import { HOLC_GRADES, HOLC_ATTRIBUTION } from "../data/history";
+import { DVI_BINS, DVI_EXCLUDED, DVI_ND_COLOR } from "../utils/math";
 
 export default function MapView({
   year,
@@ -237,17 +238,16 @@ export default function MapView({
 
           {/* Legend */}
           <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 16px", marginTop: 16 }} role="region" aria-label="Map legend">
-            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 6 }}>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
               {[
-                { l: "Stable", s: "0–20", c: "#4ade80" },
-                { l: "Early Pressure", s: "20–35", c: "#facc15" },
-                { l: "Active Displ.", s: "35–55", c: "#fb923c" },
-                { l: "Historic Displ.", s: "55+", c: "#ef4444" },
-                { l: "New Dev.", s: "N/A", c: "#c4b5a4" },
+                ...DVI_BINS.map((b) => ({ l: b.short, s: b.range, c: b.fill })),
+                { l: "Exclusive / Appreciated", s: "DVI capped", c: DVI_EXCLUDED.fill },
+                { l: "New Dev.", s: "N/A", c: DVI_ND_COLOR },
               ].map((b, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 4, marginRight: 4 }}>
-                  <span style={{ width: 10, height: 10, borderRadius: 2, background: b.c, border: "1px solid rgba(0,0,0,.1)", flexShrink: 0 }} aria-hidden="true" />
+                  <span style={{ width: 10, height: 10, borderRadius: 2, background: b.c, border: "1px solid rgba(0,0,0,.15)", flexShrink: 0 }} aria-hidden="true" />
                   <span style={{ fontSize: 10, color: "#1a1a1a", fontWeight: 500 }}>{b.l}</span>
+                  <span style={{ fontSize: 10, color: "#a8a49c" }}>{b.s}</span>
                 </div>
               ))}
             </div>
