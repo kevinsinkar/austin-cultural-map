@@ -94,6 +94,38 @@ export function getDviBandColor(d) {
 }
 
 /**
+ * Data confidence for a region's DVI at a year — the single source for
+ * the ConfidenceChip system. Starts High; each independent uncertainty
+ * source (interpolated/nearest-year value, pre-2010 boundary crosswalk)
+ * downgrades one step. Returns { level, interpolated, reasons }.
+ */
+export function getDviConfidence(regionId, year) {
+  const series = AUDITED_DVI_LOOKUP[regionId];
+  if (!series || !series.length) {
+    return { level: "Low", interpolated: false, reasons: ["No DVI data exists for this tract."] };
+  }
+  const reasons = [];
+  let steps = 0;
+  let interpolated = false;
+  if (!series.some((p) => p.year === year)) {
+    const prior = _.findLast(series, (p) => p.year < year);
+    const next = _.find(series, (p) => p.year > year);
+    if (prior && next) {
+      interpolated = true;
+      reasons.push(`No measurement for ${year} — value linearly interpolated between the ${prior.year} and ${next.year} data points.`);
+    } else {
+      reasons.push(`No measurement for ${year} — showing the nearest data point (${(prior || next).year}).`);
+    }
+    steps += 1;
+  }
+  if (year < 2010) {
+    reasons.push("Pre-2010 census boundaries were crosswalked to modern tract geometry — values are approximate.");
+    steps += 1;
+  }
+  return { level: steps === 0 ? "High" : steps === 1 ? "Medium" : "Low", interpolated, reasons };
+}
+
+/**
  * Whether a region is flagged Affluent/Excluded (DVI capped) at the data
  * point closest to the given year. Used to render these tracts as a
  * distinct category instead of on the displacement ramp.

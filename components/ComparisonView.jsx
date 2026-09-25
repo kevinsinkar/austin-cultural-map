@@ -8,8 +8,21 @@ import { SOCIOECONOMIC, DEMOGRAPHICS, LEGACY_OPERATING, LEGACY_CLOSED, NEIGHBORH
 import { REGION_NAMES, DEMO_COLORS } from "../data/constants";
 import { NAME_TO_ID } from "../data/regionLookup";
 import { interpolateDvi, calcAnchorDensity } from "../utils/math";
+import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { fmtPct } from "../utils/formatters";
 import { aggregateNeighborhood } from "../utils/aggregation";
+
+// Never let a derived number wear a measured number's clothes: solid dots
+// mark actual DVI data points; the lighter line between them is interpolated.
+function makeMeasuredDot(regionId, color) {
+  const measured = new Set((AUDITED_DVI_LOOKUP[regionId] || []).map((p) => p.year));
+  return function MeasuredDot({ cx, cy, payload, index }) {
+    if (cx == null || cy == null || !measured.has(payload?.year)) {
+      return <circle key={`d${index}`} cx={-10} cy={-10} r={0} fill="none" />;
+    }
+    return <circle key={`d${index}`} cx={cx} cy={cy} r={3.5} fill={color} stroke="#fffffe" strokeWidth={1} />;
+  };
+}
 
 export default function ComparisonView({ compA, setCompA, compB, setCompB, boundaryMode }) {
   const [demoMode, setDemoMode] = useState("focused"); // "focused" = Black & Hispanic, "all" = all groups
@@ -189,10 +202,13 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
               <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} />
               <YAxis tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, "auto"]} />
               <Tooltip contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #d6d3cd" }} />
-              <Line type="monotone" dataKey={compA} stroke="#0f766e" strokeWidth={2.5} dot={{ r: 3 }} name={nameA} />
-              <Line type="monotone" dataKey={compB} stroke="#7c3aed" strokeWidth={2.5} dot={{ r: 3 }} name={nameB} />
+              <Line type="monotone" dataKey={compA} stroke="#0f766e" strokeWidth={2} strokeOpacity={0.55} dot={makeMeasuredDot(idA, "#0f766e")} name={nameA} />
+              <Line type="monotone" dataKey={compB} stroke="#7c3aed" strokeWidth={2} strokeOpacity={0.55} dot={makeMeasuredDot(idB, "#7c3aed")} name={nameB} />
             </LineChart></ResponsiveContainer>
           </div>
+          <p style={{ fontSize: 10, color: "#a8a49c", margin: "6px 0 0", lineHeight: 1.4 }}>
+            Solid dots mark measured census/ACS years; the lighter line between them is interpolated.
+          </p>
         </div>
 
         {/* Home Value */}

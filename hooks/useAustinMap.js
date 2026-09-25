@@ -9,11 +9,26 @@ import { NEIGHBORHOODS_GEOJSON } from "../data/neighborhoods_geojson";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
 import { AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID, closestRow } from "../data/auditedData";
-import { interpolateDvi, getDviColor, isRegionExcluded, DVI_EXCLUDED } from "../utils/math";
+import { interpolateDvi, getDviColor, getDviBand, getDviConfidence, isRegionExcluded, DVI_EXCLUDED } from "../utils/math";
 import { getDevPressureColor } from "../utils/mapHelpers";
 import { PA_ALL, PA_COLORS } from "../data";
 import { AISD_CLOSED_SCHOOLS, AISD_COLORS } from "../data/aisdSchools";
 import { HOLC_1935 } from "../data/history";
+
+// Hover tooltip HTML: name, DVI + band, and a one-line confidence note —
+// point-of-reading disclosure from the unified ConfidenceChip system.
+function tractTooltipHtml(name, regionId, yr) {
+  if (yr < 1993) return `<strong>${name}</strong>`;
+  const excluded = isRegionExcluded(regionId, yr);
+  const dvi = interpolateDvi(regionId, yr);
+  const bandTxt = excluded
+    ? `<span style="color:${DVI_EXCLUDED.text};font-weight:600;">Exclusive / Appreciated (DVI capped)</span>`
+    : `DVI ${dvi.toFixed(0)} — ${getDviBand(dvi)}`;
+  const conf = getDviConfidence(regionId, yr);
+  return `<strong>${name}</strong><br/>${bandTxt}` +
+    `<br/><span style="color:#7c6f5e;font-size:11px;">${conf.level} confidence` +
+    `${conf.interpolated ? " · interpolated" : ""}${yr < 2010 ? " · pre-2010 crosswalk" : ""}</span>`;
+}
 
 // Compute the full Leaflet style for a tract polygon: binned DVI fill,
 // categorical blue for capped Affluent/Excluded tracts, neutral pre-1993.
@@ -156,6 +171,7 @@ export default function useAustinMap({
             }
             // Do NOT bringToFront — keep regions behind business pins
             setHoveredRegion(rid);
+            l.setTooltipContent(tractTooltipHtml(tooltipText, rid, yearRef.current));
             l.openTooltip();
           },
           mouseout: (e) => {
@@ -200,6 +216,18 @@ export default function useAustinMap({
             const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;
             if (!isActive) {
               e.target.setStyle({ weight: 2.5, color: "#444", fillOpacity: 0 });
+            }
+            const yr = yearRef.current;
+            const hood = NEIGHBORHOOD_BY_ID.get(feature.properties.neighborhood_id);
+            if (yr >= 1993 && hood) {
+              const aggDvi = computeNeighborhoodDvi(hood, yr);
+              e.target.setTooltipContent(
+                `<strong>${name}</strong><br/>DVI ${aggDvi.toFixed(0)} — ${getDviBand(aggDvi)}` +
+                `<br/><span style="color:#7c6f5e;font-size:11px;">Medium confidence · tract aggregate` +
+                `${yr < 2010 ? " · pre-2010 crosswalk" : ""}</span>`
+              );
+            } else {
+              e.target.setTooltipContent(name);
             }
             e.target.openTooltip();
           },

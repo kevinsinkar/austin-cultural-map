@@ -67,7 +67,7 @@ Full review in `docs/ux-ui-design-review.md`; implementation sequence in `docs/u
 | --- | --- | --- |
 | High | Choropleth redesign — binned colorblind-safe sequential ramp; distinct blue/hatched treatment for capped "Exclusive/Appreciated" tracts (match Triage #1565C0); legend bins match fill | Done — Phase 1 |
 | High | Shareable URLs — consolidate index.jsx state into a reducer, serialize view/year/layers/selection to URL hash | Done — Phase 2 |
-| High | Unified ConfidenceChip uncertainty component (DVI tile, map tooltip, pre-2010 badge); mark interpolated vs. measured values in charts | Not Started — Phase 3 |
+| High | Unified ConfidenceChip uncertainty component (DVI tile, map tooltip, pre-2010 badge); mark interpolated vs. measured values in charts | Done — Phase 3 |
 | Med | Map-first layout — full-height map, on-map legend, docked time bar, grouped Layers popover; Triage recommendation card moved to top; 11px type floor | Not Started — Phase 4 |
 | Med | Ambient historical context — clickable timeline ticks, year-aware policy callouts, History↔Map cross-links, tipping-point teaser in panel header | Not Started — Phase 5 |
 | Med | Layer decluttering — shape+color point encoding, HOLC as hatch/outline instead of stacked fill | Not Started — deferred |

@@ -4,7 +4,8 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 import { DEMO_COLORS } from "../data/constants";
-import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi } from "../utils/math";
+import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi, getDviConfidence } from "../utils/math";
+import ConfidenceChip from "./ConfidenceChip";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
 import { ID_TO_NAME } from "../data/regionLookup";
@@ -76,6 +77,19 @@ export default function RegionDetailPanel({
   // render them in the same blue the map and Triage use.
   const excluded = !isNeighborhoodMode && activeRegionId != null && isRegionExcluded(activeRegionId, year);
 
+  // One uncertainty system: the ConfidenceChip beside the DVI number.
+  const conf = isNeighborhoodMode && neighborhoodAgg
+    ? (() => {
+        const reasons = [`Aggregated from ${neighborhoodAgg.tractCount} census tracts using population-weighted averages.`];
+        const gaps = (neighborhoodAgg.dataAvailability || []).filter((g) => g.tractsWithData < g.totalTracts);
+        if (gaps.length) reasons.push("Partial tract coverage in early years — aggregates reflect only the tracts with data (see contributing tracts below).");
+        if (year < 2010) reasons.push("Pre-2010 census boundaries were crosswalked to modern tract geometry — values are approximate.");
+        return { level: year < 2010 ? "Low" : "Medium", interpolated: false, reasons };
+      })()
+    : activeRegionId != null
+      ? getDviConfidence(activeRegionId, year)
+      : null;
+
   const panelTabs = [
     { key: "demographics", label: "Demographics" },
     { key: "economics", label: "Economics" },
@@ -115,15 +129,23 @@ export default function RegionDetailPanel({
               ✕
             </button>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 12 }}>
-            <div style={{ width: 40, height: 40, borderRadius: 8, background: excluded ? DVI_EXCLUDED.fill : getDviColor(d, nd), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontSize: 15, fontWeight: 700, color: nd ? "#1a1a1a" : excluded ? DVI_EXCLUDED.on : getDviBin(d).on }}>{d.toFixed(0)}</span>
+          <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 12 }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+              <div style={{ width: 40, height: 40, borderRadius: 8, background: excluded ? DVI_EXCLUDED.fill : getDviColor(d, nd), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 15, fontWeight: 700, color: nd ? "#1a1a1a" : excluded ? DVI_EXCLUDED.on : getDviBin(d).on }}>{d.toFixed(0)}</span>
+              </div>
+              {conf?.interpolated && (
+                <span style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic", lineHeight: 1 }}>interpolated</span>
+              )}
             </div>
             <div>
               <div style={{ fontSize: 13, fontWeight: 600, color: nd ? "#7c6f5e" : excluded ? DVI_EXCLUDED.text : getDviBandColor(d) }}>
                 {nd ? "N/A — New Development" : excluded ? "Exclusive / Appreciated (DVI capped)" : getDviBand(d)}
               </div>
-              <div style={{ fontSize: 11, color: "#a8a49c" }}>DVI at {year}</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 2 }}>
+                <span style={{ fontSize: 11, color: "#a8a49c" }}>DVI at {year}</span>
+                {conf && <ConfidenceChip level={conf.level} reasons={conf.reasons} />}
+              </div>
             </div>
             {/* Anchor Density Badge */}
             {(() => {
@@ -329,13 +351,17 @@ export default function RegionDetailPanel({
           <>
             {(propertyNow || socioNow) ? (
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-                {/* Data year mismatch note */}
+                {/* Nearest-year fallback → unified ConfidenceChip system */}
                 {(() => {
                   const actualYear = propertyNow?.year ?? socioNow?.year;
                   if (actualYear && Math.abs(actualYear - year) > 1) {
                     return (
-                      <div style={{ gridColumn: "1 / -1", fontSize: 10, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", lineHeight: 1.5, border: "1px solid #fde68a" }}>
-                        Showing nearest available data from {actualYear}. No census data available for {year} in this tract.
+                      <div style={{ gridColumn: "1 / -1" }}>
+                        <ConfidenceChip
+                          level="Medium"
+                          suffix={`confidence — showing ${actualYear} data`}
+                          reasons={[`No census data exists for ${year} in this tract; the economics tiles show the nearest available year (${actualYear}).`]}
+                        />
                       </div>
                     );
                   }
@@ -628,8 +654,10 @@ export default function RegionDetailPanel({
           </details>
         )}
 
+        {/* Boundary/interpolation caveats now live in the ConfidenceChip
+            popovers at point of reading — only the source line remains. */}
         <div style={{ fontSize: 10, color: "#a8a49c", lineHeight: 1.5, padding: "8px 4px" }}>
-          Census 1990–2020; ACS 2019–2023. Pre-2010 boundaries approximate. Values between census years interpolated.
+          Sources: U.S. Census 1990–2020; ACS 2019–2023.
         </div>
       </div>
     </div>

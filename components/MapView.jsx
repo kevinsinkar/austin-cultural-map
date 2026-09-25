@@ -14,6 +14,7 @@ import {
 } from "../data/auditedData";
 import { HOLC_GRADES, HOLC_ATTRIBUTION } from "../data/history";
 import { DVI_BINS, DVI_EXCLUDED, DVI_ND_COLOR } from "../utils/math";
+import ConfidenceChip from "./ConfidenceChip";
 
 export default function MapView({
   year,
@@ -192,9 +193,16 @@ export default function MapView({
           {/* TIME SLIDER */}
           <div style={{ marginTop: 16, padding: "0 4px" }} role="region" aria-label="Time slider controls">
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <span style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 32, fontWeight: 600, color: "#1a1a1a", letterSpacing: "-.03em", lineHeight: 1 }}>{year}</span>
                 {year >= 2020 && <span style={{ fontSize: 10, color: "#a8a49c", fontStyle: "italic" }}>ACS 2019–2023 est.</span>}
+                {year < 2010 && (
+                  <ConfidenceChip
+                    level="Medium"
+                    suffix="confidence"
+                    reasons={["Pre-2010 census boundaries were crosswalked to modern tract geometry — tract values before 2010 are approximate."]}
+                  />
+                )}
               </div>
               <button
                 onClick={() => {
