@@ -35,3 +35,11 @@ data/phase1_output_patched/
 *.xlsx
 *.csv
 !data/region_tract_rosetta.json
+
+# Python bytecode
+__pycache__/
+
+# Preservation Austin source package + advocacy letter PDFs (public docs from
+# preservationaustin.org/advocacy-archive — kept local only; the app imports
+# verbatim copies of the data files from data/history/)
+Preservation Austin/
