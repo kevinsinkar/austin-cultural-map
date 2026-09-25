@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState, useEffect } from "react";
 import useAustinMap from "../hooks/useAustinMap";
 import RegionDetailPanel from "./RegionDetailPanel";
 import LegislationTrack from "./LegislationTrack";
@@ -70,8 +70,31 @@ export default function MapView({
   activeNeighborhoodId,
   setActiveNeighborhoodId,
   neighborhoodAgg,
+  // History cross-links
+  onOpenHistory,
+  flyToTarget,
+  onFlyToHandled,
 }) {
   const mapRef = useRef(null);
+
+  // Which timeline event tick's popover is open (index into TIMELINE_EVENTS)
+  const [openTick, setOpenTick] = useState(null);
+  const tickRowRef = useRef(null);
+  useEffect(() => {
+    if (openTick == null) return;
+    const onDoc = (e) => {
+      if (tickRowRef.current && !tickRowRef.current.contains(e.target)) setOpenTick(null);
+    };
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpenTick(null);
+    };
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [openTick]);
 
   const { leafletMapRef, bizMarkersRef, paMarkersRef } = useAustinMap({
     mapRef,
@@ -98,6 +121,8 @@ export default function MapView({
     boundaryMode,
     activeNeighborhoodId,
     setActiveNeighborhoodId,
+    flyToTarget,
+    onFlyToHandled,
   });
 
   const activeRegionName = activeFeature?.properties?.region_name;
@@ -314,11 +339,52 @@ export default function MapView({
                   <button key={sy} onClick={() => { setYear(sy); setIsPlaying(false); }} style={{ position: "absolute", left: `${((sy - 1990) / 35) * 100}%`, transform: "translateX(-50%)", fontSize: 11, color: year === sy ? "#0f766e" : "#a8a49c", fontWeight: year === sy ? 700 : 400, background: "none", border: "none", cursor: "pointer", padding: "1px 4px", minHeight: 22 }} aria-label={`Jump to ${sy}`}>{sy}</button>
                 ))}
               </div>
-              {/* Event tick marks — clickable popover cards arrive in Phase 5 */}
-              <div style={{ position: "relative", height: 8 }} aria-hidden="true">
-                {TIMELINE_EVENTS.map((evt, i) => (
-                  <div key={i} title={`${evt.year} — ${evt.label}`} style={{ position: "absolute", left: `${((evt.year - 1990) / 35) * 100}%`, top: 0, transform: "translateX(-50%)", width: 2, height: 7, background: "#a8a49c", opacity: Math.abs(evt.year - year) <= 5 ? 1 : 0.35, borderRadius: 1 }} />
-                ))}
+              {/* Clickable timeline event ticks → popover cards.
+                  Events before 1990 (the 1928 Plan) pin to the left edge. */}
+              <div ref={tickRowRef} style={{ position: "relative", height: 12 }} role="group" aria-label="Historical events on the timeline">
+                {TIMELINE_EVENTS.map((evt, i) => {
+                  const pct = ((Math.max(evt.year, 1990) - 1990) / 35) * 100;
+                  const isOpen = openTick === i;
+                  return (
+                    <span key={i} style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)" }}>
+                      <button
+                        onClick={() => setOpenTick(isOpen ? null : i)}
+                        aria-expanded={isOpen}
+                        aria-label={`${evt.year} — ${evt.label}`}
+                        title={`${evt.year} — ${evt.label}`}
+                        style={{ width: 16, height: 12, background: "none", border: "none", cursor: "pointer", padding: 0, display: "flex", alignItems: "flex-start", justifyContent: "center" }}
+                      >
+                        <span aria-hidden="true" style={{ width: isOpen ? 3 : 2, height: 9, background: isOpen ? "#0f766e" : "#a8a49c", opacity: isOpen || Math.abs(evt.year - year) <= 5 ? 1 : 0.35, borderRadius: 1 }} />
+                      </button>
+                      {isOpen && (
+                        <div
+                          role="dialog"
+                          aria-label={`${evt.year} — ${evt.label}`}
+                          style={{
+                            position: "absolute", bottom: "calc(100% + 8px)", zIndex: 1400,
+                            ...(pct > 65 ? { right: -8 } : { left: -8 }),
+                            width: 264, background: "#fffffe", border: "1px solid #d6d3cd",
+                            borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,.16)",
+                            padding: "10px 12px", textAlign: "left",
+                          }}
+                        >
+                          <div style={{ fontSize: 12, fontWeight: 700, color: "#1a1a1a", marginBottom: 4 }}>
+                            {evt.year} — {evt.label}
+                          </div>
+                          <p style={{ fontSize: 11, color: "#44403c", lineHeight: 1.5, margin: 0 }}>{evt.blurb}</p>
+                          {onOpenHistory && (
+                            <button
+                              onClick={() => { setOpenTick(null); onOpenHistory(evt.historyEventId); }}
+                              style={{ marginTop: 8, padding: "4px 10px", borderRadius: 6, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontSize: 11, fontWeight: 600, cursor: "pointer" }}
+                            >
+                              Read more in History →
+                            </button>
+                          )}
+                        </div>
+                      )}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -100,6 +100,10 @@ export default function AustinCulturalMap() {
   const [showAbout, setShowAbout] = useState(false);
   const [showAgenda, setShowAgenda] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
+  // Cross-view history links: event to pre-select when opening the History
+  // tab, and a pending main-map flyTo target from a History event.
+  const [historyFocusId, setHistoryFocusId] = useState(null);
+  const [flyToTarget, setFlyToTarget] = useState(null);
   const [activeFeature, setActiveFeature] = useState(() =>
     urlInit?.activeRegionId != null
       ? REGIONS_GEOJSON.features.find((f) => f.properties.region_id === urlInit.activeRegionId) || null
@@ -242,6 +246,27 @@ export default function AustinCulturalMap() {
     return out;
   }, [activeRegionId, activeDisplayName, activeRegionName]);
 
+  // Timeline tick "Read more" → History tab, pre-selected on the event
+  const handleOpenHistory = useCallback((eventId) => {
+    setHistoryFocusId(eventId ?? null);
+    setViewMode("history");
+  }, [setViewMode]);
+
+  // History event "Show on main map" → set year, fly to the event's
+  // location, and enable the relevant overlay (mirrors handleLocateOnMap)
+  const handleShowEventOnMap = useCallback((ev) => {
+    if (ev?.date_start_sort != null) {
+      setYear(Math.min(2025, Math.max(1990, Math.round(ev.date_start_sort))));
+    }
+    const title = ev?.event_title || "";
+    if (/holc|redlin/i.test(title) || ev?.event_id === "EV_1935_HOLC_MAP") setShowHolc(true);
+    if (/school|aisd/i.test(title)) setShowAisdSchools(true);
+    if (ev?.coordinates) {
+      setFlyToTarget({ lat: ev.coordinates.lat, lng: ev.coordinates.lon, zoom: 14 });
+    }
+    setViewMode("map");
+  }, [setYear, setShowHolc, setShowAisdSchools, setViewMode]);
+
   // Navigate from triage/compare to map, selecting a specific tract
   const handleLocateOnMap = useCallback((regionId) => {
     const feature = REGIONS_GEOJSON.features.find(
@@ -314,7 +339,7 @@ export default function AustinCulturalMap() {
 
         {viewMode === "history" && (
           <ErrorBoundary>
-            <HistoryView />
+            <HistoryView initialEventId={historyFocusId} onShowOnMap={handleShowEventOnMap} />
           </ErrorBoundary>
         )}
 
@@ -390,6 +415,9 @@ export default function AustinCulturalMap() {
               activeNeighborhoodId={activeNeighborhoodId}
               setActiveNeighborhoodId={setActiveNeighborhoodId}
               neighborhoodAgg={neighborhoodAgg}
+              onOpenHistory={handleOpenHistory}
+              flyToTarget={flyToTarget}
+              onFlyToHandled={() => setFlyToTarget(null)}
             />
           </ErrorBoundary>
         )}

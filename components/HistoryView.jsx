@@ -107,7 +107,7 @@ const AXIS_TICKS = [
   { y: 2026, label: "2026" },
 ];
 
-export default function HistoryView() {
+export default function HistoryView({ initialEventId = null, onShowOnMap = null }) {
   const mapRef = useRef(null);
   const leafletRef = useRef(null);
   const eventsLayerRef = useRef(null);
@@ -160,6 +160,15 @@ export default function HistoryView() {
     const map = leafletRef.current;
     if (map && ev?.coordinates) map.panTo([ev.coordinates.lat, ev.coordinates.lon]);
   }, []);
+
+  // Arriving from a map timeline tick's "Read more" → pre-select that event.
+  // Deferred a tick so the Leaflet init effect (declared below) has run and
+  // selectEvent can pan the history map to the event.
+  useEffect(() => {
+    if (!initialEventId || !EVENT_BY_ID.has(initialEventId)) return;
+    const t = setTimeout(() => selectEvent(initialEventId), 0);
+    return () => clearTimeout(t);
+  }, [initialEventId, selectEvent]);
 
   // ── Leaflet init (once) ──
   useEffect(() => {
@@ -499,6 +508,18 @@ export default function HistoryView() {
                   📍 {selected.primary_location_name}
                   {selected.coordinates?.precision ? ` · precision: ${selected.coordinates.precision}` : selected.coordinates ? "" : " · not mapped"}
                 </p>
+              )}
+              {/* Cross-link: spatial stories belong on the main map too */}
+              {onShowOnMap && selected.coordinates && (
+                <button
+                  onClick={() => onShowOnMap(selected)}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 5, marginBottom: 10, padding: "4px 12px", borderRadius: 6, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontSize: 11, fontWeight: 600, cursor: "pointer" }}
+                >
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor" />
+                  </svg>
+                  Show on main map
+                </button>
               )}
               <p style={{ fontSize: 12.5, color: "#1a1a1a", lineHeight: 1.55, margin: "0 0 10px" }}>{selected.event_description_neutral}</p>
 

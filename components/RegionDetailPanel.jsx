@@ -3,7 +3,7 @@ import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
-import { DEMO_COLORS } from "../data/constants";
+import { DEMO_COLORS, TIMELINE_EVENTS } from "../data/constants";
 import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi, getDviConfidence } from "../utils/math";
 import ConfidenceChip from "./ConfidenceChip";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
@@ -90,6 +90,22 @@ export default function RegionDetailPanel({
       ? getDviConfidence(activeRegionId, year)
       : null;
 
+  // Year-aware policy callout: when the slider crosses a policy event
+  // relevant to this tract, surface it at the moment it explains the data.
+  // East-side events only fire for tracts east of I-35 (centroid check).
+  const policyCallout = (() => {
+    const region = !isNeighborhoodMode && activeRegionId != null
+      ? REGION_INDEX.find((r) => r.region_id === activeRegionId)
+      : null;
+    const eastOfI35 = region ? region.lng > -97.735 : false;
+    const candidates = TIMELINE_EVENTS.filter((e) =>
+      e.callout &&
+      Math.abs(year - e.year) <= 1 &&
+      (e.affects === "citywide" || (e.affects === "east" && eastOfI35))
+    );
+    return candidates.length ? _.minBy(candidates, (e) => Math.abs(year - e.year)) : null;
+  })();
+
   const panelTabs = [
     { key: "demographics", label: "Demographics" },
     { key: "economics", label: "Economics" },
@@ -165,6 +181,26 @@ export default function RegionDetailPanel({
               );
             })()}
           </div>
+
+          {/* Tipping-point teaser — the strongest narrative asset, surfaced
+              outside the Culture tab it lives in */}
+          {tippingPoint && tippingPoint.magnitude !== "N/A" && panelTab !== "culture" && (
+            <button
+              onClick={() => setPanelTab("culture")}
+              style={{ display: "block", marginTop: 10, background: "none", border: "none", padding: 0, fontSize: 11, fontWeight: 600, color: "#b45309", cursor: "pointer", textAlign: "left" }}
+            >
+              ⚡ Tipping point: {tippingPoint.decade} →
+            </button>
+          )}
+
+          {/* Year-aware policy callout (narrative-callout treatment) */}
+          {policyCallout && (
+            <div style={{ marginTop: 10, background: "#eff6ff", borderLeft: "3px solid #2563eb", borderRadius: 6, padding: "7px 10px" }}>
+              <p style={{ fontSize: 11, color: "#1e3a8a", margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>
+                <strong>{policyCallout.year} — {policyCallout.label}:</strong> {policyCallout.callout}
+              </p>
+            </div>
+          )}
 
           {/* Panel tab bar */}
           <div style={{ display: "flex", gap: 0, marginTop: 14, borderBottom: "2px solid #e8e5e0" }} role="tablist" aria-label="Detail panel sections">

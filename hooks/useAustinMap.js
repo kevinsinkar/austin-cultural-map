@@ -78,6 +78,8 @@ export default function useAustinMap({
   boundaryMode,
   activeNeighborhoodId,
   setActiveNeighborhoodId,
+  flyToTarget,
+  onFlyToHandled,
 }) {
   const leafletMapRef = useRef(null);
   const geojsonLayerRef = useRef(null); // Leaflet layer for tract regions
@@ -575,6 +577,14 @@ export default function useAustinMap({
       targetLayer.bringToFront();
     }
   }, [activeRegionId]);
+
+  // ── Fly to a pending target (e.g., a History event's location) ──
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    if (!map || !flyToTarget) return;
+    map.flyTo([flyToTarget.lat, flyToTarget.lng], flyToTarget.zoom || 14, { duration: 0.9 });
+    onFlyToHandled?.();
+  }, [flyToTarget]);
 
   // ── Clear active feature when selectedRegion is cleared ──
   useEffect(() => {
