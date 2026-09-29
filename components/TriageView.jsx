@@ -309,6 +309,9 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
         <p style={{ fontSize: 13, color: "#64615b", margin: 0, lineHeight: 1.5 }}>
           Which neighborhoods should receive preservation grants this year? Three lenses for analyzing displacement risk across all {activeData.length} regions.
         </p>
+        <p style={{ fontSize: 11, color: "#92400e", margin: "6px 0 0", lineHeight: 1.5 }}>
+          Screening prototype — these scores are a starting point for staff review and outreach, not validated determinations about any neighborhood.
+        </p>
       </div>
 
       {/* Lens toggle */}
@@ -339,6 +342,19 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       <p style={{ fontSize: 12, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
         {LENSES.find(l => l.key === lens).description}
       </p>
+
+      {/* Trajectory data-comparability caveat */}
+      {lens === "trajectory" && (() => {
+        const fallback = trajectoryData.filter(r => r.velocityComparable === false).length;
+        return (
+          <div style={{ fontSize: 11, color: "#92400e", background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 6, padding: "8px 12px", margin: "0 0 16px", lineHeight: 1.5 }}>
+            Velocity compares 2010 and 2023 using only the census fields measured in <em>both</em> years
+            (early data lacks appreciation, unemployment, and eviction entirely).
+            {fallback > 0 && ` ${fallback} of ${trajectoryData.length} regions lack enough shared fields and fall back to a low-confidence estimate.`}
+            {" "}The &ldquo;intervention window&rdquo; framing is unvalidated — treat these rankings as a screening aid.
+          </div>
+        );
+      })()}
 
       {/* Recommendation — the conclusion comes first; the scatter and
           table below are its evidence. */}

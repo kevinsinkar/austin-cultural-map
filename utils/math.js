@@ -288,6 +288,53 @@ function paCountNear(regionId) {
   }).length;
 }
 
+// ── Comparable cross-year DVI (for velocity) ──
+// Raw deltas between years with different data coverage measure coverage,
+// not change (2010 lacks appreciation/unemployment/eviction entirely).
+// For a year pair, score BOTH years from only the fields present in both,
+// re-weighted. Flat field weights = sub-index weight × within-index weight.
+const FIELD_WEIGHTS = {
+  rentBurden: 0.175, renterShare: 0.105, foreignBorn: 0.07,   // Demographic (35%)
+  appreciation: 0.175, rentIncome: 0.175,                     // Market (35%)
+  poverty: 0.12, unemployment: 0.09, eviction: 0.09,          // Socioeconomic (30%)
+};
+
+function dviFieldScores(regionId, yr) {
+  const d = DEMO_BY_RY.get(`${regionId}_${yr}`);
+  const p = PROP_BY_RY.get(`${regionId}_${yr}`);
+  const s = SOCIO_BY_RY.get(`${regionId}_${yr}`);
+  if (!d && !p && !s) return null;
+  const c = (v) => (v != null && isFinite(v) ? v : null);
+  const cap = (v) => Math.max(0, Math.min(v, 100));
+  const income = c(s?.median_household_income) ?? 30000;
+  return {
+    rentBurden: c(d?.rent_burden_pct) != null ? cap(d.rent_burden_pct / 55 * 100) : null,
+    renterShare: c(d?.pct_owner_occupied) != null ? cap((100 - d.pct_owner_occupied) / 75 * 100) : null,
+    foreignBorn: c(d?.pct_foreign_born) != null ? cap(d.pct_foreign_born / 40 * 100) : null,
+    appreciation: c(p?.pct_home_value_change_yoy) != null ? cap(p.pct_home_value_change_yoy / 15 * 100) : null,
+    rentIncome: c(p?.median_rent_monthly) != null ? cap((p.median_rent_monthly * 12 / Math.max(income, 1)) / 0.50 * 100) : null,
+    poverty: c(s?.poverty_rate) != null ? cap(s.poverty_rate / 30 * 100) : null,
+    unemployment: c(s?.unemployment_rate) != null ? cap(s.unemployment_rate / 15 * 100) : null,
+    eviction: c(s?.eviction_filing_rate) != null ? cap(s.eviction_filing_rate / 10 * 100) : null,
+  };
+}
+
+/**
+ * DVI-style scores for two years computed over their SHARED fields only.
+ * Returns { a, b, fields } or null when fewer than 3 fields are shared
+ * (too little common signal for an honest comparison).
+ */
+export function comparableDviPair(regionId, yrA, yrB) {
+  const fa = dviFieldScores(regionId, yrA);
+  const fb = dviFieldScores(regionId, yrB);
+  if (!fa || !fb) return null;
+  const common = Object.keys(FIELD_WEIGHTS).filter((k) => fa[k] != null && fb[k] != null);
+  if (common.length < 3) return null;
+  const tw = common.reduce((s, k) => s + FIELD_WEIGHTS[k], 0);
+  const score = (f) => +common.reduce((s, k) => s + f[k] * (FIELD_WEIGHTS[k] / tw), 0).toFixed(1);
+  return { a: score(fa), b: score(fb), fields: common.length };
+}
+
 // ── Lens 1: Displacement Trajectory ──
 
 export function calcTrajectory(regionId) {
@@ -305,11 +352,22 @@ export function calcTrajectory(regionId) {
       velocity: 0, acceleration: 0, interventionWindow: 0,
       priority: 0, dvi2023, dvi2010, dvi2000,
       category: "Affluent / Appreciated",
+      velocityComparable: true,
     };
   }
 
-  const velocityRecent = (dvi2023 - dvi2010) / 13;
-  const velocityPrior = (dvi2010 - dvi2000) / 10;
+  // Honest velocity: score both endpoint years from their SHARED fields
+  // only (comparableDviPair). Raw interpolated-DVI deltas conflate data
+  // coverage with change; they remain only as a flagged fallback.
+  const pairRecent = comparableDviPair(regionId, 2010, 2023);
+  const pairPrior = comparableDviPair(regionId, 2000, 2010);
+  const velocityComparable = pairRecent != null;
+  const velocityRecent = pairRecent
+    ? (pairRecent.b - pairRecent.a) / 13
+    : (dvi2023 - dvi2010) / 13;
+  const velocityPrior = pairPrior
+    ? (pairPrior.b - pairPrior.a) / 10
+    : (dvi2010 - dvi2000) / 10;
 
   const MAX_VELOCITY = 3.0;
   const velocity = Math.max(0, Math.min(velocityRecent / MAX_VELOCITY * 100, 100));
@@ -364,6 +422,7 @@ export function calcTrajectory(regionId) {
     dvi2010: +dvi2010.toFixed(1),
     dvi2000: +dvi2000.toFixed(1),
     category,
+    velocityComparable,
   };
 }
 

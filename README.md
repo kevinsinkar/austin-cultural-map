@@ -58,9 +58,11 @@ npm run preview
 
 All data lives in `data/phase1_output/` as three audited, normalized JSON files covering 269 regions:
 
-- **Demographics** (4,811 rows) — population, race/ethnicity, education, rent burden, age
-- **Property** (2,645 rows) — home values, rent, commercial sqft, vacancy, permits
-- **Socioeconomic** (2,544 rows) — income, poverty, unemployment, Gini coefficient, eviction, SNAP
+- **Demographics** (1,542 rows; 2000–2023) — population, race/ethnicity, education, rent burden, age
+- **Property** (1,052 rows; 2010–2023) — home values, rent, commercial sqft, vacancy, permits
+- **Socioeconomic** (1,052 rows; 2010–2023) — income, poverty, unemployment, Gini coefficient, eviction, SNAP
+
+Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the DVI re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. See `DATA_METHODOLOGY.md`.
 
 Business data tracks 41 operating and 52 closed cultural anchors with location, founding year, and displacement pressure ratings.
 

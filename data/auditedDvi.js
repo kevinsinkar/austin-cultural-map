@@ -37,9 +37,33 @@ function num(v, fb = 0) {
   return v != null && isFinite(v) ? v : fb;
 }
 
+/** A numeric value, or null when missing/non-finite (no zero-filling). */
+function val(v) {
+  return v != null && isFinite(v) ? v : null;
+}
+
 /** Clamp a value between 0 and cap. */
 function clamp(v, cap = 100) {
   return Math.max(0, Math.min(v, cap));
+}
+
+/**
+ * Combine weighted components, re-normalizing weights over the components
+ * that are actually present. Missing components are EXCLUDED, not scored
+ * as zero — zero-filling systematically depressed early-year scores (2010
+ * has no appreciation/unemployment/eviction data at all) and inflated the
+ * apparent 2010→2023 DVI rise to 98% of regions.
+ * Returns { score, present, total }; score is null when nothing is present.
+ */
+function subIndex(parts) {
+  const present = parts.filter(([v]) => v != null);
+  if (present.length === 0) return { score: null, present: 0, total: parts.length };
+  const tw = present.reduce((a, [, w]) => a + w, 0);
+  return {
+    score: present.reduce((a, [v, w]) => a + v * (w / tw), 0),
+    present: present.length,
+    total: parts.length,
+  };
 }
 
 // ── Collect distinct (region_id, year) pairs from the pre-built Maps ─────
@@ -66,13 +90,14 @@ for (const [id, rows] of AUDITED_SOCIO_BY_ID) {
  * Fields are already normalized by auditedData.js.
  */
 function demScore(d) {
-  if (!d) return null;
-  const rentBurden = clamp(num(d.rent_burden_pct) / 55 * 100);
-  const renterShare = clamp(
-    (100 - num(d.pct_owner_occupied, 50)) / 75 * 100
-  );
-  const foreignBorn = clamp(num(d.pct_foreign_born) / 40 * 100);
-  return 0.50 * rentBurden + 0.30 * renterShare + 0.20 * foreignBorn;
+  if (!d) return { score: null, present: 0, total: 3 };
+  const rentBurden = val(d.rent_burden_pct) != null
+    ? clamp(d.rent_burden_pct / 55 * 100) : null;
+  const renterShare = val(d.pct_owner_occupied) != null
+    ? clamp((100 - d.pct_owner_occupied) / 75 * 100) : null;
+  const foreignBorn = val(d.pct_foreign_born) != null
+    ? clamp(d.pct_foreign_born / 40 * 100) : null;
+  return subIndex([[rentBurden, 0.50], [renterShare, 0.30], [foreignBorn, 0.20]]);
 }
 
 /**
@@ -81,12 +106,14 @@ function demScore(d) {
  * Fields are already normalized by auditedData.js.
  */
 function propScore(p, s) {
-  if (!p) return null;
-  const appreciation = clamp(num(p.pct_home_value_change_yoy) / 15 * 100);
-  const rent = num(p.median_rent_monthly);
+  if (!p) return { score: null, present: 0, total: 2 };
+  const appreciation = val(p.pct_home_value_change_yoy) != null
+    ? clamp(p.pct_home_value_change_yoy / 15 * 100) : null;
+  const rent = val(p.median_rent_monthly);
   const income = s ? num(s.median_household_income, 30000) : 30000;
-  const rentIncomeRatio = clamp((rent * 12 / Math.max(income, 1)) / 0.50 * 100);
-  return 0.50 * appreciation + 0.50 * rentIncomeRatio;
+  const rentIncomeRatio = rent != null
+    ? clamp((rent * 12 / Math.max(income, 1)) / 0.50 * 100) : null;
+  return subIndex([[appreciation, 0.50], [rentIncomeRatio, 0.50]]);
 }
 
 /**
@@ -95,11 +122,14 @@ function propScore(p, s) {
  * Fields are already normalized by auditedData.js.
  */
 function socioScore(s) {
-  if (!s) return null;
-  const poverty = clamp(num(s.poverty_rate) / 30 * 100);
-  const unemp = clamp(num(s.unemployment_rate) / 15 * 100);
-  const eviction = clamp(num(s.eviction_filing_rate) / 10 * 100);
-  return 0.40 * poverty + 0.30 * unemp + 0.30 * eviction;
+  if (!s) return { score: null, present: 0, total: 3 };
+  const poverty = val(s.poverty_rate) != null
+    ? clamp(s.poverty_rate / 30 * 100) : null;
+  const unemp = val(s.unemployment_rate) != null
+    ? clamp(s.unemployment_rate / 15 * 100) : null;
+  const eviction = val(s.eviction_filing_rate) != null
+    ? clamp(s.eviction_filing_rate / 10 * 100) : null;
+  return subIndex([[poverty, 0.40], [unemp, 0.30], [eviction, 0.30]]);
 }
 
 // ── Build AUDITED_DVI_LOOKUP ─────────────────────────────────────────────
@@ -114,9 +144,20 @@ for (const [regionId, years] of regionYears) {
     const p = PROP_BY_RY.get(key);
     const s = SOCIO_BY_RY.get(key);
 
-    const V = demScore(d);
-    const P = propScore(p, s);
-    const S = socioScore(s);
+    const Vr = demScore(d);
+    const Pr = propScore(p, s);
+    const Sr = socioScore(s);
+    const V = Vr.score;
+    const P = Pr.score;
+    const S = Sr.score;
+
+    // Fraction of the 8 underlying input fields present for this
+    // (region, year). Consumers use it to judge whether two years'
+    // DVI values are comparable (e.g., Trajectory velocity).
+    const coverage = +(
+      (Vr.present + Pr.present + Sr.present) /
+      (Vr.total + Pr.total + Sr.total)
+    ).toFixed(2);
 
     // Data Confidence Score: average audit_confidence across available sources.
     // audit_confidence can be a string ("high"/"medium"/"low"), an object of
@@ -175,7 +216,7 @@ for (const [regionId, years] of regionYears) {
     }
 
     dvi = +dvi.toFixed(1);
-    pts.push({ year: yr, dvi, isExcluded });
+    pts.push({ year: yr, dvi, isExcluded, coverage });
   }
   // Sort by year for correct interpolation
   pts.sort((a, b) => a.year - b.year);

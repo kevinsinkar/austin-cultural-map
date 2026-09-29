@@ -106,7 +106,8 @@ export default function AboutModal({ onClose }) {
             <p style={{ margin: "0 0 12px" }}>
               <strong>Triage</strong> — A grant-prioritization tool with three analytical lenses
               (Trajectory, Equity, Risk Matrix) to help target preservation funding where it
-              is needed most.
+              is needed most. Triage scores are a screening prototype — a starting point for
+              staff review, pending validation — not determinations about any neighborhood.
             </p>
 
             <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>

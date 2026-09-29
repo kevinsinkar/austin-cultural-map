@@ -74,6 +74,25 @@ Full review in `docs/ux-ui-design-review.md`; implementation sequence in `docs/u
 | Low | Compare view: wire to global year slider (or label "Latest data 2023"); add citywide baseline lines | Not Started — deferred |
 | Low | Read-only mobile fallback below 900px (tract lookup + DVI card) | Not Started — deferred |
 
+#### Methodology Review — September 2026 External Critique
+
+Findings from an external data review of the DVI and Triage lenses; verified against `data/phase1_output/` before acting.
+
+| Priority | Task | Status |
+| --- | --- | --- |
+| High | Field-level re-weighting in DVI — missing fields excluded and weights re-normalized instead of zero-filled (2010 lacked appreciation/unemployment/eviction entirely, inflating 2010→2023 "rise" to 98% of regions; now 43%) | Done |
+| High | Honest Trajectory velocity — both endpoint years scored from only fields measured in both (`comparableDviPair`); non-comparable regions flagged and disclosed in the Triage UI | Done |
+| High | Label Triage as a screening prototype pending staff validation; "intervention window" marked unvalidated | Done |
+| High | Reconcile README row counts with actual audited files (1,542 / 1,052 / 1,052) | Done |
+| High | Add direct displacement measures — change in Black+Hispanic population share, renter/owner turnover — alongside the vulnerability-based DVI | Not Started |
+| Med | "PA dollars vs. need" board view — share of PA grant dollars by DVI need band | Not Started |
+| Med | Preservation Gap refinement — weight by grant dollars, don't pin citywide advocacy downtown, reconsider the 1.3 km radius | Not Started |
+| Med | Broaden equity definition beyond Black+Hispanic to FY27 advocacy priorities (Native American, LGBTQIA+, women, disability, working class); replace east-of-I-35 centroid proxy | Not Started |
+| Med | Compute tipping-point percentages from the data instead of hard-coded narrative strings | Not Started |
+| Med | Guided 3-minute tour for board audiences | Not Started |
+| Med | Show ACS margins of error at tract level | Not Started |
+| Low | Community review of public-facing labels ("Heritage at Risk" etc.) for stigma/speculation risk; consider a board-only mode | Not Started |
+
 #### Data Gaps — High Priority
 
 | Priority | Task | Status |
