@@ -4,7 +4,7 @@ import {
   AUDITED_SOCIO_BY_ID, AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID,
   DEMO_BY_RY, SOCIO_BY_RY, PROP_BY_RY, closestRow,
 } from "../data/auditedData.js";
-import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, REGION_INDEX } from "../data";
+import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, REGION_INDEX, SOCIOECONOMIC } from "../data";
 import { NAME_TO_ID, getMergedIds } from "../data/regionLookup";
 
 // ── DVI interpolation ──
@@ -286,6 +286,97 @@ function paCountNear(regionId) {
     const dlng = item.lng - regionEntry.lng;
     return Math.sqrt(dlat * dlat + dlng * dlng) < 0.012;
   }).length;
+}
+
+// ── Tipping-point statistics (computed, not hard-coded) ──
+// The narrative tipping points in data/tippingPoints.js name a corridor,
+// a decade, and the policy events; the numbers are computed HERE from the
+// audited census data for the corridor's tracts, so a stat shown in the
+// panel can never drift from the data underneath it.
+const TIPPING_DATA_YEARS = [2000, 2005, 2010, 2015, 2020, 2023];
+const MIN_GROUP_BASE = 100; // people; % change on smaller bases is noise
+
+function nearestTippingYear(y) {
+  return TIPPING_DATA_YEARS.reduce(
+    (best, yr) => (Math.abs(yr - y) < Math.abs(best - y) ? yr : best),
+    TIPPING_DATA_YEARS[0]
+  );
+}
+
+function aggDemoAt(regionIds, yr) {
+  let pop = 0, black = 0, hispanic = 0, white = 0, tracts = 0;
+  for (const id of regionIds) {
+    const r = (AUDITED_DEMO_BY_ID.get(id) || []).find((x) => x.year === yr);
+    if (!r || r.total_population == null) continue;
+    tracts++;
+    pop += r.total_population;
+    if (r.pct_black_non_hispanic != null) black += (r.pct_black_non_hispanic / 100) * r.total_population;
+    if (r.pct_hispanic != null) hispanic += (r.pct_hispanic / 100) * r.total_population;
+    if (r.pct_white_non_hispanic != null) white += (r.pct_white_non_hispanic / 100) * r.total_population;
+  }
+  return tracts ? { pop, black, hispanic, white, tracts } : null;
+}
+
+// Mean of tract median home values; audited property data first (2010+),
+// legacy interim socioeconomic rows as the pre-2010 fallback.
+function aggHomeValueAt(regionIds, yr) {
+  const vals = [];
+  for (const id of regionIds) {
+    const p = (AUDITED_PROP_BY_ID.get(id) || []).find((x) => x.year === yr);
+    if (p?.median_home_value != null) { vals.push(p.median_home_value); continue; }
+    const s = SOCIOECONOMIC.find((x) => x.region_id === id && x.year === yr);
+    if (s?.homeValue) vals.push(s.homeValue);
+  }
+  return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+}
+
+/**
+ * Compute a tipping point's quantitative story from the audited data:
+ * group population changes and home-value change across the corridor's
+ * tracts over its decade (clamped to available census years).
+ * Returns null when the corridor has no usable data.
+ */
+export function computeTippingStats(tp) {
+  const ids = tp?.region_ids || [];
+  const nums = String(tp?.decade || "").match(/\d{4}/g);
+  if (!ids.length || !nums || nums.length < 2) return null;
+  let fromYear = nearestTippingYear(+nums[0]);
+  const toYear = nearestTippingYear(+nums[1]);
+  if (fromYear >= toYear) return null;
+
+  let a = aggDemoAt(ids, fromYear);
+  // Some corridors' data starts later than the narrative decade (e.g.,
+  // Holly begins in 2010) — walk forward to the first year with data.
+  while (!a) {
+    const next = TIPPING_DATA_YEARS[TIPPING_DATA_YEARS.indexOf(fromYear) + 1];
+    if (next == null || next >= toYear) break;
+    fromYear = next;
+    a = aggDemoAt(ids, fromYear);
+  }
+  const b = aggDemoAt(ids, toYear);
+  const group = (k) => {
+    if (!a || !b) return null;
+    const from = Math.round(a[k]);
+    const to = Math.round(b[k]);
+    if (from < MIN_GROUP_BASE) return null;
+    return { from, to, pct: +(((to - from) / from) * 100).toFixed(0) };
+  };
+  const hvA = aggHomeValueAt(ids, fromYear);
+  const hvB = aggHomeValueAt(ids, toYear);
+
+  const out = {
+    fromYear,
+    toYear,
+    tracts: Math.max(a?.tracts || 0, b?.tracts || 0),
+    black: group("black"),
+    hispanic: group("hispanic"),
+    white: group("white"),
+    pop: group("pop"),
+    homeValue: hvA != null && hvB != null && hvA > 0
+      ? { from: Math.round(hvA), to: Math.round(hvB), pct: +(((hvB - hvA) / hvA) * 100).toFixed(0) }
+      : null,
+  };
+  return [out.black, out.hispanic, out.white, out.pop, out.homeValue].some(Boolean) ? out : null;
 }
 
 // ── Direct displacement measures ──

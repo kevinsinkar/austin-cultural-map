@@ -81,7 +81,8 @@ export default function AboutModal({ onClose }) {
               community-sourced business inventories to reveal where heritage communities are
               under pressure — and where intervention can still make a difference. This is an
               independent research tool built as a potential resource for organizations like
-              Preservation Austin.
+              Preservation Austin. New here? The <strong>▶ Tour</strong> button in the header
+              gives a 3-minute guided walkthrough.
             </p>
 
             <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>

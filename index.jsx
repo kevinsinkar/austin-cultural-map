@@ -33,6 +33,7 @@ import ComparisonView from "./components/ComparisonView";
 import TriageView from "./components/TriageView";
 import TimelineView from "./components/TimelineView";
 import HistoryView from "./components/HistoryView";
+import GuidedTour from "./components/GuidedTour";
 
 // ── Consolidated, URL-serializable view state ──
 // One object holds everything a shareable link must reproduce:
@@ -99,6 +100,7 @@ export default function AustinCulturalMap() {
   const [selectedPA, setSelectedPA] = useState(null);
   const [showAbout, setShowAbout] = useState(false);
   const [showAgenda, setShowAgenda] = useState(false);
+  const [tourOpen, setTourOpen] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
   // Cross-view history links: event to pre-select when opening the History
   // tab, and a pending main-map flyTo target from a History event.
@@ -170,9 +172,12 @@ export default function AustinCulturalMap() {
     () => (activeRegionId ? findPriorSocio(activeRegionId, year) : null),
     [activeRegionId, year]
   );
+  // Tipping points are joined on tract ids (region_ids), not display names —
+  // the corridor labels never matched region_name strings, which left the
+  // tipping-point card unreachable in tract mode.
   const tippingPoint = useMemo(
-    () => (activeRegionName ? TIPPING_POINTS.find((t) => t.region === activeRegionName) : null),
-    [activeRegionName]
+    () => (activeRegionId != null ? TIPPING_POINTS.find((t) => t.region_ids?.includes(activeRegionId)) : null),
+    [activeRegionId]
   );
 
   // Neighborhood aggregation (full panel data for neighborhood mode)
@@ -318,7 +323,24 @@ export default function AustinCulturalMap() {
         setViewMode={setViewMode}
         setShowAbout={setShowAbout}
         setShowAgenda={setShowAgenda}
+        onStartTour={() => setTourOpen(true)}
       />
+
+      {/* Guided tour (~3 min) — drives the app through its three purposes */}
+      {tourOpen && (
+        <GuidedTour
+          onClose={() => setTourOpen(false)}
+          ctx={{
+            setViewMode,
+            setYear,
+            setShowHolc,
+            setIsPlaying,
+            setTriageLens,
+            setPanelTab,
+            locate: handleLocateOnMap,
+          }}
+        />
+      )}
 
       {/* About Modal */}
       {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}

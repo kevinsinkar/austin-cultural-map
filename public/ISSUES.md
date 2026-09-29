@@ -88,8 +88,8 @@ Findings from an external data review of the DVI and Triage lenses; verified aga
 | Med | "PA dollars vs. need" board view — share of PA grant dollars by DVI need band | Not Started |
 | Med | Preservation Gap refinement — weight by grant dollars, don't pin citywide advocacy downtown, reconsider the 1.3 km radius | Not Started |
 | Med | Broaden equity definition beyond Black+Hispanic to FY27 advocacy priorities (Native American, LGBTQIA+, women, disability, working class); replace east-of-I-35 centroid proxy | Not Started |
-| Med | Compute tipping-point percentages from the data instead of hard-coded narrative strings | Not Started |
-| Med | Guided 3-minute tour for board audiences | Not Started |
+| Med | Compute tipping-point percentages from the data instead of hard-coded narrative strings | Done — `computeTippingStats` computes group/home-value changes at render time; tipping points now join on tract ids (the old name join never matched, leaving the card unreachable) |
+| Med | Guided 3-minute tour for board audiences | Done — 8-step tour (header ▶ Tour button) that drives the live app: history → 1928/redlining roots → 35-year playback → tract story → compare → triage → shareable URLs |
 | Med | Show ACS margins of error at tract level | Not Started |
 | Low | Community review of public-facing labels ("Heritage at Risk" etc.) for stigma/speculation risk; consider a board-only mode | Not Started |
 

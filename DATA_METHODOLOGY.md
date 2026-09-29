@@ -459,7 +459,7 @@ The home value surge callout (>100% increase) works similarly — it compares ag
 
 ### Tipping Point Narratives in Neighborhood Mode
 
-Tipping point narratives are hand-written per tract (stored in `data/tippingPoints.js`). In neighborhood mode, the panel displays **all** tipping point narratives from constituent tracts, labeled with the originating tract name. A neighborhood spanning five tracts might show zero, one, or multiple tipping point narratives depending on how many of its tracts have them. These are not aggregated or merged — each is shown as written, with its tract of origin identified.
+Tipping point records (`data/tippingPoints.js`) carry a hand-written qualitative narrative (`context`, policy events, citations) per corridor, joined to tracts by explicit `region_ids`. The quantitative claims — group population changes and home-value change over the corridor's decade — are **computed at render time** from the audited census data by `computeTippingStats` (`utils/math.js`), clamped to available census years (a corridor whose data starts later than its narrative decade, like Holly at 2010, is measured from its first data year), with percentage changes suppressed for group bases under 100 people. Home values use audited property medians (2010+) with the interim socioeconomic series as the pre-2010 fallback, averaged across tract medians. In neighborhood mode, the panel shows the tipping points of any corridor intersecting the neighborhood's tracts (Sept 2026 revision: previously narratives were matched by display name, which no longer matched any tract and left the card unreachable).
 
 ### Source
 

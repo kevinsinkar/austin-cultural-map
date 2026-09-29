@@ -325,12 +325,10 @@ export function aggregateNeighborhood(neighborhoodId, year) {
 
   // ═══ CULTURE TAB — tipping points ═══
 
-  const tippingPoints = tract_ids
-    .map(tid => {
-      const name = ID_TO_NAME.get(tid);
-      return TIPPING_POINTS.find(t => t.region === name);
-    })
-    .filter(Boolean);
+  // Join on tract ids — corridor display names never matched tract names
+  const tippingPoints = TIPPING_POINTS.filter(
+    t => t.region_ids?.some(id => tract_ids.includes(id))
+  );
 
   // ═══ RETURN ═══
 

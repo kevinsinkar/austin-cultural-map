@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 import { DEMO_COLORS, TIMELINE_EVENTS } from "../data/constants";
-import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi, getDviConfidence, calcDirectDisplacement } from "../utils/math";
+import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi, getDviConfidence, calcDirectDisplacement, computeTippingStats } from "../utils/math";
 import ConfidenceChip from "./ConfidenceChip";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
@@ -564,8 +564,37 @@ export default function RegionDetailPanel({
                   <span style={{ fontSize: 12, fontWeight: 700, color: "#92400e" }}>What Happened Here?</span>
                   <span style={{ fontSize: 11, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
                 </div>
-                <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>The tipping point: {tippingPoint.decade}</div>
-                <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.description}</p>
+                <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>
+                  The tipping point: {tippingPoint.region} · {tippingPoint.decade}
+                </div>
+                {/* Quantitative story computed from the audited census data,
+                    never stored as prose (see computeTippingStats) */}
+                {(() => {
+                  const st = computeTippingStats(tippingPoint);
+                  if (!st) return null;
+                  const seg = (label, g, unit) => g && (
+                    <div key={label}>
+                      {label}: {unit === "$" ? `$${(g.from / 1000).toFixed(0)}k → $${(g.to / 1000).toFixed(0)}k` : `${g.from.toLocaleString()} → ${g.to.toLocaleString()}`}{" "}
+                      <strong style={{ color: g.pct <= -15 ? "#b91c1c" : g.pct >= 50 ? "#92400e" : "#44403c" }}>
+                        ({g.pct > 0 ? "+" : ""}{g.pct}%)
+                      </strong>
+                    </div>
+                  );
+                  return (
+                    <div style={{ fontSize: 12, color: "#44403c", lineHeight: 1.6, marginBottom: 8 }}>
+                      {seg("Black population", st.black)}
+                      {seg("Hispanic population", st.hispanic)}
+                      {seg("White population", st.white)}
+                      {seg("Median home value (avg. of tract medians)", st.homeValue, "$")}
+                      <div style={{ fontSize: 11, color: "#a8a49c", marginTop: 2 }}>
+                        Computed from census data, {st.fromYear}–{st.toYear}, across {st.tracts} tract{st.tracts === 1 ? "" : "s"}.
+                      </div>
+                    </div>
+                  );
+                })()}
+                {tippingPoint.context && (
+                  <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.context}</p>
+                )}
                 <div style={{ fontSize: 11, color: "#78716c", lineHeight: 1.4, borderTop: "1px solid #e6dfc8", paddingTop: 8 }}>
                   <strong style={{ color: "#92400e" }}>Catalyst:</strong> {tippingPoint.event} <span style={{ color: "#a8a49c" }}>({tippingPoint.eventYear})</span>
                 </div>

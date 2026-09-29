@@ -1,4 +1,4 @@
-export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda }) {
+export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda, onStartTour }) {
   return (
     <header
       style={{ borderBottom: "1px solid #d6d3cd", padding: "20px 28px 16px" }}
@@ -60,6 +60,25 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
                 </button>
               ))}
             </nav>
+            {onStartTour && (
+              <button
+                onClick={onStartTour}
+                style={{
+                  padding: "5px 12px",
+                  borderRadius: 6,
+                  border: "1px solid #0f766e",
+                  background: "#f0fdfa",
+                  color: "#0f766e",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  minHeight: 32,
+                }}
+                aria-label="Take the guided tour (about 3 minutes)"
+              >
+                ▶ Tour
+              </button>
+            )}
             <button
               onClick={() => setShowAgenda(true)}
               style={{
