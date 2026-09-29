@@ -164,7 +164,7 @@ export default function useAustinMap({
         // Census identity is primary in tracts mode
         const meta = regionLookupMap.get(feature.properties.region_id);
         const tooltipText = meta?.tract_label || meta?.display_name || feature.properties.region_name;
-        layer.bindTooltip(tooltipText, { direction: "auto", sticky: true });
+        layer.bindTooltip(tooltipText, { direction: "auto", sticky: true, className: "region-tooltip" });
         layer.on({
           mouseover: (e) => {
             const l = e.target;
@@ -215,7 +215,7 @@ export default function useAustinMap({
       },
       onEachFeature: (feature, layer) => {
         const name = feature.properties.neighborhood_name;
-        layer.bindTooltip(name, { direction: "auto", sticky: true });
+        layer.bindTooltip(name, { direction: "auto", sticky: true, className: "region-tooltip" });
         layer.on({
           mouseover: (e) => {
             const isActive = activeNeighborhoodIdRef.current === feature.properties.neighborhood_id;

@@ -61,6 +61,18 @@ html, body {
   }
 }
 
+/* Region hover tooltips: Leaflet's default is white-space: nowrap, which
+   made the multi-line DVI/confidence tooltip one huge box that clipped at
+   the map edge. Wrap at a fixed width so direction:auto can keep the box
+   inside the map on either side of the cursor. */
+.region-tooltip {
+  white-space: normal;
+  max-width: 220px;
+  width: max-content;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .map-region {
   transition: opacity 0.15s, stroke-width 0.15s;
   cursor: pointer;
