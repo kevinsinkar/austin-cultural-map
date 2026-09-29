@@ -288,6 +288,37 @@ function paCountNear(regionId) {
   }).length;
 }
 
+// ── Direct displacement measures ──
+// Measured change, not modeled vulnerability: the shift in Black+Hispanic
+// population share and in renter share between the earliest reliable
+// census year (2000, else 2010) and the latest (2023, else 2020).
+// Complements the DVI, which is built mostly from vulnerability levels.
+export function calcDirectDisplacement(regionId) {
+  const rows = AUDITED_DEMO_BY_ID.get(regionId);
+  if (!rows || !rows.length) return null;
+  const at = (yr) => rows.find((r) => r.year === yr);
+  const bh = (r) => (r?.pct_black_non_hispanic != null && r?.pct_hispanic != null)
+    ? r.pct_black_non_hispanic + r.pct_hispanic : null;
+  const renter = (r) => (r?.pct_owner_occupied != null ? 100 - r.pct_owner_occupied : null);
+
+  const to = [2023, 2020].map(at).find((r) => bh(r) != null);
+  const from = [2000, 2010].map(at).find((r) => bh(r) != null);
+  if (!from || !to || from.year >= to.year) return null;
+
+  const bhFrom = bh(from), bhTo = bh(to);
+  const rFrom = renter(from), rTo = renter(to);
+  return {
+    fromYear: from.year,
+    toYear: to.year,
+    bhFrom: +bhFrom.toFixed(1),
+    bhTo: +bhTo.toFixed(1),
+    bhDelta: +(bhTo - bhFrom).toFixed(1),
+    renterFrom: rFrom != null ? +rFrom.toFixed(1) : null,
+    renterTo: rTo != null ? +rTo.toFixed(1) : null,
+    renterDelta: rFrom != null && rTo != null ? +(rTo - rFrom).toFixed(1) : null,
+  };
+}
+
 // ── Comparable cross-year DVI (for velocity) ──
 // Raw deltas between years with different data coverage measure coverage,
 // not change (2010 lacks appreciation/unemployment/eviction entirely).

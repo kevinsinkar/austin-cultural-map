@@ -7,7 +7,7 @@ import {
 import { VISIBLE_REGIONS } from "../data/regionLookup";
 import {
   calcTrajectory, calcEquityPriority, calcRiskMatrix,
-  getDviBandColor,
+  calcDirectDisplacement, getDviBandColor,
 } from "../utils/math";
 
 // ── Default DVI sub-index weights ──
@@ -57,6 +57,7 @@ const TRAJECTORY_COLS = [
   { key: "name", label: "Region" },
   { key: "priority", label: "Score" },
   { key: "dvi2023", label: "DVI '23" },
+  { key: "bhDelta", label: "ΔB+H pts" },
   { key: "velocity", label: "Velocity" },
   { key: "acceleration", label: "Accel." },
   { key: "interventionWindow", label: "Window" },
@@ -164,7 +165,12 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       const name = r.display_name;
 
       const t = calcTrajectory(rid);
-      if (t) traj.push({ regionId: rid, name, ...t });
+      if (t) {
+        // Measured Black+Hispanic share change rides alongside the modeled
+        // scores so the table shows observed displacement, not only risk.
+        const dd = calcDirectDisplacement(rid);
+        traj.push({ regionId: rid, name, ...t, bhDelta: dd?.bhDelta ?? null });
+      }
 
       const e = calcEquityPriority(rid);
       if (e) eq.push({ regionId: rid, name, ...e });
@@ -352,6 +358,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             (early data lacks appreciation, unemployment, and eviction entirely).
             {fallback > 0 && ` ${fallback} of ${trajectoryData.length} regions lack enough shared fields and fall back to a low-confidence estimate.`}
             {" "}The &ldquo;intervention window&rdquo; framing is unvalidated — treat these rankings as a screening aid.
+            {" "}The <strong>ΔB+H pts</strong> column is measured, not modeled: the change in Black + Hispanic population share (percentage points, earliest census year → 2023).
           </div>
         );
       })()}
@@ -564,6 +571,14 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     }
                     // Numeric columns
                     const isDvi = col.key === "dvi" || col.key === "dvi2023";
+                    // Measured B+H share change: signed, losses highlighted
+                    if (col.key === "bhDelta") {
+                      return (
+                        <td key={col.key} style={{ padding: "6px 8px", textAlign: "right", fontWeight: 600, color: val != null && val <= -5 ? "#b91c1c" : "#1a1a1a" }}>
+                          {val != null ? `${val > 0 ? "+" : ""}${val.toFixed(1)}` : "\u2014"}
+                        </td>
+                      );
+                    }
                     return (
                       <td key={col.key} style={{ padding: "6px 8px", textAlign: "right", fontWeight: isDvi ? 700 : 500, color: isDvi ? getDviBandColor(val) : "#1a1a1a" }}>
                         {val != null ? (typeof val === "number" ? val.toFixed(1) : val) : "\u2014"}

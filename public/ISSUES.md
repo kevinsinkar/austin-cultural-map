@@ -84,7 +84,7 @@ Findings from an external data review of the DVI and Triage lenses; verified aga
 | High | Honest Trajectory velocity — both endpoint years scored from only fields measured in both (`comparableDviPair`); non-comparable regions flagged and disclosed in the Triage UI | Done |
 | High | Label Triage as a screening prototype pending staff validation; "intervention window" marked unvalidated | Done |
 | High | Reconcile README row counts with actual audited files (1,542 / 1,052 / 1,052) | Done |
-| High | Add direct displacement measures — change in Black+Hispanic population share, renter/owner turnover — alongside the vulnerability-based DVI | Not Started |
+| High | Add direct displacement measures — change in Black+Hispanic population share, renter/owner turnover — alongside the vulnerability-based DVI | Done — `calcDirectDisplacement`; ΔB+H column in Trajectory table + "Measured Change" card in detail panel (257/269 regions covered) |
 | Med | "PA dollars vs. need" board view — share of PA grant dollars by DVI need band | Not Started |
 | Med | Preservation Gap refinement — weight by grant dollars, don't pin citywide advocacy downtown, reconsider the 1.3 km radius | Not Started |
 | Med | Broaden equity definition beyond Black+Hispanic to FY27 advocacy priorities (Native American, LGBTQIA+, women, disability, working class); replace east-of-I-35 centroid proxy | Not Started |

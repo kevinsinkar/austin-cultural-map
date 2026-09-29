@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 import { DEMO_COLORS, TIMELINE_EVENTS } from "../data/constants";
-import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi, getDviConfidence } from "../utils/math";
+import { getDviColor, getDviBand, getDviBandColor, getDviBin, isRegionExcluded, DVI_EXCLUDED, calcAnchorDensity, getAnchorBadge, interpolateDvi, getDviConfidence, calcDirectDisplacement } from "../utils/math";
 import ConfidenceChip from "./ConfidenceChip";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
@@ -312,6 +312,39 @@ export default function RegionDetailPanel({
                 );
               })()}
             </div>
+
+            {/* Direct displacement measures (tract mode) — measured census
+                change, shown beside the modeled DVI so a derived score never
+                stands in for an observed shift. */}
+            {!isNeighborhoodMode && activeRegionId != null && (() => {
+              const dd = calcDirectDisplacement(activeRegionId);
+              if (!dd) return null;
+              const delta = (v, unit = " pts") => (
+                <strong style={{ color: v <= -5 ? "#b91c1c" : "#1a1a1a" }}>
+                  {v > 0 ? "+" : ""}{v.toFixed(1)}{unit}
+                </strong>
+              );
+              return (
+                <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
+                  <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 8px" }}>
+                    Measured Change, {dd.fromYear}–{dd.toYear}
+                  </h3>
+                  <div style={{ fontSize: 12, color: "#44403c", lineHeight: 1.7 }}>
+                    <div>
+                      Black + Hispanic share: {dd.bhFrom.toFixed(0)}% → {dd.bhTo.toFixed(0)}% ({delta(dd.bhDelta)})
+                    </div>
+                    {dd.renterDelta != null && (
+                      <div>
+                        Renter share: {dd.renterFrom.toFixed(0)}% → {dd.renterTo.toFixed(0)}% ({delta(dd.renterDelta)})
+                      </div>
+                    )}
+                  </div>
+                  <p style={{ fontSize: 11, color: "#a8a49c", margin: "8px 0 0", lineHeight: 1.4 }}>
+                    Observed census change, not a modeled score. The DVI above estimates vulnerability; these numbers record what happened.
+                  </p>
+                </div>
+              );
+            })()}
 
             {/* Neighborhood composition card (neighborhood mode only) */}
             {isNeighborhoodMode && neighborhoodAgg?.tract_ids && (() => {
