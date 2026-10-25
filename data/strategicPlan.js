@@ -41,6 +41,13 @@ export const OBJECTIVES = [
     ],
     toolSupport:
       "The Outreach planner is the inventory of entry-point activities; the Coverage view tracks reach by council district, and outcome capture on tabled events counts participants.",
+    dviWeights: {
+      sub: "Demographic 45 · Market 25 · Socio 30",
+      fields: "Renter share ↑ 45 within Demographic (rent burden 35, foreign-born 20)",
+      rules: "Gate ON · data-desert boost ON",
+      rationale:
+        "Participation is about reachable people, not hot real estate: renters are the most displaceable and the least reached by homeowner-oriented channels — exactly the first-time-participant pool. A tract doesn't need a hot market for its residents to deserve an entry point.",
+    },
   },
   {
     title: "Grow Advocacy on Every Front",
@@ -52,6 +59,13 @@ export const OBJECTIVES = [
     ],
     toolSupport:
       "Every opportunity is tagged by arena (community / political / business), so outreach activity can be reported per arena.",
+    dviWeights: {
+      sub: "Demographic 25 · Market 50 · Socio 25",
+      fields: "Appreciation ↑ 60 within Market (rent-to-income 40); eviction ↑ 40 within Socio",
+      rules: "Gate ON · data-desert boost OFF",
+      rationale:
+        "Advocacy follows decision points, and market pressure creates them: appreciation tracks the speculation, teardowns, and rezoning cases that reach the Historic Landmark and Planning Commissions; eviction spikes mark where tenant-protection advocacy is timely. Boost off to keep the market signal raw.",
+    },
   },
   {
     title: "Hold Ourselves to a Clear Equity Standard",
@@ -62,6 +76,13 @@ export const OBJECTIVES = [
     ],
     toolSupport:
       "The displacement map plus PA's activity data form the measurement instrument for the annual equity report (Equity Audit overlay planned once PA datasets are shared).",
+    dviWeights: {
+      sub: "Demographic 40 · Market 20 · Socio 40",
+      fields: "Eviction ↑ 50 within Socio (poverty 30, unemployment 20); rent burden 45 + foreign-born 30 within Demographic",
+      rules: "Gate ON · data-desert boost ON (essential)",
+      rationale:
+        "An equity lens weights measured harm, not market excitement: eviction filings are the one field that records displacement happening rather than conditions for it, and foreign-born communities are systematically undercounted. The data-desert boost exists for exactly this objective — equity blind spots live where the data is thinnest.",
+    },
   },
   {
     title: "Preserve the Whole Story of Austin",
@@ -73,6 +94,13 @@ export const OBJECTIVES = [
     ],
     toolSupport:
       "Opportunity audience tags identify heritage communities, so outreach can be checked against the whole story — not just the familiar places.",
+    dviWeights: {
+      sub: "Demographic 45 · Market 30 · Socio 25",
+      fields: "Foreign-born ↑ 50 within Demographic (rent burden 25, renter share 25); appreciation ↑ 60 within Market",
+      rules: "Gate ON · data-desert boost ON",
+      rationale:
+        "Foreign-born % is the DVI's only direct cultural-community field (Black and Hispanic share lives in the Triage lenses, not the DVI), so it carries the whole-story signal. Appreciation leads Market because teardown economics physically erase the buildings the stories live in.",
+    },
   },
   {
     title: "Tell a Clear, Consistent Story",
@@ -85,6 +113,13 @@ export const OBJECTIVES = [
     ],
     toolSupport:
       "Each region's cultural anchors, closures, and history supply locally specific talking points for tabling (neighborhood story cards planned).",
+    dviWeights: {
+      sub: "Default (Demographic 35 · Market 35 · Socio 30)",
+      fields: "No field changes",
+      rules: "Gate ON · data-desert boost ON",
+      rationale:
+        "A consistent public narrative needs a consistent methodology — tell the story with the published default weights so the numbers PA cites never shift between tellings.",
+    },
   },
   {
     title: "Build Pipeline of Future Preservationists",
@@ -96,6 +131,13 @@ export const OBJECTIVES = [
     ],
     toolSupport:
       "School, university, and youth-audience events are searchable in the planner; pipeline stages record relationships as they deepen.",
+    dviWeights: {
+      sub: "Demographic 40 · Market 30 · Socio 30",
+      fields: "Renter share ↑ 50 within Demographic (rent burden 30, foreign-born 20); rent-to-income ↑ 60 within Market",
+      rules: "Gate ON · data-desert boost ON",
+      rationale:
+        "The DVI has no age field, so renter share is the proxy — young Austinites rent. Rent-to-income leads Market because affordability stress is the lived experience that makes preservation's anti-displacement case land with younger audiences.",
+    },
   },
   {
     title: "Financial Resilience",

@@ -62,6 +62,17 @@ export default function StrategicPlanView() {
                 <div style={{ background: "#f0fdfa", border: "1px solid #ccfbf1", borderRadius: 8, padding: "7px 10px", fontSize: 11.5, color: "#115e59", lineHeight: 1.45 }}>
                   <strong>How this tool helps:</strong> {o.toolSupport}
                 </div>
+                {o.dviWeights && (
+                  <div style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: 8, padding: "7px 10px", fontSize: 11.5, color: "#7c2d12", lineHeight: 1.5, marginTop: 6 }}>
+                    <strong>Starting DVI weights for this lens:</strong>
+                    <div style={{ marginTop: 3, fontVariantNumeric: "tabular-nums" }}>
+                      <span style={{ fontWeight: 700 }}>{o.dviWeights.sub}</span>
+                      {" · "}{o.dviWeights.fields}
+                      {" · "}{o.dviWeights.rules}
+                    </div>
+                    <div style={{ marginTop: 3, color: "#9a3412" }}>{o.dviWeights.rationale}</div>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -81,7 +92,9 @@ export default function StrategicPlanView() {
 
       <p style={{ fontSize: 11, color: "#a8a49c", textAlign: "center", margin: "0 0 10px", lineHeight: 1.5 }}>
         Source: Preservation Austin "Strategic Plan on a Page," 2026–2029.
-        "How this tool helps" notes describe this site's support for each measure and are not part of the plan document.
+        "How this tool helps" and "Starting DVI weights" notes describe this site's support for each measure and are not part of the plan document.
+        The suggested weights are logic-based starting points for committee debate — set them in the map's DVI Weights panel, compare against the default before acting, and record adopted weights in the meeting minutes.
+        The vulnerability gate stays on in every configuration.
       </p>
     </section>
   );
