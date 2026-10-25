@@ -1,6 +1,7 @@
 import { useRef, useMemo, useState, useEffect } from "react";
 import useAustinMap from "../hooks/useAustinMap";
 import RegionDetailPanel from "./RegionDetailPanel";
+import RegionSummaryPanel from "./RegionSummaryPanel";
 import LegislationTrack from "./LegislationTrack";
 import LayersPopover from "./LayersPopover";
 import { SNAP_YEARS, PLAY_YEARS, TIMELINE_EVENTS } from "../data/constants";
@@ -478,7 +479,24 @@ export default function MapView({
           </div>
         </div>
 
-        {/* ═══ RIGHT: DETAIL PANEL ═══ */}
+        {/* ═══ RIGHT: SUMMARY (tracts) / DETAIL (neighborhoods) PANEL ═══
+            The full tract profile moved into the printable story card;
+            tract mode shows a compact summary that opens it. The full
+            RegionDetailPanel still serves neighborhood mode. */}
+        {boundaryMode === "tracts" ? (
+          <RegionSummaryPanel
+            activeFeature={activeFeature}
+            activeRegionName={activeDisplayName}
+            activeRegionId={activeRegionId}
+            year={year}
+            currentDvi={currentDvi}
+            regionBizOpen={regionBizOpen}
+            regionBizClosed={regionBizClosed}
+            tippingPoint={tippingPoint}
+            setSelectedRegion={setSelectedRegion}
+            setHoveredRegion={setHoveredRegion}
+          />
+        ) : (
         <RegionDetailPanel
           activeFeature={boundaryMode === "tracts" ? activeFeature : null}
           activeRegionName={boundaryMode === "tracts" ? activeDisplayName : neighborhoodAgg?.name}
@@ -510,6 +528,7 @@ export default function MapView({
           boundaryMode={boundaryMode}
           neighborhoodAgg={neighborhoodAgg}
         />
+        )}
       </div>
     </section>
   );

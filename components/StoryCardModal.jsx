@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+﻿import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import {
   AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid,
@@ -6,7 +6,12 @@ import {
 } from "recharts";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, PA_LABELS, REGION_INDEX, TIPPING_POINTS } from "../data";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
-import { toDemoChartData } from "../data/auditedData";
+import {
+  toDemoChartData,
+  AUDITED_SOCIO_BY_ID,
+  AUDITED_PROP_BY_ID,
+  AUDITED_DEMO_BY_ID,
+} from "../data/auditedData";
 import { DEMO_COLORS } from "../data/constants";
 import { ID_TO_NAME, getMergedIds } from "../data/regionLookup";
 import { regionLookupMap } from "../data/regionIndex";
@@ -16,7 +21,7 @@ import {
 } from "../utils/math";
 
 /**
- * StoryCardModal — a printable one-pager that arms a tabler with the
+ * StoryCardModal â€” a printable one-pager that arms a tabler with the
  * locally specific story for one neighborhood: what the data shows, the
  * cultural anchors still standing, what has been lost, and what
  * Preservation Austin has already done nearby. Supports the plan's
@@ -28,6 +33,47 @@ import {
  */
 
 const NEAR_DEG = 0.012; // ~1.3 km, same radius utils/math.js uses for PA counts
+
+// Earliest and latest rows that actually carry a value for `field`.
+function fieldSpan(rows, field) {
+  const has = (rows || []).filter((r) => r[field] != null && isFinite(r[field]));
+  if (!has.length) return null;
+  return {
+    from: { year: has[0].year, value: has[0][field] },
+    to: { year: has[has.length - 1].year, value: has[has.length - 1][field] },
+  };
+}
+
+const fmtMoney = (v) => (v >= 10000 ? `$${Math.round(v / 1000)}k` : `$${Math.round(v).toLocaleString()}`);
+const fmtPct = (v) => `${v.toFixed(1)}%`;
+
+/** Economics stats: latest value + change since the earliest data year. */
+function buildEconStats(regionId) {
+  const socio = AUDITED_SOCIO_BY_ID.get(regionId) || [];
+  const prop = AUDITED_PROP_BY_ID.get(regionId) || [];
+  const demo = AUDITED_DEMO_BY_ID.get(regionId) || [];
+  const defs = [
+    { label: "Median household income", rows: socio, field: "median_household_income", fmt: fmtMoney, deltaKind: "pct" },
+    { label: "Median home value", rows: prop, field: "median_home_value", fmt: fmtMoney, deltaKind: "pct" },
+    { label: "Median rent / month", rows: prop, field: "median_rent_monthly", fmt: (v) => `$${Math.round(v).toLocaleString()}`, deltaKind: "pct" },
+    { label: "Rent-burdened households", rows: demo, field: "rent_burden_pct", fmt: fmtPct, deltaKind: "pts" },
+    { label: "Poverty rate", rows: socio, field: "poverty_rate", fmt: fmtPct, deltaKind: "pts" },
+    { label: "Unemployment", rows: socio, field: "unemployment_rate", fmt: fmtPct, deltaKind: "pts" },
+    { label: "Eviction filing rate", rows: socio, field: "eviction_filing_rate", fmt: fmtPct, deltaKind: "pts" },
+    { label: "SNAP participation", rows: socio, field: "snap_participation_rate", fmt: fmtPct, deltaKind: "pts" },
+  ];
+  return defs.map((d) => {
+    const span = fieldSpan(d.rows, d.field);
+    if (!span) return null;
+    let delta = null;
+    if (span.from.year !== span.to.year) {
+      delta = d.deltaKind === "pct"
+        ? (span.from.value > 0 ? `${span.to.value >= span.from.value ? "+" : ""}${(((span.to.value - span.from.value) / span.from.value) * 100).toFixed(0)}% since ${span.from.year}` : null)
+        : `${span.to.value >= span.from.value ? "+" : ""}${(span.to.value - span.from.value).toFixed(1)} pts since ${span.from.year}`;
+    }
+    return { label: d.label, value: d.fmt(span.to.value), year: span.to.year, delta };
+  }).filter(Boolean);
+}
 
 export default function StoryCardModal({ regionId, onClose }) {
   // Print-isolation class while the modal is open
@@ -65,33 +111,34 @@ export default function StoryCardModal({ regionId, onClose }) {
     const tp = TIPPING_POINTS.find((t) => t.region_ids?.includes(regionId)) || null;
     const tpStats = tp ? computeTippingStats(tp) : null;
 
-    // Charts use only the years that actually have data — no padded nulls
-    // — and are computed here, so the work happens only when the card is
+    // Charts use only the years that actually have data â€” no padded nulls
+    // â€” and are computed here, so the work happens only when the card is
     // opened, never on ordinary tract selection.
     const demoData = toDemoChartData(regionId).filter((r) => r.White != null);
     const dviSeries = (AUDITED_DVI_LOOKUP[regionId] || []).map((p) => ({ year: p.year, dvi: p.dvi }));
+    const econStats = buildEconStats(regionId);
 
-    return { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries };
+    return { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats };
   }, [regionId]);
 
-  const { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries } = card;
+  const { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats } = card;
   const demoYears = demoData.map((r) => r.year);
   const dviYears = dviSeries.map((r) => r.year);
 
   // Plain-language headline for the data story
   const dataStory = excluded
-    ? "This area is affluent and high-ownership — the index treats its rising values as appreciation, not displacement risk."
+    ? "This area is affluent and high-ownership â€” the index treats its rising values as appreciation, not displacement risk."
     : dviNow >= 55
       ? "Displacement here is largely historic: much of the change this map tracks has already happened."
       : dviNow >= 35
-        ? "This neighborhood is under active displacement pressure right now — the window to act is open."
+        ? "This neighborhood is under active displacement pressure right now â€” the window to act is open."
         : dviNow >= 20
           ? "Early pressure is visible here; conditions are shifting but community fabric is still intact."
           : "Conditions here are comparatively stable today.";
 
   const trendTxt = dvi2000 > 0
-    ? `Displacement vulnerability moved from ${dvi2000.toFixed(0)} (2000) to ${dviNow.toFixed(0)} (2023) on the 0–100 index.`
-    : `Displacement vulnerability stands at ${dviNow.toFixed(0)} (2023) on the 0–100 index.`;
+    ? `Displacement vulnerability moved from ${dvi2000.toFixed(0)} (2000) to ${dviNow.toFixed(0)} (2023) on the 0â€“100 index.`
+    : `Displacement vulnerability stands at ${dviNow.toFixed(0)} (2023) on the 0â€“100 index.`;
 
   // Portal to <body>: the detail panel and Leaflet's floating controls
   // create their own stacking contexts, so rendering in place leaves the
@@ -115,7 +162,7 @@ export default function StoryCardModal({ regionId, onClose }) {
             onClick={() => window.print()}
             style={{ padding: "7px 16px", borderRadius: 8, border: "none", background: "#0f766e", color: "#fffffe", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}
           >
-            🖨 Print card
+            ðŸ–¨ Print card
           </button>
           <button
             onClick={onClose}
@@ -129,7 +176,7 @@ export default function StoryCardModal({ regionId, onClose }) {
         <div className="story-card-sheet" style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #d6d3cd", padding: "26px 30px", fontFamily: "'Libre Franklin','Source Sans 3',sans-serif", color: "#1a1a1a" }}>
           <div style={{ borderBottom: "2.5px solid #9a3412", paddingBottom: 10, marginBottom: 14 }}>
             <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: ".12em", color: "#9a3412", textTransform: "uppercase" }}>
-              Preservation Austin · Neighborhood story card
+              Preservation Austin Â· Neighborhood story card
             </div>
             <h1 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 26, fontWeight: 600, margin: "4px 0 0", lineHeight: 1.15 }}>
               {name}
@@ -157,7 +204,7 @@ export default function StoryCardModal({ regionId, onClose }) {
             <p style={{ fontSize: 12.5, lineHeight: 1.5, margin: "0 0 4px" }}>{dataStory}</p>
             {dd && (
               <p style={{ fontSize: 12, color: "#64615b", lineHeight: 1.5, margin: 0 }}>
-                Measured change {dd.fromYear}–{dd.toYear}: the Black + Hispanic share of residents went
+                Measured change {dd.fromYear}â€“{dd.toYear}: the Black + Hispanic share of residents went
                 from {dd.bhFrom.toFixed(0)}% to {dd.bhTo.toFixed(0)}%
                 ({dd.bhDelta > 0 ? "+" : ""}{dd.bhDelta.toFixed(1)} pts)
                 {dd.renterDelta != null && (
@@ -182,7 +229,7 @@ export default function StoryCardModal({ regionId, onClose }) {
                   </ResponsiveContainer>
                 </div>
                 <div style={{ fontSize: 10, color: "#a8a49c", marginTop: 1 }}>
-                  Displacement Vulnerability Index — measured years only ({dviYears.join(", ")})
+                  Displacement Vulnerability Index â€” measured years only ({dviYears.join(", ")})
                 </div>
               </div>
             )}
@@ -190,7 +237,7 @@ export default function StoryCardModal({ regionId, onClose }) {
 
           {/* Population composition over the measured years */}
           {demoData.length >= 2 && (
-            <Section title="Who lives here — population share over time">
+            <Section title="Who lives here â€” population share over time">
               <div style={{ width: "100%", height: 150 }} role="img" aria-label={`Demographic composition of ${name} across the years with census data`}>
                 <ResponsiveContainer>
                   <AreaChart data={demoData} margin={{ top: 4, right: 8, left: -22, bottom: 0 }}>
@@ -201,11 +248,11 @@ export default function StoryCardModal({ regionId, onClose }) {
                       tickLine={false} axisLine={{ stroke: "#d6d3cd" }}
                     />
                     <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} ticks={[0, 0.5, 1]} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
-                    <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" isAnimationActive={false} />
-                    <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" isAnimationActive={false} />
-                    <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" isAnimationActive={false} />
-                    <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" isAnimationActive={false} />
-                    <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} activeDot={false} name="Other/Multiracial" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} activeDot={false} name="Asian" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} activeDot={false} name="Hispanic/Latino" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} activeDot={false} name="Black" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} activeDot={false} name="White non-Hispanic" isAnimationActive={false} />
                   </AreaChart>
                 </ResponsiveContainer>
               </div>
@@ -219,6 +266,26 @@ export default function StoryCardModal({ regionId, onClose }) {
                 <span style={{ fontSize: 10, color: "#a8a49c", marginLeft: "auto" }}>
                   Census years with data: {demoYears.join(", ")}
                 </span>
+              </div>
+            </Section>
+          )}
+
+          {/* Economics */}
+          {econStats.length > 0 && (
+            <Section title="The economics">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px 12px" }}>
+                {econStats.map((s) => (
+                  <div key={s.label}>
+                    <div style={{ fontSize: 15, fontWeight: 700, color: "#1a1a1a", lineHeight: 1.1 }}>
+                      {s.value} <span style={{ fontSize: 9.5, fontWeight: 400, color: "#a8a49c" }}>'{String(s.year).slice(2)}</span>
+                    </div>
+                    <div style={{ fontSize: 10, color: "#64615b", lineHeight: 1.3 }}>{s.label}</div>
+                    {s.delta && <div style={{ fontSize: 9.5, color: "#9a3412", fontWeight: 600 }}>{s.delta}</div>}
+                  </div>
+                ))}
+              </div>
+              <div style={{ fontSize: 10, color: "#a8a49c", marginTop: 5 }}>
+                Latest value per metric with change since its earliest data year; dollars are nominal (not inflation-adjusted).
               </div>
             </Section>
           )}
@@ -246,21 +313,21 @@ export default function StoryCardModal({ regionId, onClose }) {
                   <li key={b.id}>
                     <strong>{b.name}</strong> (est. {b.est})
                     {(b.pressure === "High" || b.pressure === "Critical") && (
-                      <span style={{ color: "#b45309", fontWeight: 700 }}> · under pressure</span>
+                      <span style={{ color: "#b45309", fontWeight: 700 }}> Â· under pressure</span>
                     )}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p style={{ fontSize: 12.5, color: "#64615b", margin: 0 }}>No tracked cultural anchors in this area — part of the story may be undocumented. Ask who holds it.</p>
+              <p style={{ fontSize: 12.5, color: "#64615b", margin: 0 }}>No tracked cultural anchors in this area â€” part of the story may be undocumented. Ask who holds it.</p>
             )}
           </Section>
 
           {closed.length > 0 && (
             <Section title={`What has been lost (${closed.length})`}>
               <p style={{ fontSize: 12.5, lineHeight: 1.55, margin: 0, color: "#64615b" }}>
-                {closed.slice(0, 10).map((b) => `${b.name} (${b.closed})`).join(" · ")}
-                {closed.length > 10 ? ` · and ${closed.length - 10} more` : ""}
+                {closed.slice(0, 10).map((b) => `${b.name} (${b.closed})`).join(" Â· ")}
+                {closed.length > 10 ? ` Â· and ${closed.length - 10} more` : ""}
               </p>
             </Section>
           )}
@@ -271,7 +338,7 @@ export default function StoryCardModal({ regionId, onClose }) {
               <ul style={{ margin: 0, paddingLeft: 18, fontSize: 12.5, lineHeight: 1.55 }}>
                 {paNear.slice(0, 6).map((i) => (
                   <li key={i.id}>
-                    <strong>{i.name}</strong> — {PA_LABELS?.[i.type] || i.type}, {i.year}
+                    <strong>{i.name}</strong> â€” {PA_LABELS?.[i.type] || i.type}, {i.year}
                     {i.amount ? ` ($${i.amount.toLocaleString()})` : ""}
                   </li>
                 ))}
@@ -279,7 +346,7 @@ export default function StoryCardModal({ regionId, onClose }) {
               </ul>
             ) : (
               <p style={{ fontSize: 12.5, color: "#64615b", margin: 0 }}>
-                No PA grants, awards, or advocacy on record near here yet — an honest opening line:
+                No PA grants, awards, or advocacy on record near here yet â€” an honest opening line:
                 "we want that to change, starting with listening."
               </p>
             )}
@@ -287,7 +354,7 @@ export default function StoryCardModal({ regionId, onClose }) {
 
           <div style={{ borderTop: "1px solid #e8e5e0", marginTop: 14, paddingTop: 8, fontSize: 10, color: "#a8a49c", lineHeight: 1.5 }}>
             Sources: U.S. Census / ACS, audited to 2023; Preservation Austin program records; community business inventories.
-            DVI = Displacement Vulnerability Index (0–100, current committee weight settings) — a planning signal, not a verdict on any block or household.
+            DVI = Displacement Vulnerability Index (0â€“100, current committee weight settings) â€” a planning signal, not a verdict on any block or household.
             Generated from Austin's Shifting Ground, {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })}.
           </div>
         </div>
