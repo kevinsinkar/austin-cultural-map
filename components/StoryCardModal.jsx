@@ -1,4 +1,5 @@
 import { useEffect, useMemo } from "react";
+import { createPortal } from "react-dom";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, PA_LABELS, REGION_INDEX, TIPPING_POINTS } from "../data";
 import { ID_TO_NAME, getMergedIds } from "../data/regionLookup";
 import { regionLookupMap } from "../data/regionIndex";
@@ -77,11 +78,14 @@ export default function StoryCardModal({ regionId, onClose }) {
     ? `Displacement vulnerability moved from ${dvi2000.toFixed(0)} (2000) to ${dviNow.toFixed(0)} (2023) on the 0–100 index.`
     : `Displacement vulnerability stands at ${dviNow.toFixed(0)} (2023) on the 0–100 index.`;
 
-  return (
+  // Portal to <body>: the detail panel and Leaflet's floating controls
+  // create their own stacking contexts, so rendering in place leaves the
+  // modal painted behind the map no matter its z-index.
+  return createPortal(
     <div
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
       style={{
-        position: "fixed", inset: 0, zIndex: 2000, background: "rgba(26,26,26,.5)",
+        position: "fixed", inset: 0, zIndex: 3000, background: "rgba(26,26,26,.5)",
         display: "flex", alignItems: "flex-start", justifyContent: "center",
         padding: "4vh 16px", overflowY: "auto",
       }}
@@ -217,7 +221,8 @@ export default function StoryCardModal({ regionId, onClose }) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
