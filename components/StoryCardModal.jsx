@@ -2,8 +2,10 @@ import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import {
   AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid,
-  ResponsiveContainer,
+  ResponsiveContainer, Tooltip,
 } from "recharts";
+import { COUNCIL_DISTRICTS_GEOJSON } from "../data/councilDistricts";
+import { findDistrict } from "../utils/geo";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, PA_LABELS, REGION_INDEX, TIPPING_POINTS } from "../data";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import {
@@ -44,6 +46,24 @@ function fieldSeries(rows, field) {
 const fmtMoney = (v) => (v >= 10000 ? `$${Math.round(v / 1000)}k` : `$${Math.round(v).toLocaleString()}`);
 const fmtPct = (v) => `${v.toFixed(1)}%`;
 
+/** Compact hover tip shared by every chart on the card. `format` maps a
+ * payload entry to its display string. */
+function CardTip({ active, payload, label, format }) {
+  if (!active || !payload?.length) return null;
+  return (
+    <div style={{
+      background: "#1a1a1a", color: "#fffffe", borderRadius: 6,
+      padding: "5px 9px", fontSize: 11, lineHeight: 1.5,
+      boxShadow: "0 2px 8px rgba(0,0,0,.25)", pointerEvents: "none",
+    }}>
+      <div style={{ fontWeight: 700 }}>{label ?? payload[0]?.payload?.year}</div>
+      {payload.map((p) => (
+        <div key={p.dataKey}>{format(p)}</div>
+      ))}
+    </div>
+  );
+}
+
 /** Economics stats: latest value + change since the earliest data year. */
 function buildEconStats(regionId) {
   const socio = AUDITED_SOCIO_BY_ID.get(regionId) || [];
@@ -70,7 +90,7 @@ function buildEconStats(regionId) {
         ? (from.value > 0 ? `${to.value >= from.value ? "+" : ""}${(((to.value - from.value) / from.value) * 100).toFixed(0)}% since ${from.year}` : null)
         : `${to.value >= from.value ? "+" : ""}${(to.value - from.value).toFixed(1)} pts since ${from.year}`;
     }
-    return { label: d.label, value: d.fmt(to.value), year: to.year, delta, series };
+    return { label: d.label, value: d.fmt(to.value), year: to.year, delta, series, fmtFn: d.fmt };
   }).filter(Boolean);
 }
 
@@ -101,6 +121,7 @@ export default function StoryCardModal({ regionId, onClose }) {
     const closed = LEGACY_CLOSED.filter((b) => allIds.includes(b.region_id));
 
     const region = REGION_INDEX.find((r) => r.region_id === regionId);
+    const district = region ? findDistrict(region.lat, region.lng, COUNCIL_DISTRICTS_GEOJSON) : null;
     const paNear = region
       ? PA_ALL.filter((i) => i.lat && i.lng &&
           Math.hypot(i.lat - region.lat, i.lng - region.lng) < NEAR_DEG)
@@ -117,10 +138,10 @@ export default function StoryCardModal({ regionId, onClose }) {
     const dviSeries = (AUDITED_DVI_LOOKUP[regionId] || []).map((p) => ({ year: p.year, dvi: p.dvi }));
     const econStats = buildEconStats(regionId);
 
-    return { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats };
+    return { name, tractLabel, district, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats };
   }, [regionId]);
 
-  const { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats } = card;
+  const { name, tractLabel, district, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats } = card;
   const demoYears = demoData.map((r) => r.year);
   const dviYears = dviSeries.map((r) => r.year);
 
@@ -178,9 +199,11 @@ export default function StoryCardModal({ regionId, onClose }) {
               Preservation Austin · Neighborhood story card
             </div>
             <h1 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 26, fontWeight: 600, margin: "4px 0 0", lineHeight: 1.15 }}>
-              {name}
+              {tractLabel || name}
             </h1>
-            {tractLabel && <div style={{ fontSize: 11.5, color: "#a8a49c", marginTop: 2 }}>{tractLabel}</div>}
+            <div style={{ fontSize: 11.5, color: "#a8a49c", marginTop: 2 }}>
+              {district != null ? `Council District ${district} (by tract centroid)` : "Council district unknown"}
+            </div>
           </div>
 
           {/* The data story */}
@@ -223,7 +246,8 @@ export default function StoryCardModal({ regionId, onClose }) {
                         tickLine={false} axisLine={{ stroke: "#d6d3cd" }}
                       />
                       <YAxis domain={[0, 100]} ticks={[0, 50, 100]} tick={{ fontSize: 9.5, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
-                      <Line type="monotone" dataKey="dvi" stroke="#9a3412" strokeWidth={2} dot={{ r: 2.5, fill: "#9a3412" }} isAnimationActive={false} />
+                      <Tooltip content={<CardTip format={(p) => `DVI ${p.value.toFixed(1)} — ${getDviBand(p.value)}`} />} />
+                      <Line type="monotone" dataKey="dvi" stroke="#9a3412" strokeWidth={2} dot={{ r: 2.5, fill: "#9a3412" }} activeDot={{ r: 4 }} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -247,6 +271,7 @@ export default function StoryCardModal({ regionId, onClose }) {
                       tickLine={false} axisLine={{ stroke: "#d6d3cd" }}
                     />
                     <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} ticks={[0, 0.5, 1]} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                    <Tooltip content={<CardTip format={(p) => `${p.name}: ${(p.value * 100).toFixed(0)}%`} />} />
                     <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} activeDot={false} name="Other/Multiracial" isAnimationActive={false} />
                     <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} activeDot={false} name="Asian" isAnimationActive={false} />
                     <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} activeDot={false} name="Hispanic/Latino" isAnimationActive={false} />
@@ -287,8 +312,9 @@ export default function StoryCardModal({ regionId, onClose }) {
                           <LineChart data={s.series} margin={{ top: 3, right: 2, left: 2, bottom: 1 }}>
                             <XAxis dataKey="year" type="number" domain={["dataMin", "dataMax"]} hide />
                             <YAxis domain={["auto", "auto"]} hide />
+                            <Tooltip content={<CardTip format={(p) => s.fmtFn(p.value)} />} allowEscapeViewBox={{ x: true, y: true }} wrapperStyle={{ zIndex: 10 }} />
                             <Line type="monotone" dataKey="value" stroke="#0f766e" strokeWidth={1.5}
-                              dot={{ r: 1.5, fill: "#0f766e", strokeWidth: 0 }} activeDot={false} isAnimationActive={false} />
+                              dot={{ r: 1.5, fill: "#0f766e", strokeWidth: 0 }} activeDot={{ r: 3 }} isAnimationActive={false} />
                           </LineChart>
                         </ResponsiveContainer>
                       </div>
