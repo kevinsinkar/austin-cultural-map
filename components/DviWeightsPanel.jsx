@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { cloneDefaultWeights, isDefaultWeights, groupShare } from "../utils/dviWeights";
+import { DVI_OBJECTIVE_PRESETS } from "../data/strategicPlan";
 
 /**
  * "DVI Weights" popover — granular, committee-adjustable methodology.
@@ -13,14 +14,15 @@ import { cloneDefaultWeights, isDefaultWeights, groupShare } from "../utils/dviW
  */
 
 // Named presets so the committee can debate priorities, not slider
-// positions. Each overrides only the sub-index balance; field weights
-// stay at their defaults.
+// positions. The objective presets come from data/strategicPlan.js — the
+// same configurations shown on each Strategic Plan objective card.
 const PRESETS = [
-  { key: "default", label: "Default", sub: null },
-  { key: "equity", label: "Equity lens", sub: { demographic: 45, market: 25, socio: 30 },
-    hint: "Weights who is exposed over market heat" },
-  { key: "market", label: "Market urgency", sub: { demographic: 25, market: 50, socio: 25 },
-    hint: "Weights where pressure is moving fastest" },
+  { key: "default", label: "Default", weights: null,
+    hint: "The published methodology — also the 'Tell a Clear, Consistent Story' setting" },
+  ...DVI_OBJECTIVE_PRESETS.map((p) => ({
+    key: p.key, label: p.label, weights: p.weights,
+    hint: `${p.objective} — ${p.hint}`,
+  })),
 ];
 
 const GROUPS = [
@@ -121,8 +123,9 @@ export default function DviWeightsPanel({ weights, onApply }) {
   const recalc = () => { onApply(draft); setDirty(false); };
   const reset = () => { const d = cloneDefaultWeights(); setDraft(d); onApply(d); setDirty(false); };
   const applyPreset = (preset) => {
-    const d = cloneDefaultWeights();
-    if (preset.sub) d.sub = { ...preset.sub };
+    const d = preset.weights
+      ? JSON.parse(JSON.stringify(preset.weights))
+      : cloneDefaultWeights();
     setDraft(d);
     onApply(d); // presets are deliberate choices — apply immediately
     setDirty(false);
@@ -200,7 +203,10 @@ export default function DviWeightsPanel({ weights, onApply }) {
             )}
           </div>
 
-          {/* Presets */}
+          {/* Presets — one per strategic-plan objective */}
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 5 }}>
+            Objective presets
+          </div>
           <div style={{ display: "flex", gap: 5, marginBottom: 12, flexWrap: "wrap" }}>
             {PRESETS.map((p) => (
               <button

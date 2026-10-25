@@ -13,6 +13,7 @@ import {
 } from "../data/outreachEvents";
 import { usePlanStore, eventsToCsv, downloadCsv } from "../utils/outreachStore";
 import OutreachCoverage from "./OutreachCoverage";
+import OutreachEquityAudit from "./OutreachEquityAudit";
 
 /**
  * OutreachView — the Community Engagement committee's working list.
@@ -122,7 +123,7 @@ export default function OutreachView({ onLocate, dviVersion }) {
               Outreach Planner
             </h2>
             <nav aria-label="Planner view" style={{ display: "flex", background: "#edeae4", borderRadius: 8, padding: 3 }}>
-              {[["worklist", "Worklist"], ["coverage", "Coverage"]].map(([key, label]) => (
+              {[["worklist", "Worklist"], ["coverage", "Coverage"], ["equity", "Equity Audit"]].map(([key, label]) => (
                 <button
                   key={key}
                   onClick={() => setSubview(key)}
@@ -142,9 +143,12 @@ export default function OutreachView({ onLocate, dviVersion }) {
             </nav>
           </div>
           <p style={{ fontSize: 12.5, color: "#64615b", margin: "3px 0 0", maxWidth: 680, lineHeight: 1.45 }}>
-            {subview === "worklist"
-              ? "Tabling, partnership, and listening opportunities from the research database (Oct 2026 – Dec 2027), for prioritizing where Preservation Austin shows up. Set a pipeline stage and a note on each event — your plan is saved in this browser. Verify dates and tabling policies with organizers before committing."
-              : "Displacement need vs. outreach activity by council district and advocacy arena — the numbers behind the strategic plan's \"reach across all parts of the city\" and \"advocates activated by arena\" measures."}
+            {subview === "worklist" &&
+              "Tabling, partnership, and listening opportunities from the research database (Oct 2026 – Dec 2027), for prioritizing where Preservation Austin shows up. Set a pipeline stage and a note on each event — your plan is saved in this browser. Verify dates and tabling policies with organizers before committing."}
+            {subview === "coverage" &&
+              "Displacement need vs. outreach activity by council district and advocacy arena — the numbers behind the strategic plan's \"reach across all parts of the city\" and \"advocates activated by arena\" measures."}
+            {subview === "equity" &&
+              "How Austin is changing alongside how Preservation Austin is serving the city — PA's grants, awards, legacy businesses, and advocacy against each district's displacement need. The instrument for the equity standard's annual report."}
           </p>
         </div>
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
@@ -153,21 +157,27 @@ export default function OutreachView({ onLocate, dviVersion }) {
               {pipelineCounts[s.key]} {s.label.replace(" ✓", "")}
             </span>
           ))}
-          <button
-            onClick={exportCsv}
-            style={{
-              padding: "6px 14px", borderRadius: 8, border: "1.5px solid #0f766e",
-              background: "#fffffe", color: "#0f766e", fontSize: 12, fontWeight: 600,
-              cursor: "pointer", minHeight: 34,
-            }}
-          >
-            ⬇ Export CSV ({filtered.length})
-          </button>
+          {subview === "worklist" && (
+            <button
+              onClick={exportCsv}
+              style={{
+                padding: "6px 14px", borderRadius: 8, border: "1.5px solid #0f766e",
+                background: "#fffffe", color: "#0f766e", fontSize: 12, fontWeight: 600,
+                cursor: "pointer", minHeight: 34,
+              }}
+            >
+              ⬇ Export CSV ({filtered.length})
+            </button>
+          )}
         </div>
       </div>
 
       {subview === "coverage" && (
         <OutreachCoverage plan={plan} dviVersion={dviVersion} />
+      )}
+
+      {subview === "equity" && (
+        <OutreachEquityAudit dviVersion={dviVersion} />
       )}
 
       {subview === "worklist" && (<>

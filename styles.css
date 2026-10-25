@@ -401,3 +401,28 @@ html, body {
   color: #0f766e;
   text-decoration: underline;
 }
+
+/* ── Neighborhood story card printing ──
+   While the story card modal is open, printing shows only the card sheet
+   (visibility isolation — no portals needed). */
+@media print {
+  body.story-card-open * {
+    visibility: hidden;
+  }
+  body.story-card-open .story-card-sheet,
+  body.story-card-open .story-card-sheet * {
+    visibility: visible;
+  }
+  body.story-card-open .story-card-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  body.story-card-open .story-card-toolbar {
+    display: none !important;
+  }
+}

@@ -162,6 +162,79 @@ export const OBJECTIVES = [
   },
 ];
 
+// ── Objective-named DVI presets ──
+// The machine-readable versions of each objective card's "Starting DVI
+// weights" box, consumed by the map's DVI Weights panel so the plan and
+// the panel can never drift apart. Advisory starting points; the
+// vulnerability gate stays on in every configuration.
+export const DVI_OBJECTIVE_PRESETS = [
+  {
+    key: "participation",
+    label: "Participation",
+    objective: "Open the Door to Participation",
+    hint: "Reachable people over hot markets — renter share leads",
+    weights: {
+      sub: { demographic: 45, market: 25, socio: 30 },
+      demographic: { rentBurden: 35, renterShare: 45, foreignBorn: 20 },
+      market: { appreciation: 50, rentIncome: 50 },
+      socio: { poverty: 40, unemployment: 30, eviction: 30 },
+      options: { lowConfidenceBoost: true, vulnerabilityGate: true },
+    },
+  },
+  {
+    key: "advocacy",
+    label: "Advocacy",
+    objective: "Grow Advocacy on Every Front",
+    hint: "Follow market decision points — appreciation and evictions lead",
+    weights: {
+      sub: { demographic: 25, market: 50, socio: 25 },
+      demographic: { rentBurden: 50, renterShare: 30, foreignBorn: 20 },
+      market: { appreciation: 60, rentIncome: 40 },
+      socio: { poverty: 30, unemployment: 30, eviction: 40 },
+      options: { lowConfidenceBoost: false, vulnerabilityGate: true },
+    },
+  },
+  {
+    key: "equity",
+    label: "Equity Standard",
+    objective: "Hold Ourselves to a Clear Equity Standard",
+    hint: "Measured harm — eviction filings lead, data-desert boost essential",
+    weights: {
+      sub: { demographic: 40, market: 20, socio: 40 },
+      demographic: { rentBurden: 45, renterShare: 25, foreignBorn: 30 },
+      market: { appreciation: 50, rentIncome: 50 },
+      socio: { poverty: 30, unemployment: 20, eviction: 50 },
+      options: { lowConfidenceBoost: true, vulnerabilityGate: true },
+    },
+  },
+  {
+    key: "wholeStory",
+    label: "Whole Story",
+    objective: "Preserve the Whole Story of Austin",
+    hint: "Cultural communities and physical fabric — foreign-born leads",
+    weights: {
+      sub: { demographic: 45, market: 30, socio: 25 },
+      demographic: { rentBurden: 25, renterShare: 25, foreignBorn: 50 },
+      market: { appreciation: 60, rentIncome: 40 },
+      socio: { poverty: 40, unemployment: 30, eviction: 30 },
+      options: { lowConfidenceBoost: true, vulnerabilityGate: true },
+    },
+  },
+  {
+    key: "pipeline",
+    label: "Pipeline",
+    objective: "Build Pipeline of Future Preservationists",
+    hint: "Young renters — renter share and rent-to-income lead",
+    weights: {
+      sub: { demographic: 40, market: 30, socio: 30 },
+      demographic: { rentBurden: 30, renterShare: 50, foreignBorn: 20 },
+      market: { appreciation: 40, rentIncome: 60 },
+      socio: { poverty: 40, unemployment: 30, eviction: 30 },
+      options: { lowConfidenceBoost: true, vulnerabilityGate: true },
+    },
+  },
+];
+
 export const VALUES = [
   {
     title: "Accountable",

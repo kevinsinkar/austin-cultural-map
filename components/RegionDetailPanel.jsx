@@ -1,4 +1,6 @@
 import _ from "lodash";
+import { useState } from "react";
+import StoryCardModal from "./StoryCardModal";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine,
@@ -46,6 +48,8 @@ export default function RegionDetailPanel({
   neighborhoodAgg,
 }) {
   const isNeighborhoodMode = boundaryMode === "neighborhoods";
+  // Printable neighborhood story card (tract mode only)
+  const [showStoryCard, setShowStoryCard] = useState(false);
 
   // Empty state — no selection in either mode
   if (isNeighborhoodMode ? !neighborhoodAgg : !activeFeature) {
@@ -137,14 +141,29 @@ export default function RegionDetailPanel({
                 </span>
               )}
             </div>
-            <button
-              onClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
-              style={{ background: "none", border: "none", cursor: "pointer", fontSize: 18, color: "#a8a49c", padding: 4, lineHeight: 1, minWidth: 32, minHeight: 32 }}
-              aria-label="Close detail panel"
-            >
-              ✕
-            </button>
+            <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
+              {!isNeighborhoodMode && activeRegionId != null && (
+                <button
+                  onClick={() => setShowStoryCard(true)}
+                  title="Printable one-pager for tabling: the data story, cultural anchors, and PA's work nearby"
+                  style={{ background: "none", border: "1px solid #d6d3cd", borderRadius: 6, cursor: "pointer", fontSize: 11, fontWeight: 600, color: "#0f766e", padding: "4px 8px", minHeight: 28 }}
+                  aria-label="Open printable story card"
+                >
+                  📄 Story card
+                </button>
+              )}
+              <button
+                onClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
+                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 18, color: "#a8a49c", padding: 4, lineHeight: 1, minWidth: 32, minHeight: 32 }}
+                aria-label="Close detail panel"
+              >
+                ✕
+              </button>
+            </div>
           </div>
+          {showStoryCard && activeRegionId != null && (
+            <StoryCardModal regionId={activeRegionId} onClose={() => setShowStoryCard(false)} />
+          )}
           <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 12 }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
               <div style={{ width: 40, height: 40, borderRadius: 8, background: excluded ? DVI_EXCLUDED.fill : getDviColor(d, nd), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
