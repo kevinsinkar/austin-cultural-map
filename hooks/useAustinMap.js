@@ -14,6 +14,8 @@ import { getDevPressureColor } from "../utils/mapHelpers";
 import { PA_ALL, PA_COLORS } from "../data";
 import { AISD_CLOSED_SCHOOLS, AISD_COLORS } from "../data/aisdSchools";
 import { HOLC_1935 } from "../data/history";
+import { OUTREACH_EVENTS, OUTREACH_STATUS, OUTREACH_KINDS, isPast, eventSortTime, formatEventDate } from "../data/outreachEvents";
+import { COUNCIL_DISTRICTS_GEOJSON, DISTRICT_STYLE, districtLabelPoint } from "../data/councilDistricts";
 
 // Hover tooltip HTML: name, DVI + band, and a one-line confidence note —
 // point-of-reading disclosure from the unified ConfidenceChip system.
@@ -53,6 +55,29 @@ function tractStyle(regionId, yr, isActive) {
   };
 }
 
+// Popup HTML for an outreach-event pin — enough to act on without leaving
+// the map: date, status, tabling detail, contacts, source confidence.
+function outreachPopupHtml(ev) {
+  const meta = OUTREACH_STATUS[ev.status] || OUTREACH_STATUS.UNK;
+  const contacts = (ev.contacts || [])
+    .map((c) => c.includes("@")
+      ? `<a href="mailto:${c}">${c}</a>`
+      : c)
+    .join(" · ");
+  return (
+    `<div style="max-width:260px;">` +
+    `<strong>${ev.name}</strong>` +
+    (ev.organizer ? `<br/><span style="color:#64615b;font-size:11px;">${ev.organizer}</span>` : "") +
+    `<br/><span style="font-size:11.5px;">${formatEventDate(ev)}${ev.confidence ? ` · confidence ${ev.confidence}` : ""} · ${OUTREACH_KINDS[ev.kind]}</span>` +
+    `<br/><span style="display:inline-block;margin-top:3px;font-size:11px;font-weight:700;color:${meta.color};">■ ${meta.label}</span>` +
+    (ev.tablingText ? `<br/><span style="font-size:11px;color:#444;">${ev.tablingText.slice(0, 160)}${ev.tablingText.length > 160 ? "…" : ""}</span>` : "") +
+    (ev.audience ? `<br/><span style="font-size:11px;color:#64615b;">Audience: ${ev.audience}</span>` : "") +
+    (ev.fit ? `<br/><span style="font-size:11px;color:#64615b;">Mission fit: ${ev.fit}</span>` : "") +
+    (contacts ? `<br/><span style="font-size:11px;">${contacts}</span>` : "") +
+    `</div>`
+  );
+}
+
 export default function useAustinMap({
   mapRef,
   year,
@@ -65,6 +90,11 @@ export default function useAustinMap({
   showPreservationAustin,
   showAisdSchools,
   showHolc,
+  showOutreach,
+  outreachStatusFilter,
+  outreachHorizon,
+  showDistricts,
+  dviVersion,
   paFilter,
   selectedRegion,
   setActiveRegionId,
@@ -281,6 +311,33 @@ export default function useAustinMap({
     const pressureLayer = L.layerGroup().addTo(map);
     const paLayer = L.layerGroup().addTo(map);
     const aisdLayer = L.layerGroup().addTo(map);
+    const outreachLayer = L.layerGroup().addTo(map);
+
+    // Council district boundaries: non-interactive dashed outlines with a
+    // "D{n}" label at each district's approximate center, in a pane above
+    // the tract fills so the dashes stay visible.
+    const districtPane = map.createPane("districtPane");
+    districtPane.style.zIndex = 430;
+    districtPane.style.pointerEvents = "none";
+    const districtLayer = L.layerGroup();
+    L.geoJSON(COUNCIL_DISTRICTS_GEOJSON, {
+      pane: "districtPane",
+      interactive: false,
+      style: () => DISTRICT_STYLE,
+    }).addTo(districtLayer);
+    COUNCIL_DISTRICTS_GEOJSON.features.forEach((f) => {
+      const [lat, lng] = districtLabelPoint(f);
+      L.marker([lat, lng], {
+        pane: "districtPane",
+        interactive: false,
+        icon: L.divIcon({
+          className: "",
+          html: `<div style="font:700 12px 'Libre Franklin',sans-serif;color:#4338ca;background:rgba(255,255,254,.85);border:1.5px solid #4338ca;border-radius:10px;padding:1px 7px;white-space:nowrap;">D${f.properties.district}</div>`,
+          iconSize: [34, 20],
+          iconAnchor: [17, 10],
+        }),
+      }).addTo(districtLayer);
+    });
 
     businessLayerRef.current = { operating: operatingLayer, closed: closedLayer };
     musicLayer.current = musicLayerGroup;
@@ -297,6 +354,8 @@ export default function useAustinMap({
       paLayer,
       aisdLayer,
       holcLayer,
+      outreachLayer,
+      districtLayer,
     };
 
     return () => {
@@ -318,7 +377,7 @@ export default function useAustinMap({
       if (!regionIndex) return {};
       return tractStyle(regionId, year, activeRegionId === regionId);
     });
-  }, [year, activeRegionId]);
+  }, [year, activeRegionId, dviVersion]);
 
   // ── Switch between tract and neighborhood layers ──
   useEffect(() => {
@@ -355,7 +414,7 @@ export default function useAustinMap({
         weight: isActive ? 3 : 1,
       };
     });
-  }, [year, activeNeighborhoodId, boundaryMode]);
+  }, [year, activeNeighborhoodId, boundaryMode, dviVersion]);
 
   // ── Toggle region polygon visibility ──
   useEffect(() => {
@@ -548,7 +607,42 @@ export default function useAustinMap({
         );
       });
     }
-  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter, showAisdSchools]);
+  }, [year, activeRegionId, showPins, showMusicVenues, showProjectConnect, showDevPressure, showPreservationAustin, paFilter, showAisdSchools, dviVersion]);
+
+  // ── Outreach / tabling-opportunity pins ──
+  // Independent of the history-year slider: these are 2026–27 opportunities
+  // overlaid on whatever data layer is underneath. Diamond pins colored by
+  // tabling status so they never read as DVI data.
+  useEffect(() => {
+    const mapObj = leafletMapRef.current;
+    const outreachLayer = mapObj?._overlayLayers?.outreachLayer;
+    if (!mapObj || !outreachLayer) return;
+    outreachLayer.clearLayers();
+    if (!showOutreach) return;
+
+    const now = Date.now();
+    const in60 = now + 60 * 24 * 3600 * 1000;
+    OUTREACH_EVENTS.forEach((ev) => {
+      if (ev.lat == null || ev.lng == null) return;
+      if (outreachStatusFilter && !outreachStatusFilter[ev.status]) return;
+      if (outreachHorizon !== "all" && isPast(ev, now)) return;
+      if (outreachHorizon === "60" && ev.kind === "dated") {
+        const t = eventSortTime(ev);
+        if (t == null || t > in60) return;
+      }
+      const meta = OUTREACH_STATUS[ev.status] || OUTREACH_STATUS.UNK;
+      const recurring = ev.kind !== "dated";
+      const icon = L.divIcon({
+        className: "",
+        html: `<div style="width:12px;height:12px;background:${meta.color};transform:rotate(45deg);border:1.5px solid #fffffe;border-radius:${recurring ? "50%" : "2px"};box-shadow:0 1px 3px rgba(0,0,0,.35);"></div>`,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7],
+      });
+      const m = L.marker([ev.lat, ev.lng], { icon, zIndexOffset: 500 }).addTo(outreachLayer);
+      m.bindTooltip(`${ev.name} — ${formatEventDate(ev)}`, { direction: "top", offset: [0, -6] });
+      m.bindPopup(outreachPopupHtml(ev), { maxWidth: 280 });
+    });
+  }, [showOutreach, outreachStatusFilter, outreachHorizon]);
 
   // ── Toggle HOLC 1935 redlining layer ──
   useEffect(() => {
@@ -558,6 +652,15 @@ export default function useAustinMap({
     if (showHolc && !map.hasLayer(holcLayer)) holcLayer.addTo(map);
     if (!showHolc && map.hasLayer(holcLayer)) map.removeLayer(holcLayer);
   }, [showHolc]);
+
+  // ── Toggle council district boundaries ──
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    const districtLayer = map?._overlayLayers?.districtLayer;
+    if (!map || !districtLayer) return;
+    if (showDistricts && !map.hasLayer(districtLayer)) districtLayer.addTo(map);
+    if (!showDistricts && map.hasLayer(districtLayer)) map.removeLayer(districtLayer);
+  }, [showDistricts]);
 
   // ── Auto-zoom to selected region when activeRegionId changes ──
   useEffect(() => {
@@ -578,11 +681,42 @@ export default function useAustinMap({
     }
   }, [activeRegionId]);
 
-  // ── Fly to a pending target (e.g., a History event's location) ──
+  // ── Fly to a pending target (e.g., a History event's location, or an
+  // outreach event located from the planner) ──
+  const highlightMarkerRef = useRef(null);
   useEffect(() => {
     const map = leafletMapRef.current;
     if (!map || !flyToTarget) return;
     map.flyTo([flyToTarget.lat, flyToTarget.lng], flyToTarget.zoom || 14, { duration: 0.9 });
+
+    // When the target carries an outreach event, drop a prominent pin at
+    // its (approximate) location and open its popup — the flat diamond
+    // alone is easy to lose among the other markers.
+    if (highlightMarkerRef.current) {
+      map.removeLayer(highlightMarkerRef.current);
+      highlightMarkerRef.current = null;
+    }
+    const ev = flyToTarget.event;
+    if (ev) {
+      const meta = OUTREACH_STATUS[ev.status] || OUTREACH_STATUS.UNK;
+      const icon = L.divIcon({
+        className: "",
+        html:
+          `<svg width="34" height="46" viewBox="0 0 34 46" style="filter:drop-shadow(0 2px 3px rgba(0,0,0,.4));">` +
+          `<path d="M17 1C8.7 1 2 7.7 2 16c0 10.5 15 29 15 29s15-18.5 15-29C32 7.7 25.3 1 17 1z" fill="${meta.color}" stroke="#fffffe" stroke-width="2"/>` +
+          `<circle cx="17" cy="16" r="5.5" fill="#fffffe"/></svg>`,
+        iconSize: [34, 46],
+        iconAnchor: [17, 45],
+        popupAnchor: [0, -42],
+      });
+      const m = L.marker([flyToTarget.lat, flyToTarget.lng], { icon, zIndexOffset: 2000 }).addTo(map);
+      const approxNote = ev.geo === "venue"
+        ? `<br/><em style="font-size:10.5px;color:#a8a49c;">Location approximate (geocoded from venue name)</em>` : "";
+      m.bindPopup(outreachPopupHtml(ev) + approxNote, { maxWidth: 280 });
+      highlightMarkerRef.current = m;
+      // Open after the fly animation settles so the popup doesn't jump.
+      setTimeout(() => { if (highlightMarkerRef.current === m) m.openPopup(); }, 950);
+    }
     onFlyToHandled?.();
   }, [flyToTarget]);
 

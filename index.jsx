@@ -22,6 +22,9 @@ import { REGIONS_GEOJSON } from "./data/final_updated_regions";
 import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
 import { aggregateNeighborhood } from "./utils/aggregation";
 import { DEFAULT_VIEW_STATE, parseViewState, serializeViewState } from "./utils/urlState";
+import { recomputeDvi } from "./data/auditedDvi";
+import { loadDviWeights, saveDviWeights, isDefaultWeights } from "./utils/dviWeights";
+import { OUTREACH_STATUS } from "./data/outreachEvents";
 
 // Components
 import Header from "./components/Header";
@@ -34,6 +37,8 @@ import TriageView from "./components/TriageView";
 import TimelineView from "./components/TimelineView";
 import HistoryView from "./components/HistoryView";
 import GuidedTour from "./components/GuidedTour";
+import OutreachView from "./components/OutreachView";
+import StrategicPlanView from "./components/StrategicPlanView";
 
 // ── Consolidated, URL-serializable view state ──
 // One object holds everything a shareable link must reproduce:
@@ -82,11 +87,39 @@ export default function AustinCulturalMap() {
   const setShowPreservationAustin = useCallback((v) => dispatch({ type: "setLayer", key: "preservationAustin", value: v }), []);
   const setShowAisdSchools = useCallback((v) => dispatch({ type: "setLayer", key: "aisdSchools", value: v }), []);
   const setShowHolc = useCallback((v) => dispatch({ type: "setLayer", key: "holc", value: v }), []);
+  const setShowOutreach = useCallback((v) => dispatch({ type: "setLayer", key: "outreach", value: v }), []);
+  const setShowDistricts = useCallback((v) => dispatch({ type: "setLayer", key: "districts", value: v }), []);
   const {
     pins: showPins, projectConnect: showProjectConnect, musicVenues: showMusicVenues,
     devPressure: showDevPressure, regions: showRegions,
     preservationAustin: showPreservationAustin, aisdSchools: showAisdSchools, holc: showHolc,
+    outreach: showOutreach, districts: showDistricts,
   } = layers;
+
+  // ── Adjustable DVI weights ──
+  // Custom weights persist in localStorage; a non-default saved set is
+  // applied before the first paint. dviVersion busts every DVI-derived memo
+  // and map-style effect after a recalculation.
+  const [dviWeights, setDviWeights] = useState(() => {
+    const w = loadDviWeights();
+    if (!isDefaultWeights(w)) recomputeDvi(w);
+    return w;
+  });
+  const [dviVersion, setDviVersion] = useState(0);
+  const applyDviWeights = useCallback((w) => {
+    recomputeDvi(w);
+    saveDviWeights(w);
+    setDviWeights(w);
+    setDviVersion((v) => v + 1);
+  }, []);
+
+  // ── Outreach pin filters (ephemeral UI state) ──
+  const [outreachStatusFilter, setOutreachStatusFilter] = useState(() => {
+    const init = {};
+    Object.keys(OUTREACH_STATUS).forEach((k) => { init[k] = k !== "CLOSED"; });
+    return init;
+  });
+  const [outreachHorizon, setOutreachHorizon] = useState("upcoming");
 
   // ── Ephemeral UI state ──
   const [hoveredRegion, setHoveredRegion] = useState(null);
@@ -153,7 +186,7 @@ export default function AustinCulturalMap() {
       m[r.region_id] = interpolateDvi(r.region_id, year);
     });
     return m;
-  }, [year]);
+  }, [year, dviVersion]);
 
   const regionBizOpen = useMemo(
     () => (activeRegionId ? LEGACY_OPERATING.filter((b) => b.region_id === activeRegionId) : []),
@@ -184,7 +217,7 @@ export default function AustinCulturalMap() {
   const neighborhoodAgg = useMemo(() => {
     if (boundaryMode !== "neighborhoods" || !activeNeighborhoodId) return null;
     return aggregateNeighborhood(activeNeighborhoodId, year);
-  }, [boundaryMode, activeNeighborhoodId, year]);
+  }, [boundaryMode, activeNeighborhoodId, year, dviVersion]);
 
   // Agenda parsing
   const [issuesText, setIssuesText] = useState("");
@@ -272,6 +305,16 @@ export default function AustinCulturalMap() {
     setViewMode("map");
   }, [setYear, setShowHolc, setShowAisdSchools, setViewMode]);
 
+  // Outreach planner "Show on map" → enable the outreach layer and fly to
+  // the event's pin.
+  const handleLocateEvent = useCallback((ev) => {
+    if (ev?.lat == null) return;
+    setShowOutreach(true);
+    // Carrying the event drops a highlight pin + popup at the location.
+    setFlyToTarget({ lat: ev.lat, lng: ev.lng, zoom: 15, event: ev });
+    setViewMode("map");
+  }, [setShowOutreach, setViewMode]);
+
   // Navigate from triage/compare to map, selecting a specific tract
   const handleLocateOnMap = useCallback((regionId) => {
     const feature = REGIONS_GEOJSON.features.find(
@@ -355,6 +398,18 @@ export default function AustinCulturalMap() {
 
       {/* Main Content */}
       <main id="main-content" style={{ width: "100%", padding: "16px 28px 40px" }}>
+        {viewMode === "outreach" && (
+          <ErrorBoundary>
+            <OutreachView onLocate={handleLocateEvent} dviVersion={dviVersion} />
+          </ErrorBoundary>
+        )}
+
+        {viewMode === "plan" && (
+          <ErrorBoundary>
+            <StrategicPlanView />
+          </ErrorBoundary>
+        )}
+
         {viewMode === "timeline" && (
           <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
         )}
@@ -409,6 +464,17 @@ export default function AustinCulturalMap() {
               setShowAisdSchools={setShowAisdSchools}
               showHolc={showHolc}
               setShowHolc={setShowHolc}
+              showOutreach={showOutreach}
+              setShowOutreach={setShowOutreach}
+              outreachStatusFilter={outreachStatusFilter}
+              setOutreachStatusFilter={setOutreachStatusFilter}
+              outreachHorizon={outreachHorizon}
+              setOutreachHorizon={setOutreachHorizon}
+              showDistricts={showDistricts}
+              setShowDistricts={setShowDistricts}
+              dviWeights={dviWeights}
+              onApplyDviWeights={applyDviWeights}
+              dviVersion={dviVersion}
               paFilter={paFilter}
               setPaFilter={setPaFilter}
               activeRegionId={activeRegionId}

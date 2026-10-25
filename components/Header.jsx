@@ -1,3 +1,22 @@
+import { SHOW_ANALYSIS_TABS } from "../appConfig";
+
+// Tab roster is config-driven: outreach mode shows Map + Outreach only;
+// the analysis views stay routable (direct URLs work) but untabbed.
+const TABS = SHOW_ANALYSIS_TABS
+  ? [
+      { key: "map", label: "Map" },
+      { key: "outreach", label: "Outreach" },
+      { key: "plan", label: "Strategic Plan" },
+      { key: "history", label: "History" },
+      { key: "compare", label: "Compare" },
+      { key: "triage", label: "Triage" },
+    ]
+  : [
+      { key: "map", label: "Map" },
+      { key: "outreach", label: "Outreach" },
+      { key: "plan", label: "Strategic Plan" },
+    ];
+
 export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda, onStartTour }) {
   return (
     <header
@@ -29,16 +48,13 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
           }}
         >
           <p style={{ fontSize: 14, color: "#64615b", margin: 0, lineHeight: 1.4 }}>
-            Four decades of cultural displacement — 1990 to 2025
+            {SHOW_ANALYSIS_TABS
+              ? "Four decades of cultural displacement — 1990 to 2025"
+              : "Displacement data + outreach planning for Preservation Austin's Community Engagement committee"}
           </p>
           <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
             <nav aria-label="View mode" style={{ display: "flex", background: "#edeae4", borderRadius: 8, padding: 3 }}>
-              {[
-                { key: "map", label: "Map" },
-                { key: "history", label: "History" },
-                { key: "compare", label: "Compare" },
-                { key: "triage", label: "Triage" },
-              ].map((tab) => (
+              {TABS.map((tab) => (
                 <button
                   key={tab.key}
                   onClick={() => setViewMode(tab.key)}
@@ -60,7 +76,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
                 </button>
               ))}
             </nav>
-            {onStartTour && (
+            {onStartTour && SHOW_ANALYSIS_TABS && (
               <button
                 onClick={onStartTour}
                 style={{

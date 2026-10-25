@@ -16,6 +16,9 @@ import {
 import { HOLC_GRADES, HOLC_ATTRIBUTION } from "../data/history";
 import { DVI_BINS, DVI_EXCLUDED, DVI_ND_COLOR } from "../utils/math";
 import ConfidenceChip from "./ConfidenceChip";
+import DviWeightsPanel from "./DviWeightsPanel";
+import { OUTREACH_STATUS } from "../data/outreachEvents";
+import { groupShare } from "../utils/dviWeights";
 
 export default function MapView({
   year,
@@ -40,6 +43,17 @@ export default function MapView({
   setShowAisdSchools,
   showHolc,
   setShowHolc,
+  showOutreach,
+  setShowOutreach,
+  outreachStatusFilter,
+  setOutreachStatusFilter,
+  outreachHorizon,
+  setOutreachHorizon,
+  showDistricts,
+  setShowDistricts,
+  dviWeights,
+  onApplyDviWeights,
+  dviVersion,
   paFilter,
   setPaFilter,
   activeRegionId,
@@ -108,6 +122,11 @@ export default function MapView({
     showPreservationAustin,
     showAisdSchools,
     showHolc,
+    showOutreach,
+    outreachStatusFilter,
+    outreachHorizon,
+    showDistricts,
+    dviVersion,
     paFilter,
     selectedRegion,
     setActiveRegionId,
@@ -167,6 +186,13 @@ export default function MapView({
       title: "Boundaries",
       items: [
         { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Boundary fills (DVI)", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: DVI_BINS[2].fill, border: "1px solid rgba(0,0,0,.15)" }} aria-hidden="true" /> },
+        { on: showDistricts, toggle: () => setShowDistricts(!showDistricts), label: "Council districts (10-1)", icon: <span style={{ width: 9, height: 9, borderRadius: 2, border: "1.5px dashed #4338ca" }} aria-hidden="true" /> },
+      ],
+    },
+    {
+      title: "Outreach",
+      items: [
+        { on: showOutreach, toggle: () => setShowOutreach(!showOutreach), label: "Tabling opportunities", icon: <span style={{ width: 9, height: 9, background: "#15803d", transform: "rotate(45deg)", borderRadius: 2 }} aria-hidden="true" /> },
       ],
     },
     {
@@ -201,6 +227,41 @@ export default function MapView({
           {/* Toolbar: grouped Layers popover */}
           <div style={{ display: "flex", gap: 12, marginBottom: 10, alignItems: "center", flexWrap: "wrap" }} role="toolbar" aria-label="Map controls">
             <LayersPopover boundaryMode={boundaryMode} setBoundaryMode={setBoundaryMode} groups={layerGroups} />
+            {dviWeights && onApplyDviWeights && (
+              <DviWeightsPanel weights={dviWeights} onApply={onApplyDviWeights} />
+            )}
+            {showOutreach && (
+              <div style={{ display: "flex", gap: 5, alignItems: "center", flexWrap: "wrap" }} aria-label="Tabling opportunity filters">
+                {Object.entries(OUTREACH_STATUS).map(([key, meta]) => (
+                  <button
+                    key={key}
+                    onClick={() => setOutreachStatusFilter((f) => ({ ...f, [key]: !f[key] }))}
+                    aria-pressed={outreachStatusFilter[key]}
+                    title={meta.desc}
+                    style={{
+                      display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 9px",
+                      borderRadius: 11, fontSize: 10.5, fontWeight: 600, cursor: "pointer",
+                      border: `1.5px solid ${outreachStatusFilter[key] ? meta.color : "#d6d3cd"}`,
+                      background: outreachStatusFilter[key] ? `${meta.color}14` : "#fffffe",
+                      color: outreachStatusFilter[key] ? meta.color : "#a8a49c",
+                    }}
+                  >
+                    <span style={{ width: 7, height: 7, background: outreachStatusFilter[key] ? meta.color : "#d6d3cd", transform: "rotate(45deg)", borderRadius: 1.5 }} aria-hidden="true" />
+                    {meta.label}
+                  </button>
+                ))}
+                <select
+                  value={outreachHorizon}
+                  onChange={(e) => setOutreachHorizon(e.target.value)}
+                  aria-label="Tabling event timeframe"
+                  style={{ padding: "4px 6px", fontSize: 11, border: "1px solid #d6d3cd", borderRadius: 7, background: "#fffffe", color: "#1a1a1a" }}
+                >
+                  <option value="upcoming">Upcoming</option>
+                  <option value="60">Next 60 days</option>
+                  <option value="all">All (incl. past)</option>
+                </select>
+              </div>
+            )}
             {boundaryMode === "neighborhoods" && (
               <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", lineHeight: 1.4, maxWidth: 520 }}>
                 Neighborhood boundaries follow City of Austin planning areas; data is aggregated from census tracts. For precise tract-level data, switch to Census Tracts.
@@ -286,9 +347,31 @@ export default function MapView({
                   ))}
                 </div>
               )}
+              {showOutreach && (
+                <div style={{ paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0" }}>
+                  <div style={{ fontSize: 10.5, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em", marginBottom: 3 }}>
+                    Tabling opportunities
+                  </div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                      <span style={{ width: 8, height: 8, background: "#64615b", transform: "rotate(45deg)", borderRadius: 1.5 }} aria-hidden="true" />
+                      <span style={{ fontSize: 11, color: "#64615b" }}>Dated event</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                      <span style={{ width: 8, height: 8, background: "#64615b", borderRadius: "50%" }} aria-hidden="true" />
+                      <span style={{ fontSize: 11, color: "#64615b" }}>Recurring / civic</span>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: 10.5, color: "#a8a49c", margin: "3px 0 0", lineHeight: 1.35 }}>
+                    Color = tabling status (see chips above the map). Full details in the Outreach tab.
+                  </p>
+                </div>
+              )}
               {/* One-line DVI formula — the choropleth is the DVI's primary display */}
               <div style={{ borderTop: "1px solid #e8e5e0", marginTop: 8, paddingTop: 6, fontSize: 11, color: "#a8a49c", lineHeight: 1.4 }}>
-                DVI = 0.35·demographic + 0.35·market + 0.30·socioeconomic (0–100)
+                {dviWeights
+                  ? `DVI = ${(groupShare(dviWeights.sub, "demographic") / 100).toFixed(2)}·demographic + ${(groupShare(dviWeights.sub, "market") / 100).toFixed(2)}·market + ${(groupShare(dviWeights.sub, "socio") / 100).toFixed(2)}·socioeconomic (0–100)`
+                  : "DVI = 0.35·demographic + 0.35·market + 0.30·socioeconomic (0–100)"}
               </div>
             </div>
 

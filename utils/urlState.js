@@ -8,7 +8,7 @@ import { REGION_INDEX } from "../data";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { NAME_TO_ID } from "../data/regionLookup";
 
-const VIEWS = ["map", "history", "compare", "triage", "timeline"];
+const VIEWS = ["map", "outreach", "plan", "history", "compare", "triage", "timeline"];
 const LENSES = ["trajectory", "equity", "matrix"];
 
 // [state key in layers, short URL code]
@@ -21,6 +21,8 @@ const LAYER_CODES = [
   ["preservationAustin", "pa"],
   ["aisdSchools", "aisd"],
   ["holc", "holc"],
+  ["outreach", "events"],
+  ["districts", "cd"],
 ];
 
 export const DEFAULT_VIEW_STATE = {
@@ -36,6 +38,8 @@ export const DEFAULT_VIEW_STATE = {
     preservationAustin: false,
     aisdSchools: false,
     holc: false,
+    outreach: true,
+    districts: true,
   },
   activeRegionId: null,
   activeNeighborhoodId: null,

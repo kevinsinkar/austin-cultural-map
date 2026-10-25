@@ -6,6 +6,18 @@ An interactive data visualization mapping four decades of cultural displacement 
 
 ---
 
+## Current focus: PA Community Engagement
+
+The site is currently repurposed as an outreach-planning tool for Preservation Austin's Community Engagement committee. Three tabs are shown (**Map**, **Outreach**, **Strategic Plan**); the analysis views below still exist and work via direct URL (`#/history`, `#/compare`, `#/triage`) — flip `SHOW_ANALYSIS_TABS` in `appConfig.js` to bring their tabs back.
+
+- **Tabling Opportunities layer** — 320 events, recurring series, and civic listening bodies (Oct 2026 – Dec 2027) from the committee's research database, pinned over the DVI choropleth. Pins are colored by tabling status (open to nonprofits / vendor fee / partner-only / listening / unknown) with filters and an upcoming-events horizon. A council-district overlay (official 10-1 boundaries) can be toggled in Layers.
+- **Outreach planner** (Outreach tab) — the committee worklist: date-sorted, filterable by status, mission fit, council district, advocacy arena, and type; per-event pipeline stage (identified → contacted → applied → confirmed → tabled) with outcome capture (attendance, signups) on tabled events; notes saved in the browser; CSV export for the monthly meeting; "show on map" drops a pin at the event location.
+- **Coverage view** (Outreach tab → Coverage) — displacement need vs. outreach activity per council district and per advocacy arena, flagging "outreach deserts" (high-DVI districts with no confirmed nonprofit-open opportunity). Produces the numbers behind the strategic plan's "reach across all parts of the city," "advocates activated by arena," and "first-time participants" measures. *Caveat: census tracts are assigned to council districts by tract centroid, so a tract straddling a boundary counts entirely toward the district containing its center; events are assigned by pin location, falling back to the database's inferred district when unmapped. Good for coverage reporting — verify against the City's district lookup before citing a specific tract's district.*
+- **Strategic Plan tab** — PA's 2026–2029 mission, vision, pillars, objectives with their measures, and values, with notes on how this tool supports each measure. For board-member reference.
+- **Adjustable DVI weights** — the "DVI Weights" panel on the map exposes every weight in the index (sub-index balance plus each field within each sub-index), the two methodology rules (vulnerability gate, data-desert boost), and named presets (Equity lens, Market urgency). Recalculates live as sliders move, or on demand; custom weights persist locally.
+
+The opportunity data is generated from `preservation_austin_tabling_database.md` by `scripts/parse_tabling_db.py` (add `--geocode` to refresh coordinates via Nominatim; results are cached). Council district boundaries come from `scripts/fetch_council_districts.py` (City of Austin ArcGIS). Re-run the parser whenever the database file is updated.
+
 ## Features
 
 - **Interactive Map** — Leaflet-based choropleth of 269 census-tract neighborhoods colored by Displacement Vulnerability Index (DVI). Time slider animates from 1990 to 2025.
