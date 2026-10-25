@@ -1,6 +1,13 @@
 import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
+import {
+  AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, PA_LABELS, REGION_INDEX, TIPPING_POINTS } from "../data";
+import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
+import { toDemoChartData } from "../data/auditedData";
+import { DEMO_COLORS } from "../data/constants";
 import { ID_TO_NAME, getMergedIds } from "../data/regionLookup";
 import { regionLookupMap } from "../data/regionIndex";
 import {
@@ -58,10 +65,18 @@ export default function StoryCardModal({ regionId, onClose }) {
     const tp = TIPPING_POINTS.find((t) => t.region_ids?.includes(regionId)) || null;
     const tpStats = tp ? computeTippingStats(tp) : null;
 
-    return { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats };
+    // Charts use only the years that actually have data — no padded nulls
+    // — and are computed here, so the work happens only when the card is
+    // opened, never on ordinary tract selection.
+    const demoData = toDemoChartData(regionId).filter((r) => r.White != null);
+    const dviSeries = (AUDITED_DVI_LOOKUP[regionId] || []).map((p) => ({ year: p.year, dvi: p.dvi }));
+
+    return { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries };
   }, [regionId]);
 
-  const { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats } = card;
+  const { name, tractLabel, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries } = card;
+  const demoYears = demoData.map((r) => r.year);
+  const dviYears = dviSeries.map((r) => r.year);
 
   // Plain-language headline for the data story
   const dataStory = excluded
@@ -150,7 +165,63 @@ export default function StoryCardModal({ regionId, onClose }) {
                 )}.
               </p>
             )}
+            {dviSeries.length >= 2 && (
+              <div style={{ marginTop: 8 }}>
+                <div style={{ width: "100%", height: 76 }} role="img" aria-label={`Displacement vulnerability trend for ${name}, measured years ${dviYears[0]} to ${dviYears[dviYears.length - 1]}`}>
+                  <ResponsiveContainer>
+                    <LineChart data={dviSeries} margin={{ top: 6, right: 8, left: -26, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#edeae4" vertical={false} />
+                      <XAxis
+                        dataKey="year" type="number" domain={["dataMin", "dataMax"]}
+                        ticks={dviYears} tick={{ fontSize: 9.5, fill: "#a8a49c" }}
+                        tickLine={false} axisLine={{ stroke: "#d6d3cd" }}
+                      />
+                      <YAxis domain={[0, 100]} ticks={[0, 50, 100]} tick={{ fontSize: 9.5, fill: "#a8a49c" }} tickLine={false} axisLine={false} />
+                      <Line type="monotone" dataKey="dvi" stroke="#9a3412" strokeWidth={2} dot={{ r: 2.5, fill: "#9a3412" }} isAnimationActive={false} />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+                <div style={{ fontSize: 10, color: "#a8a49c", marginTop: 1 }}>
+                  Displacement Vulnerability Index — measured years only ({dviYears.join(", ")})
+                </div>
+              </div>
+            )}
           </Section>
+
+          {/* Population composition over the measured years */}
+          {demoData.length >= 2 && (
+            <Section title="Who lives here — population share over time">
+              <div style={{ width: "100%", height: 150 }} role="img" aria-label={`Demographic composition of ${name} across the years with census data`}>
+                <ResponsiveContainer>
+                  <AreaChart data={demoData} margin={{ top: 4, right: 8, left: -22, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#edeae4" />
+                    <XAxis
+                      dataKey="year" type="number" domain={["dataMin", "dataMax"]}
+                      ticks={demoYears} tick={{ fontSize: 10, fill: "#7c6f5e" }}
+                      tickLine={false} axisLine={{ stroke: "#d6d3cd" }}
+                    />
+                    <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} ticks={[0, 0.5, 1]} tick={{ fontSize: 10, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                    <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Asian" stackId="1" stroke="none" fill={DEMO_COLORS.Asian} fillOpacity={0.85} name="Asian" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Hispanic" stackId="1" stroke="none" fill={DEMO_COLORS.Hispanic} fillOpacity={0.85} name="Hispanic/Latino" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="Black" stackId="1" stroke="none" fill={DEMO_COLORS.Black} fillOpacity={0.85} name="Black" isAnimationActive={false} />
+                    <Area type="monotone" dataKey="White" stackId="1" stroke="none" fill={DEMO_COLORS.White} fillOpacity={0.85} name="White non-Hispanic" isAnimationActive={false} />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 5, alignItems: "center" }}>
+                {[["White non-Hispanic", "White"], ["Black", "Black"], ["Hispanic/Latino", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([label, key]) => (
+                  <span key={key} style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 10, color: "#64615b" }}>
+                    <span style={{ width: 9, height: 9, borderRadius: 2, background: DEMO_COLORS[key] }} aria-hidden="true" />
+                    {label}
+                  </span>
+                ))}
+                <span style={{ fontSize: 10, color: "#a8a49c", marginLeft: "auto" }}>
+                  Census years with data: {demoYears.join(", ")}
+                </span>
+              </div>
+            </Section>
+          )}
 
           {/* Historic turning point */}
           {tp && (
