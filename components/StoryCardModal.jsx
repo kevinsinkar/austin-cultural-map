@@ -112,7 +112,6 @@ export default function StoryCardModal({ regionId, onClose }) {
     const tractLabel = meta?.tract_label;
 
     const dviNow = interpolateDvi(regionId, 2023);
-    const dvi2000 = interpolateDvi(regionId, 2000);
     const excluded = isRegionExcluded(regionId, 2023);
     const dd = calcDirectDisplacement(regionId);
 
@@ -138,10 +137,10 @@ export default function StoryCardModal({ regionId, onClose }) {
     const dviSeries = (AUDITED_DVI_LOOKUP[regionId] || []).map((p) => ({ year: p.year, dvi: p.dvi }));
     const econStats = buildEconStats(regionId);
 
-    return { name, tractLabel, district, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats };
+    return { name, tractLabel, district, dviNow, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats };
   }, [regionId]);
 
-  const { name, tractLabel, district, dviNow, dvi2000, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats } = card;
+  const { name, tractLabel, district, dviNow, excluded, dd, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats } = card;
   const demoYears = demoData.map((r) => r.year);
   const dviYears = dviSeries.map((r) => r.year);
 
@@ -156,8 +155,11 @@ export default function StoryCardModal({ regionId, onClose }) {
           ? "Early pressure is visible here; conditions are shifting but community fabric is still intact."
           : "Conditions here are comparatively stable today.";
 
-  const trendTxt = dvi2000 > 0
-    ? `Displacement vulnerability moved from ${dvi2000.toFixed(0)} (2000) to ${dviNow.toFixed(0)} (2023) on the 0–100 index.`
+  // Trend sentence anchors on the FIRST MEASURED point — never a
+  // back-filled year the data can't actually support.
+  const firstDvi = dviSeries[0];
+  const trendTxt = firstDvi && firstDvi.year < 2023 && firstDvi.dvi > 0
+    ? `Displacement vulnerability moved from ${firstDvi.dvi.toFixed(0)} (${firstDvi.year}) to ${dviNow.toFixed(0)} (2023) on the 0–100 index.`
     : `Displacement vulnerability stands at ${dviNow.toFixed(0)} (2023) on the 0–100 index.`;
 
   // Portal to <body>: the detail panel and Leaflet's floating controls

@@ -172,6 +172,15 @@ function socioScore(s, w) {
  * for a given weights object (DEFAULT_DVI_WEIGHTS shape). Pure function —
  * ~269 regions × ≤14 years, cheap enough to run on every slider change.
  */
+/**
+ * Minimum number of the 8 underlying input fields that must be present
+ * for a (region, year) to get a DVI point at all. Below this, re-weighting
+ * degenerates into echoing a single field — the 2000 rows carry ONLY
+ * owner-occupancy, so every low-ownership tract scored a spurious 100.
+ * Matches the ≥3-shared-fields honesty threshold in comparableDviPair.
+ */
+const MIN_FIELDS_FOR_DVI = 3;
+
 export function computeDviLookup(weights = DEFAULT_DVI_WEIGHTS) {
   const w = weights;
   const lookup = {};
@@ -190,6 +199,13 @@ export function computeDviLookup(weights = DEFAULT_DVI_WEIGHTS) {
       const V = Vr.score;
       const P = Pr.score;
       const S = Sr.score;
+
+      // Too little data for an honest index → no point for this year.
+      // Interpolation then skips it and the confidence system reports
+      // "showing the nearest data point" instead of a fabricated score.
+      if (Vr.present + Pr.present + Sr.present < MIN_FIELDS_FOR_DVI) {
+        continue;
+      }
 
       // Fraction of the 8 underlying input fields present for this
       // (region, year). Consumers use it to judge whether two years'

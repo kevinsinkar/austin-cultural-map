@@ -76,7 +76,7 @@ All data lives in `data/phase1_output/` as three audited, normalized JSON files 
 - **Property** (1,052 rows; 2010–2023) — home values, rent, commercial sqft, vacancy, permits
 - **Socioeconomic** (1,052 rows; 2010–2023) — income, poverty, unemployment, Gini coefficient, eviction, SNAP
 
-Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the DVI re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. See `DATA_METHODOLOGY.md`.
+Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the DVI re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. A (region, year) must have at least 3 of the 8 input fields to get a DVI point at all — below that, re-weighting degenerates into echoing a single field (the 2000 rows carry only owner-occupancy, which scored every low-ownership tract a spurious 100), so those years show the nearest measured value with a confidence note instead. See `DATA_METHODOLOGY.md`.
 
 Business data tracks 41 operating and 52 closed cultural anchors with location, founding year, and displacement pressure ratings.
 
