@@ -46,6 +46,13 @@ const MARKERS = {
   "Outreach planner": "pa-outreach-plan-v1",
   "Coverage view": "outreach desert",
   "Triage ranking": "Which neighborhoods should receive preservation grants",
+  // The rest are not private, but are not meant for the public site either:
+  // the internal roadmap, the History research (compiled with AI assistance
+  // and not yet reviewed by Preservation Austin), the plan and Compare views.
+  "Agenda (internal roadmap)": "Next on the Agenda",
+  "History view": "Read the full record",
+  "Strategic Plan view": "Strategic Pillars",
+  "Compare view": "Compare two places",
 };
 for (const [view, marker] of Object.entries(MARKERS)) {
   if (bundle.includes(marker)) problems.push(`${view} code is in the bundle (found "${marker}")`);

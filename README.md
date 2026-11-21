@@ -14,7 +14,7 @@ The site is currently repurposed as an outreach-planning tool for Preservation A
 |---|---|---|
 | Command | `npm run build` (and `npm run dev`) | `npm run present` |
 | Where it runs | GitHub Pages | This computer only (`localhost`) |
-| Views | Map | Map, Outreach, Strategic Plan, History, Compare, Triage |
+| Views | Map, and a story card page for each place | Map, story cards, Outreach, Strategic Plan, History, Compare, Triage |
 | Private data | None — the outreach dataset is replaced by an empty list | Full outreach dataset, including organizer contacts |
 | DVI weights | Published defaults, no panel | Adjustable, saved in the browser |
 
@@ -26,7 +26,7 @@ Everything below describes presenter mode unless it says otherwise.
 - **Outreach planner** (Outreach tab) — the committee worklist: date-sorted, filterable by status, mission fit, council district, advocacy arena, and type; per-event pipeline stage (identified → contacted → applied → confirmed → tabled) with outcome capture (attendance, signups) on tabled events; notes saved in the browser; CSV export for the monthly meeting; "show on map" drops a pin at the event location.
 - **Coverage view** (Outreach tab → Coverage) — displacement need vs. outreach activity per council district and per advocacy arena, flagging "outreach deserts" (high-DVI districts with no confirmed nonprofit-open opportunity). Produces the numbers behind the strategic plan's "reach across all parts of the city," "advocates activated by arena," and "first-time participants" measures. *Caveat: census tracts are assigned to council districts by tract centroid, so a tract straddling a boundary counts entirely toward the district containing its center; events are assigned by pin location, falling back to the database's inferred district when unmapped. Good for coverage reporting — verify against the City's district lookup before citing a specific tract's district.*
 - **Equity Audit view** (Outreach tab → Equity Audit) — "how Austin is changing alongside how PA is serving the city": PA's grants, awards, legacy businesses, and advocacy per district against each district's DVI and measured Black+Hispanic share change, plus an east/west-of-I-35 dollars-vs-need split. PA's incoming Homes Tour and Equity Audit datasets plug into `data/equityAudit.js` (the file documents the row shape).
-- **Neighborhood story cards** — the "📄 Story card" button on a selected tract opens a printable one-pager for tablers: the data story in plain language, the historic turning point, cultural anchors still standing and lost, and PA's nearby work. Printing shows only the card.
+- **Neighborhood story cards** — "Open the story card" on a selected place opens a one-page profile for tablers: the data story in plain language, the historic turning point, cultural anchors still standing and lost, and PA's nearby work. Each card is a page with its own short address (`#/card?tract=84`, `#/card?hood=montopolis`), so it can be linked or turned into a QR code; printing shows only the card. Story cards are also in the public build, where the heading carries the site's name rather than Preservation Austin's.
 - **Strategic Plan tab** — PA's 2026–2029 mission, vision, pillars, objectives with their measures, and values, with notes on how this tool supports each measure and suggested starting DVI weights per objective. For board-member reference.
 - **Adjustable DVI weights** — the "DVI Weights" panel on the map exposes every weight in the index (sub-index balance plus each field within each sub-index), the two methodology rules (vulnerability gate, data-desert boost), and objective-named presets sourced from the same data as the Strategic Plan cards (Participation, Advocacy, Equity Standard, Whole Story, Pipeline). Recalculates live as sliders move, or on demand; custom weights persist locally.
 
@@ -34,8 +34,10 @@ The opportunity data is generated from `private/preservation_austin_tabling_data
 
 ## Features
 
-- **Interactive Map** — Leaflet-based choropleth of 269 census-tract neighborhoods colored by Displacement Vulnerability Index (DVI). Time slider animates from 1990 to 2025.
-- **Region Detail Panel** — Click any region to see DVI trends, demographic breakdowns, property market data, rent burden, and surviving/closed cultural businesses.
+- **Interactive Map** — Leaflet-based choropleth of 269 census tracts colored by stage on the Displacement Vulnerability Index (DVI). It opens on 2023; the year slider runs from 1990 to 2025. The color key sits above the map and the year controls below it, so nothing covers the map. Works on phones and tablets.
+- **Start here** — With nothing selected, the right-hand card states the five ideas the map is built around, each with one thing to do on the map. The numbers in it are computed from the data (`data/bigIdeas.js`).
+- **Search** — Find a neighborhood, a census tract number, a tracked cultural anchor or a street address. Everything except the address lookup runs in the browser; an address is sent to OpenStreetMap's Nominatim service only when the person chooses to look it up.
+- **Place panel and story card** — Selecting a census tract or a neighborhood opens the same summary panel, which leads to the same story card. Places are titled by neighborhood name where a City of Austin planning area supports one, with the census tract number second (`utils/places.js`).
 - **Grant Triage View** — Scatter plot + sortable table classifying regions into *Active Displacement*, *High Risk / Data Gap*, *Critical — Near Tipping*, *Monitor*, and *Exclusive / Appreciated* tiers. Includes adjustable DVI weight sliders.
 - **Comparison View** — Side-by-side comparison of two regions across demographic, economic, and displacement dimensions.
 - **Timeline View** — "River of Time" visualization of business openings, closures, and infrastructure/policy events.
@@ -78,7 +80,15 @@ npm run build
 
 # Preview production build
 npm run preview
+
+# Regenerate the slim map shapes after any change to tract or neighborhood geometry
+npm run build:shapes
+
+# Regenerate tract titles after any change to data/audit_output/tract_npa_overlap.json
+npm run build:places
 ```
+
+The map polygons the site loads (`data/shapes/*.min.json`) and the tract titles (`data/placeNames.js`) are generated files that are checked in. The full-precision geometry in `data/final_updated_regions.js` and `data/neighborhoods_geojson.js` is the source and is no longer bundled, which took the first download from about 9.7 MB to about 3.4 MB (a 2.9 MB script plus 0.5 MB of tract shapes, before compression).
 
 ## Data Sources
 
@@ -101,7 +111,8 @@ Business data tracks 49 operating and 58 closed cultural anchors with location, 
 ├── utils/            # DVI math, formatting, map helpers
 ├── data/             # All data files + barrel export
 │   └── phase1_output/  # Source-of-truth audited JSONs
-├── public/           # Static assets
+├── public/           # Static assets (published as-is: keep internal files out)
+├── docs/             # Working notes and the internal roadmap (not published)
 └── archive/          # Legacy code (not imported)
 ```
 

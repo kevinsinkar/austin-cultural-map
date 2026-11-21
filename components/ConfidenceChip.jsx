@@ -54,7 +54,7 @@ export default function ConfidenceChip({ level = "Medium", reasons = [], suffix 
           borderRadius: 10,
           border: "1px solid #d6d3cd",
           background: "#fffffe",
-          fontSize: 11,
+          fontSize: 12,
           fontWeight: 500,
           color: "#64615b",
           cursor: hasInfo ? "pointer" : "default",
@@ -64,7 +64,7 @@ export default function ConfidenceChip({ level = "Medium", reasons = [], suffix 
       >
         <span style={{ width: 6, height: 6, borderRadius: "50%", background: cfg.dot, flexShrink: 0 }} aria-hidden="true" />
         {cfg.label} {suffix}
-        {hasInfo && <span aria-hidden="true" style={{ color: "#a8a49c", fontSize: 11 }}>ⓘ</span>}
+        {hasInfo && <span aria-hidden="true" style={{ color: "var(--muted)", fontSize: 12 }}>ⓘ</span>}
       </button>
       {open && (
         <div
@@ -82,12 +82,12 @@ export default function ConfidenceChip({ level = "Medium", reasons = [], suffix 
             padding: "10px 12px",
           }}
         >
-          <div style={{ fontSize: 11, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>
             Why {cfg.label.toLowerCase()} confidence?
           </div>
           <ul style={{ margin: 0, paddingLeft: 14, display: "flex", flexDirection: "column", gap: 4 }}>
             {reasons.map((r, i) => (
-              <li key={i} style={{ fontSize: 11, color: "#64615b", lineHeight: 1.45 }}>{r}</li>
+              <li key={i} style={{ fontSize: 12, color: "#64615b", lineHeight: 1.45 }}>{r}</li>
             ))}
           </ul>
         </div>

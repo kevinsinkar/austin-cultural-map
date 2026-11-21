@@ -130,7 +130,7 @@ export default function OutreachEquityAudit({ dviVersion }) {
           hint="Homes Tour + Equity Audit rows (data/equityAudit.js)"
         />
       </div>
-      <p style={{ fontSize: 11.5, color: "#64615b", margin: "0 2px 14px", lineHeight: 1.5, maxWidth: 760 }}>
+      <p style={{ fontSize: 12, color: "#64615b", margin: "0 2px 14px", lineHeight: 1.5, maxWidth: 760 }}>
         Read the first two tiles together: if {eastNeedShare.toFixed(0)}% of the city's
         high-vulnerability tracts are east of I-35 but {eastDollarShare.toFixed(0)}% of grant
         dollars land there, the gap between those numbers is the equity story to report each year.
@@ -138,11 +138,11 @@ export default function OutreachEquityAudit({ dviVersion }) {
 
       {/* ── District table ── */}
       <div style={{ background: "#fffffe", border: "1px solid #e8e5e0", borderRadius: 10, overflow: "hidden", marginBottom: 6 }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12.5 }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: "#f5f0ea", textAlign: "left" }}>
               {["District", "Avg DVI '23", "High-DVI tracts", "Δ Black+Hispanic share", "PA items", "Grant $", "Activity mix"].map((h) => (
-                <th key={h} style={{ padding: "8px 10px", fontSize: 10.5, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
+                <th key={h} style={{ padding: "8px 10px", fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
               ))}
             </tr>
           </thead>
@@ -156,7 +156,7 @@ export default function OutreachEquityAudit({ dviVersion }) {
                   <td style={{ padding: "8px 10px", fontWeight: 700, whiteSpace: "nowrap" }}>
                     D{r.district}
                     {flagged && (
-                      <span style={{ marginLeft: 7, fontSize: 10, fontWeight: 700, color: "#9a3412", background: "#ffedd5", padding: "1px 7px", borderRadius: 8 }}>
+                      <span style={{ marginLeft: 7, fontSize: 12, fontWeight: 700, color: "#9a3412", background: "#ffedd5", padding: "1px 7px", borderRadius: 8 }}>
                         under-served
                       </span>
                     )}
@@ -168,14 +168,14 @@ export default function OutreachEquityAudit({ dviVersion }) {
                     </span>
                   </td>
                   <td style={{ padding: "8px 10px", fontWeight: 600, color: r.highDvi > 0 ? "#b91c1c" : "#64615b" }}>
-                    {r.highDvi} <span style={{ fontWeight: 400, color: "#a8a49c" }}>/ {r.tracts}</span>
+                    {r.highDvi} <span style={{ fontWeight: 400, color: "var(--muted)" }}>/ {r.tracts}</span>
                   </td>
                   <td style={{ padding: "8px 10px", fontWeight: 600, color: bhDelta != null && bhDelta < 0 ? "#b91c1c" : "#15803d" }}>
                     {bhDelta != null ? `${bhDelta > 0 ? "+" : ""}${bhDelta.toFixed(1)} pts` : "—"}
                   </td>
                   <td style={{ padding: "8px 10px" }}>{r.items || "—"}</td>
                   <td style={{ padding: "8px 10px" }}>{r.dollars ? `$${r.dollars.toLocaleString()}` : "—"}</td>
-                  <td style={{ padding: "8px 10px", fontSize: 11, color: "#64615b" }}>
+                  <td style={{ padding: "8px 10px", fontSize: 12, color: "#64615b" }}>
                     {Object.entries(r.byType).map(([t, n]) => `${n} ${typeLabel(t)}`).join(" · ") || "—"}
                   </td>
                 </tr>
@@ -184,7 +184,7 @@ export default function OutreachEquityAudit({ dviVersion }) {
           </tbody>
         </table>
       </div>
-      <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 2px 14px", lineHeight: 1.5 }}>
+      <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 2px 14px", lineHeight: 1.5 }}>
         "Δ Black+Hispanic share" is the tract-average change in combined Black + Hispanic population share
         from the earliest reliable census year (2000, else 2010) to the latest (2023) — measured change, not modeled risk.
         Tracts and PA items are assigned to districts by centroid / pin location (see the Coverage view caveat).
@@ -193,7 +193,7 @@ export default function OutreachEquityAudit({ dviVersion }) {
       </p>
 
       {/* ── Pending-data note ── */}
-      <div style={{ background: "#f0fdfa", border: "1px solid #ccfbf1", borderRadius: 10, padding: "10px 14px", fontSize: 12, color: "#115e59", lineHeight: 1.55, maxWidth: 820 }}>
+      <div style={{ background: "#f0fdfa", border: "1px solid #ccfbf1", borderRadius: 10, padding: "10px 14px", fontSize: 13, color: "#115e59", lineHeight: 1.55, maxWidth: 820 }}>
         <strong>Waiting on PA datasets:</strong> Homes Tour addresses and the Equity Audit data
         (promised in the committee follow-up) plug into <code>data/equityAudit.js</code> — the file
         documents the row shape. Once loaded, they appear in the tiles, the district table's activity
@@ -208,8 +208,8 @@ function Tile({ label, value, hint }) {
   return (
     <div style={{ background: "#fffffe", border: "1px solid #e8e5e0", borderRadius: 10, padding: "10px 14px" }}>
       <div style={{ fontSize: 24, fontWeight: 700, fontFamily: "'Newsreader',Georgia,serif", color: "#0f766e", lineHeight: 1.1 }}>{value}</div>
-      <div style={{ fontSize: 11.5, fontWeight: 600, color: "#1a1a1a", marginTop: 2 }}>{label}</div>
-      <div style={{ fontSize: 10.5, color: "#a8a49c" }}>{hint}</div>
+      <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginTop: 2 }}>{label}</div>
+      <div style={{ fontSize: 12, color: "var(--muted)" }}>{hint}</div>
     </div>
   );
 }

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Austin's Shifting Ground">
+  <rect width="64" height="64" rx="14" fill="#0f766e"/>
+  <path d="M8 24l16-6 16 6 16-6v11l-16 6-16-6-16 6z" fill="#ffffb2"/>
+  <path d="M8 38l16-6 16 6 16-6v11l-16 6-16-6-16 6z" fill="#fd8d3c"/>
+</svg>

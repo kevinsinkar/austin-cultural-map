@@ -15,11 +15,11 @@ const STEPS = [
   {
     title: "Austin's Shifting Ground",
     body: "This map tells the story of who has lived in Austin — and who has been pushed out. It was built as an education and conversation tool: the city's history first, then thirty-five years of measured change, and finally a starting point for deciding where outreach and advocacy matter most. The next two and a half minutes walk through all three.",
-    apply: (c) => { c.setIsPlaying(false); c.setViewMode("map"); c.setYear(2010); },
+    apply: (c) => { c.setIsPlaying(false); c.setViewMode("map"); c.setYear(2023); },
   },
   {
     title: "Start with the history",
-    body: "The History tab holds 112 documented events across 13,600 years — from Clovis-era occupation through the eras that shaped each of Austin's communities: Indigenous peoples, freedom colonies, Mexican American East Austin, LGBTQ+ Austin, and more. Every event carries a documentation flag, because a missing record is not missing history.",
+    body: "The History tab holds 112 events across 13,600 years — from Clovis-era occupation through the eras that shaped each of Austin's communities: Indigenous peoples, freedom colonies, Mexican American East Austin, LGBTQ+ Austin, and more. The research was compiled with AI assistance and has not yet been reviewed by Preservation Austin; every event carries a documentation flag, because a missing record is not missing history.",
     apply: (c) => { c.setIsPlaying(false); c.setViewMode("history"); },
   },
   {
@@ -34,8 +34,8 @@ const STEPS = [
   },
   {
     title: "One neighborhood's story",
-    body: "Click any tract and the panel tells its story. This is Central East Austin — the East 11th/12th corridor. The “What Happened Here?” card computes the tipping point straight from census data: who left, who arrived, what home values did, and which policy decisions were the catalyst.",
-    apply: (c) => { c.setIsPlaying(false); c.locate(85); c.setPanelTab("culture"); },
+    body: "Select any place and the panel beside the map sums it up. This is Central East Austin — the East 11th/12th corridor. “Open the story card” gives the full profile on one printable page: who left, who arrived, what home values did, and the turning point behind it. Every card has its own link.",
+    apply: (c) => { c.setIsPlaying(false); c.setYear(2023); c.locate(85); },
   },
   {
     title: "Two neighborhoods, two paths",
@@ -90,13 +90,13 @@ export default function GuidedTour({ ctx, onClose }) {
       }}
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
-        <span style={{ fontSize: 11, fontWeight: 600, color: "#0f766e", textTransform: "uppercase", letterSpacing: ".06em" }}>
+        <span style={{ fontSize: 12, fontWeight: 600, color: "#0f766e", textTransform: "uppercase", letterSpacing: ".06em" }}>
           Guided tour · step {step + 1} of {STEPS.length} · ~3 min
         </span>
         <button
           onClick={onClose}
           aria-label="End tour"
-          style={{ background: "none", border: "none", cursor: "pointer", fontSize: 16, color: "#a8a49c", padding: 2, lineHeight: 1 }}
+          style={{ background: "none", border: "none", cursor: "pointer", fontSize: 16, color: "var(--muted)", padding: 2, lineHeight: 1 }}
         >
           ✕
         </button>
@@ -104,7 +104,7 @@ export default function GuidedTour({ ctx, onClose }) {
       <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px" }}>
         {s.title}
       </h2>
-      <p style={{ fontSize: 13, color: "#44403c", lineHeight: 1.55, margin: "0 0 12px" }}>{s.body}</p>
+      <p style={{ fontSize: 14, color: "#44403c", lineHeight: 1.55, margin: "0 0 12px" }}>{s.body}</p>
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <div style={{ display: "flex", gap: 4, marginRight: "auto" }} aria-hidden="true">
           {STEPS.map((_, i) => (
@@ -114,14 +114,14 @@ export default function GuidedTour({ ctx, onClose }) {
         {step > 0 && (
           <button
             onClick={() => go(step - 1)}
-            style={{ padding: "6px 14px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 12, fontWeight: 500, cursor: "pointer" }}
+            style={{ padding: "6px 14px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 13, fontWeight: 500, cursor: "pointer" }}
           >
             Back
           </button>
         )}
         <button
           onClick={() => go(step + 1)}
-          style={{ padding: "6px 16px", borderRadius: 6, border: "none", background: "#0f766e", color: "#fffffe", fontSize: 12, fontWeight: 600, cursor: "pointer" }}
+          style={{ padding: "6px 16px", borderRadius: 6, border: "none", background: "#0f766e", color: "#fffffe", fontSize: 13, fontWeight: 600, cursor: "pointer" }}
         >
           {step === STEPS.length - 1 ? "Finish" : "Next"}
         </button>

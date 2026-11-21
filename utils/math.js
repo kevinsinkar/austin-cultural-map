@@ -54,10 +54,10 @@ export function interpolateDvi(regionId, yr) {
 //   fill — polygon/tile swatch  ·  text — darker same-hue tone readable
 //   on light backgrounds  ·  on — number color readable ON the fill.
 export const DVI_BINS = [
-  { min: 0,  max: 20,       band: "Stable",                short: "Stable",          range: "0–20",  fill: "#ffffb2", text: "#8c6d1f", on: "#1a1a1a" },
-  { min: 20, max: 35,       band: "Early Pressure",        short: "Early Pressure",  range: "20–35", fill: "#fecc5c", text: "#b45309", on: "#1a1a1a" },
-  { min: 35, max: 55,       band: "Active Displacement",   short: "Active Displ.",   range: "35–55", fill: "#fd8d3c", text: "#c2410c", on: "#1a1a1a" },
-  { min: 55, max: Infinity, band: "Historic Displacement", short: "Historic Displ.", range: "55+",   fill: "#e31a1c", text: "#b91c1c", on: "#fffffe" },
+  { min: 0,  max: 20,       band: "Stable",                short: "Stable",          stage: "Stable",                range: "0–20",  fill: "#ffffb2", text: "#8c6d1f", on: "#1a1a1a" },
+  { min: 20, max: 35,       band: "Early Pressure",        short: "Early Pressure",  stage: "Early pressure",        range: "20–35", fill: "#fecc5c", text: "#b45309", on: "#1a1a1a" },
+  { min: 35, max: 55,       band: "Active Displacement",   short: "Active Displ.",   stage: "Active displacement",   range: "35–55", fill: "#fd8d3c", text: "#c2410c", on: "#1a1a1a" },
+  { min: 55, max: Infinity, band: "Historic Displacement", short: "Historic Displ.", stage: "Historic displacement", range: "55+",   fill: "#e31a1c", text: "#b91c1c", on: "#fffffe" },
 ];
 
 // Capped "Exclusive / Appreciated" tracts (isExcluded) — a categorically
@@ -87,6 +87,11 @@ export function getDviColor(dvi, nd = false) {
 
 export function getDviBand(d) {
   return getDviBin(d).band;
+}
+
+/** The stage name as the map, panel and story card word it (sentence case). */
+export function getDviStage(d) {
+  return getDviBin(d).stage;
 }
 
 export function getDviBandColor(d) {
@@ -388,6 +393,54 @@ export function calcDirectDisplacement(regionId) {
   return {
     fromYear: from.year,
     toYear: to.year,
+    bhFrom: +bhFrom.toFixed(1),
+    bhTo: +bhTo.toFixed(1),
+    bhDelta: +(bhTo - bhFrom).toFixed(1),
+    renterFrom: rFrom != null ? +rFrom.toFixed(1) : null,
+    renterTo: rTo != null ? +rTo.toFixed(1) : null,
+    renterDelta: rFrom != null && rTo != null ? +(rTo - rFrom).toFixed(1) : null,
+  };
+}
+
+/**
+ * The same measured change for a group of tracts (a neighborhood), using
+ * population-weighted shares. Only years in which EVERY tract in the group
+ * has a measurement are used, so the comparison never mixes a different
+ * set of tracts at each end. Returns null when no such pair of years exists.
+ * Renter share is weighted by population as an approximation (household
+ * counts are not in the audited data).
+ */
+export function calcGroupDisplacement(regionIds) {
+  const ids = regionIds || [];
+  if (!ids.length) return null;
+  if (ids.length === 1) return calcDirectDisplacement(ids[0]);
+  const rowsAt = (yr) => {
+    const rows = ids.map((id) => (AUDITED_DEMO_BY_ID.get(id) || []).find((r) => r.year === yr));
+    const ok = rows.every((r) =>
+      r && r.total_population > 0 && r.pct_black_non_hispanic != null && r.pct_hispanic != null);
+    return ok ? rows : null;
+  };
+  const weighted = (rows, fn) => {
+    let sum = 0, pop = 0;
+    for (const r of rows) {
+      const v = fn(r);
+      if (v == null) return null;
+      sum += v * r.total_population;
+      pop += r.total_population;
+    }
+    return pop > 0 ? sum / pop : null;
+  };
+  const toYear = [2023, 2020].find(rowsAt);
+  const fromYear = [2000, 2010].find(rowsAt);
+  if (!fromYear || !toYear || fromYear >= toYear) return null;
+  const from = rowsAt(fromYear), to = rowsAt(toYear);
+  const bh = (r) => r.pct_black_non_hispanic + r.pct_hispanic;
+  const renter = (r) => (r.pct_owner_occupied != null ? 100 - r.pct_owner_occupied : null);
+  const bhFrom = weighted(from, bh), bhTo = weighted(to, bh);
+  const rFrom = weighted(from, renter), rTo = weighted(to, renter);
+  return {
+    fromYear,
+    toYear,
     bhFrom: +bhFrom.toFixed(1),
     bhTo: +bhTo.toFixed(1),
     bhDelta: +(bhTo - bhFrom).toFixed(1),

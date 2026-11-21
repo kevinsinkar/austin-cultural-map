@@ -1,34 +1,34 @@
-import { useRef, useMemo, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import useAustinMap from "../hooks/useAustinMap";
-import RegionDetailPanel from "./RegionDetailPanel";
-import RegionSummaryPanel from "./RegionSummaryPanel";
+import PlaceSummaryPanel from "./PlaceSummaryPanel";
+import StartHere from "./StartHere";
+import PlaceSearch from "./PlaceSearch";
+import MapLegend from "./MapLegend";
+import TimeBar from "./TimeBar";
 import LegislationTrack from "./LegislationTrack";
 import LayersPopover from "./LayersPopover";
-import { SNAP_YEARS, PLAY_YEARS, TIMELINE_EVENTS } from "../data/constants";
-import { ID_TO_NAME } from "../data/regionLookup";
-import { regionLookupMap } from "../data/regionIndex";
-import {
-  AUDITED_PROP_BY_ID,
-  AUDITED_SOCIO_BY_ID,
-  closestRow,
-  priorRow,
-  toDemoChartData,
-} from "../data/auditedData";
-import { HOLC_GRADES, HOLC_ATTRIBUTION } from "../data/history";
-import { DVI_BINS, DVI_EXCLUDED, DVI_ND_COLOR } from "../utils/math";
-import ConfidenceChip from "./ConfidenceChip";
+import { DVI_BINS } from "../utils/math";
 import DviWeightsPanel from "./DviWeightsPanel";
 import { OUTREACH_STATUS } from "../data/outreachEvents";
-import { groupShare } from "../utils/dviWeights";
-import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
+import { tractPlace } from "../utils/places";
+import { PRESENTER_MODE } from "../appConfig";
 
+/**
+ * MapView — the map page.
+ *
+ * Reading order, top to bottom: find a place (search, layers), the color
+ * key, the map, the year controls, then the place panel. On wide screens
+ * the place panel sits beside the map; on tablets and phones it follows the
+ * year controls (the layout rules are in styles.css under "Map page").
+ *
+ * Nothing floats on top of the map any more: the legend is a strip above it
+ * and the year controls are docked below it.
+ */
 export default function MapView({
   year,
   setYear,
   isPlaying,
   setIsPlaying,
-  showHeritage,
-  setShowHeritage,
   showPins,
   setShowPins,
   showProjectConnect,
@@ -60,59 +60,31 @@ export default function MapView({
   setPaFilter,
   activeRegionId,
   setActiveRegionId,
-  activeFeature,
   setActiveFeature,
   selectedRegion,
   setSelectedRegion,
-  hoveredRegion,
   setHoveredRegion,
-  selectedBiz,
-  setSelectedBiz,
-  bizTab,
-  setBizTab,
-  panelTab,
-  setPanelTab,
-  selectedPA,
-  setSelectedPA,
-  // Derived data
-  currentDvi,
-  regionBizOpen,
-  regionBizClosed,
-  tippingPoint,
-  narrativeCallouts,
   // Boundary mode
   boundaryMode,
   setBoundaryMode,
   activeNeighborhoodId,
   setActiveNeighborhoodId,
-  neighborhoodAgg,
-  // History cross-links
+  // Selection, routed through index.jsx so every entry point behaves alike
+  placeRef,
+  onSelectTract,
+  onSelectNeighborhood,
+  onClearSelection,
+  onOpenCard,
+  // History cross-links and "show on map" requests
   onOpenHistory,
   flyToTarget,
+  onFlyTo,
   onFlyToHandled,
 }) {
   const mapRef = useRef(null);
+  const [legendOpen, setLegendOpen] = useState(false);
 
-  // Which timeline event tick's popover is open (index into TIMELINE_EVENTS)
-  const [openTick, setOpenTick] = useState(null);
-  const tickRowRef = useRef(null);
-  useEffect(() => {
-    if (openTick == null) return;
-    const onDoc = (e) => {
-      if (tickRowRef.current && !tickRowRef.current.contains(e.target)) setOpenTick(null);
-    };
-    const onKey = (e) => {
-      if (e.key === "Escape") setOpenTick(null);
-    };
-    document.addEventListener("mousedown", onDoc);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", onDoc);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, [openTick]);
-
-  const { leafletMapRef, bizMarkersRef, paMarkersRef } = useAustinMap({
+  const { shapesLoading, shapesError, locateTract } = useAustinMap({
     mapRef,
     year,
     activeRegionId,
@@ -135,10 +107,6 @@ export default function MapView({
     setSelectedRegion,
     setActiveFeature,
     setHoveredRegion,
-    setSelectedBiz,
-    setPanelTab,
-    setBizTab,
-    setSelectedPA,
     boundaryMode,
     activeNeighborhoodId,
     setActiveNeighborhoodId,
@@ -146,40 +114,43 @@ export default function MapView({
     onFlyToHandled,
   });
 
-  const activeRegionName = activeFeature?.properties?.region_name;
-  // Census identity is primary in tracts mode; neighborhood names appear
-  // only in neighborhoods mode
-  const activeDisplayName = activeRegionId != null
-    ? (regionLookupMap.get(activeRegionId)?.tract_label || ID_TO_NAME.get(activeRegionId) || activeRegionName)
-    : activeRegionName;
+  // ── Search results ──
+  const handleAnchor = (business) => {
+    setShowPins(true);
+    // A closed anchor only has a dot from the year it closed onward.
+    if (business.closed && year < business.closed) setYear(Math.min(2025, business.closed));
+    if (!business.closed && business.est > year) setYear(2023);
+    if (business.region_id != null) onSelectTract(business.region_id);
+    onFlyTo({ lat: business.lat, lng: business.lng, zoom: 16, label: business.name });
+  };
 
-  // Compute demoChartData from audited demographics for the selected region
-  const demoChartData = useMemo(
-    () => (activeRegionId != null ? toDemoChartData(activeRegionId) : []),
-    [activeRegionId]
-  );
+  // An address resolves to the tract that contains it. Returns the place
+  // title so the search box can say where the address landed.
+  const handleAddress = ({ lat, lng, label }) => {
+    const regionId = locateTract(lat, lng);
+    if (regionId == null) return null;
+    onSelectTract(regionId);
+    onFlyTo({ lat, lng, zoom: 15, label });
+    return tractPlace(regionId);
+  };
 
-  // Compute property values from audited property data for the selected region and year
-  const { propertyNow, propertyPrev } = useMemo(() => {
-    if (activeRegionId == null) return { propertyNow: null, propertyPrev: null };
-    const rows = AUDITED_PROP_BY_ID.get(activeRegionId);
-    return {
-      propertyNow: closestRow(rows, year),
-      propertyPrev: priorRow(rows, year),
-    };
-  }, [activeRegionId, year]);
-
-  // Compute socioeconomic values from audited socioeconomic data for the selected region and year
-  const { socioNow, socioPrev } = useMemo(() => {
-    if (activeRegionId == null) return { socioNow: null, socioPrev: null };
-    const rows = AUDITED_SOCIO_BY_ID.get(activeRegionId);
-    return {
-      socioNow: closestRow(rows, year),
-      socioPrev: priorRow(rows, year),
-    };
-  }, [activeRegionId, year]);
-
-  const handleSliderChange = (e) => setYear(parseInt(e.target.value));
+  // ── "Start here" actions (data/bigIdeas.js) ──
+  const handleStartAction = (action) => {
+    if (!action) return;
+    if (action.key === "holc") {
+      setShowHolc(!showHolc);
+    } else if (action.key === "example") {
+      onSelectTract(action.tractId);
+    } else if (action.key === "legend") {
+      setShowRegions(true);
+      if (year < 1993) setYear(2023);
+      setLegendOpen(true);
+    } else if (action.key === "anchors") {
+      setShowPins(true);
+      setIsPlaying(false);
+      setYear(2023);
+    }
+  };
 
   // Grouped layer model for the Layers popover — the grouping teaches the
   // data model: Boundaries / Cultural assets / Pressure / Historical.
@@ -187,8 +158,8 @@ export default function MapView({
     {
       title: "Boundaries",
       items: [
-        { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Boundary fills (DVI)", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: DVI_BINS[2].fill, border: "1px solid rgba(0,0,0,.15)" }} aria-hidden="true" /> },
-        { on: showDistricts, toggle: () => setShowDistricts(!showDistricts), label: "Council districts (10-1)", icon: <span style={{ width: 9, height: 9, borderRadius: 2, border: "1.5px dashed #4338ca" }} aria-hidden="true" /> },
+        { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Displacement index colors", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: DVI_BINS[2].fill, border: "1px solid rgba(0,0,0,.15)" }} aria-hidden="true" /> },
+        { on: showDistricts, toggle: () => setShowDistricts(!showDistricts), label: "Council districts", icon: <span style={{ width: 9, height: 9, borderRadius: 2, border: "1.5px dashed #4338ca" }} aria-hidden="true" /> },
       ],
     },
     // Tabling opportunities are private planning data — presenter mode only.
@@ -203,7 +174,7 @@ export default function MapView({
       items: [
         { on: showPins, toggle: () => setShowPins(!showPins), label: "Legacy businesses", icon: <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4ade80", border: "1.5px solid #64615b" }} aria-hidden="true" /> },
         { on: showMusicVenues, toggle: () => setShowMusicVenues(!showMusicVenues), label: "Music venues", icon: <span style={{ width: 8, height: 8, borderRadius: "50%", background: "rgba(124,58,237,.2)", border: "1.5px solid #7c3aed" }} aria-hidden="true" /> },
-        { on: showPreservationAustin, toggle: () => setShowPreservationAustin(!showPreservationAustin), label: "Preservation Austin", icon: <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#7c3aed" }} aria-hidden="true" /> },
+        { on: showPreservationAustin, toggle: () => setShowPreservationAustin(!showPreservationAustin), label: "Preservation Austin records", icon: <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#7c3aed" }} aria-hidden="true" /> },
       ],
     },
     {
@@ -216,320 +187,132 @@ export default function MapView({
     {
       title: "Historical",
       items: [
-        { on: showHolc, toggle: () => setShowHolc(!showHolc), label: "1935 Redlining (HOLC)", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: "#d9838d" }} aria-hidden="true" /> },
+        { on: showHolc, toggle: () => setShowHolc(!showHolc), label: "1935 redlining map", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: "#d9838d" }} aria-hidden="true" /> },
         { on: showAisdSchools, toggle: () => setShowAisdSchools(!showAisdSchools), label: "AISD school closures", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: "#b91c1c" }} aria-hidden="true" /> },
       ],
     },
   ];
 
   return (
-    <section aria-label="Map view" style={{ width: "100%" }}>
-      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexDirection: "row" }}>
-        {/* ═══ LEFT: MAP ═══ */}
-        <div style={{ flex: "1 1 0", minWidth: 0 }}>
-          {/* Toolbar: grouped Layers popover */}
-          <div style={{ display: "flex", gap: 12, marginBottom: 10, alignItems: "center", flexWrap: "wrap" }} role="toolbar" aria-label="Map controls">
-            <LayersPopover boundaryMode={boundaryMode} setBoundaryMode={setBoundaryMode} groups={layerGroups} />
-            {PRESENTER_MODE && dviWeights && onApplyDviWeights && (
-              <DviWeightsPanel weights={dviWeights} onApply={onApplyDviWeights} />
-            )}
-            {PRESENTER_MODE && showOutreach && (
-              <div style={{ display: "flex", gap: 5, alignItems: "center", flexWrap: "wrap" }} aria-label="Tabling opportunity filters">
-                {Object.entries(OUTREACH_STATUS).map(([key, meta]) => (
-                  <button
-                    key={key}
-                    onClick={() => setOutreachStatusFilter((f) => ({ ...f, [key]: !f[key] }))}
-                    aria-pressed={outreachStatusFilter[key]}
-                    title={meta.desc}
-                    style={{
-                      display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 9px",
-                      borderRadius: 11, fontSize: 10.5, fontWeight: 600, cursor: "pointer",
-                      border: `1.5px solid ${outreachStatusFilter[key] ? meta.color : "#d6d3cd"}`,
-                      background: outreachStatusFilter[key] ? `${meta.color}14` : "#fffffe",
-                      color: outreachStatusFilter[key] ? meta.color : "#a8a49c",
-                    }}
-                  >
-                    <span style={{ width: 7, height: 7, background: outreachStatusFilter[key] ? meta.color : "#d6d3cd", transform: "rotate(45deg)", borderRadius: 1.5 }} aria-hidden="true" />
-                    {meta.label}
-                  </button>
-                ))}
-                <select
-                  value={outreachHorizon}
-                  onChange={(e) => setOutreachHorizon(e.target.value)}
-                  aria-label="Tabling event timeframe"
-                  style={{ padding: "4px 6px", fontSize: 11, border: "1px solid #d6d3cd", borderRadius: 7, background: "#fffffe", color: "#1a1a1a" }}
-                >
-                  <option value="upcoming">Upcoming</option>
-                  <option value="60">Next 60 days</option>
-                  <option value="all">All (incl. past)</option>
-                </select>
-              </div>
-            )}
-            {boundaryMode === "neighborhoods" && (
-              <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", lineHeight: 1.4, maxWidth: 520 }}>
-                Neighborhood boundaries follow City of Austin planning areas; data is aggregated from census tracts. For precise tract-level data, switch to Census Tracts.
-              </div>
-            )}
-          </div>
-
-          {/* MAP — fills the viewport; legend and time bar float on it */}
-          <div style={{ position: "relative", height: "calc(100vh - 210px)", minHeight: 500, background: "#f5f3f0", borderRadius: 10, overflow: "hidden", border: "1px solid #d6d3cd", boxShadow: "0 1px 3px rgba(0,0,0,.06)" }}>
-            <div ref={mapRef} id="map-container" style={{ position: "absolute", inset: 0 }} />
-
-            {/* Floating legend card (top-right, on the map) */}
-            <div
-              style={{
-                position: "absolute", top: 12, right: 12, zIndex: 1000, width: 236,
-                background: "rgba(255,255,254,.95)", backdropFilter: "blur(4px)",
-                borderRadius: 10, border: "1px solid #d6d3cd", boxShadow: "0 2px 10px rgba(0,0,0,.1)",
-                padding: "10px 12px", maxHeight: "calc(100% - 150px)", overflowY: "auto",
-              }}
-              role="region"
-              aria-label="Map legend"
-            >
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6 }}>
-                Displacement Index
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                {[
-                  ...DVI_BINS.map((b) => ({ l: b.short, s: b.range, c: b.fill })),
-                  { l: "Exclusive / Appreciated", s: "capped", c: DVI_EXCLUDED.fill },
-                  { l: "New Dev.", s: "N/A", c: DVI_ND_COLOR },
-                ].map((b, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                    <span style={{ width: 12, height: 12, borderRadius: 3, background: b.c, border: "1px solid rgba(0,0,0,.15)", flexShrink: 0 }} aria-hidden="true" />
-                    <span style={{ fontSize: 11, color: "#1a1a1a", fontWeight: 500, flex: 1 }}>{b.l}</span>
-                    <span style={{ fontSize: 11, color: "#a8a49c" }}>{b.s}</span>
-                  </div>
-                ))}
-              </div>
-              {showPins && (
-                <div style={{ display: "flex", gap: 10, paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0", flexWrap: "wrap" }}>
-                  {[
-                    { l: "Operating", c: "#4ade80" },
-                    { l: "Closed", c: "#a8a49c" },
-                  ].map((p, i) => (
-                    <div key={i} style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: "50%", background: p.c, border: "1.5px solid #fff", boxShadow: "0 0 0 1px rgba(0,0,0,.1)" }} aria-hidden="true" />
-                      <span style={{ fontSize: 11, color: "#64615b" }}>{p.l}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-              {showProjectConnect && (
-                <div style={{ paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0", display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ width: 14, borderTop: "2.5px dashed #2563eb" }} aria-hidden="true" /><span style={{ fontSize: 11, color: "#64615b" }}>Transit</span></div>
-                </div>
-              )}
-              {showHolc && (
-                <div style={{ paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0" }}>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                    {HOLC_GRADES.map((g) => (
-                      <div key={g.grade} style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                        <span style={{ width: 10, height: 10, borderRadius: 2, background: g.fill, border: "1px solid rgba(0,0,0,.15)" }} aria-hidden="true" />
-                        <span style={{ fontSize: 11, color: "#64615b" }}>{g.grade} — {g.category}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.35 }}>{HOLC_ATTRIBUTION}</p>
-                </div>
-              )}
-              {showPreservationAustin && (
-                <div style={{ paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0", display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  {[
-                    { l: "PA Grant", c: "#7c3aed", k: "grant" },
-                    { l: "Merit Award", c: "#2563eb", k: "merit_award" },
-                    { l: "Legacy Business", c: "#d97706", k: "legacy_business" },
-                    { l: "Advocacy", c: "#059669", k: "advocacy" },
-                  ].map((p) => (
-                    <button key={p.k} onClick={() => setPaFilter(prev => ({ ...prev, [p.k]: !prev[p.k] }))} style={{ display: "flex", alignItems: "center", gap: 4, background: "none", border: "none", cursor: "pointer", padding: "2px 0", opacity: paFilter[p.k] ? 1 : 0.35 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: "50%", background: p.c }} aria-hidden="true" />
-                      <span style={{ fontSize: 11, color: "#64615b" }}>{p.l}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-              {PRESENTER_MODE && showOutreach && (
-                <div style={{ paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0" }}>
-                  <div style={{ fontSize: 10.5, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em", marginBottom: 3 }}>
-                    Tabling opportunities
-                  </div>
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                      <span style={{ width: 8, height: 8, background: "#64615b", transform: "rotate(45deg)", borderRadius: 1.5 }} aria-hidden="true" />
-                      <span style={{ fontSize: 11, color: "#64615b" }}>Dated event</span>
-                    </div>
-                    <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                      <span style={{ width: 8, height: 8, background: "#64615b", borderRadius: "50%" }} aria-hidden="true" />
-                      <span style={{ fontSize: 11, color: "#64615b" }}>Recurring / civic</span>
-                    </div>
-                  </div>
-                  <p style={{ fontSize: 10.5, color: "#a8a49c", margin: "3px 0 0", lineHeight: 1.35 }}>
-                    Color = tabling status (see chips above the map). Full details in the Outreach tab.
-                  </p>
-                </div>
-              )}
-              {/* One-line DVI formula — the choropleth is the DVI's primary display */}
-              <div style={{ borderTop: "1px solid #e8e5e0", marginTop: 8, paddingTop: 6, fontSize: 11, color: "#a8a49c", lineHeight: 1.4 }}>
-                {dviWeights
-                  ? `DVI = ${(groupShare(dviWeights.sub, "demographic") / 100).toFixed(2)}·demographic + ${(groupShare(dviWeights.sub, "market") / 100).toFixed(2)}·market + ${(groupShare(dviWeights.sub, "socio") / 100).toFixed(2)}·socioeconomic (0–100)`
-                  : "DVI = 0.35·demographic + 0.35·market + 0.30·socioeconomic (0–100)"}
-              </div>
-            </div>
-
-            {/* Docked time bar (bottom edge of the map) */}
-            <div
-              style={{
-                position: "absolute", left: 12, right: 12, bottom: 12, zIndex: 1000,
-                background: "rgba(255,255,254,.95)", backdropFilter: "blur(4px)",
-                borderRadius: 10, border: "1px solid #d6d3cd", boxShadow: "0 2px 10px rgba(0,0,0,.12)",
-                padding: "8px 16px",
-              }}
-              role="region"
-              aria-label="Time slider controls"
-            >
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 32, fontWeight: 600, color: "#1a1a1a", letterSpacing: "-.03em", lineHeight: 1 }}>{year}</span>
-                  {year >= 2020 && <span style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic" }}>ACS 2019–2023 est.</span>}
-                  {year < 2010 && (
-                    <ConfidenceChip
-                      level="Medium"
-                      suffix="confidence"
-                      reasons={["Pre-2010 census boundaries were crosswalked to modern tract geometry — tract values before 2010 are approximate."]}
-                    />
-                  )}
-                </div>
+    <section aria-label="Map" className="map-layout">
+      <div className="map-main">
+        {/* Find a place, choose layers */}
+        <div className="map-toolbar" role="toolbar" aria-label="Map controls">
+          <PlaceSearch
+            onSelectTract={onSelectTract}
+            onSelectNeighborhood={onSelectNeighborhood}
+            onSelectAnchor={handleAnchor}
+            onAddress={handleAddress}
+          />
+          <LayersPopover boundaryMode={boundaryMode} setBoundaryMode={setBoundaryMode} groups={layerGroups} />
+          {PRESENTER_MODE && dviWeights && onApplyDviWeights && (
+            <DviWeightsPanel weights={dviWeights} onApply={onApplyDviWeights} />
+          )}
+          {PRESENTER_MODE && showOutreach && (
+            <div style={{ display: "flex", gap: 5, alignItems: "center", flexWrap: "wrap" }} role="group" aria-label="Tabling opportunity filters">
+              {Object.entries(OUTREACH_STATUS).map(([key, meta]) => (
                 <button
-                  onClick={() => {
-                    if (isPlaying) setIsPlaying(false);
-                    else {
-                      if (year >= 2025) setYear(1990);
-                      setIsPlaying(true);
-                    }
+                  key={key}
+                  type="button"
+                  onClick={() => setOutreachStatusFilter((f) => ({ ...f, [key]: !f[key] }))}
+                  aria-pressed={outreachStatusFilter[key]}
+                  title={meta.desc}
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 9px", minHeight: 26,
+                    borderRadius: 13, fontSize: 12, fontWeight: 600, cursor: "pointer",
+                    border: `1.5px solid ${outreachStatusFilter[key] ? meta.color : "#d6d3cd"}`,
+                    background: outreachStatusFilter[key] ? `${meta.color}14` : "#fffffe",
+                    color: outreachStatusFilter[key] ? meta.color : "var(--muted)",
                   }}
-                  style={{ display: "flex", alignItems: "center", gap: 6, padding: "6px 16px", borderRadius: 20, border: "1.5px solid #0f766e", background: isPlaying ? "#0f766e" : "rgba(255,255,254,.8)", color: isPlaying ? "#fff" : "#0f766e", fontSize: 12, fontWeight: 600, cursor: "pointer", minHeight: 36 }}
-                  aria-label={isPlaying ? "Pause animation" : "Play animation"}
                 >
-                  {isPlaying ? (
-                    <><svg width="10" height="12" viewBox="0 0 10 12"><rect x="0" y="0" width="3" height="12" fill="currentColor" rx="1" /><rect x="7" y="0" width="3" height="12" fill="currentColor" rx="1" /></svg>Pause</>
-                  ) : (
-                    <><svg width="10" height="12" viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12" fill="currentColor" /></svg>Play</>
-                  )}
+                  <span style={{ width: 7, height: 7, background: outreachStatusFilter[key] ? meta.color : "#d6d3cd", transform: "rotate(45deg)", borderRadius: 1.5 }} aria-hidden="true" />
+                  {meta.label}
                 </button>
-              </div>
-              <input type="range" min={1990} max={2025} value={year} onChange={handleSliderChange} className="slider-track" style={{ width: "100%", background: `linear-gradient(to right,#0f766e ${((year - 1990) / 35) * 100}%,#d6d3cd ${((year - 1990) / 35) * 100}%)` }} aria-label="Select year" aria-valuenow={year} aria-valuemin={1990} aria-valuemax={2025} />
-              <div style={{ position: "relative", height: 22, marginTop: 2 }}>
-                {SNAP_YEARS.map((sy) => (
-                  <button key={sy} onClick={() => { setYear(sy); setIsPlaying(false); }} style={{ position: "absolute", left: `${((sy - 1990) / 35) * 100}%`, transform: "translateX(-50%)", fontSize: 11, color: year === sy ? "#0f766e" : "#a8a49c", fontWeight: year === sy ? 700 : 400, background: "none", border: "none", cursor: "pointer", padding: "1px 4px", minHeight: 22 }} aria-label={`Jump to ${sy}`}>{sy}</button>
-                ))}
-              </div>
-              {/* Clickable timeline event ticks → popover cards.
-                  Events before 1990 (the 1928 Plan) pin to the left edge. */}
-              <div ref={tickRowRef} style={{ position: "relative", height: 12 }} role="group" aria-label="Historical events on the timeline">
-                {TIMELINE_EVENTS.map((evt, i) => {
-                  const pct = ((Math.max(evt.year, 1990) - 1990) / 35) * 100;
-                  const isOpen = openTick === i;
-                  return (
-                    <span key={i} style={{ position: "absolute", left: `${pct}%`, top: 0, transform: "translateX(-50%)" }}>
-                      <button
-                        onClick={() => setOpenTick(isOpen ? null : i)}
-                        aria-expanded={isOpen}
-                        aria-label={`${evt.year} — ${evt.label}`}
-                        title={`${evt.year} — ${evt.label}`}
-                        style={{ width: 16, height: 12, background: "none", border: "none", cursor: "pointer", padding: 0, display: "flex", alignItems: "flex-start", justifyContent: "center" }}
-                      >
-                        <span aria-hidden="true" style={{ width: isOpen ? 3 : 2, height: 9, background: isOpen ? "#0f766e" : "#a8a49c", opacity: isOpen || Math.abs(evt.year - year) <= 5 ? 1 : 0.35, borderRadius: 1 }} />
-                      </button>
-                      {isOpen && (
-                        <div
-                          role="dialog"
-                          aria-label={`${evt.year} — ${evt.label}`}
-                          style={{
-                            position: "absolute", bottom: "calc(100% + 8px)", zIndex: 1400,
-                            ...(pct > 65 ? { right: -8 } : { left: -8 }),
-                            width: 264, background: "#fffffe", border: "1px solid #d6d3cd",
-                            borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,.16)",
-                            padding: "10px 12px", textAlign: "left",
-                          }}
-                        >
-                          <div style={{ fontSize: 12, fontWeight: 700, color: "#1a1a1a", marginBottom: 4 }}>
-                            {evt.year} — {evt.label}
-                          </div>
-                          <p style={{ fontSize: 11, color: "#44403c", lineHeight: 1.5, margin: 0 }}>{evt.blurb}</p>
-                          {onOpenHistory && isViewAllowed("history") && (
-                            <button
-                              onClick={() => { setOpenTick(null); onOpenHistory(evt.historyEventId); }}
-                              style={{ marginTop: 8, padding: "4px 10px", borderRadius: 6, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontSize: 11, fontWeight: 600, cursor: "pointer" }}
-                            >
-                              Read more in History →
-                            </button>
-                          )}
-                        </div>
-                      )}
-                    </span>
-                  );
-                })}
-              </div>
+              ))}
+              <select
+                value={outreachHorizon}
+                onChange={(e) => setOutreachHorizon(e.target.value)}
+                aria-label="Tabling event timeframe"
+                style={{ padding: "4px 6px", fontSize: 12, minHeight: 26, border: "1px solid #d6d3cd", borderRadius: 7, background: "#fffffe", color: "#1a1a1a" }}
+              >
+                <option value="upcoming">Upcoming</option>
+                <option value="60">Next 60 days</option>
+                <option value="all">All (incl. past)</option>
+              </select>
             </div>
-          </div>
-
-          {/* Deep historical context below the map */}
-          <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "10px 16px 12px", marginTop: 12 }}>
-            <LegislationTrack year={year} setYear={(y) => { setYear(y); setIsPlaying(false); }} />
-          </div>
+          )}
         </div>
 
-        {/* ═══ RIGHT: SUMMARY (tracts) / DETAIL (neighborhoods) PANEL ═══
-            The full tract profile moved into the printable story card;
-            tract mode shows a compact summary that opens it. The full
-            RegionDetailPanel still serves neighborhood mode. */}
-        {boundaryMode === "tracts" ? (
-          <RegionSummaryPanel
-            activeFeature={activeFeature}
-            activeRegionName={activeDisplayName}
-            activeRegionId={activeRegionId}
+        {boundaryMode === "neighborhoods" && (
+          <p className="map-mode-note">
+            Showing neighborhoods. A neighborhood combines the census tracts that sit inside a
+            City of Austin planning area; areas without one are shown as single tracts.
+          </p>
+        )}
+
+        <MapLegend
+          year={year}
+          showRegions={showRegions}
+          showPins={showPins}
+          showProjectConnect={showProjectConnect}
+          showHolc={showHolc}
+          showPreservationAustin={showPreservationAustin}
+          showOutreach={showOutreach}
+          paFilter={paFilter}
+          setPaFilter={setPaFilter}
+          open={legendOpen}
+          setOpen={setLegendOpen}
+        />
+
+        <div className="map-frame">
+          <div
+            ref={mapRef}
+            id="map-container"
+            role="region"
+            aria-label="Map of Austin, colored by displacement index. To choose a place without a pointer, use the search box above the map."
+            style={{ position: "absolute", inset: 0 }}
+          />
+          {(shapesLoading || shapesError) && (
+            <div className="map-loading" role="status">
+              {shapesError ? (
+                <>The neighborhood shapes could not be loaded. Check your connection and reload the page.</>
+              ) : (
+                <><span className="spinner" aria-hidden="true" /> Loading neighborhood shapes…</>
+              )}
+            </div>
+          )}
+        </div>
+
+        <TimeBar
+          year={year}
+          setYear={setYear}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          onOpenHistory={onOpenHistory}
+        />
+      </div>
+
+      {/* Place panel: beside the map on wide screens, after the year
+          controls on narrow ones. One panel for tracts and neighborhoods. */}
+      <aside className="map-side" aria-label="Selected place">
+        {placeRef ? (
+          <PlaceSummaryPanel
+            placeRef={placeRef}
             year={year}
-            currentDvi={currentDvi}
-            regionBizOpen={regionBizOpen}
-            regionBizClosed={regionBizClosed}
-            tippingPoint={tippingPoint}
-            setSelectedRegion={setSelectedRegion}
-            setHoveredRegion={setHoveredRegion}
+            dviVersion={dviVersion}
+            onClose={onClearSelection}
+            onOpenCard={onOpenCard}
           />
         ) : (
-        <RegionDetailPanel
-          activeFeature={boundaryMode === "tracts" ? activeFeature : null}
-          activeRegionName={boundaryMode === "tracts" ? activeDisplayName : neighborhoodAgg?.name}
-          year={year}
-          currentDvi={currentDvi}
-          regionBizOpen={boundaryMode === "tracts" ? regionBizOpen : neighborhoodAgg?.bizOpen ?? []}
-          regionBizClosed={boundaryMode === "tracts" ? regionBizClosed : neighborhoodAgg?.bizClosed ?? []}
-          demoChartData={boundaryMode === "tracts" ? demoChartData : neighborhoodAgg?.demoChartData ?? []}
-          propertyNow={boundaryMode === "tracts" ? propertyNow : neighborhoodAgg?.propertyNow}
-          propertyPrev={boundaryMode === "tracts" ? propertyPrev : neighborhoodAgg?.propertyPrev}
-          socioNow={boundaryMode === "tracts" ? socioNow : neighborhoodAgg?.socioNow}
-          socioPrev={boundaryMode === "tracts" ? socioPrev : neighborhoodAgg?.socioPrev}
-          tippingPoint={boundaryMode === "tracts" ? tippingPoint : neighborhoodAgg?.tippingPoints?.[0] ?? null}
-          narrativeCallouts={boundaryMode === "tracts" ? narrativeCallouts : neighborhoodAgg?.narrativeCallouts ?? []}
-          selectedBiz={selectedBiz}
-          setSelectedBiz={setSelectedBiz}
-          bizTab={bizTab}
-          setBizTab={setBizTab}
-          setSelectedRegion={setSelectedRegion}
-          setHoveredRegion={setHoveredRegion}
-          showPreservationAustin={showPreservationAustin}
-          activeRegionId={activeRegionId}
-          leafletMapRef={leafletMapRef}
-          bizMarkersRef={bizMarkersRef}
-          paMarkersRef={paMarkersRef}
-          panelTab={panelTab}
-          setPanelTab={setPanelTab}
-          selectedPA={selectedPA}
-          boundaryMode={boundaryMode}
-          neighborhoodAgg={neighborhoodAgg}
-        />
+          <StartHere onAction={handleStartAction} holcOn={showHolc} />
         )}
+      </aside>
+
+      {/* State legislation context */}
+      <div className="map-extra">
+        <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "10px 16px 12px" }}>
+          <LegislationTrack year={year} setYear={(y) => { setYear(y); setIsPlaying(false); }} />
+        </div>
       </div>
     </section>
   );

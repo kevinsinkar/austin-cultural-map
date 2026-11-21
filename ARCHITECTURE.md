@@ -1,6 +1,6 @@
 # Austin Cultural Map — Architecture & File Dependencies
 
-> **Last updated**: March 23, 2026 (post-historical Census data integration)
+> **Last updated**: November 21, 2026 (map page rebuilt: search, start-here path, place panel, story card page, on-demand map shapes). Sections below the directory layout predate that change in places; `README.md` describes the current behaviour.
 > **Purpose**: Machine-readable project structure for AI assistants and new contributors.
 
 ---
@@ -39,36 +39,57 @@ austin-cultural-map/
 │   └── index.css           # Base CSS (Vite scaffold)
 │
 ├── components/
-│   ├── Header.jsx          # Tab navigation + title bar (Map, Compare, Triage)
-│   ├── MapView.jsx         # Leaflet map + slider + overlays + detail sidebar
-│   ├── RegionDetailPanel.jsx  # Region detail sidebar (DVI, charts, businesses, PA)
-│   ├── ComparisonView.jsx  # Side-by-side region comparison
-│   ├── TriageView.jsx      # Grant triage & prioritisation (3 lenses: Trajectory, Equity, Risk Matrix)
-│   ├── HistoryView.jsx     # "History" tab: 112-event historical map + warped timeline + event detail panel
-│   ├── TimelineView.jsx    # "River of Time" business timeline (inactive — button removed from header)
-│   ├── TimelineDashboard.jsx  # Timeline dashboard component (WIP)
-│   ├── TimelineEras.jsx    # Timeline eras component (WIP)
-│   ├── AboutModal.jsx      # Data sources & methodology modal
-│   ├── AgendaModal.jsx     # ISSUES.md agenda modal
+│   ├── Header.jsx          # Title bar; tab navigation and Tour/Agenda in presenter mode
+│   ├── MapView.jsx         # The map page: search + layers, legend strip, map, year controls, place panel
+│   ├── PlaceSearch.jsx     # Find a neighborhood, tract, cultural anchor or street address
+│   ├── MapLegend.jsx       # Color key strip above the map, with plain-language meanings
+│   ├── TimeBar.jsx         # Year slider, play button and key-moment marks, docked under the map
+│   ├── StartHere.jsx       # Right-hand card when nothing is selected: the five ideas (data/bigIdeas.js)
+│   ├── PlaceSummaryPanel.jsx  # Right-hand summary for a selected tract OR neighborhood
+│   ├── StoryCardPage.jsx   # One-page profile of a place at its own address (#/card?tract=…|hood=…); lazy-loaded
+│   ├── LayersPopover.jsx   # Grouped layer toggles + tract/neighborhood switch
+│   ├── LegislationTrack.jsx   # Texas laws track under the map
+│   ├── ConfidenceChip.jsx  # High / Medium / Low data-confidence chip with reasons
+│   ├── AboutModal.jsx      # About + full methodology (lazy-loaded)
+│   ├── ErrorBoundary.jsx   # React error boundary wrapper
 │   ├── ChartTooltip.jsx    # Custom Recharts tooltip (for area charts)
-│   └── ErrorBoundary.jsx   # React error boundary wrapper
+│   │   — presenter mode only (never in a public build; see appConfig.js) —
+│   ├── OutreachView.jsx    # Outreach planner: worklist grouped by month, paged, sticky headings
+│   ├── OutreachCoverage.jsx / OutreachEquityAudit.jsx  # Outreach sub-views
+│   ├── StrategicPlanView.jsx  # PA 2026–29 plan reference
+│   ├── HistoryView.jsx     # 112-event historical map + timeline, with a "Key moments" starting path
+│   ├── ComparisonView.jsx  # Side-by-side comparison of two census tracts
+│   ├── TriageView.jsx      # Grant triage & prioritisation (3 lenses)
+│   ├── DviWeightsPanel.jsx # Adjustable index weights
+│   ├── GuidedTour.jsx      # ~3-minute tour that drives the app
+│   ├── AgendaModal.jsx     # Internal roadmap, read from docs/ISSUES.md
+│   ├── TimelineView.jsx / TimelineDashboard.jsx / TimelineEras.jsx  # "River of Time" (no tab; reachable at #/timeline)
+│   └── RegionDetailPanel.jsx  # Earlier three-tab place panel — NOT MOUNTED, kept for reuse
 │
 ├── hooks/
 │   └── useAustinMap.js     # Leaflet map lifecycle hook
 │
 ├── utils/
-│   ├── math.js             # DVI interpolation, triage scoring (trajectory, equity, risk matrix)
+│   ├── math.js             # DVI interpolation, stages, confidence, measured change, triage scoring
+│   ├── places.js           # One naming rule for every place (titles, tract labels, search index)
+│   ├── placeData.js        # Data builders for the place panel and story card (tract or neighborhood)
+│   ├── urlState.js         # Shareable address: view, year, layers, selection; short story-card address
+│   ├── geo.js              # Point-in-polygon helpers (council districts, address → tract)
 │   ├── mapHelpers.js       # Music data lookup, dev-pressure color ramp
 │   ├── formatters.js       # fmtPct, fmtChange, catColor
 │   ├── cpi.js              # CPI-U inflation adjustment (→ 2023 dollars)
+│   ├── dviWeights.js / outreachStore.js  # Presenter-mode storage (weights, outreach plan)
 │   └── aggregation.js      # Neighborhood aggregation (pop-weighted DVI, demographics, economics)
 │
 ├── data/
 │   ├── index.js            # Barrel re-export (central data import point)
-│   ├── history/            # Preservation Austin historical data package (verbatim copies from /Preservation Austin/files)
+│   ├── history/            # Historical research package (verbatim copies from /Preservation Austin/files). Compiled with AI
+│   │                        #   assistance from public sources; NOT reviewed by Preservation Austin. Presenter mode only.
 │   │   ├── events_all.json      # 112 historical events (c. 11,600 BCE – 2026), JSON Schema-validated
 │   │   ├── geo_reference.json   # 51 reference features: city limits 1839–2022, Indigenous presence zones, historic districts
 │   │   ├── holc_1935.json       # HOLC 1935 redlining polygons (CC BY-NC — Mapping Inequality, U. Richmond; non-commercial only)
+│   │   ├── holc.js              # The 1935 redlining layer on its own, so the public map can load it without the events
+│   │   ├── keyMoments.js        # Ordered ids for the History view's starting path (editorial selection)
 │   │   └── index.js             # Barrel: sorted events, geo partitions, era order, time-warp fn, vocab labels
 │   ├── phase1_output/      # Source-of-truth: 3 audited normalized JSONs
 │   │   ├── audited_demographics_normalized.json   (873 rows, 269 regions, years: 2000–2023)
@@ -81,13 +102,18 @@ austin-cultural-map/
 │   ├── interim_demographics.js   # Enriches demos with derived pct/pop fields
 │   ├── interim_property.js       # Pass-through from normalised property rows
 │   ├── interim_socioeconomic.js  # Joins socio+property+demo via auditedData Maps
-│   ├── businesses.js       # Static legacy business data (41 operating, 52 closed)
+│   ├── businesses.js       # Static legacy business data (49 operating, 58 closed)
 │   ├── preservationAustin.js  # PA grants, merit awards, legacy businesses, advocacy (156 entries)
 │   ├── constants.js        # REGION_NAMES, SNAP_YEARS, PLAY_YEARS, DEMO_COLORS
-│   ├── final_updated_regions.js  # Canonical GeoJSON (269 regions, full polygons)
-│   │                        #   Only imported by hooks/useAustinMap.js
+│   ├── final_updated_regions.js  # Canonical GeoJSON (269 regions, full-precision polygons). SOURCE ONLY —
+│   │                        #   not imported by the app; scripts/build_map_shapes.mjs reads it
 │   ├── neighborhoods.js    # Neighborhood definitions, TRACT_TO_NEIGHBORHOOD, NEIGHBORHOOD_BY_ID
-│   ├── neighborhoods_geojson.js  # Neighborhood GeoJSON polygons (only imported by useAustinMap.js)
+│   ├── neighborhoods_geojson.js  # Neighborhood GeoJSON polygons. SOURCE ONLY, as above
+│   ├── shapes/             # GENERATED slim polygons the site loads on demand (npm run build:shapes)
+│   │   ├── tracts.min.json / neighborhoods.min.json
+│   │   └── index.js        # loadTractShapes() / loadNeighborhoodShapes()
+│   ├── placeNames.js       # GENERATED tract titles from planning-area overlap (npm run build:places)
+│   ├── bigIdeas.js         # The five ideas in the "Start here" card; numbers computed from the data
 │   ├── regionIndex.js      # Lightweight region metadata (centroids, DVI — no geometry)
 │   ├── regionLookup.js     # Name↔ID maps, MERGE_LOOKUP, VISIBLE_REGIONS
 │   ├── region_tract_rosetta.json  # region_id ↔ Census tract code ↔ GEOID mapping (269 entries)
@@ -104,6 +130,9 @@ austin-cultural-map/
 │   ├── build_neighborhoods.cjs      # Builds neighborhood definitions from NPA boundaries + contiguity enforcement
 │   ├── audit_neighborhoods.cjs      # Audits neighborhood contiguity (spread, orphan detection)
 │   ├── generate_name_candidates.cjs # Region name candidate generation
+│   ├── build_map_shapes.mjs         # Generates data/shapes/*.min.json (simplified, 5-decimal polygons)
+│   ├── build_place_names.mjs        # Generates data/placeNames.js (tract titles; rule in the file header)
+│   ├── check_public_bundle.mjs      # Fails a build that contains private data or a presenter-only view
 │   └── _archive/                    # Archived automation scripts
 │
 ├── (root-level data scripts)
@@ -112,8 +141,10 @@ austin-cultural-map/
 │   └── merge_permits_and_evictions.py  # Merges permits and (future) eviction data into phase1_output JSONs
 │
 ├── public/
-│   ├── ISSUES.md           # Project issues/agenda
-│   └── vite.svg            # Vite favicon
+│   └── favicon.svg         # Site icon (everything in public/ is published as-is)
+│
+├── docs/
+│   └── ISSUES.md           # Internal roadmap (the presenter-mode Agenda reads it; not published)
 │
 └── (root-level reference files)
     ├── COA_NPA_REFERENCE.md         # City of Austin NPA reference

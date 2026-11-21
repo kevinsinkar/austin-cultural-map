@@ -1,6 +1,4 @@
 import _ from "lodash";
-import { useState } from "react";
-import StoryCardModal from "./StoryCardModal";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine,
@@ -16,6 +14,16 @@ import { adjustForInflation } from "../utils/cpi";
 import ChartTooltip from "./ChartTooltip";
 import TractSparkline from "./TractSparkline";
 
+/**
+ * RegionDetailPanel — the earlier three-tab place panel (Demographics /
+ * Economics / Culture).
+ *
+ * NOT MOUNTED since November 2026: both tracts and neighborhoods now use
+ * PlaceSummaryPanel plus the story card page, so a place reads the same way
+ * however it is selected. The file is kept for reuse (its charts and
+ * business cards are the most detailed in the project). To bring it back it
+ * needs the props MapView used to pass; see git history for that wiring.
+ */
 export default function RegionDetailPanel({
   activeFeature,
   activeRegionName,
@@ -48,8 +56,6 @@ export default function RegionDetailPanel({
   neighborhoodAgg,
 }) {
   const isNeighborhoodMode = boundaryMode === "neighborhoods";
-  // Printable neighborhood story card (tract mode only)
-  const [showStoryCard, setShowStoryCard] = useState(false);
 
   // Empty state — no selection in either mode
   if (isNeighborhoodMode ? !neighborhoodAgg : !activeFeature) {
@@ -63,7 +69,7 @@ export default function RegionDetailPanel({
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "40px 24px", textAlign: "center" }}>
           <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }} aria-hidden="true">🗺️</div>
           <div style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", marginBottom: 6 }}>Select a neighborhood</div>
-          <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>
+          <div style={{ fontSize: 14, color: "#7c6f5e", lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>
             {isNeighborhoodMode
               ? "Click any neighborhood on the map to explore its aggregated demographic history, displacement metrics, and cultural story."
               : "Click any region on the map to explore its demographic history, displacement metrics, and cultural story."}
@@ -131,54 +137,41 @@ export default function RegionDetailPanel({
               <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 20, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 }}>
                 {activeRegionName}
                 {isNeighborhoodMode && neighborhoodAgg
-                  ? <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [{neighborhoodAgg.tractCount} tracts]</span>
-                  : activeFeature && <span style={{ fontSize: 12, fontWeight: 400, color: "#a8a49c" }}> [id. {activeFeature.properties.region_id}]</span>
+                  ? <span style={{ fontSize: 13, fontWeight: 400, color: "var(--muted)" }}> [{neighborhoodAgg.tractCount} tracts]</span>
+                  : activeFeature && <span style={{ fontSize: 13, fontWeight: 400, color: "var(--muted)" }}> [id. {activeFeature.properties.region_id}]</span>
                 }
               </h2>
               {activeFeature?.properties?.heritage && (
-                <span style={{ display: "inline-block", fontSize: 11, color: "#7c6f5e", padding: "2px 8px", background: "#f5f0ea", borderRadius: 3, fontWeight: 500, marginTop: 4 }}>
+                <span style={{ display: "inline-block", fontSize: 12, color: "#7c6f5e", padding: "2px 8px", background: "#f5f0ea", borderRadius: 3, fontWeight: 500, marginTop: 4 }}>
                   {activeFeature.properties.heritage}
                 </span>
               )}
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
-              {!isNeighborhoodMode && activeRegionId != null && (
-                <button
-                  onClick={() => setShowStoryCard(true)}
-                  title="Printable one-pager for tabling: the data story, cultural anchors, and PA's work nearby"
-                  style={{ background: "none", border: "1px solid #d6d3cd", borderRadius: 6, cursor: "pointer", fontSize: 11, fontWeight: 600, color: "#0f766e", padding: "4px 8px", minHeight: 28 }}
-                  aria-label="Open printable story card"
-                >
-                  📄 Story card
-                </button>
-              )}
               <button
                 onClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
-                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 18, color: "#a8a49c", padding: 4, lineHeight: 1, minWidth: 32, minHeight: 32 }}
+                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 18, color: "var(--muted)", padding: 4, lineHeight: 1, minWidth: 32, minHeight: 32 }}
                 aria-label="Close detail panel"
               >
                 ✕
               </button>
             </div>
           </div>
-          {showStoryCard && activeRegionId != null && (
-            <StoryCardModal regionId={activeRegionId} onClose={() => setShowStoryCard(false)} />
-          )}
-          <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 12 }}>
+          <div style={{ display: "flex", alignItems: "flex-start", flexWrap: "wrap", gap: 10, marginTop: 12 }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
               <div style={{ width: 40, height: 40, borderRadius: 8, background: excluded ? DVI_EXCLUDED.fill : getDviColor(d, nd), border: "1px solid rgba(0,0,0,.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 15, fontWeight: 700, color: nd ? "#1a1a1a" : excluded ? DVI_EXCLUDED.on : getDviBin(d).on }}>{d.toFixed(0)}</span>
+                <span style={{ fontSize: 16, fontWeight: 700, color: nd ? "#1a1a1a" : excluded ? DVI_EXCLUDED.on : getDviBin(d).on }}>{d.toFixed(0)}</span>
               </div>
               {conf?.interpolated && (
-                <span style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", lineHeight: 1 }}>interpolated</span>
+                <span style={{ fontSize: 12, color: "var(--muted)", fontStyle: "italic", lineHeight: 1 }}>interpolated</span>
               )}
             </div>
             <div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: nd ? "#7c6f5e" : excluded ? DVI_EXCLUDED.text : getDviBandColor(d) }}>
+              <div style={{ fontSize: 14, fontWeight: 600, color: nd ? "#7c6f5e" : excluded ? DVI_EXCLUDED.text : getDviBandColor(d) }}>
                 {nd ? "N/A — New Development" : excluded ? "Exclusive / Appreciated (DVI capped)" : getDviBand(d)}
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 2 }}>
-                <span style={{ fontSize: 11, color: "#a8a49c" }}>DVI at {year}</span>
+              <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 6, marginTop: 2 }}>
+                <span style={{ fontSize: 12, color: "var(--muted)", whiteSpace: "nowrap" }}>DVI at {year}</span>
                 {conf && <ConfidenceChip level={conf.level} reasons={conf.reasons} />}
               </div>
             </div>
@@ -191,10 +184,10 @@ export default function RegionDetailPanel({
               return (
                 <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
                   <div style={{ background: badge.bg, borderRadius: 8, padding: "6px 10px", border: `1px solid ${badge.color}22` }}>
-                    <div style={{ fontSize: 15, fontWeight: 700, color: badge.color, textAlign: "center" }}>
+                    <div style={{ fontSize: 16, fontWeight: 700, color: badge.color, textAlign: "center" }}>
                       {density != null ? `${(density * 100).toFixed(0)}%` : "—"}
                     </div>
-                    <div style={{ fontSize: 11, color: badge.color, fontWeight: 600, whiteSpace: "nowrap" }}>{badge.label}</div>
+                    <div style={{ fontSize: 12, color: badge.color, fontWeight: 600, whiteSpace: "nowrap" }}>{badge.label}</div>
                   </div>
                 </div>
               );
@@ -206,7 +199,7 @@ export default function RegionDetailPanel({
           {tippingPoint && tippingPoint.magnitude !== "N/A" && panelTab !== "culture" && (
             <button
               onClick={() => setPanelTab("culture")}
-              style={{ display: "block", marginTop: 10, background: "none", border: "none", padding: 0, fontSize: 11, fontWeight: 600, color: "#b45309", cursor: "pointer", textAlign: "left" }}
+              style={{ display: "block", marginTop: 10, background: "none", border: "none", padding: 0, fontSize: 12, fontWeight: 600, color: "#b45309", cursor: "pointer", textAlign: "left" }}
             >
               ⚡ Tipping point: {tippingPoint.decade} →
             </button>
@@ -215,7 +208,7 @@ export default function RegionDetailPanel({
           {/* Year-aware policy callout (narrative-callout treatment) */}
           {policyCallout && (
             <div style={{ marginTop: 10, background: "#eff6ff", borderLeft: "3px solid #2563eb", borderRadius: 6, padding: "7px 10px" }}>
-              <p style={{ fontSize: 11, color: "#1e3a8a", margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>
+              <p style={{ fontSize: 12, color: "#1e3a8a", margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>
                 <strong>{policyCallout.year} — {policyCallout.label}:</strong> {policyCallout.callout}
               </p>
             </div>
@@ -232,9 +225,9 @@ export default function RegionDetailPanel({
                 style={{
                   flex: 1,
                   padding: "7px 0",
-                  fontSize: 11,
+                  fontSize: 12,
                   fontWeight: panelTab === tab.key ? 600 : 400,
-                  color: panelTab === tab.key ? "#0f766e" : "#a8a49c",
+                  color: panelTab === tab.key ? "#0f766e" : "var(--muted)",
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -255,12 +248,12 @@ export default function RegionDetailPanel({
         {panelTab === "demographics" && (
           <>
             <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-              <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Demographic Composition</h3>
+              <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 6px" }}>Demographic Composition</h3>
               {(() => {
                 if (!demoChartData.length) {
                   return (
                     <div style={{ padding: "24px 0", textAlign: "center" }}>
-                      <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>No demographic data available for this region at this time.</div>
+                      <div style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.5 }}>No demographic data available for this region at this time.</div>
                     </div>
                   );
                 }
@@ -278,13 +271,13 @@ export default function RegionDetailPanel({
                   <>
                     {hasBreakdown ? (
                       <>
-                        <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 0 12px" }}>Share of total population, 1990–2025</p>
+                        <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 0 12px" }}>Share of total population, 1990–2025</p>
                         <div style={{ width: "100%", height: 200 }} role="img" aria-label={`Demographic composition chart for ${activeRegionName}`}>
                           <ResponsiveContainer>
                             <AreaChart data={demoChartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
                               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
-                              <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} domain={[1990, 2025]} />
-                              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false} domain={[0, 1]} />
+                              <XAxis dataKey="year" tick={{ fontSize: 12, fill: "#7c6f5e" }} tickLine={false} axisLine={{ stroke: "#d6d3cd" }} domain={[1990, 2025]} />
+                              <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 12, fill: "var(--muted)" }} tickLine={false} axisLine={false} domain={[0, 1]} />
                               <Tooltip content={<ChartTooltip />} />
                               <ReferenceLine x={year} stroke="#0f766e" strokeWidth={1.5} strokeDasharray="4 3" opacity={0.7} />
                               <Area type="monotone" dataKey="Other" stackId="1" stroke="none" fill={DEMO_COLORS.Other} fillOpacity={0.85} name="Other/Multiracial" connectNulls={false} />
@@ -299,12 +292,12 @@ export default function RegionDetailPanel({
                           {[["White", "White"], ["Black", "Black"], ["Hispanic", "Hispanic"], ["Asian", "Asian"], ["Other", "Other"]].map(([l, k]) => (
                             <div key={k} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                               <span style={{ width: 8, height: 8, borderRadius: 2, background: DEMO_COLORS[k] }} aria-hidden="true" />
-                              <span style={{ fontSize: 11, color: "#64615b" }}>{l}</span>
+                              <span style={{ fontSize: 12, color: "#64615b" }}>{l}</span>
                             </div>
                           ))}
                         </div>
                         {missingYears && (
-                          <div style={{ fontSize: 11, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                          <div style={{ fontSize: 12, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
                             Census data available for {dataYears.join(", ")} only. {dataYears[0] > 2000
                               ? `This tract was created after ${dataYears[0] - 1} (suburban expansion / tract split) — no earlier Census data exists.`
                               : "Earlier decades not available from Census API for this tract."}
@@ -313,12 +306,12 @@ export default function RegionDetailPanel({
                       </>
                     ) : (
                       <div style={{ padding: "20px 0", textAlign: "center" }}>
-                        <div style={{ fontSize: 12, color: "#a8a49c", lineHeight: 1.5 }}>Demographic breakdown data is inconclusive for this region at this time.</div>
+                        <div style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.5 }}>Demographic breakdown data is inconclusive for this region at this time.</div>
                       </div>
                     )}
 
                     {hasPop && nearest && (
-                      <div style={{ fontSize: 11, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
+                      <div style={{ fontSize: 12, color: "#64615b", marginTop: 8, lineHeight: 1.5, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
                         In <strong>{nearest.year}</strong>, total pop. was <strong>{nearest.total != null ? nearest.total.toLocaleString() : "N/A"}</strong>.
                         {hasBreakdown && (<>
                           {" "}Black: <strong style={{ color: DEMO_COLORS.Black }}>{nearest.popBlack != null ? nearest.popBlack.toLocaleString() : "N/A"}</strong>.
@@ -345,10 +338,10 @@ export default function RegionDetailPanel({
               );
               return (
                 <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-                  <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 8px" }}>
+                  <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 8px" }}>
                     Measured Change, {dd.fromYear}–{dd.toYear}
                   </h3>
-                  <div style={{ fontSize: 12, color: "#44403c", lineHeight: 1.7 }}>
+                  <div style={{ fontSize: 13, color: "#44403c", lineHeight: 1.7 }}>
                     <div>
                       Black + Hispanic share: {dd.bhFrom.toFixed(0)}% → {dd.bhTo.toFixed(0)}% ({delta(dd.bhDelta)})
                     </div>
@@ -358,7 +351,7 @@ export default function RegionDetailPanel({
                       </div>
                     )}
                   </div>
-                  <p style={{ fontSize: 11, color: "#a8a49c", margin: "8px 0 0", lineHeight: 1.4 }}>
+                  <p style={{ fontSize: 12, color: "var(--muted)", margin: "8px 0 0", lineHeight: 1.4 }}>
                     Observed census change, not a modeled score. The DVI above estimates vulnerability; these numbers record what happened.
                   </p>
                 </div>
@@ -382,27 +375,27 @@ export default function RegionDetailPanel({
 
               return (
                 <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 16px" }}>
-                  <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 8 }}>
+                  <div style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 8 }}>
                     Neighborhood Composition ({year})
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                     {highDvi > 0 && (
-                      <div style={{ fontSize: 11, color: "#44403c" }}>
+                      <div style={{ fontSize: 12, color: "#44403c" }}>
                         <span style={{ fontWeight: 600, color: "#dc2626" }}>High DVI (50+):</span> {highDvi} tract{highDvi !== 1 ? "s" : ""}
                       </div>
                     )}
                     {mediumDvi > 0 && (
-                      <div style={{ fontSize: 11, color: "#44403c" }}>
+                      <div style={{ fontSize: 12, color: "#44403c" }}>
                         <span style={{ fontWeight: 600, color: "#f59e0b" }}>Medium DVI (25–50):</span> {mediumDvi} tract{mediumDvi !== 1 ? "s" : ""}
                       </div>
                     )}
                     {lowDvi > 0 && (
-                      <div style={{ fontSize: 11, color: "#44403c" }}>
+                      <div style={{ fontSize: 12, color: "#44403c" }}>
                         <span style={{ fontWeight: 600, color: "#10b981" }}>Low DVI (&lt;25):</span> {lowDvi} tract{lowDvi !== 1 ? "s" : ""}
                       </div>
                     )}
                   </div>
-                  <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
+                  <div style={{ fontSize: 12, color: "var(--muted)", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
                     Neighborhood data is aggregated from these tracts. For tract-level precision, switch to Census Tracts view.
                   </div>
                 </div>
@@ -424,7 +417,7 @@ export default function RegionDetailPanel({
                     const colors = calloutColors[c.type] || { bg: "#f3f4f6", border: "#9ca3af" };
                     return (
                       <div key={i} style={{ background: colors.bg, borderRadius: 8, padding: "12px 14px", borderLeft: `3px solid ${colors.border}` }} role="note">
-                        <p style={{ fontSize: 12, color: "#1a1a1a", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{c.text}</p>
+                        <p style={{ fontSize: 13, color: "#1a1a1a", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{c.text}</p>
                       </div>
                     );
                   })}
@@ -474,20 +467,20 @@ export default function RegionDetailPanel({
 
                   return (
                     <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
-                      <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                      <div style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
                           {nominalFmt}
                           {valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
                         </span>
                         {ch && (
-                          <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${propertyPrev?.year}`}>
+                          <span style={{ fontSize: 12, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${propertyPrev?.year}`}>
                             <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
                             {Math.abs(ch.raw).toFixed(0)}%
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.3 }}>
+                      <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.3 }}>
                         {propertyNow.year} (nominal / 2023$)
                         {ch && propertyPrev && <span> · vs {propertyPrev.year}</span>}
                       </div>
@@ -516,20 +509,20 @@ export default function RegionDetailPanel({
 
                   return (
                     <div key={c.label} style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px" }}>
-                      <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
+                      <div style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>{c.label}</div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>
                           {nominalFmt}
                           {c.isCurrency && valueAdj != null && <span style={{ color: "#7c6f5e", fontWeight: 500 }}> / {adjustedFmt}</span>}
                         </span>
                         {ch && (
-                          <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${socioPrev?.year}`}>
+                          <span style={{ fontSize: 12, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${socioPrev?.year}`}>
                             <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
                             {Math.abs(ch.raw).toFixed(0)}%
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.3 }}>
+                      <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.3 }}>
                         {socioNow.year} {c.isCurrency ? "(nominal / 2023$)" : c.sub}
                         {ch && socioPrev && <span> · vs {socioPrev.year}</span>}
                       </div>
@@ -546,17 +539,17 @@ export default function RegionDetailPanel({
                   const bad = up;
                   return (
                     <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 14px", gridColumn: "1 / -1" }}>
-                      <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
+                      <div style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", lineHeight: 1.3 }}>Rent-Burdened Households</div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontSize: 22, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-.02em", lineHeight: 1 }}>{n.rent_burden_pct.toFixed(1)}%</span>
                         {ch && (
-                          <span style={{ fontSize: 11, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${prev?.year}`}>
+                          <span style={{ fontSize: 12, fontWeight: 600, color: bad ? "#dc2626" : "#16a34a", display: "flex", alignItems: "center", gap: 2 }} aria-label={`${bad ? "worsened" : "improved"} ${Math.abs(ch.raw).toFixed(0)} percent vs ${prev?.year}`}>
                             <svg width="8" height="8" viewBox="0 0 8 8" style={{ transform: up ? "none" : "rotate(180deg)" }} aria-hidden="true"><polygon points="4,0 8,8 0,8" fill="currentColor" /></svg>
                             {Math.abs(ch.raw).toFixed(0)}%
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5 }}>
+                      <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5 }}>
                         % of renter households paying &ge;30% of income on rent
                         {ch && prev && <span> · vs {prev.year}</span>}
                       </div>
@@ -566,7 +559,7 @@ export default function RegionDetailPanel({
               </div>
             ) : (
               <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "24px 20px", textAlign: "center" }}>
-                <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No property or socioeconomic data available for this region.</div>
+                <div style={{ fontSize: 13, color: "var(--muted)", fontStyle: "italic" }}>No property or socioeconomic data available for this region.</div>
               </div>
             )}
           </>
@@ -580,10 +573,10 @@ export default function RegionDetailPanel({
               <div style={{ background: "#fefbf3", borderRadius: 10, border: "1px solid #e6dfc8", padding: "16px 18px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#b45309" strokeWidth="1.5" fill="none" /><path d="M8 4v5M8 11v1" stroke="#b45309" strokeWidth="1.5" strokeLinecap="round" /></svg>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: "#92400e" }}>What Happened Here?</span>
-                  <span style={{ fontSize: 11, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: "#92400e" }}>What Happened Here?</span>
+                  <span style={{ fontSize: 12, fontWeight: 600, padding: "1px 6px", borderRadius: 3, background: tippingPoint.magnitude === "Extreme" ? "#fecaca" : tippingPoint.magnitude === "Severe" ? "#fed7aa" : "#fef3c7", color: tippingPoint.magnitude === "Extreme" ? "#991b1b" : tippingPoint.magnitude === "Severe" ? "#9a3412" : "#92400e" }}>{tippingPoint.magnitude}</span>
                 </div>
-                <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", marginBottom: 4 }}>
                   The tipping point: {tippingPoint.region} · {tippingPoint.decade}
                 </div>
                 {/* Quantitative story computed from the audited census data,
@@ -600,22 +593,22 @@ export default function RegionDetailPanel({
                     </div>
                   );
                   return (
-                    <div style={{ fontSize: 12, color: "#44403c", lineHeight: 1.6, marginBottom: 8 }}>
+                    <div style={{ fontSize: 13, color: "#44403c", lineHeight: 1.6, marginBottom: 8 }}>
                       {seg("Black population", st.black)}
                       {seg("Hispanic population", st.hispanic)}
                       {seg("White population", st.white)}
                       {seg("Median home value (avg. of tract medians)", st.homeValue, "$")}
-                      <div style={{ fontSize: 11, color: "#a8a49c", marginTop: 2 }}>
+                      <div style={{ fontSize: 12, color: "var(--muted)", marginTop: 2 }}>
                         Computed from census data, {st.fromYear}–{st.toYear}, across {st.tracts} tract{st.tracts === 1 ? "" : "s"}.
                       </div>
                     </div>
                   );
                 })()}
                 {tippingPoint.context && (
-                  <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.context}</p>
+                  <p style={{ fontSize: 13, color: "#44403c", margin: "0 0 8px", lineHeight: 1.55 }}>{tippingPoint.context}</p>
                 )}
-                <div style={{ fontSize: 11, color: "#78716c", lineHeight: 1.4, borderTop: "1px solid #e6dfc8", paddingTop: 8 }}>
-                  <strong style={{ color: "#92400e" }}>Catalyst:</strong> {tippingPoint.event} <span style={{ color: "#a8a49c" }}>({tippingPoint.eventYear})</span>
+                <div style={{ fontSize: 12, color: "#78716c", lineHeight: 1.4, borderTop: "1px solid #e6dfc8", paddingTop: 8 }}>
+                  <strong style={{ color: "#92400e" }}>Catalyst:</strong> {tippingPoint.event} <span style={{ color: "var(--muted)" }}>({tippingPoint.eventYear})</span>
                 </div>
               </div>
             )}
@@ -623,13 +616,13 @@ export default function RegionDetailPanel({
             {/* Legacy businesses */}
             {(regionBizOpen.length > 0 || regionBizClosed.length > 0) ? (
               <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-                <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Legacy Businesses</h3>
+                <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Legacy Businesses</h3>
                 <div style={{ display: "flex", gap: 0, marginBottom: 12, borderBottom: "2px solid #e8e5e0" }} role="tablist">
                   {[
                     { key: "open", label: `Still Here (${regionBizOpen.length})` },
                     { key: "closed", label: `What We Lost (${regionBizClosed.length})` },
                   ].map((tab) => (
-                    <button key={tab.key} onClick={() => setBizTab(tab.key)} role="tab" aria-selected={bizTab === tab.key} style={{ padding: "6px 14px", fontSize: 12, fontWeight: bizTab === tab.key ? 600 : 400, color: bizTab === tab.key ? "#0f766e" : "#a8a49c", background: "none", border: "none", cursor: "pointer", borderBottom: bizTab === tab.key ? "2px solid #0f766e" : "2px solid transparent", marginBottom: -2, minHeight: 32 }}>
+                    <button key={tab.key} onClick={() => setBizTab(tab.key)} role="tab" aria-selected={bizTab === tab.key} style={{ padding: "6px 14px", fontSize: 13, fontWeight: bizTab === tab.key ? 600 : 400, color: bizTab === tab.key ? "#0f766e" : "var(--muted)", background: "none", border: "none", cursor: "pointer", borderBottom: bizTab === tab.key ? "2px solid #0f766e" : "2px solid transparent", marginBottom: -2, minHeight: 32 }}>
                       {tab.label}
                     </button>
                   ))}
@@ -637,19 +630,19 @@ export default function RegionDetailPanel({
                 <div role="tabpanel">
                   {bizTab === "open" && (
                     regionBizOpen.length === 0 ? (
-                      <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No legacy businesses recorded.</div>
+                      <div style={{ fontSize: 13, color: "var(--muted)", fontStyle: "italic" }}>No legacy businesses recorded.</div>
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizOpen.map((b) => (
                           <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                              <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
-                              <span style={{ fontSize: 11, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
+                              <div style={{ fontSize: 14, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
+                              <span style={{ fontSize: 12, color: "var(--muted)", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
                             </div>
                             <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
-                              <span style={{ fontSize: 11, color: "#64615b" }}>{b.type}</span>
-                              <span style={{ fontSize: 11, color: "#7c6f5e" }}>·</span>
-                              <span style={{ fontSize: 11, color: "#7c6f5e" }}>{b.culture}</span>
+                              <span style={{ fontSize: 12, color: "#64615b" }}>{b.type}</span>
+                              <span style={{ fontSize: 12, color: "#7c6f5e" }}>·</span>
+                              <span style={{ fontSize: 12, color: "#7c6f5e" }}>{b.culture}</span>
                             </div>
                           </div>
                         ))}
@@ -658,18 +651,18 @@ export default function RegionDetailPanel({
                   )}
                   {bizTab === "closed" && (
                     regionBizClosed.length === 0 ? (
-                      <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No closed legacy businesses recorded.</div>
+                      <div style={{ fontSize: 13, color: "var(--muted)", fontStyle: "italic" }}>No closed legacy businesses recorded.</div>
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizClosed.map((b) => (
                           <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#fef2f2" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, closed ${b.closed}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz({ ...b, _closed: true }); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                              <div style={{ fontSize: 13, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
-                              <span style={{ fontSize: 11, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
+                              <div style={{ fontSize: 14, fontWeight: 600, color: "#64615b", lineHeight: 1.3, textDecoration: "line-through", textDecorationColor: "#d6d3cd" }}>{b.name}</div>
+                              <span style={{ fontSize: 12, color: "var(--muted)", whiteSpace: "nowrap", marginLeft: 8 }}>{b.est}–{b.closed}</span>
                             </div>
-                            <div style={{ fontSize: 11, color: "#7c6f5e", marginTop: 2 }}>{b.culture} · {b.type}</div>
-                            <div style={{ fontSize: 11, color: "#991b1b", marginTop: 4, fontWeight: 500 }}>Closed: {b.cause}</div>
-                            <div style={{ fontSize: 11, color: "#64615b", marginTop: 2 }}>Now: <span style={{ fontWeight: 500 }}>{b.replacedBy}</span></div>
+                            <div style={{ fontSize: 12, color: "#7c6f5e", marginTop: 2 }}>{b.culture} · {b.type}</div>
+                            <div style={{ fontSize: 12, color: "#991b1b", marginTop: 4, fontWeight: 500 }}>Closed: {b.cause}</div>
+                            <div style={{ fontSize: 12, color: "#64615b", marginTop: 2 }}>Now: <span style={{ fontWeight: 500 }}>{b.replacedBy}</span></div>
                           </div>
                         ))}
                       </div>
@@ -679,7 +672,7 @@ export default function RegionDetailPanel({
               </div>
             ) : (
               <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "24px 20px", textAlign: "center" }}>
-                <div style={{ fontSize: 12, color: "#a8a49c", fontStyle: "italic" }}>No legacy business data recorded for this region.</div>
+                <div style={{ fontSize: 13, color: "var(--muted)", fontStyle: "italic" }}>No legacy business data recorded for this region.</div>
               </div>
             )}
 
@@ -697,17 +690,17 @@ export default function RegionDetailPanel({
               if (!nearby.length) return null;
               return (
                 <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-                  <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Preservation Austin</h3>
+                  <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 10px" }}>Preservation Austin</h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {nearby.map((item) => (
                       <div key={item.id} onClick={() => { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); const mk = paMarkersRef?.current?.get(item.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") { if (leafletMapRef?.current && item.lat && item.lng) leafletMapRef.current.flyTo([item.lat, item.lng], 16, { duration: 0.8 }); const mk = paMarkersRef?.current?.get(item.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }} style={{ padding: "8px 10px", borderRadius: 8, border: selectedPA?.id === item.id ? `1.5px solid ${PA_COLORS[item.type]}` : "1px solid #e8e5e0", borderLeft: `3px solid ${PA_COLORS[item.type]}`, background: selectedPA?.id === item.id ? "#f5f3ff" : "transparent", cursor: "pointer" }}>
-                        <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</div>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</div>
                         <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3, flexWrap: "wrap" }}>
-                          <span style={{ fontSize: 11, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>
-                          <span style={{ fontSize: 11, color: "#a8a49c" }}>{item.year}</span>
-                          {item.amount && <span style={{ fontSize: 11, color: "#64615b", fontWeight: 500 }}>${item.amount.toLocaleString()}</span>}
+                          <span style={{ fontSize: 12, color: PA_COLORS[item.type], fontWeight: 600 }}>{PA_LABELS[item.type]}</span>
+                          <span style={{ fontSize: 12, color: "var(--muted)" }}>{item.year}</span>
+                          {item.amount && <span style={{ fontSize: 12, color: "#64615b", fontWeight: 500 }}>${item.amount.toLocaleString()}</span>}
                         </div>
-                        <div style={{ fontSize: 11, color: "#7c6f5e", marginTop: 3, lineHeight: 1.4 }}>{item.description}</div>
+                        <div style={{ fontSize: 12, color: "#7c6f5e", marginTop: 3, lineHeight: 1.4 }}>{item.description}</div>
                       </div>
                     ))}
                   </div>
@@ -720,7 +713,7 @@ export default function RegionDetailPanel({
         {/* Contributing tracts (neighborhood mode only) */}
         {isNeighborhoodMode && neighborhoodAgg && (
           <details style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 16px" }}>
-            <summary style={{ fontSize: 12, color: "#7c6f5e", cursor: "pointer", fontWeight: 500 }}>
+            <summary style={{ fontSize: 13, color: "#7c6f5e", cursor: "pointer", fontWeight: 500 }}>
               Contributing census tracts ({neighborhoodAgg.tractCount})
             </summary>
             <div style={{ marginTop: 8 }}>
@@ -728,12 +721,12 @@ export default function RegionDetailPanel({
                 const tractDvi = interpolateDvi(tid, year);
                 const tractName = REGION_INDEX.find(r => r.region_id === tid)?.tract_label || ID_TO_NAME.get(tid);
                 return (
-                  <div key={tid} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, fontSize: 11, padding: "3px 0", borderBottom: "1px solid #f0ede8" }}>
+                  <div key={tid} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, fontSize: 12, padding: "3px 0", borderBottom: "1px solid #f0ede8" }}>
                     <span style={{ color: "#44403c", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                      {tractName} <span style={{ color: "#a8a49c" }}>[id. {tid}]</span>
+                      {tractName} <span style={{ color: "var(--muted)" }}>[id. {tid}]</span>
                     </span>
                     <TractSparkline regionId={tid} />
-                    <span style={{ fontWeight: 600, color: isRegionExcluded(tid, year) ? DVI_EXCLUDED.text : getDviBandColor(tractDvi), fontSize: 11, width: 42, textAlign: "right" }}>
+                    <span style={{ fontWeight: 600, color: isRegionExcluded(tid, year) ? DVI_EXCLUDED.text : getDviBandColor(tractDvi), fontSize: 12, width: 42, textAlign: "right" }}>
                       DVI {tractDvi?.toFixed(0) ?? "\u2014"}
                     </span>
                   </div>
@@ -745,13 +738,13 @@ export default function RegionDetailPanel({
               const gaps = neighborhoodAgg.dataAvailability.filter(d => d.tractsWithData < d.totalTracts);
               if (gaps.length === 0) {
                 return (
-                  <div style={{ fontSize: 11, color: "#16a34a", marginTop: 8, lineHeight: 1.4 }}>
+                  <div style={{ fontSize: 12, color: "#16a34a", marginTop: 8, lineHeight: 1.4 }}>
                     ✓ Full census coverage for all {neighborhoodAgg.tractCount} tracts (2000–2023).
                   </div>
                 );
               }
               return (
-                <div style={{ fontSize: 11, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
+                <div style={{ fontSize: 12, color: "#b45309", background: "#fffbeb", borderRadius: 4, padding: "6px 10px", marginTop: 8, lineHeight: 1.5, border: "1px solid #fde68a" }}>
                   <strong>Historical data gaps:</strong>{" "}
                   {neighborhoodAgg.dataAvailability.map(d =>
                     `${d.year}: ${d.tractsWithData}/${d.totalTracts} tracts`
@@ -760,7 +753,7 @@ export default function RegionDetailPanel({
                 </div>
               );
             })()}
-            <div style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
+            <div style={{ fontSize: 12, color: "var(--muted)", fontStyle: "italic", marginTop: 8, lineHeight: 1.4 }}>
               Neighborhood data is aggregated from these tracts using population-weighted averages. Sparklines show each tract's DVI trend (2000–2023, actual data points only). For tract-level precision, switch to Census Tracts view.
             </div>
           </details>
@@ -768,7 +761,7 @@ export default function RegionDetailPanel({
 
         {/* Boundary/interpolation caveats now live in the ConfidenceChip
             popovers at point of reading — only the source line remains. */}
-        <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5, padding: "8px 4px" }}>
+        <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5, padding: "8px 4px" }}>
           Sources: U.S. Census 1990–2020; ACS 2019–2023.
         </div>
       </div>

@@ -1,51 +1,51 @@
-import { useState, useEffect, useRef, useMemo, useCallback, useReducer } from "react";
-import _ from "lodash";
+import { useState, useEffect, useRef, useMemo, useCallback, useReducer, lazy, Suspense } from "react";
 import "./styles.css";
 
 // Data
-import {
-  REGION_INDEX,
-  LEGACY_OPERATING,
-  LEGACY_CLOSED,
-  DEMOGRAPHICS,
-  SOCIOECONOMIC,
-  TIPPING_POINTS,
-} from "./data";
-
-// agenda markdown will be fetched at runtime
-// the files live in public/ so fetch('/ISSUES.md') works
 import { PLAY_YEARS } from "./data/constants";
-import { ID_TO_NAME } from "./data/regionLookup";
-import { REGIONS_GEOJSON } from "./data/final_updated_regions";
 
 // Utils
-import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
-import { aggregateNeighborhood } from "./utils/aggregation";
 import { DEFAULT_VIEW_STATE, parseViewState, serializeViewState } from "./utils/urlState";
 import { PRESENTER_MODE, isViewAllowed } from "./appConfig";
 import { recomputeDvi } from "./data/auditedDvi";
 import { loadDviWeights, saveDviWeights, isDefaultWeights, cloneDefaultWeights } from "./utils/dviWeights";
 import { OUTREACH_STATUS } from "./data/outreachEvents";
+import { tractPlace, neighborhoodPlace } from "./utils/places";
 
 // Components
 import Header from "./components/Header";
-import AboutModal from "./components/AboutModal";
-import AgendaModal from "./components/AgendaModal";
 import MapView from "./components/MapView";
 import { ErrorBoundary } from "./components/ErrorBoundary";
-import ComparisonView from "./components/ComparisonView";
-import TriageView from "./components/TriageView";
-import TimelineView from "./components/TimelineView";
-import HistoryView from "./components/HistoryView";
-import GuidedTour from "./components/GuidedTour";
-import OutreachView from "./components/OutreachView";
-import StrategicPlanView from "./components/StrategicPlanView";
+
+// Loaded on demand, so the first paint does not wait for the charting
+// library (story card) or the methodology text and its renderer (About).
+const StoryCardPage = lazy(() => import("./components/StoryCardPage"));
+const AboutModal = lazy(() => import("./components/AboutModal"));
+
+// Presenter-only views. Each is imported on demand, and only in a presenter
+// build: PRESENTER_MODE is fixed when the bundle is built, so in a public
+// build every line below is simply `null` and the bundler never includes
+// these modules or the data files they read (outreach events, the History
+// event research, the strategic plan). Keep the `PRESENTER_MODE ? ... : null`
+// written out on each line — that is what lets the bundler drop them.
+const OutreachView = PRESENTER_MODE ? lazy(() => import("./components/OutreachView")) : null;
+const StrategicPlanView = PRESENTER_MODE ? lazy(() => import("./components/StrategicPlanView")) : null;
+const HistoryView = PRESENTER_MODE ? lazy(() => import("./components/HistoryView")) : null;
+const ComparisonView = PRESENTER_MODE ? lazy(() => import("./components/ComparisonView")) : null;
+const TriageView = PRESENTER_MODE ? lazy(() => import("./components/TriageView")) : null;
+const TimelineView = PRESENTER_MODE ? lazy(() => import("./components/TimelineView")) : null;
+const GuidedTour = PRESENTER_MODE ? lazy(() => import("./components/GuidedTour")) : null;
+const AgendaModal = PRESENTER_MODE ? lazy(() => import("./components/AgendaModal")) : null;
+
+const viewLoading = (
+  <p className="page-loading" role="status"><span className="spinner" aria-hidden="true" /> Loading…</p>
+);
 
 // ── Consolidated, URL-serializable view state ──
 // One object holds everything a shareable link must reproduce:
 // { viewMode, year, boundaryMode, layers, activeRegionId,
 //   activeNeighborhoodId, compA, compB, triageLens }.
-// Ephemeral UI state (hover, modals, panel tabs, playback) stays in useState.
+// Ephemeral UI state (hover, modals, playback) stays in useState.
 function viewReducer(state, action) {
   switch (action.type) {
     case "set":
@@ -54,9 +54,36 @@ function viewReducer(state, action) {
     case "setLayer":
       if (state.layers[action.key] === action.value) return state;
       return { ...state, layers: { ...state.layers, [action.key]: action.value } };
+    case "hydrate":
+      // Browser Back / Forward: adopt whatever the address now says.
+      return {
+        ...state,
+        ...action.value,
+        layers: action.value.layers ? { ...state.layers, ...action.value.layers } : state.layers,
+      };
     default:
       return state;
   }
+}
+
+// The map hook and panels only ever read a feature's region id.
+const featureStub = (regionId) => (regionId == null ? null : { properties: { region_id: regionId } });
+
+// Pull the roadmap table and its date out of docs/ISSUES.md (presenter only).
+function parseAgenda(markdown) {
+  const lines = (markdown || "").split(/\r?\n/);
+  const updated = lines.map((l) => l.match(/\*\*Last updated:\*\*\s*(.+)$/)).find(Boolean)?.[1]?.trim() || null;
+  const start = lines.findIndex((l) => l.startsWith("| Priority"));
+  const items = [];
+  if (start >= 0) {
+    for (let i = start + 2; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line || !line.startsWith("|")) break;
+      const cols = line.split("|").map((c) => c.trim()).filter(Boolean);
+      if (cols.length >= 3) items.push(`${cols[0]} ${cols[1]} – ${cols[2]}`);
+    }
+  }
+  return { items, updated };
 }
 
 export default function AustinCulturalMap() {
@@ -130,45 +157,108 @@ export default function AustinCulturalMap() {
   const [outreachHorizon, setOutreachHorizon] = useState("upcoming");
 
   // ── Ephemeral UI state ──
-  const [hoveredRegion, setHoveredRegion] = useState(null);
+  const [, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(urlInit?.activeRegionId ?? null);
-  const [selectedBiz, setSelectedBiz] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showHeritage, setShowHeritage] = useState(true);
   const [paFilter, setPaFilter] = useState({ grant: true, merit_award: true, legacy_business: true, advocacy: true });
-  const [bizTab, setBizTab] = useState("open");
-  const [panelTab, setPanelTab] = useState("demographics");
-  const [selectedPA, setSelectedPA] = useState(null);
   const [showAbout, setShowAbout] = useState(false);
   const [showAgenda, setShowAgenda] = useState(false);
+  const [agenda, setAgenda] = useState(null);
   const [tourOpen, setTourOpen] = useState(false);
   const [tlFilter, setTlFilter] = useState("all");
   // Cross-view history links: event to pre-select when opening the History
-  // tab, and a pending main-map flyTo target from a History event.
+  // tab, and a pending main-map flyTo target.
   const [historyFocusId, setHistoryFocusId] = useState(null);
   const [flyToTarget, setFlyToTarget] = useState(null);
-  const [activeFeature, setActiveFeature] = useState(() =>
-    urlInit?.activeRegionId != null
-      ? REGIONS_GEOJSON.features.find((f) => f.properties.region_id === urlInit.activeRegionId) || null
-      : null
-  );
+  const [, setActiveFeature] = useState(() => featureStub(urlInit?.activeRegionId ?? null));
 
-  // ── URL sync (debounced replaceState — no history spam) ──
+  // ── URL sync ──
+  // Moving between views (map to story card, tab to tab) adds a history
+  // entry, so the browser's Back button returns to where you were. Changes
+  // within a view (year, layers, selection) replace the current entry.
+  const lastViewRef = useRef(viewMode);
   useEffect(() => {
     const t = setTimeout(() => {
       const hash = serializeViewState(view);
       if (window.location.hash !== hash) {
-        window.history.replaceState(null, "", hash);
+        if (lastViewRef.current !== view.viewMode) window.history.pushState(null, "", hash);
+        else window.history.replaceState(null, "", hash);
       }
+      lastViewRef.current = view.viewMode;
     }, 250);
     return () => clearTimeout(t);
   }, [view]);
 
-  const playRef = useRef(null);
-  const activeRegionName = activeFeature?.properties?.region_name;
-  const activeDisplayName = activeRegionId ? (ID_TO_NAME.get(activeRegionId) || activeRegionName) : null;
+  // Back / Forward (or an edited address): adopt the state in the address.
+  useEffect(() => {
+    const onNavigate = () => {
+      const parsed = parseViewState(window.location.hash) || {};
+      const next = { viewMode: "map", ...parsed };
+      // A full map address with no place in it means "nothing selected";
+      // a story-card address always names its place.
+      if (next.viewMode !== "card") {
+        if (!("activeRegionId" in parsed)) next.activeRegionId = null;
+        if (!("activeNeighborhoodId" in parsed)) next.activeNeighborhoodId = null;
+      }
+      lastViewRef.current = next.viewMode;
+      dispatch({ type: "hydrate", value: next });
+      if ("activeRegionId" in next) {
+        setSelectedRegion(next.activeRegionId);
+        setActiveFeature(featureStub(next.activeRegionId));
+      }
+    };
+    window.addEventListener("popstate", onNavigate);
+    return () => window.removeEventListener("popstate", onNavigate);
+  }, []);
+
+  // ── Selection: one set of handlers for every entry point ──
+  // (map click, search, start-here path, Triage "locate", Back/Forward)
+  const selectTract = useCallback((regionId) => {
+    setBoundaryMode("tracts");
+    setActiveNeighborhoodId(null);
+    setActiveRegionId(regionId);
+    setSelectedRegion(regionId);
+    setActiveFeature(featureStub(regionId));
+  }, [setBoundaryMode, setActiveNeighborhoodId, setActiveRegionId]);
+
+  const selectNeighborhood = useCallback((neighborhoodId) => {
+    setBoundaryMode("neighborhoods");
+    setActiveRegionId(null);
+    setSelectedRegion(null);
+    setActiveFeature(null);
+    setActiveNeighborhoodId(neighborhoodId);
+  }, [setBoundaryMode, setActiveNeighborhoodId, setActiveRegionId]);
+
+  const clearSelection = useCallback(() => {
+    setSelectedRegion(null);
+    setActiveRegionId(null);
+    setActiveFeature(null);
+    setActiveNeighborhoodId(null);
+    setHoveredRegion(null);
+  }, [setActiveNeighborhoodId, setActiveRegionId]);
+
+  // The selected place, whichever kind it is. Panels and the story card
+  // take this one reference (see utils/places.js and utils/placeData.js).
+  const placeRef = useMemo(() => {
+    if (boundaryMode === "neighborhoods") {
+      return activeNeighborhoodId ? { kind: "neighborhood", id: activeNeighborhoodId } : null;
+    }
+    return activeRegionId != null ? { kind: "tract", id: activeRegionId } : null;
+  }, [boundaryMode, activeRegionId, activeNeighborhoodId]);
+
+  const placeTitle = useMemo(() => {
+    if (!placeRef) return null;
+    const place = placeRef.kind === "neighborhood" ? neighborhoodPlace(placeRef.id) : tractPlace(placeRef.id);
+    return place?.title || null;
+  }, [placeRef]);
+
+  // A story-card address with no place behind it falls back to the map.
+  useEffect(() => {
+    if (viewMode === "card" && !placeRef) setViewMode("map");
+  }, [viewMode, placeRef, setViewMode]);
 
   // ── Playback animation ──
+  const playRef = useRef(null);
   useEffect(() => {
     if (!isPlaying) {
       if (playRef.current) clearInterval(playRef.current);
@@ -185,121 +275,35 @@ export default function AustinCulturalMap() {
       setYear(PLAY_YEARS[idx]);
     }, 1800);
     return () => clearInterval(playRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying]);
 
-  // ── Derived data ──
-  const currentDvi = useMemo(() => {
-    const m = {};
-    REGION_INDEX.forEach((r) => {
-      m[r.region_id] = interpolateDvi(r.region_id, year);
-    });
-    return m;
-  }, [year, dviVersion]);
-
-  const regionBizOpen = useMemo(
-    () => (activeRegionId ? LEGACY_OPERATING.filter((b) => b.region_id === activeRegionId) : []),
-    [activeRegionId]
-  );
-  const regionBizClosed = useMemo(
-    () => (activeRegionId ? LEGACY_CLOSED.filter((b) => b.region_id === activeRegionId) : []),
-    [activeRegionId]
-  );
-
-  const socioNow = useMemo(
-    () => (activeRegionId ? interpolateSocio(activeRegionId, year) : null),
-    [activeRegionId, year]
-  );
-  const socioPrev = useMemo(
-    () => (activeRegionId ? findPriorSocio(activeRegionId, year) : null),
-    [activeRegionId, year]
-  );
-  // Tipping points are joined on tract ids (region_ids), not display names —
-  // the corridor labels never matched region_name strings, which left the
-  // tipping-point card unreachable in tract mode.
-  const tippingPoint = useMemo(
-    () => (activeRegionId != null ? TIPPING_POINTS.find((t) => t.region_ids?.includes(activeRegionId)) : null),
-    [activeRegionId]
-  );
-
-  // Neighborhood aggregation (full panel data for neighborhood mode)
-  const neighborhoodAgg = useMemo(() => {
-    if (boundaryMode !== "neighborhoods" || !activeNeighborhoodId) return null;
-    return aggregateNeighborhood(activeNeighborhoodId, year);
-  }, [boundaryMode, activeNeighborhoodId, year, dviVersion]);
-
-  // Agenda parsing
-  const [issuesText, setIssuesText] = useState("");
-
-  useEffect(() => {
-    fetch("/ISSUES.md")
-      .then((r) => r.text())
-      .then(setIssuesText)
-      .catch(() => setIssuesText("") );
+  // ── Agenda (presenter mode only) ──
+  // The roadmap is an internal working list. It is read from docs/ISSUES.md
+  // when the dialog is first opened, and is not part of a public build.
+  const openAgenda = useCallback(() => {
+    setShowAgenda(true);
+    if (PRESENTER_MODE) {
+      import("./docs/ISSUES.md?raw")
+        .then((m) => setAgenda(parseAgenda(m.default)))
+        .catch(() => setAgenda({ items: [], updated: null }));
+    }
   }, []);
 
-  const agendaItems = useMemo(() => {
-    if (!issuesText) return [];
-    const lines = issuesText.split("\n");
-    const start = lines.findIndex((l) => l.startsWith("| Priority"));
-    if (start < 0) return [];
-    const items = [];
-    for (let i = start + 2; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (!line || !line.startsWith("|")) break;
-      const cols = line
-        .split("|")
-        .map((c) => c.trim())
-        .filter(Boolean);
-      if (cols.length >= 3) {
-        items.push(`${cols[0]} ${cols[1]} – ${cols[2]}`);
-      }
-    }
-    return items;
-  }, [issuesText]);
+  // Header tabs: a plain tab click should not re-open a stale History event.
+  const navigate = useCallback((v) => {
+    setHistoryFocusId(null);
+    setViewMode(v);
+  }, [setViewMode]);
 
-  const lastUpdate = useMemo(() => new Date().toLocaleString(), []);
-
-  // Narrative callouts
-  const narrativeCallouts = useMemo(() => {
-    if (!activeRegionId) return [];
-    const out = [];
-    const rd = DEMOGRAPHICS.filter((d) => d.region_id === activeRegionId);
-    for (let i = 1; i < rd.length; i++) {
-      const p = rd[i - 1];
-      const c = rd[i];
-      if (p.popBlack > 0) {
-        const drop = (p.popBlack - c.popBlack) / p.popBlack;
-        if (drop > 0.25)
-          out.push({
-            type: "pop_loss",
-            text: `${activeDisplayName} lost ${(drop * 100).toFixed(0)}% of its Black population between ${p.year} and ${c.year} — a decline of ${(p.popBlack - c.popBlack).toLocaleString()} residents. ${c.popBlack.toLocaleString()} remained.`,
-          });
-      }
-    }
-    const rs = SOCIOECONOMIC.filter((s) => s.region_id === activeRegionId);
-    for (let i = 1; i < rs.length; i++) {
-      const p = rs[i - 1];
-      const c = rs[i];
-      if (p.homeValue > 0) {
-        const inc = (c.homeValue - p.homeValue) / p.homeValue;
-        if (inc > 1)
-          out.push({
-            type: "home_value",
-            text: `Median home values rose ${(inc * 100).toFixed(0)}%, from $${(p.homeValue / 1000).toFixed(0)}k to $${(c.homeValue / 1000).toFixed(0)}k, between ${p.year} and ${c.year}.`,
-          });
-      }
-    }
-    return out;
-  }, [activeRegionId, activeDisplayName, activeRegionName]);
-
-  // Timeline tick "Read more" → History tab, pre-selected on the event
+  // Timeline mark "Read more" → History tab, pre-selected on the event
   const handleOpenHistory = useCallback((eventId) => {
     setHistoryFocusId(eventId ?? null);
     setViewMode("history");
   }, [setViewMode]);
 
   // History event "Show on main map" → set year, fly to the event's
-  // location, and enable the relevant overlay (mirrors handleLocateOnMap)
+  // location, and enable the relevant overlay
   const handleShowEventOnMap = useCallback((ev) => {
     if (ev?.date_start_sort != null) {
       setYear(Math.min(2025, Math.max(1990, Math.round(ev.date_start_sort))));
@@ -323,128 +327,138 @@ export default function AustinCulturalMap() {
     setViewMode("map");
   }, [setShowOutreach, setViewMode]);
 
-  // Navigate from triage/compare to map, selecting a specific tract
+  // Triage / Compare / tour "locate" → the map, with that tract selected
   const handleLocateOnMap = useCallback((regionId) => {
-    const feature = REGIONS_GEOJSON.features.find(
-      (f) => f.properties.region_id === regionId
-    );
-    setBoundaryMode("tracts");
-    setActiveRegionId(regionId);
-    setSelectedRegion(regionId);
-    setActiveFeature(feature || null);
+    selectTract(regionId);
     setViewMode("map");
-  }, []);
+  }, [selectTract, setViewMode]);
 
   return (
-    <div
-      style={{
-        background: "#f8f7f4",
-        minHeight: "100vh",
-        width: "100%",
-        maxWidth: "100vw",
-        fontFamily: "'Libre Franklin','Source Sans 3',system-ui,sans-serif",
-      }}
-    >
+    <div className="app-shell">
       {/* Skip link */}
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
 
-      {/* Mobile notice — shown only on small screens via CSS */}
-      <div className="mobile-notice" aria-label="Device notice">
-        <h2>Desktop or Tablet Recommended</h2>
-        <p>This interactive map is designed for screens 900 px or wider. Please visit on a laptop, desktop, or tablet in landscape orientation for the best experience.</p>
-      </div>
-
       {/* Live region for screen readers */}
-      <div
-        role="status"
-        aria-live="polite"
-        aria-atomic="true"
-        style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}
-      >
-        {activeDisplayName
-          ? `Viewing ${activeDisplayName}, DVI ${(currentDvi[activeRegionId] || 0).toFixed(0)} at year ${year}`
-          : `${viewMode} view, year ${year}`}
+      <div role="status" aria-live="polite" aria-atomic="true" className="visually-hidden">
+        {viewMode === "card"
+          ? `Story card for ${placeTitle || "the selected place"}`
+          : placeTitle
+            ? `Selected ${placeTitle}, showing ${year}`
+            : `${viewMode} view, showing ${year}`}
       </div>
 
       {/* Header */}
       <Header
         viewMode={viewMode}
-        setViewMode={setViewMode}
+        setViewMode={navigate}
         setShowAbout={setShowAbout}
-        setShowAgenda={setShowAgenda}
+        onOpenAgenda={openAgenda}
         onStartTour={() => setTourOpen(true)}
       />
 
       {/* Guided tour (~3 min) — drives the app through its three purposes */}
       {PRESENTER_MODE && tourOpen && (
-        <GuidedTour
-          onClose={() => setTourOpen(false)}
-          ctx={{
-            setViewMode,
-            setYear,
-            setShowHolc,
-            setIsPlaying,
-            setTriageLens,
-            setPanelTab,
-            locate: handleLocateOnMap,
-          }}
-        />
+        <Suspense fallback={null}>
+          <GuidedTour
+            onClose={() => setTourOpen(false)}
+            ctx={{
+              setViewMode,
+              setYear,
+              setShowHolc,
+              setIsPlaying,
+              setTriageLens,
+              locate: handleLocateOnMap,
+            }}
+          />
+        </Suspense>
       )}
 
-      {/* About Modal */}
-      {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
-      {/* Agenda Modal */}
-      {showAgenda && (
-        <AgendaModal
-          items={agendaItems}
-          lastUpdate={lastUpdate}
-          onClose={() => setShowAgenda(false)}
-        />
+      {/* About dialog */}
+      {showAbout && (
+        <Suspense fallback={null}>
+          <AboutModal onClose={() => setShowAbout(false)} />
+        </Suspense>
+      )}
+      {/* Agenda dialog (presenter mode only) */}
+      {PRESENTER_MODE && showAgenda && (
+        <Suspense fallback={null}>
+          <AgendaModal
+            items={agenda?.items || []}
+            updated={agenda?.updated}
+            loading={!agenda}
+            onClose={() => setShowAgenda(false)}
+          />
+        </Suspense>
       )}
 
       {/* Main Content */}
-      <main id="main-content" style={{ width: "100%", padding: "16px 28px 40px" }}>
+      <main id="main-content" className="app-main">
         {PRESENTER_MODE && viewMode === "outreach" && (
           <ErrorBoundary>
-            <OutreachView onLocate={handleLocateEvent} dviVersion={dviVersion} />
+            <Suspense fallback={viewLoading}>
+              <OutreachView onLocate={handleLocateEvent} dviVersion={dviVersion} />
+            </Suspense>
           </ErrorBoundary>
         )}
 
         {PRESENTER_MODE && viewMode === "plan" && (
           <ErrorBoundary>
-            <StrategicPlanView />
+            <Suspense fallback={viewLoading}>
+              <StrategicPlanView />
+            </Suspense>
           </ErrorBoundary>
         )}
 
         {PRESENTER_MODE && viewMode === "timeline" && (
-          <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
+          <ErrorBoundary>
+            <Suspense fallback={viewLoading}>
+              <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
+            </Suspense>
+          </ErrorBoundary>
         )}
 
         {PRESENTER_MODE && viewMode === "history" && (
           <ErrorBoundary>
-            <HistoryView initialEventId={historyFocusId} onShowOnMap={handleShowEventOnMap} />
+            <Suspense fallback={viewLoading}>
+              <HistoryView initialEventId={historyFocusId} onShowOnMap={handleShowEventOnMap} />
+            </Suspense>
           </ErrorBoundary>
         )}
 
         {PRESENTER_MODE && viewMode === "compare" && (
-          <ComparisonView
-            compA={compA}
-            setCompA={setCompA}
-            compB={compB}
-            setCompB={setCompB}
-            boundaryMode={boundaryMode}
-          />
+          <ErrorBoundary>
+            <Suspense fallback={viewLoading}>
+              <ComparisonView
+                compA={compA}
+                setCompA={setCompA}
+                compB={compB}
+                setCompB={setCompB}
+              />
+            </Suspense>
+          </ErrorBoundary>
         )}
 
         {PRESENTER_MODE && viewMode === "triage" && (
-          <TriageView
-            boundaryMode={boundaryMode}
-            onLocateOnMap={handleLocateOnMap}
-            lens={triageLens}
-            setLens={setTriageLens}
-          />
+          <ErrorBoundary>
+            <Suspense fallback={viewLoading}>
+              <TriageView
+                boundaryMode={boundaryMode}
+                onLocateOnMap={handleLocateOnMap}
+                lens={triageLens}
+                setLens={setTriageLens}
+              />
+            </Suspense>
+          </ErrorBoundary>
+        )}
+
+        {viewMode === "card" && placeRef && (
+          <ErrorBoundary>
+            <Suspense fallback={<p className="page-loading" role="status"><span className="spinner" aria-hidden="true" /> Loading the story card…</p>}>
+              <StoryCardPage placeRef={placeRef} onBack={() => setViewMode("map")} />
+            </Suspense>
+          </ErrorBoundary>
         )}
 
         {viewMode === "map" && (
@@ -454,8 +468,6 @@ export default function AustinCulturalMap() {
               setYear={setYear}
               isPlaying={isPlaying}
               setIsPlaying={setIsPlaying}
-              showHeritage={showHeritage}
-              setShowHeritage={setShowHeritage}
               showPins={showPins}
               setShowPins={setShowPins}
               showProjectConnect={showProjectConnect}
@@ -487,45 +499,33 @@ export default function AustinCulturalMap() {
               setPaFilter={setPaFilter}
               activeRegionId={activeRegionId}
               setActiveRegionId={setActiveRegionId}
-              activeFeature={activeFeature}
               setActiveFeature={setActiveFeature}
               selectedRegion={selectedRegion}
               setSelectedRegion={setSelectedRegion}
-              hoveredRegion={hoveredRegion}
               setHoveredRegion={setHoveredRegion}
-              selectedBiz={selectedBiz}
-              setSelectedBiz={setSelectedBiz}
-              bizTab={bizTab}
-              setBizTab={setBizTab}
-              panelTab={panelTab}
-              setPanelTab={setPanelTab}
-              selectedPA={selectedPA}
-              setSelectedPA={setSelectedPA}
-              currentDvi={currentDvi}
-              regionBizOpen={regionBizOpen}
-              regionBizClosed={regionBizClosed}
-              tippingPoint={tippingPoint}
-              narrativeCallouts={narrativeCallouts}
               boundaryMode={boundaryMode}
               setBoundaryMode={setBoundaryMode}
               activeNeighborhoodId={activeNeighborhoodId}
               setActiveNeighborhoodId={setActiveNeighborhoodId}
-              neighborhoodAgg={neighborhoodAgg}
+              placeRef={placeRef}
+              onSelectTract={selectTract}
+              onSelectNeighborhood={selectNeighborhood}
+              onClearSelection={clearSelection}
+              onOpenCard={() => setViewMode("card")}
               onOpenHistory={handleOpenHistory}
               flyToTarget={flyToTarget}
+              onFlyTo={setFlyToTarget}
               onFlyToHandled={() => setFlyToTarget(null)}
             />
           </ErrorBoundary>
         )}
       </main>
 
-      {/* Footer */}
-      <footer style={{ borderTop: "1px solid #e8e5e0", padding: "16px 28px", textAlign: "center" }} role="contentinfo">
-        <p style={{ fontSize: 11, color: "#a8a49c", margin: 0, lineHeight: 1.5 }}>
-          Austin Cultural Displacement Map · Data compiled February 2026 · Sources: U.S. Census, ACS, TCAD, City of Austin, UT "Uprooted," community inventories
-        </p>
-        <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
-          Last update: {lastUpdate}
+      {/* Footer: the data date, not the time the page happened to load */}
+      <footer className="app-footer" role="contentinfo">
+        <p>
+          Austin's Shifting Ground · Data compiled February 2026 · Sources: U.S. Census, ACS, TCAD,
+          City of Austin, UT “Uprooted,” community inventories
         </p>
       </footer>
     </div>

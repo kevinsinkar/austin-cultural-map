@@ -20,7 +20,7 @@ export class ErrorBoundary extends React.Component {
       return (
         <div style={{ padding: 24, color: '#dc2626', background: '#fff7f7', borderRadius: 8, border: '1px solid #fca5a5' }}>
           <h2>Something went wrong in this panel.</h2>
-          <pre style={{ fontSize: 12, color: '#b91c1c' }}>{this.state.error?.toString()}</pre>
+          <pre style={{ fontSize: 13, color: '#b91c1c' }}>{this.state.error?.toString()}</pre>
         </div>
       );
     }

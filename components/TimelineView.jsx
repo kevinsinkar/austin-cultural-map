@@ -151,9 +151,9 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
       {/* Header */}
       <div style={{ marginBottom: 16 }}>
         <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 22, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px" }}>
-          Austin Cultural Timeline
+          Timeline: businesses and policy
         </h2>
-        <p style={{ fontSize: 13, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
+        <p style={{ fontSize: 14, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
           Four decades of policy decisions, business lifespans, and demographic transformation.
         </p>
 
@@ -170,7 +170,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
                 aria-current={timelineMode === m.key ? "page" : undefined}
                 style={{
                   padding: "6px 16px", borderRadius: 6, border: "none",
-                  fontSize: 12, cursor: "pointer", textAlign: "center",
+                  fontSize: 13, cursor: "pointer", textAlign: "center",
                   fontWeight: timelineMode === m.key ? 600 : 400,
                   background: timelineMode === m.key ? "#fffffe" : "transparent",
                   color: timelineMode === m.key ? "#0f766e" : "#7c6f5e",
@@ -178,17 +178,17 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
                 }}
               >
                 <div>{m.label}</div>
-                <div style={{ fontSize: 11, fontWeight: 400, color: timelineMode === m.key ? "#0f766e" : "#a8a49c", marginTop: 1 }}>{m.sub}</div>
+                <div style={{ fontSize: 12, fontWeight: 400, color: timelineMode === m.key ? "#0f766e" : "var(--muted)", marginTop: 1 }}>{m.sub}</div>
               </button>
             ))}
           </div>
 
           {/* Category filters */}
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-            <span style={{ fontSize: 11, fontWeight: 600, color: "#64615b", alignSelf: "center" }}>Events:</span>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#64615b", alignSelf: "center" }}>Events:</span>
             {["all", "displacement", "policy", "development", "cultural", "economic"].map(f => (
               <button key={f} onClick={() => setTlFilter(f)} style={{
-                padding: "4px 12px", borderRadius: 20, fontSize: 11, cursor: "pointer", minHeight: 28,
+                padding: "4px 12px", borderRadius: 20, fontSize: 12, cursor: "pointer", minHeight: 28,
                 fontWeight: tlFilter === f ? 600 : 400,
                 border: tlFilter === f ? "1.5px solid #0f766e" : "1.5px solid #d6d3cd",
                 background: tlFilter === f ? "#f0fdfa" : "#fffffe",
@@ -201,10 +201,10 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
 
           {/* Action filter */}
           <div style={{ display: "flex", gap: 6 }}>
-            <span style={{ fontSize: 11, fontWeight: 600, color: "#64615b", alignSelf: "center" }}>Show:</span>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#64615b", alignSelf: "center" }}>Show:</span>
             {["all", "opened", "closed"].map(f => (
               <button key={f} onClick={() => setActionFilter(f)} style={{
-                padding: "4px 12px", borderRadius: 20, fontSize: 11, cursor: "pointer", minHeight: 28,
+                padding: "4px 12px", borderRadius: 20, fontSize: 12, cursor: "pointer", minHeight: 28,
                 fontWeight: actionFilter === f ? 600 : 400,
                 border: actionFilter === f ? "1.5px solid #0f766e" : "1.5px solid #d6d3cd",
                 background: actionFilter === f ? "#f0fdfa" : "#fffffe",
@@ -229,7 +229,7 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
               }}
             >
               <span style={{ width: 10, height: 4, borderRadius: 2, background: color }} />
-              <span style={{ fontSize: 11, color: "#44403c", fontWeight: 500 }}>{cultureLabel(culture)}</span>
+              <span style={{ fontSize: 12, color: "#44403c", fontWeight: 500 }}>{cultureLabel(culture)}</span>
             </button>
           ))}
         </div>
@@ -271,33 +271,33 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
             <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
               {detailItem.cat ? (
                 <>
-                  <div style={{ fontSize: 11, fontWeight: 600, color: "#a8a49c", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>{detailItem.cat}</div>
-                  <h3 style={{ fontSize: 15, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px", lineHeight: 1.3 }}>{detailItem.label}</h3>
-                  <div style={{ fontSize: 12, color: "#7c6f5e", marginBottom: 8 }}>{detailItem.year}</div>
-                  <p style={{ fontSize: 12, color: "#44403c", margin: 0, lineHeight: 1.6 }}>{detailItem.summary}</p>
+                  <div style={{ fontSize: 12, fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>{detailItem.cat}</div>
+                  <h3 style={{ fontSize: 16, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px", lineHeight: 1.3 }}>{detailItem.label}</h3>
+                  <div style={{ fontSize: 13, color: "#7c6f5e", marginBottom: 8 }}>{detailItem.year}</div>
+                  <p style={{ fontSize: 13, color: "#44403c", margin: 0, lineHeight: 1.6 }}>{detailItem.summary}</p>
                 </>
               ) : (
                 <>
-                  <h3 style={{ fontSize: 15, fontWeight: 600, color: "#1a1a1a", margin: "0 0 4px", lineHeight: 1.3 }}>{detailItem.name}</h3>
-                  <div style={{ fontSize: 11, color: "#7c6f5e", marginBottom: 6 }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 600, color: "#1a1a1a", margin: "0 0 4px", lineHeight: 1.3 }}>{detailItem.name}</h3>
+                  <div style={{ fontSize: 12, color: "#7c6f5e", marginBottom: 6 }}>
                     {detailItem.stream === "closed"
                       ? `${detailItem.est}\u2013${detailItem.closedYear || "?"}`
                       : `Est. ${detailItem.est} \u2014 Still operating`}
                   </div>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
-                    <span style={{ fontSize: 11, padding: "2px 8px", borderRadius: 4, background: cultureColor(detailItem.culture) + "22", color: cultureColor(detailItem.culture), fontWeight: 600 }}>{detailItem.culture}</span>
-                    <span style={{ fontSize: 11, padding: "2px 8px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e" }}>{detailItem.type}</span>
+                    <span style={{ fontSize: 12, padding: "2px 8px", borderRadius: 4, background: cultureColor(detailItem.culture) + "22", color: cultureColor(detailItem.culture), fontWeight: 600 }}>{detailItem.culture}</span>
+                    <span style={{ fontSize: 12, padding: "2px 8px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e" }}>{detailItem.type}</span>
                   </div>
-                  {detailItem.notes && <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 6px", lineHeight: 1.5 }}>{detailItem.notes}</p>}
-                  {detailItem.cause && <div style={{ fontSize: 11, color: "#991b1b", marginTop: 4 }}>Closed: {detailItem.cause}</div>}
-                  {detailItem.replacedBy && <div style={{ fontSize: 11, color: "#64615b", marginTop: 2 }}>Now: {detailItem.replacedBy}</div>}
+                  {detailItem.notes && <p style={{ fontSize: 13, color: "#44403c", margin: "0 0 6px", lineHeight: 1.5 }}>{detailItem.notes}</p>}
+                  {detailItem.cause && <div style={{ fontSize: 12, color: "#991b1b", marginTop: 4 }}>Closed: {detailItem.cause}</div>}
+                  {detailItem.replacedBy && <div style={{ fontSize: 12, color: "#64615b", marginTop: 2 }}>Now: {detailItem.replacedBy}</div>}
                 </>
               )}
             </div>
           ) : (
             <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "32px 20px", textAlign: "center" }}>
               <div style={{ fontSize: 28, marginBottom: 8, opacity: 0.3 }}>{"\u23F3"}</div>
-              <div style={{ fontSize: 13, color: "#7c6f5e", lineHeight: 1.5 }}>
+              <div style={{ fontSize: 14, color: "#7c6f5e", lineHeight: 1.5 }}>
                 Hover or click any event or business bar to see details.
               </div>
             </div>
@@ -305,12 +305,12 @@ export default function TimelineView({ tlFilter, setTlFilter }) {
 
           {/* Summary stats */}
           <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "12px 16px", marginTop: 12 }}>
-            <div style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8 }}>Data Summary</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 11 }}>
-              <div><span style={{ color: "#a8a49c" }}>Operating:</span> <strong>{filteredOp.length}</strong></div>
-              <div><span style={{ color: "#a8a49c" }}>Closed:</span> <strong>{filteredCl.length}</strong></div>
-              <div><span style={{ color: "#a8a49c" }}>Events:</span> <strong>{filteredEvents.length}</strong></div>
-              <div><span style={{ color: "#a8a49c" }}>Eras:</span> <strong>{ERAS.length}</strong></div>
+            <div style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8 }}>Data Summary</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 12 }}>
+              <div><span style={{ color: "var(--muted)" }}>Operating:</span> <strong>{filteredOp.length}</strong></div>
+              <div><span style={{ color: "var(--muted)" }}>Closed:</span> <strong>{filteredCl.length}</strong></div>
+              <div><span style={{ color: "var(--muted)" }}>Events:</span> <strong>{filteredEvents.length}</strong></div>
+              <div><span style={{ color: "var(--muted)" }}>Eras:</span> <strong>{ERAS.length}</strong></div>
             </div>
           </div>
         </div>

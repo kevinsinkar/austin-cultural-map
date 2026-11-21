@@ -54,7 +54,7 @@ export const PLAN_STAGES = [
   { key: "applied",    label: "Applied",    color: "#7c3aed", bg: "#ede9fe" },
   { key: "confirmed",  label: "Confirmed",  color: "#b45309", bg: "#fef3c7" },
   { key: "tabled",     label: "Tabled ✓",   color: "#15803d", bg: "#dcfce7" },
-  { key: "passed",     label: "Passed",     color: "#a8a49c", bg: "#f5f0ea" },
+  { key: "passed",     label: "Passed",     color: "#6b675f", bg: "#f5f0ea" },
 ];
 
 export const PLAN_STAGE_BY_KEY = Object.fromEntries(PLAN_STAGES.map((s) => [s.key, s]));

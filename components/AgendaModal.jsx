@@ -1,4 +1,4 @@
-export default function AgendaModal({ items, lastUpdate, onClose }) {
+export default function AgendaModal({ items, updated, loading, onClose }) {
   return (
     <div
       style={{
@@ -43,16 +43,19 @@ export default function AgendaModal({ items, lastUpdate, onClose }) {
           </h2>
           <button
             onClick={onClose}
-            style={{ background: "none", border: "none", fontSize: 20, color: "#a8a49c", cursor: "pointer", padding: 4 }}
+            style={{ background: "none", border: "none", fontSize: 20, color: "var(--muted)", cursor: "pointer", padding: 4 }}
             aria-label="Close dialog"
           >
             ✕
           </button>
         </div>
-        <div style={{ fontSize: 12, color: "#64615b", marginTop: 8, marginBottom: 16 }}>
-          Last update: {lastUpdate}
+        <div style={{ fontSize: 13, color: "#64615b", marginTop: 8, marginBottom: 16 }}>
+          {loading ? "Loading the roadmap…" : updated ? `Roadmap last updated ${updated}` : "From docs/ISSUES.md"}
         </div>
-        <ul style={{ paddingLeft: 20, margin: 0, fontSize: 13, color: "#1a1a1a" }}>
+        {!loading && items.length === 0 && (
+          <p style={{ fontSize: 14, color: "#44403c", margin: 0 }}>No open items were found in docs/ISSUES.md.</p>
+        )}
+        <ul style={{ paddingLeft: 20, margin: 0, fontSize: 14, color: "#1a1a1a" }}>
           {items.map((it, idx) => (
             <li key={idx} style={{ marginBottom: 8 }}>{it}</li>
           ))}

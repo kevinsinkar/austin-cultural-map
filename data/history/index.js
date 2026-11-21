@@ -1,9 +1,11 @@
-// Historical events + geographic reference layers from the Preservation Austin
-// data package ("Austin Historical Tool: Data Specification", Sept 2026).
-// Source of truth: /Preservation Austin/files — these are verbatim copies.
+// Historical events + geographic reference layers from the historical data
+// package ("Austin Historical Tool: Data Specification", Sept 2026) kept in
+// /Preservation Austin/files — these are verbatim copies. The package is
+// research compiled with AI assistance from public sources, with AI-assigned
+// documentation levels. It has not been reviewed by Preservation Austin and
+// must not be presented as Preservation Austin's work.
 import eventsRaw from "./events_all.json";
 import geoRef from "./geo_reference.json";
-import holc from "./holc_1935.json";
 
 export const HISTORY_META = eventsRaw.meta;
 
@@ -26,19 +28,9 @@ export const GEO_CORRIDORS = feats.filter((f) =>
   ["CORRIDOR_I35_CAPEX_CENTRAL", "ROUTE_TONKAWA_1884_85"].includes(f.properties.feature_id)
 );
 
-// HOLC 1935 redlining polygons. CC BY-NC — non-commercial use only, credit
-// Mapping Inequality (Digital Scholarship Lab, University of Richmond).
-export const HOLC_1935 = holc;
-export const HOLC_ATTRIBUTION =
-  "HOLC 1935 map: Mapping Inequality, Digital Scholarship Lab, University of Richmond (CC BY-NC). No area descriptions survive for Austin.";
-export const HOLC_GRADES = (() => {
-  const seen = new Map();
-  holc.features.forEach((f) => {
-    const { grade, category, fill } = f.properties;
-    if (grade && !seen.has(grade)) seen.set(grade, { grade, category, fill });
-  });
-  return [...seen.values()].sort((a, b) => a.grade.localeCompare(b.grade));
-})();
+// The HOLC 1935 redlining layer lives in its own module so the public map can
+// load it without the History view's event and reference files.
+export { HOLC_1935, HOLC_ATTRIBUTION, HOLC_GRADES } from "./holc";
 
 // ── Era ordering (README §3.5) ──
 export const ERA_ORDER = [

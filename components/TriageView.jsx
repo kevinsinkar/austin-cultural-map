@@ -296,11 +296,11 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
     if (!active || !payload?.length) return null;
     const d = payload[0].payload;
     return (
-      <div style={{ background: "#fffffe", border: "1px solid #d6d3cd", borderRadius: 8, padding: "10px 14px", fontSize: 12, color: "#1a1a1a", boxShadow: "0 2px 8px rgba(0,0,0,.1)", maxWidth: 240 }}>
+      <div style={{ background: "#fffffe", border: "1px solid #d6d3cd", borderRadius: 8, padding: "10px 14px", fontSize: 13, color: "#1a1a1a", boxShadow: "0 2px 8px rgba(0,0,0,.1)", maxWidth: 240 }}>
         <div style={{ fontWeight: 700, marginBottom: 4 }}>{d.name}</div>
         <div>X: <strong>{d.x?.toFixed(1)}</strong></div>
         <div>Y: <strong>{d.y?.toFixed(1)}</strong></div>
-        {d.grantType && <div style={{ marginTop: 4, fontSize: 11, color: "#7c6f5e" }}>{d.grantType}</div>}
+        {d.grantType && <div style={{ marginTop: 4, fontSize: 12, color: "#7c6f5e" }}>{d.grantType}</div>}
         <div style={{ color: activeColors[d.category], fontWeight: 600, marginTop: 4 }}>{d.category}</div>
       </div>
     );
@@ -312,10 +312,10 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
         <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 22, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px" }}>
           Grant Triage &amp; Prioritization
         </h2>
-        <p style={{ fontSize: 13, color: "#64615b", margin: 0, lineHeight: 1.5 }}>
+        <p style={{ fontSize: 14, color: "#64615b", margin: 0, lineHeight: 1.5 }}>
           Which neighborhoods should receive preservation grants this year? Three lenses for analyzing displacement risk across all {activeData.length} regions.
         </p>
-        <p style={{ fontSize: 11, color: "#92400e", margin: "6px 0 0", lineHeight: 1.5 }}>
+        <p style={{ fontSize: 12, color: "#92400e", margin: "6px 0 0", lineHeight: 1.5 }}>
           Screening prototype — these scores are a starting point for staff review and outreach, not validated determinations about any neighborhood.
         </p>
       </div>
@@ -328,7 +328,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             onClick={() => handleLensChange(l.key)}
             aria-current={lens === l.key ? "page" : undefined}
             style={{
-              flex: 1, padding: "8px 14px", borderRadius: 6, fontSize: 12,
+              flex: 1, padding: "8px 14px", borderRadius: 6, fontSize: 13,
               fontWeight: lens === l.key ? 600 : 400,
               background: lens === l.key ? "#fffffe" : "transparent",
               color: lens === l.key ? "#0f766e" : "#7c6f5e",
@@ -338,14 +338,14 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             }}
           >
             <div>{l.label}</div>
-            <div style={{ fontSize: 11, fontWeight: 400, color: lens === l.key ? "#0f766e" : "#a8a49c", marginTop: 2 }}>
+            <div style={{ fontSize: 12, fontWeight: 400, color: lens === l.key ? "#0f766e" : "var(--muted)", marginTop: 2 }}>
               {l.question}
             </div>
           </button>
         ))}
       </div>
 
-      <p style={{ fontSize: 12, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
+      <p style={{ fontSize: 13, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
         {LENSES.find(l => l.key === lens).description}
       </p>
 
@@ -353,7 +353,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       {lens === "trajectory" && (() => {
         const fallback = trajectoryData.filter(r => r.velocityComparable === false).length;
         return (
-          <div style={{ fontSize: 11, color: "#92400e", background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 6, padding: "8px 12px", margin: "0 0 16px", lineHeight: 1.5 }}>
+          <div style={{ fontSize: 12, color: "#92400e", background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 6, padding: "8px 12px", margin: "0 0 16px", lineHeight: 1.5 }}>
             Velocity compares 2010 and 2023 using only the census fields measured in <em>both</em> years
             (early data lacks appreciation, unemployment, and eviction entirely).
             {fallback > 0 && ` ${fallback} of ${trajectoryData.length} regions lack enough shared fields and fall back to a low-confidence estimate.`}
@@ -371,9 +371,9 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             <circle cx="8" cy="8" r="7" stroke="#0f766e" strokeWidth="1.5" fill="none" />
             <path d="M5 8l2 2 4-4" stroke="#0f766e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span style={{ fontSize: 13, fontWeight: 700, color: "#0f766e" }}>Recommendation</span>
+          <span style={{ fontSize: 14, fontWeight: 700, color: "#0f766e" }}>Recommendation</span>
         </div>
-        <p style={{ fontSize: 13, color: "#1a1a1a", margin: 0, lineHeight: 1.6 }}>{recommendation}</p>
+        <p style={{ fontSize: 14, color: "#1a1a1a", margin: 0, lineHeight: 1.6 }}>{recommendation}</p>
       </div>
 
       {/* Category legend with counts */}
@@ -384,7 +384,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
           return (
             <div key={cat} style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <span style={{ width: 10, height: 10, borderRadius: 3, background: activeColors[cat] }} />
-              <span style={{ fontSize: 11, color: "#64615b", fontWeight: 500 }}>{cat} ({count})</span>
+              <span style={{ fontSize: 12, color: "#64615b", fontWeight: 500 }}>{cat} ({count})</span>
             </div>
           );
         })}
@@ -395,18 +395,18 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
         <input
           type="text" placeholder="Search regions..." value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{ padding: "6px 12px", borderRadius: 6, border: "1.5px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", fontSize: 12, minWidth: 200, minHeight: 32, outline: "none" }}
+          style={{ padding: "6px 12px", borderRadius: 6, border: "1.5px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", fontSize: 13, minWidth: 200, minHeight: 32, outline: "none" }}
           aria-label="Filter regions by name"
         />
         <select
           value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)}
-          style={{ padding: "6px 12px", borderRadius: 6, border: "1.5px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", fontSize: 12, minHeight: 32, cursor: "pointer" }}
+          style={{ padding: "6px 12px", borderRadius: 6, border: "1.5px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", fontSize: 13, minHeight: 32, cursor: "pointer" }}
           aria-label="Filter by category"
         >
           <option value="all">All Categories</option>
           {activeCats.map(cat => <option key={cat} value={cat}>{cat}</option>)}
         </select>
-        <span style={{ fontSize: 11, color: "#a8a49c" }}>
+        <span style={{ fontSize: 12, color: "var(--muted)" }}>
           Showing {sorted.length} of {activeData.length}
         </span>
       </div>
@@ -415,7 +415,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       <div className="triage-evidence">
       {/* Scatter Plot */}
       <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-        <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
+        <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
           {lens === "trajectory" ? "Displacement Velocity vs. DVI" : lens === "equity" ? "Equity Deficit vs. DVI" : "Market Pressure vs. Community Vulnerability"}
         </h3>
         <div style={{ width: "100%", height: 340 }} role="img" aria-label={`Scatter plot for ${lens} lens`}>
@@ -423,13 +423,13 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis
-                type="number" dataKey="x" tick={{ fontSize: 11, fill: "#7c6f5e" }} tickLine={false}
-                label={{ value: AXIS_LABELS[lens].x, position: "insideBottomRight", offset: -5, fontSize: 11, fill: "#a8a49c" }}
+                type="number" dataKey="x" tick={{ fontSize: 12, fill: "#7c6f5e" }} tickLine={false}
+                label={{ value: AXIS_LABELS[lens].x, position: "insideBottomRight", offset: -5, fontSize: 12, fill: "var(--muted)" }}
                 domain={[0, lens === "matrix" ? 100 : 80]}
               />
               <YAxis
-                type="number" dataKey="y" tick={{ fontSize: 11, fill: "#a8a49c" }} tickLine={false} axisLine={false}
-                label={{ value: AXIS_LABELS[lens].y, angle: -90, position: "insideLeft", offset: 10, fontSize: 11, fill: "#a8a49c" }}
+                type="number" dataKey="y" tick={{ fontSize: 12, fill: "var(--muted)" }} tickLine={false} axisLine={false}
+                label={{ value: AXIS_LABELS[lens].y, angle: -90, position: "insideLeft", offset: 10, fontSize: 12, fill: "var(--muted)" }}
                 domain={[0, 100]}
               />
               <ZAxis type="number" dataKey="z" range={[60, 400]} />
@@ -454,7 +454,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <p style={{ fontSize: 11, color: "#a8a49c", margin: "8px 0 0", lineHeight: 1.4 }}>
+        <p style={{ fontSize: 12, color: "var(--muted)", margin: "8px 0 0", lineHeight: 1.4 }}>
           {lens === "trajectory" && "Dot size = intervention window score. Upper-right = fast displacement with open window for intervention."}
           {lens === "equity" && "Dot size = preservation gap (larger = less PA investment). Upper-right = high displacement with underserved communities."}
           {lens === "matrix" && "Dot size = cultural significance. Quadrant lines at 50. Q1 (upper-right) = crisis. Q2 (lower-right) = urgent prevention. Q4 (upper-left) = chronic underinvestment."}
@@ -464,15 +464,15 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
           if (!sel) return null;
           return (
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10, padding: "8px 12px", background: "#f0fdfa", borderRadius: 6, border: "1px solid #99f6e4" }}>
-              <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a" }}>{sel.name}</span>
-              <span style={{ fontSize: 11, color: "#64615b" }}>
+              <span style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a" }}>{sel.name}</span>
+              <span style={{ fontSize: 12, color: "#64615b" }}>
                 {sel.category}
               </span>
               <button
                 onClick={() => onLocateOnMap(selectedRegionId)}
                 style={{
                   marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 5,
-                  padding: "5px 12px", borderRadius: 6, fontSize: 11, fontWeight: 600,
+                  padding: "5px 12px", borderRadius: 6, fontSize: 12, fontWeight: 600,
                   background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
                 }}
               >
@@ -488,11 +488,11 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
 
       {/* Table */}
       <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-        <h3 style={{ fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
+        <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
           {lens === "trajectory" ? "Trajectory Rankings" : lens === "equity" ? "Equity Priority Rankings" : "Risk Matrix Rankings"}
         </h3>
         <div style={{ overflowX: "auto", maxHeight: 500, overflowY: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }} role="table" aria-label="Triage table">
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }} role="table" aria-label="Triage table">
             <thead>
               <tr style={{ borderBottom: "2px solid #e8e5e0" }}>
                 {activeCols.map(col => (
@@ -501,11 +501,11 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     style={{
                       textAlign: col.key === "name" || col.key === "category" || col.key === "grantType" ? "left" : "right",
                       padding: "6px 8px", fontWeight: 600, color: "#64615b", cursor: "pointer",
-                      whiteSpace: "nowrap", userSelect: "none", fontSize: 11,
+                      whiteSpace: "nowrap", userSelect: "none", fontSize: 12,
                     }}
                   >
                     {col.label}
-                    <span style={{ fontSize: 11, opacity: 0.6 }}>{sortIcon(col.key)}</span>
+                    <span style={{ fontSize: 12, opacity: 0.6 }}>{sortIcon(col.key)}</span>
                   </th>
                 ))}
               </tr>
@@ -527,7 +527,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     if (col.key === "category") {
                       return (
                         <td key={col.key} style={{ padding: "6px 8px" }}>
-                          <span style={{ display: "inline-block", fontSize: 11, fontWeight: 600, padding: "2px 8px", borderRadius: 4, color: "#fff", background: activeColors[val], whiteSpace: "nowrap" }}>
+                          <span style={{ display: "inline-block", fontSize: 12, fontWeight: 600, padding: "2px 8px", borderRadius: 4, color: "#fff", background: activeColors[val], whiteSpace: "nowrap" }}>
                             {val}
                           </span>
                         </td>
@@ -545,7 +545,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                                 aria-label={`Locate ${val} on map`}
                                 style={{
                                   display: "inline-flex", alignItems: "center", gap: 4,
-                                  padding: "2px 8px", borderRadius: 4, fontSize: 11, fontWeight: 600,
+                                  padding: "2px 8px", borderRadius: 4, fontSize: 12, fontWeight: 600,
                                   background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
                                   whiteSpace: "nowrap", lineHeight: 1.4,
                                 }}
@@ -563,7 +563,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                     if (col.key === "grantType") {
                       return (
                         <td key={col.key} style={{ padding: "6px 8px" }}>
-                          <span style={{ fontSize: 11, fontWeight: 500, padding: "2px 6px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e", whiteSpace: "nowrap" }}>
+                          <span style={{ fontSize: 12, fontWeight: 500, padding: "2px 6px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e", whiteSpace: "nowrap" }}>
                             {val}
                           </span>
                         </td>
@@ -597,20 +597,20 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
       <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", marginBottom: 16 }}>
         <button
           onClick={() => setShowAdvanced(v => !v)}
-          style={{ width: "100%", padding: "14px 20px", background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em" }}
+          style={{ width: "100%", padding: "14px 20px", background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: 13, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em" }}
           aria-expanded={showAdvanced}
         >
           <span>Advanced: DVI Formula &amp; Weight Adjustment</span>
-          <span style={{ fontSize: 14, transform: showAdvanced ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>{"\u25BE"}</span>
+          <span style={{ fontSize: 15, transform: showAdvanced ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>{"\u25BE"}</span>
         </button>
         {showAdvanced && (
           <div style={{ padding: "0 20px 20px" }}>
             <div style={{ background: "#fafaf9", borderRadius: 8, padding: "14px 16px", marginBottom: 16, border: "1px solid #e8e5e0" }}>
-              <h4 style={{ fontSize: 12, fontWeight: 700, color: "#1a1a1a", margin: "0 0 8px" }}>DVI Composition</h4>
-              <p style={{ fontSize: 12, color: "#44403c", margin: "0 0 8px", lineHeight: 1.6 }}>
-                <strong>DVI</strong> = (W\u2081 \u00D7 Demographic Vulnerability) + (W\u2082 \u00D7 Market Pressure) + (W\u2083 \u00D7 Socioeconomic Stress), scaled 0\u2013100.
+              <h4 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 8px" }}>DVI Composition</h4>
+              <p style={{ fontSize: 13, color: "#44403c", margin: "0 0 8px", lineHeight: 1.6 }}>
+                <strong>DVI</strong> = (W₁ × Demographic Vulnerability) + (W₂ × Market Pressure) + (W₃ × Socioeconomic Stress), scaled 0–100.
               </p>
-              <div style={{ fontSize: 11, color: "#64615b", lineHeight: 1.7 }}>
+              <div style={{ fontSize: 12, color: "#64615b", lineHeight: 1.7 }}>
                 <div><strong>Demographic Vulnerability</strong> (default {(DEFAULT_WEIGHTS.demographic * 100).toFixed(0)}%): rent burden (50%), renter share (30%), foreign-born % (20%)</div>
                 <div><strong>Market Pressure</strong> (default {(DEFAULT_WEIGHTS.market * 100).toFixed(0)}%): home-value appreciation (50%), rent-to-income ratio (50%)</div>
                 <div><strong>Socioeconomic Stress</strong> (default {(DEFAULT_WEIGHTS.socioeconomic * 100).toFixed(0)}%): poverty rate (40%), unemployment (30%), eviction filings (30%)</div>
@@ -624,8 +624,8 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
               ].map(s => (
                 <div key={s.key}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-                    <label style={{ fontSize: 12, fontWeight: 500, color: "#1a1a1a" }}>{s.label}</label>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: "#0f766e", minWidth: 40, textAlign: "right" }}>
+                    <label style={{ fontSize: 13, fontWeight: 500, color: "#1a1a1a" }}>{s.label}</label>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: "#0f766e", minWidth: 40, textAlign: "right" }}>
                       {(weights[s.key] * 100).toFixed(0)}%
                     </span>
                   </div>
@@ -638,14 +638,14 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                 </div>
               ))}
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span style={{ fontSize: 11, color: "#a8a49c" }}>
+                <span style={{ fontSize: 12, color: "var(--muted)" }}>
                   Total: {((weights.demographic + weights.market + weights.socioeconomic) * 100).toFixed(0)}%
                 </span>
-                <button onClick={resetWeights} style={{ padding: "4px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 11, fontWeight: 500, cursor: "pointer" }}>
+                <button onClick={resetWeights} style={{ padding: "4px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 12, fontWeight: 500, cursor: "pointer" }}>
                   Reset to defaults
                 </button>
               </div>
-              <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.5 }}>
+              <p style={{ fontSize: 12, color: "var(--muted)", margin: "4px 0 0", lineHeight: 1.5 }}>
                 DVI weights affect the underlying displacement index used by all three lenses. Trajectory uses DVI change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through market pressure and community vulnerability sub-scores.
               </p>
             </div>
@@ -653,7 +653,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
         )}
       </div>
 
-      <div style={{ fontSize: 11, color: "#a8a49c", lineHeight: 1.5, padding: "4px 4px 0" }}>
+      <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5, padding: "4px 4px 0" }}>
         All scores computed at 2023. Data: U.S. Census/ACS, TCAD, Preservation Austin surveys. All 269 regions scored using census data (no business-data gating).
       </div>
     </section>

@@ -23,6 +23,7 @@ import {
   ZONE_COLORS,
   ZONE_LEGEND,
 } from "../data/history";
+import { KEY_MOMENT_IDS } from "../data/history/keyMoments";
 
 // ── Marker styling driven by documentation flags (data spec §2.4.9) ──
 function markerStyle(ev, isSelected) {
@@ -62,7 +63,7 @@ const selStyle = {
   border: "1px solid #d6d3cd",
   background: "#fffffe",
   color: "#1a1a1a",
-  fontSize: 11,
+  fontSize: 12,
   minHeight: 32,
   maxWidth: 200,
 };
@@ -73,7 +74,7 @@ const chip = (bg, color = "#fff") => ({
   borderRadius: 10,
   background: bg,
   color,
-  fontSize: 11,
+  fontSize: 12,
   fontWeight: 600,
   marginRight: 4,
   marginBottom: 4,
@@ -107,6 +108,113 @@ const AXIS_TICKS = [
   { y: 2026, label: "2026" },
 ];
 
+// ── Key moments: a guided starting path (ids in data/history/keyMoments.js) ──
+// Each step's title, date, summary and documentation flag are read from the
+// event record. The panel adds only the step counter and the buttons.
+const kmCard = {
+  background: "#fffffe",
+  borderRadius: 10,
+  border: "1px solid #e8e5e0",
+  borderLeft: "4px solid #0f766e",
+  marginBottom: 12,
+  scrollMarginTop: 12,
+};
+const kmHeading = { fontFamily: "'Newsreader',Georgia,serif", fontSize: 17, fontWeight: 600, color: "#1a1a1a", margin: 0, lineHeight: 1.25 };
+const kmCaption = { fontSize: 12, color: "var(--muted)", lineHeight: 1.4 };
+const kmBtnBase = { padding: "5px 12px", borderRadius: 6, minHeight: 32, fontSize: 13, fontWeight: 600, cursor: "pointer" };
+const kmBtn = { ...kmBtnBase, border: "1px solid #c4c0b8", background: "#fffffe", color: "#1a1a1a" };
+const kmBtnPrimary = { ...kmBtnBase, border: "1px solid #0f766e", background: "#0f766e", color: "#fff" };
+const kmBtnQuiet = { ...kmBtnBase, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e" };
+const kmBtnOff = { opacity: 0.45, cursor: "default" };
+// A status, not a dimmed action: it has to stay readable
+const kmBtnStatus = { ...kmBtnBase, border: "1px solid #e8e5e0", background: "#f8f7f4", color: "#4b4844", cursor: "default" };
+
+function KeyMomentsPanel({ open, index, selectedId, onGo, onToggle, panelRef, resumeRef }) {
+  const count = KEY_MOMENT_IDS.length;
+  const ev = EVENT_BY_ID.get(KEY_MOMENT_IDS[index]);
+  if (!ev) return null;
+  const total = HISTORY_META.counts.total;
+  const scope = `A starting path through ${count} of the ${total} events`;
+
+  // Collapsed: the visitor chose to explore the full timeline
+  if (!open) {
+    return (
+      <section ref={panelRef} aria-labelledby="history-km-heading" style={{ ...kmCard, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", padding: "6px 14px" }}>
+        <h2 id="history-km-heading" style={{ ...kmHeading, fontSize: 15 }}>Key moments</h2>
+        <span style={kmCaption}>{scope}</span>
+        <button ref={resumeRef} type="button" onClick={() => onToggle(true)} style={{ ...kmBtnQuiet, marginLeft: "auto" }}>
+          Back to key moments ({index + 1} of {count})
+        </button>
+      </section>
+    );
+  }
+
+  const atStart = index === 0;
+  const atEnd = index === count - 1;
+  const isShown = selectedId === ev.event_id;
+  const moreFlags = (ev.documentation_validity_secondary || []).length;
+
+  return (
+    <section ref={panelRef} tabIndex={-1} aria-labelledby="history-km-heading" style={{ ...kmCard, padding: "12px 16px" }}>
+      {/* Previous / Next sit in the top row so they stay put while the text below changes length.
+          aria-disabled (not disabled) keeps keyboard focus on the button at either end. */}
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center", marginBottom: 8 }}>
+        <h2 id="history-km-heading" style={kmHeading}>Key moments</h2>
+        <span style={kmCaption}>{scope}</span>
+        <div style={{ display: "flex", gap: 6, marginLeft: "auto" }}>
+          <button type="button" aria-label="Previous key moment" aria-disabled={atStart} onClick={() => { if (!atStart) onGo(index - 1); }} style={atStart ? { ...kmBtn, ...kmBtnOff } : kmBtn}>
+            <span aria-hidden="true">‹ </span>Previous
+          </button>
+          <button type="button" aria-label="Next key moment" aria-disabled={atEnd} onClick={() => { if (!atEnd) onGo(index + 1); }} style={atEnd ? { ...kmBtnPrimary, ...kmBtnOff } : kmBtnPrimary}>
+            Next<span aria-hidden="true"> ›</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Step region: announced politely when the step changes */}
+      <div aria-live="polite" aria-atomic="true">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
+          <span style={{ fontSize: 12, fontWeight: 700, color: "#0f766e", textTransform: "uppercase", letterSpacing: ".04em" }}>
+            Moment {index + 1} of {count}
+          </span>
+          <span aria-hidden="true" style={{ display: "inline-flex", gap: 3 }}>
+            {KEY_MOMENT_IDS.map((id, i) => (
+              <span key={id} style={{ width: 14, height: 4, borderRadius: 2, background: i <= index ? "#0f766e" : "#d6d3cd" }} />
+            ))}
+          </span>
+        </div>
+        <h3 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 18, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px", lineHeight: 1.25 }}>
+          {ev.event_title}
+        </h3>
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center", marginBottom: 6 }}>
+          <span style={{ ...chip("#edeae4", "#4b4844"), margin: 0 }}>{fmtDates(ev)}</span>
+          <span style={kmCaption}>Documentation:</span>
+          <span style={{ ...chip("#4b4844"), margin: 0 }}>{ev.documentation_validity_flag}</span>
+          {moreFlags > 0 && (
+            <span style={kmCaption}>+{moreFlags} more {moreFlags === 1 ? "flag" : "flags"} in the full record</span>
+          )}
+        </div>
+        <p style={{ fontSize: 14, color: "#1a1a1a", lineHeight: 1.55, margin: 0, maxWidth: "80ch", minHeight: "4.65em" }}>
+          {ev.event_description_neutral}
+        </p>
+      </div>
+
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center", marginTop: 10 }}>
+        {/* Same selection as clicking this event's dot: opens the detail panel and pans the map */}
+        <button type="button" aria-disabled={isShown} onClick={() => { if (!isShown) onGo(index); }} style={isShown ? kmBtnStatus : kmBtnQuiet}>
+          {isShown ? "Full record open at right" : "Read the full record"}
+        </button>
+        <button type="button" onClick={() => onToggle(false)} style={atEnd ? kmBtnPrimary : kmBtnQuiet}>
+          Explore all {total} events
+        </button>
+        <span style={{ ...kmCaption, flex: "1 1 260px", textAlign: "right" }}>
+          This starting sequence was chosen by the site maintainer from the AI-compiled dataset. Not yet reviewed by Preservation Austin.
+        </span>
+      </div>
+    </section>
+  );
+}
+
 export default function HistoryView({ initialEventId = null, onShowOnMap = null }) {
   const mapRef = useRef(null);
   const leafletRef = useRef(null);
@@ -125,6 +233,14 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
   const [showNeighborhoods, setShowNeighborhoods] = useState(true);
   const [showZones, setShowZones] = useState(false);
   const [showCorridors, setShowCorridors] = useState(false);
+
+  // Key moments path: open by default. pathIndex is the step on show; it
+  // starts on the deep-linked event when that event is one of the key moments.
+  const [pathOpen, setPathOpen] = useState(true);
+  const [pathIndex, setPathIndex] = useState(() => Math.max(0, KEY_MOMENT_IDS.indexOf(initialEventId)));
+  const pathPanelRef = useRef(null);
+  const pathResumeRef = useRef(null);
+  const pathToggledRef = useRef(false);
 
   const selected = selectedId ? EVENT_BY_ID.get(selectedId) : null;
 
@@ -156,10 +272,40 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
 
   const selectEvent = useCallback((id) => {
     setSelectedId(id);
+    // Keep the key-moments stepper on this event when it is one of the steps,
+    // however it was selected (dot, marker, related-event link or deep link)
+    const step = KEY_MOMENT_IDS.indexOf(id);
+    if (step >= 0) setPathIndex(step);
     const ev = EVENT_BY_ID.get(id);
     const map = leafletRef.current;
     if (map && ev?.coordinates) map.panTo([ev.coordinates.lat, ev.coordinates.lon]);
   }, []);
+
+  // Key moments: a step is selected exactly as a click on its dot would be
+  const goToStep = useCallback((i) => {
+    const id = KEY_MOMENT_IDS[i];
+    if (id) selectEvent(id);
+  }, [selectEvent]);
+
+  const togglePath = useCallback((open) => {
+    pathToggledRef.current = true;
+    setPathOpen(open);
+  }, []);
+
+  // After the path is collapsed or reopened the button that was pressed is
+  // gone, so move focus to its counterpart. On collapse, also bring the
+  // filters, map and timeline below it into view.
+  useEffect(() => {
+    if (!pathToggledRef.current) return;
+    pathToggledRef.current = false;
+    if (pathOpen) {
+      pathPanelRef.current?.focus({ preventScroll: true });
+      return;
+    }
+    pathResumeRef.current?.focus({ preventScroll: true });
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    pathPanelRef.current?.scrollIntoView({ block: "start", behavior: reduceMotion ? "auto" : "smooth" });
+  }, [pathOpen]);
 
   // Arriving from a map timeline tick's "Read more" → pre-select that event.
   // Deferred a tick so the Leaflet init effect (declared below) has run and
@@ -296,6 +442,19 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
       <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
         {/* ═══ LEFT: MAP + TIMELINE ═══ */}
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
+          {/* Key moments: the default way in. "Explore all" collapses it to a slim bar. */}
+          {KEY_MOMENT_IDS.length > 0 && (
+            <KeyMomentsPanel
+              open={pathOpen}
+              index={pathIndex}
+              selectedId={selectedId}
+              onGo={goToStep}
+              onToggle={togglePath}
+              panelRef={pathPanelRef}
+              resumeRef={pathResumeRef}
+            />
+          )}
+
           {/* Filters */}
           <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap", alignItems: "center" }} role="toolbar" aria-label="Event filters">
             <select value={community} onChange={(e) => setCommunity(e.target.value)} style={selStyle} aria-label="Filter by community">
@@ -333,12 +492,12 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
             {(community !== "all" || typeGroup !== "all" || flag !== "all" || era !== "all" || query) && (
               <button
                 onClick={() => { setCommunity("all"); setTypeGroup("all"); setFlag("all"); setEra("all"); setQuery(""); }}
-                style={{ padding: "5px 10px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 11, cursor: "pointer", minHeight: 32 }}
+                style={{ padding: "5px 10px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 12, cursor: "pointer", minHeight: 32 }}
               >
                 Clear
               </button>
             )}
-            <span style={{ fontSize: 11, color: "#64615b", marginLeft: "auto" }}>
+            <span style={{ fontSize: 12, color: "#64615b", marginLeft: "auto" }}>
               {filtered.length} of {HISTORY_META.counts.total} events
               {unmappedCount > 0 && ` · ${unmappedCount} regional or unlocated (timeline only)`}
             </span>
@@ -353,7 +512,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               { on: showZones, toggle: () => setShowZones(!showZones), label: "Indigenous presence" },
               { on: showCorridors, toggle: () => setShowCorridors(!showCorridors), label: "I-35 / removal route" },
             ].map((btn, i) => (
-              <button key={i} onClick={btn.toggle} aria-pressed={btn.on} style={{ padding: "4px 10px", borderRadius: 6, border: btn.on ? "1.5px solid #0f766e" : "1.5px solid #c4c0b8", background: btn.on ? "#f0fdfa" : "#fff", color: btn.on ? "#0f766e" : "#64615b", fontSize: 11, fontWeight: 500, cursor: "pointer", minHeight: 32 }}>
+              <button key={i} onClick={btn.toggle} aria-pressed={btn.on} style={{ padding: "4px 10px", borderRadius: 6, border: btn.on ? "1.5px solid #0f766e" : "1.5px solid #c4c0b8", background: btn.on ? "#f0fdfa" : "#fff", color: btn.on ? "#0f766e" : "#64615b", fontSize: 12, fontWeight: 500, cursor: "pointer", minHeight: 32 }}>
                 {btn.label}
               </button>
             ))}
@@ -365,8 +524,8 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
           {/* TIMELINE */}
           <div style={{ marginTop: 14 }} role="region" aria-label="Event timeline">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 2 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, color: "#64615b" }}>Timeline · c. 11,600 BCE – 2026</span>
-              <span style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic" }}>Axis is warped: three-quarters of it covers 1800–2026</span>
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#64615b" }}>Timeline · c. 11,600 BCE – 2026</span>
+              <span style={{ fontSize: 12, color: "var(--muted)", fontStyle: "italic" }}>Axis is warped: three-quarters of it covers 1800–2026</span>
             </div>
             <svg viewBox={`0 0 ${TL_WIDTH} ${tlHeight}`} style={{ width: "100%", height: "auto", display: "block", background: "#fffffe", borderRadius: 8, border: "1px solid #e8e5e0" }}>
               {/* era gradient axis */}
@@ -383,7 +542,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                 return (
                   <g key={t.y}>
                     <line x1={x} y1={tlHeight - 24} x2={x} y2={tlHeight - 14} stroke="#a8a49c" strokeWidth={0.7} />
-                    <text x={x} y={tlHeight - 4} textAnchor={t.y === 2026 ? "end" : t.y === 1000 ? "start" : "middle"} fontSize={9} fill="#7c6f5e">{t.label}</text>
+                    <text x={x} y={tlHeight - 4} textAnchor={t.y === 2026 ? "end" : t.y === 1000 ? "start" : "middle"} fontSize={12} fill="#7c6f5e">{t.label}</text>
                   </g>
                 );
               })}
@@ -411,9 +570,9 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
             </svg>
             {undatedEvents.length > 0 && (
               <div style={{ marginTop: 6, display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
-                <span style={{ fontSize: 11, color: "#7c6f5e", fontWeight: 600 }}>Undated:</span>
+                <span style={{ fontSize: 12, color: "#7c6f5e", fontWeight: 600 }}>Undated:</span>
                 {undatedEvents.map((ev) => (
-                  <button key={ev.event_id} onClick={() => selectEvent(ev.event_id)} style={{ fontSize: 11, padding: "2px 8px", borderRadius: 10, border: `1px solid ${ev.event_id === selectedId ? "#0f766e" : "#d6d3cd"}`, background: UNDATED_COLOR + "22", color: "#4b4844", cursor: "pointer" }}>
+                  <button key={ev.event_id} onClick={() => selectEvent(ev.event_id)} style={{ fontSize: 12, padding: "2px 8px", borderRadius: 10, border: `1px solid ${ev.event_id === selectedId ? "#0f766e" : "#d6d3cd"}`, background: UNDATED_COLOR + "22", color: "#4b4844", cursor: "pointer" }}>
                     {ev.event_title}
                   </button>
                 ))}
@@ -426,7 +585,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                 <span style={{ width: 70, height: 8, borderRadius: 4, background: ERA_GRADIENT_CSS, border: "1px solid rgba(0,0,0,.1)" }} />
-                <span style={{ fontSize: 11, color: "#64615b" }}>Color = date (deep past → 2026)</span>
+                <span style={{ fontSize: 12, color: "#64615b" }}>Color = date (deep past → 2026)</span>
               </div>
               {[
                 { style: { background: "#365C8D", opacity: 1 }, label: "Well-documented" },
@@ -436,10 +595,10 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               ].map((s, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ width: 10, height: 10, borderRadius: "50%", border: "1px solid #1a1a1a", ...s.style }} />
-                  <span style={{ fontSize: 11, color: "#64615b" }}>{s.label}</span>
+                  <span style={{ fontSize: 12, color: "#64615b" }}>{s.label}</span>
                 </div>
               ))}
-              <span style={{ fontSize: 11, color: "#64615b" }}>Large dot = major event</span>
+              <span style={{ fontSize: 12, color: "#64615b" }}>Large dot = major event</span>
             </div>
             {showHolc && (
               <div style={{ paddingTop: 8, marginTop: 8, borderTop: "1px solid #e8e5e0" }}>
@@ -447,11 +606,11 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                   {HOLC_GRADES.map((g) => (
                     <div key={g.grade} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                       <span style={{ width: 10, height: 10, borderRadius: 2, background: g.fill, border: "1px solid rgba(0,0,0,.15)" }} />
-                      <span style={{ fontSize: 11, color: "#64615b" }}>{g.grade} — {g.category}</span>
+                      <span style={{ fontSize: 12, color: "#64615b" }}>{g.grade} — {g.category}</span>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0" }}>{HOLC_ATTRIBUTION}</p>
+                <p style={{ fontSize: 12, color: "var(--muted)", margin: "4px 0 0" }}>{HOLC_ATTRIBUTION}</p>
               </div>
             )}
             {showZones && (
@@ -460,11 +619,11 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                   {ZONE_LEGEND.map((z) => (
                     <div key={z.label} style={{ display: "flex", alignItems: "center", gap: 4 }}>
                       <span style={{ width: 10, height: 10, borderRadius: 2, background: z.color, opacity: 0.4 }} />
-                      <span style={{ fontSize: 11, color: "#64615b" }}>{z.label}</span>
+                      <span style={{ fontSize: 12, color: "#64615b" }}>{z.label}</span>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 11, color: "#a8a49c", margin: "4px 0 0", lineHeight: 1.4 }}>
+                <p style={{ fontSize: 12, color: "var(--muted)", margin: "4px 0 0", lineHeight: 1.4 }}>
                   Presence zones are schematic sketches from written descriptions — one shape per source account, not surveyed or tribally approved boundaries. Peoples overlapped and moved seasonally; overlapping fills are the point, not an error.
                 </p>
               </div>
@@ -479,22 +638,26 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 19, fontWeight: 600, color: "#1a1a1a", margin: "0 0 8px" }}>
                 112 events, 13,600 years
               </h2>
-              <p style={{ fontSize: 12.5, color: "#4b4844", lineHeight: 1.55, margin: "0 0 10px" }}>
-                A documented timeline of who shaped — and who was displaced from — the land that became Austin, from Clovis-era occupation to the 2026 rainbow crosswalk removal. Compiled from the Preservation Austin historical data package (Sept 2026).
+              <p style={{ fontSize: 14, color: "#4b4844", lineHeight: 1.55, margin: "0 0 10px" }}>
+                A timeline of who shaped — and who was displaced from — the land that became Austin, from Clovis-era occupation to the 2026 rainbow crosswalk removal.
               </p>
-              <p style={{ fontSize: 12.5, color: "#4b4844", lineHeight: 1.55, margin: "0 0 10px" }}>
-                Click any dot on the map or the timeline to read the event: what happened, who it affected, how well the record supports it, and — where they exist — accounts from multiple perspectives, side by side.
+              {/* Provenance: say plainly what this is and who has not reviewed it */}
+              <p style={{ fontSize: 14, color: "#1a1a1a", lineHeight: 1.55, margin: "0 0 10px", background: "#f8f7f4", borderRadius: 8, padding: "8px 10px" }}>
+                This is research compiled with AI assistance from public sources, and it has not yet been reviewed by Preservation Austin. The documentation flag on each event, assigned during that same research, shows how well-sourced it is.
               </p>
-              <p style={{ fontSize: 11.5, color: "#64615b", lineHeight: 1.5, margin: "0 0 6px" }}>
+              <p style={{ fontSize: 14, color: "#4b4844", lineHeight: 1.55, margin: "0 0 10px" }}>
+                {KEY_MOMENT_IDS.length > 0 ? "New here? Step through the key moments above the map. Or click any" : "Click any"} dot on the map or the timeline to read the event: what happened, who it affected, how well the record supports it, and — where they exist — accounts from multiple perspectives, side by side.
+              </p>
+              <p style={{ fontSize: 12, color: "#64615b", lineHeight: 1.5, margin: "0 0 6px" }}>
                 Every event carries a documentation flag. A missing record is not missing history: gaps in the archive are flagged, not smoothed over. {HISTORY_META.counts.full} events carry full multi-perspective accounts; {HISTORY_META.counts.index} are index-level records awaiting enrichment.
               </p>
-              <p style={{ fontSize: 11, color: "#a8a49c", fontStyle: "italic", lineHeight: 1.5, margin: 0 }}>
+              <p style={{ fontSize: 12, color: "var(--muted)", fontStyle: "italic", lineHeight: 1.5, margin: 0 }}>
                 Locations are approximations at stated precision; schematic shapes are drawn from text descriptions, not surveys.
               </p>
             </div>
           ) : (
             <div>
-              <button onClick={() => setSelectedId(null)} style={{ float: "right", border: "none", background: "none", color: "#a8a49c", fontSize: 16, cursor: "pointer", padding: 2, lineHeight: 1 }} aria-label="Close event details">✕</button>
+              <button onClick={() => setSelectedId(null)} style={{ float: "right", border: "none", background: "none", color: "var(--muted)", fontSize: 16, cursor: "pointer", padding: 2, lineHeight: 1 }} aria-label="Close event details">✕</button>
               <div style={{ marginBottom: 6 }}>
                 <span style={chip(selected.era_color_gradient || UNDATED_COLOR)}>{selected.era_classification}</span>
                 <span style={chip("#edeae4", "#4b4844")}>{fmtDates(selected)}</span>
@@ -504,7 +667,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                 {selected.event_title}
               </h2>
               {selected.primary_location_name && (
-                <p style={{ fontSize: 11, color: "#7c6f5e", margin: "0 0 8px" }}>
+                <p style={{ fontSize: 12, color: "#7c6f5e", margin: "0 0 8px" }}>
                   📍 {selected.primary_location_name}
                   {selected.coordinates?.precision ? ` · precision: ${selected.coordinates.precision}` : selected.coordinates ? "" : " · not mapped"}
                 </p>
@@ -513,7 +676,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               {onShowOnMap && selected.coordinates && (
                 <button
                   onClick={() => onShowOnMap(selected)}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 5, marginBottom: 10, padding: "4px 12px", borderRadius: 6, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontSize: 11, fontWeight: 600, cursor: "pointer" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 5, marginBottom: 10, padding: "4px 12px", borderRadius: 6, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontSize: 12, fontWeight: 600, cursor: "pointer" }}
                 >
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor" />
@@ -521,31 +684,31 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                   Show on main map
                 </button>
               )}
-              <p style={{ fontSize: 12.5, color: "#1a1a1a", lineHeight: 1.55, margin: "0 0 10px" }}>{selected.event_description_neutral}</p>
+              <p style={{ fontSize: 13, color: "#1a1a1a", lineHeight: 1.55, margin: "0 0 10px" }}>{selected.event_description_neutral}</p>
 
               {/* Documentation flags */}
               <div style={{ background: "#f8f7f4", borderRadius: 8, padding: "8px 10px", marginBottom: 10 }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Documentation</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Documentation</div>
                 <div style={{ marginBottom: 4 }}>
                   <span style={chip("#4b4844")}>{selected.documentation_validity_flag}</span>
                   {(selected.documentation_validity_secondary || []).map((s, i) => (
                     <span key={i} style={chip("#b45309")} title={s.applies_to}>{s.flag}{s.applies_to ? ` — ${s.applies_to}` : ""}</span>
                   ))}
                 </div>
-                <p style={{ fontSize: 11, color: "#4b4844", lineHeight: 1.45, margin: 0 }}>{selected.documentation_validity_evidence}</p>
+                <p style={{ fontSize: 12, color: "#4b4844", lineHeight: 1.45, margin: 0 }}>{selected.documentation_validity_evidence}</p>
                 {selected.conflict_summary && (
-                  <p style={{ fontSize: 11, color: "#4b4844", lineHeight: 1.45, margin: "6px 0 0" }}>
+                  <p style={{ fontSize: 12, color: "#4b4844", lineHeight: 1.45, margin: "6px 0 0" }}>
                     <strong>Accounts conflict:</strong> {selected.conflict_summary}
                   </p>
                 )}
                 {selected.erasure_mechanism && (
-                  <p style={{ fontSize: 11, color: "#b91c1c", lineHeight: 1.45, margin: "6px 0 0" }}>
+                  <p style={{ fontSize: 12, color: "#b91c1c", lineHeight: 1.45, margin: "6px 0 0" }}>
                     <strong>Erasure mechanism:</strong> {selected.erasure_mechanism.replace(/_/g, " ")}
                     {selected.erasure_mechanism_note ? ` — ${selected.erasure_mechanism_note}` : ""}
                   </p>
                 )}
                 {selected.documentation_gaps && (
-                  <p style={{ fontSize: 11, color: "#4b4844", lineHeight: 1.45, margin: "6px 0 0" }}>
+                  <p style={{ fontSize: 12, color: "#4b4844", lineHeight: 1.45, margin: "6px 0 0" }}>
                     <strong>Gaps:</strong> {selected.documentation_gaps}
                   </p>
                 )}
@@ -553,7 +716,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
 
               {/* Communities & impacts */}
               <div style={{ marginBottom: 10 }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Communities & impact</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Communities & impact</div>
                 <div>
                   {(selected.community_tags || []).map((t) => (
                     <span key={t} style={chip("#edeae4", "#4b4844")}>{communityLabel(t)}</span>
@@ -567,7 +730,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                 {(selected.impact_by_community || []).length > 0 && (
                   <ul style={{ margin: "6px 0 0", paddingLeft: 16 }}>
                     {selected.impact_by_community.map((r, i) => (
-                      <li key={i} style={{ fontSize: 11, color: "#4b4844", lineHeight: 1.45, marginBottom: 2 }}>
+                      <li key={i} style={{ fontSize: 12, color: "#4b4844", lineHeight: 1.45, marginBottom: 2 }}>
                         <strong>{communityLabel(r.community_tag)}:</strong> {r.impact}{r.note ? ` — ${r.note}` : ""}
                       </li>
                     ))}
@@ -578,14 +741,14 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               {/* Perspective accounts */}
               {(selected.perspective_accounts || []).length > 0 && (
                 <div style={{ marginBottom: 10 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
                     Perspectives ({selected.perspective_accounts.length})
                   </div>
                   {selected.perspective_accounts.map((a, i) => (
                     <div key={a.account_id || i} style={{ borderLeft: "3px solid #d6d3cd", padding: "4px 0 4px 10px", marginBottom: 8 }}>
-                      <div style={{ fontSize: 11, fontWeight: 700, color: "#1a1a1a" }}>{a.perspective_origin}</div>
-                      <p style={{ fontSize: 11.5, color: "#4b4844", lineHeight: 1.5, margin: "2px 0 3px" }}>{a.perspective_text}</p>
-                      <div style={{ fontSize: 11, color: "#a8a49c" }}>
+                      <div style={{ fontSize: 12, fontWeight: 700, color: "#1a1a1a" }}>{a.perspective_origin}</div>
+                      <p style={{ fontSize: 12, color: "#4b4844", lineHeight: 1.5, margin: "2px 0 3px" }}>{a.perspective_text}</p>
+                      <div style={{ fontSize: 12, color: "var(--muted)" }}>
                         {a.source_name}{a.source_date ? ` (${a.source_date})` : ""}
                         {a.source_url && <> · <a href={a.source_url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f766e" }}>source ↗</a></>}
                       </div>
@@ -597,14 +760,14 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               {/* Unverified claims */}
               {(selected.unverified_claims || []).length > 0 && (
                 <div style={{ marginBottom: 10 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>
                     Awaiting verification ({selected.unverified_claims.length})
                   </div>
                   <ul style={{ margin: 0, paddingLeft: 16 }}>
                     {selected.unverified_claims.map((c, i) => (
-                      <li key={i} style={{ fontSize: 11, color: "#4b4844", lineHeight: 1.45, marginBottom: 4 }}>
+                      <li key={i} style={{ fontSize: 12, color: "#4b4844", lineHeight: 1.45, marginBottom: 4 }}>
                         {c.claim}
-                        {c.resolving_record && <span style={{ color: "#a8a49c" }}> — would be settled by: {c.resolving_record}</span>}
+                        {c.resolving_record && <span style={{ color: "var(--muted)" }}> — would be settled by: {c.resolving_record}</span>}
                       </li>
                     ))}
                   </ul>
@@ -614,7 +777,7 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
               {/* Related events */}
               {(selected.related_events || []).length > 0 && (
                 <div style={{ marginBottom: 6 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Related events</div>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "#7c6f5e", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 4 }}>Related events</div>
                   {selected.related_events.map((r, i) => {
                     const target = EVENT_BY_ID.get(r.event_id);
                     if (!target) return null;
@@ -626,17 +789,17 @@ export default function HistoryView({ initialEventId = null, onShowOnMap = null 
                         style={{ display: "block", width: "100%", textAlign: "left", background: "#f8f7f4", border: "1px solid #e8e5e0", borderRadius: 6, padding: "5px 8px", marginBottom: 4, cursor: "pointer" }}
                         title={r.note || ""}
                       >
-                        <span style={{ fontSize: 11, color: documented ? "#0f766e" : "#a8a49c", fontWeight: 700, textTransform: "uppercase" }}>
+                        <span style={{ fontSize: 12, color: documented ? "#0f766e" : "var(--muted)", fontWeight: 700, textTransform: "uppercase" }}>
                           {r.causality_type.replace(/_/g, " ")}{documented ? "" : " (sequence only)"}
                         </span>
-                        <span style={{ display: "block", fontSize: 11, color: "#1a1a1a", lineHeight: 1.35 }}>{target.event_title}</span>
+                        <span style={{ display: "block", fontSize: 12, color: "#1a1a1a", lineHeight: 1.35 }}>{target.event_title}</span>
                       </button>
                     );
                   })}
                 </div>
               )}
 
-              <p style={{ fontSize: 11, color: "#a8a49c", margin: "8px 0 0" }}>Source ref: {selected.context_source_ref}</p>
+              <p style={{ fontSize: 12, color: "var(--muted)", margin: "8px 0 0" }}>Source ref: {selected.context_source_ref}</p>
             </div>
           )}
         </aside>

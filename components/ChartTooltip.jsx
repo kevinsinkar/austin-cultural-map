@@ -7,7 +7,7 @@ export default function ChartTooltip({ active, payload, label }) {
         border: "1px solid #d6d3cd",
         borderRadius: 6,
         padding: "8px 12px",
-        fontSize: 12,
+        fontSize: 13,
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
       }}
     >

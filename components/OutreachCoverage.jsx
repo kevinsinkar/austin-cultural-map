@@ -105,11 +105,11 @@ export default function OutreachCoverage({ plan, dviVersion }) {
 
       {/* ── District coverage ── */}
       <div style={{ background: "#fffffe", border: "1px solid #e8e5e0", borderRadius: 10, overflow: "hidden", marginBottom: 6 }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12.5 }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: "#f5f0ea", textAlign: "left" }}>
               {["District", "Tracts (high-DVI / total)", "Avg DVI '23", "Opportunities", "Open to nonprofits", "In pipeline", "Tabled", "Reach"].map((h) => (
-                <th key={h} style={{ padding: "8px 10px", fontSize: 10.5, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
+                <th key={h} style={{ padding: "8px 10px", fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
               ))}
             </tr>
           </thead>
@@ -122,14 +122,14 @@ export default function OutreachCoverage({ plan, dviVersion }) {
                   <td style={{ padding: "8px 10px", fontWeight: 700, color: "#1a1a1a", whiteSpace: "nowrap" }}>
                     D{r.district}
                     {desert && (
-                      <span style={{ marginLeft: 7, fontSize: 10, fontWeight: 700, color: "#9a3412", background: "#ffedd5", padding: "1px 7px", borderRadius: 8 }}>
+                      <span style={{ marginLeft: 7, fontSize: 12, fontWeight: 700, color: "#9a3412", background: "#ffedd5", padding: "1px 7px", borderRadius: 8 }}>
                         outreach desert
                       </span>
                     )}
                   </td>
                   <td style={{ padding: "8px 10px" }}>
                     <span style={{ fontWeight: 600, color: r.highDvi > 0 ? "#b91c1c" : "#64615b" }}>{r.highDvi}</span>
-                    <span style={{ color: "#a8a49c" }}> / {r.tracts}</span>
+                    <span style={{ color: "var(--muted)" }}> / {r.tracts}</span>
                   </td>
                   <td style={{ padding: "8px 10px" }}>
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
@@ -141,7 +141,7 @@ export default function OutreachCoverage({ plan, dviVersion }) {
                   <td style={{ padding: "8px 10px", fontWeight: 600, color: r.open ? "#15803d" : "#b91c1c" }}>{r.open}</td>
                   <td style={{ padding: "8px 10px" }}>{r.active || "—"}</td>
                   <td style={{ padding: "8px 10px" }}>{r.tabled || "—"}</td>
-                  <td style={{ padding: "8px 10px", fontSize: 11.5, color: "#64615b" }}>
+                  <td style={{ padding: "8px 10px", fontSize: 12, color: "#64615b" }}>
                     {r.attendance || r.signups
                       ? `~${r.attendance.toLocaleString()} · ${r.signups} signups`
                       : "—"}
@@ -152,7 +152,7 @@ export default function OutreachCoverage({ plan, dviVersion }) {
           </tbody>
         </table>
       </div>
-      <p style={{ fontSize: 11, color: "#a8a49c", margin: "0 2px 16px", lineHeight: 1.5 }}>
+      <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 2px 16px", lineHeight: 1.5 }}>
         Tracts are assigned to districts by centroid; events by pin location (inferred district when unmapped).
         "High-DVI" = DVI ≥ 35 (Active Displacement or worse) at 2023 under the current weight settings.
         An <strong>outreach desert</strong> is a district with 3+ high-DVI tracts and no confirmed nonprofit-open opportunity — start by asking the "Unknown" organizers there.
@@ -160,15 +160,15 @@ export default function OutreachCoverage({ plan, dviVersion }) {
 
       {/* ── Arena rollup ── */}
       <h3 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 16, fontWeight: 600, color: "#1a1a1a", margin: "0 0 8px" }}>
-        Advocacy arenas <span style={{ fontSize: 11.5, fontWeight: 400, color: "#a8a49c" }}>— plan measure: "advocates activated by arena"</span>
+        Advocacy arenas <span style={{ fontSize: 12, fontWeight: 400, color: "var(--muted)" }}>— plan measure: "advocates activated by arena"</span>
       </h3>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10, marginBottom: 10 }}>
         {arenaRows.map((r) => {
           const meta = ARENAS[r.arena];
           return (
             <div key={r.arena} style={{ background: "#fffffe", border: "1px solid #e8e5e0", borderLeft: `3px solid ${meta.color}`, borderRadius: 10, padding: "10px 14px" }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: meta.color, marginBottom: 4 }}>{meta.label}</div>
-              <div style={{ fontSize: 12, color: "#64615b", lineHeight: 1.6 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: meta.color, marginBottom: 4 }}>{meta.label}</div>
+              <div style={{ fontSize: 13, color: "#64615b", lineHeight: 1.6 }}>
                 {r.opportunities} opportunities<br />
                 <strong style={{ color: "#1a1a1a" }}>{r.active}</strong> in pipeline · <strong style={{ color: "#1a1a1a" }}>{r.tabled}</strong> tabled
               </div>
@@ -184,8 +184,8 @@ function Tile({ label, value, hint }) {
   return (
     <div style={{ background: "#fffffe", border: "1px solid #e8e5e0", borderRadius: 10, padding: "10px 14px" }}>
       <div style={{ fontSize: 24, fontWeight: 700, fontFamily: "'Newsreader',Georgia,serif", color: "#0f766e", lineHeight: 1.1 }}>{value}</div>
-      <div style={{ fontSize: 11.5, fontWeight: 600, color: "#1a1a1a", marginTop: 2 }}>{label}</div>
-      <div style={{ fontSize: 10.5, color: "#a8a49c" }}>{hint}</div>
+      <div style={{ fontSize: 12, fontWeight: 600, color: "#1a1a1a", marginTop: 2 }}>{label}</div>
+      <div style={{ fontSize: 12, color: "var(--muted)" }}>{hint}</div>
     </div>
   );
 }

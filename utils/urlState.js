@@ -7,7 +7,7 @@
 import { REGION_INDEX } from "../data";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { NAME_TO_ID } from "../data/regionLookup";
-import { ALLOWED_VIEWS } from "../appConfig";
+import { ALLOWED_VIEWS, PRESENTER_MODE } from "../appConfig";
 
 // Only views this build allows are routable — a public build ignores
 // "#/triage" and friends and falls back to the map.
@@ -30,7 +30,9 @@ const LAYER_CODES = [
 
 export const DEFAULT_VIEW_STATE = {
   viewMode: "map",
-  year: 2010,
+  // Open on the latest measured year: the present is the way in, and the
+  // slider then walks back through how it got here.
+  year: 2023,
   boundaryMode: "tracts",
   layers: {
     pins: true,
@@ -42,16 +44,28 @@ export const DEFAULT_VIEW_STATE = {
     aisdSchools: false,
     holc: false,
     outreach: true,
-    districts: true,
+    // Council-district outlines are a planning aid. They start on for the
+    // presenter and off on the public map, where they compete with the colors.
+    districts: PRESENTER_MODE,
   },
   activeRegionId: null,
   activeNeighborhoodId: null,
-  compA: "East 11th Street",
-  compB: "East Cesar Chavez -Holly",
+  // Must be display names that exist in data/regionLookup.js NAME_TO_ID
+  // (ComparisonView falls back to these if a saved name ever disappears).
+  compA: "Central East Austin",
+  compB: "Holly",
   triageLens: "equity",
 };
 
 export function serializeViewState(s) {
+  // A story card gets a short address that names only its place, so it is
+  // easy to share, print or turn into a QR code: "#/card?tract=84".
+  if (s.viewMode === "card") {
+    if (s.boundaryMode === "neighborhoods" && s.activeNeighborhoodId != null) {
+      return `#/card?hood=${encodeURIComponent(s.activeNeighborhoodId)}`;
+    }
+    if (s.activeRegionId != null) return `#/card?tract=${s.activeRegionId}`;
+  }
   const p = new URLSearchParams();
   p.set("year", String(s.year));
   if (s.boundaryMode !== "tracts") p.set("bm", s.boundaryMode);
@@ -99,8 +113,18 @@ export function parseViewState(hash) {
     if (REGION_INDEX.some((r) => r.region_id === id)) out.activeRegionId = id;
   }
 
+  // A neighborhood in the address implies the neighborhood view, so the
+  // short story-card address ("#/card?hood=montopolis") needs no "bm=".
   if (p.has("hood") && NEIGHBORHOOD_BY_ID.has(p.get("hood"))) {
     out.activeNeighborhoodId = p.get("hood");
+    out.boundaryMode = "neighborhoods";
+  } else if (out.activeRegionId != null && path === "card") {
+    out.boundaryMode = "tracts";
+  }
+
+  // A story-card address that names no known place opens the map instead.
+  if (out.viewMode === "card" && out.activeRegionId == null && out.activeNeighborhoodId == null) {
+    out.viewMode = "map";
   }
 
   if (p.has("a") && NAME_TO_ID.has(p.get("a"))) out.compA = p.get("a");

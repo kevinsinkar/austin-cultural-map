@@ -149,17 +149,17 @@ Not every neighborhood with rising property values is experiencing displacement.
 
 **Effect:** DVI is capped at 20 (Stable band) regardless of computed value. The region is labeled "Affluent / Appreciated" in the Triage view and excluded from grant priority recommendations.
 
-### 3.4 DVI Bands (Map Colors)
+### 3.4 DVI Stages (Map Colors)
 
-| Band | DVI Range | Color | Meaning |
-|------|-----------|-------|---------|
-| Stable | 0–20 | Green | Low displacement pressure |
-| Early Pressure | 20–35 | Yellow | Emerging signs of change |
-| Active Displacement | 35–55 | Orange | Significant ongoing displacement |
-| Historic Displacement | 55+ | Red | Extensive displacement has occurred or is occurring |
-| Affluent/Excluded | Any (capped 20) | Slate gray | High-income, not at displacement risk |
+| Stage | Score | Map color | Meaning |
+|-------|-------|-----------|---------|
+| Stable | 0–20 | Pale yellow | Conditions are comparatively stable today |
+| Early pressure | 20–35 | Yellow-orange | Early pressure is visible; conditions are shifting but the community fabric is still intact |
+| Active displacement | 35–55 | Orange | The latest data shows active displacement pressure |
+| Historic displacement | 55+ | Red | Much of the change the map tracks has already happened |
+| Affluent, not scored | Capped at 20 | Blue | High-income, mostly owner-occupied areas (§3.3), shown as a separate group rather than on the ramp |
 
-These bands are used for map choropleth colors and triage category thresholds. The color ramp uses continuous interpolation within each band (not hard cutoffs) so adjacent tracts show subtle gradation.
+Each stage has one fill color (`DVI_BINS` in `utils/math.js`); the map does not shade within a stage. Before 1993 the map shows boundaries only, in neutral gray. The same thresholds set the triage categories. The legend above the map lists these stages in the same words, and "What do the colors mean?" expands the meanings.
 
 ### 3.5 DVI Interpolation
 
@@ -175,37 +175,41 @@ Some census tracts are administratively merged in this tool — a secondary trac
 
 ### What the map shows
 
-- **Polygon fill color:** DVI score at the selected year, using the color ramp from §3.4
-- **Polygon click → Detail Panel:** Demographics, economics, and culture tabs for the selected region
-- **Time slider:** Moves from 1990 to 2025 in 1-year increments. DVI, overlays, and detail panel data update accordingly.
+- **Polygon fill color:** the stage of the displacement index at the selected year (§3.4)
+- **Selecting a place** (a click on the map, a search result, or a suggestion in the "Start here" card) opens the **place panel** beside the map. The panel is the same for a census tract and for a neighborhood.
+- **Story card:** "Open the story card" in the place panel opens that place's full profile as its own page, with its own address (`#/card?tract=84` or `#/card?hood=montopolis`). It prints on one page.
+- **Search:** neighborhoods, census tracts (by name or number) and tracked cultural anchors are matched in the browser. A street address is resolved by OpenStreetMap's Nominatim service, only when the person chooses "Look up … as a street address"; the address is then assigned to the census tract whose polygon contains it.
+- **Time slider:** moves from 1990 to 2025 in 1-year increments. The map opens on 2023, the latest measured year.
 
-### Detail Panel — Demographics Tab
+### Place Panel
 
-| Metric | Source | Calculation |
-|--------|--------|-------------|
-| Demographic Composition Chart | `audited_demographics_normalized.json` | Stacked area chart of `pct_white`, `pct_black`, `pct_hispanic`, `pct_asian`, `pct_other` as fractions of total population. `pct_other = 100 - white - black - hispanic - asian`. |
-| Total Population | Same | `total_population` field at closest available year (see §4.1) |
-| Population counts (Black, Hispanic, White) | Same | `total_population * pct_<group> / 100` |
-| Narrative Callouts | Computed | "Lost X% of Black population between Y and Z" triggers when `(prior.popBlack - current.popBlack) / prior.popBlack > 0.25` (25% population loss threshold) |
+Built by `buildPlaceSummary()` in `utils/placeData.js`.
 
-### Detail Panel — Economics Tab
+| Item | Source | Calculation |
+|------|--------|-------------|
+| Title and sub-line | `data/placeNames.js`, `data/regionIndex.js` | See §4.3. The sub-line gives the census tract number and the council district that contains the tract's center point. |
+| Displacement index and stage | `data/auditedDvi.js` | The index at the slider year (interpolated between measured years, §3.5). For a neighborhood, the population-weighted average of its tracts. |
+| Confidence chip | `getDviConfidence()` | High / Medium / Low, with the reasons (interpolated year, pre-2010 boundaries). A neighborhood is Medium at best because it is combined from tracts. |
+| Measured change sentence | `audited_demographics_normalized.json` | Black + Hispanic share of residents, and renter share, at the earliest reliable census year (2000, else 2010) and the latest (2023, else 2020). For a neighborhood, population-weighted shares using only years in which every one of its tracts was measured. Renter share is derived as 100 minus owner-occupied share. |
+| Median household income, median home value | `audited_socioeconomic_normalized.json`, `audited_property_normalized.json` | Value at the closest available year (§4.1), in nominal dollars, with that year shown. For a neighborhood, a population-weighted average of tract medians (§7). |
+| Cultural anchors tracked | `data/businesses.js` | Count of operating and closed anchors whose `region_id` is the tract (or any tract of the neighborhood). |
+| Preservation Austin records nearby | `data/preservationAustin.js` | Count of grants, awards and advocacy items within 0.012° of the tract's center (§4.2). |
+| Turning point | `data/tippingPoints.js` | Named when the tract belongs to a documented corridor. |
 
-| Metric | Source | Calculation | Display |
-|--------|--------|-------------|---------|
-| Median Home Value | `audited_property_normalized.json` | `median_home_value` at closest year | Shown in both nominal dollars and 2023 constant dollars (CPI-adjusted, see §8). Change arrow shows percentage change vs. ~5 years prior using inflation-adjusted values. |
-| Median Rent | Same | `median_rent_monthly` at closest year | Same dual display (nominal / 2023$) with change arrow. |
-| Median Household Income | `audited_socioeconomic_normalized.json` | `median_household_income` at closest year | Same dual display with change arrow. |
-| Poverty Rate | Same | `poverty_rate` as percentage | Change arrow vs. prior period. |
-| Rent-Burdened Households | `audited_demographics_normalized.json` | `rent_burden_pct` — % of renter households paying ≥30% of income on rent | Change arrow vs. prior period. |
+### Story Card
 
-### Detail Panel — Culture Tab
+Built by `buildStoryCard()` in `utils/placeData.js`. It always describes the latest measured year (2023), whatever the slider shows.
 
-| Metric | Source | Calculation |
-|--------|--------|-------------|
-| Tipping Point narrative | `data/tippingPoints.js` | Hand-written narratives matched by region name. Not available for all regions. |
-| Legacy Businesses (Still Here) | `data/businesses.js` → `LEGACY_OPERATING` | Filtered by `region_id`, sorted by establishment year. Shows name, type, culture. |
-| Legacy Businesses (What We Lost) | Same → `LEGACY_CLOSED` | Filtered by `region_id`. Shows name, closure year, cause, replacement. |
-| Preservation Austin items | `data/preservationAustin.js` → `PA_ALL` | Filtered by proximity to region centroid (see §4.2). Shows grants, merit awards, legacy business month participants, and advocacy milestones. |
+| Section | Source | Calculation |
+|---------|--------|-------------|
+| What the data shows | `data/auditedDvi.js`, demographics | Index and stage at 2023; the index at each measured year (no interpolated points); the measured-change sentence from the place panel. |
+| Who lives here | `audited_demographics_normalized.json` | Stacked shares of White non-Hispanic, Black, Hispanic or Latino, Asian and other residents for the census years that have data. `other = 100 − the four groups`. |
+| The economics | Demographics, property and socioeconomic files | Eight measures (income, home value, rent, rent burden, poverty, unemployment, eviction filings, SNAP). Each shows its latest value and the change since its earliest measured year, with a small trend line over its own years. Dollars are nominal, not inflation-adjusted. For a neighborhood, values are population-weighted across tracts and a year is used only when every tract that carries the measure has a value that year. |
+| The turning point | `data/tippingPoints.js` + census data | A hand-written narrative per corridor; the home-value figures are computed from the audited data by `computeTippingStats()`. |
+| Cultural anchors still here / What has been lost | `data/businesses.js` | Operating anchors with the year they opened; closed anchors with the year they closed, where recorded. |
+| Preservation Austin grants, awards and advocacy nearby | `data/preservationAustin.js` | Items within 0.012° of the tract's center (§4.2), newest first. |
+
+The earlier three-tab detail panel (Demographics / Economics / Culture, `components/RegionDetailPanel.jsx`) is no longer shown; the story card carries its content.
 
 ### 4.1 Closest Year Matching
 
@@ -214,6 +218,21 @@ When the time slider is set to a year that doesn't have an exact data match for 
 ### 4.2 Preservation Austin Proximity Matching
 
 PA items (grants, awards, etc.) are matched to regions using geographic proximity: any PA item within 0.012 degrees (~1.3 km) of a region's centroid is associated with that region. This radius approximates the average extent of a census tract in urban Austin. The threshold is deliberately generous to account for the fact that PA grants often benefit an area broader than a single building address.
+
+### 4.3 Place Names
+
+A place is titled the same way in the panel, the story card, the hover label and the search list (`utils/places.js`). Internal ids are never shown.
+
+A census tract carries a neighborhood name only where a City of Austin Neighborhood Planning Area (NPA) polygon supports it. `scripts/build_place_names.mjs` reads the share of each tract's area that falls inside each planning area (`data/audit_output/tract_npa_overlap.json`) and applies this rule, in order:
+
+| Basis | Rule | Example title | Tracts |
+|-------|------|---------------|--------|
+| Named | One planning area covers 80% or more of the tract | "Montopolis" | 81 |
+| Split | Two planning areas each cover 25% or more | "Govalle / Holly area" | 26 |
+| Majority | One planning area covers 50% or more | "Old West Austin area" | 6 |
+| Census | None of the above (mostly suburban tracts outside planning-area coverage) | "Census tract 419" | 119 |
+
+The census tract number is always available as the second line, and the panel states the basis in a sentence (for example, "This tract straddles two City planning areas: Chestnut (51%) and Central East Austin (49%)"). Earlier heuristic names for tracts outside planning-area coverage are not used.
 
 ### Map Overlays
 
@@ -225,7 +244,7 @@ PA items (grants, awards, etc.) are matched to regions using geographic proximit
 
 ### Anchor Density Badge
 
-Displayed in the region detail panel header when business data is available for the selected region.
+Shown in the Compare table. (It was also the badge in the header of the earlier three-tab detail panel, which is no longer shown.)
 
 ```
 Anchor Density = surviving_businesses / (surviving + closed_businesses)
@@ -407,15 +426,14 @@ These weights affect the underlying DVI score which feeds into all three lenses:
 
 ## 7. Neighborhood Aggregation
 
-When viewing in Neighborhoods mode (~87 neighborhoods from City of Austin NPA boundaries):
+When viewing in Neighborhoods mode, the map shows 44 named neighborhoods (81 census tracts) and 151 single-tract units.
 
 ### Assignment Method
 
-Each census tract is assigned to **exactly one neighborhood** based on which NPA polygon contains the tract's centroid (centroid-in-polygon matching via Turf.js `booleanPointInPolygon`). This means:
+A census tract joins a named neighborhood **only when that City of Austin Neighborhood Planning Area covers at least 80% of the tract's area** (the same threshold as the "named" basis in §4.3). Every other tract, including all suburban tracts that have no planning-area polygon, stays a standalone unit and is titled as described in §4.3. Multi-tract neighborhoods must be contiguous: a tract that qualifies by area but does not touch the rest of the group reverts to a standalone unit.
 
-- No double-counting: every tract's population and data contribute to exactly one neighborhood.
-- Tracts that physically straddle two neighborhoods are assigned entirely to whichever neighborhood contains the centroid. This is the same method used by HUD and the Census Bureau for cross-geography matching.
-- The tradeoff is precision at borders: a tract whose centroid falls barely inside Neighborhood A will have all its data attributed to A, even if 40% of its land area is in Neighborhood B.
+- No double-counting: every tract's population and data contribute to at most one neighborhood.
+- A neighborhood here is therefore the part of a planning area that census tracts can describe cleanly. A planning area whose tracts all straddle its edges has no neighborhood entry; its tracts appear individually, titled "… area".
 
 ### Aggregation Rules
 
@@ -446,6 +464,8 @@ The tradeoff: a tract whose closest year is 1–2 years offset from the majority
 
 ### Narrative Callouts in Neighborhood Mode
 
+*(These callouts belonged to the earlier three-tab detail panel, which is no longer shown. The rules are kept here because `utils/aggregation.js` still computes them.)*
+
 The Demographics tab generates narrative callouts when significant changes are detected (e.g., "Lost 34% of its Black population between 2000 and 2010"). In neighborhood mode, these thresholds are applied to the **aggregated neighborhood-level populations**, not to individual tracts.
 
 This means:
@@ -462,13 +482,11 @@ Tipping point records (`data/tippingPoints.js`) carry a hand-written qualitative
 
 ### Source
 
-Neighborhood boundaries: City of Austin Neighborhood Planning Areas, dataset `inrm-c3ee` on data.austintexas.gov (Socrata SODA 2.1 API). ~95 planning areas covering central Austin. Tracts outside NPA coverage are assigned to the nearest NPA (within 2 km) or grouped by municipality (Pflugerville, Round Rock, etc.).
+Neighborhood boundaries: City of Austin Neighborhood Planning Areas, dataset `inrm-c3ee` on data.austintexas.gov (Socrata SODA 2.1 API), about 95 planning areas covering central Austin.
 
-5 manually defined neighborhoods added for well-known areas not covered as distinct NPAs: Rainey Street Historic District, Warehouse District, Mueller, North Loop, Cherrywood.
+**Build scripts:** `node scripts/assign_names_by_area.cjs` computes the tract and planning-area overlaps; `node scripts/build_neighborhoods.cjs` generates `data/neighborhoods.js` and `data/neighborhoods_geojson.js`; `npm run build:places` generates the tract titles (§4.3); `npm run build:shapes` generates the slim polygon files the site loads (`data/shapes/`).
 
-**Build script:** `node scripts/build_neighborhoods.cjs` (fetches NPA data from City of Austin API, caches locally, generates `data/neighborhoods.js` and `data/neighborhoods_geojson.js`).
-
-**Disclaimer displayed in UI:** "Neighborhood boundaries follow City of Austin planning areas. Data is aggregated from census tracts assigned by centroid location — each tract contributes to exactly one neighborhood. For precise tract-level data, switch to Census Tracts view."
+**Note displayed in the UI (Neighborhoods view):** "Showing neighborhoods. A neighborhood combines the census tracts that sit inside a City of Austin planning area; areas without one are shown as single tracts."
 
 ---
 

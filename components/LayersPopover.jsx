@@ -40,7 +40,7 @@ export default function LayersPopover({ boundaryMode, setBoundaryMode, groups })
         style={{
           display: "flex", alignItems: "center", gap: 6, padding: "6px 14px",
           borderRadius: 8, border: "1.5px solid #0f766e", background: open ? "#0f766e" : "#fffffe",
-          color: open ? "#fffffe" : "#0f766e", fontSize: 12, fontWeight: 600,
+          color: open ? "#fffffe" : "#0f766e", fontSize: 13, fontWeight: 600,
           cursor: "pointer", minHeight: 34,
         }}
       >
@@ -50,13 +50,13 @@ export default function LayersPopover({ boundaryMode, setBoundaryMode, groups })
         </svg>
         Layers
         <span style={{
-          fontSize: 11, fontWeight: 600, minWidth: 18, height: 18, borderRadius: 9,
+          fontSize: 12, fontWeight: 600, minWidth: 18, height: 18, borderRadius: 9,
           background: open ? "rgba(255,255,254,.25)" : "#f0fdfa",
           display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "0 4px",
         }}>
           {activeCount}
         </span>
-        <span aria-hidden="true" style={{ fontSize: 11, transform: open ? "rotate(180deg)" : "none", transition: "transform .15s" }}>▾</span>
+        <span aria-hidden="true" style={{ fontSize: 12, transform: open ? "rotate(180deg)" : "none", transition: "transform .15s" }}>▾</span>
       </button>
 
       {open && (
@@ -71,7 +71,7 @@ export default function LayersPopover({ boundaryMode, setBoundaryMode, groups })
         >
           {/* Boundaries group: mode radio + fill toggle */}
           <div style={{ marginBottom: 12 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6 }}>
               Boundaries
             </div>
             <div style={{ display: "flex", background: "#edeae4", borderRadius: 8, padding: 3, marginBottom: 6 }}>
@@ -84,7 +84,7 @@ export default function LayersPopover({ boundaryMode, setBoundaryMode, groups })
                   onClick={() => setBoundaryMode(mode.key)}
                   aria-current={boundaryMode === mode.key ? "page" : undefined}
                   style={{
-                    flex: 1, padding: "4px 8px", borderRadius: 6, fontSize: 11,
+                    flex: 1, padding: "4px 8px", borderRadius: 6, fontSize: 12,
                     fontWeight: boundaryMode === mode.key ? 600 : 400,
                     background: boundaryMode === mode.key ? "#fffffe" : "transparent",
                     color: boundaryMode === mode.key ? "#0f766e" : "#7c6f5e",
@@ -103,7 +103,7 @@ export default function LayersPopover({ boundaryMode, setBoundaryMode, groups })
 
           {groups.filter((g) => g.title !== "Boundaries").map((g) => (
             <div key={g.title} style={{ marginBottom: 10 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 4 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 4 }}>
                 {g.title}
               </div>
               {g.items.map((it) => (
@@ -122,7 +122,7 @@ function LayerRow({ item }) {
     <label
       style={{
         display: "flex", alignItems: "center", gap: 8, padding: "4px 2px",
-        fontSize: 12, color: "#1a1a1a", cursor: "pointer", borderRadius: 4,
+        fontSize: 13, color: "#1a1a1a", cursor: "pointer", borderRadius: 4,
       }}
     >
       <input

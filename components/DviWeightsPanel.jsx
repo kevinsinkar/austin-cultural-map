@@ -142,7 +142,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
         style={{
           display: "flex", alignItems: "center", gap: 6, padding: "6px 14px",
           borderRadius: 8, border: "1.5px solid #9a3412", background: open ? "#9a3412" : "#fffffe",
-          color: open ? "#fffffe" : "#9a3412", fontSize: 12, fontWeight: 600,
+          color: open ? "#fffffe" : "#9a3412", fontSize: 13, fontWeight: 600,
           cursor: "pointer", minHeight: 34,
         }}
       >
@@ -155,14 +155,14 @@ export default function DviWeightsPanel({ weights, onApply }) {
         DVI Weights
         {customized && (
           <span style={{
-            fontSize: 10, fontWeight: 700, padding: "1px 6px", borderRadius: 8,
+            fontSize: 12, fontWeight: 700, padding: "1px 6px", borderRadius: 8,
             background: open ? "rgba(255,255,254,.25)" : "#ffedd5",
             color: open ? "#fffffe" : "#9a3412",
           }}>
             custom
           </span>
         )}
-        <span aria-hidden="true" style={{ fontSize: 11, transform: open ? "rotate(180deg)" : "none", transition: "transform .15s" }}>▾</span>
+        <span aria-hidden="true" style={{ fontSize: 12, transform: open ? "rotate(180deg)" : "none", transition: "transform .15s" }}>▾</span>
       </button>
 
       {open && (
@@ -178,7 +178,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
         >
           {/* Mode row */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10, gap: 8 }}>
-            <label style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#1a1a1a", cursor: "pointer" }}>
+            <label style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#1a1a1a", cursor: "pointer" }}>
               <input
                 type="checkbox"
                 checked={live}
@@ -194,8 +194,8 @@ export default function DviWeightsPanel({ weights, onApply }) {
                 style={{
                   padding: "4px 12px", borderRadius: 6, border: "none",
                   background: dirty ? "#9a3412" : "#e8e5e0",
-                  color: dirty ? "#fffffe" : "#a8a49c",
-                  fontSize: 11, fontWeight: 700, cursor: dirty ? "pointer" : "default",
+                  color: dirty ? "#fffffe" : "var(--muted)",
+                  fontSize: 12, fontWeight: 700, cursor: dirty ? "pointer" : "default",
                 }}
               >
                 Recalculate
@@ -204,7 +204,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
           </div>
 
           {/* Presets — one per strategic-plan objective */}
-          <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 5 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 5 }}>
             Objective presets
           </div>
           <div style={{ display: "flex", gap: 5, marginBottom: 12, flexWrap: "wrap" }}>
@@ -214,7 +214,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
                 onClick={() => applyPreset(p)}
                 title={p.hint}
                 style={{
-                  padding: "3px 10px", borderRadius: 11, fontSize: 11, fontWeight: 600,
+                  padding: "3px 10px", borderRadius: 11, fontSize: 12, fontWeight: 600,
                   border: "1.5px solid #d6d3cd", background: "#f8f7f4", color: "#64615b",
                   cursor: "pointer",
                 }}
@@ -226,10 +226,10 @@ export default function DviWeightsPanel({ weights, onApply }) {
 
           {GROUPS.map((g) => (
             <div key={g.key} style={{ marginBottom: 12 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em" }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em" }}>
                 {g.title}
               </div>
-              <div style={{ fontSize: 10.5, color: "#a8a49c", marginBottom: 5 }}>{g.hint}</div>
+              <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 5 }}>{g.hint}</div>
               {g.fields.map((f) => (
                 <WeightSlider
                   key={f.key}
@@ -244,10 +244,10 @@ export default function DviWeightsPanel({ weights, onApply }) {
 
           {/* Methodology rules */}
           <div style={{ marginBottom: 10 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 5 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 5 }}>
               Methodology rules
             </div>
-            <label style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: 11.5, color: "#1a1a1a", cursor: "pointer", marginBottom: 6, lineHeight: 1.35 }}>
+            <label style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: 12, color: "#1a1a1a", cursor: "pointer", marginBottom: 6, lineHeight: 1.35 }}>
               <input
                 type="checkbox"
                 checked={draft.options.vulnerabilityGate}
@@ -259,7 +259,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
                 tracts at DVI 20 and flag them Exclusive&nbsp;/&nbsp;Appreciated.
               </span>
             </label>
-            <label style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: 11.5, color: "#1a1a1a", cursor: "pointer", lineHeight: 1.35 }}>
+            <label style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: 12, color: "#1a1a1a", cursor: "pointer", lineHeight: 1.35 }}>
               <input
                 type="checkbox"
                 checked={draft.options.lowConfidenceBoost}
@@ -274,14 +274,14 @@ export default function DviWeightsPanel({ weights, onApply }) {
           </div>
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #edeae4", paddingTop: 8 }}>
-            <span style={{ fontSize: 10.5, color: "#a8a49c" }}>
+            <span style={{ fontSize: 12, color: "var(--muted)" }}>
               Weights are relative; shares shown in&nbsp;%.
             </span>
             <button
               onClick={reset}
               style={{
                 padding: "4px 10px", borderRadius: 6, border: "1px solid #d6d3cd",
-                background: "#fffffe", color: "#64615b", fontSize: 11, fontWeight: 600, cursor: "pointer",
+                background: "#fffffe", color: "#64615b", fontSize: 12, fontWeight: 600, cursor: "pointer",
               }}
             >
               Reset to defaults
@@ -296,7 +296,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
 function WeightSlider({ label, value, share, onChange }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
-      <span style={{ fontSize: 11.5, color: "#1a1a1a", width: 128, flexShrink: 0 }}>{label}</span>
+      <span style={{ fontSize: 12, color: "#1a1a1a", width: 128, flexShrink: 0 }}>{label}</span>
       <input
         type="range"
         min={0}
@@ -307,7 +307,7 @@ function WeightSlider({ label, value, share, onChange }) {
         aria-label={`${label} weight`}
         style={{ flex: 1, accentColor: "#9a3412", height: 18 }}
       />
-      <span style={{ fontSize: 11, color: "#64615b", width: 34, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
+      <span style={{ fontSize: 12, color: "#64615b", width: 34, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
         {share.toFixed(0)}%
       </span>
     </div>

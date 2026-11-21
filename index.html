@@ -2,12 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>austin-cultural-map</title>
+    <title>Austin's Shifting Ground</title>
+    <meta
+      name="description"
+      content="An interactive map of four decades of cultural displacement in Austin, Texas: who lives where, how that has changed since 1990, and the cultural anchors that remain."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- What a shared link shows in a message or post -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Austin's Shifting Ground" />
+    <meta
+      property="og:description"
+      content="An interactive map of four decades of cultural displacement in Austin, Texas."
+    />
+    <meta name="twitter:card" content="summary" />
+    <!-- Fonts come from Google Fonts (see styles.css): open the connection early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Shown until the app starts, then replaced by it -->
+      <div style="font-family: system-ui, sans-serif; padding: 20px 28px; color: #1a1a1a; background: #f8f7f4; min-height: 100vh; box-sizing: border-box;">
+        <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 600; margin: 0;">Austin's Shifting Ground</h1>
+        <p role="status" style="font-size: 15px; color: #57534e; margin: 10px 0 0;">Loading the map…</p>
+      </div>
+    </div>
+    <noscript>
+      <p style="font-family: system-ui, sans-serif; padding: 0 28px;">This map needs JavaScript to run.</p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

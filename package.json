@@ -8,6 +8,8 @@
     "present": "vite --mode presenter --open",
     "build": "vite build",
     "check:public": "node scripts/check_public_bundle.mjs",
+    "build:shapes": "node scripts/build_map_shapes.mjs",
+    "build:places": "node scripts/build_place_names.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "propagate": "node archive/data/propagateRegionIds.js"

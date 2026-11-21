@@ -13,7 +13,11 @@ const SPAN = YEAR_MAX - YEAR_MIN;
  */
 export default function LegislationTrack({ year, setYear }) {
   const [selectedBill, setSelectedBill] = useState(null);
-  const [expanded, setExpanded] = useState(true);
+  // Open on wide screens; on a phone it starts as a single line so it does
+  // not push the page down before the reader has asked for it.
+  const [expanded, setExpanded] = useState(
+    () => typeof window === "undefined" || !window.matchMedia || window.matchMedia("(min-width: 640px)").matches
+  );
 
   // Group bills by DISPLAY year so same-position markers stack instead of
   // overlap. A bill effective just past the axis (e.g., SB 38, eff. 2026)
@@ -40,17 +44,17 @@ export default function LegislationTrack({ year, setYear }) {
   return (
     <div style={{ marginTop: 10, borderTop: "1px solid #e8e5e0", paddingTop: 8 }}>
       {/* Header row */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "4px 12px", marginBottom: 4 }}>
         <button
           onClick={() => { setExpanded(e => !e); setSelectedBill(null); }}
-          style={{ background: "none", border: "none", cursor: "pointer", fontSize: 11, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", padding: 0, display: "flex", alignItems: "center", gap: 5 }}
+          style={{ background: "none", border: "none", cursor: "pointer", fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em", padding: "4px 0", minHeight: 28, display: "flex", alignItems: "center", gap: 5, textAlign: "left" }}
           aria-expanded={expanded}
         >
-          <span style={{ display: "inline-block", transform: expanded ? "rotate(90deg)" : "none", transition: "transform .15s", fontSize: 11 }}>▶</span>
-          TX Legislation — Cost of Living ({TX_LEGISLATION.length} bills)
+          <span style={{ display: "inline-block", transform: expanded ? "rotate(90deg)" : "none", transition: "transform .15s", fontSize: 12 }}>▶</span>
+          Texas laws that changed the cost of living ({TX_LEGISLATION.length})
         </button>
         {expanded && (
-          <div style={{ display: "flex", gap: 10, fontSize: 11, color: "#7c6f5e" }} aria-hidden="true">
+          <div style={{ display: "flex", gap: 10, fontSize: 12, color: "#7c6f5e" }} aria-hidden="true">
             {Object.entries(LEG_DIRECTION_LABELS).map(([dir, label]) => (
               <span key={dir} style={{ display: "flex", alignItems: "center", gap: 3 }}>
                 <span style={{ width: 7, height: 7, borderRadius: 2, background: LEG_DIRECTION_COLORS[dir], display: "inline-block" }} />
@@ -63,6 +67,9 @@ export default function LegislationTrack({ year, setYear }) {
 
       {expanded && (
         <>
+          <p style={{ fontSize: 13, color: "var(--muted)", margin: "0 0 6px", lineHeight: 1.4 }}>
+            Each marker is a state law, placed at the year it took effect. Select one to read what it did in Austin.
+          </p>
           {/* Marker track */}
           <div style={{ position: "relative", height: trackHeight }} role="list" aria-label="Texas bills affecting Austin cost of living">
             {byYear.map(([billYear, bills]) => {
@@ -94,7 +101,7 @@ export default function LegislationTrack({ year, setYear }) {
                       />
                     );
                   })}
-                  <span style={{ fontSize: 11, color: near ? "#44403c" : "#a8a49c", fontWeight: near ? 600 : 400 }}>
+                  <span style={{ fontSize: 12, color: near ? "#44403c" : "var(--muted)", fontWeight: near ? 600 : 400 }}>
                     {String(billYear).slice(2)}
                   </span>
                 </div>
@@ -107,38 +114,38 @@ export default function LegislationTrack({ year, setYear }) {
             <div style={{ background: "#fffffe", border: "1px solid #e8e5e0", borderLeft: `3px solid ${LEG_DIRECTION_COLORS[selectedBill.direction] || "#9ca3af"}`, borderRadius: 8, padding: "12px 14px", marginTop: 6 }} role="region" aria-label={`${selectedBill.bill} details`}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8 }}>
                 <div>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a" }}>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: "#1a1a1a" }}>
                     {selectedBill.bill} — {selectedBill.title}
                   </span>
                   <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
-                    <span style={{ fontSize: 11, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
+                    <span style={{ fontSize: 12, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
                       {selectedBill.session}
                     </span>
-                    <span style={{ fontSize: 11, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
+                    <span style={{ fontSize: 12, background: "#f5f0ea", color: "#7c6f5e", borderRadius: 3, padding: "2px 7px", fontWeight: 500 }}>
                       {LEG_CATEGORY_LABELS[selectedBill.category] || selectedBill.category}
                     </span>
-                    <span style={{ fontSize: 11, background: `${LEG_DIRECTION_COLORS[selectedBill.direction]}18`, color: LEG_DIRECTION_COLORS[selectedBill.direction], borderRadius: 3, padding: "2px 7px", fontWeight: 600 }}>
+                    <span style={{ fontSize: 12, background: `${LEG_DIRECTION_COLORS[selectedBill.direction]}18`, color: LEG_DIRECTION_COLORS[selectedBill.direction], borderRadius: 3, padding: "2px 7px", fontWeight: 600 }}>
                       {LEG_DIRECTION_LABELS[selectedBill.direction] || selectedBill.direction}
                     </span>
                   </div>
                 </div>
-                <button onClick={() => setSelectedBill(null)} aria-label="Close bill details" style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, color: "#a8a49c", padding: 2, lineHeight: 1 }}>✕</button>
+                <button onClick={() => setSelectedBill(null)} aria-label="Close bill details" style={{ background: "none", border: "none", cursor: "pointer", fontSize: 15, color: "var(--muted)", padding: 2, lineHeight: 1 }}>✕</button>
               </div>
-              <p style={{ fontSize: 12, color: "#44403c", margin: "8px 0 0", lineHeight: 1.55 }}>{selectedBill.summary}</p>
-              <p style={{ fontSize: 12, color: "#44403c", margin: "6px 0 0", lineHeight: 1.55 }}>
+              <p style={{ fontSize: 13, color: "#44403c", margin: "8px 0 0", lineHeight: 1.55 }}>{selectedBill.summary}</p>
+              <p style={{ fontSize: 13, color: "#44403c", margin: "6px 0 0", lineHeight: 1.55 }}>
                 <strong style={{ color: "#7c6f5e" }}>Austin impact:</strong> {selectedBill.austin_impact}
               </p>
               <div style={{ display: "flex", gap: 12, marginTop: 8, alignItems: "center" }}>
                 {setYear && (
                   <button
                     onClick={() => setYear(Math.min(Math.max(selectedBill.year, YEAR_MIN), YEAR_MAX))}
-                    style={{ fontSize: 11, fontWeight: 600, color: "#0f766e", background: "none", border: "1px solid #0f766e", borderRadius: 5, padding: "3px 10px", cursor: "pointer" }}
+                    style={{ fontSize: 12, fontWeight: 600, color: "#0f766e", background: "none", border: "1px solid #0f766e", borderRadius: 5, padding: "3px 10px", cursor: "pointer" }}
                   >
                     View {selectedBill.year} on map
                   </button>
                 )}
                 {selectedBill.source && (
-                  <a href={selectedBill.source} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, color: "#7c6f5e" }}>
+                  <a href={selectedBill.source} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: "#7c6f5e" }}>
                     Source ↗
                   </a>
                 )}

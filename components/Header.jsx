@@ -2,6 +2,7 @@ import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 
 // Tab roster follows the build mode (appConfig.js): a public build shows
 // only the views it is allowed to route to; presenter mode shows them all.
+// The story card is a page reached from the map, not a tab.
 const TABS = [
   { key: "map", label: "Map" },
   { key: "outreach", label: "Outreach" },
@@ -11,142 +12,97 @@ const TABS = [
   { key: "triage", label: "Triage" },
 ].filter((tab) => isViewAllowed(tab.key));
 
-export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda, onStartTour }) {
+const utilityButton = {
+  padding: "5px 12px",
+  borderRadius: 6,
+  border: "1px solid #d6d3cd",
+  background: "#fffffe",
+  color: "#44403c",
+  fontSize: 13,
+  fontWeight: 500,
+  cursor: "pointer",
+  minHeight: 34,
+  textDecoration: "none",
+  display: "inline-flex",
+  alignItems: "center",
+};
+
+export default function Header({ viewMode, setViewMode, setShowAbout, onOpenAgenda, onStartTour }) {
+  // A story card belongs to the map, so the Map tab stays marked while one is open.
+  const currentTab = viewMode === "card" ? "map" : viewMode;
+
   return (
-    <header
-      style={{ borderBottom: "1px solid #d6d3cd", padding: "20px 28px 16px" }}
-      role="banner"
-    >
-      <div style={{ margin: "0 auto" }}>
-        <h1
-          style={{
-            fontFamily: "'Newsreader',Georgia,serif",
-            fontSize: 26,
-            fontWeight: 600,
-            color: "#1a1a1a",
-            letterSpacing: "-.02em",
-            lineHeight: 1.2,
-            margin: 0,
-          }}
-        >
-          Austin's Shifting Ground
-        </h1>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginTop: 6,
-            flexWrap: "wrap",
-            gap: 8,
-          }}
-        >
-          <p style={{ fontSize: 14, color: "#64615b", margin: 0, lineHeight: 1.4 }}>
-            {PRESENTER_MODE
-              ? "Presenter mode (this computer only) — displacement data + outreach planning for Preservation Austin's Community Engagement committee"
-              : "Four decades of cultural displacement — 1990 to 2025"}
-          </p>
-          <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-            {/* A single-view build needs no tab bar */}
-            <nav aria-label="View mode" style={{ display: TABS.length > 1 ? "flex" : "none", background: "#edeae4", borderRadius: 8, padding: 3 }}>
-              {TABS.map((tab) => (
-                <button
-                  key={tab.key}
-                  onClick={() => setViewMode(tab.key)}
-                  aria-current={viewMode === tab.key ? "page" : undefined}
-                  style={{
-                    padding: "5px 14px",
-                    borderRadius: 6,
-                    fontSize: 12,
-                    fontWeight: viewMode === tab.key ? 600 : 400,
-                    background: viewMode === tab.key ? "#fffffe" : "transparent",
-                    color: viewMode === tab.key ? "#0f766e" : "#7c6f5e",
-                    border: "none",
-                    cursor: "pointer",
-                    boxShadow: viewMode === tab.key ? "0 1px 3px rgba(0,0,0,.08)" : "none",
-                    minHeight: 32,
-                  }}
-                >
-                  {tab.label}
-                </button>
-              ))}
+    <header className="app-header" role="banner">
+      <h1 className="app-title">Austin's Shifting Ground</h1>
+      <div className="app-header-row">
+        <p className="app-subtitle">
+          Four decades of cultural displacement, 1990 to 2025
+          {PRESENTER_MODE && (
+            <span className="presenter-badge" title="This build includes the planning views and private outreach data. It runs on this computer only and must never be uploaded.">
+              Presenter mode · this computer only
+            </span>
+          )}
+        </p>
+        <div className="app-header-actions">
+          {/* A single-view build needs no tab bar */}
+          {TABS.length > 1 && (
+            <nav aria-label="Views" className="app-nav">
+              {TABS.map((tab) => {
+                const current = currentTab === tab.key;
+                return (
+                  <button
+                    key={tab.key}
+                    type="button"
+                    onClick={() => setViewMode(tab.key)}
+                    aria-current={current ? "page" : undefined}
+                    style={{
+                      padding: "5px 14px",
+                      borderRadius: 6,
+                      fontSize: 13,
+                      fontWeight: current ? 600 : 400,
+                      background: current ? "#fffffe" : "transparent",
+                      color: current ? "#0f766e" : "#57534e",
+                      border: "none",
+                      cursor: "pointer",
+                      boxShadow: current ? "0 1px 3px rgba(0,0,0,.08)" : "none",
+                      minHeight: 32,
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
             </nav>
-            {onStartTour && PRESENTER_MODE && (
-              <button
-                onClick={onStartTour}
-                style={{
-                  padding: "5px 12px",
-                  borderRadius: 6,
-                  border: "1px solid #0f766e",
-                  background: "#f0fdfa",
-                  color: "#0f766e",
-                  fontSize: 11,
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  minHeight: 32,
-                }}
-                aria-label="Take the guided tour (about 3 minutes)"
-              >
-                ▶ Tour
-              </button>
-            )}
+          )}
+          {onStartTour && PRESENTER_MODE && (
             <button
-              onClick={() => setShowAgenda(true)}
-              style={{
-                padding: "5px 10px",
-                borderRadius: 6,
-                border: "1px solid #d6d3cd",
-                background: "#fffffe",
-                color: "#64615b",
-                fontSize: 11,
-                fontWeight: 500,
-                cursor: "pointer",
-                minHeight: 32,
-              }}
-              aria-label="View agenda"
+              type="button"
+              onClick={onStartTour}
+              style={{ ...utilityButton, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontWeight: 600 }}
+              aria-label="Take the guided tour (about 3 minutes)"
             >
+              Tour
+            </button>
+          )}
+          {/* The agenda is the internal roadmap: presenter mode only */}
+          {PRESENTER_MODE && (
+            <button type="button" onClick={onOpenAgenda} style={utilityButton}>
               Agenda
             </button>
-            <button
-              onClick={() => setShowAbout(true)}
-              style={{
-                padding: "5px 10px",
-                borderRadius: 6,
-                border: "1px solid #d6d3cd",
-                background: "#fffffe",
-                color: "#64615b",
-                fontSize: 11,
-                fontWeight: 500,
-                cursor: "pointer",
-                minHeight: 32,
-              }}
-              aria-label="About this data"
-            >
-              About
-            </button>
-            <a
-              href="https://forms.gle/r3FojhBqyHPzw4mG7"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                padding: "5px 10px",
-                borderRadius: 6,
-                border: "1px solid #d6d3cd",
-                background: "#fffffe",
-                color: "#64615b",
-                fontSize: 11,
-                fontWeight: 500,
-                cursor: "pointer",
-                minHeight: 32,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-              aria-label="Leave feedback"
-            >
-              Feedback
-            </a>
-          </div>
+          )}
+          <button type="button" onClick={() => setShowAbout(true)} style={utilityButton} aria-label="About this map and its data">
+            About
+          </button>
+          <a
+            href="https://forms.gle/r3FojhBqyHPzw4mG7"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={utilityButton}
+            aria-label="Leave feedback (opens a form in a new tab)"
+          >
+            Feedback
+          </a>
         </div>
       </div>
     </header>
