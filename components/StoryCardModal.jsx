@@ -353,9 +353,6 @@ export default function StoryCardModal({ regionId, onClose }) {
                 {open.slice(0, 12).map((b) => (
                   <li key={b.id}>
                     <strong>{b.name}</strong> (est. {b.est})
-                    {(b.pressure === "High" || b.pressure === "Critical") && (
-                      <span style={{ color: "#b45309", fontWeight: 700 }}> · under pressure</span>
-                    )}
                   </li>
                 ))}
               </ul>

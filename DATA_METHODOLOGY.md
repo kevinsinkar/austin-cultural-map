@@ -203,7 +203,7 @@ Some census tracts are administratively merged in this tool — a secondary trac
 | Metric | Source | Calculation |
 |--------|--------|-------------|
 | Tipping Point narrative | `data/tippingPoints.js` | Hand-written narratives matched by region name. Not available for all regions. |
-| Legacy Businesses (Still Here) | `data/businesses.js` → `LEGACY_OPERATING` | Filtered by `region_id`, sorted by establishment year. Shows name, type, culture, pressure rating. |
+| Legacy Businesses (Still Here) | `data/businesses.js` → `LEGACY_OPERATING` | Filtered by `region_id`, sorted by establishment year. Shows name, type, culture. |
 | Legacy Businesses (What We Lost) | Same → `LEGACY_CLOSED` | Filtered by `region_id`. Shows name, closure year, cause, replacement. |
 | Preservation Austin items | `data/preservationAustin.js` → `PA_ALL` | Filtered by proximity to region centroid (see §4.2). Shows grants, merit awards, legacy business month participants, and advocacy milestones. |
 
@@ -219,7 +219,7 @@ PA items (grants, awards, etc.) are matched to regions using geographic proximit
 
 | Overlay | Data Source | Display |
 |---------|-----------|---------|
-| Business pins (green/amber/gray) | `LEGACY_OPERATING`, `LEGACY_CLOSED` | Circle markers filtered by year. Green = operating, amber = high pressure, gray = closed. |
+| Business pins (green/gray) | `LEGACY_OPERATING`, `LEGACY_CLOSED` | Circle markers filtered by year. Green = operating, gray = closed. |
 | Preservation Austin dots | `PA_ALL` | Color-coded by type: grant = purple (#7c3aed), merit award = blue (#2563eb), legacy business = amber (#d97706), advocacy = green (#059669). Filtered by type sub-toggles and year slider. |
 | Project Connect lines | `PROJECT_CONNECT_LINES` | Dashed polylines for planned transit corridors. |
 
@@ -261,7 +261,6 @@ The narrative text below the charts is computed from:
 1. **DVI gap:** If `|dviA - dviB| > 15`, notes which region experienced more displacement pressure.
 2. **Home value gap:** If `|homeA - homeB| > $100,000`, notes which has higher values.
 3. **Business closures:** Counts `LEGACY_CLOSED` per region, identifies dominant cultural affiliation of losses (e.g., "predominantly African American" or "Mexican American").
-4. **Surviving businesses under pressure:** Counts businesses where `pressure === "High"` or `"Critical"` from `LEGACY_OPERATING`.
 
 The narrative uses these thresholds to avoid generating trivial comparisons — small differences are not narrated.
 

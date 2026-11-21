@@ -11,7 +11,7 @@ import ConfidenceChip from "./ConfidenceChip";
 import { PA_ALL, PA_COLORS, PA_LABELS } from "../data";
 import { REGION_INDEX } from "../data";
 import { ID_TO_NAME } from "../data/regionLookup";
-import { fmtChange, pressureColor, pressureDots } from "../utils/formatters";
+import { fmtChange } from "../utils/formatters";
 import { adjustForInflation } from "../utils/cpi";
 import ChartTooltip from "./ChartTooltip";
 import TractSparkline from "./TractSparkline";
@@ -641,7 +641,7 @@ export default function RegionDetailPanel({
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                         {regionBizOpen.map((b) => (
-                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}, ${b.pressure} pressure`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
+                          <div key={b.id} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e8e5e0", cursor: "pointer", background: selectedBiz?.id === b.id ? "#f0fdfa" : "transparent", minHeight: 44 }} onClick={() => { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); }} role="button" tabIndex={0} aria-label={`${b.name}, est. ${b.est}`} onKeyDown={(e) => { if (e.key === "Enter") { setSelectedBiz(b); if (leafletMapRef?.current && b.lat && b.lng) leafletMapRef.current.flyTo([b.lat, b.lng], 16, { duration: 0.8 }); const mk = bizMarkersRef?.current?.get(b.id); if (mk) setTimeout(() => mk.openPopup(), 850); } }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                               <div style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{b.name}</div>
                               <span style={{ fontSize: 11, color: "#a8a49c", whiteSpace: "nowrap", marginLeft: 8 }}>Est. {b.est}</span>
@@ -650,11 +650,6 @@ export default function RegionDetailPanel({
                               <span style={{ fontSize: 11, color: "#64615b" }}>{b.type}</span>
                               <span style={{ fontSize: 11, color: "#7c6f5e" }}>·</span>
                               <span style={{ fontSize: 11, color: "#7c6f5e" }}>{b.culture}</span>
-                              <span style={{ marginLeft: "auto", display: "flex", gap: 2 }}>
-                                {pressureDots(b.pressure).map((on, i) => (
-                                  <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: on ? pressureColor(b.pressure) : "#e8e5e0" }} aria-hidden="true" />
-                                ))}
-                              </span>
                             </div>
                           </div>
                         ))}

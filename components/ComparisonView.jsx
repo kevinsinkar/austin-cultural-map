@@ -150,16 +150,6 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB, bound
       }
     }
 
-    // 5. Flag near-term risk based on surviving businesses under high or critical pressure.
-    const atRiskA = LEGACY_OPERATING.filter((b) => b.region_id === idA && (b.pressure === "High" || b.pressure === "Critical")).length;
-    const atRiskB = LEGACY_OPERATING.filter((b) => b.region_id === idB && (b.pressure === "High" || b.pressure === "Critical")).length;
-
-    if (atRiskA > atRiskB + 1) {
-      t += `${compA} has a greater number of surviving cultural businesses under high or critical pressure, suggesting it is at greater near-term risk of further cultural loss.`;
-    } else if (atRiskB > atRiskA + 1) {
-      t += `${compB} has a greater number of surviving cultural businesses under high or critical pressure, suggesting it is at greater near-term risk of further cultural loss.`;
-    }
-
     return t.trim();
   }, [compA, compB, idA, idB]);
 

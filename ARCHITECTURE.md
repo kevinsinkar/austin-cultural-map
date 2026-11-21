@@ -59,7 +59,7 @@ austin-cultural-map/
 ├── utils/
 │   ├── math.js             # DVI interpolation, triage scoring (trajectory, equity, risk matrix)
 │   ├── mapHelpers.js       # Music data lookup, dev-pressure color ramp
-│   ├── formatters.js       # fmtPct, fmtChange, pressureDots, catColor
+│   ├── formatters.js       # fmtPct, fmtChange, catColor
 │   ├── cpi.js              # CPI-U inflation adjustment (→ 2023 dollars)
 │   └── aggregation.js      # Neighborhood aggregation (pop-weighted DVI, demographics, economics)
 │
@@ -282,7 +282,7 @@ index.html
 | `PA_ALL, PA_COLORS, PA_LABELS` | ../data |
 | `REGION_INDEX` | ../data |
 | `ID_TO_NAME` | ../data/regionLookup |
-| `fmtPct, fmtChange, pressureColor, pressureDots` | ../utils/formatters |
+| `fmtChange` | ../utils/formatters |
 | `adjustForInflation` | ../utils/cpi |
 | `ChartTooltip` | ./ChartTooltip |
 
@@ -442,7 +442,7 @@ index.html
 
 #### formatters.js
 - **No imports** (pure functions)
-- **Exports**: `fmtPct`, `fmtChange`, `pressureColor`, `pressureDots`, `catColor`
+- **Exports**: `fmtPct`, `fmtChange`, `catColor`
 
 ---
 
@@ -517,7 +517,7 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 | **DVI** | Displacement Vulnerability Index (0–100). Computed from 3 sub-indices: demographic change (35%), market pressure (35%), socioeconomic stress (30%). Higher = more vulnerable. Adjustable weights in TriageView. |
 | **DVI Bands** | Stable (0–20), Early Pressure (20–35), Active Displacement (35–55), Historic Displacement (55+). Affluent/excluded regions capped at DVI 20 and shown in neutral slate. |
 | **Anchor Density** | `surviving_businesses / (surviving + closed)`. Ratio 0–1. Badge: Strong (>70%), Eroding (40–70%), Critical (<40%). |
-| **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `pressure` rating, `lat/lng`. 41 operating + 52 closed. |
+| **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 49 operating + 58 closed. |
 | **Triage Lenses** | Trajectory (displacement velocity), Equity (underserved communities), Risk Matrix (intervention type matching). Each lens produces categories and a priority score per region. |
 | **Preservation Austin** | Overlay layer showing 156 geocoded entries: grants ($284K+ since 2016), merit awards (2022–2025), Legacy Business Month participants (2023–2025), and advocacy milestones. |
 | **Census Data** | Real Census Bureau data fetched via API. Demographics from Decennial SF1 (2000, 2010, 2020) and ACS 5-Year (2010, 2015, 2020, 2023). Race variables use Not-Hispanic-by-Race tables (P004/P005) to avoid double-counting. |

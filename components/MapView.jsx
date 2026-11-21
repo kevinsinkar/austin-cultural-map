@@ -307,7 +307,6 @@ export default function MapView({
                 <div style={{ display: "flex", gap: 10, paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0", flexWrap: "wrap" }}>
                   {[
                     { l: "Operating", c: "#4ade80" },
-                    { l: "High pressure", c: "#f59e0b" },
                     { l: "Closed", c: "#a8a49c" },
                   ].map((p, i) => (
                     <div key={i} style={{ display: "flex", alignItems: "center", gap: 4 }}>

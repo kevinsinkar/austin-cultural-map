@@ -238,19 +238,6 @@ export function calcAnchorDensity(regionId) {
 }
 
 /**
- * Compute the anchor pressure score for a region.
- * pressure_score = (high_pressure_count * 2 + moderate_pressure_count) / surviving_count.
- * Higher = more businesses under threat. Returns null if no surviving businesses.
- */
-export function calcAnchorPressureScore(regionId) {
-  const open = LEGACY_OPERATING.filter((b) => b.region_id === regionId);
-  if (open.length === 0) return null;
-  const high = open.filter((b) => b.pressure === "High" || b.pressure === "Critical").length;
-  const moderate = open.filter((b) => b.pressure === "Moderate").length;
-  return (high * 2 + moderate) / open.length;
-}
-
-/**
  * Get the anchor density badge info: label, color, background.
  */
 export function getAnchorBadge(density) {

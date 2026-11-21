@@ -467,7 +467,7 @@ export default function useAustinMap({
         if (!b.lat || !b.lng) return;
         const m = L.circleMarker([b.lat, b.lng], {
           radius: 6,
-          fillColor: b.pressure === "Critical" || b.pressure === "High" ? "#f59e0b" : "#4ade80",
+          fillColor: "#4ade80",
           color: "#fff",
           weight: 1,
           fillOpacity: 0.95,
