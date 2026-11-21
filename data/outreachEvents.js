@@ -1,13 +1,14 @@
 // ── Outreach / tabling opportunity dataset ──
-// Generated from preservation_austin_tabling_database.md by
+// Generated from private/preservation_austin_tabling_database.md by
 // scripts/parse_tabling_db.py (re-run it whenever the database file is
 // updated; add --geocode to refresh coordinates). The markdown stays the
 // human-readable source of truth; this file only adapts it for the app.
 //
-// PRIVATE: the events carry organizer contacts and internal fit notes.
-// "@private/outreach-events" resolves to data/outreach_events.json only in
-// presenter mode (npm run present); public builds get an empty list. See
-// vite.config.js.
+// PRIVATE: the events carry organizer contacts and internal fit notes, so
+// both files live in the git-ignored private/ folder.
+// "@private/outreach-events" resolves to private/outreach_events.json only
+// in presenter mode (npm run present); public builds get an empty list.
+// See vite.config.js.
 
 import RAW from "@private/outreach-events";
 

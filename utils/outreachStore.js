@@ -1,8 +1,9 @@
 // ── Committee outreach plan store ──
 // Per-event pipeline stage + working note, persisted in localStorage so the
-// plan survives reloads on the committee member's machine. Export/import
-// via JSON keeps the plan shareable (email a file, or paste into the
-// monthly meeting notes) without needing a backend.
+// plan survives reloads on the keeper's machine. The browser copy is the
+// only copy, and it is tied to one browser and one address, so the planner
+// has Back up / Restore buttons that write and read a JSON file — keep a
+// recent backup somewhere safe.
 
 import { useCallback, useState } from "react";
 
@@ -87,6 +88,56 @@ export function usePlanStore() {
   }, []);
 
   return { plan, setStage, setNote, setOutcome, importPlan };
+}
+
+/** Backup file for the whole plan: every stage, note, and outcome. */
+export function planToBackupJson(plan) {
+  return JSON.stringify(
+    { app: "pa-outreach-plan", version: 1, exportedAt: new Date().toISOString(), plan },
+    null,
+    2
+  );
+}
+
+/**
+ * Read a backup back into a plan object. Accepts a file written by
+ * planToBackupJson, or the raw value this browser stores under
+ * "pa-outreach-plan-v1" (the plan object itself) — which is how a plan
+ * kept on another address, such as the old public site, can be carried
+ * over. Returns null when the text holds no plan entries.
+ */
+export function parsePlanBackup(text) {
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    return null;
+  }
+  const isObj = (v) => v && typeof v === "object" && !Array.isArray(v);
+  const source = isObj(data) && isObj(data.plan) ? data.plan : data;
+  if (!isObj(source)) return null;
+
+  const plan = {};
+  for (const [id, entry] of Object.entries(source)) {
+    if (!isObj(entry)) continue;
+    const clean = {};
+    if (typeof entry.stage === "string") clean.stage = entry.stage;
+    if (typeof entry.note === "string") clean.note = entry.note;
+    if (isObj(entry.outcome)) clean.outcome = entry.outcome;
+    if (typeof entry.updatedAt === "string") clean.updatedAt = entry.updatedAt;
+    if (Object.keys(clean).length) plan[id] = clean;
+  }
+  return Object.keys(plan).length ? plan : null;
+}
+
+export function downloadJson(filename, json) {
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 /** CSV export of the (filtered) worklist, including plan stage and notes. */

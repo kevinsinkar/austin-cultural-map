@@ -25,9 +25,9 @@ const PHONE = /\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}/g;
 const emails = [...new Set(bundle.match(EMAIL) || [])];
 if (emails.length) problems.push(`${emails.length} email address(es) in the bundle, e.g. ${emails.slice(0, 3).join(", ")}`);
 
-// 2. When the private outreach file is present, none of its contact
-//    details may appear.
-const privateFile = path.join(root, "data", "outreach_events.json");
+// 2. When the private outreach file is present (it is git-ignored, so only
+//    on the keeper's machine), none of its contact details may appear.
+const privateFile = path.join(root, "private", "outreach_events.json");
 if (fs.existsSync(privateFile)) {
   const events = JSON.parse(fs.readFileSync(privateFile, "utf8"));
   const needles = new Set();

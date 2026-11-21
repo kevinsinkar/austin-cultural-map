@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import {
   OUTREACH_EVENTS,
   OUTREACH_STATUS,
@@ -11,7 +11,14 @@ import {
   isPast,
   formatEventDate,
 } from "../data/outreachEvents";
-import { usePlanStore, eventsToCsv, downloadCsv } from "../utils/outreachStore";
+import {
+  usePlanStore,
+  eventsToCsv,
+  downloadCsv,
+  planToBackupJson,
+  parsePlanBackup,
+  downloadJson,
+} from "../utils/outreachStore";
 import OutreachCoverage from "./OutreachCoverage";
 import OutreachEquityAudit from "./OutreachEquityAudit";
 
@@ -34,8 +41,13 @@ const FITS = ["All", "High", "Medium", "Low"];
 const DISTRICTS = ["All", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10"];
 
 export default function OutreachView({ onLocate, dviVersion }) {
-  const { plan, setStage, setNote, setOutcome } = usePlanStore();
+  const { plan, setStage, setNote, setOutcome, importPlan } = usePlanStore();
   const [subview, setSubview] = useState("worklist");
+  // Backup / restore of the plan file. planEpoch remounts the rows after a
+  // restore so note and outcome fields pick up the restored values.
+  const restoreInputRef = useRef(null);
+  const [planEpoch, setPlanEpoch] = useState(0);
+  const [backupMsg, setBackupMsg] = useState(null);
   const [search, setSearch] = useState("");
   const [arena, setArena] = useState("All");
   const [statusFilter, setStatusFilter] = useState(() => {
@@ -113,6 +125,30 @@ export default function OutreachView({ onLocate, dviVersion }) {
     );
   };
 
+  const backupPlan = () => {
+    const n = Object.keys(plan).length;
+    downloadJson(
+      `pa-outreach-plan-backup-${new Date().toISOString().slice(0, 10)}.json`,
+      planToBackupJson(plan)
+    );
+    setBackupMsg(`Backup saved to your downloads (${n} ${n === 1 ? "entry" : "entries"}).`);
+  };
+
+  const restorePlan = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // so the same file can be chosen again
+    if (!file) return;
+    const incoming = parsePlanBackup(await file.text());
+    if (!incoming) {
+      setBackupMsg("That file has no plan entries in it — nothing was changed.");
+      return;
+    }
+    const n = Object.keys(incoming).length;
+    importPlan(incoming);
+    setPlanEpoch((v) => v + 1);
+    setBackupMsg(`Restored ${n} ${n === 1 ? "entry" : "entries"}. Where an event was in both, the backup's version was used; other entries were kept.`);
+  };
+
   return (
     <section aria-label="Outreach planner" style={{ width: "100%" }}>
       {/* ── Header ── */}
@@ -151,7 +187,7 @@ export default function OutreachView({ onLocate, dviVersion }) {
               "How Austin is changing alongside how Preservation Austin is serving the city — PA's grants, awards, legacy businesses, and advocacy against each district's displacement need. The instrument for the equity standard's annual report."}
           </p>
         </div>
-        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+        <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", justifyContent: "flex-end" }}>
           {PLAN_STAGES.filter((s) => pipelineCounts[s.key]).map((s) => (
             <span key={s.key} style={{ fontSize: 11, fontWeight: 600, color: s.color, background: s.bg, padding: "3px 9px", borderRadius: 10 }}>
               {pipelineCounts[s.key]} {s.label.replace(" ✓", "")}
@@ -169,8 +205,47 @@ export default function OutreachView({ onLocate, dviVersion }) {
               ⬇ Export CSV ({filtered.length})
             </button>
           )}
+          {subview === "worklist" && (
+            <>
+              <button
+                onClick={backupPlan}
+                title="Download every stage, note, and outcome as a file. The browser copy is the only other copy."
+                style={{
+                  padding: "6px 12px", borderRadius: 8, border: "1.5px solid #64615b",
+                  background: "#fffffe", color: "#44403c", fontSize: 12, fontWeight: 600,
+                  cursor: "pointer", minHeight: 34,
+                }}
+              >
+                Back up plan
+              </button>
+              <button
+                onClick={() => restoreInputRef.current?.click()}
+                title="Load a backup file. Entries already here are kept unless the backup has the same event."
+                style={{
+                  padding: "6px 12px", borderRadius: 8, border: "1.5px solid #64615b",
+                  background: "#fffffe", color: "#44403c", fontSize: 12, fontWeight: 600,
+                  cursor: "pointer", minHeight: 34,
+                }}
+              >
+                Restore…
+              </button>
+              <input
+                ref={restoreInputRef}
+                type="file"
+                accept="application/json,.json,.txt"
+                onChange={restorePlan}
+                style={{ display: "none" }}
+                aria-label="Choose a plan backup file to restore"
+              />
+            </>
+          )}
         </div>
       </div>
+      {backupMsg && subview === "worklist" && (
+        <p role="status" style={{ fontSize: 12, color: "#115e59", background: "#f0fdfa", border: "1px solid #ccfbf1", borderRadius: 8, padding: "6px 10px", margin: "0 0 10px" }}>
+          {backupMsg}
+        </p>
+      )}
 
       {subview === "coverage" && (
         <OutreachCoverage plan={plan} dviVersion={dviVersion} />
@@ -251,7 +326,7 @@ export default function OutreachView({ onLocate, dviVersion }) {
           <tbody>
             {filtered.map((ev) => (
               <EventRow
-                key={ev.id}
+                key={`${ev.id}-${planEpoch}`}
                 ev={ev}
                 past={isPast(ev, now)}
                 planEntry={plan[ev.id]}

@@ -39,6 +39,16 @@ data/phase1_output_patched/
 # Python bytecode
 __pycache__/
 
+# Private working data — stays on this machine, never in the repo or the
+# public site. Holds the tabling database and the outreach dataset built
+# from it (organizer contacts, internal notes). Loaded only by
+# `npm run present`; see README "Current focus".
+private/
+
+# Personal correspondence kept beside the project
+data/BASTA/Email.txt
+Gmail - *.pdf
+
 # Preservation Austin source package + advocacy letter PDFs (public docs from
 # preservationaustin.org/advocacy-archive — kept local only; the app imports
 # verbatim copies of the data files from data/history/)

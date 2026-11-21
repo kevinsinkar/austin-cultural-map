@@ -7,9 +7,10 @@ import react from '@vitejs/plugin-react'
 // The app imports the alias. Only `--mode presenter` (npm run present)
 // resolves it to the private file; every other mode — including the
 // GitHub Pages build — gets the stand-in, so private rows never reach a
-// public bundle. Add future private data (e.g. Homes Tour addresses) here.
+// public bundle. Private files live in the git-ignored private/ folder.
+// Add future private data (e.g. Homes Tour addresses) here.
 const PRIVATE_DATA = [
-  ['@private/outreach-events', './data/outreach_events.json', './data/outreach_events.public.json'],
+  ['@private/outreach-events', './private/outreach_events.json', './data/outreach_events.public.json'],
 ]
 
 const abs = (rel) => fileURLToPath(new URL(rel, import.meta.url))

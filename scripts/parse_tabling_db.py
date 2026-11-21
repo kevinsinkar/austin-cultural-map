@@ -2,8 +2,11 @@
 """
 parse_tabling_db.py
 ───────────────────
-Parses preservation_austin_tabling_database.md (the Claude-research tabling
-database) into data/outreach_events.json for the Outreach layer/view.
+Parses private/preservation_austin_tabling_database.md (the Claude-research
+tabling database) into private/outreach_events.json for the Outreach
+layer/view. Both files hold organizer contacts and internal notes, so they
+live in the git-ignored private/ folder and are loaded only in presenter
+mode (npm run present).
 
 Usage:  python scripts/parse_tabling_db.py            # parse only
         python scripts/parse_tabling_db.py --geocode  # parse + geocode via
@@ -15,6 +18,7 @@ database file is updated. Manual coordinate overrides live in
 scripts/geocode_overrides.json and always win over Nominatim results.
 """
 import json
+import os
 import re
 import sys
 import time
@@ -24,8 +28,9 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "preservation_austin_tabling_database.md"
-OUT = ROOT / "data" / "outreach_events.json"
+PRIVATE = ROOT / "private"
+SRC = PRIVATE / "preservation_austin_tabling_database.md"
+OUT = PRIVATE / "outreach_events.json"
 CACHE = Path(__file__).resolve().parent / "geocode_cache.json"
 OVERRIDES = Path(__file__).resolve().parent / "geocode_overrides.json"
 
@@ -354,13 +359,21 @@ def in_bbox(lat, lng):
     return AUSTIN_BBOX[0] <= lat <= AUSTIN_BBOX[2] and AUSTIN_BBOX[1] <= lng <= AUSTIN_BBOX[3]
 
 
+def user_agent():
+    """Nominatim asks clients to identify themselves. The app name is enough
+    for light use. To include a contact, set NOMINATIM_CONTACT in your shell
+    instead of writing an address into this file — the repository is public."""
+    base = "austin-cultural-map-outreach/1.0"
+    contact = os.environ.get("NOMINATIM_CONTACT", "").strip()
+    return f"{base} ({contact})" if contact else base
+
+
 def nominatim(query, cache):
     if query in cache:
         return cache[query]
     url = ("https://nominatim.openstreetmap.org/search?format=json&limit=1&q="
            + urllib.parse.quote(query))
-    req = urllib.request.Request(url, headers={
-        "User-Agent": "austin-cultural-map-outreach/1.0 (kevin.sinkar@gmail.com)"})
+    req = urllib.request.Request(url, headers={"User-Agent": user_agent()})
     try:
         with urllib.request.urlopen(req, timeout=20) as r:
             res = json.load(r)
