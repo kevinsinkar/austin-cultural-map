@@ -3,8 +3,13 @@
 // scripts/parse_tabling_db.py (re-run it whenever the database file is
 // updated; add --geocode to refresh coordinates). The markdown stays the
 // human-readable source of truth; this file only adapts it for the app.
+//
+// PRIVATE: the events carry organizer contacts and internal fit notes.
+// "@private/outreach-events" resolves to data/outreach_events.json only in
+// presenter mode (npm run present); public builds get an empty list. See
+// vite.config.js.
 
-import RAW from "./outreach_events.json";
+import RAW from "@private/outreach-events";
 
 export const OUTREACH_EVENTS = RAW;
 

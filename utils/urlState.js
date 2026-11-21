@@ -7,8 +7,11 @@
 import { REGION_INDEX } from "../data";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { NAME_TO_ID } from "../data/regionLookup";
+import { ALLOWED_VIEWS } from "../appConfig";
 
-const VIEWS = ["map", "outreach", "plan", "history", "compare", "triage", "timeline"];
+// Only views this build allows are routable — a public build ignores
+// "#/triage" and friends and falls back to the map.
+const VIEWS = ALLOWED_VIEWS;
 const LENSES = ["trajectory", "equity", "matrix"];
 
 // [state key in layers, short URL code]

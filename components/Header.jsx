@@ -1,21 +1,15 @@
-import { SHOW_ANALYSIS_TABS } from "../appConfig";
+import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 
-// Tab roster is config-driven: outreach mode shows Map + Outreach only;
-// the analysis views stay routable (direct URLs work) but untabbed.
-const TABS = SHOW_ANALYSIS_TABS
-  ? [
-      { key: "map", label: "Map" },
-      { key: "outreach", label: "Outreach" },
-      { key: "plan", label: "Strategic Plan" },
-      { key: "history", label: "History" },
-      { key: "compare", label: "Compare" },
-      { key: "triage", label: "Triage" },
-    ]
-  : [
-      { key: "map", label: "Map" },
-      { key: "outreach", label: "Outreach" },
-      { key: "plan", label: "Strategic Plan" },
-    ];
+// Tab roster follows the build mode (appConfig.js): a public build shows
+// only the views it is allowed to route to; presenter mode shows them all.
+const TABS = [
+  { key: "map", label: "Map" },
+  { key: "outreach", label: "Outreach" },
+  { key: "plan", label: "Strategic Plan" },
+  { key: "history", label: "History" },
+  { key: "compare", label: "Compare" },
+  { key: "triage", label: "Triage" },
+].filter((tab) => isViewAllowed(tab.key));
 
 export default function Header({ viewMode, setViewMode, setShowAbout, setShowAgenda, onStartTour }) {
   return (
@@ -48,12 +42,13 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
           }}
         >
           <p style={{ fontSize: 14, color: "#64615b", margin: 0, lineHeight: 1.4 }}>
-            {SHOW_ANALYSIS_TABS
-              ? "Four decades of cultural displacement — 1990 to 2025"
-              : "Displacement data + outreach planning for Preservation Austin's Community Engagement committee"}
+            {PRESENTER_MODE
+              ? "Presenter mode (this computer only) — displacement data + outreach planning for Preservation Austin's Community Engagement committee"
+              : "Four decades of cultural displacement — 1990 to 2025"}
           </p>
           <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-            <nav aria-label="View mode" style={{ display: "flex", background: "#edeae4", borderRadius: 8, padding: 3 }}>
+            {/* A single-view build needs no tab bar */}
+            <nav aria-label="View mode" style={{ display: TABS.length > 1 ? "flex" : "none", background: "#edeae4", borderRadius: 8, padding: 3 }}>
               {TABS.map((tab) => (
                 <button
                   key={tab.key}
@@ -76,7 +71,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, setShowAge
                 </button>
               ))}
             </nav>
-            {onStartTour && SHOW_ANALYSIS_TABS && (
+            {onStartTour && PRESENTER_MODE && (
               <button
                 onClick={onStartTour}
                 style={{

@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import methodologyText from "../DATA_METHODOLOGY.md?raw";
+import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 
 export default function AboutModal({ onClose }) {
   const [showMethodology, setShowMethodology] = useState(false);
@@ -81,8 +82,10 @@ export default function AboutModal({ onClose }) {
               community-sourced business inventories to reveal where heritage communities are
               under pressure — and where intervention can still make a difference. This is an
               independent research tool built as a potential resource for organizations like
-              Preservation Austin. New here? The <strong>▶ Tour</strong> button in the header
-              gives a 3-minute guided walkthrough.
+              Preservation Austin.
+              {PRESENTER_MODE && (
+                <> New here? The <strong>▶ Tour</strong> button in the header gives a 3-minute guided walkthrough.</>
+              )}
             </p>
 
             <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
@@ -93,6 +96,7 @@ export default function AboutModal({ onClose }) {
               DVI with a time slider from 1990 to 2025. Toggle overlays for heritage businesses,
               music venues, Project Connect transit lines, and development pressure.
             </p>
+            {isViewAllowed("history") && (
             <p style={{ margin: "0 0 4px" }}>
               <strong>History</strong> — A documented timeline of 112 events spanning 13,600 years
               of who shaped, and who was displaced from, the land that became Austin — from
@@ -100,16 +104,21 @@ export default function AboutModal({ onClose }) {
               today. Each event carries a documentation flag, and events with a location can
               jump straight onto the main map at the year they happened.
             </p>
+            )}
+            {isViewAllowed("compare") && (
             <p style={{ margin: "0 0 4px" }}>
               <strong>Compare</strong> — Place two neighborhoods side by side to contrast DVI trends,
               demographics, home values, and cultural anchors.
             </p>
+            )}
+            {isViewAllowed("triage") && (
             <p style={{ margin: "0 0 12px" }}>
               <strong>Triage</strong> — A grant-prioritization tool with three analytical lenses
               (Trajectory, Equity, Risk Matrix) to help target preservation funding where it
               is needed most. Triage scores are a screening prototype — a starting point for
               staff review, pending validation — not determinations about any neighborhood.
             </p>
+            )}
 
             <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
               The Displacement Vulnerability Index

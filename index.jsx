@@ -22,8 +22,9 @@ import { REGIONS_GEOJSON } from "./data/final_updated_regions";
 import { interpolateDvi, interpolateSocio, findPriorSocio } from "./utils/math";
 import { aggregateNeighborhood } from "./utils/aggregation";
 import { DEFAULT_VIEW_STATE, parseViewState, serializeViewState } from "./utils/urlState";
+import { PRESENTER_MODE, isViewAllowed } from "./appConfig";
 import { recomputeDvi } from "./data/auditedDvi";
-import { loadDviWeights, saveDviWeights, isDefaultWeights } from "./utils/dviWeights";
+import { loadDviWeights, saveDviWeights, isDefaultWeights, cloneDefaultWeights } from "./utils/dviWeights";
 import { OUTREACH_STATUS } from "./data/outreachEvents";
 
 // Components
@@ -71,7 +72,12 @@ export default function AustinCulturalMap() {
     activeRegionId, activeNeighborhoodId, compA, compB, triageLens,
   } = view;
 
-  const setViewMode = useCallback((v) => dispatch({ type: "set", key: "viewMode", value: v }), []);
+  // Every view change passes through here, so a view this build doesn't
+  // allow (see appConfig.js) can never become active.
+  const setViewMode = useCallback(
+    (v) => dispatch({ type: "set", key: "viewMode", value: isViewAllowed(v) ? v : "map" }),
+    []
+  );
   const setYear = useCallback((v) => dispatch({ type: "set", key: "year", value: v }), []);
   const setBoundaryMode = useCallback((v) => dispatch({ type: "set", key: "boundaryMode", value: v }), []);
   const setActiveRegionId = useCallback((v) => dispatch({ type: "set", key: "activeRegionId", value: v }), []);
@@ -101,7 +107,9 @@ export default function AustinCulturalMap() {
   // applied before the first paint. dviVersion busts every DVI-derived memo
   // and map-style effect after a recalculation.
   const [dviWeights, setDviWeights] = useState(() => {
-    const w = loadDviWeights();
+    // Public builds have no weights panel, so they always show the published
+    // default weights — never a custom set left in this browser's storage.
+    const w = PRESENTER_MODE ? loadDviWeights() : cloneDefaultWeights();
     if (!isDefaultWeights(w)) recomputeDvi(w);
     return w;
   });
@@ -370,7 +378,7 @@ export default function AustinCulturalMap() {
       />
 
       {/* Guided tour (~3 min) — drives the app through its three purposes */}
-      {tourOpen && (
+      {PRESENTER_MODE && tourOpen && (
         <GuidedTour
           onClose={() => setTourOpen(false)}
           ctx={{
@@ -398,29 +406,29 @@ export default function AustinCulturalMap() {
 
       {/* Main Content */}
       <main id="main-content" style={{ width: "100%", padding: "16px 28px 40px" }}>
-        {viewMode === "outreach" && (
+        {PRESENTER_MODE && viewMode === "outreach" && (
           <ErrorBoundary>
             <OutreachView onLocate={handleLocateEvent} dviVersion={dviVersion} />
           </ErrorBoundary>
         )}
 
-        {viewMode === "plan" && (
+        {PRESENTER_MODE && viewMode === "plan" && (
           <ErrorBoundary>
             <StrategicPlanView />
           </ErrorBoundary>
         )}
 
-        {viewMode === "timeline" && (
+        {PRESENTER_MODE && viewMode === "timeline" && (
           <TimelineView tlFilter={tlFilter} setTlFilter={setTlFilter} />
         )}
 
-        {viewMode === "history" && (
+        {PRESENTER_MODE && viewMode === "history" && (
           <ErrorBoundary>
             <HistoryView initialEventId={historyFocusId} onShowOnMap={handleShowEventOnMap} />
           </ErrorBoundary>
         )}
 
-        {viewMode === "compare" && (
+        {PRESENTER_MODE && viewMode === "compare" && (
           <ComparisonView
             compA={compA}
             setCompA={setCompA}
@@ -430,7 +438,7 @@ export default function AustinCulturalMap() {
           />
         )}
 
-        {viewMode === "triage" && (
+        {PRESENTER_MODE && viewMode === "triage" && (
           <TriageView
             boundaryMode={boundaryMode}
             onLocateOnMap={handleLocateOnMap}

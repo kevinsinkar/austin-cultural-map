@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "present": "vite --mode presenter --open",
     "build": "vite build",
+    "check:public": "node scripts/check_public_bundle.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "propagate": "node archive/data/propagateRegionIds.js"

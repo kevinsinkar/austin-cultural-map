@@ -1,8 +1,13 @@
 name: Deploy to GitHub Pages
 
+# Publishes the PUBLIC build only (`npm run build`). Presenter mode
+# (`npm run present`) is local and is never built here.
+# One publishing branch, so a push to another branch can't overwrite the
+# live site with an older build.
 on:
   push:
-    branches: [main, test]
+    branches: [test]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -26,6 +31,9 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      # Refuse to publish if private outreach data or a presenter-only
+      # view made it into the bundle.
+      - run: npm run check:public
 
       - uses: actions/upload-pages-artifact@v3
         with:

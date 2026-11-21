@@ -8,7 +8,19 @@ An interactive data visualization mapping four decades of cultural displacement 
 
 ## Current focus: PA Community Engagement
 
-The site is currently repurposed as an outreach-planning tool for Preservation Austin's Community Engagement committee. Three tabs are shown (**Map**, **Outreach**, **Strategic Plan**); the analysis views below still exist and work via direct URL (`#/history`, `#/compare`, `#/triage`) — flip `SHOW_ANALYSIS_TABS` in `appConfig.js` to bring their tabs back.
+The site is currently repurposed as an outreach-planning tool for Preservation Austin's Community Engagement committee. It builds in two modes:
+
+| | Public build | Presenter mode |
+|---|---|---|
+| Command | `npm run build` (and `npm run dev`) | `npm run present` |
+| Where it runs | GitHub Pages | This computer only (`localhost`) |
+| Views | Map | Map, Outreach, Strategic Plan, History, Compare, Triage |
+| Private data | None — the outreach dataset is replaced by an empty list | Full outreach dataset, including organizer contacts |
+| DVI weights | Published defaults, no panel | Adjustable, saved in the browser |
+
+The mode is fixed when the bundle is built (`appConfig.js`, `vite.config.js`), so the public site cannot be switched into presenter mode from the browser, and the other views do not open by direct URL. `npm run check:public` inspects `dist/` and fails if contact details or a presenter-only view are in it; the deploy workflow runs it before publishing. Never upload a presenter build.
+
+Everything below describes presenter mode unless it says otherwise.
 
 - **Tabling Opportunities layer** — 320 events, recurring series, and civic listening bodies (Oct 2026 – Dec 2027) from the committee's research database, pinned over the DVI choropleth. Pins are colored by tabling status (open to nonprofits / vendor fee / partner-only / listening / unknown) with filters and an upcoming-events horizon. A council-district overlay (official 10-1 boundaries) can be toggled in Layers.
 - **Outreach planner** (Outreach tab) — the committee worklist: date-sorted, filterable by status, mission fit, council district, advocacy arena, and type; per-event pipeline stage (identified → contacted → applied → confirmed → tabled) with outcome capture (attendance, signups) on tabled events; notes saved in the browser; CSV export for the monthly meeting; "show on map" drops a pin at the event location.

@@ -20,6 +20,7 @@ import ConfidenceChip from "./ConfidenceChip";
 import DviWeightsPanel from "./DviWeightsPanel";
 import { OUTREACH_STATUS } from "../data/outreachEvents";
 import { groupShare } from "../utils/dviWeights";
+import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 
 export default function MapView({
   year,
@@ -190,12 +191,13 @@ export default function MapView({
         { on: showDistricts, toggle: () => setShowDistricts(!showDistricts), label: "Council districts (10-1)", icon: <span style={{ width: 9, height: 9, borderRadius: 2, border: "1.5px dashed #4338ca" }} aria-hidden="true" /> },
       ],
     },
-    {
+    // Tabling opportunities are private planning data — presenter mode only.
+    ...(PRESENTER_MODE ? [{
       title: "Outreach",
       items: [
         { on: showOutreach, toggle: () => setShowOutreach(!showOutreach), label: "Tabling opportunities", icon: <span style={{ width: 9, height: 9, background: "#15803d", transform: "rotate(45deg)", borderRadius: 2 }} aria-hidden="true" /> },
       ],
-    },
+    }] : []),
     {
       title: "Cultural assets",
       items: [
@@ -228,10 +230,10 @@ export default function MapView({
           {/* Toolbar: grouped Layers popover */}
           <div style={{ display: "flex", gap: 12, marginBottom: 10, alignItems: "center", flexWrap: "wrap" }} role="toolbar" aria-label="Map controls">
             <LayersPopover boundaryMode={boundaryMode} setBoundaryMode={setBoundaryMode} groups={layerGroups} />
-            {dviWeights && onApplyDviWeights && (
+            {PRESENTER_MODE && dviWeights && onApplyDviWeights && (
               <DviWeightsPanel weights={dviWeights} onApply={onApplyDviWeights} />
             )}
-            {showOutreach && (
+            {PRESENTER_MODE && showOutreach && (
               <div style={{ display: "flex", gap: 5, alignItems: "center", flexWrap: "wrap" }} aria-label="Tabling opportunity filters">
                 {Object.entries(OUTREACH_STATUS).map(([key, meta]) => (
                   <button
@@ -348,7 +350,7 @@ export default function MapView({
                   ))}
                 </div>
               )}
-              {showOutreach && (
+              {PRESENTER_MODE && showOutreach && (
                 <div style={{ paddingTop: 6, marginTop: 6, borderTop: "1px solid #e8e5e0" }}>
                   <div style={{ fontSize: 10.5, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em", marginBottom: 3 }}>
                     Tabling opportunities
@@ -456,7 +458,7 @@ export default function MapView({
                             {evt.year} — {evt.label}
                           </div>
                           <p style={{ fontSize: 11, color: "#44403c", lineHeight: 1.5, margin: 0 }}>{evt.blurb}</p>
-                          {onOpenHistory && (
+                          {onOpenHistory && isViewAllowed("history") && (
                             <button
                               onClick={() => { setOpenTick(null); onOpenHistory(evt.historyEventId); }}
                               style={{ marginTop: 8, padding: "4px 10px", borderRadius: 6, border: "1px solid #0f766e", background: "#f0fdfa", color: "#0f766e", fontSize: 11, fontWeight: 600, cursor: "pointer" }}
