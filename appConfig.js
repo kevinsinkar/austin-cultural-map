@@ -20,8 +20,9 @@ export const PRESENTER_MODE = import.meta.env.MODE === "presenter";
 //
 // To publish another view later, add its key to PUBLIC_VIEWS *and* remove
 // the PRESENTER_MODE gate on its render in index.jsx. Keep "outreach"
-// (planning data, organizer contacts) and "triage" (a ranked list of
-// neighborhoods, which the project has decided not to publish) out of it.
+// (planning data, organizer contacts) and "triage" (lists of neighborhoods
+// grouped for screening; the project has decided not to publish anything
+// that reads as a ranking of neighborhoods by risk) out of it.
 const PUBLIC_VIEWS = ["map", "card"];
 
 const ALL_VIEWS = ["map", "card", "outreach", "plan", "history", "compare", "triage", "timeline"];

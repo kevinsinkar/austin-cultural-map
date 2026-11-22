@@ -44,7 +44,7 @@ const STEPS = [
   },
   {
     title: "Where to focus outreach",
-    body: "Triage ranks every region through three screening lenses — this one asks which underserved communities need investment most. Treat the scores as what they are: a screening prototype and a conversation starter for staff and board, pending validation — not a verdict on any neighborhood.",
+    body: "Triage asks three questions of the map's stages. This lens sets each place's stage beside the Preservation Austin listings recorded near it. Every place falls in a group by a stated rule; there is no score. Treat the groups as a list to look into and a conversation starter, not a verdict on any neighborhood.",
     apply: (c) => { c.setIsPlaying(false); c.setViewMode("triage"); c.setTriageLens("equity"); },
   },
   {

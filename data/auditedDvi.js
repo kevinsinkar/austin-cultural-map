@@ -177,7 +177,6 @@ function socioScore(s, w) {
  * for a (region, year) to get a DVI point at all. Below this, re-weighting
  * degenerates into echoing a single field — the 2000 rows carry ONLY
  * owner-occupancy, so every low-ownership tract scored a spurious 100.
- * Matches the ≥3-shared-fields honesty threshold in comparableDviPair.
  */
 const MIN_FIELDS_FOR_DVI = 3;
 
@@ -209,7 +208,7 @@ export function computeDviLookup(weights = DEFAULT_DVI_WEIGHTS) {
 
       // Fraction of the 8 underlying input fields present for this
       // (region, year). Consumers use it to judge whether two years'
-      // DVI values are comparable (e.g., Trajectory velocity).
+      // scores are comparable.
       const coverage = +(
         (Vr.present + Pr.present + Sr.present) /
         (Vr.total + Pr.total + Sr.total)

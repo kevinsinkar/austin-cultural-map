@@ -45,7 +45,7 @@ if (fs.existsSync(privateFile)) {
 const MARKERS = {
   "Outreach planner": "pa-outreach-plan-v1",
   "Coverage view": "outreach desert",
-  "Triage ranking": "Which neighborhoods should receive preservation grants",
+  "Triage view": "triage-lenses-v2",
   // The rest are not private, but are not meant for the public site either:
   // the internal roadmap, the History research (compiled with AI assistance
   // and not yet reviewed by Preservation Austin), the plan and Compare views.

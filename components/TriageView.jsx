@@ -1,661 +1,573 @@
-import { useState, useMemo, useCallback } from "react";
-import _ from "lodash";
+import { useState, useMemo } from "react";
 import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ZAxis, Cell, ReferenceLine,
+  ResponsiveContainer, ReferenceLine,
 } from "recharts";
-import { VISIBLE_REGIONS } from "../data/regionLookup";
+import { STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED } from "../utils/stages";
 import {
-  calcTrajectory, calcEquityPriority, calcRiskMatrix,
-  calcDirectDisplacement, getDviBandColor,
-} from "../utils/math";
+  LENSES, LENS_BY_KEY, LENS_REGION, PA_LISTING_COUNTS, lensRows, groupCounts, lensSummary, carriedCount,
+} from "../utils/lenses";
 
-// ── Default DVI sub-index weights ──
-const DEFAULT_WEIGHTS = { demographic: 0.35, market: 0.35, socioeconomic: 0.30 };
+/**
+ * Triage (presenter mode only): three questions asked of the map's
+ * displacement stages. Each lens sorts every census tract into a group by a
+ * stated rule and shows the measured figures behind it. There is no
+ * composite score. The rules and formulas are printed at the foot of the
+ * view and in DATA_METHODOLOGY.md, section 6.
+ */
 
-// ── Lens definitions ──
-const LENSES = [
-  {
-    key: "trajectory",
-    label: "Trajectory",
-    question: "Where is displacement accelerating fastest?",
-    description: "Ranks regions by how rapidly displacement is intensifying and whether an intervention window remains open.",
+// Dots for places with no stage: darker than the map's near-clear fill so
+// they stay visible on white, still clearly recessive.
+const NONE_DOT = "#b7b2a9";
+const INK = "#1a1a1a";
+const dotColor = (cls) => (cls === "none" || cls === "unscored" ? NONE_DOT : STAGE_CLASSES.find((c) => c.key === cls)?.fill || NONE_DOT);
+
+// ── Number formats ──
+const DASH = "—";
+const signed = (v, digits = 2) => (v == null ? DASH : `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(digits)}`);
+const pct = (v, digits = 0) => (v == null ? DASH : `${v.toFixed(digits)}%`);
+const money = (v) => (v == null ? DASH : v >= 10000 ? `$${Math.round(v / 1000).toLocaleString()}k` : `$${Math.round(v).toLocaleString()}`);
+const count = (v) => (v == null ? DASH : String(v));
+
+// A fixed, small vertical offset per tract so dots that share a whole-number
+// count do not sit exactly on top of each other.
+const jitter = (id) => (((id * 37) % 21) - 10) / 10 * 0.22;
+
+// ── What each lens plots ──
+const PLOTS = {
+  trajectory: {
+    title: "Change since 2000 against the shift since the 2011–2015 survey",
+    x: { label: "Change since 2000 (index)", get: (r) => r.dIndex, fmt: (v) => signed(v) },
+    y: { label: "Shift since 2011–2015 (index)", get: (r) => r.rIndex, fmt: (v) => signed(v) },
+    caption: "Each dot is a census tract, colored by its stage. Dots above the horizontal line shifted more than the region between the two latest surveys; dots right of the vertical line changed more than the region since 2000. Both lines are at 0.5, the line the stage tests use.",
   },
-  {
-    key: "equity",
-    label: "Equity",
-    question: "Which underserved communities need investment most?",
-    description: "Prioritizes underrepresented heritage communities with high need and low preservation investment.",
+  equity: {
+    title: "People of color as a share of residents, 2000 against today",
+    x: { label: "People of color in 2000 (%)", get: (r) => r.pocThen, fmt: (v) => pct(v, 1) },
+    y: { label: "People of color, 2019–2023 (%)", get: (r) => r.pocNow, fmt: (v) => pct(v, 1) },
+    caption: "Each dot is a census tract, colored by its stage. A filled dot has a Preservation Austin listing nearby; a ring has none. Dots below the diagonal have a smaller share of residents of color than in 2000.",
   },
-  {
-    key: "matrix",
-    label: "Risk Matrix",
-    question: "What type of intervention does each area need?",
-    description: "Plots regions across four dimensions to match areas with appropriate grant types.",
+  matrix: {
+    title: "Vulnerability measures met against the rise in home values",
+    x: { label: "Rise in value since 2000, ranked among these tracts (0–100)", get: (r) => r.risePct, fmt: (v) => (v == null ? DASH : v.toFixed(0)) },
+    y: { label: "Vulnerability measures past the line (of 5)", get: (r) => r.vCount, fmt: (v) => count(v) },
+    caption: "Each dot is a census tract, colored by its stage. Above the horizontal line a tract meets 3 or more of the 5 measures and counts as vulnerable. Right of the vertical line its rise in value is in the top two fifths. Dots are nudged up or down slightly so they do not hide each other.",
   },
-];
-
-// ── Per-lens categories, colors, columns ──
-const TRAJECTORY_CATS = [
-  "Urgent — Active Window",
-  "High Priority — Accelerating",
-  "Emerging — Monitor Closely",
-  "Stable — Low Priority",
-  "Post-Displacement or Stable",
-  "Affluent / Appreciated",
-];
-const TRAJECTORY_COLORS = {
-  "Urgent — Active Window": "#dc2626",
-  "High Priority — Accelerating": "#ea580c",
-  "Emerging — Monitor Closely": "#f59e0b",
-  "Stable — Low Priority": "#16a34a",
-  "Post-Displacement or Stable": "#64748b",
-  "Affluent / Appreciated": "#1565C0",
-};
-const TRAJECTORY_COLS = [
-  { key: "category", label: "Priority" },
-  { key: "name", label: "Region" },
-  { key: "priority", label: "Score" },
-  { key: "dvi2023", label: "DVI '23" },
-  { key: "bhDelta", label: "ΔB+H pts" },
-  { key: "velocity", label: "Velocity" },
-  { key: "acceleration", label: "Accel." },
-  { key: "interventionWindow", label: "Window" },
-];
-
-const EQUITY_CATS = [
-  "Equity Priority — Underserved",
-  "Heritage at Risk",
-  "Moderate Need",
-  "Lower Priority",
-  "Affluent / Appreciated",
-];
-const EQUITY_COLORS = {
-  "Equity Priority — Underserved": "#dc2626",
-  "Heritage at Risk": "#ea580c",
-  "Moderate Need": "#f59e0b",
-  "Lower Priority": "#16a34a",
-  "Affluent / Appreciated": "#1565C0",
-};
-const EQUITY_COLS = [
-  { key: "category", label: "Priority" },
-  { key: "name", label: "Region" },
-  { key: "priority", label: "Score" },
-  { key: "dvi", label: "DVI" },
-  { key: "equityDeficit", label: "Equity Gap" },
-  { key: "econPrecarity", label: "Econ. Risk" },
-  { key: "preservationGap", label: "PA Gap" },
-];
-
-const MATRIX_CATS = [
-  "Crisis — Fund Now",
-  "Crisis — Document",
-  "Urgent — Prevent",
-  "Chronic — Invest",
-  "Chronic — Systemic",
-  "Monitor",
-  "Affluent / Appreciated",
-];
-const MATRIX_COLORS = {
-  "Crisis — Fund Now": "#dc2626",
-  "Crisis — Document": "#be123c",
-  "Urgent — Prevent": "#ea580c",
-  "Chronic — Invest": "#7c3aed",
-  "Chronic — Systemic": "#6366f1",
-  "Monitor": "#16a34a",
-  "Affluent / Appreciated": "#1565C0",
-};
-const MATRIX_COLS = [
-  { key: "category", label: "Action" },
-  { key: "name", label: "Region" },
-  { key: "marketPressure", label: "Market" },
-  { key: "communityVuln", label: "Vulnerability" },
-  { key: "culturalSig", label: "Cultural" },
-  { key: "feasibility", label: "Feasibility" },
-  { key: "grantType", label: "Grant Type" },
-];
-
-const AXIS_LABELS = {
-  trajectory: { x: "DVI Score (2023) \u2192", y: "Displacement Velocity \u2191" },
-  equity: { x: "DVI Score \u2192", y: "Equity Deficit \u2191" },
-  matrix: { x: "Market Pressure \u2192", y: "Community Vulnerability \u2191" },
 };
 
-// ── Component ──
+// ── Table columns ──
+const stageSort = (r) => ["unscored", "none", "vulnerable", "early", "dynamic", "late", "loss"].indexOf(r.cls);
+const COLUMNS = {
+  trajectory: [
+    { key: "rIndex", label: "Shift since 2011–2015", hint: "Average of four z-scores for change between the 2011–2015 and 2019–2023 surveys. 0.5 or more, with two measures past the line, counts as a shift. ≈ marks 2011–2015 figures estimated from earlier tract boundaries.", value: (r) => r.rIndex, text: (r) => `${signed(r.rIndex)}${r.rIndex != null && r.carried ? " ≈" : ""}`, flag: (r) => r.recent === true },
+    { key: "dIndex", label: "Change since 2000", hint: "Average of the same four z-scores for change between the 2000 Census and the 2019–2023 survey.", value: (r) => r.dIndex, text: (r) => signed(r.dIndex), flag: (r) => r.changed === true },
+    { key: "recentRise", label: "Value rise since 2011–2015", hint: "Percent change in median home value (median rent where few homes are owned) between the two surveys. Bold when in the top two fifths.", value: (r) => r.recentRise, text: (r) => (r.recentRise == null ? DASH : `${r.recentRise > 0 ? "+" : ""}${r.recentRise}%`), flag: (r) => r.recentHigh === true },
+    { key: "bhDelta", label: "Black + Hispanic share since 2000", hint: "Change in the Black and Hispanic share of residents, in percentage points, from 2000 (2010 where 2000 is missing) to 2023.", value: (r) => r.bhDelta, text: (r) => (r.bhDelta == null ? DASH : `${signed(r.bhDelta, 1)} pts`) },
+  ],
+  equity: [
+    { key: "vCount", label: "Measures past the line", hint: "How many of the five vulnerability measures are well above the region. Three or more counts as vulnerable.", value: (r) => r.vCount, text: (r) => (r.vCount == null ? DASH : `${r.vCount} of 5`), flag: (r) => r.vulnerableNow === true },
+    { key: "pocThen", label: "People of color, 2000", hint: "Residents who are not white non-Hispanic, as a share of all residents, 2000 Census.", value: (r) => r.pocThen, text: (r) => pct(r.pocThen) },
+    { key: "pocNow", label: "People of color, now", hint: "The same share in the 2019–2023 survey.", value: (r) => r.pocNow, text: (r) => pct(r.pocNow) },
+    { key: "bhDelta", label: "Black + Hispanic share since 2000", hint: "Change in the Black and Hispanic share of residents, in percentage points, from 2000 (2010 where 2000 is missing) to 2023.", value: (r) => r.bhDelta, text: (r) => (r.bhDelta == null ? DASH : `${signed(r.bhDelta, 1)} pts`) },
+    { key: "paNear", label: "PA listings nearby", hint: "Preservation Austin grants, awards, Legacy Business Month listings and advocacy within about 1.3 km of the tract's center. Citywide listings are not counted.", value: (r) => r.paNear, text: (r) => count(r.paNear), flag: (r) => r.paNear > 0 },
+    { key: "biz", label: "Tracked businesses", hint: "Legacy businesses this site tracks in the tract: open / closed. Most tracts have none tracked, which reflects where surveys were done.", value: (r) => r.bizOpen + r.bizClosed, text: (r) => (r.bizOpen + r.bizClosed ? `${r.bizOpen} open / ${r.bizClosed} closed` : DASH) },
+  ],
+  matrix: [
+    { key: "vCount", label: "Measures past the line", hint: "How many of the five vulnerability measures are well above the region. Three or more counts as vulnerable.", value: (r) => r.vCount, text: (r) => (r.vCount == null ? DASH : `${r.vCount} of 5`), flag: (r) => r.vulnerableNow === true },
+    { key: "valueNow", label: "Value now", hint: "Median home value in the 2019–2023 survey. Tracts with few owner homes show median monthly rent instead.", value: (r) => r.housing?.now ?? null, text: (r) => (r.housing ? `${money(r.housing.now)}${r.housing.isRent ? " rent" : ""}` : DASH) },
+    { key: "rise", label: "Rise since 2000", hint: "Percent change in that value since the 2000 Census, in dollars of each year.", value: (r) => r.housing?.rise ?? null, text: (r) => (r.housing ? `+${Math.round(r.housing.rise).toLocaleString()}%` : DASH), flag: (r) => r.riseHigh === true },
+    { key: "risePct", label: "Rank of the rise", hint: "Where the rise sits among the scored tracts on this map, 0 (smallest) to 100 (largest). Above 60 is the top two fifths.", value: (r) => r.risePct, text: (r) => (r.risePct == null ? DASH : r.risePct.toFixed(0)) },
+    { key: "pattern", label: "Market pattern", hint: "The housing pattern the stage test found: accelerating, appreciated, adjacent, or none.", value: (r) => r.housing?.name || "", text: (r) => r.housing?.name || DASH, align: "left" },
+    { key: "biz", label: "Tracked businesses", hint: "Legacy businesses this site tracks in the tract: open / closed. Most tracts have none tracked, which reflects where surveys were done.", value: (r) => r.bizOpen + r.bizClosed, text: (r) => (r.bizOpen + r.bizClosed ? `${r.bizOpen} open / ${r.bizClosed} closed` : DASH) },
+  ],
+};
+// Within a group, the order that answers the lens's question.
+const TIE_BREAK = {
+  trajectory: (a, b) => (b.rIndex ?? -99) - (a.rIndex ?? -99),
+  equity: (a, b) => (b.vCount ?? -1) - (a.vCount ?? -1) || (b.pocNow ?? -1) - (a.pocNow ?? -1),
+  matrix: (a, b) => (b.risePct ?? -1) - (a.risePct ?? -1),
+};
 
-export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp, setLens: setLensProp }) {
+// ── How each lens is worked out: formula, then the data behind each term ──
+const regionLine = (k, unit) => `${signed(LENS_REGION.d[k][0], 1)}${unit}, line ${signed(LENS_REGION.d[k][1], 1)}${unit}`;
+const FORMULAS = {
+  trajectory: [
+    {
+      figure: "Shift since 2011–2015 (index)",
+      formula: "index = (z_owners + z_white + z_bachelor's + z_income) ÷ 4, where z = (change in the tract − change in the region) ÷ spread",
+      data: [
+        ["Change", "2019–2023 survey minus 2011–2015 survey, on today's tract boundaries. Shares in percentage points; income in percent."],
+        ["Owners", `Owner-occupied ÷ occupied homes, ACS table B25003. Region ${regionLine("owner", " pts")}.`],
+        ["White", `White non-Hispanic ÷ all residents, ACS B03002. Region ${regionLine("white", " pts")}.`],
+        ["Bachelor's", `Adults 25+ with a four-year degree ÷ adults 25+, ACS B15002. Region ${regionLine("ba", " pts")}.`],
+        ["Income", `Median family income, ACS B19113. Region ${regionLine("mfi", "%")}.`],
+        ["Region", "Bastrop, Caldwell, Hays, Travis and Williamson counties together."],
+        ["Spread", "Standard deviation of the tracts' changes around the region's change, weighted by each tract's homes, residents, adults or families."],
+      ],
+    },
+    {
+      figure: "Shifted, yes or no",
+      formula: "yes when at least 2 of the 4 z-scores are above 0.5 and the index is 0.5 or more",
+      data: [["Rule", "The same rule the stage test uses for demographic change since 2000, applied to the two latest surveys that share no interviews."]],
+    },
+    {
+      figure: "Change since 2000 (index)",
+      formula: "the same index, with change measured from the 2000 Census to the 2019–2023 survey",
+      data: [["2000 figures", "Census 2000 tables H004 (owners), P004 (white non-Hispanic), SF3 P037 (bachelor's) and P077 (median family income), carried onto today's tract boundaries."]],
+    },
+    {
+      figure: "Value rise since 2011–2015",
+      formula: "rise = (value now − value then) ÷ value then × 100",
+      data: [["Value", `Median home value, ACS B25077; median gross rent, B25064, where fewer than 50 homes are owned. "Fast" is above the 60th percentile of scored tracts: +${LENS_REGION.recentRiseLine.value}% for home values, +${LENS_REGION.recentRiseLine.rent}% for rents.`]],
+    },
+    {
+      figure: "Stage in each survey year",
+      formula: "the map's stage for 2010, 2015, 2020 and 2023",
+      data: [["Stage", "The three-part test of DATA_METHODOLOGY.md §3, run on the 2006–2010, 2011–2015, 2016–2020 and 2019–2023 surveys."]],
+    },
+  ],
+  equity: [
+    {
+      figure: "People of color (share)",
+      formula: "share = (all residents − white non-Hispanic residents) ÷ all residents × 100",
+      data: [
+        ["2000", "Census 2000 tables P001 and P004, carried onto today's tract boundaries."],
+        ["Now", "ACS 2019–2023 table B03002."],
+      ],
+    },
+    {
+      figure: "Measures past the line",
+      formula: "count of the five vulnerability shares whose z is above 0.5, where z = (share in the tract − share in the region) ÷ spread",
+      data: [["Shares", "People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS 2019–2023."]],
+    },
+    {
+      figure: "Black + Hispanic share (change)",
+      formula: "change = share in 2023 − share in 2000, in percentage points",
+      data: [["Shares", "Black non-Hispanic plus Hispanic residents ÷ all residents, from the site's census file (data/phase1_output). 2010 is used where a tract has no 2000 figure."]],
+    },
+    {
+      figure: "PA listings nearby",
+      formula: "count of listings where distance(listing, tract center) < 0.012 degrees (about 1.3 km)",
+      data: [
+        ["Listings", "Preservation Austin's published grants (2016–2025), merit awards (2022–2025), Legacy Business Month listings (2023–2025) and advocacy milestones, as compiled in data/preservationAustin.js. Listings filed as citywide have no place and are not counted."],
+        ["Tract center", "The center point of the tract's shape (data/regionIndex.js)."],
+      ],
+    },
+  ],
+  matrix: [
+    {
+      figure: "Measures past the line",
+      formula: "count of the five vulnerability shares whose z is above 0.5; 3 or more = vulnerable",
+      data: [["Shares", "People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS 2019–2023; the 2000 reading uses Census 2000 tables P004, H004 and SF3 P052, P087, P037."]],
+    },
+    {
+      figure: "Rise since 2000",
+      formula: "rise = (value now − value in 2000) ÷ value in 2000 × 100",
+      data: [["Value", "Median home value: Census 2000 SF3 table H085 and ACS 2019–2023 table B25077. Median gross rent (H063, B25064) where fewer than 50 homes are owned in either year. Dollars of each year."]],
+    },
+    {
+      figure: "Rank of the rise",
+      formula: "rank = (number of scored tracts with a smaller rise) ÷ (scored tracts − 1) × 100; above 60 = rising fast",
+      data: [["Scored tracts", "The tracts on this map that are scored in the 2019–2023 survey, ranked separately for home values and for rents."]],
+    },
+  ],
+};
+
+function StageSwatch({ cls, size = 11 }) {
+  const dashed = cls?.key === "unscored";
+  return (
+    <span
+      aria-hidden="true"
+      className="triage-swatch"
+      style={{ width: size, height: size, background: cls ? cls.fill : "transparent", borderStyle: dashed || !cls ? "dashed" : "solid" }}
+    />
+  );
+}
+
+function StagePath({ path }) {
+  const text = path.map((p) => `${p.year} ${p.cls ? p.cls.label : "no reading"}`).join(", ");
+  return (
+    <span className="triage-path" role="img" aria-label={text} title={text}>
+      {path.map((p) => <StageSwatch key={p.year} cls={p.cls} size={12} />)}
+    </span>
+  );
+}
+
+/** Hover card for a dot. Recharts adds `active` and `payload`. */
+function DotTooltip({ active, payload, plot, lensKey, groups }) {
+  if (!active || !payload?.length) return null;
+  const r = payload[0].payload.row;
+  return (
+    <div className="triage-tooltip">
+      <div className="triage-tooltip-name">{r.name}{r.tract ? ` · tract ${r.tract}` : ""}</div>
+      <div className="triage-tooltip-stage"><StageSwatch cls={r.stage.cls} /> {r.stage.cls.label}</div>
+      <div>{plot.x.label}: <strong>{plot.x.fmt(plot.x.get(r))}</strong></div>
+      <div>{plot.y.label}: <strong>{plot.y.fmt(plot.y.get(r))}</strong></div>
+      {lensKey === "equity" && <div>PA listings nearby: <strong>{r.paNear}</strong></div>}
+      <div className="triage-tooltip-group">{groups[r.groups[lensKey]].label}</div>
+    </div>
+  );
+}
+
+export default function TriageView({ onLocateOnMap, lens: lensProp, setLens: setLensProp }) {
   // Lens is controlled by the app (URL-synced) when provided; local otherwise.
   const [localLens, setLocalLens] = useState("equity");
-  const lens = lensProp ?? localLens;
+  const lensKey = LENS_BY_KEY[lensProp ?? localLens] ? (lensProp ?? localLens) : "equity";
   const setLens = setLensProp ?? setLocalLens;
-  const [sortCol, setSortCol] = useState("priority");
-  const [sortDir, setSortDir] = useState("desc");
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [weights, setWeights] = useState({ ...DEFAULT_WEIGHTS });
+  const [sort, setSort] = useState({ col: "group", dir: "asc" });
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterCategory, setFilterCategory] = useState("all");
-  const [selectedRegionId, setSelectedRegionId] = useState(null);
+  const [filterGroup, setFilterGroup] = useState("all");
+  const [selectedId, setSelectedId] = useState(null);
 
-  const handleWeightChange = useCallback((key, newVal) => {
-    setWeights((prev) => {
-      const clamped = Math.max(0, Math.min(1, newVal));
-      const remaining = 1 - clamped;
-      const otherKeys = Object.keys(prev).filter((k) => k !== key);
-      const otherSum = otherKeys.reduce((s, k) => s + prev[k], 0);
-      const next = { ...prev, [key]: clamped };
-      if (otherSum > 0) {
-        for (const k of otherKeys) next[k] = +(remaining * (prev[k] / otherSum)).toFixed(3);
-      } else {
-        for (const k of otherKeys) next[k] = +(remaining / otherKeys.length).toFixed(3);
-      }
-      return next;
-    });
-  }, []);
+  const lens = LENS_BY_KEY[lensKey];
+  const rows = useMemo(() => lensRows(), []);
+  const counts = useMemo(() => groupCounts(lensKey, rows), [lensKey, rows]);
+  const summary = useMemo(() => lensSummary(lensKey, rows), [lensKey, rows]);
+  const groupOrder = useMemo(() => Object.fromEntries(lens.groups.map((g, i) => [g.key, i])), [lens]);
+  const groupByKey = useMemo(() => Object.fromEntries(lens.groups.map((g) => [g.key, g])), [lens]);
+  const plot = PLOTS[lensKey];
+  const columns = COLUMNS[lensKey];
+  const selected = selectedId != null ? rows.find((r) => r.regionId === selectedId) : null;
 
-  const resetWeights = useCallback(() => setWeights({ ...DEFAULT_WEIGHTS }), []);
-
-  // ── Compute all three lenses in one pass ──
-  const { trajectoryData, equityData, matrixData } = useMemo(() => {
-    const traj = [];
-    const eq = [];
-    const mat = [];
-
-    VISIBLE_REGIONS.forEach(r => {
-      const rid = r.region_id;
-      const name = r.display_name;
-
-      const t = calcTrajectory(rid);
-      if (t) {
-        // Measured Black+Hispanic share change rides alongside the modeled
-        // scores so the table shows observed displacement, not only risk.
-        const dd = calcDirectDisplacement(rid);
-        traj.push({ regionId: rid, name, ...t, bhDelta: dd?.bhDelta ?? null });
-      }
-
-      const e = calcEquityPriority(rid);
-      if (e) eq.push({ regionId: rid, name, ...e });
-
-      const m = calcRiskMatrix(rid);
-      if (m) mat.push({ regionId: rid, name, ...m });
-    });
-
-    return { trajectoryData: traj, equityData: eq, matrixData: mat };
-  }, []);
-
-  const activeData = lens === "trajectory" ? trajectoryData
-    : lens === "equity" ? equityData : matrixData;
-  const activeCols = lens === "trajectory" ? TRAJECTORY_COLS
-    : lens === "equity" ? EQUITY_COLS : MATRIX_COLS;
-  const activeColors = lens === "trajectory" ? TRAJECTORY_COLORS
-    : lens === "equity" ? EQUITY_COLORS : MATRIX_COLORS;
-  const activeCats = lens === "trajectory" ? TRAJECTORY_CATS
-    : lens === "equity" ? EQUITY_CATS : MATRIX_CATS;
-
-  // ── Scatter plot data ──
-  const scatterData = useMemo(() => {
-    if (lens === "trajectory") {
-      return activeData.map(r => ({
-        x: r.dvi2023, y: r.velocity, z: Math.max(r.interventionWindow, 10) * 3,
-        name: r.name, category: r.category, regionId: r.regionId,
-      }));
-    }
-    if (lens === "equity") {
-      return activeData.map(r => ({
-        x: r.dvi, y: r.equityDeficit, z: Math.max(r.preservationGap, 10) * 3,
-        name: r.name, category: r.category, regionId: r.regionId,
-      }));
-    }
-    return activeData.map(r => ({
-      x: r.marketPressure, y: r.communityVuln, z: Math.max(r.culturalSig, 10) * 3,
-      name: r.name, category: r.category, grantType: r.grantType, regionId: r.regionId,
-    }));
-  }, [activeData, lens]);
-
-  // ── Filtering & Sorting ──
-  const sorted = useMemo(() => {
-    let data = [...activeData];
-    if (filterCategory !== "all") {
-      data = data.filter(r => r.category === filterCategory);
-    }
-    if (searchTerm) {
-      const q = searchTerm.toLowerCase();
-      data = data.filter(r => r.name.toLowerCase().includes(q));
-    }
-    data.sort((a, b) => {
-      let va, vb;
-      if (sortCol === "category") {
-        va = activeCats.indexOf(a.category);
-        vb = activeCats.indexOf(b.category);
-      } else if (sortCol === "name" || sortCol === "grantType") {
-        va = a[sortCol] ?? "";
-        vb = b[sortCol] ?? "";
-      } else {
-        va = a[sortCol] ?? -Infinity;
-        vb = b[sortCol] ?? -Infinity;
-      }
-      if (va < vb) return sortDir === "asc" ? -1 : 1;
-      if (va > vb) return sortDir === "asc" ? 1 : -1;
-      return 0;
-    });
-    return data;
-  }, [activeData, sortCol, sortDir, searchTerm, filterCategory, activeCats]);
-
-  const toggleSort = (col) => {
-    if (sortCol === col) setSortDir(d => d === "asc" ? "desc" : "asc");
-    else { setSortCol(col); setSortDir(col === "name" || col === "category" || col === "grantType" ? "asc" : "desc"); }
-  };
-
-  const sortIcon = (col) => {
-    if (sortCol !== col) return " \u21C5";
-    return sortDir === "asc" ? " \u2191" : " \u2193";
-  };
-
-  // Reset filter when switching lenses
-  const handleLensChange = (key) => {
+  const changeLens = (key) => {
     setLens(key);
-    setFilterCategory("all");
-    setSortCol("priority");
-    setSortDir("desc");
-    setSelectedRegionId(null);
+    setFilterGroup("all");
+    setSort({ col: "group", dir: "asc" });
+    setSelectedId(null);
   };
 
-  // ── Recommendation text ──
-  const recommendation = useMemo(() => {
-    const sorted = [...activeData].sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
-    const top5 = sorted.slice(0, 5).filter(r =>
-      r.category !== "Monitor" &&
-      r.category !== "Affluent / Appreciated" &&
-      r.category !== "Stable — Low Priority" &&
-      r.category !== "Post-Displacement or Stable"
-    );
-
-    if (top5.length === 0) {
-      return "No regions currently meet the criteria for urgent intervention under this lens.";
+  // ── Scatter points: only tracts with both figures; "no stage" drawn first ──
+  const { points, unplotted } = useMemo(() => {
+    const pts = [];
+    let missing = 0;
+    for (const r of rows) {
+      const x = plot.x.get(r);
+      const y = plot.y.get(r);
+      if (x == null || y == null) { if (r.scored) missing++; continue; }
+      pts.push({ x, y: lensKey === "matrix" ? y + jitter(r.regionId) : y, row: r });
     }
+    pts.sort((a, b) => stageSort(a.row) - stageSort(b.row));
+    return { points: pts, unplotted: missing };
+  }, [rows, plot, lensKey]);
 
-    const names = top5.map(r => r.name);
-    const joined = names.length <= 2
-      ? names.join(" and ")
-      : names.slice(0, -1).join(", ") + ", and " + names[names.length - 1];
+  // Axis ranges. The two index axes run over whole numbers that cover the data.
+  const axes = useMemo(() => {
+    const whole = (vals) => {
+      const lo = Math.floor(Math.min(...vals, 0));
+      const hi = Math.ceil(Math.max(...vals, 1));
+      return { domain: [lo, hi], ticks: Array.from({ length: hi - lo + 1 }, (_, i) => lo + i) };
+    };
+    const share = { domain: [0, 100], ticks: [0, 20, 40, 60, 80, 100] };
+    if (lensKey === "trajectory") return { x: whole(points.map((p) => p.x)), y: whole(points.map((p) => p.y)) };
+    if (lensKey === "matrix") return { x: share, y: { domain: [-0.5, 5.5], ticks: [0, 1, 2, 3, 4, 5] } };
+    return { x: share, y: share };
+  }, [points, lensKey]);
 
-    if (lens === "trajectory") {
-      return `Displacement is accelerating fastest in ${joined}. These areas have open intervention windows \u2014 grants deployed now can still alter the trajectory.`;
-    }
-    if (lens === "equity") {
-      return `${joined} have the highest equity-weighted need \u2014 significant displacement pressure combined with historically underserved heritage communities and limited preservation investment.`;
-    }
-    const byType = _.groupBy(top5, "grantType");
-    const parts = Object.entries(byType).map(([type, regions]) =>
-      `${regions.map(r => r.name).join(", ")} \u2192 ${type}`
-    );
-    return `Recommended interventions: ${parts.join("; ")}.`;
-  }, [activeData, lens]);
+  // ── Table rows ──
+  const tableRows = useMemo(() => {
+    const q = searchTerm.trim().toLowerCase();
+    const list = rows.filter((r) =>
+      (filterGroup === "all" || r.groups[lensKey] === filterGroup) &&
+      (!q || r.name.toLowerCase().includes(q) || (r.tract || "").toLowerCase().includes(q)));
+    const dir = sort.dir === "asc" ? 1 : -1;
+    const col = columns.find((c) => c.key === sort.col);
+    const byGroup = (a, b) => groupOrder[a.groups[lensKey]] - groupOrder[b.groups[lensKey]] || TIE_BREAK[lensKey](a, b);
+    list.sort((a, b) => {
+      if (sort.col === "group") return dir * (groupOrder[a.groups[lensKey]] - groupOrder[b.groups[lensKey]]) || TIE_BREAK[lensKey](a, b);
+      if (sort.col === "name") return dir * a.name.localeCompare(b.name) || (a.tract || "").localeCompare(b.tract || "", undefined, { numeric: true });
+      if (sort.col === "stage") return dir * (stageSort(a) - stageSort(b)) || byGroup(a, b);
+      const va = col?.value(a);
+      const vb = col?.value(b);
+      // Places without the figure stay at the bottom in either direction.
+      if (va == null || va === "") return vb == null || vb === "" ? 0 : 1;
+      if (vb == null || vb === "") return -1;
+      return dir * (typeof va === "string" ? va.localeCompare(vb) : va - vb) || byGroup(a, b);
+    });
+    return list;
+  }, [rows, filterGroup, searchTerm, sort, columns, lensKey, groupOrder]);
 
-  // ── Scatter tooltip ──
-  const ScatterTooltip = ({ active, payload }) => {
-    if (!active || !payload?.length) return null;
-    const d = payload[0].payload;
+  const toggleSort = (col) => setSort((s) => (s.col === col
+    ? { col, dir: s.dir === "asc" ? "desc" : "asc" }
+    : { col, dir: col === "group" || col === "name" || col === "pattern" ? "asc" : "desc" }));
+  const ariaSort = (col) => (sort.col !== col ? "none" : sort.dir === "asc" ? "ascending" : "descending");
+  const sortMark = (col) => (sort.col !== col ? "" : sort.dir === "asc" ? " ↑" : " ↓");
+
+  // A group filter lights that group; with no filter, a selected place stands alone.
+  const isDimmed = (r) => {
+    if (r.regionId === selectedId) return false;
+    return filterGroup !== "all" ? r.groups[lensKey] !== filterGroup : selectedId != null;
+  };
+
+  const renderDot = (props) => {
+    const { cx, cy, payload } = props;
+    if (cx == null || cy == null) return null;
+    const r = payload.row;
+    const color = dotColor(r.cls);
+    const dim = isDimmed(r);
+    const sel = r.regionId === selectedId;
+    const hollow = lensKey === "equity" && r.paNear === 0;
+    const quiet = r.cls === "none";
     return (
-      <div style={{ background: "#fffffe", border: "1px solid #d6d3cd", borderRadius: 8, padding: "10px 14px", fontSize: 13, color: "#1a1a1a", boxShadow: "0 2px 8px rgba(0,0,0,.1)", maxWidth: 240 }}>
-        <div style={{ fontWeight: 700, marginBottom: 4 }}>{d.name}</div>
-        <div>X: <strong>{d.x?.toFixed(1)}</strong></div>
-        <div>Y: <strong>{d.y?.toFixed(1)}</strong></div>
-        {d.grantType && <div style={{ marginTop: 4, fontSize: 12, color: "#7c6f5e" }}>{d.grantType}</div>}
-        <div style={{ color: activeColors[d.category], fontWeight: 600, marginTop: 4 }}>{d.category}</div>
-      </div>
+      <circle
+        cx={cx} cy={cy} r={sel ? 7.5 : quiet ? 4 : 5.5}
+        fill={hollow ? "#fffffe" : color}
+        fillOpacity={dim ? 0.18 : hollow ? 0.9 : quiet ? 0.75 : 0.95}
+        stroke={sel ? INK : hollow ? color : "#fffffe"}
+        strokeOpacity={dim && !sel ? 0.3 : 1}
+        strokeWidth={sel ? 2.5 : hollow ? 2 : 1}
+        style={{ cursor: "pointer" }}
+      />
     );
   };
+
+  const carried = carriedCount(rows);
+  const activeGroup = filterGroup !== "all" ? groupByKey[filterGroup] : null;
+  const selectedGroup = selected ? groupByKey[selected.groups[lensKey]] : null;
 
   return (
-    <section aria-label="Grant triage view">
-      <div style={{ marginBottom: 20 }}>
-        <h2 style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 22, fontWeight: 600, color: "#1a1a1a", margin: "0 0 6px" }}>
-          Grant Triage &amp; Prioritization
-        </h2>
-        <p style={{ fontSize: 14, color: "#64615b", margin: 0, lineHeight: 1.5 }}>
-          Which neighborhoods should receive preservation grants this year? Three lenses for analyzing displacement risk across all {activeData.length} regions.
+    <section aria-label="Triage view" className="triage" data-view="triage-lenses-v2">
+      <header className="triage-head">
+        <h2>Triage: three questions to ask of the map</h2>
+        <p>
+          Each lens sorts the {rows.length} census tracts into groups by a stated rule, using the same census
+          tests as the map's stages. Colors mean what they mean on the map. There is no composite score.
         </p>
-        <p style={{ fontSize: 12, color: "#92400e", margin: "6px 0 0", lineHeight: 1.5 }}>
-          Screening prototype — these scores are a starting point for staff review and outreach, not validated determinations about any neighborhood.
+        <p className="triage-caveat">
+          A screening aid for committee discussion. It does not rank neighborhoods and is not a finding about any of them.
         </p>
-      </div>
+      </header>
 
       {/* Lens toggle */}
-      <div style={{ display: "flex", gap: 4, background: "#edeae4", borderRadius: 8, padding: 3, marginBottom: 16 }}>
-        {LENSES.map(l => (
-          <button
-            key={l.key}
-            onClick={() => handleLensChange(l.key)}
-            aria-current={lens === l.key ? "page" : undefined}
-            style={{
-              flex: 1, padding: "8px 14px", borderRadius: 6, fontSize: 13,
-              fontWeight: lens === l.key ? 600 : 400,
-              background: lens === l.key ? "#fffffe" : "transparent",
-              color: lens === l.key ? "#0f766e" : "#7c6f5e",
-              border: "none", cursor: "pointer",
-              boxShadow: lens === l.key ? "0 1px 3px rgba(0,0,0,.08)" : "none",
-              textAlign: "center", lineHeight: 1.3,
-            }}
-          >
-            <div>{l.label}</div>
-            <div style={{ fontSize: 12, fontWeight: 400, color: lens === l.key ? "#0f766e" : "var(--muted)", marginTop: 2 }}>
-              {l.question}
-            </div>
+      <div className="triage-lenses" role="group" aria-label="Choose a lens">
+        {LENSES.map((l) => (
+          <button key={l.key} type="button" onClick={() => changeLens(l.key)} aria-pressed={lensKey === l.key} className="triage-lens">
+            <span className="triage-lens-name">{l.label}</span>
+            <span className="triage-lens-question">{l.question}</span>
           </button>
         ))}
       </div>
+      <p className="triage-description">{lens.description}</p>
 
-      <p style={{ fontSize: 13, color: "#64615b", margin: "0 0 16px", lineHeight: 1.5 }}>
-        {LENSES.find(l => l.key === lens).description}
-      </p>
-
-      {/* Trajectory data-comparability caveat */}
-      {lens === "trajectory" && (() => {
-        const fallback = trajectoryData.filter(r => r.velocityComparable === false).length;
-        return (
-          <div style={{ fontSize: 12, color: "#92400e", background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 6, padding: "8px 12px", margin: "0 0 16px", lineHeight: 1.5 }}>
-            Velocity compares 2010 and 2023 using only the census fields measured in <em>both</em> years
-            (early data lacks appreciation, unemployment, and eviction entirely).
-            {fallback > 0 && ` ${fallback} of ${trajectoryData.length} regions lack enough shared fields and fall back to a low-confidence estimate.`}
-            {" "}The &ldquo;intervention window&rdquo; framing is unvalidated — treat these rankings as a screening aid.
-            {" "}The <strong>ΔB+H pts</strong> column is measured, not modeled: the change in Black + Hispanic population share (percentage points, earliest census year → 2023).
-          </div>
-        );
-      })()}
-
-      {/* Recommendation — the conclusion comes first; the scatter and
-          table below are its evidence. */}
-      <div style={{ background: "#f0fdfa", borderRadius: 10, border: "1px solid #99f6e4", padding: "16px 20px", marginBottom: 16 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <circle cx="8" cy="8" r="7" stroke="#0f766e" strokeWidth="1.5" fill="none" />
-            <path d="M5 8l2 2 4-4" stroke="#0f766e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span style={{ fontSize: 14, fontWeight: 700, color: "#0f766e" }}>Recommendation</span>
-        </div>
-        <p style={{ fontSize: 14, color: "#1a1a1a", margin: 0, lineHeight: 1.6 }}>{recommendation}</p>
+      {/* What the lens finds: counts first, the scatter and table are its evidence */}
+      <div className="triage-summary">
+        <h3>What this lens shows</h3>
+        <ul>
+          {summary.map((s) => <li key={s}>{s}</li>)}
+        </ul>
       </div>
 
-      {/* Category legend with counts */}
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
-        {activeCats.map(cat => {
-          const count = activeData.filter(r => r.category === cat).length;
-          if (count === 0) return null;
-          return (
-            <div key={cat} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <span style={{ width: 10, height: 10, borderRadius: 3, background: activeColors[cat] }} />
-              <span style={{ fontSize: 12, color: "#64615b", fontWeight: 500 }}>{cat} ({count})</span>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Search & Filter */}
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 16, alignItems: "center" }}>
-        <input
-          type="text" placeholder="Search regions..." value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          style={{ padding: "6px 12px", borderRadius: 6, border: "1.5px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", fontSize: 13, minWidth: 200, minHeight: 32, outline: "none" }}
-          aria-label="Filter regions by name"
-        />
-        <select
-          value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)}
-          style={{ padding: "6px 12px", borderRadius: 6, border: "1.5px solid #d6d3cd", background: "#fffffe", color: "#1a1a1a", fontSize: 13, minHeight: 32, cursor: "pointer" }}
-          aria-label="Filter by category"
-        >
-          <option value="all">All Categories</option>
-          {activeCats.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-        </select>
-        <span style={{ fontSize: 12, color: "var(--muted)" }}>
-          Showing {sorted.length} of {activeData.length}
-        </span>
-      </div>
-
-      {/* Evidence: scatter + table, side-by-side on wide screens (≥1400px) */}
-      <div className="triage-evidence">
-      {/* Scatter Plot */}
-      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-        <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
-          {lens === "trajectory" ? "Displacement Velocity vs. DVI" : lens === "equity" ? "Equity Deficit vs. DVI" : "Market Pressure vs. Community Vulnerability"}
-        </h3>
-        <div style={{ width: "100%", height: 340 }} role="img" aria-label={`Scatter plot for ${lens} lens`}>
-          <ResponsiveContainer>
-            <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
-              <XAxis
-                type="number" dataKey="x" tick={{ fontSize: 12, fill: "#7c6f5e" }} tickLine={false}
-                label={{ value: AXIS_LABELS[lens].x, position: "insideBottomRight", offset: -5, fontSize: 12, fill: "var(--muted)" }}
-                domain={[0, lens === "matrix" ? 100 : 80]}
-              />
-              <YAxis
-                type="number" dataKey="y" tick={{ fontSize: 12, fill: "var(--muted)" }} tickLine={false} axisLine={false}
-                label={{ value: AXIS_LABELS[lens].y, angle: -90, position: "insideLeft", offset: 10, fontSize: 12, fill: "var(--muted)" }}
-                domain={[0, 100]}
-              />
-              <ZAxis type="number" dataKey="z" range={[60, 400]} />
-              {lens === "matrix" && (
-                <>
-                  <ReferenceLine x={50} stroke="#d6d3cd" strokeDasharray="4 4" />
-                  <ReferenceLine y={50} stroke="#d6d3cd" strokeDasharray="4 4" />
-                </>
-              )}
-              <Tooltip content={<ScatterTooltip />} />
-              <Scatter data={scatterData}>
-                {scatterData.map((entry, i) => (
-                  <Cell
-                    key={i}
-                    fill={selectedRegionId && entry.regionId !== selectedRegionId ? "#d6d3cd" : activeColors[entry.category]}
-                    fillOpacity={selectedRegionId && entry.regionId !== selectedRegionId ? 0.3 : 0.8}
-                    stroke={selectedRegionId && entry.regionId === selectedRegionId ? "#1a1a1a" : (selectedRegionId ? "#d6d3cd" : activeColors[entry.category])}
-                    strokeWidth={selectedRegionId && entry.regionId === selectedRegionId ? 2.5 : 1}
-                  />
-                ))}
-              </Scatter>
-            </ScatterChart>
-          </ResponsiveContainer>
-        </div>
-        <p style={{ fontSize: 12, color: "var(--muted)", margin: "8px 0 0", lineHeight: 1.4 }}>
-          {lens === "trajectory" && "Dot size = intervention window score. Upper-right = fast displacement with open window for intervention."}
-          {lens === "equity" && "Dot size = preservation gap (larger = less PA investment). Upper-right = high displacement with underserved communities."}
-          {lens === "matrix" && "Dot size = cultural significance. Quadrant lines at 50. Q1 (upper-right) = crisis. Q2 (lower-right) = urgent prevention. Q4 (upper-left) = chronic underinvestment."}
+      {lensKey === "trajectory" && (
+        <p className="triage-note">
+          Both surveys are samples, so a single tract's shift can be noise; read the groups as a list to look into, not a
+          forecast. {carried} of the {rows.length} tracts had different boundaries in 2010; their 2011–2015 figures are
+          estimates carried from the earlier tracts and are marked ≈.
         </p>
-        {selectedRegionId && onLocateOnMap && (() => {
-          const sel = activeData.find(r => r.regionId === selectedRegionId);
-          if (!sel) return null;
-          return (
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10, padding: "8px 12px", background: "#f0fdfa", borderRadius: 6, border: "1px solid #99f6e4" }}>
-              <span style={{ fontSize: 13, fontWeight: 600, color: "#1a1a1a" }}>{sel.name}</span>
-              <span style={{ fontSize: 12, color: "#64615b" }}>
-                {sel.category}
-              </span>
-              <button
-                onClick={() => onLocateOnMap(selectedRegionId)}
-                style={{
-                  marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 5,
-                  padding: "5px 12px", borderRadius: 6, fontSize: 12, fontWeight: 600,
-                  background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
-                }}
-              >
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/>
-                </svg>
-                Locate on Map
-              </button>
-            </div>
-          );
-        })()}
-      </div>
+      )}
+      {lensKey === "equity" && (
+        <p className="triage-note">
+          A listing is what Preservation Austin has published, not everything it has done. Of {PA_LISTING_COUNTS.all} listings,{" "}
+          {PA_LISTING_COUNTS.all - PA_LISTING_COUNTS.placed} are citywide and not counted, and {PA_LISTING_COUNTS.areaOnly} are placed at the
+          center of a neighborhood or area, not at a street address. "No listing nearby" describes the record, not the
+          organization's intent.
+        </p>
+      )}
+      {lensKey === "matrix" && (
+        <p className="triage-note">
+          The questions shown for each group are prompts written for this tool. They are not Preservation Austin programs
+          and are not recommendations from the UT study.
+        </p>
+      )}
 
-      {/* Table */}
-      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-        <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>
-          {lens === "trajectory" ? "Trajectory Rankings" : lens === "equity" ? "Equity Priority Rankings" : "Risk Matrix Rankings"}
-        </h3>
-        <div style={{ overflowX: "auto", maxHeight: 500, overflowY: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }} role="table" aria-label="Triage table">
-            <thead>
-              <tr style={{ borderBottom: "2px solid #e8e5e0" }}>
-                {activeCols.map(col => (
-                  <th
-                    key={col.key} onClick={() => toggleSort(col.key)}
-                    style={{
-                      textAlign: col.key === "name" || col.key === "category" || col.key === "grantType" ? "left" : "right",
-                      padding: "6px 8px", fontWeight: 600, color: "#64615b", cursor: "pointer",
-                      whiteSpace: "nowrap", userSelect: "none", fontSize: 12,
-                    }}
-                  >
-                    {col.label}
-                    <span style={{ fontSize: 12, opacity: 0.6 }}>{sortIcon(col.key)}</span>
+      {/* Groups: counts, and a filter */}
+      <div className="triage-groups" role="group" aria-label="Filter by group">
+        <button type="button" className="triage-group" aria-pressed={filterGroup === "all"} onClick={() => setFilterGroup("all")}>
+          All <span className="triage-group-count">{rows.length}</span>
+        </button>
+        {lens.groups.map((g) => (
+          <button
+            key={g.key} type="button" className="triage-group" title={g.rule}
+            aria-pressed={filterGroup === g.key}
+            onClick={() => setFilterGroup((cur) => (cur === g.key ? "all" : g.key))}
+          >
+            {g.label} <span className="triage-group-count">{counts[g.key]}</span>
+          </button>
+        ))}
+      </div>
+      {activeGroup && (
+        <div className="triage-rule">
+          <p><strong>Rule:</strong> {activeGroup.rule}</p>
+          {activeGroup.prompt && <p><strong>A question this raises:</strong> {activeGroup.prompt}</p>}
+        </div>
+      )}
+
+      <div className="triage-evidence">
+        {/* Scatter */}
+        <div className="triage-card">
+          <h3>{plot.title}</h3>
+          <div className="triage-legend" aria-hidden="true">
+            {STAGE_CLASSES.map((c) => (
+              <span key={c.key}><span className="triage-dot" style={{ background: c.fill }} /> {c.label}</span>
+            ))}
+            <span><span className="triage-dot" style={{ background: NONE_DOT }} /> {STAGE_NONE.label}</span>
+            {lensKey === "equity" && (
+              <span><span className="triage-dot triage-dot-ring" /> no PA listing nearby</span>
+            )}
+          </div>
+          <div style={{ width: "100%", height: 360 }} role="img" aria-label={`${plot.title}. ${points.length} census tracts plotted. The table that follows lists the same figures.`}>
+            <ResponsiveContainer>
+              <ScatterChart margin={{ top: 10, right: 20, bottom: 28, left: 12 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#ebe8e2" />
+                <XAxis
+                  type="number" dataKey="x" tick={{ fontSize: 12, fill: "#6b675f" }} tickLine={false}
+                  domain={axes.x.domain} ticks={axes.x.ticks}
+                  label={{ value: plot.x.label, position: "insideBottom", offset: -16, fontSize: 12, fill: "#6b675f" }}
+                />
+                <YAxis
+                  type="number" dataKey="y" tick={{ fontSize: 12, fill: "#6b675f" }} tickLine={false} axisLine={false}
+                  domain={axes.y.domain} ticks={axes.y.ticks}
+                  label={{ value: plot.y.label, angle: -90, position: "insideLeft", offset: 4, fontSize: 12, fill: "#6b675f", style: { textAnchor: "middle" } }}
+                />
+                {lensKey === "trajectory" && <ReferenceLine x={0.5} stroke="#8f8a81" strokeDasharray="4 4" label={{ value: "line: 0.5", position: "insideTopRight", fontSize: 11, fill: "#6b675f" }} />}
+                {lensKey === "trajectory" && <ReferenceLine y={0.5} stroke="#8f8a81" strokeDasharray="4 4" label={{ value: "line: 0.5", position: "insideTopRight", fontSize: 11, fill: "#6b675f" }} />}
+                {lensKey === "equity" && <ReferenceLine segment={[{ x: 0, y: 0 }, { x: 100, y: 100 }]} stroke="#8f8a81" strokeDasharray="4 4" />}
+                {lensKey === "matrix" && <ReferenceLine x={60} stroke="#8f8a81" strokeDasharray="4 4" label={{ value: "top two fifths", position: "insideTopLeft", fontSize: 11, fill: "#6b675f" }} />}
+                {lensKey === "matrix" && <ReferenceLine y={2.5} stroke="#8f8a81" strokeDasharray="4 4" label={{ value: "vulnerable: 3 or more", position: "insideBottomLeft", fontSize: 11, fill: "#6b675f" }} />}
+                <Tooltip content={<DotTooltip plot={plot} lensKey={lensKey} groups={groupByKey} />} cursor={{ strokeDasharray: "3 3" }} />
+                <Scatter
+                  data={points} shape={renderDot} isAnimationActive={false}
+                  onClick={(p) => { const id = p?.payload?.row?.regionId ?? p?.row?.regionId; if (id != null) setSelectedId((cur) => (cur === id ? null : id)); }}
+                />
+              </ScatterChart>
+            </ResponsiveContainer>
+          </div>
+          <p className="triage-caption">
+            {plot.caption}
+            {unplotted > 0 && ` ${unplotted} scored ${unplotted === 1 ? "tract is" : "tracts are"} not plotted because one of the two figures could not be measured; ${unplotted === 1 ? "it is" : "they are"} in the table.`}
+          </p>
+          {selected && (
+            <div className="triage-selected">
+              <div>
+                <strong>{selected.name}</strong>{selected.tract ? ` · tract ${selected.tract}` : ""}
+                <div className="triage-selected-line">
+                  <StageSwatch cls={selected.stage.cls} /> {selected.stage.cls.label}
+                  {selected.scored && selected.stage.typeName !== selected.stage.cls.label ? ` · ${selected.stage.typeName}` : ""}
+                  {" · "}{selectedGroup.label}
+                </div>
+                {selectedGroup.prompt && <div className="triage-selected-prompt">{selectedGroup.prompt}</div>}
+              </div>
+              {onLocateOnMap && (
+                <button type="button" className="triage-locate" onClick={() => onLocateOnMap(selected.regionId)}>
+                  Show on the map
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Table */}
+        <div className="triage-card">
+          <div className="triage-table-head">
+            <h3>{filterGroup === "all" ? "All census tracts" : activeGroup.label}</h3>
+            <input
+              type="search" placeholder="Find a place or tract number" value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)} aria-label="Find a place or tract number"
+            />
+            <span className="triage-showing" role="status">Showing {tableRows.length} of {rows.length}</span>
+          </div>
+          <div className="triage-table-wrap">
+            <table className="triage-table">
+              <thead>
+                <tr>
+                  <th scope="col" aria-sort={ariaSort("group")} className="is-left">
+                    <button type="button" onClick={() => toggleSort("group")}>Group{sortMark("group")}</button>
                   </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {sorted.map(r => (
-                <tr
-                  key={r.regionId}
-                  onClick={() => setSelectedRegionId(prev => prev === r.regionId ? null : r.regionId)}
-                  style={{
-                    borderBottom: "1px solid #f0ede8",
-                    cursor: "pointer",
-                    background: selectedRegionId === r.regionId ? "#f0fdfa" : "transparent",
-                    transition: "background 0.15s",
-                  }}
-                >
-                  {activeCols.map(col => {
-                    const val = r[col.key];
-                    if (col.key === "category") {
-                      return (
-                        <td key={col.key} style={{ padding: "6px 8px" }}>
-                          <span style={{ display: "inline-block", fontSize: 12, fontWeight: 600, padding: "2px 8px", borderRadius: 4, color: "#fff", background: activeColors[val], whiteSpace: "nowrap" }}>
-                            {val}
-                          </span>
-                        </td>
-                      );
-                    }
-                    if (col.key === "name") {
-                      return (
-                        <td key={col.key} style={{ padding: "6px 8px", fontWeight: 500, color: "#1a1a1a", whiteSpace: "nowrap" }}>
-                          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                            {val}
-                            {onLocateOnMap && selectedRegionId === r.regionId && (
-                              <button
-                                onClick={(e) => { e.stopPropagation(); onLocateOnMap(r.regionId); }}
-                                title="Locate on map"
-                                aria-label={`Locate ${val} on map`}
-                                style={{
-                                  display: "inline-flex", alignItems: "center", gap: 4,
-                                  padding: "2px 8px", borderRadius: 4, fontSize: 12, fontWeight: 600,
-                                  background: "#0f766e", color: "#fff", border: "none", cursor: "pointer",
-                                  whiteSpace: "nowrap", lineHeight: 1.4,
-                                }}
-                              >
-                                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                                  <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/>
-                                </svg>
-                                Map
-                              </button>
-                            )}
-                          </span>
-                        </td>
-                      );
-                    }
-                    if (col.key === "grantType") {
-                      return (
-                        <td key={col.key} style={{ padding: "6px 8px" }}>
-                          <span style={{ fontSize: 12, fontWeight: 500, padding: "2px 6px", borderRadius: 4, background: "#f5f0ea", color: "#7c6f5e", whiteSpace: "nowrap" }}>
-                            {val}
-                          </span>
-                        </td>
-                      );
-                    }
-                    // Numeric columns
-                    const isDvi = col.key === "dvi" || col.key === "dvi2023";
-                    // Measured B+H share change: signed, losses highlighted
-                    if (col.key === "bhDelta") {
-                      return (
-                        <td key={col.key} style={{ padding: "6px 8px", textAlign: "right", fontWeight: 600, color: val != null && val <= -5 ? "#b91c1c" : "#1a1a1a" }}>
-                          {val != null ? `${val > 0 ? "+" : ""}${val.toFixed(1)}` : "\u2014"}
-                        </td>
-                      );
-                    }
-                    return (
-                      <td key={col.key} style={{ padding: "6px 8px", textAlign: "right", fontWeight: isDvi ? 700 : 500, color: isDvi ? getDviBandColor(val) : "#1a1a1a" }}>
-                        {val != null ? (typeof val === "number" ? val.toFixed(1) : val) : "\u2014"}
-                      </td>
-                    );
-                  })}
+                  <th scope="col" aria-sort={ariaSort("name")} className="is-left">
+                    <button type="button" onClick={() => toggleSort("name")}>Place{sortMark("name")}</button>
+                  </th>
+                  <th scope="col" aria-sort={ariaSort("stage")} className="is-left">
+                    <button type="button" onClick={() => toggleSort("stage")}>Stage{sortMark("stage")}</button>
+                  </th>
+                  {lensKey === "trajectory" && (
+                    <th scope="col" className="is-left" title="The stage in the 2010, 2015, 2020 and 2023 readings">2010 to 2023</th>
+                  )}
+                  {columns.map((c) => (
+                    <th key={c.key} scope="col" aria-sort={ariaSort(c.key)} className={c.align === "left" ? "is-left" : undefined} title={c.hint}>
+                      <button type="button" onClick={() => toggleSort(c.key)}>{c.label}{sortMark(c.key)}</button>
+                    </th>
+                  ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {tableRows.map((r) => (
+                  <tr
+                    key={r.regionId}
+                    className={selectedId === r.regionId ? "is-selected" : undefined}
+                    onClick={() => setSelectedId((cur) => (cur === r.regionId ? null : r.regionId))}
+                  >
+                    <td className="is-left triage-cell-group">{groupByKey[r.groups[lensKey]].label}</td>
+                    <th scope="row" className="is-left">
+                      <button
+                        type="button" className="triage-place" aria-pressed={selectedId === r.regionId}
+                        onClick={(e) => { e.stopPropagation(); setSelectedId((cur) => (cur === r.regionId ? null : r.regionId)); }}
+                      >
+                        {r.name}
+                      </button>
+                      {r.tract && r.name !== `Census tract ${r.tract}` && <span className="triage-tract"> tract {r.tract}</span>}
+                    </th>
+                    <td className="is-left triage-cell-stage"><StageSwatch cls={r.stage.cls} /> {r.stage.cls.label}</td>
+                    {lensKey === "trajectory" && <td className="is-left"><StagePath path={r.path} /></td>}
+                    {columns.map((c) => (
+                      <td key={c.key} className={`${c.align === "left" ? "is-left" : ""}${c.flag?.(r) ? " is-flag" : ""}`}>{c.text(r)}</td>
+                    ))}
+                  </tr>
+                ))}
+                {!tableRows.length && (
+                  <tr><td colSpan={columns.length + 4} className="is-left" style={{ color: "var(--muted)" }}>No place matches.</td></tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+          <p className="triage-caption">
+            Select a row to mark the place on the chart. Bold figures are past the line their column describes; hover a
+            column heading for its definition. {DASH} means the census does not report enough to measure it.
+          </p>
         </div>
       </div>
-      </div>
 
-      {/* Advanced: DVI Weight Sliders */}
-      <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", marginBottom: 16 }}>
-        <button
-          onClick={() => setShowAdvanced(v => !v)}
-          style={{ width: "100%", padding: "14px 20px", background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: 13, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".06em" }}
-          aria-expanded={showAdvanced}
-        >
-          <span>Advanced: DVI Formula &amp; Weight Adjustment</span>
-          <span style={{ fontSize: 15, transform: showAdvanced ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>{"\u25BE"}</span>
-        </button>
-        {showAdvanced && (
-          <div style={{ padding: "0 20px 20px" }}>
-            <div style={{ background: "#fafaf9", borderRadius: 8, padding: "14px 16px", marginBottom: 16, border: "1px solid #e8e5e0" }}>
-              <h4 style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", margin: "0 0 8px" }}>DVI Composition</h4>
-              <p style={{ fontSize: 13, color: "#44403c", margin: "0 0 8px", lineHeight: 1.6 }}>
-                <strong>DVI</strong> = (W₁ × Demographic Vulnerability) + (W₂ × Market Pressure) + (W₃ × Socioeconomic Stress), scaled 0–100.
-              </p>
-              <div style={{ fontSize: 12, color: "#64615b", lineHeight: 1.7 }}>
-                <div><strong>Demographic Vulnerability</strong> (default {(DEFAULT_WEIGHTS.demographic * 100).toFixed(0)}%): rent burden (50%), renter share (30%), foreign-born % (20%)</div>
-                <div><strong>Market Pressure</strong> (default {(DEFAULT_WEIGHTS.market * 100).toFixed(0)}%): home-value appreciation (50%), rent-to-income ratio (50%)</div>
-                <div><strong>Socioeconomic Stress</strong> (default {(DEFAULT_WEIGHTS.socioeconomic * 100).toFixed(0)}%): poverty rate (40%), unemployment (30%), eviction filings (30%)</div>
-              </div>
+      {/* The working, in full */}
+      <details className="triage-method" open>
+        <summary>How this lens is worked out</summary>
+        <div className="triage-method-body">
+          {FORMULAS[lensKey].map((f) => (
+            <div key={f.figure} className="triage-formula">
+              <h4>{f.figure}</h4>
+              <p className="triage-formula-line">{f.formula}</p>
+              <dl>
+                {f.data.map(([term, source]) => (
+                  <div key={term}><dt>{term}</dt><dd>{source}</dd></div>
+                ))}
+              </dl>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {[
-                { key: "demographic", label: "Demographic Vulnerability" },
-                { key: "market", label: "Market Pressure" },
-                { key: "socioeconomic", label: "Socioeconomic Stress" },
-              ].map(s => (
-                <div key={s.key}>
-                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-                    <label style={{ fontSize: 13, fontWeight: 500, color: "#1a1a1a" }}>{s.label}</label>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: "#0f766e", minWidth: 40, textAlign: "right" }}>
-                      {(weights[s.key] * 100).toFixed(0)}%
-                    </span>
-                  </div>
-                  <input
-                    type="range" min={0} max={100} value={Math.round(weights[s.key] * 100)}
-                    onChange={(e) => handleWeightChange(s.key, parseInt(e.target.value, 10) / 100)}
-                    style={{ width: "100%", accentColor: "#0f766e", cursor: "pointer" }}
-                    aria-label={`${s.label} weight`}
-                  />
-                </div>
-              ))}
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span style={{ fontSize: 12, color: "var(--muted)" }}>
-                  Total: {((weights.demographic + weights.market + weights.socioeconomic) * 100).toFixed(0)}%
-                </span>
-                <button onClick={resetWeights} style={{ padding: "4px 12px", borderRadius: 6, border: "1px solid #d6d3cd", background: "#fffffe", color: "#64615b", fontSize: 12, fontWeight: 500, cursor: "pointer" }}>
-                  Reset to defaults
-                </button>
-              </div>
-              <p style={{ fontSize: 12, color: "var(--muted)", margin: "4px 0 0", lineHeight: 1.5 }}>
-                DVI weights affect the pressure score used by all three lenses. The score sums up present-day conditions (rent burden, renter share, poverty, housing costs); it is not the displacement stage shown on the map. Trajectory uses DVI change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through market pressure and community vulnerability sub-scores.
-              </p>
-            </div>
+          ))}
+          <div className="triage-formula">
+            <h4>Groups</h4>
+            <table className="triage-rules">
+              <thead><tr><th scope="col">Group</th><th scope="col">Rule</th><th scope="col">Tracts</th></tr></thead>
+              <tbody>
+                {lens.groups.map((g) => (
+                  <tr key={g.key}><th scope="row">{g.label}</th><td>{g.rule}</td><td>{counts[g.key]}</td></tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        )}
-      </div>
+        </div>
+      </details>
 
-      <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5, padding: "4px 4px 0" }}>
-        All scores computed at 2023. Data: U.S. Census/ACS, TCAD, Preservation Austin surveys. All 269 regions scored using census data (no business-data gating).
-      </div>
+      <p className="triage-foot">
+        Stages and figures: 2000 Census and American Community Survey 2011–2015 and 2019–2023, five-county Austin region.
+        Listings: Preservation Austin's published records as compiled for this site. {STAGE_UNSCORED.label}: {counts.unscored} tracts.
+        Full method: About, then Methodology (section 6).
+      </p>
     </section>
   );
 }

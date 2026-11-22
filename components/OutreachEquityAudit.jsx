@@ -22,8 +22,7 @@ const IN_DISPLACEMENT_STAGE = new Set(STAGE_CLASSES.map((c) => c.key));
  * advocacy action in the PA activity dataset, plus any extra datasets
  * added to data/equityAudit.js (Homes Tour addresses, Equity Audit rows).
  *
- * East/West split uses the I-35 line (lng −97.735), the same line the
- * equity lens in utils/math.js uses.
+ * East/West split uses the I-35 line (lng −97.735).
  */
 
 const I35_LNG = -97.735;

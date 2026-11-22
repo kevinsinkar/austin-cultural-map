@@ -38,7 +38,7 @@ The opportunity data is generated from `private/preservation_austin_tabling_data
 - **Start here** — With nothing selected, the right-hand card states the five ideas the map is built around, each with one thing to do on the map. The numbers in it are computed from the data (`data/bigIdeas.js`).
 - **Search** — Find a neighborhood, a census tract number, a tracked cultural anchor or a street address. Everything except the address lookup runs in the browser; an address is sent to OpenStreetMap's Nominatim service only when the person chooses to look it up.
 - **Place panel and story card** — Selecting a census tract or a neighborhood opens the same summary panel, which leads to the same story card. Places are titled by neighborhood name where a City of Austin planning area supports one, with the census tract number second (`utils/places.js`).
-- **Grant Triage View** (presenter mode) — Scatter plot + sortable table with three screening lenses built on the 0–100 pressure score. Includes adjustable weight sliders. The lenses have not been rebuilt on the displacement stages.
+- **Triage View** (presenter mode) — Three lenses on the displacement stages (Trajectory, Equity, Matrix). Each sorts every tract into a group by a stated rule and shows the measured figures behind it in a chart and a sortable table. No composite score; the formulas are printed under each lens.
 - **Comparison View** — Side-by-side comparison of two regions across demographic, economic, and displacement dimensions.
 - **Timeline View** — "River of Time" visualization of business openings, closures, and infrastructure/policy events.
 
@@ -54,7 +54,9 @@ Each census tract is put through three tests for each census year from 2010 on (
 
 The answers place a tract in a stage: **Vulnerable**, **Early**, **Dynamic**, **Late** or **Continued loss**, or in none. The test is the one in Appendix 3 of the University of Texas study *Uprooted* (2018), which the City of Austin commissioned. Worked out here from census tables, it agrees with the City's own 2022 displacement risk map on the stage of about four tracts in five. Method, departures and limits: [DATA_METHODOLOGY.md](DATA_METHODOLOGY.md) §3.
 
-Presenter mode also keeps the earlier 0–100 composite as a **pressure score** (rent burden, renter share, poverty, housing costs; `data/auditedDvi.js`). It describes present-day conditions, feeds the Compare and Triage views, and no longer colors the map.
+Presenter mode also keeps the earlier 0–100 composite as a **pressure score** (rent burden, renter share, poverty, housing costs; `data/auditedDvi.js`). It describes present-day conditions, feeds the Compare view, and no longer colors the map.
+
+Every formula on the site, with the data behind each term, is on one page: [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md). The same page opens from the About dialog.
 
 ## Tech Stack
 
@@ -99,7 +101,7 @@ npm run build:stages
 npm run build:history
 ```
 
-The map polygons the site loads (`data/shapes/*.min.json`), the tract titles (`data/placeNames.js`), the area-name list (`data/areaNames.js`) and the displacement stages (`data/stages.js`) are generated files that are checked in. The full-precision geometry in `data/final_updated_regions.js` and `data/neighborhoods_geojson.js` is the source and is no longer bundled, which took the first download from about 9.7 MB to about 3.4 MB (a 2.9 MB script plus 0.5 MB of tract shapes, before compression).
+The map polygons the site loads (`data/shapes/*.min.json`), the tract titles (`data/placeNames.js`), the area-name list (`data/areaNames.js`), the displacement stages (`data/stages.js`) and the Triage lens figures (`data/stageLenses.js`) are generated files that are checked in. The full-precision geometry in `data/final_updated_regions.js` and `data/neighborhoods_geojson.js` is the source and is no longer bundled, which took the first download from about 9.7 MB to about 3.4 MB (a 2.9 MB script plus 0.5 MB of tract shapes, before compression).
 
 ## Data Sources
 

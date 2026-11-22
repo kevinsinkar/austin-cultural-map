@@ -56,6 +56,10 @@
 //     2023), each time against 2000. For 2000 itself only step 1 exists.
 //
 // Output: data/stages.js (generated; do not edit).
+//
+// Also written: data/stageLenses.js, the extra figures the presenter-only
+// Triage view needs for the latest survey (see "Lens figures" below). It is a
+// separate file so the public bundle does not carry it.
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -405,8 +409,8 @@ for (const u of units) {
       const z = V_FACTORS.map((f) => (ind[f.key] == null ? null : (ind[f.key] - region[y].v[f.key].center) / region[y].v[f.key].sd));
       out.vz = z;
       out.vHits = z.map((x) => x != null && x > Z_LINE);
-      const known = z.filter((x) => x != null).length;
-      if (known < 3) out.reason = "nodata";
+      const known = z.filter((x) => x != null);
+      if (known.length < 3) out.reason = "nodata";
       else out.vulnerable = out.vHits.filter(Boolean).length >= 3;
     }
     byYear[y] = out;
@@ -485,6 +489,79 @@ for (const y of YEARS) {
     } else h.type = "NO";
   }
 }
+
+// ── Lens figures (presenter-only Triage view) ───────────────────────────
+// The Triage lenses ask where change is moving now. They compare the two
+// latest surveys that share no interviews: 2011-2015 and 2019-2023 (the
+// 2016-2020 survey overlaps the latest one by two years). Same four
+// measures and same rule as test 2, with the region's change and the spread
+// of tracts taken over that period.
+const RECENT = { from: 2015, to: 2023 };
+const recentRegion = {};
+{
+  const regionChange = changeOf(region[RECENT.to].ind, region[RECENT.from].ind);
+  for (const f of D_FACTORS) {
+    recentRegion[f.key] = spread(
+      TRACTS_2020.map((g) => ({ x: changeOf(tractInd[g][RECENT.to], tractInd[g][RECENT.from])?.[f.key], w: recs[g][RECENT.to]?.[f.weight] })),
+      regionChange[f.key]
+    );
+  }
+}
+for (const u of units) {
+  const r = results.get(keyOf(u));
+  const now = r[RECENT.to];
+  const then = r[RECENT.from];
+  if (now.reason || then.reason) continue;
+  const ch = changeOf(now.ind, then.ind);
+  const z = D_FACTORS.map((f) => (ch?.[f.key] == null ? null : (ch[f.key] - recentRegion[f.key].center) / recentRegion[f.key].sd));
+  const known = z.filter((x) => x != null);
+  const rec = { change: ch, z, hits: z.map((x) => x != null && x > Z_LINE) };
+  if (known.length >= 3) {
+    rec.avg = known.reduce((a, b) => a + b, 0) / known.length;
+    rec.changed = rec.hits.filter(Boolean).length >= 2 && rec.avg >= Z_LINE;
+  }
+  now.recent = rec;
+}
+
+// Where a value sits among sorted values, 0 (lowest) to 100 (highest). The
+// counterpart of percentileInc: a value above the 60th percentile ranks above 60.
+function rankAmong(sorted, x) {
+  if (x == null || sorted.length < 2) return null;
+  let i = 0;
+  while (i < sorted.length && sorted[i] < x) i++;
+  if (i >= sorted.length) return 100;
+  if (sorted[i] === x || i === 0) return (i / (sorted.length - 1)) * 100;
+  return ((i - 1 + (x - sorted[i - 1]) / (sorted[i] - sorted[i - 1])) / (sorted.length - 1)) * 100;
+}
+const recentRiseLine = {};
+{
+  const y = RECENT.to;
+  const scored = units.filter((u) => u.kind === "tract" && !results.get(keyOf(u))[y].reason);
+  const riseFrom = (from, k) => scored.map((u) => {
+    const r = results.get(keyOf(u));
+    const b = r[from].ind?.[k], n = r[y].ind?.[k];
+    return b > 0 && n > 0 ? ((n - b) / b) * 100 : null;
+  }).filter((v) => v != null).sort((a, b) => a - b);
+  const sinceBase = { value: riseFrom(BASE, "value"), rent: riseFrom(BASE, "rent") };
+  for (const k of ["value", "rent"]) recentRiseLine[k] = percentileInc(riseFrom(RECENT.from, k), 0.6);
+  for (const u of units) {
+    const r = results.get(keyOf(u));
+    const h = r[y].housing;
+    if (!h) continue;
+    h.risePct = rankAmong(sinceBase[h.track], h.rise);
+    const then = r[RECENT.from].reason ? null : r[RECENT.from].ind?.[h.track];
+    if (then > 0) {
+      h.recentRise = ((h.now - then) / then) * 100;
+      h.recentHigh = h.recentRise > recentRiseLine[h.track];
+    }
+  }
+}
+// A tract whose 2010 boundary differs from today's carries 2011-2015 figures
+// allocated from the earlier tract(s): estimates, not counts.
+const carried2015 = (geoid) => {
+  const src = SOURCES[RECENT.from].people.get(geoid);
+  return !src || [...src.values()].some((w) => w < 0.99);
+};
 
 function stageOf(out, year, wasVulnerable) {
   if (out.reason) return "NA";
@@ -578,6 +655,16 @@ const check = { year: 2023 };
     console.log("\n  City type                -> this build (2023)");
     for (const [k, n] of [...cross].sort()) console.log(`    ${k}: ${n}`);
   }
+}
+
+{
+  const rows = tractUnits.map((u) => results.get(keyOf(u))[RECENT.to]).filter((o) => !o.reason);
+  const yes = rows.filter((o) => o.recent?.changed === true).length;
+  const no = rows.filter((o) => o.recent?.changed === false).length;
+  console.log(`\nRecent change (${ACS_LABEL[RECENT.from]} to ${ACS_LABEL[RECENT.to]}): yes ${yes}, no ${no}, not measured ${rows.length - yes - no} of ${rows.length} scored tracts`);
+  console.log(`  region and line: ` + D_FACTORS.map((f) => `${f.key} ${recentRegion[f.key].center.toFixed(1)} (+${(recentRegion[f.key].sd * Z_LINE).toFixed(1)})`).join(" | "));
+  console.log(`  recent rise, 60th pct: value ${Math.round(recentRiseLine.value)}% | rent ${Math.round(recentRiseLine.rent)}%`);
+  console.log(`  tracts whose ${RECENT.from} figures are allocated from earlier boundaries: ${tractUnits.filter((u) => carried2015(geoidOf.get(u.id))).length} of ${tractUnits.length}`);
 }
 
 if (REPORT) {
@@ -710,9 +797,52 @@ const body = [
   "",
 ].join("\n");
 
+// Lens figures for the latest survey, tracts only.
+const r2 = (v) => (v == null || !isFinite(v) ? null : +v.toFixed(2));
+const LENS_FIELDS = [
+  "dIndex",
+  "recent", ...D_FACTORS.map((f) => `r_${f.key}`), "rBits", "rIndex",
+  "risePct", "recentRise", "recentHigh", "carried",
+];
+const lensRows = Object.fromEntries(tractUnits.map((u) => {
+  const out = results.get(keyOf(u))[RECENT.to];
+  const rec = out.recent;
+  const h = out.housing;
+  return [u.id, [
+    r2(out.dAvg),
+    rec?.changed == null ? null : rec.changed ? 1 : 0,
+    ...D_FACTORS.map((f) => r1(rec?.change?.[f.key])),
+    bits(rec?.hits), r2(rec?.avg),
+    r1(h?.risePct),
+    h?.recentRise == null ? null : Math.round(h.recentRise),
+    h?.recentHigh == null ? null : h.recentHigh ? 1 : 0,
+    carried2015(geoidOf.get(u.id)) ? 1 : 0,
+  ]];
+}));
+const lensRegion = {
+  from: RECENT.from, to: RECENT.to, base: BASE,
+  fromSource: `American Community Survey ${ACS_LABEL[RECENT.from]}`,
+  toSource: `American Community Survey ${ACS_LABEL[RECENT.to]}`,
+  // [the region's change, the line a tract must pass]
+  d: Object.fromEntries(D_FACTORS.map((f) => [f.key, [r1(recentRegion[f.key].center), r1(recentRegion[f.key].center + Z_LINE * recentRegion[f.key].sd)]])),
+  recentRiseLine: { value: Math.round(recentRiseLine.value), rent: Math.round(recentRiseLine.rent) },
+};
+const lensBody = [
+  `// GENERATED by scripts/build_stages.mjs. Do not edit; run "npm run build:stages".
+// Extra figures for the presenter-only Triage view: index values for the
+// latest survey and change between the two latest surveys that do not overlap.
+// Method: DATA_METHODOLOGY.md, section 6.
+`,
+  `export const LENS_FIELDS = ${JSON.stringify(LENS_FIELDS)};`,
+  `export const LENS_REGION = ${JSON.stringify(lensRegion)};`,
+  `export const TRACT_LENS_ROWS = ${JSON.stringify(lensRows)};`,
+  "",
+].join("\n");
+
 if (DRY) {
-  console.log(`\n--dry: nothing written (${Math.round(body.length / 1024)} KB).`);
+  console.log(`\n--dry: nothing written (${Math.round(body.length / 1024)} KB + ${Math.round(lensBody.length / 1024)} KB).`);
 } else {
   writeFileSync(join(ROOT, "data", "stages.js"), body);
-  console.log(`\nWrote data/stages.js (${Math.round(body.length / 1024)} KB)`);
+  writeFileSync(join(ROOT, "data", "stageLenses.js"), lensBody);
+  console.log(`\nWrote data/stages.js (${Math.round(body.length / 1024)} KB) and data/stageLenses.js (${Math.round(lensBody.length / 1024)} KB)`);
 }

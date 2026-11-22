@@ -2,13 +2,40 @@ import { useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import methodologyText from "../DATA_METHODOLOGY.md?raw";
+import glanceRaw from "../METHODOLOGY_AT_A_GLANCE.md?raw";
 import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL } from "../data";
 import { STAGE_CLASSES, STAGE_CHECK } from "../utils/stages";
 
+// The at-a-glance page ends with the presenter-only tools; the public site
+// shows the part before that marker.
+const GLANCE_MARKER = "<!-- presenter-tools -->";
+const glanceText = PRESENTER_MODE ? glanceRaw.replace(GLANCE_MARKER, "") : glanceRaw.split(GLANCE_MARKER)[0];
+
+const TITLES = {
+  summary: "About This Data",
+  glance: "Methodology at a Glance",
+  full: "Data Methodology & Sources",
+};
+
 export default function AboutModal({ onClose }) {
-  const [showMethodology, setShowMethodology] = useState(false);
+  // "summary" | "glance" (every formula on one page) | "full" (the whole methodology)
+  const [view, setView] = useState("summary");
+  const showMethodology = view !== "summary";
   const panelRef = useRef(null);
+  const go = (next) => { setView(next); panelRef.current?.scrollTo(0, 0); };
+
+  // Links inside the rendered Markdown: the two methodology files open each
+  // other in place, in-page anchors are plain text (the address bar's hash
+  // belongs to the app's own state), and anything else opens in a new tab.
+  const mdComponents = {
+    a({ href = "", children }) {
+      if (/DATA_METHODOLOGY\.md/.test(href)) return <button type="button" className="about-link" style={{ display: "inline", fontWeight: "inherit" }} onClick={() => go("full")}>{children}</button>;
+      if (/METHODOLOGY_AT_A_GLANCE\.md/.test(href)) return <button type="button" className="about-link" style={{ display: "inline", fontWeight: "inherit" }} onClick={() => go("glance")}>{children}</button>;
+      if (href.startsWith("#")) return <span>{children}</span>;
+      return <a href={href} target="_blank" rel="noreferrer">{children}</a>;
+    },
+  };
 
   return (
     <div
@@ -52,7 +79,7 @@ export default function AboutModal({ onClose }) {
               margin: 0,
             }}
           >
-            {showMethodology ? "Data Methodology & Sources" : "About This Data"}
+            {TITLES[view]}
           </h2>
           <button
             onClick={onClose}
@@ -65,14 +92,16 @@ export default function AboutModal({ onClose }) {
 
         {showMethodology ? (
           <>
-            <button
-              onClick={() => { setShowMethodology(false); panelRef.current?.scrollTo(0, 0); }}
-              style={{ fontSize: 13, color: "#0f766e", background: "none", border: "none", cursor: "pointer", padding: "8px 0 4px", fontWeight: 500 }}
-            >
-              ← Back to summary
-            </button>
-            <div className="methodology-content">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{methodologyText}</ReactMarkdown>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 18px", padding: "8px 0 4px" }}>
+              <button type="button" className="about-link" onClick={() => go("summary")}>← Back to summary</button>
+              {view === "glance"
+                ? <button type="button" className="about-link" onClick={() => go("full")}>Full methodology →</button>
+                : <button type="button" className="about-link" onClick={() => go("glance")}>Methodology at a glance →</button>}
+            </div>
+            <div className={`methodology-content${view === "glance" ? " methodology-glance" : ""}`}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>
+                {view === "glance" ? glanceText : methodologyText}
+              </ReactMarkdown>
             </div>
           </>
         ) : (
@@ -120,10 +149,10 @@ export default function AboutModal({ onClose }) {
             )}
             {isViewAllowed("triage") && (
             <p style={{ margin: "0 0 12px" }}>
-              <strong>Triage</strong> — A grant-prioritization tool with three analytical lenses
-              (Trajectory, Equity, Risk Matrix) to help target preservation funding where it
-              is needed most. Triage scores are a screening prototype — a starting point for
-              staff review, pending validation — not determinations about any neighborhood.
+              <strong>Triage</strong> — Three questions asked of the map's stages (Trajectory,
+              Equity, Matrix). Each lens sorts every census tract into a group by a stated rule
+              and shows the measured figures behind it; there is no composite score. The groups
+              are a screening aid for committee discussion, not findings about any neighborhood.
             </p>
             )}
 
@@ -164,7 +193,7 @@ export default function AboutModal({ onClose }) {
               A stage describes an area as a whole. It is not a verdict on any block or
               household. Census surveys of small areas carry sampling error, so a tract close
               to a line can change stage from one survey to the next.
-              {PRESENTER_MODE && " The Compare and Triage views also use a separate 0–100 pressure score (rent burden, renter share, poverty, housing costs; adjustable in the DVI Weights panel). It describes present-day conditions and is not the stage on the map."}
+              {PRESENTER_MODE && " The Compare view also uses a separate 0–100 pressure score (rent burden, renter share, poverty, housing costs; adjustable in the DVI Weights panel). It describes present-day conditions and is not the stage on the map."}
             </p>
 
             <h3 style={{ fontSize: 14, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
@@ -270,17 +299,14 @@ export default function AboutModal({ onClose }) {
               Connect · Chapter 380 Economic Development Agreements · HOME Amendments
               (AustinTexas.gov) · Community business inventories compiled March 2026.
             </p>
-            <p style={{ margin: "16px 0 0" }}>
-              <button
-                onClick={() => { setShowMethodology(true); panelRef.current?.scrollTo(0, 0); }}
-                style={{
-                  fontSize: 13, fontWeight: 600, color: "#0f766e", background: "none",
-                  border: "none", cursor: "pointer", padding: 0, textDecoration: "underline",
-                }}
-              >
+            <div className="about-links">
+              <button type="button" className="about-link" onClick={() => go("glance")}>
+                Methodology at a glance: every formula and the data behind it →
+              </button>
+              <button type="button" className="about-link" onClick={() => go("full")}>
                 Full Data Methodology &amp; Sources →
               </button>
-            </p>
+            </div>
             <p
               style={{ margin: "12px 0 0", fontSize: 13, color: "var(--muted)", fontStyle: "italic" }}
             >

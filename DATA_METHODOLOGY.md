@@ -1,11 +1,13 @@
 # Austin's Shifting Ground — Data Methodology & Sources
 
-> **Last updated:** March 24, 2026
+> **Last updated:** November 22, 2026
 > **Purpose:** Comprehensive reference for all data sources, calculations, and assumptions. For anyone asking "where did these numbers come from?"
 
 ---
 
 ## How to Read This Document
+
+**Short on time?** [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md) shows every formula on one page, each with the data behind its terms. This document gives the reasons and the limits.
 
 This document is organized from raw inputs (§1–2) through calculations (§3–6) to known limitations (§10). If you want to verify a specific number on screen, start with the section matching the view you're looking at: Map View (§4), Compare View (§5), or Triage View (§6). If you want to understand how the map's displacement stages are decided, start at §3. If you want to know what data we don't have, skip to §10.
 
@@ -18,7 +20,7 @@ This document is organized from raw inputs (§1–2) through calculations (§3�
 3. [Displacement Stages (Map Colors)](#3-displacement-stages-map-colors)
 4. [Map View — Calculations & Data](#4-map-view)
 5. [Compare View — Calculations & Data](#5-compare-view)
-6. [Triage View — Three Prioritization Lenses](#6-triage-view)
+6. [Triage View: Three Lenses on the Stages](#6-triage-view-three-lenses-on-the-stages)
 7. [Neighborhood Aggregation Method](#7-neighborhood-aggregation)
 8. [Inflation Adjustment (CPI)](#8-inflation-adjustment)
 9. [Data Normalization Pipeline](#9-data-normalization-pipeline)
@@ -72,7 +74,7 @@ Rows whose 2020 tract has the same boundary as the earlier tract are exact count
 | Construction Permits | 191,099 new construction (44,266 commercial) | City of Austin Issued Construction Permits (dataset `3syk-w9eu`) | Mar 2026 |
 | Project Connect Transit | 4 lines | Capital Metro Project Connect plans | Feb 2026 |
 
-**Business data coverage note:** The 93 tracked businesses (41 operating + 52 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. Approximately 230 of 269 regions have no tracked businesses. This reflects survey coverage, not an absence of culturally significant businesses. The triage system (§6) accounts for this by treating missing business data as neutral rather than as a negative signal.
+**Business data coverage note:** The 93 tracked businesses (41 operating + 52 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. Approximately 230 of 269 regions have no tracked businesses. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
 
 ### 1.3 Neighborhood Planning Areas
 
@@ -247,7 +249,7 @@ For single places: The tracts with the largest fall in residents of color since 
 
 ### 3.8 The pressure score (presenter tools only)
 
-The 0–100 composite score that colored the map before November 2026 is still computed (`data/auditedDvi.js`) and still feeds the presenter-only Compare and Triage views, where it is called the pressure score (the code and some labels keep the old abbreviation, DVI). It sums up **present-day conditions**: rent burden, renter share, poverty, rent against income, home-value appreciation. It is not a stage and is not shown in the public build. Its bands are plain quarters of the scored tracts pooled over 2015, 2020 and 2023 under the default weights: under 37, 37–46, 46–56, and 56 and over (`DVI_BINS` in `utils/math.js`), drawn in a blue-gray ramp so they are not mistaken for stages.
+The 0–100 composite score that colored the map before November 2026 is still computed (`data/auditedDvi.js`) and still feeds the presenter-only Compare view, where it is called the pressure score (the code and some labels keep the old abbreviation, DVI). It sums up **present-day conditions**: rent burden, renter share, poverty, rent against income, home-value appreciation. It is not a stage and is not shown in the public build. Its bands are plain quarters of the scored tracts pooled over 2015, 2020 and 2023 under the default weights: under 37, 37–46, 46–56, and 56 and over (`DVI_BINS` in `utils/math.js`), drawn in a blue-gray ramp so they are not mistaken for stages.
 
 #### Sub-Index Composition
 
@@ -280,17 +282,15 @@ The 0–100 composite score that colored the map before November 2026 is still c
 score = (W₁ × Demographic Vulnerability) + (W₂ × Market Pressure) + (W₃ × Socioeconomic Stress)
 ```
 
-Default weights: W₁ = 0.35, W₂ = 0.35, W₃ = 0.30. The presenter can adjust these in the DVI Weights panel (§6.4).
+Default weights: W₁ = 0.35, W₂ = 0.35, W₃ = 0.30. The presenter can adjust these in the DVI Weights panel on the map (presenter mode).
 
 **Missing data re-weighting:** When a sub-index is unavailable (e.g., a region has demographic data but no property data), the remaining sub-indices are re-weighted to sum to 1.0. Re-weighting also applies **within** each sub-index: a missing field is excluded and the remaining fields' weights are re-normalized, rather than the field being scored as zero. Each score carries a `coverage` value (fraction of the 8 input fields present). A tract-year with fewer than 3 of the 8 fields gets no score.
-
-**Cross-year comparisons (Trajectory velocity):** Because 2010 and 2023 scores are built from different field sets even after re-weighting, raw deltas between them conflate data coverage with real change. Trajectory velocity therefore scores both endpoint years using **only the fields measured in both years** (minimum 3 shared fields), re-weighted over that shared set (`comparableDviPair` in `utils/math.js`). Regions without enough shared fields fall back to the raw delta and are flagged `velocityComparable: false`. The "intervention window" framing has not been validated against observed displacement outcomes and should be treated as a screening aid.
 
 **Low-confidence boost:** Each data row carries an `audit_confidence` score (see §9.1). When the average confidence across a region's available data sources falls below 0.5, the Socioeconomic Stress weight is boosted by 10 points before re-normalization.
 
 #### Affluence Gate
 
-A region is flagged `isExcluded` when `median_household_income > $129,000` (150% of Austin city median of $86,000) **and** `pct_owner_occupied > 75%`. Its score is capped at 20 and it is labeled "Affluent / Appreciated" in the Triage view. The gate applies to the score only; on the map such tracts simply have no stage.
+A region is flagged `isExcluded` when `median_household_income > $129,000` (150% of Austin city median of $86,000) **and** `pct_owner_occupied > 75%`. Its score is capped at 20. The gate applies to the score only; on the map such tracts simply have no stage.
 
 #### Interpolation
 
@@ -447,139 +447,96 @@ The narrative uses these thresholds to avoid generating trivial comparisons — 
 
 ---
 
-## 6. Triage View — Three Prioritization Lenses
+## 6. Triage View: Three Lenses on the Stages
 
-*Presenter mode only. Throughout this section "DVI" means the pressure score of §3.8, a summary of present-day conditions. The lenses were built on that score and have not been rebuilt on the displacement stages of §3; their category names ("Post-Displacement or Stable", for example) are the lenses' own and are not stages.*
+*Presenter mode only (`components/TriageView.jsx`, `utils/lenses.js`).*
 
-The Triage View provides three ways to prioritize regions for grant investment. Users toggle between the three lenses via a segmented control. All three lenses score **all 232 visible regions** using census/ACS data available for every region. No lens gates on business data availability — regions without tracked businesses are scored using demographic, economic, and socioeconomic indicators, with business-related components defaulting to neutral values rather than zero.
+The Triage view asks three questions of the displacement stages of §3. Each lens sorts every one of the 269 census tracts into a group by a stated rule and shows the measured figures behind the rule. There is no composite score, no weighting and no ranking: within a group, the table is simply ordered by one measured figure, and any column can be sorted. A lens is a screening aid for committee discussion, not a finding about any neighborhood.
 
-### 6.1 Trajectory Lens
+> **November 2026 change.** Until this revision the three lenses were weighted 0–100 scores built on the pressure score of §3.8, with categories such as "Urgent — Active Window" and "Crisis — Fund Now". They were replaced for three reasons. The score they rested on follows present-day poverty, not measured change (§3). Their weights, ceilings and "intervention window" multipliers were never checked against outcomes. And the weight sliders shown in the view did not change its results. The lenses now use the stages and census figures only.
 
-**Question:** *Where is displacement accelerating fastest?*
+Colors in this view are the stage colors of the map (§3.2). The lens's group is shown in words.
 
-This lens identifies the intervention window — where change is happening rapidly enough that action now could alter the trajectory, but hasn't progressed so far that preservation is purely retrospective.
+### 6.1 Figures the lenses add
 
-| Metric | Formula | Scale | Rationale |
-|--------|---------|-------|-----------|
-| **Velocity** | `(DVI_2023 - DVI_2010) / 13 years`, normalized to 0–100 | Max velocity cap: 3.0 DVI points/year | 3.0 represents the maximum observed velocity across Austin tracts in the 2010–2023 period. Higher values are clamped to prevent outliers from compressing the scale. |
-| **Acceleration** | `velocity_recent - velocity_prior` (2010–2023 vs 2000–2010), normalized to 0–100 | Max acceleration cap: 2.0 | Positive = displacement speeding up. Negative (clamped to 0) = displacement decelerating. 2.0 represents the observed maximum acceleration. |
-| **Remaining Vulnerability** | 30% renter share + 25% poverty + 20% BIPOC share + 15% rent burden + 10% foreign-born | 0–100 | Captures how much there is left to lose. A neighborhood that has already fully gentrified has low remaining vulnerability even if velocity was high in the past. |
-| **Intervention Window** | Peaks in DVI 20–55 range. Combines velocity × remaining vulnerability, scaled by DVI-range multiplier. | 0–100 | DVI < 20: low urgency (minimal displacement). DVI 20–55: sweet spot where grants can prevent further loss. DVI 55–70: urgent but narrowing window. DVI > 70: largely post-displacement — grants may fund documentation rather than prevention. |
-| **Priority Score** | `0.35 × window + 0.30 × velocity + 0.20 × normalized_DVI + 0.15 × acceleration` | 0–100 | Window is weighted highest because it captures the *actionability* of intervention, not just severity. |
+The lenses use the stage and its three tests (§3.1) for the 2019–2023 survey, plus the figures below. They are computed by `scripts/build_stages.mjs` and written to `data/stageLenses.js`, which only the presenter build loads.
 
-**Categories:**
+| Figure | Formula | Data |
+|--------|---------|------|
+| Change since 2000 (index) | Mean of the four z-scores of test 2 (§3.1): owner share, white non-Hispanic share, bachelor's share, median family income | 2000 Census and ACS 2019–2023, as in §3.1 |
+| Shift since 2011–2015 (index) | The same mean, with change measured between the 2011–2015 and 2019–2023 surveys, compared with the region's change over that period and the spread of tracts around it | ACS 2011–2015 and 2019–2023: B25003, B03002, B15002, B19113 |
+| Shifted, yes or no | Yes when at least 2 of the 4 z-scores are above 0.5 and the index is 0.5 or more (the rule of test 2) | |
+| Value rise since 2011–2015 | (value now − value then) ÷ value then × 100. "Fast" is above the 60th percentile of scored tracts: +127% for home values, +59% for rents | ACS B25077; B25064 where fewer than 50 homes are owned |
+| Rank of the rise since 2000 | (number of scored tracts with a smaller rise) ÷ (scored tracts − 1) × 100. Above 60 is the "high" of test 3 | 2000 SF3 H085 / ACS B25077 (H063 / B25064 for rent) |
+| Preservation Austin listings nearby | Count of listings less than 0.012 degrees (about 1.3 km) from the tract's center point | `data/preservationAustin.js`: 156 published listings, of which 18 are filed as citywide and not counted |
+| Black + Hispanic share since 2000 | Share in 2023 − share in 2000, in percentage points (2010 where a tract has no 2000 figure) | `data/phase1_output/audited_demographics_normalized.json` (§1.1) |
+| Tracked businesses | Count of legacy businesses in the tract, open and closed | `data/businesses.js` (§1.2) |
 
-| Category | Priority Score | Color |
-|----------|---------------|-------|
-| Urgent — Active Window | ≥ 75 | Red |
-| High Priority — Accelerating | ≥ 55 | Orange |
-| Emerging — Monitor Closely | ≥ 35 | Yellow |
-| Stable — Low Priority | ≥ 15 | Green |
-| Post-Displacement or Stable | < 15 | Gray |
-| Affluent / Appreciated | isExcluded | Blue |
+The two surveys compared for the recent shift, 2011–2015 and 2019–2023, share no interviews. The 2016–2020 survey overlaps the latest one by two years, so it is not used for that comparison. For the period, the region's change and the line a tract must pass were: owner share +0.9 points (line +7.3), white non-Hispanic share −3.8 (line +1.8), bachelor's share +8.2 (line +13.2), median family income +54.2% (line +76.9%).
 
-**Scatter Plot:** X = DVI (2023), Y = Displacement Velocity, Dot Size = Intervention Window, Color = Category.
+### 6.2 Trajectory lens
 
-### 6.2 Equity Lens
+**Question:** *Where is change moving now?*
 
-**Question:** *Which underserved communities need investment most?*
+| Group | Rule | Tracts |
+|-------|------|--------|
+| Starting to shift | Stage is Vulnerable, and the population shifted between the two surveys | 6 |
+| Shifting now | Stage is Early, Dynamic or Late, and the population shifted between the two surveys | 19 |
+| Reached continued loss since 2015 | Stage is Continued loss now and was something else in the 2011–2015 survey | 19 |
+| In a stage, no recent shift | Stage is Early, Dynamic or Late, and no shift was measured between the two surveys | 10 |
+| Vulnerable, no shift measured | Stage is Vulnerable, and no shift was measured | 37 |
+| Continued loss by 2015 | Stage was already Continued loss in the 2011–2015 survey | 7 |
+| No stage | No stage in the 2019–2023 survey | 163 |
+| Not scored | §3.4 | 8 |
 
-This lens directly operationalizes Preservation Austin's stated mission to focus on underrepresented heritage communities. It aligns with the City of Austin's Equity-Based Preservation Plan (adopted November 2024), which found that only 16% of Austin's historic landmarks have known associations with communities of color.
+Of the 25 tracts in the first two groups, 16 show no change on the longer test since 2000: the shift is recent. The table also shows each tract's stage in the 2010, 2015, 2020 and 2023 readings.
 
-| Metric | Formula | Scale | Rationale |
-|--------|---------|-------|-----------|
-| **Demographic Vulnerability** | 40% rent burden + 30% renter share + 15% foreign-born + 15% elderly (65+) | 0–100 | Elderly residents on fixed incomes are included because they face displacement pressure similar to renters — rising property taxes can force long-time homeowners to sell. |
-| **Economic Precarity** | 30% poverty + 25% SNAP participation + 25% home value appreciation + 20% income gap (vs $86k city median) | 0–100 | SNAP participation captures deep poverty that the poverty rate alone misses. Home value appreciation appears here as a *threat* to economically precarious residents, not a positive indicator. |
-| **Equity Deficit** | 35% BIPOC share + 25% heritage business presence + 20% east-of-I-35 flag + 20% foreign-born | 0–100 | See §6.2.1 for details on the east-of-I-35 proxy and heritage detection. |
-| **Preservation Gap** | `max(0, 100 - PA_item_count × 15)` | 0–100 | Regions that have already received significant PA grants, merit awards, or other investments score lower. This creates a spread-the-wealth signal: grant money should flow to underserved areas, not concentrate in areas PA has already supported. A region with zero PA investment and high need gets the full 100. |
-| **Priority Score** | `0.25 × DVI + 0.20 × demoVuln + 0.20 × econPrecarity + 0.20 × equityDeficit + 0.15 × preservationGap` | 0–100 | DVI is one of five equal-ish components, not dominant. The equity-specific factors (equity deficit, preservation gap) together carry 35% of the weight. |
+**Chart:** x = change since 2000 (index), y = shift since 2011–2015 (index), with both lines at 0.5.
 
-#### 6.2.1 East-of-I-35 as an Equity Proxy
+### 6.3 Equity lens
 
-Austin's I-35 corridor follows the route of the 1928 Master Plan's racial segregation line, which created a "Negro District" east of East Avenue (now I-35). The highway's construction in the 1960s physically reinforced this divide as a "concrete color line." For eight decades, communities east of I-35 were systematically excluded from public investment, zoning protections, and infrastructure spending. The east-of-I-35 flag (centroid longitude > -97.735) is a geographic proxy for this historic underinvestment.
+**Question:** *Where do vulnerable residents live, and where has Preservation Austin's recorded work been?*
 
-**Limitation:** This proxy is blunt. Some east-side tracts are now affluent (Mueller, parts of East Riverside), and some west-side tracts have historically underserved populations. The Affluence Gate (§3.8) catches the most obvious false positives, but the flag should be understood as a rough directional signal, not a precise equity measure.
+| Group | Rule | Tracts |
+|-------|------|--------|
+| Vulnerable residents, no listing nearby | Stage is Vulnerable, Early, Dynamic or Late, and no listing lies within about 1.3 km of the tract's center | 66 |
+| Vulnerable residents, listing nearby | The same stages, with at least one listing within about 1.3 km | 6 |
+| Continued loss, no listing nearby | Stage is Continued loss, no listing within about 1.3 km | 15 |
+| Continued loss, listing nearby | Stage is Continued loss, at least one listing within about 1.3 km | 11 |
+| No stage | No stage in the 2019–2023 survey (36 of these have a listing nearby) | 163 |
+| Not scored | §3.4 | 8 |
 
-#### 6.2.2 Heritage Business Detection
+**Chart:** x = people of color as a share of residents in 2000, y = the same share in the 2019–2023 survey, with the diagonal marking no change. A filled dot has a listing nearby; a ring has none.
 
-The equity deficit score includes whether any tracked businesses in the region carry a heritage affiliation tag (e.g., "AACHD (Six Square)", "5th Street Mex-Am Heritage Corridor"). Regions with heritage-affiliated businesses score 80; those without score 20 (not zero, since absence of tracked businesses doesn't mean absence of heritage). This component uses the incomplete business data as a bonus signal rather than a gating factor.
+The earlier version of this lens scored a tract higher for lying east of I-35 and for having a heritage-tagged business. Both are gone. People of color as a share of residents, in 2000 and now, is measured for every tract and does the same job.
 
-**Categories:**
+### 6.4 Matrix lens
 
-| Category | Priority Score | Color |
-|----------|---------------|-------|
-| Equity Priority — Underserved | ≥ 75 | Red |
-| Heritage at Risk | ≥ 55 | Orange |
-| Moderate Need | ≥ 35 | Yellow |
-| Lower Priority | ≥ 15 | Green |
-| Affluent / Appreciated | isExcluded | Blue |
+**Question:** *Who lives here, and what is the housing market doing?*
 
-**Scatter Plot:** X = DVI, Y = Equity Deficit, Dot Size = Preservation Gap, Color = Category.
+The two forces the stages are built on, as a grid. "Vulnerable" is test 1 (at least 3 of 5 measures past the line). "Rising fast" is the rise in value since 2000 in the top two fifths, the "high" of test 3.
 
-### 6.3 Risk Matrix Lens
+| Group | Rule | Tracts |
+|-------|------|--------|
+| Vulnerable residents, values rising fast | Vulnerable now; rise in the top two fifths | 29 |
+| Vulnerable residents, values not rising fast | Vulnerable now; rise not in the top two fifths | 43 |
+| Vulnerable in 2000, not now, values rising fast | Not vulnerable now, vulnerable in 2000; rise in the top two fifths | 31 |
+| Not vulnerable, values rising fast | Not vulnerable now or in 2000; rise in the top two fifths | 43 |
+| Not vulnerable, values not rising fast | Not vulnerable; rise not in the top two fifths, or not measured | 115 |
+| Not scored | §3.4 | 8 |
 
-**Question:** *What type of intervention does each area need?*
+**Chart:** x = rank of the rise in value since 2000 (0–100, line at 60), y = number of vulnerability measures past the line (0–5, line between 2 and 3). Dots are offset slightly up or down so they do not cover each other.
 
-Unlike the Trajectory and Equity lenses (which produce a single ranked priority list), the Risk Matrix computes four independent scores and places regions in quadrants. Different quadrants suggest different *kinds* of grants, not just different priority levels.
+The first three groups each carry a question for the committee, shown when the group or a place in it is selected. These are prompts written for this tool. They are not Preservation Austin programs and they are not recommendations of the UT study.
 
-**Axis 1: Market Displacement Pressure** — where is the market pushing people out?
+### 6.5 Limits of the lenses
 
-| Component | Weight | Source | Normalization |
-|-----------|--------|--------|---------------|
-| Home value appreciation (YoY) | 35% | Property data | 15% YoY ceiling |
-| Rent-to-income ratio | 25% | Property + Socioeconomic | 50% of income ceiling |
-| New construction permits | 20% | Property data | Normalized to citywide maximum |
-| Gini coefficient (inequality) | 20% | Socioeconomic data | 0.55 ceiling |
-
-**Axis 2: Community Vulnerability** — who is at risk of being displaced?
-
-| Component | Weight | Source | Normalization |
-|-----------|--------|--------|---------------|
-| Rent burden | 30% | Demographics | 55% ceiling |
-| Renter share | 25% | Demographics | 75% ceiling |
-| Poverty rate | 20% | Socioeconomic | 30% ceiling |
-| Foreign-born % | 15% | Demographics | 40% ceiling |
-| Elderly (65+) % | 10% | Demographics | 25% ceiling |
-
-**Axis 3: Cultural Significance** — what is at stake if displacement continues?
-
-| Component | Weight | Source | Default when missing |
-|-----------|--------|--------|---------------------|
-| BIPOC population share | 25% | Demographics | Always available |
-| Heritage business presence | 25% | Business data | 0 if no businesses tracked (neutral impact on total since other components compensate) |
-| Anchor density | 20% | Business data | **50** (neutral) if no businesses tracked — avoids penalizing data gaps |
-| PA investment count | 15% | Preservation Austin | 0 if no PA items nearby |
-| Population density | 15% | Demographics | Always available |
-
-**Axis 4: Intervention Feasibility** — can a grant actually help here?
-
-| Component | Weight | Source | Scoring logic |
-|-----------|--------|--------|---------------|
-| DVI window score | 30% | DVI computation | Peaks at DVI 25–55 (the range where preservation grants are most effective). Below 25: low urgency. Above 70: displacement largely complete. |
-| Vacancy rate | 25% | Property data | < 10% = 80 (community still present); ≥ 10% = 40 (possible hollowing out) |
-| Tenure mix | 25% | Demographics | 20–60% owner-occupied = 80 (mixed tenure is flexible); outside range = 40 |
-| Eviction rate | 20% | Socioeconomic | < 5 per 100 renters = 70 (not in freefall); ≥ 5 = 30 |
-
-**Quadrant Assignment** (Market Pressure vs Community Vulnerability, threshold at 50):
-
-| Quadrant | Market Pressure | Vulnerability | Category | Recommended Grant Type |
-|----------|----------------|--------------|----------|----------------------|
-| Q1 (upper-right) | ≥ 50 | ≥ 50 | Crisis — Fund Now (if feasibility ≥ 50) | Emergency stabilization grants |
-| Q1 (upper-right) | ≥ 50 | ≥ 50 | Crisis — Document (if feasibility < 50) | Oral history, commemoration, archival |
-| Q2 (lower-right) | ≥ 50 | < 50 | Urgent — Prevent | Proactive preservation, business support |
-| Q4 (upper-left) | < 50 | ≥ 50 | Chronic — Invest (if feasibility ≥ 50) | Community capacity building |
-| Q4 (upper-left) | < 50 | ≥ 50 | Chronic — Systemic (if feasibility < 50) | Policy advocacy (not direct grants) |
-| Q3 (lower-left) | < 50 | < 50 | Monitor | No immediate action needed |
-
-**Scatter Plot:** X = Market Pressure, Y = Community Vulnerability, Dot Size = Cultural Significance, Color = Category. Quadrant reference lines at x=50, y=50.
-
-### 6.4 DVI Weight Sliders (Advanced Section)
-
-The Advanced panel allows exploratory adjustment of the three DVI sub-index weights (Demographic Vulnerability, Market Pressure, Socioeconomic Stress). Default: 35/35/30. When one slider moves, the other two adjust proportionally to maintain a sum of 100%.
-
-These weights affect the pressure score (§3.8), which feeds into all three lenses: Trajectory uses DVI and its change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through the Intervention Feasibility axis.
-
-**Note:** Weight adjustments in the UI are for exploratory analysis only. The default weights (35/35/30) are used for all published recommendations.
+- **The recent shift compares two samples.** A single tract's shift can be survey noise. The groups are lists to look into, not forecasts.
+- **Boundaries.** 143 of the 269 tracts had different boundaries in 2010. Their 2011–2015 figures are estimates carried from the earlier tracts (§3.3) and are marked ≈ in the table. A shift was found in 26% of those tracts and in 29% of the tracts with unchanged boundaries, so carrying does not appear to create shifts, but any one carried tract can be wrong.
+- **Listings are the published record.** They are not everything Preservation Austin has done. 18 of 156 are citywide and are not counted toward any tract; 42 more are placed at the center of a neighborhood or area, not at a street address. "Nearby" is measured from the tract's center, so a listing inside a large tract can fall outside the 1.3 km.
+- **Tracked businesses** reflect where inventories were done (§1.2). No group rule uses them.
+- **Tracts only.** The lenses are not offered for neighborhoods.
+- **A group is not a stage.** Where a group's rule and the stage differ (31 tracts were vulnerable in 2000, are not now and have fast-rising values; 26 are in continued loss), the difference is the extra conditions of §3.2.
 
 ---
 
@@ -671,7 +628,9 @@ adjusted_value = nominal_value × (CPI_2023 / CPI_year)
 
 ### How it's used
 
-All JSON source files store **nominal dollars** (the actual dollar amount recorded in that year). CPI adjustment is applied at display time in the UI, not in the stored data. The Economics tab shows both values: "$500 / $897 in 2023$" so users can see both the historical and inflation-adjusted figures. Change arrows (↑↓) between time periods use the inflation-adjusted values so that comparisons reflect real purchasing power changes, not just nominal dollar increases.
+All JSON source files store **nominal dollars** (the actual dollar amount recorded in that year).
+
+**Not applied at present.** The place panel and the story card show dollars of each year, and their "up N% since" figures compare nominal dollars. The stage tests rank home values within one year, so inflation does not affect them (§3.7). The function remains in `utils/cpi.js` for a future view that compares dollar amounts across years.
 
 ---
 
@@ -722,7 +681,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 ### Coverage Gaps
 
 - **60 regions** (22%) lack property and socioeconomic data — mostly rural, industrial, or ETJ tracts with sparse or no residential housing stock. DVI for these regions is computed from demographics only (Demographic Vulnerability sub-index), re-weighted to 100% of the DVI score. This makes their DVI less comprehensive but not zero.
-- **~230 regions** have no tracked legacy businesses. This reflects survey coverage concentrated in East Austin, South Lamar, and downtown — not the absence of culturally significant businesses elsewhere. The three triage lenses (§6) treat missing business data as neutral (anchor density defaults to 50 in the Risk Matrix) rather than as a negative signal.
+- **~230 regions** have no tracked legacy businesses. This reflects survey coverage concentrated in East Austin, South Lamar, and downtown — not the absence of culturally significant businesses elsewhere. The Triage lenses (§6) show the counts for reference and do not use them in any rule.
 
 ### Temporal Caveats
 
@@ -832,7 +791,7 @@ Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County dist
 
 | Script | Purpose |
 |--------|---------|
-| `build_stages.mjs` | Decides the displacement stage of every tract and neighborhood for each census year (§3) and writes `data/stages.js`. Pulls are cached in `data/_cache/census_history/stage_*.json`; `--report` prints the checks against the City's map. |
+| `build_stages.mjs` | Decides the displacement stage of every tract and neighborhood for each census year (§3) and writes `data/stages.js`. Pulls are cached in `data/_cache/census_history/stage_*.json`; `--report` prints the checks against the City's map. Also writes `data/stageLenses.js`, the figures for the Triage lenses (§6). |
 | `rebuild_census_history.mjs` | Rebuilds 2000, 2010 and 2015 population, race, owner share and rent burden from census tables (§1.1). Shares its census helpers with `build_stages.mjs` (`scripts/lib/census.mjs`). |
 | `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020) |
 | `fill_demographic_history.py` | Chains crosswalks for deep history + interpolates 2005 from 2000/2010 |

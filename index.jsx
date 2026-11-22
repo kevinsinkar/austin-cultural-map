@@ -445,7 +445,6 @@ export default function AustinCulturalMap() {
           <ErrorBoundary>
             <Suspense fallback={viewLoading}>
               <TriageView
-                boundaryMode={boundaryMode}
                 onLocateOnMap={handleLocateOnMap}
                 lens={triageLens}
                 setLens={setTriageLens}

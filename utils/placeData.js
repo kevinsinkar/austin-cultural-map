@@ -24,6 +24,11 @@ import { aggregateNeighborhood } from "./aggregation";
 import { tractPlace, neighborhoodPlace } from "./places";
 
 const NEAR_DEG = 0.012; // about 1.3 km — the radius used for "nearby" PA items
+// Listings with no place of their own ("Citywide", "N/A") are pinned to a
+// generic downtown point in the source data. They are not near anything.
+const HAS_PLACE = (item) => !/^\s*(citywide|n\/a)/i.test(item.address || "");
+/** Preservation Austin listings that name a place (an address or an area). */
+export const PA_PLACED = PA_ALL.filter((i) => i.lat && i.lng && HAS_PLACE(i));
 const LATEST_YEAR = 2023;
 
 export const fmtMoney = (v) => (v >= 10000 ? `$${Math.round(v / 1000)}k` : `$${Math.round(v).toLocaleString()}`);
@@ -115,15 +120,19 @@ function econStatsFor(ids) {
   }).filter(Boolean);
 }
 
-function paNearTracts(ids) {
+/**
+ * Preservation Austin listings within about 1.3 km of the center of any of
+ * the given tracts, newest first. Citywide listings are never "nearby".
+ */
+export function paNearTracts(ids) {
   const centers = ids.map((id) => REGION_INDEX.find((r) => r.region_id === id)).filter(Boolean);
-  return PA_ALL
-    .filter((i) => i.lat && i.lng &&
-      centers.some((c) => Math.hypot(i.lat - c.lat, i.lng - c.lng) < NEAR_DEG))
+  return PA_PLACED
+    .filter((i) => centers.some((c) => Math.hypot(i.lat - c.lat, i.lng - c.lng) < NEAR_DEG))
     .sort((a, b) => b.year - a.year);
 }
 
-function businessesIn(ids) {
+/** Tracked legacy businesses in the given tracts: { open, closed }. */
+export function businessesIn(ids) {
   const all = idsWithMerges(ids);
   return {
     open: LEGACY_OPERATING.filter((b) => all.includes(b.region_id)),

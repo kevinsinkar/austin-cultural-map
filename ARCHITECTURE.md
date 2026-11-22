@@ -60,7 +60,7 @@ austin-cultural-map/
 │   ├── StrategicPlanView.jsx  # PA 2026–29 plan reference
 │   ├── HistoryView.jsx     # 112-event historical map + timeline, with a "Key moments" starting path
 │   ├── ComparisonView.jsx  # Side-by-side comparison of two census tracts
-│   ├── TriageView.jsx      # Grant triage & prioritisation (3 lenses)
+│   ├── TriageView.jsx      # Triage: three lenses on the displacement stages (presenter mode)
 │   ├── DviWeightsPanel.jsx # Adjustable index weights
 │   ├── GuidedTour.jsx      # ~3-minute tour that drives the app
 │   ├── AgendaModal.jsx     # Internal roadmap, read from docs/ISSUES.md
@@ -72,7 +72,8 @@ austin-cultural-map/
 │
 ├── utils/
 │   ├── stages.js           # Displacement stages: classes, colors, wording, lookups (reads data/stages.js)
-│   ├── math.js             # Pressure score (presenter tools), measured change, triage scoring
+│   ├── lenses.js           # Triage lenses: group rules and per-tract figures (reads data/stageLenses.js)
+│   ├── math.js             # Pressure score (presenter tools), measured change, tipping-point statistics
 │   ├── places.js           # One naming rule for every place (titles, tract labels, search index)
 │   ├── placeData.js        # Data builders for the place panel and story card (tract or neighborhood)
 │   ├── urlState.js         # Shareable address: view, year, layers, selection; short story-card address
@@ -101,6 +102,7 @@ austin-cultural-map/
 │   │                        #   exports Maps + flat arrays + (regionId,year) lookups
 │   │                        #   Also defines CHART_YEARS and toDemoChartData()
 │   ├── stages.js           # GENERATED displacement stage of every tract and neighborhood by census year (npm run build:stages)
+│   ├── stageLenses.js      # GENERATED figures for the Triage lenses, latest survey (same command; presenter bundle only)
 │   ├── auditedDvi.js       # Computes the 0–100 pressure score (presenter tools; not the map colors)
 │   ├── interim_demographics.js   # Enriches demos with derived pct/pop fields
 │   ├── interim_property.js       # Pass-through from normalised property rows
@@ -362,18 +364,17 @@ index.html
 #### TriageView.jsx
 | Import | Source |
 |--------|--------|
-| `useState, useMemo, useCallback` | react |
-| `_` | lodash |
-| `ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ZAxis, Cell, ReferenceLine` | recharts |
-| `VISIBLE_REGIONS` | ../data/regionLookup |
-| `calcTrajectory, calcEquityPriority, calcRiskMatrix, getDviBandColor` | ../utils/math |
+| `useState, useMemo` | react |
+| `ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine` | recharts |
+| `STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED` | ../utils/stages |
+| `LENSES, LENS_BY_KEY, LENS_REGION, PA_LISTING_COUNTS, lensRows, groupCounts, lensSummary, carriedCount` | ../utils/lenses |
 
-**Three analysis lenses**:
-- **Trajectory**: Where is displacement accelerating fastest? (DVI velocity vs DVI score)
-- **Equity**: Which underserved communities need investment most? (equity deficit vs DVI)
-- **Risk Matrix**: What type of intervention does each area need? (market pressure vs community vulnerability)
+**Three lenses on the displacement stages** (rules in `utils/lenses.js`, method in DATA_METHODOLOGY.md §6):
+- **Trajectory**: Where is change moving now? (change since 2000 vs shift between the 2011–2015 and 2019–2023 surveys)
+- **Equity**: Where do vulnerable residents live, and where has Preservation Austin's recorded work been? (people of color in 2000 vs now; listings nearby)
+- **Matrix**: Who lives here, and what is the housing market doing? (vulnerability measures met vs rank of the rise in value)
 
-**Features**: DVI weight sliders, scatter plot with category-colored dots, sortable triage table, "Locate on Map" button (calls `onLocateOnMap` prop to navigate to map view)
+**Features**: every tract sorted into a group by a stated rule (no composite score), scatter plot colored by stage, group filter, sortable table, formulas printed under each lens, "Show on the map" button (calls `onLocateOnMap` prop to navigate to map view)
 
 #### TimelineView.jsx (inactive — button removed from Header)
 | Import | Source |
@@ -454,7 +455,7 @@ index.html
 | `LEGACY_OPERATING, LEGACY_CLOSED` | ../data |
 | `NAME_TO_ID` | ../data/regionLookup |
 
-**Exports**: `lerp`, `interpolateDvi`, `getDviColor`, `getDviBand`, `getDviBandColor`, `getDviTimeSeries`, `interpolateSocio`, `findPriorSocio`, `calcAnchorDensity`, `getAnchorBadge`, `calcTrajectory`, `calcEquityPriority`, `calcRiskMatrix`
+**Exports**: `lerp`, `interpolateDvi`, `getDviColor`, `getDviBand`, `getDviBandColor`, `getDviTimeSeries`, `interpolateSocio`, `findPriorSocio`, `calcAnchorDensity`, `getAnchorBadge`, `calcDirectDisplacement`, `calcGroupDisplacement`, `computeTippingStats`
 
 #### aggregation.js
 | Import | Source |
@@ -542,7 +543,7 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 |----------|-----------|-------------|
 | `"map"` | `MapView` | Leaflet choropleth map with time slider, overlay toggles (Heritage, Businesses, Project Connect, Preservation Austin), boundary mode toggle (Tracts/Neighborhoods), and RegionDetailPanel sidebar |
 | `"compare"` | `ComparisonView` | Side-by-side region comparison with line charts, all-groups demographic toggle, and summary table |
-| `"triage"` | `TriageView` | Grant triage: 3 analysis lenses (Trajectory, Equity, Risk Matrix) with scatter plots, sortable tables, "Locate on Map" navigation, and adjustable DVI weights |
+| `"triage"` | `TriageView` | Triage (presenter mode): 3 lenses on the stages (Trajectory, Equity, Matrix) with scatter plots, group filters, sortable tables, printed formulas and "Show on the map" navigation |
 | `"timeline"` | `TimelineView` | Business timeline (inactive — button removed from Header, component still exists) |
 
 `Header.jsx` renders the tab bar (Map, Compare, Triage) that sets `viewMode`. `AboutModal` and `AgendaModal` are always-available overlays toggled by `showAbout`/`showAgenda` state.
@@ -560,7 +561,7 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 | **Pressure score bands** | Quarters of the scored tracts, not stages: under 37, 37–46, 46–56, 56 and over (`DVI_BINS` in `utils/math.js`). Affluent regions are capped at 20. |
 | **Anchor Density** | `surviving_businesses / (surviving + closed)`. Ratio 0–1. Badge: Strong (>70%), Eroding (40–70%), Critical (<40%). |
 | **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 49 operating + 58 closed. |
-| **Triage Lenses** | Trajectory (displacement velocity), Equity (underserved communities), Risk Matrix (intervention type matching). Each lens produces categories and a priority score per region. |
+| **Triage Lenses** | Trajectory (where change is moving now), Equity (where vulnerable residents live and where Preservation Austin's listings are), Matrix (vulnerability against the housing market). Each lens sorts every tract into a group by a stated rule; there is no score. See DATA_METHODOLOGY.md §6. |
 | **Preservation Austin** | Overlay layer showing 156 geocoded entries: grants ($284K+ since 2016), merit awards (2022–2025), Legacy Business Month participants (2023–2025), and advocacy milestones. |
 | **Census Data** | Real Census Bureau data fetched via API. Demographics from Decennial SF1 (2000, 2010, 2020) and ACS 5-Year (2010, 2015, 2020, 2023). Race variables use Not-Hispanic-by-Race tables (P004/P005) to avoid double-counting. |
 | **Tract Rosetta** | `region_tract_rosetta.json` maps region_id ↔ Census tract code (tractce22) ↔ full GEOID. Essential for Census API queries. |
