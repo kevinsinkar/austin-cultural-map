@@ -47,6 +47,11 @@ const housingPhrase = (h) => {
   return "None of the three patterns";
 };
 
+// Continued loss is met by demographic change, or by the white share and the
+// bachelor's share both rising. Say so where the second route decided it.
+const lossOnTwoMeasures = (stage) => stage.code === "CL" && stage.change?.measured && !stage.change.yes;
+const LOSS_NOTE = "Continued loss can be met without this test: here the shares of white residents and of adults with a bachelor's degree have both risen.";
+
 /** The three tests as one line each (side panel). */
 export function StageChecks({ stage }) {
   if (!stage.scored) return null;
@@ -65,6 +70,7 @@ export function StageChecks({ stage }) {
             {d.measured
               ? <><strong>{d.yes ? "Yes" : "No"}</strong> · {d.count} of 4 measures well above the region's change</>
               : <>Not measured: no usable {STAGE_BASE_YEAR} figures here</>}
+            {lossOnTwoMeasures(stage) && <> · white and bachelor's shares both up</>}
           </dd>
         </div>
       )}
@@ -133,6 +139,7 @@ export function StageTests({ stage }) {
           usable {STAGE_BASE_YEAR} figures to compare with.
         </p>
       )}
+      {lossOnTwoMeasures(stage) && <p className="story-card-text" style={{ marginTop: 6 }}>{LOSS_NOTE}</p>}
       {d && (
         <p className="story-card-text" style={{ marginTop: 6 }}>
           <strong>3. Housing market: {h ? h.name.toLowerCase() : "not measured"}.</strong>{" "}

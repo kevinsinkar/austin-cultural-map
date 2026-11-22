@@ -9,7 +9,7 @@
 
 **Short on time?** [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md) shows every formula on one page, each with the data behind its terms. This document gives the reasons and the limits.
 
-This document is organized from raw inputs (§1–2) through calculations (§3–6) to known limitations (§10). If you want to verify a specific number on screen, start with the section matching the view you're looking at: Map View (§4), Compare View (§5), or Triage View (§6). If you want to understand how the map's displacement stages are decided, start at §3. If you want to know what data we don't have, skip to §10.
+This document is organized from raw inputs (§1–2) through calculations (§3–6) to known limitations (§10). If you want to verify a specific number on screen, start with the section matching the view you're looking at: Map View (§4), Compare View (§5), or Triage View (§6). If you want to understand how the map's displacement stages are decided, start at §3. If you want to know what data we don't have, skip to §10. If you want to know which formulas come from published research and which are this site's own, go to §12.
 
 ---
 
@@ -26,6 +26,7 @@ This document is organized from raw inputs (§1–2) through calculations (§3�
 9. [Data Normalization Pipeline](#9-data-normalization-pipeline)
 10. [Known Limitations](#10-known-limitations)
 11. [Source Attributions](#11-source-attributions)
+12. [Where the Formulas Come From](#12-where-the-formulas-come-from)
 
 ---
 
@@ -106,7 +107,7 @@ Rows whose 2020 tract has the same boundary as the earlier tract are exact count
 
 Every census tract and every multi-tract neighborhood on the map is placed in a **displacement stage**, or in none. A stage is a category decided by three tests on census figures. It is not a score, it is never averaged, and it is never interpolated between years.
 
-The tests are those of Appendix 3 of *Uprooted: Residential Displacement in Austin's Gentrifying Neighborhoods, and What Can Be Done About It* (Way, Mueller and Wegmann, University of Texas at Austin, 2018), a study the City of Austin commissioned. That appendix adapts Lisa Bates, *Gentrification and Displacement Study* (Portland, 2013). The City of Austin publishes its own updates of the same test as "Displacement Risk Areas". This site works the test out itself, from Census Bureau tables, for each census year it shows (`scripts/build_stages.mjs` → `data/stages.js`; `npm run build:stages`).
+The tests are those of Appendix 3 of *Uprooted: Residential Displacement in Austin's Gentrifying Neighborhoods, and What Can Be Done About It* (Way, Mueller and Wegmann, University of Texas at Austin, 2018), a study the City of Austin commissioned. That appendix adapts Lisa Bates, *Gentrification and Displacement Study* (Portland, 2013). The City of Austin publishes its own updates of the same test as "Displacement Risk Areas". This site works the test out itself, from Census Bureau tables, for each census year it shows (`scripts/build_stages.mjs` → `data/stages.js`; `npm run build:stages`). §12 traces each formula to the place it comes from and lists the choices that are this site's own.
 
 A stage describes an area as a whole. It is **not** a statement about any block or household, and "no stage" does not mean no one there is at risk of displacement.
 
@@ -161,6 +162,8 @@ For the 2019–2023 survey the lines were: people of color 59.8% (region 50.2%),
 
 The map draws five stages in one hue, light to dark (`STAGE_CLASSES` in `utils/stages.js`): Vulnerable `#eba259`, Early `#de7b2e`, Dynamic `#c9550a`, Late `#a7320c`, Continued loss `#75201a`. The ramp was checked for steadily falling lightness and for steps that stay apart under color-vision deficiency. Places with no stage are left nearly clear, so the staged places read as the pattern. The side panel and the story card name the study's exact type beside the stage where it says more ("Vulnerable · Susceptible", "Continued loss · Rapid loss").
 
+The six typed rows are Table 1 of Bates (2013), which the UT study follows, and the City's 2022 file applies them exactly. The sources word the continued-loss condition in three ways; §12.2 gives them, and shows from the City's own results which reading is in use.
+
 **Two rows are not in the UT table.**
 
 - *Vulnerable, no type.* The study gives no type to a vulnerable tract whose market shows none of its patterns. This site still shows it as Vulnerable, because the first test is met.
@@ -194,12 +197,12 @@ Figures from before 2020 are carried onto today's (2020) tract boundaries with t
 
 A place is left out of the tests, and drawn in gray with a dashed edge, when in that year:
 
-- it has fewer than 500 residents (the airport, tract 16.06), or
+- it has fewer than 500 residents (the airport, tract 9800; and tract 16.06 in West Austin, with 135 residents in the 2019–2023 survey), or
 - half or more of its residents are enrolled in college or graduate school (the University of Texas and West Campus tracts 6.01 and 6.05–6.08; the Pleasant Valley student-apartment tracts in the 2010 and 2015 surveys), or
 - half or more live in group quarters such as dormitories, barracks or a jail (tract 23.19), or
 - fewer than three of the five vulnerability measures can be computed.
 
-The UT study excluded the airport, the UT campus, Camp Mabry and two West Campus tracts by hand; this site applies a rule each year instead. A share is not computed on fewer than 50 people or homes.
+The UT study excluded the airport, the UT campus, Camp Mabry and two West Campus tracts by hand; this site applies a rule each year instead, and does not single out Camp Mabry. The thresholds (500 residents, one half) are this site's round numbers, not figures from research (§12.4). A share is not computed on fewer than 50 people or homes.
 
 ### 3.5 Neighborhoods
 
@@ -246,6 +249,7 @@ For single places: The tracts with the largest fall in residents of color since 
 | Home values in 2016 dollars | Dollars of each year | Rescaling every tract by the same factor does not change its rank. |
 | Region's median family income for 2000 taken from the census | The five counties' medians, weighted by their number of families ($59,196) | The 2000 Census API has no figure for the metropolitan area. Appendix 3 suggests this fallback. |
 | Vulnerable tracts with no market pattern are unclassified; no "rapid loss" | Shown as Vulnerable; rapid loss added (§3.2) | See §3.2. |
+| Continued loss: white share and bachelor's share "increasing" (worded differently on the project's page and in Bates) | Demographic change, or both shares up | The reading the City's 2022 results show in use (§12.2). |
 
 ### 3.8 The pressure score (presenter tools only)
 
@@ -253,28 +257,30 @@ The 0–100 composite score that colored the map before November 2026 is still c
 
 #### Sub-Index Composition
 
+The weights and ceilings below were set by judgment when the score was first built. The project's history records no source for them (§12.4). The last column checks each ceiling against this site's 2023 figures.
+
 **Demographic Vulnerability (default weight: 35%)**
 
-| Component | Weight | Formula | Normalization Ceiling | Ceiling Rationale |
-|-----------|--------|---------|----------------------|-------------------|
-| Rent Burden | 50% | `rent_burden_pct / 55 * 100` | 55% of renters | `rent_burden_pct` is the share of renters paying 50% or more of income on rent (§1.1). 55% is above the 95th percentile (48% in 2023). |
-| Renter Share | 30% | `(100 - pct_owner_occupied) / 75 * 100` | 75% renters | ~95th percentile. Tracts above 75% renter are almost exclusively student or transient housing. |
-| Foreign-Born | 20% | `pct_foreign_born / 40 * 100` | 40% population | ~95th percentile. Prevents high-immigration tracts from compressing the scale for all others. |
+| Component | Weight | Formula | Ceiling | Against the 2023 figures |
+|-----------|--------|---------|---------|--------------------------|
+| Rent Burden | 50% | `rent_burden_pct / 55 * 100` | 55% of renters | `rent_burden_pct` is the share of renters paying 50% or more of income on rent (§1.1). The 95th percentile is 50; 9 of 266 tracts are at or over the ceiling. |
+| Renter Share | 30% | `(100 - pct_owner_occupied) / 75 * 100` | 75% renters | Well under the 95th percentile, which is 96. 57 of 267 tracts are at or over the ceiling, so this component does not separate the most heavily rented tracts. |
+| Foreign-Born | 20% | `pct_foreign_born / 40 * 100` | 40% of residents | The 95th percentile is 35; 4 of 268 tracts are at or over. |
 
 **Market Pressure (default weight: 35%)**
 
-| Component | Weight | Formula | Normalization Ceiling | Ceiling Rationale |
-|-----------|--------|---------|----------------------|-------------------|
-| Home Value Appreciation | 50% | `pct_home_value_change_yoy / 15 * 100` | 15% YoY | Set when 15% a year was rare. In 2023 the median tract was at 14.7% and 117 of 244 tracts hit the ceiling, so this component no longer separates tracts. |
-| Rent-to-Income Ratio | 50% | `(rent * 12 / income) / 0.50 * 100` | 50% of income on rent | HUD defines >30% as cost-burdened and >50% as severely burdened. The 50% ceiling captures the severe end. |
+| Component | Weight | Formula | Ceiling | Against the 2023 figures |
+|-----------|--------|---------|---------|--------------------------|
+| Home Value Appreciation | 50% | `pct_home_value_change_yoy / 15 * 100` | 15% a year | The median tract is at 14.7 and 117 of 244 tracts are at or over the ceiling, so this component no longer separates tracts. |
+| Rent-to-Income Ratio | 50% | `(rent * 12 / income) / 0.50 * 100` | 50% of income on rent | The 95th percentile is 36; 4 of 256 tracts are at or over. |
 
 **Socioeconomic Stress (default weight: 30%)**
 
-| Component | Weight | Formula | Normalization Ceiling | Ceiling Rationale |
-|-----------|--------|---------|----------------------|-------------------|
-| Poverty Rate | 40% | `poverty_rate / 30 * 100` | 30% population | ~95th percentile. Federal "high poverty" threshold is 20%; 30% represents extreme concentrated poverty. |
-| Unemployment | 30% | `unemployment_rate / 15 * 100` | 15% labor force | ~95th percentile. Double the national average during non-recessionary periods. |
-| Eviction Filings | 30% | `eviction_filing_rate / 10 * 100` | 10 per 100 renters | ~95th percentile from Eviction Lab data for Texas metro areas. |
+| Component | Weight | Formula | Ceiling | Against the 2023 figures |
+|-----------|--------|---------|---------|--------------------------|
+| Poverty Rate | 40% | `poverty_rate / 30 * 100` | 30% of residents | The 95th percentile is 31; 18 of 268 tracts are at or over. |
+| Unemployment | 30% | `unemployment_rate / 15 * 100` | 15% of the labor force | The 95th percentile is 11; 4 of 268 tracts are at or over. |
+| Eviction Filings | 30% | `eviction_filing_rate / 10 * 100` | 10 per 100 renters | The 95th percentile is 9.5; 11 of 242 tracts are at or over. |
 
 #### Composite Formula
 
@@ -472,7 +478,7 @@ The lenses use the stage and its three tests (§3.1) for the 2019–2023 survey,
 | Black + Hispanic share since 2000 | Share in 2023 − share in 2000, in percentage points (2010 where a tract has no 2000 figure) | `data/phase1_output/audited_demographics_normalized.json` (§1.1) |
 | Tracked businesses | Count of legacy businesses in the tract, open and closed | `data/businesses.js` (§1.2) |
 
-The two surveys compared for the recent shift, 2011–2015 and 2019–2023, share no interviews. The 2016–2020 survey overlaps the latest one by two years, so it is not used for that comparison. For the period, the region's change and the line a tract must pass were: owner share +0.9 points (line +7.3), white non-Hispanic share −3.8 (line +1.8), bachelor's share +8.2 (line +13.2), median family income +54.2% (line +76.9%).
+The two surveys compared for the recent shift, 2011–2015 and 2019–2023, share no interviews. The 2016–2020 survey overlaps the latest one by two years, so it is not used for that comparison; the Census Bureau's guidance is to compare 5-year surveys that do not overlap (§12.3). Applying the rule of test 2 to this pair of surveys is this site's own extension of the published method (§12.4). For the period, the region's change and the line a tract must pass were: owner share +0.9 points (line +7.3), white non-Hispanic share −3.8 (line +1.8), bachelor's share +8.2 (line +13.2), median family income +54.2% (line +76.9%).
 
 ### 6.2 Trajectory lens
 
@@ -533,7 +539,7 @@ The first three groups each carry a question for the committee, shown when the g
 
 - **The recent shift compares two samples.** A single tract's shift can be survey noise. The groups are lists to look into, not forecasts.
 - **Boundaries.** 143 of the 269 tracts had different boundaries in 2010. Their 2011–2015 figures are estimates carried from the earlier tracts (§3.3) and are marked ≈ in the table. A shift was found in 26% of those tracts and in 29% of the tracts with unchanged boundaries, so carrying does not appear to create shifts, but any one carried tract can be wrong.
-- **Listings are the published record.** They are not everything Preservation Austin has done. 18 of 156 are citywide and are not counted toward any tract; 42 more are placed at the center of a neighborhood or area, not at a street address. "Nearby" is measured from the tract's center, so a listing inside a large tract can fall outside the 1.3 km.
+- **Listings are the published record.** They are not everything Preservation Austin has done. 18 of 156 are citywide and are not counted toward any tract; 42 more are placed at the center of a neighborhood or area, not at a street address. "Nearby" is measured from the tract's center, so a listing inside a large tract can fall outside the 1.3 km. The 1.3 km is not from research; §12.4 shows how the counts move with it.
 - **Tracked businesses** reflect where inventories were done (§1.2). No group rule uses them.
 - **Tracts only.** The lenses are not offered for neighborhoods.
 - **A group is not a stage.** Where a group's rule and the stage differ (31 tracts were vulnerable in 2000, are not now and have fast-rising values; 26 are in continued loss), the difference is the extra conditions of §3.2.
@@ -714,6 +720,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 - **Home values are self-reported** by owner-occupants, and say nothing about rental housing. Tracts with few owner homes use median rent instead.
 - **Boundaries.** Figures from before 2020 are estimates on today's tract boundaries (§3.3). Tracts on the edge of the mapped area are drawn clipped (§4.3) but tested on the whole tract.
 - **Not the City's map.** This site's readings agree with the City's 2022 map for about four tracts in five (§3.6). Where they differ, neither is shown to be right.
+- **A convention, not a measurement.** The 0.5 line and the "top two fifths" come from the published method, which gives no test of them against measured displacement. Other cities' published methods flag different tracts (§12.1).
 - **Two rows are this site's own** (§3.2): vulnerable tracts with no market pattern, and rapid loss.
 
 ### Pressure Score Limitations
@@ -799,3 +806,117 @@ Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County dist
 | `merge_permits_and_evictions.py` | Merges permit data and tract-level eviction rates into phase1_output JSONs |
 | `prepare_basta_evictions.py` | Converts BASTA filing counts to rates: filings averaged over ACS-aligned windows (2015←2014–15, 2020←2016–20, 2023←2019–23) ÷ estimated renter households (occupied units × renter share) × 100. Tracts with <30 renter households excluded. |
 | `geocode_businesses_google.py` | Geocodes business locations to rooftop precision via Google Maps API |
+
+---
+
+## 12. Where the Formulas Come From
+
+Every formula on the site is one of three kinds: taken from published work, taken from an agency's guidance or definition, or this site's own. This section says which is which. For published formulas it names the source and the place in it. For this site's own it gives the reason and says what has not been tested. [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md) carries a one-line source note under each formula.
+
+### 12.1 The stage method and where it has been used
+
+The three tests and the stage table (§3) were not designed for this site. They come from a line of published work:
+
+| Work | What it contributed |
+|------|---------------------|
+| Freeman (2005), *Urban Affairs Review* | The starting point. Bates writes that her assessment "follows the method developed by Lance Freeman" and that it "has been used in several analyses since then". |
+| Bates (2013), for the City of Portland | The three dimensions (vulnerable residents, demographic change, housing market), the three market patterns (adjacent, accelerating, appreciated), "high" as the top two fifths, and the six-stage table (her Table 1). Vulnerable meant at least 3 of 4 factors above fixed citywide thresholds. |
+| City of Portland (2018) | An update by city staff that, in the City's words, "builds off the previous work conducted by Dr. Lisa Bates". |
+| Way, Mueller and Wegmann (2018), *Uprooted*, for the City of Austin | The version this site follows. It kept Bates's stage table ("follows the Bates method precisely") and changed three things: a fifth vulnerability factor, children in poverty, added "in response to input from Austin city council members and staff"; comparison with the five-county region, not the city alone; and z-scores with a 0.5 line in place of fixed thresholds. |
+| City of Austin staff (2019, 2020, 2021, 2024) | Re-ran the UT analysis and simplified the categories into Vulnerable, Active, Chronic and Historic displacement risk (*Displacement Risk Areas*, §3.6). |
+
+**Why this method was chosen for this site.** It was written for Austin and commissioned by the City. Its appendix gives every step, so it can be reproduced from public census tables. The City publishes its own results for the same tracts, so this site's working can be checked against them (§3.6). And its stages are what the map's earlier labels claimed to show (§3). No other method was run on this site's data for comparison.
+
+**Published does not mean proven.** Bates describes her indicators as "ground-truthed" with planning staff and reviewed by city staff and expert groups. Neither study's methods section reports a test against measured displacement. The UT project's methodology page gives no basis for the 0.5 line or for "top two fifths", and reports no sensitivity analysis. Preis, Janakiraman, Bob and Steil (2021) applied four cities' methods, Portland's among them, to Boston: the methods flagged between 25 and 119 of 180 tracts, and all four agreed on seven. The thresholds are conventions that planners have found useful, not measurements. A different published method would color some tracts differently.
+
+### 12.2 Formulas taken from published work
+
+"Appendix 3" is Appendix 3 of *Uprooted*. Section numbers in the first column are those of METHODOLOGY_AT_A_GLANCE.md.
+
+| Formula | Source | Followed exactly? |
+|---------|--------|-------------------|
+| Five vulnerability shares (1.1) | Renters, people of color, adults without a bachelor's degree and households under 80% of median family income: Bates (2013), Appendix A. Children in poverty: added by the UT study. Appendix 3, Vulnerability, step 1 | Yes, except how lower-income households are counted (§12.4) |
+| Low-income line at 80% of the area's median family income (1.2) | Bates, Appendix A; Appendix 3, step 1. Both use HUD's figure | The line, yes. The count, no (§12.4) |
+| Comparing with the five-county region (1.3) | The UT study. Its methodology page calls this "a departure from the original Bates method" | Yes |
+| z-score and the weighted spread (1.3) | Appendix 3, Vulnerability, step 3, which gives the spread as a spreadsheet formula | Yes, term for term |
+| "Well above" = z over 0.5; vulnerable = 3 of 5 (1.4) | Appendix 3, Vulnerability, step 4 | Yes |
+| Four change measures; changed = 2 of 4 over 0.5 and an average of 0.5 or more (1.5) | Measures: Bates, Appendix A (she used household income; the UT study uses family income). Rule: Appendix 3, Demographic Change, steps 6 to 8 | Yes |
+| Home value ranked in fifths, "high" = top two fifths; accelerating, appreciated, adjacent; rent where home values are missing (1.6) | Bates, Appendix A, section 3; Appendix 3, Housing Market Change, steps 5 and 6 | Yes, except the base year for "appreciated" (§12.4) |
+| Stage table, six rows (1.7) | Bates (2013), Table 1, p. 31; reproduced by the UT study | Yes. Two further rows are this site's own (§12.4) |
+| Carrying earlier figures onto later boundaries by weights (1.9) | Appendix 3, Demographic Change, steps 4 and 5, using the crosswalk of Brown University's Longitudinal Tract Database (Logan, Xu and Stults 2014) | The arithmetic, yes. The crosswalk files differ (§12.4) |
+| A county-weighted regional figure where the census gives none (1.2) | Appendix 3, Demographic Change, step 1 | Yes; used for 2000 only |
+
+**The table as the City applies it.** The City's 2022 file carries its three test results beside each tract's type, so the table can be checked against practice. All 60 of its tracts in the five vulnerable rows carry exactly the type Bates's table gives (29 Susceptible, 22 Early: Type 1, 1 Early: Type 2, 2 Dynamic, 6 Late).
+
+**The continued-loss row.** The sources word its middle condition in three ways. Bates's table says "Has % white and % with BA increasing", and her Appendix A defines both against the citywide change. The UT methodology page says "an above average increase in white and college-educated people". Appendix 3 says only "increasing". The City's file shows which reading is in use. Of its tracts that are not vulnerable and have an appreciated market, all 14 with demographic change are Continued Loss. Of the 13 without, 5 are Continued Loss and 8 are not. In this site's figures the white share of those 5 is level or rising (−0.1 to +20.1 points; one has no figure), and it falls in all 8 of the others (by 4.5 to 21.5 points). Four of those eight beat the region's change on both shares and are still not Continued Loss, so "increasing" is not being read as "more than the region". The rule in use is: demographic change, or white share and bachelor's share both up. That is the rule this site uses. Reading "increasing" as "more than the region's change" would add two tracts to continued loss in 2023 (Riverside 14.03 and Highland 15.03), neither of which the City classifies that way.
+
+**Rapid loss.** The same file suggests the City's rapid-loss rule is wider than this site's (§3.2). Of its 22 tracts that are not vulnerable, have an accelerating market and carry all three readings, 11 are Rapid Loss, 9 of them with no demographic change. This site also requires that the tract was vulnerable in 2000 and shows demographic change, so that a place is not drawn in the map's darkest color without measured change from a vulnerable starting point. The effect is that some tracts the City shows as rapid loss have no stage here.
+
+### 12.3 Agency guidance and standard definitions
+
+| Choice | Source |
+|--------|--------|
+| The Triage "recent shift" compares the 2011–2015 and 2019–2023 surveys, which share no interviews (§6.1) | U.S. Census Bureau, *Comparing ACS Data*: compare non-overlapping 5-year estimates; do not compare overlapping ones |
+| Rent burden counts renters paying 50% or more of income (§1.1) | The highest band the Census Bureau publishes in table B25070. Housing agencies commonly call it severe cost burden |
+| The 60th percentile is found by straight-line interpolation between ranked values | The spreadsheet function `PERCENTILE.INC`, named in Appendix 3, Housing Market Change, step 6 |
+
+### 12.4 Formulas and choices that are this site's own
+
+None of these comes from research. Each was a judgment made while building the site.
+
+**In the stage tests**
+
+| Choice | Why | Not tested, or the effect |
+|--------|-----|---------------------------|
+| Lower-income households counted from the 16 census income brackets, splitting the bracket the line falls in evenly (§3.7) | HUD's tables, which both studies use, are not published for every survey year shown here | Assumes incomes are spread evenly inside a bracket, and does not adjust for household size as HUD does. Agreement with the City on "vulnerable" is 89% (§3.6) |
+| A reading for each of four surveys, each against 2000 (§3.3) | The map has a year slider | Readings from sample surveys can reverse: 53 of 776 do (§10) |
+| "Appreciated" tests the 2000 value, not the 1990 value | The site holds no 1990 figures. Appendix 3's own spreadsheet formula also tests 2000 | Places that appreciated in the 1990s can be missed |
+| Census Bureau relationship files in place of the Longitudinal Tract Database; 2010 to 2020 by land area (§3.3) | The site's tracts are 2020 tracts, and land area is the only measure that file carries | Land area is a poor guide where people are unevenly spread within a tract |
+| Not scored: under 500 residents, half or more students, half or more in group quarters, or fewer than 3 measures (§3.4) | The UT study left out five tracts by hand; a rule can be applied to every year | The 500 and the one-half are round numbers. The rule leaves out the airport, the UT campus and the West Campus tracts, as the study did, plus two more small or group-quarters tracts and, in some years, student-apartment tracts. Camp Mabry is not singled out |
+| No share on fewer than 50 people or homes | To keep a handful of survey responses from deciding a test | 50 is a round number |
+| "Vulnerable" for a vulnerable tract with no published market pattern; "rapid loss" (§3.2) | The first test is met; the City groups rapid loss with continued loss | The City's rule for rapid loss is not published, and its file suggests it is wider than this site's (§12.2) |
+| "Touches" = boundaries within about 15 m | Shapes drawn from simplified boundaries do not meet exactly | |
+| A neighborhood is tested on its combined figures; medians averaged by residents (§3.5) | A stage is a category and cannot be averaged | An average of medians is not the true median of the combined area |
+| Percent agreement with the City's map (§3.6) | The plainest check available | Agreement is not accuracy: the two share a method |
+
+**Beside the stage**
+
+| Choice | Why | Not tested, or the effect |
+|--------|-----|---------------------------|
+| Change in the Black and Hispanic share of residents as the headline measured change | It names the communities the site is about. The published test uses the white non-Hispanic share, which moves the opposite way except where other groups change | A share can fall because others moved in, without anyone leaving |
+| "Nearby" = within 0.012 degrees (about 1.3 km) of a tract's center | Set when the Preservation Austin layer was first built, in March 2026. The project's history records no basis for the figure | See the table below |
+| Dollar changes in nominal dollars (§8) | | Overstates real change over long periods |
+
+How the Equity lens's counts (§6.3) move with the radius:
+
+| Radius | Vulnerable residents (72 tracts) with a listing nearby | Continued loss (26) | No stage (163) |
+|--------|--------------------------------------------------------|---------------------|----------------|
+| 0.7 km | 3 | 11 | 18 |
+| 1.0 km | 3 | 11 | 25 |
+| **1.3 km** | **6** | **11** | **36** |
+| 1.7 km | 7 | 14 | 40 |
+| 2.0 km | 12 | 18 | 43 |
+| 2.7 km | 19 | 22 | 51 |
+
+The counts depend on the radius. The pattern does not: at every radius, listings lie near a far larger share of continued-loss tracts than of tracts where vulnerable residents live.
+
+**In the presenter tools**
+
+| Choice | Why | Not tested, or the effect |
+|--------|-----|---------------------------|
+| Triage "recent shift": the rule of test 2 applied between two later surveys (§6.1) | To ask where change is moving now with a rule readers already know from the map | The published rule was written for change since 2000. Its use over eight years is this site's extension |
+| Triage groups and the questions attached to them (§6) | To sort places for discussion without a score | The groups are definitions, not findings |
+| Rank of the rise in value, 0 to 100 | A way to draw the published "top two fifths" line on one axis for home values and rents alike | |
+| Pressure score: three sub-indices weighted 35/35/30, eight components, fixed ceilings (§3.8) | Built in early 2026 as the site's first index. The project's history records no source for the weights or the ceilings | It follows present-day poverty far more closely than measured change (§3), which is why it no longer colors the map. Several ceilings do not sit where the earlier text said (§3.8) |
+| Anchor density = open ÷ (open + closed) tracked businesses | A simple survival ratio | Reflects where businesses were inventoried (§1.2) |
+
+### 12.5 References
+
+- Bates, Lisa K. (2013). *Gentrification and Displacement Study: Implementing an Equitable Inclusive Development Strategy in the Context of Gentrification.* Commissioned by the City of Portland, Bureau of Planning and Sustainability. Typology: section 4 and Table 1 (p. 31). Methods: Appendix A (pp. 59–62).
+- City of Austin. *Displacement Risk Areas 2022.* data.austintexas.gov, dataset `t8nv-zcp9`.
+- City of Portland, Bureau of Planning and Sustainability (2018). *Gentrification and Displacement Neighborhood Typology Assessment.* portland.gov/bps/gentrification-and-displacement-studies.
+- Freeman, Lance (2005). "Displacement or Succession? Residential Mobility in Gentrifying Neighborhoods." *Urban Affairs Review* 40(4): 463–491. Cited here as Bates's stated starting point; not read for this site.
+- Logan, John R., Zengwang Xu and Brian J. Stults (2014). "Interpolating U.S. Decennial Census Tract Data from as Early as 1970 to 2010: A Longitudinal Tract Database." *The Professional Geographer* 66(3): 412–420. The crosswalk the UT study used; not used by this site.
+- Preis, Benjamin, Aarthi Janakiraman, Alex Bob and Justin Steil (2021). "Mapping gentrification and displacement pressure: An exploration of four distinct methodologies." *Urban Studies* 58(2): 405–424. Figures quoted from the abstract.
+- U.S. Census Bureau. *Comparing ACS Data.* census.gov/programs-surveys/acs/guidance/comparing-acs-data.html. Read November 2026.
+- Way, Heather, Elizabeth Mueller and Jake Wegmann (2018). *Uprooted: Residential Displacement in Austin's Gentrifying Neighborhoods, and What Can Be Done About It.* University of Texas at Austin. Appendix 3, "Methodology for Mapping Gentrifying Neighborhoods in Austin" (pp. 133–148), and the project's Gentrification Mapping Methodology page, sites.utexas.edu/gentrificationproject.

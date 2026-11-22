@@ -56,7 +56,7 @@ The answers place a tract in a stage: **Vulnerable**, **Early**, **Dynamic**, **
 
 Presenter mode also keeps the earlier 0–100 composite as a **pressure score** (rent burden, renter share, poverty, housing costs; `data/auditedDvi.js`). It describes present-day conditions, feeds the Compare view, and no longer colors the map.
 
-Every formula on the site, with the data behind each term, is on one page: [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md). The same page opens from the About dialog.
+Every formula on the site, with the data behind each term, is on one page: [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md). The same page opens from the About dialog. Each formula is marked as published (with its source) or as this site's own; [DATA_METHODOLOGY.md](DATA_METHODOLOGY.md) §12 traces the stage method from Freeman (2005) through Bates (2013) to the UT study and the City of Austin's updates, and explains every choice that is not from research.
 
 ## Tech Stack
 

@@ -94,6 +94,7 @@ const FORMULAS = {
   trajectory: [
     {
       figure: "Shift since 2011–2015 (index)",
+      source: "This site's own. The four measures and the z-score are the UT study's test for change since 2000, used here on a later pair of surveys.",
       formula: "index = (z_owners + z_white + z_bachelor's + z_income) ÷ 4, where z = (change in the tract − change in the region) ÷ spread",
       data: [
         ["Change", "2019–2023 survey minus 2011–2015 survey, on today's tract boundaries. Shares in percentage points; income in percent."],
@@ -107,21 +108,25 @@ const FORMULAS = {
     },
     {
       figure: "Shifted, yes or no",
+      source: "The rule is published (Uprooted, Appendix 3, Demographic Change, step 8). Applying it to these two surveys is this site's own. Comparing surveys that do not overlap follows Census Bureau guidance.",
       formula: "yes when at least 2 of the 4 z-scores are above 0.5 and the index is 0.5 or more",
       data: [["Rule", "The same rule the stage test uses for demographic change since 2000, applied to the two latest surveys that share no interviews."]],
     },
     {
       figure: "Change since 2000 (index)",
+      source: "Published: the average z-score of Uprooted, Appendix 3, Demographic Change, step 8.",
       formula: "the same index, with change measured from the 2000 Census to the 2019–2023 survey",
       data: [["2000 figures", "Census 2000 tables H004 (owners), P004 (white non-Hispanic), SF3 P037 (bachelor's) and P077 (median family income), carried onto today's tract boundaries."]],
     },
     {
       figure: "Value rise since 2011–2015",
+      source: "This site's own, with the published \"top two fifths\" line.",
       formula: "rise = (value now − value then) ÷ value then × 100",
       data: [["Value", `Median home value, ACS B25077; median gross rent, B25064, where fewer than 50 homes are owned. "Fast" is above the 60th percentile of scored tracts: +${LENS_REGION.recentRiseLine.value}% for home values, +${LENS_REGION.recentRiseLine.rent}% for rents.`]],
     },
     {
       figure: "Stage in each survey year",
+      source: "The stage method is published (Bates 2013; Uprooted 2018). A reading for each survey year is this site's own.",
       formula: "the map's stage for 2010, 2015, 2020 and 2023",
       data: [["Stage", "The three-part test of DATA_METHODOLOGY.md §3, run on the 2006–2010, 2011–2015, 2016–2020 and 2019–2023 surveys."]],
     },
@@ -129,6 +134,7 @@ const FORMULAS = {
   equity: [
     {
       figure: "People of color (share)",
+      source: "Published measure: one of the vulnerability factors of Bates (2013) and the UT study.",
       formula: "share = (all residents − white non-Hispanic residents) ÷ all residents × 100",
       data: [
         ["2000", "Census 2000 tables P001 and P004, carried onto today's tract boundaries."],
@@ -137,16 +143,19 @@ const FORMULAS = {
     },
     {
       figure: "Measures past the line",
+      source: "Published: Uprooted, Appendix 3, Vulnerability, steps 3 and 4.",
       formula: "count of the five vulnerability shares whose z is above 0.5, where z = (share in the tract − share in the region) ÷ spread",
       data: [["Shares", "People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS 2019–2023."]],
     },
     {
       figure: "Black + Hispanic share (change)",
+      source: "This site's own: a plain difference between two census shares.",
       formula: "change = share in 2023 − share in 2000, in percentage points",
       data: [["Shares", "Black non-Hispanic plus Hispanic residents ÷ all residents, from the site's census file (data/phase1_output). 2010 is used where a tract has no 2000 figure."]],
     },
     {
       figure: "PA listings nearby",
+      source: "This site's own. The 1.3 km is not from research; the methodology (section 12.4) shows how the counts move with it.",
       formula: "count of listings where distance(listing, tract center) < 0.012 degrees (about 1.3 km)",
       data: [
         ["Listings", "Preservation Austin's published grants (2016–2025), merit awards (2022–2025), Legacy Business Month listings (2023–2025) and advocacy milestones, as compiled in data/preservationAustin.js. Listings filed as citywide have no place and are not counted."],
@@ -157,16 +166,19 @@ const FORMULAS = {
   matrix: [
     {
       figure: "Measures past the line",
+      source: "Published: Uprooted, Appendix 3, Vulnerability, steps 3 and 4.",
       formula: "count of the five vulnerability shares whose z is above 0.5; 3 or more = vulnerable",
       data: [["Shares", "People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS 2019–2023; the 2000 reading uses Census 2000 tables P004, H004 and SF3 P052, P087, P037."]],
     },
     {
       figure: "Rise since 2000",
+      source: "Published: Uprooted, Appendix 3, Housing Market Change, step 5.",
       formula: "rise = (value now − value in 2000) ÷ value in 2000 × 100",
       data: [["Value", "Median home value: Census 2000 SF3 table H085 and ACS 2019–2023 table B25077. Median gross rent (H063, B25064) where fewer than 50 homes are owned in either year. Dollars of each year."]],
     },
     {
       figure: "Rank of the rise",
+      source: "This site's own way of drawing the published \"top two fifths\" line.",
       formula: "rank = (number of scored tracts with a smaller rise) ÷ (scored tracts − 1) × 100; above 60 = rising fast",
       data: [["Scored tracts", "The tracts on this map that are scored in the 2019–2023 survey, ranked separately for home values and for rents."]],
     },
@@ -542,6 +554,7 @@ export default function TriageView({ onLocateOnMap, lens: lensProp, setLens: set
             <div key={f.figure} className="triage-formula">
               <h4>{f.figure}</h4>
               <p className="triage-formula-line">{f.formula}</p>
+              {f.source && <p className="triage-formula-source"><strong>Source:</strong> {f.source}</p>}
               <dl>
                 {f.data.map(([term, source]) => (
                   <div key={term}><dt>{term}</dt><dd>{source}</dd></div>
@@ -551,6 +564,7 @@ export default function TriageView({ onLocateOnMap, lens: lensProp, setLens: set
           ))}
           <div className="triage-formula">
             <h4>Groups</h4>
+            <p className="triage-formula-source"><strong>Source:</strong> this site's own. The groups are definitions for sorting, not findings.</p>
             <table className="triage-rules">
               <thead><tr><th scope="col">Group</th><th scope="col">Rule</th><th scope="col">Tracts</th></tr></thead>
               <tbody>

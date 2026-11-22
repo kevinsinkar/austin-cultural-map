@@ -2,6 +2,8 @@
 
 Every number on this site is a census figure, a count of records, or the result of one of the formulas on this page. Each formula is followed by a table that says where each of its terms comes from. The full account, with the reasons and the limits, is in [DATA_METHODOLOGY.md](DATA_METHODOLOGY.md); section numbers (§) point there.
 
+Under each heading a **Source** note says whether the formula is **published** (taken from research, with the place it comes from) or **this site's own** (a choice made in building the site, explained in §12.4). A published formula is established practice, not proof: the studies give no test of their thresholds against measured displacement (§12.1).
+
 **Terms used throughout**
 
 | Term | Meaning |
@@ -16,9 +18,11 @@ Every number on this site is a census figure, a count of records, or the result 
 
 ## 1. The map's colors: displacement stage
 
-A stage is decided by three tests. The method is Appendix 3 of the University of Texas study *Uprooted* (Way, Mueller, Wegmann, 2018). Code: `scripts/build_stages.mjs`. Detail: §3.
+A stage is decided by three tests. The method is Appendix 3 of the University of Texas study *Uprooted* (Way, Mueller, Wegmann, 2018), written for the City of Austin. It adapts Lisa Bates's 2013 study for the City of Portland, which in turn follows Lance Freeman (2005). City of Austin staff have re-run it in 2019, 2020, 2021 and 2024. Code: `scripts/build_stages.mjs`. Detail: §3.
 
 ### 1.1 The five vulnerability shares
+
+**Source: published.** Four of the shares are from Bates (2013); the UT study added children in poverty. *Uprooted*, Appendix 3, Vulnerability, step 1.
 
 ```
 share = part ÷ whole × 100
@@ -36,6 +40,8 @@ A share is not computed when the whole is under 50.
 
 ### 1.2 The low-income line
 
+**Source: published.** The 80% line is the one Bates and the UT study use. **Source: this site's own.** Counting the households under it from income brackets; both studies took the count from HUD (§12.4).
+
 ```
 line             = 0.8 × the region's median family income
 households under = every income bracket wholly under the line
@@ -48,6 +54,8 @@ households under = every income bracket wholly under the line
 | Income brackets | Households by income, 16 brackets: SF3 P052, ACS B19001 |
 
 ### 1.3 Comparing a tract with the region
+
+**Source: published.** *Uprooted*, Appendix 3, Vulnerability, step 3, term for term. Comparing with the region and using z-scores are the UT study's changes to Bates, who used fixed citywide thresholds.
 
 ```
 z      = (figure in the tract − figure in the region) ÷ spread
@@ -64,6 +72,8 @@ spread = √( Σ wᵢ × (figureᵢ − figure in the region)²  ÷  ( (n − 1)
 
 ### 1.4 Test 1: vulnerable residents
 
+**Source: published.** *Uprooted*, Appendix 3, Vulnerability, step 4. Bates's rule was 3 of 4.
+
 ```
 vulnerable = (number of the five shares with z above 0.5) is 3 or more
 ```
@@ -77,6 +87,8 @@ vulnerable = (number of the five shares with z above 0.5) is 3 or more
 | Adults without a bachelor's degree | 50.1% | 59.9% |
 
 ### 1.5 Test 2: demographic change since 2000
+
+**Source: published.** *Uprooted*, Appendix 3, Demographic Change, steps 6 to 8. The four measures are Bates's, with family income in place of household income.
 
 ```
 change (shares) = share now − share in 2000                      in percentage points
@@ -95,6 +107,8 @@ changed         = at least 2 of the 4 z are above 0.5, and the 4 z average 0.5 o
 Income is in dollars of each year. The spread is weighted as in 1.3.
 
 ### 1.6 Test 3: housing market
+
+**Source: published.** Bates (2013), Appendix A; *Uprooted*, Appendix 3, Housing Market Change, steps 5 and 6, including the rent fallback. **Source: this site's own.** Testing "appreciated" on the 2000 value; the studies describe it with 1990 (§12.4).
 
 ```
 rise = (value now − value in 2000) ÷ value in 2000 × 100
@@ -116,6 +130,8 @@ high = above the 60th percentile of the scored tracts on this map
 
 ### 1.7 The stage
 
+**Source: published.** Rows 1 and 3 to 7 are Table 1 of Bates (2013), which the UT study follows and the City of Austin's 2022 file applies exactly. The sources word the continued-loss row three ways; this site uses the reading the City's results show in use (§12.2). **Source: this site's own.** Rows 2 and 8 (§3.2).
+
 | Stage on the map | Vulnerable (1.4) | Changed (1.5) | Housing (1.6) |
 |------------------|------------------|---------------|---------------|
 | Vulnerable | yes | no | adjacent |
@@ -128,9 +144,11 @@ high = above the 60th percentile of the scored tracts on this map
 | Continued loss | no, but yes in 2000 | yes | accelerating |
 | No stage | no | anything else | anything else |
 
-The second and eighth rows are this site's own (§3.2). A stage is a category: it is never averaged and never interpolated between years.
+A stage is a category: it is never averaged and never interpolated between years.
 
 ### 1.8 Places that are not scored
+
+**Source: this site's own.** The UT study left out five tracts by hand. The 500 and the one-half are round numbers, not figures from research (§12.4).
 
 ```
 not scored = residents under 500
@@ -145,6 +163,8 @@ not scored = residents under 500
 | Group quarters | SF1 P027 | B26001 |
 
 ### 1.9 Earlier years on today's tract boundaries
+
+**Source: published.** The arithmetic is *Uprooted*, Appendix 3, Demographic Change, steps 4 and 5. **Source: this site's own.** Which crosswalk files are used (§12.4).
 
 ```
 count on today's tract  = Σ (count in an earlier tract × share of that tract inside today's tract)
@@ -161,12 +181,16 @@ Shares are taken after the counts are carried.
 
 ### 1.10 Neighborhoods
 
+**Source: this site's own.** The studies work at tract level only (§3.5, §12.4).
+
 ```
 count in the neighborhood  = Σ counts of its tracts          then the three tests are run on the totals
 median in the neighborhood = Σ (median × residents) ÷ Σ residents
 ```
 
 ### 1.11 The check against the City of Austin's map
+
+**Source: this site's own.** The City's data is published; the comparison is this site's.
 
 ```
 agreement = tracts where this site and the City agree ÷ tracts both have a reading for
@@ -185,6 +209,8 @@ Data: City of Austin, *Displacement Risk Areas 2022* (data.austintexas.gov, data
 
 ### 2.1 Change in Black and Hispanic residents
 
+**Source: this site's own.** A plain difference between two census shares. The published test uses the white non-Hispanic share (§12.4).
+
 ```
 change = (Black + Hispanic share in the later year) − (Black + Hispanic share in the earlier year)     in percentage points
 ```
@@ -195,6 +221,8 @@ change = (Black + Hispanic share in the later year) − (Black + Hispanic share 
 | Years | Earlier: 2000, or 2010 where a tract has no 2000 figure. Later: 2023, or 2020 |
 
 ### 2.2 Renters and rent burden
+
+**Source: standard definitions.** The 50% line is the highest band the Census Bureau publishes in table B25070 (§12.3).
 
 ```
 renter share = 100 − (owner-occupied homes ÷ occupied homes × 100)
@@ -207,6 +235,8 @@ rent burden  = renters paying 50% or more of income on rent ÷ renters × 100
 | Rent as a share of income | ACS B25070 |
 
 ### 2.3 Economics on the story card
+
+**Source: this site's own.** Plain arithmetic on census figures.
 
 ```
 change (dollars) = (latest value − earliest value) ÷ earliest value × 100      in percent
@@ -225,6 +255,8 @@ change (rates)   = latest value − earliest value                              
 Dollar figures are in dollars of each year; they are not adjusted for inflation. For a neighborhood, each figure is the average of its tracts weighted by residents, and a year is shown only when every tract has a value.
 
 ### 2.4 Preservation Austin listings "nearby"
+
+**Source: this site's own.** The 0.012 degrees is not from research. §12.4 shows how the counts move with the radius.
 
 ```
 nearby = √( (listing latitude − tract center latitude)² + (listing longitude − tract center longitude)² ) is under 0.012 degrees
@@ -251,6 +283,8 @@ These views are not part of the public site.
 
 ### 3.1 Triage lenses
 
+**Source: this site's own.** The shift index reuses the published rule of 1.5 on a later pair of surveys; the published rule was written for change since 2000. Choosing surveys that do not overlap follows Census Bureau guidance (§12.3, §12.4).
+
 Each lens puts every tract in a group by a rule. There is no composite score. Code: `utils/lenses.js`. Detail: §6.
 
 ```
@@ -276,6 +310,8 @@ rank of rise  = (scored tracts with a smaller rise since 2000) ÷ (scored tracts
 
 ### 3.2 Pressure score (Compare view)
 
+**Source: this site's own.** The weights and ceilings were set by judgment. No source is recorded for them (§12.4).
+
 A 0–100 summary of present-day conditions. It is not a stage and no longer colors the map. Code: `data/auditedDvi.js`. Detail: §3.8.
 
 ```
@@ -298,6 +334,8 @@ cap(x)      = x × 100, held between 0 and 100
 A missing term is left out and the remaining weights are scaled up to sum to 1. A tract-year with fewer than 3 of the 8 terms gets no score. Where the data files rate their own confidence below one half, the socioeconomic weight is raised by 0.10 before scaling. A tract with household income over $129,000 and more than 75% owner-occupied homes is capped at 20.
 
 ### 3.3 Anchor density (Compare view)
+
+**Source: this site's own.**
 
 ```
 anchor density = open tracked businesses ÷ (open + closed tracked businesses)

@@ -40,6 +40,16 @@
 //   Continued loss   no          yes, or white share and  appreciated
 //                                bachelor's share both up
 //
+// The six rows are Table 1 of Bates (2013), which the UT study says it
+// follows precisely. The sources word the continued-loss condition three
+// ways: Bates's table says "% white and % with BA increasing" and defines
+// both against the citywide change; the UT project page says "an above
+// average increase"; Appendix 3 says only "increasing". The City's 2022 file
+// shows the reading in use: all 14 of its not-vulnerable, appreciated tracts
+// with demographic change are Continued Loss, and of the 13 without, the 5 it
+// calls Continued Loss are the ones whose white share did not fall. This
+// build uses that reading. (DATA_METHODOLOGY.md, section 12.2.)
+//
 // Where this departs from Appendix 3, and why:
 //   * Low-income households are counted from the census income brackets
 //     (households under 80% of the region's median family income), not from
@@ -576,6 +586,8 @@ function stageOf(out, year, wasVulnerable) {
     if (d === true && h === "APP") return "LATE";
     return "VUL"; // vulnerable residents, but none of the published combinations
   }
+  // Continued loss: demographic change, or white share and bachelor's share
+  // both up. This is the reading the City's own results show in use.
   const whiterAndMoreDegrees = out.change && out.change.white > 0 && out.change.ba > 0;
   if (h === "APP" && (d === true || whiterAndMoreDegrees)) return "CL";
   // Not in the UT table: vulnerable in 2000, not vulnerable now, demographic
