@@ -10,6 +10,9 @@
     "check:public": "node scripts/check_public_bundle.mjs",
     "build:shapes": "node scripts/build_map_shapes.mjs",
     "build:places": "node scripts/build_place_names.mjs",
+    "build:history": "node scripts/rebuild_census_history.mjs",
+    "build:areas": "node scripts/build_area_names.mjs",
+    "build:stages": "node scripts/build_stages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "propagate": "node archive/data/propagateRegionIds.js"

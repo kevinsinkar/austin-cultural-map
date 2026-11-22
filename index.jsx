@@ -122,11 +122,12 @@ export default function AustinCulturalMap() {
   const setShowHolc = useCallback((v) => dispatch({ type: "setLayer", key: "holc", value: v }), []);
   const setShowOutreach = useCallback((v) => dispatch({ type: "setLayer", key: "outreach", value: v }), []);
   const setShowDistricts = useCallback((v) => dispatch({ type: "setLayer", key: "districts", value: v }), []);
+  const setShowAreaNames = useCallback((v) => dispatch({ type: "setLayer", key: "areaNames", value: v }), []);
   const {
     pins: showPins, projectConnect: showProjectConnect, musicVenues: showMusicVenues,
     devPressure: showDevPressure, regions: showRegions,
     preservationAustin: showPreservationAustin, aisdSchools: showAisdSchools, holc: showHolc,
-    outreach: showOutreach, districts: showDistricts,
+    outreach: showOutreach, districts: showDistricts, areaNames: showAreaNames,
   } = layers;
 
   // ── Adjustable DVI weights ──
@@ -398,7 +399,7 @@ export default function AustinCulturalMap() {
         {PRESENTER_MODE && viewMode === "outreach" && (
           <ErrorBoundary>
             <Suspense fallback={viewLoading}>
-              <OutreachView onLocate={handleLocateEvent} dviVersion={dviVersion} />
+              <OutreachView onLocate={handleLocateEvent} />
             </Suspense>
           </ErrorBoundary>
         )}
@@ -492,6 +493,8 @@ export default function AustinCulturalMap() {
               setOutreachHorizon={setOutreachHorizon}
               showDistricts={showDistricts}
               setShowDistricts={setShowDistricts}
+              showAreaNames={showAreaNames}
+              setShowAreaNames={setShowAreaNames}
               dviWeights={dviWeights}
               onApplyDviWeights={applyDviWeights}
               dviVersion={dviVersion}

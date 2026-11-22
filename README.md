@@ -34,27 +34,27 @@ The opportunity data is generated from `private/preservation_austin_tabling_data
 
 ## Features
 
-- **Interactive Map** — Leaflet-based choropleth of 269 census tracts colored by stage on the Displacement Vulnerability Index (DVI). It opens on 2023; the year slider runs from 1990 to 2025. The color key sits above the map and the year controls below it, so nothing covers the map. Works on phones and tablets.
+- **Interactive Map** — Leaflet-based choropleth of 269 census tracts colored by displacement stage (vulnerable, early, dynamic, late, continued loss), decided by the three-part test of the UT "Uprooted" study and checked against the City of Austin's own map. It opens on 2023; the year slider runs from 1990 to 2025. The color key sits above the map and the year controls below it, so nothing covers the map. Works on phones and tablets.
 - **Start here** — With nothing selected, the right-hand card states the five ideas the map is built around, each with one thing to do on the map. The numbers in it are computed from the data (`data/bigIdeas.js`).
 - **Search** — Find a neighborhood, a census tract number, a tracked cultural anchor or a street address. Everything except the address lookup runs in the browser; an address is sent to OpenStreetMap's Nominatim service only when the person chooses to look it up.
 - **Place panel and story card** — Selecting a census tract or a neighborhood opens the same summary panel, which leads to the same story card. Places are titled by neighborhood name where a City of Austin planning area supports one, with the census tract number second (`utils/places.js`).
-- **Grant Triage View** — Scatter plot + sortable table classifying regions into *Active Displacement*, *High Risk / Data Gap*, *Critical — Near Tipping*, *Monitor*, and *Exclusive / Appreciated* tiers. Includes adjustable DVI weight sliders.
+- **Grant Triage View** (presenter mode) — Scatter plot + sortable table with three screening lenses built on the 0–100 pressure score. Includes adjustable weight sliders. The lenses have not been rebuilt on the displacement stages.
 - **Comparison View** — Side-by-side comparison of two regions across demographic, economic, and displacement dimensions.
 - **Timeline View** — "River of Time" visualization of business openings, closures, and infrastructure/policy events.
 
-## How DVI Works
+## How the Stages Work
 
-The Displacement Vulnerability Index combines three sub-indices:
+Each census tract is put through three tests for each census year from 2010 on (`scripts/build_stages.mjs` → `data/stages.js`):
 
-| Sub-Index | Weight | Inputs |
-|-----------|--------|--------|
-| Demographic Vulnerability | 35% | Rent burden, renter share, foreign-born % |
-| Market Pressure | 35% | Home-value appreciation, rent-to-income ratio |
-| Socioeconomic Stress | 30% | Poverty rate, unemployment, eviction filings |
+| Test | Asks | Measures |
+|------|------|----------|
+| Vulnerable residents | Are residents more exposed to rising housing costs than the five-county region? | Renters, people of color, lower-income households, children in poverty, adults without a bachelor's degree (3 of 5 well above the region) |
+| Demographic change since 2000 | Has the population shifted more than the region's? | Owner share, white non-Hispanic share, bachelor's share, median family income |
+| Housing market | What have home values done since 2000? | Accelerating, appreciated, or adjacent to tracts that are |
 
-Additional refinements:
-- **Data Confidence Score** — When audit confidence is low, Socioeconomic Stress weight is boosted to compensate for "data deserts."
-- **Vulnerability Gate** — Affluent tracts (income >150% city median + >75% owner-occupancy) are capped at DVI 20 and flagged as *Exclusive / Appreciated* to prevent conflating wealth appreciation with displacement risk.
+The answers place a tract in a stage: **Vulnerable**, **Early**, **Dynamic**, **Late** or **Continued loss**, or in none. The test is the one in Appendix 3 of the University of Texas study *Uprooted* (2018), which the City of Austin commissioned. Worked out here from census tables, it agrees with the City's own 2022 displacement risk map on the stage of about four tracts in five. Method, departures and limits: [DATA_METHODOLOGY.md](DATA_METHODOLOGY.md) §3.
+
+Presenter mode also keeps the earlier 0–100 composite as a **pressure score** (rent burden, renter share, poverty, housing costs; `data/auditedDvi.js`). It describes present-day conditions, feeds the Compare and Triage views, and no longer colors the map.
 
 ## Tech Stack
 
@@ -86,9 +86,20 @@ npm run build:shapes
 
 # Regenerate tract titles after any change to data/audit_output/tract_npa_overlap.json
 npm run build:places
+
+# Regenerate the area-name layer (City planning areas) and its search list
+npm run build:areas
+
+# Recompute the displacement stages (runs offline from data/_cache/census_history/;
+# add -- --report to print the checks against the City's map)
+npm run build:stages
+
+# Rebuild 2000/2010/2015 population, race, owner share and rent burden from
+# census tables (runs offline from data/_cache/census_history/)
+npm run build:history
 ```
 
-The map polygons the site loads (`data/shapes/*.min.json`) and the tract titles (`data/placeNames.js`) are generated files that are checked in. The full-precision geometry in `data/final_updated_regions.js` and `data/neighborhoods_geojson.js` is the source and is no longer bundled, which took the first download from about 9.7 MB to about 3.4 MB (a 2.9 MB script plus 0.5 MB of tract shapes, before compression).
+The map polygons the site loads (`data/shapes/*.min.json`), the tract titles (`data/placeNames.js`), the area-name list (`data/areaNames.js`) and the displacement stages (`data/stages.js`) are generated files that are checked in. The full-precision geometry in `data/final_updated_regions.js` and `data/neighborhoods_geojson.js` is the source and is no longer bundled, which took the first download from about 9.7 MB to about 3.4 MB (a 2.9 MB script plus 0.5 MB of tract shapes, before compression).
 
 ## Data Sources
 
@@ -98,7 +109,7 @@ All data lives in `data/phase1_output/` as three audited, normalized JSON files 
 - **Property** (1,052 rows; 2010–2023) — home values, rent, commercial sqft, vacancy, permits
 - **Socioeconomic** (1,052 rows; 2010–2023) — income, poverty, unemployment, Gini coefficient, eviction, SNAP
 
-Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the DVI re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. A (region, year) must have at least 3 of the 8 input fields to get a DVI point at all — below that, re-weighting degenerates into echoing a single field (the 2000 rows carry only owner-occupancy, which scored every low-ownership tract a spurious 100), so those years show the nearest measured value with a confidence note instead. See `DATA_METHODOLOGY.md`.
+Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the pressure score re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. A (region, year) must have at least 3 of the 8 input fields to get a DVI point at all — below that, re-weighting degenerates into echoing a single field (the 2000 rows carry only owner-occupancy, which scored every low-ownership tract a spurious 100), so those years show the nearest measured value with a confidence note instead. See `DATA_METHODOLOGY.md`.
 
 Business data tracks 49 operating and 58 closed cultural anchors with location, founding year, cultural community, and (for closures) cause and replacement.
 

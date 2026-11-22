@@ -5,7 +5,7 @@ import {
 } from "recharts";
 import { DEMOGRAPHICS } from "../data";
 import { DEMO_COLORS } from "../data/constants";
-import { interpolateDvi, getDviColor } from "../utils/math";
+import { stageFor } from "../utils/stages";
 import { catColor } from "../utils/formatters";
 import { cultureColor, cultureSort, closeYear } from "./TimelineView";
 
@@ -125,12 +125,15 @@ function EraCard({
     }));
   }, [era]);
 
-  // DVI annotation
-  const dviAnnotation = useMemo(() => {
-    const regionId = 84; // Chestnut (East Austin)
-    const start = interpolateDvi(regionId, Math.max(era.years[0], 1990));
-    const end = interpolateDvi(regionId, Math.min(era.years[1], 2023));
-    return { start: start?.toFixed(0), end: end?.toFixed(0) };
+  // Displacement stage of one East Austin tract (Chestnut) across the era.
+  // Census figures start in 2000, so earlier eras carry no annotation.
+  const stageAnnotation = useMemo(() => {
+    const ref = { kind: "tract", id: 84 };
+    const a = stageFor(ref, era.years[0]);
+    const b = stageFor(ref, Math.min(era.years[1], 2023));
+    if (!a || !b) return null;
+    const name = (s) => (s.isBaseYear && s.scored ? s.typeName : s.cls.label);
+    return { start: name(a), end: name(b) };
   }, [era]);
 
   // Era summary
@@ -291,9 +294,9 @@ function EraCard({
         <div style={{ marginBottom: 8 }}>
           <div style={{ fontSize: 12, fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4 }}>
             Demographic Context (city-wide)
-            {dviAnnotation.start && (
+            {stageAnnotation && (
               <span style={{ marginLeft: 12, fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>
-                DVI (East Austin): {dviAnnotation.start} {"\u2192"} {dviAnnotation.end}
+                Stage (Chestnut, East Austin): {stageAnnotation.start} {"\u2192"} {stageAnnotation.end}
               </span>
             )}
           </div>

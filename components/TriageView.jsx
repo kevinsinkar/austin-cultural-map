@@ -646,7 +646,7 @@ export default function TriageView({ boundaryMode, onLocateOnMap, lens: lensProp
                 </button>
               </div>
               <p style={{ fontSize: 12, color: "var(--muted)", margin: "4px 0 0", lineHeight: 1.5 }}>
-                DVI weights affect the underlying displacement index used by all three lenses. Trajectory uses DVI change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through market pressure and community vulnerability sub-scores.
+                DVI weights affect the pressure score used by all three lenses. The score sums up present-day conditions (rent burden, renter share, poverty, housing costs); it is not the displacement stage shown on the map. Trajectory uses DVI change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through market pressure and community vulnerability sub-scores.
               </p>
             </div>
           </div>

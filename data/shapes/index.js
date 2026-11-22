@@ -9,6 +9,7 @@
 
 let tracts;
 let neighborhoods;
+let areas;
 
 /** Census-tract polygons. Feature properties: { region_id }. */
 export function loadTractShapes() {
@@ -20,4 +21,14 @@ export function loadTractShapes() {
 export function loadNeighborhoodShapes() {
   neighborhoods ||= import("./neighborhoods.min.json").then((m) => m.default);
   return neighborhoods;
+}
+
+/**
+ * City of Austin planning areas for the area-name labels (built by
+ * scripts/build_area_names.mjs). Feature properties: { id, name, level,
+ * kind, lat, lng, km2, tracts, parent, children, top, hood, note }.
+ */
+export function loadAreaShapes() {
+  areas ||= import("./areas.min.json").then((m) => m.default);
+  return areas;
 }

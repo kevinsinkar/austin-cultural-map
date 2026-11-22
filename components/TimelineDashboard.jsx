@@ -6,7 +6,7 @@ import {
 import { DEMOGRAPHICS } from "../data";
 import { VISIBLE_REGIONS } from "../data/regionLookup";
 import { DEMO_COLORS } from "../data/constants";
-import { interpolateDvi, getDviColor } from "../utils/math";
+import { tractStageClass } from "../utils/stages";
 import { catColor } from "../utils/formatters";
 import { cultureColor, cultureSort, closeYear } from "./TimelineView";
 
@@ -252,17 +252,17 @@ export default function TimelineDashboard({
           <text x={4} y={-2} style={{ fontSize: 12, fill: "var(--muted)", fontWeight: 600, textTransform: "uppercase" }}>Demographics (city-wide)</text>
         </g>
 
-        {/* ── Track 4: DVI Heatstrip ── */}
+        {/* ── Track 4: displacement stage strip ── */}
         <g transform={`translate(0, ${policyH + gap + bizTrackHeight + gap + demoH + gap})`}>
-          <text x={4} y={-2} style={{ fontSize: 12, fill: "var(--muted)", fontWeight: 600, textTransform: "uppercase" }}>DVI</text>
+          <text x={4} y={-2} style={{ fontSize: 12, fill: "var(--muted)", fontWeight: 600, textTransform: "uppercase" }}>Displacement stage</text>
           {_.range(1990, 2024).map(yr => {
-            const dvi = interpolateDvi(dviRegion, yr);
+            const cls = tractStageClass(dviRegion, yr);
             const px = timeScale(yr);
             const nextPx = timeScale(yr + 1);
             return (
               <rect key={yr}
                 x={px} y={0} width={Math.max(nextPx - px, 1)} height={dviH}
-                fill={getDviColor(dvi)} fillOpacity={0.85}
+                fill={cls.fill} fillOpacity={0.9}
               />
             );
           })}
@@ -305,7 +305,7 @@ export default function TimelineDashboard({
 
       {/* DVI region selector */}
       <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 8 }}>
-        <span style={{ fontSize: 12, color: "var(--muted)" }}>DVI region:</span>
+        <span style={{ fontSize: 12, color: "var(--muted)" }}>Stage shown for:</span>
         <select
           value={dviRegion}
           onChange={(e) => setDviRegion(+e.target.value)}

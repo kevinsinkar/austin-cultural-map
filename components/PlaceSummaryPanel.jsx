@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import ConfidenceChip from "./ConfidenceChip";
-import { getDviStage, getDviColor, DVI_EXCLUDED } from "../utils/math";
+import { StageHeadline, StageChecks, CityRiskLine } from "./StageBlock";
 import { buildPlaceSummary, changeSentence, fmtMoney } from "../utils/placeData";
+import { STAGE_BASE_YEAR } from "../utils/stages";
 import { districtText } from "../utils/places";
 
 /**
@@ -14,20 +14,13 @@ import { districtText } from "../utils/places";
  * Titles come from utils/places.js: neighborhood name first where the City's
  * planning areas support one, census tract number second, no internal id.
  */
-export default function PlaceSummaryPanel({ placeRef, year, dviVersion, onClose, onOpenCard }) {
+export default function PlaceSummaryPanel({ placeRef, year, onClose, onOpenCard }) {
   const kind = placeRef?.kind;
   const id = placeRef?.id;
-  const summary = useMemo(
-    () => buildPlaceSummary({ kind, id }, year),
-    // dviVersion: recompute after the presenter changes the index weights
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [kind, id, year, dviVersion]
-  );
+  const summary = useMemo(() => buildPlaceSummary({ kind, id }, year), [kind, id, year]);
   if (!summary) return null;
 
-  const { place, dvi, excluded, confidence, change, income, homeValue, openCount, closedCount, paNearCount, tippingPoint } = summary;
-  const preIndex = year < 1993;
-  const band = excluded ? "Affluent, not scored" : getDviStage(dvi);
+  const { place, tractCount, stage, cityRisk, change, income, homeValue, openCount, closedCount, paNearCount, tippingPoint } = summary;
   const where = [place.subtitle, districtText(place)].filter(Boolean).join(" · ");
   const sentence = changeSentence(change);
 
@@ -53,35 +46,29 @@ export default function PlaceSummaryPanel({ placeRef, year, dviVersion, onClose,
         </button>
       </div>
 
-      {/* Headline: the index at the slider year */}
-      <div className="place-summary-index">
-        {preIndex ? (
+      {/* Headline: the stage at the slider year, and the three tests behind it */}
+      <div className="place-summary-stage">
+        {!stage ? (
           <p style={{ margin: 0, fontSize: 14, color: "#44403c", lineHeight: 1.5 }}>
-            The displacement index starts in 1993. Move the year slider forward to see this place's score.
+            Census figures on this site start in {STAGE_BASE_YEAR}. Move the year slider forward to see this place's stage.
           </p>
         ) : (
           <>
-            <span
-              className="index-chip"
-              style={{
-                background: excluded ? DVI_EXCLUDED.fill : getDviColor(dvi),
-                color: excluded || dvi >= 55 ? "#fffffe" : "#1a1a1a",
-              }}
-              aria-hidden="true"
-            >
-              {dvi.toFixed(0)}
-            </span>
-            <div style={{ fontSize: 14, lineHeight: 1.4, minWidth: 0 }}>
-              <strong style={{ color: excluded ? DVI_EXCLUDED.text : "#1a1a1a" }}>{band}</strong>
-              <div style={{ color: "var(--muted)", fontSize: 13 }}>
-                Displacement index {dvi.toFixed(0)} of 100 in {year}
-              </div>
-              {confidence && (
-                <div style={{ marginTop: 3 }}>
-                  <ConfidenceChip level={confidence.level} suffix="confidence" reasons={confidence.reasons} />
-                </div>
-              )}
-            </div>
+            <StageHeadline stage={stage} />
+            <p className="stage-why">{stage.why}</p>
+            <StageChecks stage={stage} />
+            {stage.isBaseYear && stage.scored && (
+              <p className="place-summary-note" style={{ marginTop: 6 }}>
+                Stages measure change since {STAGE_BASE_YEAR}, so they start in 2010.
+              </p>
+            )}
+            {tractCount > 1 && stage.scored && (
+              <p className="place-summary-note" style={{ marginTop: 6 }}>
+                Worked out on the combined figures of {tractCount} census tracts.
+              </p>
+            )}
+            {/* The City's map is from 2022: shown beside the two latest readings only */}
+            {stage.dataYear >= 2020 && <CityRiskLine cityRisk={cityRisk} tractCount={tractCount} />}
           </>
         )}
       </div>
@@ -110,8 +97,9 @@ export default function PlaceSummaryPanel({ placeRef, year, dviVersion, onClose,
         Open the story card
       </button>
       <p className="place-summary-note">
-        The story card has the full profile: charts over the measured years, the economics,
-        cultural anchors and nearby preservation work. It has its own link and prints on one page.
+        The story card has the full profile: how the stage was decided, charts over the measured
+        years, the economics, cultural anchors and nearby preservation work. It has its own link
+        and can be printed.
       </p>
       <p className="place-summary-note">{place.note}</p>
     </section>

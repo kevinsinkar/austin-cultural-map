@@ -23,9 +23,10 @@ export default function StartHere({ onAction, holcOn = false }) {
     <section className="side-card start-here" aria-labelledby="start-here-title">
       <h2 id="start-here-title" className="side-card-title">Start here</h2>
       <p className="start-here-lead">
-        Each area is colored by how much displacement pressure the data shows, from pale
-        yellow (stable) through orange (active) to red (where much of the change has
-        already happened). Select any area to see its numbers.
+        Each area is colored by its displacement stage. Light orange means residents are
+        exposed to rising housing costs but little has changed yet. Darker means further
+        along, and the darkest is where most of the change has already happened. Areas with
+        no color are not in a stage. Select any area to see why.
       </p>
 
       <h3 className="start-here-sub">Five ideas this map is built around</h3>

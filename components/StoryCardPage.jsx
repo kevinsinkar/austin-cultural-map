@@ -5,7 +5,7 @@ import {
 } from "recharts";
 import { PA_LABELS } from "../data";
 import { DEMO_COLORS } from "../data/constants";
-import { getDviStage, getDviColor, DVI_EXCLUDED } from "../utils/math";
+import { StageHeadline, StageTests, StageTimeline, CityRiskLine } from "./StageBlock";
 import { buildStoryCard, changeSentence } from "../utils/placeData";
 import { districtText } from "../utils/places";
 import { PRESENTER_MODE } from "../appConfig";
@@ -53,14 +53,6 @@ function Section({ title, children }) {
   );
 }
 
-function dataStory(excluded, dvi) {
-  if (excluded) return "This area is affluent and mostly owner-occupied. The index treats its rising values as appreciation, not displacement risk.";
-  if (dvi >= 55) return "Displacement here is largely historic: much of the change this map tracks has already happened.";
-  if (dvi >= 35) return "The latest data shows active displacement pressure here.";
-  if (dvi >= 20) return "Early pressure is visible here. Conditions are shifting, but the community fabric is still intact.";
-  return "Conditions here are comparatively stable today.";
-}
-
 export default function StoryCardPage({ placeRef, onBack }) {
   const kind = placeRef?.kind;
   const id = placeRef?.id;
@@ -94,19 +86,11 @@ export default function StoryCardPage({ placeRef, onBack }) {
     );
   }
 
-  const { place, tractCount, dviNow, excluded, change, open, closed, paNear, tp, tpStats, demoData, dviSeries, econStats } = card;
+  const { place, tractCount, stage, stageSeries, cityRisk, change, open, closed, paNear, tp, tpStats, demoData, econStats } = card;
   const name = place.title;
   const isGroup = tractCount > 1;
   const demoYears = demoData.map((r) => r.year);
-  const dviYears = dviSeries.map((r) => r.year);
   const where = [place.subtitle, districtText(place) && `${districtText(place)} (by tract center)`].filter(Boolean).join(" · ");
-
-  // The trend sentence anchors on the first MEASURED point, never a
-  // back-filled year the data cannot support.
-  const firstDvi = dviSeries[0];
-  const trend = firstDvi && firstDvi.year < 2023 && firstDvi.dvi > 0
-    ? `The displacement index moved from ${firstDvi.dvi.toFixed(0)} in ${firstDvi.year} to ${dviNow.toFixed(0)} in 2023, on a scale of 0 to 100.`
-    : `The displacement index stands at ${dviNow.toFixed(0)} in 2023, on a scale of 0 to 100.`;
   const sentence = changeSentence(change);
 
   const copyLink = async () => {
@@ -142,47 +126,28 @@ export default function StoryCardPage({ placeRef, onBack }) {
         </header>
 
         <Section title="What the data shows">
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-            <span
-              className="index-chip"
-              style={{
-                background: excluded ? DVI_EXCLUDED.fill : getDviColor(dviNow),
-                color: excluded || dviNow >= 55 ? "#fffffe" : "#1a1a1a",
-              }}
-              aria-hidden="true"
-            >
-              {dviNow.toFixed(0)}
-            </span>
-            <div style={{ fontSize: 14, lineHeight: 1.45 }}>
-              <strong>{excluded ? "Affluent, not scored" : getDviStage(dviNow)}</strong><br />
-              <span style={{ color: "#44403c" }}>{trend}</span>
-            </div>
-          </div>
-          <p className="story-card-text">{dataStory(excluded, dviNow)}</p>
-          {sentence && <p className="story-card-text">{sentence}</p>}
-          {dviSeries.length >= 2 && (
-            <div style={{ marginTop: 8 }}>
-              <div style={{ width: "100%", height: 96 }} role="img" aria-label={`Displacement index for ${name}: ${dviSeries.map((p) => `${p.dvi.toFixed(0)} in ${p.year}`).join(", ")}`}>
-                <ResponsiveContainer>
-                  <LineChart data={dviSeries} margin={{ top: 6, right: 22, left: -18, bottom: 0 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#edeae4" vertical={false} />
-                    <XAxis
-                      dataKey="year" type="number" domain={["dataMin", "dataMax"]}
-                      ticks={dviYears} tick={{ fontSize: 12, fill: MUTED }}
-                      tickLine={false} axisLine={{ stroke: "#d6d3cd" }}
-                    />
-                    <YAxis domain={[0, 100]} ticks={[0, 50, 100]} tick={{ fontSize: 12, fill: MUTED }} tickLine={false} axisLine={false} />
-                    <Tooltip content={<CardTip format={(p) => `Index ${p.value.toFixed(1)}: ${getDviStage(p.value)}`} />} />
-                    <Line type="monotone" dataKey="dvi" stroke="#9a3412" strokeWidth={2} dot={{ r: 3, fill: "#9a3412" }} activeDot={{ r: 4.5 }} isAnimationActive={false} />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-              <p className="story-card-caption">
-                Displacement index at the measured years only ({dviYears.join(", ")}).
-              </p>
-            </div>
+          {stage && (
+            <>
+              <StageHeadline stage={stage} />
+              <p className="story-card-text" style={{ marginTop: 8 }}>{stage.why}</p>
+            </>
           )}
+          {sentence && <p className="story-card-text">{sentence}</p>}
+          <CityRiskLine cityRisk={cityRisk} tractCount={tractCount} />
+          <StageTimeline series={stageSeries} name={name} />
         </Section>
+
+        {stage?.scored && (
+          <Section title="How the stage was decided">
+            <StageTests stage={stage} />
+            <p className="story-card-caption">
+              “Region” is the five-county Austin area (Bastrop, Caldwell, Hays, Travis and Williamson). “Past the
+              line” means more than half a standard deviation above the regional figure. Lower-income households
+              earn under 80% of the region's median family income.
+              {isGroup && ` Worked out on the combined figures of ${tractCount} census tracts.`}
+            </p>
+          </Section>
+        )}
 
         {demoData.length >= 2 && (
           <Section title="Who lives here: population share over time">
@@ -316,9 +281,9 @@ export default function StoryCardPage({ placeRef, onBack }) {
           <p>
             Sources: U.S. Census and American Community Survey, audited to 2023; City of Austin;
             Preservation Austin's published grant, award and advocacy listings; community business
-            inventories. The displacement index runs from 0 to 100
-            ({PRESENTER_MODE ? "current committee weight settings" : "published default weights"}).
-            It is a planning signal, not a verdict on any block or household.
+            inventories. Stages follow the three-part test in the University of Texas study
+            “Uprooted” (2018), worked out here from census tables; the City of Austin publishes its
+            own version. A stage describes an area as a whole, not any block or household.
           </p>
           <p>
             From Austin's Shifting Ground, {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })}.

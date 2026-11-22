@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ConfidenceChip from "./ConfidenceChip";
 import { SNAP_YEARS, TIMELINE_EVENTS } from "../data/constants";
 import { isViewAllowed } from "../appConfig";
+import { STAGE_BASE_YEAR, stageDataYear, stageSourceLabel } from "../utils/stages";
 
 const YEAR_MIN = 1990;
 const YEAR_MAX = 2025;
@@ -35,19 +36,26 @@ export default function TimeBar({ year, setYear, isPlaying, setIsPlaying, onOpen
   }, [openTick]);
 
   const fill = pctOf(year);
+  // The map only changes at census years; say which one a slider year shows.
+  const dataYear = stageDataYear(year);
 
   return (
     <div className="time-bar" role="group" aria-label="Year controls">
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 4 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
           <span style={{ fontFamily: "'Newsreader',Georgia,serif", fontSize: 30, fontWeight: 600, color: "#1a1a1a", letterSpacing: "-.03em", lineHeight: 1 }}>{year}</span>
-          {year >= 2020 && <span style={{ fontSize: 12, color: "var(--muted)" }}>Census estimates for 2019–2023</span>}
-          {year < 1993 && <span style={{ fontSize: 12, color: "var(--muted)" }}>The index starts in 1993</span>}
-          {year >= 1993 && year < 2010 && (
+          {dataYear == null && <span style={{ fontSize: 12, color: "var(--muted)" }}>Census figures start in {STAGE_BASE_YEAR}</span>}
+          {dataYear === STAGE_BASE_YEAR && (
+            <span style={{ fontSize: 12, color: "var(--muted)" }}>Showing the {STAGE_BASE_YEAR} Census: where vulnerable residents lived. Stages start in 2010.</span>
+          )}
+          {dataYear != null && dataYear !== STAGE_BASE_YEAR && (
+            <span style={{ fontSize: 12, color: "var(--muted)" }}>Stages from the {stageSourceLabel(dataYear)}</span>
+          )}
+          {dataYear != null && dataYear < 2020 && (
             <ConfidenceChip
               level="Medium"
               suffix="confidence"
-              reasons={["Pre-2010 census boundaries were crosswalked to modern tract geometry — tract values before 2010 are approximate."]}
+              reasons={["Figures from before 2020 were carried onto today's census tract boundaries with Census Bureau relationship files. They are approximate where a tract was split or redrawn."]}
             />
           )}
         </div>

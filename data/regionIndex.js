@@ -4,14 +4,14 @@
 export const REGION_INDEX = [
   {
     "region_id": 1,
-    "region_name": "Mckinney",
-    "short_name": "Mckinney",
+    "region_name": "McKinney",
+    "short_name": "McKinney",
     "lat": 30.203028500265134,
     "lng": -97.72639199964104,
     "dvi_score": 70.3,
     "gentrification_status": "Early: Type 1",
-    "display_name": "Mckinney",
-    "google_maps_name": "Mckinney",
+    "display_name": "McKinney",
+    "google_maps_name": "McKinney",
     "tract_label": "Tract 24.47"
   },
   {

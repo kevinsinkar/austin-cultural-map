@@ -3,7 +3,13 @@ import { REGION_INDEX, PA_ALL, PA_LABELS } from "../data";
 import { PA_EXTRA_DATASETS, EXTRA_TYPE_LABELS } from "../data/equityAudit";
 import { COUNCIL_DISTRICTS_GEOJSON } from "../data/councilDistricts";
 import { findDistrict } from "../utils/geo";
-import { interpolateDvi, isRegionExcluded, calcDirectDisplacement, getDviColor } from "../utils/math";
+import { calcDirectDisplacement } from "../utils/math";
+import { STAGE_CLASSES, tractStageClass } from "../utils/stages";
+import { StageMix } from "./StageBlock";
+
+// Displacement stages (vulnerable through continued loss), as opposed to
+// "no stage" and "not scored".
+const IN_DISPLACEMENT_STAGE = new Set(STAGE_CLASSES.map((c) => c.key));
 
 /**
  * OutreachEquityAudit — "a dataset showing how Austin is changing
@@ -25,7 +31,7 @@ const I35_LNG = -97.735;
 // Supports the plan measure "commitments tracked and reported on each
 // year": the same tables, exported or screenshotted annually, are the
 // report.
-export default function OutreachEquityAudit({ dviVersion }) {
+export default function OutreachEquityAudit() {
   const paItems = useMemo(
     () => [...PA_ALL, ...PA_EXTRA_DATASETS].filter((i) => i.lat != null && i.lng != null),
     []
@@ -35,8 +41,8 @@ export default function OutreachEquityAudit({ dviVersion }) {
   const eastWest = useMemo(() => {
     const side = (lng) => (lng > I35_LNG ? "east" : "west");
     const out = {
-      east: { items: 0, dollars: 0, highDviTracts: 0, tracts: 0 },
-      west: { items: 0, dollars: 0, highDviTracts: 0, tracts: 0 },
+      east: { items: 0, dollars: 0, stagedTracts: 0, tracts: 0 },
+      west: { items: 0, dollars: 0, stagedTracts: 0, tracts: 0 },
     };
     for (const i of paItems) {
       const s = out[side(i.lng)];
@@ -47,12 +53,10 @@ export default function OutreachEquityAudit({ dviVersion }) {
       if (r.merge_into || r.lat == null) continue;
       const s = out[side(r.lng)];
       s.tracts++;
-      const dvi = interpolateDvi(r.region_id, 2023);
-      if (dvi >= 35 && !isRegionExcluded(r.region_id, 2023)) s.highDviTracts++;
+      if (IN_DISPLACEMENT_STAGE.has(tractStageClass(r.region_id, 2023).key)) s.stagedTracts++;
     }
     return out;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [paItems, dviVersion]);
+  }, [paItems]);
 
   // ── Per-district: PA footprint vs. measured change ──
   const rows = useMemo(() => {
@@ -60,7 +64,7 @@ export default function OutreachEquityAudit({ dviVersion }) {
     for (const f of COUNCIL_DISTRICTS_GEOJSON.features) {
       byDistrict.set(f.properties.district, {
         district: f.properties.district,
-        tracts: 0, highDvi: 0, dviSum: 0, dviN: 0,
+        tracts: 0, staged: 0, mix: {},
         bhDeltaSum: 0, bhDeltaN: 0,
         items: 0, dollars: 0, byType: {},
       });
@@ -70,11 +74,10 @@ export default function OutreachEquityAudit({ dviVersion }) {
       const row = byDistrict.get(findDistrict(r.lat, r.lng, COUNCIL_DISTRICTS_GEOJSON));
       if (!row) continue;
       row.tracts++;
-      const dvi = interpolateDvi(r.region_id, 2023);
-      if (dvi > 0 && !isRegionExcluded(r.region_id, 2023)) {
-        row.dviSum += dvi;
-        row.dviN++;
-        if (dvi >= 35) row.highDvi++;
+      const key = tractStageClass(r.region_id, 2023).key;
+      if (IN_DISPLACEMENT_STAGE.has(key)) {
+        row.staged++;
+        row.mix[key] = (row.mix[key] || 0) + 1;
       }
       const dd = calcDirectDisplacement(r.region_id);
       if (dd?.bhDelta != null) {
@@ -90,20 +93,19 @@ export default function OutreachEquityAudit({ dviVersion }) {
       row.byType[i.type] = (row.byType[i.type] || 0) + 1;
     }
     return [...byDistrict.values()].sort((a, b) => a.district - b.district);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [paItems, dviVersion]);
+  }, [paItems]);
 
   const totalDollars = eastWest.east.dollars + eastWest.west.dollars;
   const totalItems = eastWest.east.items + eastWest.west.items;
   const eastDollarShare = totalDollars ? (eastWest.east.dollars / totalDollars) * 100 : 0;
-  const eastNeedShare = (eastWest.east.highDviTracts + eastWest.west.highDviTracts)
-    ? (eastWest.east.highDviTracts / (eastWest.east.highDviTracts + eastWest.west.highDviTracts)) * 100
+  const eastNeedShare = (eastWest.east.stagedTracts + eastWest.west.stagedTracts)
+    ? (eastWest.east.stagedTracts / (eastWest.east.stagedTracts + eastWest.west.stagedTracts)) * 100
     : 0;
 
   const typeLabel = (t) => PA_LABELS?.[t] || EXTRA_TYPE_LABELS[t] || t;
 
   // Underserved: meaningful need, little PA presence relative to it.
-  const underserved = (r) => r.highDvi >= 3 && r.items / Math.max(r.highDvi, 1) < 0.5;
+  const underserved = (r) => r.staged >= 3 && r.items / Math.max(r.staged, 1) < 0.5;
 
   return (
     <div>
@@ -115,9 +117,9 @@ export default function OutreachEquityAudit({ dviVersion }) {
           hint={`$${eastWest.east.dollars.toLocaleString()} of $${totalDollars.toLocaleString()}`}
         />
         <Tile
-          label="High-DVI tracts east of I-35"
+          label="Tracts in a displacement stage east of I-35"
           value={`${eastNeedShare.toFixed(0)}%`}
-          hint={`${eastWest.east.highDviTracts} of ${eastWest.east.highDviTracts + eastWest.west.highDviTracts} (need benchmark)`}
+          hint={`${eastWest.east.stagedTracts} of ${eastWest.east.stagedTracts + eastWest.west.stagedTracts} (need benchmark)`}
         />
         <Tile
           label="PA activity items east / west"
@@ -132,7 +134,7 @@ export default function OutreachEquityAudit({ dviVersion }) {
       </div>
       <p style={{ fontSize: 12, color: "#64615b", margin: "0 2px 14px", lineHeight: 1.5, maxWidth: 760 }}>
         Read the first two tiles together: if {eastNeedShare.toFixed(0)}% of the city's
-        high-vulnerability tracts are east of I-35 but {eastDollarShare.toFixed(0)}% of grant
+        tracts in a displacement stage are east of I-35 but {eastDollarShare.toFixed(0)}% of grant
         dollars land there, the gap between those numbers is the equity story to report each year.
       </p>
 
@@ -141,14 +143,13 @@ export default function OutreachEquityAudit({ dviVersion }) {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: "#f5f0ea", textAlign: "left" }}>
-              {["District", "Avg DVI '23", "High-DVI tracts", "Δ Black+Hispanic share", "PA items", "Grant $", "Activity mix"].map((h) => (
+              {["District", "Stages, 2019–2023 survey", "Tracts in a stage", "Δ Black+Hispanic share", "PA items", "Grant $", "Activity mix"].map((h) => (
                 <th key={h} style={{ padding: "8px 10px", fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {rows.map((r) => {
-              const avg = r.dviN ? r.dviSum / r.dviN : 0;
               const bhDelta = r.bhDeltaN ? r.bhDeltaSum / r.bhDeltaN : null;
               const flagged = underserved(r);
               return (
@@ -161,14 +162,11 @@ export default function OutreachEquityAudit({ dviVersion }) {
                       </span>
                     )}
                   </td>
-                  <td style={{ padding: "8px 10px" }}>
-                    <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                      <span style={{ width: 10, height: 10, borderRadius: 2, background: getDviColor(avg), border: "1px solid rgba(0,0,0,.12)" }} aria-hidden="true" />
-                      {avg.toFixed(0)}
-                    </span>
+                  <td style={{ padding: "8px 10px", fontSize: 12 }}>
+                    <StageMix counts={r.mix} />
                   </td>
-                  <td style={{ padding: "8px 10px", fontWeight: 600, color: r.highDvi > 0 ? "#b91c1c" : "#64615b" }}>
-                    {r.highDvi} <span style={{ fontWeight: 400, color: "var(--muted)" }}>/ {r.tracts}</span>
+                  <td style={{ padding: "8px 10px", fontWeight: 600, color: r.staged > 0 ? "#9a3412" : "#64615b" }}>
+                    {r.staged} <span style={{ fontWeight: 400, color: "var(--muted)" }}>/ {r.tracts}</span>
                   </td>
                   <td style={{ padding: "8px 10px", fontWeight: 600, color: bhDelta != null && bhDelta < 0 ? "#b91c1c" : "#15803d" }}>
                     {bhDelta != null ? `${bhDelta > 0 ? "+" : ""}${bhDelta.toFixed(1)} pts` : "—"}
@@ -188,8 +186,8 @@ export default function OutreachEquityAudit({ dviVersion }) {
         "Δ Black+Hispanic share" is the tract-average change in combined Black + Hispanic population share
         from the earliest reliable census year (2000, else 2010) to the latest (2023) — measured change, not modeled risk.
         Tracts and PA items are assigned to districts by centroid / pin location (see the Coverage view caveat).
-        <strong> Under-served</strong> = 3+ high-DVI tracts with fewer than one PA activity item per two such tracts.
-        DVI columns reflect the current weight settings.
+        <strong> Under-served</strong> = 3+ tracts in a displacement stage with fewer than one PA activity item per two such tracts.
+        Stages are from the 2019–2023 census survey (vulnerable through continued loss).
       </p>
 
       {/* ── Pending-data note ── */}

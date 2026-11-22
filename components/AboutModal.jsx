@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 import methodologyText from "../DATA_METHODOLOGY.md?raw";
 import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL } from "../data";
-import { DVI_BINS } from "../utils/math";
+import { STAGE_CLASSES, STAGE_CHECK } from "../utils/stages";
 
 export default function AboutModal({ onClose }) {
   const [showMethodology, setShowMethodology] = useState(false);
@@ -94,10 +94,10 @@ export default function AboutModal({ onClose }) {
               What You Can Explore
             </h3>
             <p style={{ margin: "0 0 4px" }}>
-              <strong>Map</strong> — Every census tract, colored by its stage on the displacement
-              index, with a year slider from 1990 to 2025. Search for a neighborhood or address,
+              <strong>Map</strong> — Every census tract, colored by its displacement stage, with a
+              year slider from 1990 to 2025 (census figures start in 2000). Search for a neighborhood or address,
               select any area for a summary, and open its <strong>story card</strong> for the full
-              profile on one printable page with its own link. The “Start here” card walks
+              profile on a printable page with its own link. The “Start here” card walks
               through the five ideas the map is built around. Layers add legacy businesses, music
               venues, the 1935 redlining map, Project Connect transit lines and more.
             </p>
@@ -114,8 +114,8 @@ export default function AboutModal({ onClose }) {
             )}
             {isViewAllowed("compare") && (
             <p style={{ margin: "0 0 4px" }}>
-              <strong>Compare</strong> — Place two census tracts side by side to contrast index
-              trends, demographics, home values, and cultural anchors.
+              <strong>Compare</strong> — Place two census tracts side by side to contrast their
+              stages, demographics, home values, and cultural anchors.
             </p>
             )}
             {isViewAllowed("triage") && (
@@ -128,33 +128,43 @@ export default function AboutModal({ onClose }) {
             )}
 
             <h3 style={{ fontSize: 14, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
-              The Displacement Vulnerability Index
+              Displacement stages
             </h3>
             <p style={{ margin: "0 0 4px" }}>
-              The DVI is a composite score (0–100) built from three sub-indices:
+              Every census tract is put through three tests for each census year from 2010 on
+              (2010, 2015, 2020 and 2023):
             </p>
             <ul style={{ margin: "0 0 4px", paddingLeft: 20 }}>
-              <li><strong>Demographic Vulnerability (35%)</strong> — rent burden, renter share, foreign-born %</li>
-              <li><strong>Market Pressure (35%)</strong> — home-value appreciation, rent-to-income ratio</li>
-              <li><strong>Socioeconomic Stress (30%)</strong> — poverty rate, unemployment, eviction filings</li>
+              <li><strong>Vulnerable residents</strong> — five shares: renters, people of color, lower-income households, children in poverty, and adults without a bachelor's degree. A tract counts as vulnerable when at least three of the five are well above the five-county Austin region.</li>
+              <li><strong>Demographic change since 2000</strong> — change in the share of owners, of white non-Hispanic residents and of adults with a bachelor's degree, and in median family income, each compared with the region's own change.</li>
+              <li><strong>Housing market</strong> — median home value in 2000 and today, ranked among the tracts on this map: rising fast, already risen, or next to tracts where it has.</li>
             </ul>
-            <p style={{ margin: "0 0 12px" }}>
-              As a formula: score = 0.35 × demographic + 0.35 × market + 0.30 × socioeconomic,
-              on a scale of 0 to 100.{PRESENTER_MODE && " (These are the published defaults; the DVI Weights panel on the map can change them.)"}
+            <p style={{ margin: "0 0 4px" }}>
+              Together the answers place a tract in a stage:{" "}
+              {STAGE_CLASSES.map((c, i) => (
+                <span key={c.key}>
+                  <strong>{c.label}</strong>{i < STAGE_CLASSES.length - 1 ? ", " : "."}
+                </span>
+              ))}{" "}
+              Tracts whose residents are not vulnerable by these measures have no stage. Tracts
+              with very few residents, or where most are college students or live in group
+              quarters, are not scored. For 2000 the map shows only the first test, because
+              change is measured from that year.
             </p>
             <p style={{ margin: "0 0 4px" }}>
-              The score places each area in a stage:{" "}
-              {DVI_BINS.map((b, i) => (
-                <span key={b.stage}>
-                  <strong>{b.stage}</strong> ({b.range}){i < DVI_BINS.length - 1 ? ", " : "."}
-                </span>
-              ))}
+              The tests are those of the University of Texas study “Uprooted” (Way, Mueller
+              and Wegmann, 2018), which the City of Austin commissioned; the City publishes its
+              own version as its displacement risk map. Worked out here from census tables,
+              the result agrees with the City's 2022 map on whether a tract is vulnerable
+              for {Math.round((STAGE_CHECK.vAgree / STAGE_CHECK.vBoth) * 100)}% of tracts and on the
+              stage for {Math.round((STAGE_CHECK.sAgree / STAGE_CHECK.sBoth) * 100)}%. The two use
+              different survey years and a different source for low-income households.
             </p>
             <p style={{ margin: "0 0 12px" }}>
-              It measures the speed and intensity of neighborhood transformation, not a moral
-              judgment, and it is a planning signal rather than a verdict on any block or
-              household. Affluent tracts (income &gt;150% city median with &gt;75% owner-occupancy)
-              are capped at 20 and shown as a separate group, <em>Affluent, not scored</em>.
+              A stage describes an area as a whole. It is not a verdict on any block or
+              household. Census surveys of small areas carry sampling error, so a tract close
+              to a line can change stage from one survey to the next.
+              {PRESENTER_MODE && " The Compare and Triage views also use a separate 0–100 pressure score (rent burden, renter share, poverty, housing costs; adjustable in the DVI Weights panel). It describes present-day conditions and is not the stage on the map."}
             </p>
 
             <h3 style={{ fontSize: 14, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>
@@ -228,6 +238,13 @@ export default function AboutModal({ onClose }) {
               In the Neighborhoods view, the tracts inside one planning area are combined and
               their figures weighted by population. For boundary-sensitive analysis, use the
               Census Tracts view, which shows data at its native resolution.
+            </p>
+            <p style={{ margin: "0 0 12px" }}>
+              The area names on the map are the City's own planning areas, combined planning
+              areas and named sub-districts. Selecting a name outlines the City's boundary
+              and lists the census tracts that overlap it. Census tracts do not follow those
+              boundaries, so a neighborhood's figures here describe the tracts that fit it
+              best, not the exact area inside the outline.
             </p>
 
             <h3 style={{ fontSize: 14, fontWeight: 700, color: "#1a1a1a", margin: "0 0 6px" }}>

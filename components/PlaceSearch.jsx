@@ -1,6 +1,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { LEGACY_OPERATING, LEGACY_CLOSED } from "../data";
 import { placeSearchIndex } from "../utils/places";
+import { AREA_NAMES } from "../data/areaNames";
 
 /**
  * PlaceSearch — find a place without having to click the map.
@@ -20,7 +21,12 @@ import { placeSearchIndex } from "../utils/places";
 const VIEWBOX = "-98.05,30.60,-97.45,30.03";
 const NOMINATIM = "https://nominatim.openstreetmap.org/search";
 
-const KIND_LABEL = { neighborhood: "Neighborhood", tract: "Census tract", anchor: "Cultural anchor" };
+const KIND_LABEL = { neighborhood: "Neighborhood", tract: "Census tract", anchor: "Cultural anchor", area: "City boundary" };
+
+// City planning areas: choosing one outlines its boundary on the map.
+const areaIndex = () => AREA_NAMES.map((a) => ({
+  key: `area:${a.id}`, kind: "area", id: a.id, label: a.name, detail: a.detail, haystack: a.name.toLowerCase(),
+}));
 
 function anchorIndex() {
   const row = (b, closed) => ({
@@ -35,7 +41,7 @@ function anchorIndex() {
   ];
 }
 
-export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSelectAnchor, onAddress }) {
+export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSelectAnchor, onSelectArea, onAddress }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
@@ -47,6 +53,7 @@ export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSel
 
   const places = useMemo(() => placeSearchIndex(), []);
   const anchors = useMemo(() => anchorIndex(), []);
+  const areas = useMemo(() => areaIndex(), []);
 
   const q = query.trim().toLowerCase();
   const results = useMemo(() => {
@@ -58,11 +65,14 @@ export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSel
     }
     const tokens = q.split(/\s+/).filter(Boolean);
     const match = (item) => tokens.every((t) => item.haystack.includes(t));
-    const rank = (item) => (item.label.toLowerCase().startsWith(q) ? 0 : 1) + (item.kind === "neighborhood" ? 0 : 0.5);
-    const placeHits = places.filter(match).sort((a, b) => rank(a) - rank(b) || a.label.localeCompare(b.label)).slice(0, 10);
+    // Names that start with the text first; among those, neighborhoods
+    // (which carry figures), then City boundaries, then single tracts.
+    const KIND_RANK = { neighborhood: 0, area: 0.25, tract: 0.5 };
+    const rank = (item) => (item.label.toLowerCase().startsWith(q) ? 0 : 1) + KIND_RANK[item.kind];
+    const placeHits = [...places, ...areas].filter(match).sort((a, b) => rank(a) - rank(b) || a.label.localeCompare(b.label)).slice(0, 12);
     const anchorHits = anchors.filter(match).slice(0, 4);
     return [...placeHits, ...anchorHits];
-  }, [q, places, anchors]);
+  }, [q, places, anchors, areas]);
 
   // Offer the address lookup once there is enough text to be an address.
   const offerAddress = q.length >= 5;
@@ -87,6 +97,7 @@ export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSel
     if (item.kind === "neighborhood") onSelectNeighborhood?.(item.id);
     else if (item.kind === "tract") onSelectTract?.(item.id);
     else if (item.kind === "anchor") onSelectAnchor?.(item.business);
+    else if (item.kind === "area") onSelectArea?.(item.id);
     setQuery(item.label);
     close(`Showing ${item.label}.`);
   };
@@ -199,7 +210,9 @@ export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSel
                 <span className="place-search-detail">
                   {item.kind === "tract"
                     ? (item.detail || KIND_LABEL.tract)
-                    : `${KIND_LABEL[item.kind]}${item.detail ? ` · ${item.detail}` : ""}`}
+                    : item.kind === "area"
+                      ? `${KIND_LABEL.area} · ${item.detail}`
+                      : `${KIND_LABEL[item.kind]}${item.detail ? ` · ${item.detail}` : ""}`}
                 </span>
               </li>
             ))}
@@ -223,7 +236,7 @@ export default function PlaceSearch({ onSelectTract, onSelectNeighborhood, onSel
               </li>
             )}
             {q && !results.length && !offerAddress && (
-              <li className="place-search-empty" role="presentation">No neighborhood or tract matches yet. Keep typing.</li>
+              <li className="place-search-empty" role="presentation">No neighborhood, area or tract matches yet. Keep typing.</li>
             )}
           </ul>
         </div>

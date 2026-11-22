@@ -7,7 +7,7 @@
 
 ## How to Read This Document
 
-This document is organized from raw inputs (§1–2) through calculations (§3–6) to known limitations (§10). If you want to verify a specific number on screen, start with the section matching the view you're looking at: Map View (§4), Compare View (§5), or Triage View (§6). If you want to understand how the Displacement Vulnerability Index works, start at §3. If you want to know what data we don't have, skip to §10.
+This document is organized from raw inputs (§1–2) through calculations (§3–6) to known limitations (§10). If you want to verify a specific number on screen, start with the section matching the view you're looking at: Map View (§4), Compare View (§5), or Triage View (§6). If you want to understand how the map's displacement stages are decided, start at §3. If you want to know what data we don't have, skip to §10.
 
 ---
 
@@ -15,7 +15,7 @@ This document is organized from raw inputs (§1–2) through calculations (§3�
 
 1. [Primary Data Sources](#1-primary-data-sources)
 2. [Data Coverage Summary](#2-data-coverage-summary)
-3. [Displacement Vulnerability Index (DVI)](#3-displacement-vulnerability-index-dvi)
+3. [Displacement Stages (Map Colors)](#3-displacement-stages-map-colors)
 4. [Map View — Calculations & Data](#4-map-view)
 5. [Compare View — Calculations & Data](#5-compare-view)
 6. [Triage View — Three Prioritization Lenses](#6-triage-view)
@@ -35,15 +35,28 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 | File | Rows | Regions | Years | Primary Sources |
 |------|------|---------|-------|-----------------|
-| `audited_demographics_normalized.json` | 1,542 | 269 | 2000–2023 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2019–2023) |
+| `audited_demographics_normalized.json` | 1,541 | 269 | 2000–2023 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2019–2023) |
 | `audited_property_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (home values, rent, housing units, vacancy), City of Austin Construction Permits (new permits, commercial sqft) |
 | `audited_socioeconomic_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (income, poverty, unemployment, Gini, SNAP participation), BASTA Austin (eviction filing rates, 2014-2025) |
 
-**Important:** All data comes from observed Census, ACS, and administrative records. Intermediate years (e.g., 2005) are linearly interpolated from adjacent anchor years and flagged with `INTERPOLATED` audit flag. Rows computed from parent tracts (where a 2020 tract didn't exist in earlier Census vintages) are flagged with `COMPUTED_FROM_PARENT_TRACT`.
+**Important:** All data comes from observed Census, ACS, and administrative records. Intermediate years (e.g., 2005) are linearly interpolated from adjacent anchor years and flagged with `INTERPOLATED` audit flag.
 
-**Historical coverage:** Pre-2020 data was backfilled using `fill_census_gaps_v2.py` (Census API queries with 2010→2020 and 2000→2010→2020 tract crosswalking) and `fill_demographic_history.py` (chained crosswalk + interpolation). Current coverage: 247 regions at 2000, 246 at 2005, 256 at 2010/2015, 269 at 2020/2023. The ~22 regions missing at 2000 are tracts that did not exist in any form until after 2010 (genuinely new development with no historical population).
+**Historical coverage:** Pre-2020 data was first backfilled with `fill_census_gaps_v2.py` and `fill_demographic_history.py`. Current coverage: 246 regions at 2000 and 2005, 256 at 2010/2015, 269 at 2020/2023. The regions missing at 2000 are tracts with no 2000 tract to draw from.
 
-**Geography:** 269 census tracts covering the Austin-Round Rock MSA, mapped to the 2020 Census tract boundaries. Pre-2010 data is crosswalked from earlier tract definitions using Census Bureau relationship files (area-weighted proportional assignment). Business locations geocoded to building-level precision via Google Maps Geocoding API.
+**Rebuilt November 2026 (`npm run build:history`, `scripts/rebuild_census_history.mjs`):** population, race shares and owner share for 2000, 2010 and 2015, and rent burden for 2010 and 2015, are now taken straight from the census tables and allocated onto 2020 tract boundaries; 2005 is re-interpolated from them. The rebuild corrected four faults in the earlier backfill:
+
+| Fault | Effect | Rows corrected |
+|-------|--------|----------------|
+| 2000 and 2010 owner share read from table H003 (occupied vs vacant) or from the mortgaged-owner cell alone, instead of table H004 (owner vs renter) | Renter share wrong: tract 8.03 showed 10% renters in 2000; the census count is 52% | 79 tracts in 2000 and 225 in 2010 moved by more than 5 points |
+| Tracts split after 2000 or 2010 carried the parent tract's whole population | Earlier populations overstated, which inflated "fell from N to M residents" counts | 120 tracts in 2000, 91 in 2010 and 91 in 2015 moved by more than 10% |
+| 177 of the 2000 rows used estimated, not counted, non-Hispanic race figures; whole-number 2000 tracts (7, 11, 12 …) were matched to the wrong tract | Black + Hispanic share off by more than 5 points | 8 tracts in 2000 |
+| 2015 rent burden mixed two definitions: 149 tracts used "30% or more of income", 94 used "50% or more" | 2015 scores not comparable between tracts | 157 tracts moved by more than 5 points |
+
+Rows whose 2020 tract has the same boundary as the earlier tract are exact counts. Rows allocated from earlier tracts are flagged `ALLOCATED_FROM_EARLIER_TRACTS` and are estimates: a tract split from a larger one inherits the larger tract's shares and a part of its population.
+
+**Geography:** 269 census tracts covering the Austin-Round Rock MSA, mapped to the 2020 Census tract boundaries. Earlier tracts are mapped with the Census Bureau's tract relationship files: 2000→2010 by the share of the 2000 tract's population (for people) or housing units (for homes), 2010→2020 by land area, the only measure that file carries. Business locations geocoded to building-level precision via Google Maps Geocoding API.
+
+**Definitions used in every year:** *owner share* is owner-occupied homes divided by occupied homes; renter share is the remainder. *Rent burden* is the share of renters paying **50% or more** of household income on rent (ACS table B25070). That is the federal "severe" burden line, not the more common 30% line.
 
 ### 1.2 Cultural & Business Data
 
@@ -76,7 +89,8 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 | Demographics | 269 | 100% | All regions at 2020/2023; 247 at 2000, 246 at 2005, 256 at 2010/2015 |
 | Property | 269 | 100% | All regions at 2020/2023; 257 at 2010/2015. Permits + commercial sqft for 1,000 rows. |
 | Socioeconomic | 269 | 100% | All regions at 2020/2023; 257 at 2010/2015. SNAP for 479 rows. |
-| DVI Score | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.2) |
+| Displacement stage | 269 | 100% | Decided for every tract; 8 to 12 are not scored in a given year (§3.4) |
+| Pressure score (presenter tools) | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.8) |
 | Legacy Businesses | ~40 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 | Eviction Filings | 244 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
@@ -84,38 +98,175 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 ---
 
-## 3. Displacement Vulnerability Index (DVI)
+## 3. Displacement Stages (Map Colors)
 
-### What DVI Measures — and What It Doesn't
+### What a stage is, and what it is not
 
-The DVI is a composite score (0–100) that measures the **speed and intensity of demographic, economic, and housing-market transformation** in a neighborhood. Higher scores indicate faster, more intense change in the measured indicators.
+Every census tract and every multi-tract neighborhood on the map is placed in a **displacement stage**, or in none. A stage is a category decided by three tests on census figures. It is not a score, it is never averaged, and it is never interpolated between years.
 
-The DVI **does not** measure: quality of life, community satisfaction, cultural vitality, or whether change is desirable. A high DVI indicates rapid transformation that correlates with displacement of existing residents, but displacement is a complex social process that no single index can fully capture. The DVI is a screening tool — it identifies where to look more closely, not a verdict on what is happening.
+The tests are those of Appendix 3 of *Uprooted: Residential Displacement in Austin's Gentrifying Neighborhoods, and What Can Be Done About It* (Way, Mueller and Wegmann, University of Texas at Austin, 2018), a study the City of Austin commissioned. That appendix adapts Lisa Bates, *Gentrification and Displacement Study* (Portland, 2013). The City of Austin publishes its own updates of the same test as "Displacement Risk Areas". This site works the test out itself, from Census Bureau tables, for each census year it shows (`scripts/build_stages.mjs` → `data/stages.js`; `npm run build:stages`).
 
-### 3.1 Sub-Index Composition
+A stage describes an area as a whole. It is **not** a statement about any block or household, and "no stage" does not mean no one there is at risk of displacement.
+
+> **November 2026 change.** Until this revision the map was colored by a 0–100 composite score cut into four bands named Stable, Early pressure, Active displacement and Historic displacement. An audit found that 92% of scored tracts fell in the top two bands, that the score followed present-day poverty (correlation 0.71) far more closely than measured demographic change (0.13), and that the tracts with the largest measured loss of Black and Hispanic residents scored mid-scale. The band names claimed stages the score did not measure. The score is kept for the presenter-only tools under a plain name (§3.8); it no longer colors the map.
+
+### 3.1 The three tests
+
+"Region" means the five-county Austin area: Bastrop, Caldwell, Hays, Travis and Williamson counties (503 census tracts on 2020 boundaries). "Well above" means more than half a standard deviation above the regional figure (a z-score above +0.5), where the standard deviation is taken across the region's tracts, weighted by the size of each tract's population or households, around the regional figure.
+
+**Test 1. Vulnerable residents.** Five shares. A place is vulnerable when at least 3 of the 5 are well above the region.
+
+| Measure | Definition | Census tables (2000 / later years) |
+|---------|------------|-------------------------------------|
+| People of color | Residents who are not white non-Hispanic ÷ all residents | SF1 P004 / ACS B03002 |
+| Households that rent | Renter-occupied ÷ occupied homes | SF1 H004 / ACS B25003 |
+| Lower-income households | Households under 80% of the region's median family income ÷ all households | SF3 P052, P077 / ACS B19001, B19113 |
+| Children in poverty | People under 18 below the poverty line ÷ people under 18 with a poverty status | SF3 P087 / ACS B17001 |
+| Adults without a bachelor's degree | People 25 and over without a four-year degree ÷ people 25 and over | SF3 P037 / ACS B15002 |
+
+**Test 2. Demographic change since 2000.** Four changes, each compared with the region's own change over the same years. Change is "yes" when at least 2 of the 4 are well above the regional change **and** the four average at least half a standard deviation above it.
+
+| Measure | Change measured as |
+|---------|--------------------|
+| Households that own | Percentage points |
+| White, non-Hispanic residents | Percentage points |
+| Adults with a bachelor's degree | Percentage points |
+| Median family income (SF3 P077 / ACS B19113) | Percent, in dollars of each year |
+
+**Test 3. Housing market.** Median home value (SF3 H085 / ACS B25077) in 2000 and in the year tested, and the percent rise between them. Each is ranked among the scored tracts on this site and called **high** when it is in the top two fifths (above the 60th percentile). A tract with fewer than 50 owner-occupied homes in either year uses median gross rent instead (SF3 H063 / ACS B25064), ranked the same way.
+
+| Pattern | Value in 2000 | Value today | Rise since 2000 | And |
+|---------|---------------|-------------|-----------------|-----|
+| Accelerating | any | not high | high | |
+| Appreciated | not high | high | high | |
+| Adjacent | not high | any | not high | touches a tract whose value today or rise is high |
+
+For the 2019–2023 survey the lines were: people of color 59.8% (region 50.2%), renters 54.6% (41.1%), lower-income households 59.0% (49.7%), children in poverty 18.9% (11.5%), adults without a bachelor's 59.9% (50.1%); a 2000 home value of $134,660, a value today of $576,340 and a rise of 325%. The lines for every year are stored in `STAGE_REGION` in `data/stages.js`, and each story card prints the ones that applied to it.
+
+### 3.2 The stages
+
+| Stage on the map | The study's type | Vulnerable | Demographic change | Housing |
+|------------------|------------------|------------|--------------------|---------|
+| Vulnerable | Susceptible | yes | no | adjacent |
+| Vulnerable | (no type in the study) | yes | any other combination | any other combination |
+| Early | Early: Type 1 | yes | no | accelerating |
+| Early | Early: Type 2 | yes | yes | adjacent |
+| Dynamic | Dynamic | yes | yes | accelerating |
+| Late | Late | yes | yes | appreciated |
+| Continued loss | Continued loss | no | yes, or white share and bachelor's share both up | appreciated |
+| Continued loss | Rapid loss (see below) | no, but yes in 2000 | yes | accelerating |
+| No stage | | no | anything else | anything else |
+
+The map draws five stages in one hue, light to dark (`STAGE_CLASSES` in `utils/stages.js`): Vulnerable `#eba259`, Early `#de7b2e`, Dynamic `#c9550a`, Late `#a7320c`, Continued loss `#75201a`. The ramp was checked for steadily falling lightness and for steps that stay apart under color-vision deficiency. Places with no stage are left nearly clear, so the staged places read as the pattern. The side panel and the story card name the study's exact type beside the stage where it says more ("Vulnerable · Susceptible", "Continued loss · Rapid loss").
+
+**Two rows are not in the UT table.**
+
+- *Vulnerable, no type.* The study gives no type to a vulnerable tract whose market shows none of its patterns. This site still shows it as Vulnerable, because the first test is met.
+- *Rapid loss.* The study has no row for a tract that was vulnerable in 2000, no longer is, shows demographic change, and whose home values are rising fast but are not yet high. Several East Austin tracts with the largest measured loss of residents of color fall there (tracts 21.07, 21.09, 21.10 and 21.11 in the 2019–2023 survey). The City's updates call such tracts "rapid loss" and group them with continued loss as "chronic displacement risk". This site does the same, using its own 2000 reading for "was vulnerable". The City's exact rule is not published, so this row is this site's rule, not the City's.
+
+Tracts in each stage, by census year:
+
+| Year (survey) | Vulnerable | Early | Dynamic | Late | Continued loss | No stage | Not scored |
+|---------------|-----------|-------|---------|------|----------------|----------|------------|
+| 2010 (2006–2010) | 54 | 23 | 6 | 2 | 8 | 165 | 11 |
+| 2015 (2011–2015) | 53 | 21 | 6 | 6 | 8 | 165 | 10 |
+| 2020 (2016–2020) | 42 | 21 | 5 | 5 | 19 | 167 | 10 |
+| 2023 (2019–2023) | 43 | 19 | 8 | 2 | 26 | 163 | 8 |
+
+### 3.3 Years
+
+| Slider year | What the map shows | Source |
+|-------------|--------------------|--------|
+| Before 2000 | Boundaries only | The site holds no census figures before 2000 |
+| 2000–2009 | Test 1 only: vulnerable in 2000, or not | 2000 Census (SF1 and SF3) |
+| 2010–2014 | Stage | American Community Survey 2006–2010 |
+| 2015–2019 | Stage | American Community Survey 2011–2015 |
+| 2020–2022 | Stage | American Community Survey 2016–2020 |
+| 2023 on | Stage | American Community Survey 2019–2023 |
+
+Change is always measured from 2000, so 2000 itself has no stage: 78 tracts were vulnerable, 179 were not, 12 were not scored. A slider year shows the latest census year at or before it; the time bar names the survey.
+
+Figures from before 2020 are carried onto today's (2020) tract boundaries with the Census Bureau's tract relationship files: 2000 tracts to 2010 tracts by the share of the 2000 tract's people (for counts of people) or homes (for counts of homes), and 2010 tracts to 2020 tracts by land area, the only measure that file carries. Counts are allocated and summed before shares are taken. A median cannot be allocated, so a carried median is the average of the source tracts' medians weighted by the families, owner homes or renter homes each contributes.
+
+### 3.4 Places that are not scored
+
+A place is left out of the tests, and drawn in gray with a dashed edge, when in that year:
+
+- it has fewer than 500 residents (the airport, tract 16.06), or
+- half or more of its residents are enrolled in college or graduate school (the University of Texas and West Campus tracts 6.01 and 6.05–6.08; the Pleasant Valley student-apartment tracts in the 2010 and 2015 surveys), or
+- half or more live in group quarters such as dormitories, barracks or a jail (tract 23.19), or
+- fewer than three of the five vulnerability measures can be computed.
+
+The UT study excluded the airport, the UT campus, Camp Mabry and two West Campus tracts by hand; this site applies a rule each year instead. A share is not computed on fewer than 50 people or homes.
+
+### 3.5 Neighborhoods
+
+A neighborhood of two or more tracts is put through the same three tests on its combined figures: counts are added across its tracts, medians are averaged by population (as elsewhere on the site, §7), and "adjacent" looks at every tract that touches the neighborhood from outside. Its stage is therefore its own reading and can differ from the stages of its tracts. A one-tract neighborhood has its tract's stage.
+
+### 3.6 Check against the City of Austin's map
+
+The City's *Displacement Risk Areas 2022* (data.austintexas.gov, dataset `t8nv-zcp9`, retrieved November 2026) covers the same 269 tracts. Its 2022 result and this site's reading of the 2019–2023 survey agree as follows:
+
+| Compared | Agree | Of | Share |
+|----------|-------|----|-------|
+| Vulnerable, yes or no | 231 | 260 | 89% |
+| Demographic change, yes or no | 221 | 248 | 89% |
+| Housing market pattern | 196 | 259 | 76% |
+| Stage (the study's type, with "stable" as no stage) | 188 | 235 | 80% |
+| The City's three groups: vulnerable, active, chronic | 199 | 250 | 80% |
+
+The two are not expected to match exactly: the City used earlier survey years, HUD data for low-income households, and it carries some tracts over from its earlier maps as "historical displacement" (15 tracts, left out of the stage comparison). The side panel and the story card print the City's category beside this site's stage so a reader can see both. The comparison is recomputed on every build (`STAGE_CHECK` in `data/stages.js`).
+
+The stages also line up with change that can be measured directly. Mean change since 2000 among the tracts in each stage in the 2019–2023 survey:
+
+| Stage | Tracts | White non-Hispanic share | Adults with a bachelor's | Median family income |
+|-------|--------|--------------------------|--------------------------|----------------------|
+| Vulnerable | 42 | −16.0 points | +7.6 points | +46% |
+| Early | 19 | −1.2 points | +18.2 points | +71% |
+| Dynamic | 8 | +12.4 points | +32.3 points | +140% |
+| Late | 2 | +22.9 points | +28.5 points | +325% |
+| Continued loss | 26 | +22.4 points | +41.1 points | +290% |
+| No stage | 160 | −13.2 points | +15.4 points | +115% |
+
+(Region: −10.9 points, +13.2 points, +106%. The second test uses these same measures, so the table shows the stages are ordered as intended; it is not an independent test of them.) Of the 78 tracts that were vulnerable in 2000, 24 are in continued loss, 2 late, 8 dynamic, 15 early, 17 still vulnerable with no change measured, and 12 have no stage. Of the 179 that were not vulnerable in 2000, 25 are vulnerable now; most are outer tracts.
+
+For single places: The tracts with the largest fall in residents of color since 2000 read, across 2000, 2010, 2015, 2020 and 2023: Holly (tract 10) vulnerable, dynamic, late, continued loss, continued loss; Holly (9.02) vulnerable, dynamic, dynamic, late, continued loss; Chestnut (8.03) vulnerable, then continued loss in every later year; Rosewood (8.02) vulnerable, dynamic, dynamic, late, late.
+
+### 3.7 Where this departs from the UT method
+
+| Appendix 3 | This site | Why |
+|------------|-----------|-----|
+| Low-income households from HUD's CHAS tables (under 80% of area median family income, adjusted for household size) | Households under 80% of the region's median family income, counted from the census income brackets; the bracket the line falls in is split evenly | CHAS is not published for every survey year used here. The line is not adjusted for household size. |
+| "Appreciated" described with a 1990 home value | Uses the 2000 value | The site holds no 1990 figures. The appendix's own spreadsheet formula also tests the 2000 value. |
+| One reading, 2000 to 2012–2016 | A reading for 2010, 2015, 2020 and 2023, each against 2000 | The map has a year slider. |
+| Tracts carried between boundaries with Brown University's Longitudinal Tract Database, to 2010 tracts | Census Bureau relationship files, to 2020 tracts (§3.3) | The site's tracts are 2020 tracts. |
+| Five tracts excluded by hand | A rule, applied each year (§3.4) | Student areas moved over the period. |
+| Home values in 2016 dollars | Dollars of each year | Rescaling every tract by the same factor does not change its rank. |
+| Region's median family income for 2000 taken from the census | The five counties' medians, weighted by their number of families ($59,196) | The 2000 Census API has no figure for the metropolitan area. Appendix 3 suggests this fallback. |
+| Vulnerable tracts with no market pattern are unclassified; no "rapid loss" | Shown as Vulnerable; rapid loss added (§3.2) | See §3.2. |
+
+### 3.8 The pressure score (presenter tools only)
+
+The 0–100 composite score that colored the map before November 2026 is still computed (`data/auditedDvi.js`) and still feeds the presenter-only Compare and Triage views, where it is called the pressure score (the code and some labels keep the old abbreviation, DVI). It sums up **present-day conditions**: rent burden, renter share, poverty, rent against income, home-value appreciation. It is not a stage and is not shown in the public build. Its bands are plain quarters of the scored tracts pooled over 2015, 2020 and 2023 under the default weights: under 37, 37–46, 46–56, and 56 and over (`DVI_BINS` in `utils/math.js`), drawn in a blue-gray ramp so they are not mistaken for stages.
+
+#### Sub-Index Composition
 
 **Demographic Vulnerability (default weight: 35%)**
 
-Captures how exposed a neighborhood's residents are to displacement pressures. Neighborhoods with high renter shares and cost-burdened households have less capacity to absorb rising costs.
-
 | Component | Weight | Formula | Normalization Ceiling | Ceiling Rationale |
 |-----------|--------|---------|----------------------|-------------------|
-| Rent Burden | 50% | `rent_burden_pct / 55 * 100` | 55% of income | ~95th percentile across Austin tracts. Above this, virtually all renters are severely burdened. |
+| Rent Burden | 50% | `rent_burden_pct / 55 * 100` | 55% of renters | `rent_burden_pct` is the share of renters paying 50% or more of income on rent (§1.1). 55% is above the 95th percentile (48% in 2023). |
 | Renter Share | 30% | `(100 - pct_owner_occupied) / 75 * 100` | 75% renters | ~95th percentile. Tracts above 75% renter are almost exclusively student or transient housing. |
 | Foreign-Born | 20% | `pct_foreign_born / 40 * 100` | 40% population | ~95th percentile. Prevents high-immigration tracts from compressing the scale for all others. |
 
 **Market Pressure (default weight: 35%)**
 
-Captures the forces driving displacement — rising property values and housing costs relative to incomes.
-
 | Component | Weight | Formula | Normalization Ceiling | Ceiling Rationale |
 |-----------|--------|---------|----------------------|-------------------|
-| Home Value Appreciation | 50% | `pct_home_value_change_yoy / 15 * 100` | 15% YoY | Sustained 15%+ annual appreciation represents extreme market pressure, seen only in peak gentrification corridors. |
+| Home Value Appreciation | 50% | `pct_home_value_change_yoy / 15 * 100` | 15% YoY | Set when 15% a year was rare. In 2023 the median tract was at 14.7% and 117 of 244 tracts hit the ceiling, so this component no longer separates tracts. |
 | Rent-to-Income Ratio | 50% | `(rent * 12 / income) / 0.50 * 100` | 50% of income on rent | HUD defines >30% as cost-burdened and >50% as severely burdened. The 50% ceiling captures the severe end. |
 
 **Socioeconomic Stress (default weight: 30%)**
-
-Captures the lived economic pressure on residents. These indicators signal communities under strain that may lack resources to resist displacement.
 
 | Component | Weight | Formula | Normalization Ceiling | Ceiling Rationale |
 |-----------|--------|---------|----------------------|-------------------|
@@ -123,51 +274,31 @@ Captures the lived economic pressure on residents. These indicators signal commu
 | Unemployment | 30% | `unemployment_rate / 15 * 100` | 15% labor force | ~95th percentile. Double the national average during non-recessionary periods. |
 | Eviction Filings | 30% | `eviction_filing_rate / 10 * 100` | 10 per 100 renters | ~95th percentile from Eviction Lab data for Texas metro areas. |
 
-### 3.2 Composite Formula
+#### Composite Formula
 
 ```
-DVI = (W₁ × Demographic Vulnerability) + (W₂ × Market Pressure) + (W₃ × Socioeconomic Stress)
+score = (W₁ × Demographic Vulnerability) + (W₂ × Market Pressure) + (W₃ × Socioeconomic Stress)
 ```
 
-Default weights: W₁ = 0.35, W₂ = 0.35, W₃ = 0.30. Users can adjust these via the Advanced panel in the Triage view (§6.4).
+Default weights: W₁ = 0.35, W₂ = 0.35, W₃ = 0.30. The presenter can adjust these in the DVI Weights panel (§6.4).
 
-**Missing data re-weighting:** When a sub-index is unavailable (e.g., a region has demographic data but no property data), the remaining sub-indices are re-weighted to sum to 1.0. For example, if Market Pressure is missing, the formula becomes `DVI = (0.35/0.65) × Demographic + (0.30/0.65) × Socioeconomic`. This prevents regions with missing data from being artificially scored low.
+**Missing data re-weighting:** When a sub-index is unavailable (e.g., a region has demographic data but no property data), the remaining sub-indices are re-weighted to sum to 1.0. Re-weighting also applies **within** each sub-index: a missing field is excluded and the remaining fields' weights are re-normalized, rather than the field being scored as zero. Each score carries a `coverage` value (fraction of the 8 input fields present). A tract-year with fewer than 3 of the 8 fields gets no score.
 
-Re-weighting also applies **within** each sub-index (Sept 2026 revision): a missing field (e.g., no eviction filing rate for that year) is excluded and the remaining fields' weights are re-normalized, rather than the field being scored as zero. Zero-filling had systematically depressed early-year scores — 2010 has no home-value-appreciation, unemployment, or eviction values at all — which made 98% of regions appear to "rise" 2010→2023 (median +22 DVI points). After the fix, 43% rise. Each DVI point carries a `coverage` value (fraction of the 8 input fields present) so consumers can judge cross-year comparability.
+**Cross-year comparisons (Trajectory velocity):** Because 2010 and 2023 scores are built from different field sets even after re-weighting, raw deltas between them conflate data coverage with real change. Trajectory velocity therefore scores both endpoint years using **only the fields measured in both years** (minimum 3 shared fields), re-weighted over that shared set (`comparableDviPair` in `utils/math.js`). Regions without enough shared fields fall back to the raw delta and are flagged `velocityComparable: false`. The "intervention window" framing has not been validated against observed displacement outcomes and should be treated as a screening aid.
 
-**Cross-year comparisons (Trajectory velocity):** Because 2010 and 2023 DVIs are built from different field sets even after re-weighting, raw deltas between them still conflate data coverage with real change. Trajectory velocity therefore scores both endpoint years using **only the fields measured in both years** (minimum 3 shared fields), re-weighted over that shared set (`comparableDviPair` in `utils/math.js`). Regions without enough shared fields fall back to the raw delta and are flagged `velocityComparable: false`; the Triage UI labels the Trajectory lens accordingly. The "intervention window" framing has not been validated against observed displacement outcomes and should be treated as a screening aid.
+**Low-confidence boost:** Each data row carries an `audit_confidence` score (see §9.1). When the average confidence across a region's available data sources falls below 0.5, the Socioeconomic Stress weight is boosted by 10 points before re-normalization.
 
-**Low-confidence boost:** Each data row carries an `audit_confidence` score (see §9.1). When the average confidence across a region's available data sources falls below 0.5, the Socioeconomic Stress weight is boosted by 10 points before re-normalization. Rationale: in data-sparse tracts ("data deserts"), socioeconomic indicators like poverty rate and SNAP participation are more reliably reported than property appreciation or rent-to-income ratios, which may be estimated or interpolated.
+#### Affluence Gate
 
-### 3.3 Affluence Gate
+A region is flagged `isExcluded` when `median_household_income > $129,000` (150% of Austin city median of $86,000) **and** `pct_owner_occupied > 75%`. Its score is capped at 20 and it is labeled "Affluent / Appreciated" in the Triage view. The gate applies to the score only; on the map such tracts simply have no stage.
 
-Not every neighborhood with rising property values is experiencing displacement. Affluent areas with high homeownership aren't at risk of being pushed out — their residents have the resources and tenure security to stay. The Affluence Gate identifies these areas to prevent them from consuming grant resources meant for vulnerable communities.
+#### Interpolation
 
-**Criteria:** A region is flagged `isExcluded` when:
-- `median_household_income > $129,000` (150% of Austin city median of $86,000), **AND**
-- `pct_owner_occupied > 75%`
+`interpolateDvi(regionId, year)` performs linear interpolation between score data points. When the requested year falls before the earliest or after the latest data point, the function returns the boundary value (no extrapolation beyond the data). Stages are never interpolated.
 
-**Effect:** DVI is capped at 20 (Stable band) regardless of computed value. The region is labeled "Affluent / Appreciated" in the Triage view and excluded from grant priority recommendations.
+### 3.9 Region Merging
 
-### 3.4 DVI Stages (Map Colors)
-
-| Stage | Score | Map color | Meaning |
-|-------|-------|-----------|---------|
-| Stable | 0–20 | Pale yellow | Conditions are comparatively stable today |
-| Early pressure | 20–35 | Yellow-orange | Early pressure is visible; conditions are shifting but the community fabric is still intact |
-| Active displacement | 35–55 | Orange | The latest data shows active displacement pressure |
-| Historic displacement | 55+ | Red | Much of the change the map tracks has already happened |
-| Affluent, not scored | Capped at 20 | Blue | High-income, mostly owner-occupied areas (§3.3), shown as a separate group rather than on the ramp |
-
-Each stage has one fill color (`DVI_BINS` in `utils/math.js`); the map does not shade within a stage. Before 1993 the map shows boundaries only, in neutral gray. The same thresholds set the triage categories. The legend above the map lists these stages in the same words, and "What do the colors mean?" expands the meanings.
-
-### 3.5 DVI Interpolation
-
-`interpolateDvi(regionId, year)` performs linear interpolation between DVI data points. It supports fractional years (e.g., 2023.5) for smooth time-slider animation. When the requested year falls before the earliest or after the latest data point, the function returns the boundary value (no extrapolation beyond the data).
-
-### 3.6 Region Merging
-
-Some census tracts are administratively merged in this tool — a secondary tract ID redirects to a primary tract ID via `MERGE_LOOKUP`. When a merged region is selected, business counts, demographic data, and DVI calculations are computed across all member tracts. This explains why some regions appear to have significantly more businesses than their neighbors: they may represent 2–3 merged tracts while adjacent regions represent single tracts. 232 "visible" regions remain after merging (out of 269 total).
+Some census tracts are administratively merged in this tool — a secondary tract ID redirects to a primary tract ID via `MERGE_LOOKUP`. When a merged region is selected, business counts and demographic data are computed across all member tracts. This explains why some regions appear to have significantly more businesses than their neighbors: they may represent 2–3 merged tracts while adjacent regions represent single tracts. 232 "visible" regions remain after merging (out of 269 total).
 
 ---
 
@@ -175,9 +306,9 @@ Some census tracts are administratively merged in this tool — a secondary trac
 
 ### What the map shows
 
-- **Polygon fill color:** the stage of the displacement index at the selected year (§3.4)
+- **Polygon fill color:** the place's displacement stage at the selected year (§3.2). A slider year shows the latest census year at or before it (§3.3).
 - **Selecting a place** (a click on the map, a search result, or a suggestion in the "Start here" card) opens the **place panel** beside the map. The panel is the same for a census tract and for a neighborhood.
-- **Story card:** "Open the story card" in the place panel opens that place's full profile as its own page, with its own address (`#/card?tract=84` or `#/card?hood=montopolis`). It prints on one page.
+- **Story card:** "Open the story card" in the place panel opens that place's full profile as its own page, with its own address (`#/card?tract=84` or `#/card?hood=montopolis`). It can be printed; a section is not split across sheets.
 - **Search:** neighborhoods, census tracts (by name or number) and tracked cultural anchors are matched in the browser. A street address is resolved by OpenStreetMap's Nominatim service, only when the person chooses "Look up … as a street address"; the address is then assigned to the census tract whose polygon contains it.
 - **Time slider:** moves from 1990 to 2025 in 1-year increments. The map opens on 2023, the latest measured year.
 
@@ -188,8 +319,8 @@ Built by `buildPlaceSummary()` in `utils/placeData.js`.
 | Item | Source | Calculation |
 |------|--------|-------------|
 | Title and sub-line | `data/placeNames.js`, `data/regionIndex.js` | See §4.3. The sub-line gives the census tract number and the council district that contains the tract's center point. |
-| Displacement index and stage | `data/auditedDvi.js` | The index at the slider year (interpolated between measured years, §3.5). For a neighborhood, the population-weighted average of its tracts. |
-| Confidence chip | `getDviConfidence()` | High / Medium / Low, with the reasons (interpolated year, pre-2010 boundaries). A neighborhood is Medium at best because it is combined from tracts. |
+| Displacement stage | `data/stages.js` via `utils/stages.js` | The stage at the latest census year at or before the slider year, with the study's exact type, one sentence on why, and the three tests as one line each (§3.1). Between 2000 and 2009 it shows only "vulnerable in 2000" or not. A neighborhood of several tracts is tested on its combined figures (§3.5). |
+| City of Austin's 2022 map | `CITY_RISK_2022` in `data/stages.js` | The City's own category for the same tract (vulnerable, active or chronic displacement risk, or none), shown beside the 2020 and 2023 readings (§3.6). For a neighborhood, the count of its tracts in each category. |
 | Measured change sentence | `audited_demographics_normalized.json` | Black + Hispanic share of residents, and renter share, at the earliest reliable census year (2000, else 2010) and the latest (2023, else 2020). For a neighborhood, population-weighted shares using only years in which every one of its tracts was measured. Renter share is derived as 100 minus owner-occupied share. |
 | Median household income, median home value | `audited_socioeconomic_normalized.json`, `audited_property_normalized.json` | Value at the closest available year (§4.1), in nominal dollars, with that year shown. For a neighborhood, a population-weighted average of tract medians (§7). |
 | Cultural anchors tracked | `data/businesses.js` | Count of operating and closed anchors whose `region_id` is the tract (or any tract of the neighborhood). |
@@ -202,7 +333,8 @@ Built by `buildStoryCard()` in `utils/placeData.js`. It always describes the lat
 
 | Section | Source | Calculation |
 |---------|--------|-------------|
-| What the data shows | `data/auditedDvi.js`, demographics | Index and stage at 2023; the index at each measured year (no interpolated points); the measured-change sentence from the place panel. |
+| What the data shows | `data/stages.js`, demographics | The stage in the 2019–2023 survey and one sentence on why; the measured-change sentence from the place panel; the City's 2022 category; the stage at each census year as a labeled strip. |
+| How the stage was decided | `data/stages.js` | The three tests with their numbers: each measure here, the regional figure, and the line it had to pass (§3.1). Shown only for a scored place. |
 | Who lives here | `audited_demographics_normalized.json` | Stacked shares of White non-Hispanic, Black, Hispanic or Latino, Asian and other residents for the census years that have data. `other = 100 − the four groups`. |
 | The economics | Demographics, property and socioeconomic files | Eight measures (income, home value, rent, rent burden, poverty, unemployment, eviction filings, SNAP). Each shows its latest value and the change since its earliest measured year, with a small trend line over its own years. Dollars are nominal, not inflation-adjusted. For a neighborhood, values are population-weighted across tracts and a year is used only when every tract that carries the measure has a value that year. |
 | The turning point | `data/tippingPoints.js` + census data | A hand-written narrative per corridor; the home-value figures are computed from the audited data by `computeTippingStats()`. |
@@ -233,6 +365,31 @@ A census tract carries a neighborhood name only where a City of Austin Neighborh
 | Census | None of the above (mostly suburban tracts outside planning-area coverage) | "Census tract 419" | 119 |
 
 The census tract number is always available as the second line, and the panel states the basis in a sentence (for example, "This tract straddles two City planning areas: Chestnut (51%) and Central East Austin (49%)"). Earlier heuristic names for tracts outside planning-area coverage are not used.
+
+#### Naming audit (November 2026)
+
+| Check | Result |
+|-------|--------|
+| Tract / planning-area overlap recomputed from the shapes | All 232 tracts reproduce the stored overlap within 1 point, and all 232 titles reproduce exactly. No tract carries a name its area does not support. |
+| Neighborhoods (tract unions) against the City planning area of the same name | Of 44 named neighborhoods, 13 cover 90% or more of the City's area, 16 cover 70–89%, 7 cover 50–69% and 8 cover less than half (Govalle 32%, Georgian Acres 38%, Upper Boggy Creek 40%, MLK-183 42%). |
+| City planning areas with no neighborhood on the site | 21 of 65, because no tract sits 80% inside them: Chestnut, East Cesar Chavez, Hancock, Heritage Hills, Highland, Holly, Hyde Park, Johnston Terrace, MLK, North Loop, North University, Old Enfield, Old West Austin, Pecan Springs-Springdale, Rosedale, Southeast, Sweetbriar, Triangle State, UT, West Congress, Windsor Road. |
+| Tract shape against the Census Bureau's land + water area for that tract number | 174 of 269 shapes match within 2%. The other 95 are smaller, never larger: tracts on the edge of the mapped area are clipped. Of the 232 shown as their own place, 27 show less than a quarter of the real tract and 13 show a quarter to a half, while the figures describe the whole tract. |
+
+What this means: a neighborhood on this site is the set of census tracts that best fits a City planning area, not the planning area itself, and census tracts cut across several of the neighborhoods this site is most about. The area-name layer below shows the City's real boundaries beside the tract-based figures.
+
+#### Area names on the map
+
+The names drawn on the map, and the outline shown when one is chosen, come from the City of Austin Neighborhood Planning Areas file and nothing else (`scripts/build_area_names.mjs` → `data/shapes/areas.min.json`, `data/areaNames.js`):
+
+| Zoom | Names shown | Count |
+|------|-------------|-------|
+| Zoomed out (11 and below) | Combined planning areas ("East MLK": MLK, MLK-183, Pecan Springs-Springdale) and planning areas that belong to no combined area | 18 + 21 |
+| Default (12–13) | Planning areas ("Holly", "Chestnut", "Rosewood") | 65 |
+| Zoomed in (14 and above) | Planning areas plus named sub-districts ("Blackland", "Rogers-Washington-Holy Cross") | 65 + 20 |
+
+Sub-districts that name a road or a zoning device rather than a place (a lane, an avenue, an infill exclusion zone) are left out. Two City names that are initials are spelled out on the label: RMMA (the former Robert Mueller Municipal Airport) reads "Mueller (RMMA)" and UT reads "University of Texas". A name is skipped where it would overlap another, so not every name shows at every zoom; all of them are in the search box.
+
+Choosing a name outlines the City boundary and opens a card listing the census tracts that overlap it, with two shares for each: how much of the area the tract makes up, and how much of the tract lies inside. The card does not show figures for the area itself, because every figure on the site is counted by tract. No "East Austin" or "South Austin" level exists in the layer: the City publishes no boundary for those, and this site does not draw its own.
 
 ### Map Overlays
 
@@ -269,7 +426,7 @@ Side-by-side comparison of two regions (or two neighborhoods in Neighborhoods mo
 
 | Chart | X-Axis | Y-Axis | Data Source | Calculation |
 |-------|--------|--------|-------------|-------------|
-| DVI Time Series | Year (1990–2023) | DVI Score | `AUDITED_DVI_LOOKUP` | `interpolateDvi(regionId, year)` at 8 snap years (1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023) |
+| Pressure score | Year (1990–2023) | Score, 0–100 | `AUDITED_DVI_LOOKUP` | `interpolateDvi(regionId, year)` at 8 snap years (1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023). The score describes present-day conditions (§3.8); it is not the stage. |
 | Median Home Values | Year (2000–2023) | $ | `SOCIOECONOMIC` array | `homeValue` field (joined from property data). Nominal dollars. |
 | Median Household Income | Year (2000–2023) | $ | `SOCIOECONOMIC` array | `incomeAdj` field. Nominal dollars. |
 | Demographic Composition | Year (1990–2023) | % | `DEMOGRAPHICS` array | `pctBlack`, `pctHispanic`, `pctWhite`, `pctAsian`, `pctOther` as 0–1 fractions. "All Groups" toggle shows all five; default "Focused" view shows Black and Hispanic only. |
@@ -277,7 +434,7 @@ Side-by-side comparison of two regions (or two neighborhoods in Neighborhoods mo
 ### Comparison Narrative (auto-generated)
 
 The narrative text below the charts is computed from:
-1. **DVI gap:** If `|dviA - dviB| > 15`, notes which region experienced more displacement pressure.
+1. **Stage and score:** Names each tract's displacement stage in the 2019–2023 survey (§3.2), then gives both pressure scores for 2020 (§3.8).
 2. **Home value gap:** If `|homeA - homeB| > $100,000`, notes which has higher values.
 3. **Business closures:** Counts `LEGACY_CLOSED` per region, identifies dominant cultural affiliation of losses (e.g., "predominantly African American" or "Mexican American").
 
@@ -291,6 +448,8 @@ The narrative uses these thresholds to avoid generating trivial comparisons — 
 ---
 
 ## 6. Triage View — Three Prioritization Lenses
+
+*Presenter mode only. Throughout this section "DVI" means the pressure score of §3.8, a summary of present-day conditions. The lenses were built on that score and have not been rebuilt on the displacement stages of §3; their category names ("Post-Displacement or Stable", for example) are the lenses' own and are not stages.*
 
 The Triage View provides three ways to prioritize regions for grant investment. Users toggle between the three lenses via a segmented control. All three lenses score **all 232 visible regions** using census/ACS data available for every region. No lens gates on business data availability — regions without tracked businesses are scored using demographic, economic, and socioeconomic indicators, with business-related components defaulting to neutral values rather than zero.
 
@@ -339,7 +498,7 @@ This lens directly operationalizes Preservation Austin's stated mission to focus
 
 Austin's I-35 corridor follows the route of the 1928 Master Plan's racial segregation line, which created a "Negro District" east of East Avenue (now I-35). The highway's construction in the 1960s physically reinforced this divide as a "concrete color line." For eight decades, communities east of I-35 were systematically excluded from public investment, zoning protections, and infrastructure spending. The east-of-I-35 flag (centroid longitude > -97.735) is a geographic proxy for this historic underinvestment.
 
-**Limitation:** This proxy is blunt. Some east-side tracts are now affluent (Mueller, parts of East Riverside), and some west-side tracts have historically underserved populations. The Affluence Gate (§3.3) catches the most obvious false positives, but the flag should be understood as a rough directional signal, not a precise equity measure.
+**Limitation:** This proxy is blunt. Some east-side tracts are now affluent (Mueller, parts of East Riverside), and some west-side tracts have historically underserved populations. The Affluence Gate (§3.8) catches the most obvious false positives, but the flag should be understood as a rough directional signal, not a precise equity measure.
 
 #### 6.2.2 Heritage Business Detection
 
@@ -418,7 +577,7 @@ Unlike the Trajectory and Equity lenses (which produce a single ranked priority 
 
 The Advanced panel allows exploratory adjustment of the three DVI sub-index weights (Demographic Vulnerability, Market Pressure, Socioeconomic Stress). Default: 35/35/30. When one slider moves, the other two adjust proportionally to maintain a sum of 100%.
 
-These weights affect the underlying DVI score which feeds into all three lenses: Trajectory uses DVI and its change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through the Intervention Feasibility axis.
+These weights affect the pressure score (§3.8), which feeds into all three lenses: Trajectory uses DVI and its change over time. Equity uses DVI as one of five components. Risk Matrix uses DVI indirectly through the Intervention Feasibility axis.
 
 **Note:** Weight adjustments in the UI are for exploratory analysis only. The default weights (35/35/30) are used for all published recommendations.
 
@@ -440,7 +599,7 @@ A census tract joins a named neighborhood **only when that City of Austin Neighb
 | Metric | Method | Rationale |
 |--------|--------|-----------|
 | Population | Sum of constituent tract populations | Absolute count — additive. |
-| DVI | Population-weighted average across tracts | Prevents small-population tracts from disproportionately influencing the score. |
+| Displacement stage | The three tests run on the neighborhood's combined figures (§3.5) | A stage is a category and cannot be averaged. |
 | Demographic percentages | Population-weighted average | A tract of 500 people and a tract of 5,000 shouldn't weight equally. |
 | Demographic composition chart | Population-weighted average per year (1990, 2000, 2010, 2020, 2023) | Combined populations produce a single stacked area chart for the neighborhood. |
 | Median home value | Population-weighted average | Approximation. True median would require household-level data (see §10). |
@@ -527,9 +686,9 @@ Every data row carries an `audit_confidence` score indicating how reliable the u
 | High | 0.8–1.0 | Data directly from Census/ACS at matching geography and year. No interpolation or crosswalk. | Presented without indicators. |
 | Medium | 0.5–0.7 | Aggregated from tract-level data with some boundary approximation, interpolated between Census years, or derived from reliable secondary sources (TCAD, BLS). | Marked with ⓘ where displayed. |
 | Low | 0.2–0.4 | Estimated from sparse data, projected beyond observed years, or from less reliable sources. | Marked with ⓘ and noted as estimate. |
-| None | 0.0 | No data available for this region/year/field. Sub-index excluded from DVI computation and re-weighted (see §3.2). | Shown as "—" in the UI. |
+| None | 0.0 | No data available for this region/year/field. Sub-index excluded from the pressure score and re-weighted (see §3.8). | Shown as "—" in the UI. |
 
-The low-confidence boost in §3.2 activates when the average confidence across a region's data sources falls below 0.5. This prevents data-sparse regions from being systematically underscored.
+The low-confidence boost in §3.8 activates when the average confidence across a region's data sources falls below 0.5. This prevents data-sparse regions from being systematically underscored.
 
 ### 9.2 Field Name Normalization
 
@@ -569,11 +728,11 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 
 - **Pre-2005 data** relies on Census decennial snapshots (1990, 2000) with linear interpolation for intermediate years. ACS annual estimates didn't begin until 2005.
 - **2024–2025 values** are projected estimates, not observed Census/ACS data. They carry low audit confidence scores (0.2–0.4) and should be treated as directional indicators, not precise measurements.
-- **Tract boundary changes** between the 2000 and 2010 Census introduce geographic imprecision for cross-decade comparisons. A region's 1990–2000 data may represent a slightly different physical area than its 2010–2023 data. Affected regions are flagged with `TRACT_MISMATCH` in the audit data.
+- **Tract boundary changes** between censuses make earlier figures estimates wherever a tract was split or merged (130 of 246 tracts at 2000; 104 of 256 at 2010 and 2015). Those rows are flagged `ALLOCATED_FROM_EARLIER_TRACTS` (§1.1). Only population, race, owner share and rent burden were rebuilt this way; the other 2010 and 2015 fields (income, home value, rent, poverty, foreign-born, education) still come from the first backfill, which copied a parent tract's value.
 
 ### Measurement Limitations
 
-- **Rent burden** is derived from Census/ACS self-reported housing costs — may undercount informal housing arrangements, doubled-up households, or cash rent payments.
+- **Rent burden** is derived from Census/ACS self-reported housing costs — may undercount informal housing arrangements, doubled-up households, or cash rent payments. It counts only renters paying half or more of their income, a small group in a tract-sized sample, so it swings widely between surveys (median change of 6 points between the 2020 and 2023 releases).
 - **Eviction filings** lag actual displacement by 3–6 months (legal process time) and only capture formal filings — informal "cash for keys" agreements and lease non-renewals are not included. The 2020 snap-year rate averages filings over 2016–2020, which includes the 2020 COVID eviction moratorium months — rates for that window are diluted relative to normal years. Renter-household denominators are estimated from ACS housing units × occupancy × renter share, so rates in small or fast-changing tracts carry extra uncertainty.
 - **Foreign-born %** has ±2–3 percentage point margin of error in ACS 5-year estimates for small tracts (populations under 2,000).
 - **Business data** has selection bias toward historically significant areas in East Austin and downtown where Preservation Austin and community partners have conducted inventories. The tool explicitly notes this: "No Data" in the anchor density badge means no survey coverage, not no culture.
@@ -587,12 +746,22 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 - **Temporal misalignment in economics data:** When constituent tracts have different "closest available years" to the slider position, the aggregation uses the most common year across tracts as the reported aggregate year but includes all tracts in the weighted average regardless of their individual closest year. A tract reporting 2014 data may be averaged with tracts reporting 2015 data under a "2015" aggregate label. The offset is typically 1–2 years and is preferable to excluding the tract, which would change the population weights.
 - **Narrative callout dilution:** Population change callouts (e.g., "lost 25% of its Black population") are computed from aggregated neighborhood totals, not per-tract. A sharp decline in one tract may be diluted below the 25% threshold when combined with stable tracts in the same neighborhood. Conversely, modest per-tract declines can sum to a threshold-crossing loss at the neighborhood level. Both effects are inherent to aggregation. For tract-level population change analysis, use Census Tracts view.
 
-### DVI Limitations
+### Stage Limitations
 
-- The DVI is a **screening tool**, not a diagnostic. A high DVI identifies where to investigate further — it does not prove displacement is occurring.
-- The DVI equally weights all demographic change, whether driven by gentrification (higher-income newcomers displacing lower-income residents) or by other factors (natural population decline, voluntary outmigration, institutional changes). The Triage lenses (§6) attempt to distinguish these by incorporating market pressure and economic precarity alongside DVI.
-- The Affluence Gate (§3.3) is a binary threshold. Regions just below the income or ownership cutoff may still be low-displacement-risk but receive a higher DVI than warranted.
-- Normalization ceilings (§3.1) compress variation at the extremes. A tract with 60% rent burden and one with 80% both score 100 on the rent burden component. This is by design (both represent extreme burden) but loses nuance at the high end.
+- **A stage describes an area, not people.** Vulnerable households live in tracts with no stage, and a tract in "continued loss" still has long-time residents.
+- **The tests are relative.** "Vulnerable" means well above the five-county region in that year, and "change" means more change than the region. A tract can cross a line because the region moved, not because the tract did.
+- **Survey error.** From 2010 on, every figure comes from the American Community Survey, a sample. Tract estimates carry margins of error that this site does not show, and the tests have hard lines. Of 776 year-to-year readings, 621 stay in the same stage, 102 move to a later stage and 53 move back to an earlier one. A single reversal is more likely noise than recovery.
+- **Change before 2000 is invisible.** Change is measured from 2000. A place whose vulnerable residents had already left by then reads as "no stage".
+- **Home values are self-reported** by owner-occupants, and say nothing about rental housing. Tracts with few owner homes use median rent instead.
+- **Boundaries.** Figures from before 2020 are estimates on today's tract boundaries (§3.3). Tracts on the edge of the mapped area are drawn clipped (§4.3) but tested on the whole tract.
+- **Not the City's map.** This site's readings agree with the City's 2022 map for about four tracts in five (§3.6). Where they differ, neither is shown to be right.
+- **Two rows are this site's own** (§3.2): vulnerable tracts with no market pattern, and rapid loss.
+
+### Pressure Score Limitations
+
+- The score (§3.8) describes present-day conditions and follows poverty closely. It is not evidence that displacement is happening and it is not used on the map.
+- The Affluence Gate is a binary threshold. Regions just below the income or ownership cutoff are scored in full.
+- Normalization ceilings compress variation at the extremes. A tract with 60% rent burden and one with 80% both score 100 on that component, and in 2023 about half of all tracts hit the home-value ceiling.
 
 ---
 
@@ -612,7 +781,11 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | BASTA Austin | Eviction filings by census tract and case outcome (received 2026-06-02 extract) | 2014–2025 | bastaaustin.org |
 
 > **Data vintage note:** Eviction figures come from a static BASTA extract dated **June 2, 2026**. BASTA's public-facing eviction dashboard updates dynamically, so values shown there may differ slightly from the rates used in this tool. BASTA uses 2020 census tract boundaries for all years, matching this tool's tract system. Cases that could not be geocoded from court filing addresses (counted as "NO GEOGRAPHY" in the source data) are excluded from tract-level rates.
-| UT Austin "Uprooted" Study | Gentrification typology, displacement patterns | 2018 | sites.utexas.edu |
+| UT Austin "Uprooted" Study (Way, Mueller, Wegmann) | The three-part test behind the map's stages: Appendix 3, "Methodology for Mapping Gentrifying Neighborhoods in Austin" | 2018 | sites.utexas.edu/gentrificationproject |
+| Lisa Bates, "Gentrification and Displacement Study" (Portland) | The typology the UT study adapts | 2013 | portlandoregon.gov |
+| City of Austin — Displacement Risk Areas 2022 | The City's own classification of the same 269 tracts, shown beside each stage and used as a check (§3.6) | 2022 model, retrieved Nov 2026 | data.austintexas.gov (dataset `t8nv-zcp9`) |
+| U.S. Census Bureau — 2000 SF3 and ACS 5-year tables for the five-county region | Inputs to the stage tests (§3.1): education, income brackets, median family income, child poverty, home value, rent, college enrollment, group quarters | 2000, 2006–2010, 2011–2015, 2016–2020, 2019–2023 | api.census.gov |
+| U.S. Census Bureau — tract relationship files | Carrying 2000 and 2010 tract figures onto 2020 tracts | 2010, 2020 | www2.census.gov/geo |
 | Texas Legislature Online | Bill text and history for the state-legislation timeline layer (26 bills, 2006–2025) | 2000–2025 | capitol.texas.gov |
 
 ### AISD School Closures Layer
@@ -659,6 +832,8 @@ Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County dist
 
 | Script | Purpose |
 |--------|---------|
+| `build_stages.mjs` | Decides the displacement stage of every tract and neighborhood for each census year (§3) and writes `data/stages.js`. Pulls are cached in `data/_cache/census_history/stage_*.json`; `--report` prints the checks against the City's map. |
+| `rebuild_census_history.mjs` | Rebuilds 2000, 2010 and 2015 population, race, owner share and rent burden from census tables (§1.1). Shares its census helpers with `build_stages.mjs` (`scripts/lib/census.mjs`). |
 | `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020) |
 | `fill_demographic_history.py` | Chains crosswalks for deep history + interpolates 2005 from 2000/2010 |
 | `extract_permits.py` | Extracts new construction permits and commercial sqft from COA 1.5GB permit CSV |

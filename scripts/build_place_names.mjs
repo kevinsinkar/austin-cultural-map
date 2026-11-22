@@ -32,8 +32,9 @@ const NAMED_MIN = 80;
 const MAJORITY_MIN = 50;
 const SPLIT_MIN = 25;
 
-// The City file lower-cases the second half of hyphenated names.
-const tidy = (name) => name.replace(/-([a-z])/g, (_, c) => `-${c.toUpperCase()}`);
+// The City file is in capitals; title-casing it lower-cases the second half
+// of hyphenated names and the K in McKinney.
+const tidy = (name) => name.replace(/-([a-z])/g, (_, c) => `-${c.toUpperCase()}`).replace(/\bMckinney\b/g, "McKinney");
 
 const rows = JSON.parse(readFileSync(SRC, "utf8"));
 const out = {};

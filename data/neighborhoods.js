@@ -227,7 +227,7 @@ export const NEIGHBORHOODS = [
   },
   {
     "id": "mckinney",
-    "name": "Mckinney",
+    "name": "McKinney",
     "tract_ids": [
       1
     ],

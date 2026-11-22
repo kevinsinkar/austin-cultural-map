@@ -26,6 +26,7 @@ const LAYER_CODES = [
   ["holc", "holc"],
   ["outreach", "events"],
   ["districts", "cd"],
+  ["areaNames", "names"],
 ];
 
 export const DEFAULT_VIEW_STATE = {
@@ -47,6 +48,8 @@ export const DEFAULT_VIEW_STATE = {
     // Council-district outlines are a planning aid. They start on for the
     // presenter and off on the public map, where they compete with the colors.
     districts: PRESENTER_MODE,
+    // Area names that change with zoom (City planning areas).
+    areaNames: true,
   },
   activeRegionId: null,
   activeNeighborhoodId: null,

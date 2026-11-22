@@ -9,6 +9,7 @@ import { REGION_NAMES, DEMO_COLORS } from "../data/constants";
 import { NAME_TO_ID } from "../data/regionLookup";
 import { interpolateDvi, calcAnchorDensity } from "../utils/math";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
+import { stageFor } from "../utils/stages";
 import { fmtPct } from "../utils/formatters";
 import { tractPlace, tractNumber } from "../utils/places";
 import { DEFAULT_VIEW_STATE } from "../utils/urlState";
@@ -112,12 +113,15 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
     let t = "";
     if (idA == null || idB == null) return t;
 
-    if (Math.abs(dA - dB) > 15) {
-      const h = dA > dB ? nameA : nameB;
-      t += `${h} experienced significantly more displacement pressure (DVI ${Math.max(dA, dB).toFixed(0)} vs ${Math.min(dA, dB).toFixed(0)} in the 2010–2020 period). `;
-    } else {
-      t += `Both regions faced comparable displacement pressure in 2010–2020 (DVI ${dA.toFixed(0)} vs ${dB.toFixed(0)}). `;
-    }
+    // Lead with the displacement stage (latest census survey); the pressure
+    // score follows as a description of present-day conditions.
+    const stageText = (id) => {
+      const s = stageFor({ kind: "tract", id }, 2023);
+      if (!s || !s.scored) return "is not scored";
+      return s.cls.key === "none" ? "is not in a displacement stage" : `is in the “${s.cls.label}” stage`;
+    };
+    t += `In the latest census survey, ${nameA} ${stageText(idA)} and ${nameB} ${stageText(idB)}. `;
+    t += `Their pressure scores for 2020 are ${dA.toFixed(0)} and ${dB.toFixed(0)} out of 100. `;
     if (sA && sB) {
       const d = Math.abs(sA.homeValue - sB.homeValue);
       if (d > 100000) {
@@ -185,7 +189,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
         Compare two places
       </h2>
       <p style={{ fontSize: 14, color: "#57534e", margin: 0, lineHeight: 1.5, maxWidth: 760 }}>
-        Pick two census tracts to see how the same decades treated them: the displacement index,
+        Pick two census tracts to see how the same decades treated them: displacement stage,
         home values, income and who lives there.
       </p>
     </div>
@@ -233,8 +237,8 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
         {/* DVI */}
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-          <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Displacement Vulnerability Index</h3>
-          <div style={{ height: 200 }} role="img" aria-label={`DVI comparison: ${nameA} vs ${nameB}`}>
+          <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Pressure score (0 to 100)</h3>
+          <div style={{ height: 200 }} role="img" aria-label={`Pressure score comparison: ${nameA} vs ${nameB}`}>
             <ResponsiveContainer><LineChart data={compDviChart} margin={{ top: 4, right: 22, left: -16, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
               <XAxis dataKey="year" tick={{ fontSize: 12, fill: "#7c6f5e" }} tickLine={false} />
@@ -246,6 +250,8 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
           </div>
           <p style={{ fontSize: 12, color: "var(--muted)", margin: "6px 0 0", lineHeight: 1.4 }}>
             Solid dots mark measured census/ACS years; the lighter line between them is interpolated.
+            The score sums up present-day conditions (rent burden, renter share, poverty, housing
+            costs). It is not the displacement stage shown on the map.
           </p>
         </div>
 
@@ -391,13 +397,18 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
                 const ancA = calcAnchorDensity(idA);
                 const ancB = calcAnchorDensity(idB);
                 const fmtAnc = (v) => v != null ? `${(v * 100).toFixed(0)}%` : "—";
+                const stageLabel = (id) => {
+                  const s = stageFor({ kind: "tract", id }, 2023);
+                  return !s ? "—" : s.cls.label;
+                };
                 return [
-                  { l: "DVI (2010–20)", a: interpolateDvi(idA, 2020).toFixed(1), b: interpolateDvi(idB, 2020).toFixed(1), d: (interpolateDvi(idA, 2020) - interpolateDvi(idB, 2020)).toFixed(1) },
+                  { l: "Displacement stage (2019–2023 survey)", a: stageLabel(idA), b: stageLabel(idB), d: "—" },
+                  { l: "Pressure score (2020)", a: interpolateDvi(idA, 2020).toFixed(1), b: interpolateDvi(idB, 2020).toFixed(1), d: (interpolateDvi(idA, 2020) - interpolateDvi(idB, 2020)).toFixed(1) },
                   { l: "Anchor Density", a: fmtAnc(ancA), b: fmtAnc(ancB), d: ancA != null && ancB != null ? `${((ancA - ancB) * 100).toFixed(0)}pp` : "—" },
                   { l: "Income", a: `$${(sA.incomeAdj / 1000).toFixed(0)}k`, b: `$${(sB.incomeAdj / 1000).toFixed(0)}k`, d: `$${((sA.incomeAdj - sB.incomeAdj) / 1000).toFixed(0)}k` },
                   { l: "Home Value", a: `$${(sA.homeValue / 1000).toFixed(0)}k`, b: `$${(sB.homeValue / 1000).toFixed(0)}k`, d: `$${((sA.homeValue - sB.homeValue) / 1000).toFixed(0)}k` },
                   { l: "Bachelor's+", a: fmtPct(sA.pctBachelors), b: fmtPct(sB.pctBachelors), d: `${((sA.pctBachelors - sB.pctBachelors) * 100).toFixed(0)}pp` },
-                  { l: "Cost-Burdened", a: fmtPct(sA.pctCostBurdened), b: fmtPct(sB.pctCostBurdened), d: `${((sA.pctCostBurdened - sB.pctCostBurdened) * 100).toFixed(0)}pp` },
+                  { l: "Renters paying 50%+ of income on rent", a: fmtPct(sA.pctCostBurdened), b: fmtPct(sB.pctCostBurdened), d: `${((sA.pctCostBurdened - sB.pctCostBurdened) * 100).toFixed(0)}pp` },
                   { l: "Population", a: dA?.total?.toLocaleString() || "—", b: dB?.total?.toLocaleString() || "—", d: dA && dB ? ((dA.total - dB.total) > 0 ? "+" : "") + (dA.total - dB.total).toLocaleString() : "—" },
                   { l: "Asian %", a: dA ? fmtPct(dA.pctAsian || 0) : "—", b: dB ? fmtPct(dB.pctAsian || 0) : "—", d: dA && dB ? `${(((dA.pctAsian || 0) - (dB.pctAsian || 0)) * 100).toFixed(0)}pp` : "—" },
                   { l: "Other %", a: dA ? fmtPct(dA.pctOther || 0) : "—", b: dB ? fmtPct(dB.pctOther || 0) : "—", d: dA && dB ? `${(((dA.pctOther || 0) - (dB.pctOther || 0)) * 100).toFixed(0)}pp` : "—" },

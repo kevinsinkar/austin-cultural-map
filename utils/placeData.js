@@ -10,7 +10,6 @@
 // a different set of tracts at each end.
 
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL, REGION_INDEX, TIPPING_POINTS } from "../data";
-import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import {
   toDemoChartData,
   AUDITED_SOCIO_BY_ID,
@@ -19,10 +18,8 @@ import {
   closestRow,
 } from "../data/auditedData";
 import { getMergedIds } from "../data/regionLookup";
-import {
-  interpolateDvi, isRegionExcluded, getDviConfidence,
-  calcDirectDisplacement, calcGroupDisplacement, computeTippingStats,
-} from "./math";
+import { calcDirectDisplacement, calcGroupDisplacement, computeTippingStats } from "./math";
+import { stageFor, stageSeriesFor, cityRiskFor } from "./stages";
 import { aggregateNeighborhood } from "./aggregation";
 import { tractPlace, neighborhoodPlace } from "./places";
 
@@ -84,30 +81,11 @@ function groupSeries(ids, source, field) {
   });
 }
 
-/** Index trend at measured years; a group needs every tract measured. */
-function dviSeriesFor(ids) {
-  if (ids.length === 1) return (AUDITED_DVI_LOOKUP[ids[0]] || []).map((p) => ({ year: p.year, dvi: p.dvi }));
-  const perTract = ids
-    .map((id) => ({ id, byYear: new Map((AUDITED_DVI_LOOKUP[id] || []).map((p) => [p.year, p.dvi])) }))
-    .filter((t) => t.byYear.size > 0);
-  if (!perTract.length) return [];
-  const years = [...perTract[0].byYear.keys()].filter((y) => perTract.every((t) => t.byYear.has(y)));
-  return years.sort((a, b) => a - b).map((year) => {
-    let sum = 0, pop = 0;
-    for (const t of perTract) {
-      const w = tractPop(t.id, year) || 1;
-      sum += t.byYear.get(year) * w;
-      pop += w;
-    }
-    return { year, dvi: sum / pop };
-  });
-}
-
 const ECON_DEFS = [
   { label: "Median household income", source: "socio", field: "median_household_income", fmt: fmtMoney, deltaKind: "pct" },
   { label: "Median home value", source: "prop", field: "median_home_value", fmt: fmtMoney, deltaKind: "pct" },
   { label: "Median rent per month", source: "prop", field: "median_rent_monthly", fmt: (v) => `$${Math.round(v).toLocaleString()}`, deltaKind: "pct" },
-  { label: "Rent-burdened households", source: "demo", field: "rent_burden_pct", fmt: fmtPct, deltaKind: "pts" },
+  { label: "Renters paying half or more of income on rent", source: "demo", field: "rent_burden_pct", fmt: fmtPct, deltaKind: "pts" },
   { label: "Poverty rate", source: "socio", field: "poverty_rate", fmt: fmtPct, deltaKind: "pts" },
   { label: "Unemployment", source: "socio", field: "unemployment_rate", fmt: fmtPct, deltaKind: "pts" },
   { label: "Eviction filing rate", source: "socio", field: "eviction_filing_rate", fmt: fmtPct, deltaKind: "pts" },
@@ -156,25 +134,6 @@ function businessesIn(ids) {
 const tippingPointFor = (ids) =>
   TIPPING_POINTS.find((t) => t.region_ids?.some((id) => ids.includes(id))) || null;
 
-/** Population-weighted index for a group at a year. */
-function groupDvi(ids, year) {
-  if (ids.length === 1) return interpolateDvi(ids[0], year) || 0;
-  let sum = 0, pop = 0;
-  for (const id of ids) {
-    const dvi = interpolateDvi(id, year);
-    const w = tractPop(id, year);
-    if (dvi != null && w > 0) { sum += dvi * w; pop += w; }
-  }
-  return pop > 0 ? sum / pop : 0;
-}
-
-function groupConfidence(place, ids, year) {
-  if (ids.length === 1) return getDviConfidence(ids[0], year);
-  const reasons = [`Combined from ${ids.length} census tracts, weighted by population.`];
-  if (year < 2010) reasons.push("Pre-2010 census boundaries were crosswalked to modern tract geometry — values are approximate.");
-  return { level: year < 2010 ? "Low" : "Medium", interpolated: false, reasons };
-}
-
 // ── Builders ──
 
 /**
@@ -207,9 +166,10 @@ export function buildPlaceSummary(ref, year) {
   return {
     place,
     tractCount: ids.length,
-    dvi: groupDvi(ids, year),
-    excluded: ids.every((id) => isRegionExcluded(id, year)),
-    confidence: groupConfidence(place, ids, year),
+    // Displacement stage at the slider year (null before 2000), and what the
+    // City's own 2022 map says about the same tracts.
+    stage: stageFor(ref, year),
+    cityRisk: cityRiskFor(ref),
     change: single ? calcDirectDisplacement(ids[0]) : calcGroupDisplacement(ids),
     income,
     homeValue,
@@ -238,8 +198,9 @@ export function buildStoryCard(ref) {
   return {
     place,
     tractCount: ids.length,
-    dviNow: groupDvi(ids, LATEST_YEAR),
-    excluded: ids.every((id) => isRegionExcluded(id, LATEST_YEAR)),
+    stage: stageFor(ref, LATEST_YEAR),
+    stageSeries: stageSeriesFor(ref),
+    cityRisk: cityRiskFor(ref),
     change: single ? calcDirectDisplacement(ids[0]) : calcGroupDisplacement(ids),
     open,
     closed,
@@ -247,7 +208,6 @@ export function buildStoryCard(ref) {
     tp,
     tpStats: tp ? computeTippingStats(tp) : null,
     demoData,
-    dviSeries: dviSeriesFor(ids),
     econStats: econStatsFor(ids),
   };
 }

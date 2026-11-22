@@ -1,3 +1,12 @@
+// SUPERSEDED for population, race, owner share and rent burden in 2000,
+// 2010 and 2015: run `npm run build:history` after this script.
+// Known faults here, corrected by scripts/rebuild_census_history.mjs:
+//   - H003001/H003002 are occupancy (all homes / occupied homes), not
+//     tenure. Owner share must come from table H004.
+//   - The 2000 API returns whole-number tracts as four digits; padStart
+//     below attaches them to the wrong tract.
+//   - B25070_010E is renters paying 50% or more of income, not 30%.
+
 /**
  * fetch_historical_census.cjs
  * ──────────────────────────

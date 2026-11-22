@@ -1,13 +1,15 @@
-import { useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import useAustinMap from "../hooks/useAustinMap";
 import PlaceSummaryPanel from "./PlaceSummaryPanel";
+import AreaCard from "./AreaCard";
+import { loadAreaShapes } from "../data/shapes";
 import StartHere from "./StartHere";
 import PlaceSearch from "./PlaceSearch";
 import MapLegend from "./MapLegend";
 import TimeBar from "./TimeBar";
 import LegislationTrack from "./LegislationTrack";
 import LayersPopover from "./LayersPopover";
-import { DVI_BINS } from "../utils/math";
+import { STAGE_CLASSES, STAGE_BASE_YEAR } from "../utils/stages";
 import DviWeightsPanel from "./DviWeightsPanel";
 import { OUTREACH_STATUS } from "../data/outreachEvents";
 import { tractPlace } from "../utils/places";
@@ -53,6 +55,8 @@ export default function MapView({
   setOutreachHorizon,
   showDistricts,
   setShowDistricts,
+  showAreaNames,
+  setShowAreaNames,
   dviWeights,
   onApplyDviWeights,
   dviVersion,
@@ -84,6 +88,29 @@ export default function MapView({
   const mapRef = useRef(null);
   const [legendOpen, setLegendOpen] = useState(false);
 
+  // ── Area names (City planning areas) ──
+  // The shapes are fetched the first time the names are shown or an area is
+  // chosen from the search box. areaId is the area outlined on the map.
+  const [areaShapes, setAreaShapes] = useState(null);
+  const [areaId, setAreaId] = useState(null);
+  useEffect(() => {
+    if (areaShapes || !(showAreaNames || areaId)) return undefined;
+    let cancelled = false;
+    loadAreaShapes().then((shapes) => { if (!cancelled) setAreaShapes(shapes); }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [showAreaNames, areaId, areaShapes]);
+  const areaById = useMemo(
+    () => new Map((areaShapes?.features || []).map((f) => [f.properties.id, f.properties])),
+    [areaShapes]
+  );
+  const area = areaId ? areaById.get(areaId) : null;
+  // Choosing an area puts its card in the side panel, so any selected tract
+  // or neighborhood steps aside. Closing a tract later returns to the area.
+  const selectArea = (id) => {
+    onClearSelection();
+    setAreaId(id);
+  };
+
   const { shapesLoading, shapesError, locateTract } = useAustinMap({
     mapRef,
     year,
@@ -100,6 +127,10 @@ export default function MapView({
     outreachStatusFilter,
     outreachHorizon,
     showDistricts,
+    showAreaNames,
+    areaShapes,
+    activeAreaId: areaId,
+    onSelectArea: selectArea,
     dviVersion,
     paFilter,
     selectedRegion,
@@ -143,7 +174,7 @@ export default function MapView({
       onSelectTract(action.tractId);
     } else if (action.key === "legend") {
       setShowRegions(true);
-      if (year < 1993) setYear(2023);
+      if (year < STAGE_BASE_YEAR) setYear(2023);
       setLegendOpen(true);
     } else if (action.key === "anchors") {
       setShowPins(true);
@@ -158,8 +189,9 @@ export default function MapView({
     {
       title: "Boundaries",
       items: [
-        { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Displacement index colors", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: DVI_BINS[2].fill, border: "1px solid rgba(0,0,0,.15)" }} aria-hidden="true" /> },
+        { on: showRegions, toggle: () => setShowRegions(!showRegions), label: "Displacement stage colors", icon: <span style={{ width: 9, height: 9, borderRadius: 2, background: STAGE_CLASSES[2].fill, border: "1px solid rgba(0,0,0,.15)" }} aria-hidden="true" /> },
         { on: showDistricts, toggle: () => setShowDistricts(!showDistricts), label: "Council districts", icon: <span style={{ width: 9, height: 9, borderRadius: 2, border: "1.5px dashed #4338ca" }} aria-hidden="true" /> },
+        { on: showAreaNames, toggle: () => setShowAreaNames(!showAreaNames), label: "Area names", icon: <span style={{ fontSize: 12, fontWeight: 700, lineHeight: 1, color: "#26231f" }} aria-hidden="true">Aa</span> },
       ],
     },
     // Tabling opportunities are private planning data — presenter mode only.
@@ -202,6 +234,7 @@ export default function MapView({
             onSelectTract={onSelectTract}
             onSelectNeighborhood={onSelectNeighborhood}
             onSelectAnchor={handleAnchor}
+            onSelectArea={selectArea}
             onAddress={handleAddress}
           />
           <LayersPopover boundaryMode={boundaryMode} setBoundaryMode={setBoundaryMode} groups={layerGroups} />
@@ -269,7 +302,7 @@ export default function MapView({
             ref={mapRef}
             id="map-container"
             role="region"
-            aria-label="Map of Austin, colored by displacement index. To choose a place without a pointer, use the search box above the map."
+            aria-label="Map of Austin, colored by displacement stage. To choose a place or a named area without a pointer, use the search box above the map."
             style={{ position: "absolute", inset: 0 }}
           />
           {(shapesLoading || shapesError) && (
@@ -295,13 +328,28 @@ export default function MapView({
       {/* Place panel: beside the map on wide screens, after the year
           controls on narrow ones. One panel for tracts and neighborhoods. */}
       <aside className="map-side" aria-label="Selected place">
+        {placeRef && area && (
+          <p className="area-context">
+            Outlined on the map:{" "}
+            <button type="button" className="link-button" onClick={onClearSelection}>{area.name}</button>
+            <button type="button" className="link-button" onClick={() => setAreaId(null)}>Remove outline</button>
+          </p>
+        )}
         {placeRef ? (
           <PlaceSummaryPanel
             placeRef={placeRef}
             year={year}
-            dviVersion={dviVersion}
             onClose={onClearSelection}
             onOpenCard={onOpenCard}
+          />
+        ) : area ? (
+          <AreaCard
+            area={area}
+            areaById={areaById}
+            onClose={() => setAreaId(null)}
+            onSelectArea={selectArea}
+            onSelectTract={onSelectTract}
+            onSelectNeighborhood={onSelectNeighborhood}
           />
         ) : (
           <StartHere onAction={handleStartAction} holcOn={showHolc} />

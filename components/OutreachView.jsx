@@ -170,7 +170,7 @@ function paginate(groups) {
   return pages;
 }
 
-export default function OutreachView({ onLocate, dviVersion }) {
+export default function OutreachView({ onLocate }) {
   const { plan, setStage, setNote, setOutcome, importPlan } = usePlanStore();
   const [subview, setSubview] = useState("worklist");
   // Backup / restore of the plan file. planEpoch remounts the rows after a
@@ -424,11 +424,11 @@ export default function OutreachView({ onLocate, dviVersion }) {
       )}
 
       {subview === "coverage" && (
-        <OutreachCoverage plan={plan} dviVersion={dviVersion} />
+        <OutreachCoverage plan={plan} />
       )}
 
       {subview === "equity" && (
-        <OutreachEquityAudit dviVersion={dviVersion} />
+        <OutreachEquityAudit />
       )}
 
       {subview === "worklist" && (<>

@@ -12,6 +12,7 @@ import { LEGACY_OPERATING, LEGACY_CLOSED } from "./businesses";
 import { TIMELINE_EVENTS } from "./constants";
 import { calcDirectDisplacement } from "../utils/math";
 import { tractPlace } from "../utils/places";
+import { STAGE_CLASSES, stageCounts } from "../utils/stages";
 
 // Places offered as a first click. An editorial pick by the site maintainer:
 // three east-side tracts with a large measured change since 2000 (88% to 34%,
@@ -66,6 +67,12 @@ export function buildBigIdeas() {
     ? ` The tracts where it fell are typically about ${stats.fellMiles.toFixed(0)} miles from downtown; the tracts where it rose, about ${stats.roseMiles.toFixed(0)} miles.`
     : "";
 
+  // Idea 3: how many tracts sit in each stage in the latest census survey.
+  const counts = stageCounts(2023);
+  const inStage = STAGE_CLASSES.reduce((a, c) => a + counts[c.key], 0);
+  const scored = inStage + counts.none;
+  const breakdown = STAGE_CLASSES.map((c) => `${counts[c.key]} ${c.label.toLowerCase()}`).join(", ");
+
   cache = [
     {
       id: "policy",
@@ -91,8 +98,9 @@ export function buildBigIdeas() {
       id: "stages",
       title: "Places are at different stages",
       body: [
-        "The colors sort every area into a stage: stable, early pressure, active displacement, or historic displacement, where much of the change has already happened.",
-        "The score behind the colors is a planning signal. It is not a verdict on any block or household.",
+        "The colors sort areas into five stages. “Vulnerable” means residents are exposed to rising housing costs and little has changed yet. Early, dynamic and late mark change under way. “Continued loss” is where most vulnerable residents have already gone.",
+        `In the latest census survey, ${inStage} of the ${scored} census tracts scored are in a stage: ${breakdown}. The rest are not, because their residents are not vulnerable by these measures.`,
+        "A stage describes an area as a whole. It is not a verdict on any block or household.",
       ],
       action: { key: "legend", label: "Explain the colors" },
     },

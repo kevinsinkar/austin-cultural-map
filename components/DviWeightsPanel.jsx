@@ -256,7 +256,7 @@ export default function DviWeightsPanel({ weights, onApply }) {
               />
               <span>
                 <strong>Vulnerability gate</strong> — cap affluent, high-ownership
-                tracts at DVI 20 and flag them Exclusive&nbsp;/&nbsp;Appreciated.
+                tracts at DVI 20 and flag them Affluent, score capped.
               </span>
             </label>
             <label style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: 12, color: "#1a1a1a", cursor: "pointer", lineHeight: 1.35 }}>

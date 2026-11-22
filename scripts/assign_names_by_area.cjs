@@ -36,7 +36,8 @@ function titleCase(str) {
       if (i > 0 && small.has(w)) return w;
       return w.charAt(0).toUpperCase() + w.slice(1);
     })
-    .join(" ");
+    .join(" ")
+    .replace(/\bMckinney\b/g, "McKinney");
 }
 
 console.log("Loading data...");

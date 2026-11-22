@@ -29,17 +29,17 @@ const STEPS = [
   },
   {
     title: "Watch 35 years move",
-    body: "The colors show the Displacement Vulnerability Index — cream is stable, deep red is severe pressure, and blue marks affluent enclaves that are exclusive rather than vulnerable: a different phenomenon, not a low score. The map is now playing 1990 to today; watch the pressure build eastward through the 2000s.",
+    body: "The colors show each area's displacement stage. Light orange means residents are vulnerable but little has changed; darker means further along; the darkest is where most vulnerable residents have already gone. Areas with no color are not in a stage. The map is now playing 1990 to today. Census figures start in 2000 and the map changes at each census year; watch the darker stages spread through East Austin.",
     apply: (c) => { c.setViewMode("map"); c.setShowHolc(false); c.setYear(1990); c.setIsPlaying(true); },
   },
   {
     title: "One neighborhood's story",
-    body: "Select any place and the panel beside the map sums it up. This is Central East Austin — the East 11th/12th corridor. “Open the story card” gives the full profile on one printable page: who left, who arrived, what home values did, and the turning point behind it. Every card has its own link.",
+    body: "Select any place and the panel beside the map sums it up. This is Central East Austin — the East 11th/12th corridor. “Open the story card” gives the full profile on a printable page: who left, who arrived, what home values did, and the turning point behind it. Every card has its own link.",
     apply: (c) => { c.setIsPlaying(false); c.setYear(2023); c.locate(85); },
   },
   {
     title: "Two neighborhoods, two paths",
-    body: "Compare places two neighborhoods side by side — displacement index, home values, income, and demographics. Solid dots are measured census years; the lighter lines between them are interpolated. Useful for showing a board how differently the same decades treated two communities.",
+    body: "Compare places two neighborhoods side by side — displacement stage, home values, income, and demographics. Solid dots are measured census years; the lighter lines between them are interpolated. Useful for showing a board how differently the same decades treated two communities.",
     apply: (c) => { c.setIsPlaying(false); c.setViewMode("compare"); },
   },
   {

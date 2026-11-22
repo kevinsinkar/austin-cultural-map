@@ -46,6 +46,7 @@ austin-cultural-map/
 │   ├── TimeBar.jsx         # Year slider, play button and key-moment marks, docked under the map
 │   ├── StartHere.jsx       # Right-hand card when nothing is selected: the five ideas (data/bigIdeas.js)
 │   ├── PlaceSummaryPanel.jsx  # Right-hand summary for a selected tract OR neighborhood
+│   ├── StageBlock.jsx      # Stage headline, the three tests, stage-by-year strip, City cross-check (panel + story card)
 │   ├── StoryCardPage.jsx   # One-page profile of a place at its own address (#/card?tract=…|hood=…); lazy-loaded
 │   ├── LayersPopover.jsx   # Grouped layer toggles + tract/neighborhood switch
 │   ├── LegislationTrack.jsx   # Texas laws track under the map
@@ -70,7 +71,8 @@ austin-cultural-map/
 │   └── useAustinMap.js     # Leaflet map lifecycle hook
 │
 ├── utils/
-│   ├── math.js             # DVI interpolation, stages, confidence, measured change, triage scoring
+│   ├── stages.js           # Displacement stages: classes, colors, wording, lookups (reads data/stages.js)
+│   ├── math.js             # Pressure score (presenter tools), measured change, triage scoring
 │   ├── places.js           # One naming rule for every place (titles, tract labels, search index)
 │   ├── placeData.js        # Data builders for the place panel and story card (tract or neighborhood)
 │   ├── urlState.js         # Shareable address: view, year, layers, selection; short story-card address
@@ -98,7 +100,8 @@ austin-cultural-map/
 │   ├── auditedData.js      # Central normaliser: imports phase1 JSONs once,
 │   │                        #   exports Maps + flat arrays + (regionId,year) lookups
 │   │                        #   Also defines CHART_YEARS and toDemoChartData()
-│   ├── auditedDvi.js       # Computes DVI from auditedData.js pre-normalised data
+│   ├── stages.js           # GENERATED displacement stage of every tract and neighborhood by census year (npm run build:stages)
+│   ├── auditedDvi.js       # Computes the 0–100 pressure score (presenter tools; not the map colors)
 │   ├── interim_demographics.js   # Enriches demos with derived pct/pop fields
 │   ├── interim_property.js       # Pass-through from normalised property rows
 │   ├── interim_socioeconomic.js  # Joins socio+property+demo via auditedData Maps
@@ -111,8 +114,11 @@ austin-cultural-map/
 │   ├── neighborhoods_geojson.js  # Neighborhood GeoJSON polygons. SOURCE ONLY, as above
 │   ├── shapes/             # GENERATED slim polygons the site loads on demand (npm run build:shapes)
 │   │   ├── tracts.min.json / neighborhoods.min.json
-│   │   └── index.js        # loadTractShapes() / loadNeighborhoodShapes()
+│   │   ├── areas.min.json  # City planning areas for the area-name labels (npm run build:areas)
+│   │   └── index.js        # loadTractShapes() / loadNeighborhoodShapes() / loadAreaShapes()
 │   ├── placeNames.js       # GENERATED tract titles from planning-area overlap (npm run build:places)
+│   ├── areaNames.js        # GENERATED names of City planning areas for the search box (npm run build:areas)
+│   ├── _cache/census_history/  # Raw census pulls + trimmed tract relationship files (npm run build:history)
 │   ├── bigIdeas.js         # The five ideas in the "Start here" card; numbers computed from the data
 │   ├── regionIndex.js      # Lightweight region metadata (centroids, DVI — no geometry)
 │   ├── regionLookup.js     # Name↔ID maps, MERGE_LOOKUP, VISIBLE_REGIONS
@@ -132,6 +138,10 @@ austin-cultural-map/
 │   ├── generate_name_candidates.cjs # Region name candidate generation
 │   ├── build_map_shapes.mjs         # Generates data/shapes/*.min.json (simplified, 5-decimal polygons)
 │   ├── build_place_names.mjs        # Generates data/placeNames.js (tract titles; rule in the file header)
+│   ├── build_area_names.mjs         # Generates data/shapes/areas.min.json + data/areaNames.js (City planning areas)
+│   ├── build_stages.mjs             # Generates data/stages.js (three-part stage test from census tables)
+│   ├── lib/census.mjs               # Shared: cached Census API pulls, tract relationship files, allocation
+│   ├── rebuild_census_history.mjs   # Rebuilds 2000/2010/2015 population, race, tenure, rent burden from census tables
 │   ├── check_public_bundle.mjs      # Fails a build that contains private data or a presenter-only view
 │   └── _archive/                    # Archived automation scripts
 │
@@ -545,8 +555,9 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 |---------|-------------|
 | **Region** | One of 269 census-tract-level neighborhoods in Austin. Identified by `region_id` (1–269) and `region_name`. Some have `merge_into` redirects via `MERGE_LOOKUP`. |
 | **Neighborhood** | City of Austin Neighborhood Planning Area (NPA). Each contains multiple tracts. Aggregated data computed by `utils/aggregation.js`. |
-| **DVI** | Displacement Vulnerability Index (0–100). Computed from 3 sub-indices: demographic change (35%), market pressure (35%), socioeconomic stress (30%). Higher = more vulnerable. Adjustable weights in TriageView. |
-| **DVI Bands** | Stable (0–20), Early Pressure (20–35), Active Displacement (35–55), Historic Displacement (55+). Affluent/excluded regions capped at DVI 20 and shown in neutral slate. |
+| **Displacement stage** | The map's colors: Vulnerable, Early, Dynamic, Late, Continued loss, or none. Decided by three tests on census figures (vulnerable residents, demographic change since 2000, housing market) in `scripts/build_stages.mjs`; read through `utils/stages.js`. A category, never averaged or interpolated. See DATA_METHODOLOGY.md §3. |
+| **DVI / pressure score** | Presenter tools only (0–100); it no longer colors the map. Computed from 3 sub-indices: demographic vulnerability (35%), market pressure (35%), socioeconomic stress (30%). It sums up present-day conditions. Adjustable weights in the DVI Weights panel. |
+| **Pressure score bands** | Quarters of the scored tracts, not stages: under 37, 37–46, 46–56, 56 and over (`DVI_BINS` in `utils/math.js`). Affluent regions are capped at 20. |
 | **Anchor Density** | `surviving_businesses / (surviving + closed)`. Ratio 0–1. Badge: Strong (>70%), Eroding (40–70%), Critical (<40%). |
 | **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 49 operating + 58 closed. |
 | **Triage Lenses** | Trajectory (displacement velocity), Equity (underserved communities), Risk Matrix (intervention type matching). Each lens produces categories and a priority score per region. |

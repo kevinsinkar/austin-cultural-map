@@ -1,14 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import _ from "lodash";
 import { REGION_INDEX } from "../data";
 import { regionLookupMap } from "../data/regionIndex";
 import { loadTractShapes, loadNeighborhoodShapes } from "../data/shapes";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
-import { AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID, closestRow } from "../data/auditedData";
-import { interpolateDvi, getDviColor, getDviStage, getDviConfidence, isRegionExcluded, DVI_EXCLUDED } from "../utils/math";
+import { AUDITED_PROP_BY_ID } from "../data/auditedData";
+import { tractStageClass, placeStageClass, stageFor } from "../utils/stages";
 import { getDevPressureColor } from "../utils/mapHelpers";
 
 // Leaflet's tooltip support gives every shape a focus listener, and browsers
@@ -29,62 +28,81 @@ import { pointInFeature } from "../utils/geo";
 import { OUTREACH_EVENTS, OUTREACH_STATUS, OUTREACH_KINDS, isPast, eventSortTime, formatEventDate } from "../data/outreachEvents";
 import { COUNCIL_DISTRICTS_GEOJSON, DISTRICT_STYLE, districtLabelPoint } from "../data/councilDistricts";
 
-// Hover tooltip HTML: name, DVI + band, and a one-line confidence note —
-// point-of-reading disclosure from the unified ConfidenceChip system.
+// Hover tooltip HTML: name, the stage, and the census year the stage comes
+// from (a slider year shows the latest census year at or before it).
 function placeHeadHtml(place) {
   return `<strong>${place.title}</strong>` +
     (place.subtitle ? `<br/><span style="color:#64615b;font-size:12px;">${place.subtitle}</span>` : "");
 }
 
+const SMALL = `style="color:#64615b;font-size:12px;"`;
+function stageLineHtml(ref, yr, extra = "") {
+  const s = stageFor(ref, yr);
+  if (!s) return `<span ${SMALL}>Census figures here start in 2000</span>`;
+  // In 2000 there is no stage yet, only "vulnerable or not".
+  const label = s.isBaseYear && s.scored ? s.typeName : s.cls.label;
+  return `${label}<br/><span ${SMALL}>${s.source}${extra}</span>`;
+}
+
 function tractTooltipHtml(place, regionId, yr) {
-  if (yr < 1993) return placeHeadHtml(place);
-  const excluded = isRegionExcluded(regionId, yr);
-  const dvi = interpolateDvi(regionId, yr);
-  const bandTxt = excluded
-    ? `<span style="color:${DVI_EXCLUDED.text};font-weight:600;">Affluent, not scored</span>`
-    : `Index ${dvi.toFixed(0)}: ${getDviStage(dvi)}`;
-  const conf = getDviConfidence(regionId, yr);
-  return `${placeHeadHtml(place)}<br/>${bandTxt}` +
-    `<br/><span style="color:#7c6f5e;font-size:12px;">${conf.level} confidence` +
-    `${conf.interpolated ? " · interpolated" : ""}${yr < 2010 ? " · pre-2010 crosswalk" : ""}</span>`;
+  return `${placeHeadHtml(place)}<br/>${stageLineHtml({ kind: "tract", id: regionId }, yr)}`;
 }
 
-// Polygon look. The basemap is muted to gray (styles.css), so the index
-// colors are the only color on the map and can sit a little lighter.
+// Polygon look. The basemap is muted to gray (styles.css), so the stage
+// colors are the only color on the map.
 const OUTLINE = "#fffffe";
-const FILL_OPACITY = 0.5;
 
-// Compute the full Leaflet style for a tract polygon: binned DVI fill,
-// categorical blue for capped Affluent/Excluded tracts, neutral pre-1993.
-function tractStyle(regionId, yr, isActive) {
-  const excluded = isRegionExcluded(regionId, yr);
-  let fill;
-  let opacity = FILL_OPACITY;
-  if (yr < 1993) {
-    fill = "#e0ddd7";
-    opacity = 0.25;
-  } else if (excluded) {
-    fill = DVI_EXCLUDED.fill;
-    opacity = 0.35;
-  } else {
-    fill = getDviColor(interpolateDvi(regionId, yr), false);
+// ── Area names (City planning areas) ──
+// Which names show at a zoom level: the broad areas when zoomed out, the
+// planning areas at the default zoom, and named sub-districts close in.
+function areaShownAt(p, zoom) {
+  if (zoom <= 11) return p.level === 1 || (p.level === 2 && p.top);
+  if (zoom <= 13) return p.level === 2;
+  return p.level === 2 || p.level === 3;
+}
+const AREA_LABEL_FONT = {
+  l1: { font: "700 13px 'Libre Franklin', sans-serif", spacing: 0.8, upper: true },
+  l2: { font: "600 12px 'Libre Franklin', sans-serif", spacing: 0, upper: false },
+  l3: { font: "italic 500 12px 'Libre Franklin', sans-serif", spacing: 0, upper: false },
+};
+let measureCtx;
+function areaLabelWidth(text, style) {
+  const spec = AREA_LABEL_FONT[style];
+  const shown = spec.upper ? text.toUpperCase() : text;
+  try {
+    measureCtx ||= document.createElement("canvas").getContext("2d");
+    measureCtx.font = spec.font;
+    return Math.ceil(measureCtx.measureText(shown).width + spec.spacing * shown.length) + 12;
+  } catch {
+    return shown.length * 8 + 12;
   }
+}
+const escapeHtml = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const FILL_OPACITY = 0.72;
+
+// The Leaflet style for a place in a stage class. Places in a stage carry
+// the color; places with no stage stay nearly clear so the staged ones read
+// as the pattern; unscored places get a dashed edge so gray is never the
+// only thing telling them apart.
+function stageStyle(cls, isActive) {
+  const quiet = cls.key === "none" || cls.key === "nodata";
+  const unscored = cls.key === "unscored";
   return {
-    fillColor: fill,
-    fillOpacity: opacity,
-    color: isActive ? "#1a1a1a" : (excluded ? DVI_EXCLUDED.stroke : OUTLINE),
+    fillColor: cls.fill,
+    fillOpacity: quiet ? 0.2 : unscored ? 0.45 : FILL_OPACITY,
+    color: isActive ? "#1a1a1a" : unscored ? "#6b675f" : OUTLINE,
     weight: isActive ? 3 : 1,
+    dashArray: unscored && !isActive ? "3 4" : null,
   };
 }
 
-// Shared look of a neighborhood polygon (same ramp as tracts).
-function neighborhoodStyle(aggDvi, yr, isActive) {
-  return {
-    fillColor: yr < 1993 ? "#e0ddd7" : getDviColor(aggDvi),
-    fillOpacity: yr < 1993 ? 0.25 : FILL_OPACITY,
-    color: isActive ? "#1a1a1a" : OUTLINE,
-    weight: isActive ? 3 : 1,
-  };
+function tractStyle(regionId, yr, isActive) {
+  return stageStyle(tractStageClass(regionId, yr), isActive);
+}
+
+// A neighborhood is classified on its own combined figures (same test).
+function neighborhoodStyle(id, yr, isActive) {
+  return stageStyle(placeStageClass({ kind: "neighborhood", id }, yr), isActive);
 }
 
 // Popup HTML for an outreach-event pin — enough to act on without leaving
@@ -126,6 +144,10 @@ export default function useAustinMap({
   outreachStatusFilter,
   outreachHorizon,
   showDistricts,
+  showAreaNames,
+  areaShapes,
+  activeAreaId,
+  onSelectArea,
   dviVersion,
   paFilter,
   selectedRegion,
@@ -170,19 +192,6 @@ export default function useAustinMap({
   const activeNeighborhoodIdRef = useRef(activeNeighborhoodId);
   activeNeighborhoodIdRef.current = activeNeighborhoodId;
 
-
-  // Compute population-weighted DVI for a neighborhood at a given year
-  function computeNeighborhoodDvi(hood, yr) {
-    if (!hood) return 0;
-    const entries = hood.tract_ids.map(id => {
-      const dvi = interpolateDvi(id, yr);
-      const demoRow = closestRow(AUDITED_DEMO_BY_ID.get(id), yr);
-      const pop = demoRow?.total_population || 0;
-      return { dvi, pop };
-    }).filter(e => e.dvi != null);
-    const totalPop = _.sumBy(entries, "pop");
-    return totalPop > 0 ? _.sumBy(entries, e => e.dvi * e.pop) / totalPop : 0;
-  }
 
   // ── Initialize the Leaflet map; tract shapes arrive separately ──
   useEffect(() => {
@@ -279,6 +288,14 @@ export default function useAustinMap({
     const districtPane = map.createPane("districtPane");
     districtPane.style.zIndex = 430;
     districtPane.style.pointerEvents = "none";
+    // Area names: the outline of the chosen area sits under the pins; the
+    // names sit above them, as on any street map, so a dot never cuts a
+    // name in half. Only the text itself takes clicks.
+    const areaOutlinePane = map.createPane("areaOutlinePane");
+    areaOutlinePane.style.zIndex = 435;
+    areaOutlinePane.style.pointerEvents = "none";
+    const areaLabelPane = map.createPane("areaLabelPane");
+    areaLabelPane.style.zIndex = 460;
     const districtLayer = L.layerGroup();
     L.geoJSON(COUNCIL_DISTRICTS_GEOJSON, {
       pane: "districtPane",
@@ -340,8 +357,7 @@ export default function useAustinMap({
         neighborhoodLayerRef.current = L.geoJSON(shapes, {
           style: (feature) => {
             const id = feature.properties.neighborhood_id;
-            const aggDvi = computeNeighborhoodDvi(NEIGHBORHOOD_BY_ID.get(id), yearRef.current);
-            return neighborhoodStyle(aggDvi, yearRef.current, activeNeighborhoodIdRef.current === id);
+            return neighborhoodStyle(id, yearRef.current, activeNeighborhoodIdRef.current === id);
           },
           onEachFeature: (feature, layer) => {
             const id = feature.properties.neighborhood_id;
@@ -358,12 +374,10 @@ export default function useAustinMap({
                 if (hood && hood.tract_ids.length === 1) {
                   // A one-tract place reads exactly as it does in tract view
                   e.target.setTooltipContent(tractTooltipHtml(place, hood.tract_ids[0], yr));
-                } else if (yr >= 1993 && hood) {
-                  const aggDvi = computeNeighborhoodDvi(hood, yr);
+                } else if (hood) {
                   e.target.setTooltipContent(
-                    `${placeHeadHtml(place)}<br/>Index ${aggDvi.toFixed(0)}: ${getDviStage(aggDvi)}` +
-                    `<br/><span style="color:#64615b;font-size:12px;">Weighted by population` +
-                    `${yr < 2010 ? " · approximate before 2010" : ""}</span>`
+                    `${placeHeadHtml(place)}<br/>` +
+                    stageLineHtml({ kind: "neighborhood", id }, yr, ` · ${hood.tract_ids.length} census tracts combined`)
                   );
                 } else {
                   e.target.setTooltipContent(placeHeadHtml(place));
@@ -371,8 +385,7 @@ export default function useAustinMap({
                 e.target.openTooltip();
               },
               mouseout: (e) => {
-                const aggDvi = computeNeighborhoodDvi(hood, yearRef.current);
-                e.target.setStyle(neighborhoodStyle(aggDvi, yearRef.current, activeNeighborhoodIdRef.current === id));
+                e.target.setStyle(neighborhoodStyle(id, yearRef.current, activeNeighborhoodIdRef.current === id));
               },
               click: () => {
                 setActiveNeighborhoodId(id);
@@ -417,8 +430,7 @@ export default function useAustinMap({
     if (!layer || boundaryMode !== "neighborhoods") return;
     layer.setStyle((feature) => {
       const id = feature.properties.neighborhood_id;
-      const aggDvi = computeNeighborhoodDvi(NEIGHBORHOOD_BY_ID.get(id), year);
-      return neighborhoodStyle(aggDvi, year, activeNeighborhoodId === id);
+      return neighborhoodStyle(id, year, activeNeighborhoodId === id);
     });
   }, [year, activeNeighborhoodId, boundaryMode, dviVersion, shapesVersion]);
 
@@ -672,6 +684,99 @@ export default function useAustinMap({
     if (showDistricts && !map.hasLayer(districtLayer)) districtLayer.addTo(map);
     if (!showDistricts && map.hasLayer(districtLayer)) map.removeLayer(districtLayer);
   }, [showDistricts]);
+
+  // ── Area names that change with zoom ──
+  // A name is skipped when it would overlap one already placed, so the map
+  // never stacks labels. Order of placement: the chosen area, then names
+  // that were already showing (so a small pan does not reshuffle them), then
+  // nearest the middle of the view, which is where the reader is looking.
+  // They are links for a pointer; the search box lists the same areas for a
+  // keyboard.
+  const onSelectAreaRef = useRef(onSelectArea);
+  onSelectAreaRef.current = onSelectArea;
+  const areaLabelLayerRef = useRef(null);
+  const areaLabelsShownRef = useRef({ zoom: null, ids: new Set() });
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    if (!map) return undefined;
+    areaLabelLayerRef.current ||= L.layerGroup();
+    const group = areaLabelLayerRef.current;
+    group.clearLayers();
+    if (!showAreaNames || !areaShapes) {
+      if (map.hasLayer(group)) map.removeLayer(group);
+      return undefined;
+    }
+    if (!map.hasLayer(group)) group.addTo(map);
+
+    const draw = () => {
+      group.clearLayers();
+      const zoom = map.getZoom();
+      const size = map.getSize();
+      const placed = [];
+      const before = areaLabelsShownRef.current.zoom === zoom ? areaLabelsShownRef.current.ids : new Set();
+      const shown = new Set();
+      const middle = L.point(size.x / 2, size.y / 2);
+      const wanted = areaShapes.features
+        .map((f) => f.properties)
+        .filter((p) => p.id === activeAreaId || areaShownAt(p, zoom))
+        .map((p) => {
+          const pt = map.latLngToContainerPoint([p.lat, p.lng]);
+          return { p, pt, far: pt.distanceTo(middle) };
+        })
+        .sort((a, b) =>
+          (b.p.id === activeAreaId) - (a.p.id === activeAreaId)
+          || before.has(b.p.id) - before.has(a.p.id)
+          || a.p.level - b.p.level
+          || a.far - b.far);
+      for (const { p, pt } of wanted) {
+        if (pt.x < 0 || pt.y < 0 || pt.x > size.x || pt.y > size.y) continue;
+        const style = zoom <= 11 ? "l1" : p.level === 3 ? "l3" : "l2";
+        const w = areaLabelWidth(p.name, style);
+        const h = 22;
+        const box = [pt.x - w / 2 - 4, pt.y - h / 2 - 3, pt.x + w / 2 + 4, pt.y + h / 2 + 3];
+        const active = p.id === activeAreaId;
+        if (!active && placed.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
+        placed.push(box);
+        shown.add(p.id);
+        const marker = L.marker([p.lat, p.lng], {
+          pane: "areaLabelPane",
+          keyboard: false, // reachable from the search box instead
+          title: `${p.name}: show this area`,
+          icon: L.divIcon({
+            className: `area-label area-label--${style}${active ? " is-active" : ""}`,
+            html: `<span>${escapeHtml(p.name)}</span>`,
+            iconSize: [w, h],
+            iconAnchor: [w / 2, h / 2],
+          }),
+        });
+        marker.on("click", () => onSelectAreaRef.current?.(p.id));
+        group.addLayer(marker);
+      }
+      areaLabelsShownRef.current = { zoom, ids: shown };
+    };
+    draw();
+    map.on("zoomend moveend", draw);
+    return () => { map.off("zoomend moveend", draw); };
+  }, [showAreaNames, areaShapes, activeAreaId]);
+
+  // ── Outline the chosen area with the City's boundary ──
+  const areaOutlineRef = useRef(null);
+  useEffect(() => {
+    const map = leafletMapRef.current;
+    if (!map) return;
+    if (areaOutlineRef.current) {
+      map.removeLayer(areaOutlineRef.current);
+      areaOutlineRef.current = null;
+    }
+    const feature = activeAreaId && areaShapes?.features.find((f) => f.properties.id === activeAreaId);
+    if (!feature) return;
+    // A light casing under a dark dashed line reads on any fill color.
+    const casing = L.geoJSON(feature, { pane: "areaOutlinePane", interactive: false, style: { color: "#fffffe", weight: 6, opacity: 0.9, fill: false } });
+    const line = L.geoJSON(feature, { pane: "areaOutlinePane", interactive: false, style: { color: "#1a1a1a", weight: 2.5, dashArray: "7 5", fillColor: "#1a1a1a", fillOpacity: 0.05 } });
+    const outline = L.featureGroup([casing, line]).addTo(map);
+    areaOutlineRef.current = outline;
+    map.fitBounds(outline.getBounds(), { padding: [50, 50], maxZoom: 15 });
+  }, [activeAreaId, areaShapes]);
 
   // ── Auto-zoom to the selected tract (also once its shape has loaded) ──
   useEffect(() => {

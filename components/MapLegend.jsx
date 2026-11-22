@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { DVI_BINS, DVI_EXCLUDED } from "../utils/math";
+import {
+  STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED, STAGE_NO_DATA, STAGE_BASE_YEAR,
+  stageDataYear, stageSourceLabel, stageCounts,
+} from "../utils/stages";
 import { HOLC_GRADES, HOLC_ATTRIBUTION } from "../data/history/holc";
 import { PRESENTER_MODE } from "../appConfig";
 
@@ -12,18 +15,15 @@ import { PRESENTER_MODE } from "../appConfig";
  * switched on. (The weighting formula lives in the About dialog.)
  */
 
-// What each stage means, in one sentence. The wording matches the story card.
-const STAGES = [
-  { ...DVI_BINS[0], label: DVI_BINS[0].stage, meaning: "Conditions here are comparatively stable today." },
-  { ...DVI_BINS[1], label: DVI_BINS[1].stage, meaning: "Early pressure is visible. Conditions are shifting, but the community fabric is still intact." },
-  { ...DVI_BINS[2], label: DVI_BINS[2].stage, meaning: "The latest data shows active displacement pressure: costs rising faster than long-time residents can absorb." },
-  { ...DVI_BINS[3], label: DVI_BINS[3].stage, meaning: "Much of the change this map tracks has already happened here." },
+// The stages and their one-sentence meanings live in utils/stages.js, so the
+// legend, the side panel and the story card use the same words.
+const ALL_CLASSES = [...STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED];
+// In 2000 there is no stage yet: the map shows only where residents were vulnerable.
+const BASE_YEAR_CLASSES = [
+  { ...STAGE_CLASSES[0], label: `Vulnerable in ${STAGE_BASE_YEAR}` },
+  { ...STAGE_NONE, label: "Not vulnerable" },
+  STAGE_UNSCORED,
 ];
-const AFFLUENT = {
-  fill: DVI_EXCLUDED.fill,
-  label: "Affluent, not scored",
-  meaning: "High-income, mostly owner-occupied areas. Rising values there are treated as appreciation rather than displacement risk, so they are shown as a separate group.",
-};
 
 const PA_TYPES = [
   { l: "Grant", c: "#7c3aed", k: "grant" },
@@ -32,13 +32,14 @@ const PA_TYPES = [
   { l: "Advocacy", c: "#059669", k: "advocacy" },
 ];
 
-function Swatch({ color, round = false, size = 12 }) {
+function Swatch({ color, round = false, size = 12, dashed = false }) {
   return (
     <span
       aria-hidden="true"
       style={{
         width: size, height: size, flexShrink: 0, background: color,
-        borderRadius: round ? "50%" : 3, border: "1px solid rgba(0,0,0,.18)",
+        borderRadius: round ? "50%" : 3,
+        border: dashed ? "1.5px dashed #6b675f" : "1px solid rgba(0,0,0,.18)",
       }}
     />
   );
@@ -73,28 +74,26 @@ export default function MapLegend({
   const [localOpen, setLocalOpen] = useState(false);
   const isOpen = open ?? localOpen;
   const toggle = () => (setOpen ? setOpen(!isOpen) : setLocalOpen(!isOpen));
-  const preIndex = year < 1993;
+  const dataYear = stageDataYear(year);
+  const isBaseYear = dataYear === STAGE_BASE_YEAR;
+  const shown = isBaseYear ? BASE_YEAR_CLASSES : ALL_CLASSES;
+  const counts = dataYear != null ? stageCounts(dataYear) : null;
 
   return (
     <div className="map-legend" role="region" aria-label="Map legend">
       <div className="map-legend-row">
         {showRegions && (
-          <Group title="Displacement index">
-            {preIndex ? (
+          <Group title={isBaseYear ? `Residents in ${STAGE_BASE_YEAR}` : "Displacement stage"}>
+            {dataYear == null ? (
               <span style={{ ...itemStyle, color: "var(--muted)", whiteSpace: "normal" }}>
-                <Swatch color="#e0ddd7" /> No index before 1993. Boundaries only.
+                <Swatch color={STAGE_NO_DATA.fill} /> No census figures before {STAGE_BASE_YEAR}. Boundaries only.
               </span>
             ) : (
-              <>
-                {STAGES.map((s) => (
-                  <span key={s.label} style={itemStyle}>
-                    <Swatch color={s.fill} /> {s.label}
-                  </span>
-                ))}
-                <span style={itemStyle}>
-                  <Swatch color={AFFLUENT.fill} /> {AFFLUENT.label}
+              shown.map((s) => (
+                <span key={s.key} style={itemStyle}>
+                  <Swatch color={s.fill} dashed={s.key === "unscored"} /> {s.label}
                 </span>
-              </>
+              ))
             )}
           </Group>
         )}
@@ -172,23 +171,46 @@ export default function MapLegend({
       {isOpen && showRegions && (
         <div id="map-legend-explain" className="map-legend-explain">
           <p style={{ margin: "0 0 8px", fontSize: 14, lineHeight: 1.5, color: "#44403c" }}>
-            Each area gets a score from 0 to 100 that combines who is most exposed to rising
-            costs, how fast the housing market is moving, and signs of economic stress. The
-            score places it in one of four stages. It is a planning signal, not a verdict on
-            any block or household.
+            Each area is put through three tests using census figures. Are many residents
+            exposed to rising housing costs? Has the population shifted since {STAGE_BASE_YEAR}? What
+            have home values done? The answers together place it in a stage. The tests come from
+            a University of Texas study the City of Austin commissioned, and the City publishes
+            its own version. A stage describes an area as a whole, not any block or household.
           </p>
-          <dl className="map-legend-defs">
-            {[...STAGES, AFFLUENT].map((s) => (
-              <div key={s.label} className="map-legend-def">
-                <dt>
-                  <Swatch color={s.fill} size={14} />
-                  <span>{s.label}</span>
-                  {s.range && <span style={{ color: "var(--muted)", fontWeight: 400 }}>score {s.range}</span>}
-                </dt>
-                <dd>{s.meaning}</dd>
-              </div>
-            ))}
-          </dl>
+          {dataYear == null ? (
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, color: "#44403c" }}>
+              Census figures on this site start in {STAGE_BASE_YEAR}. Move the year slider forward.
+            </p>
+          ) : (
+            <>
+              {isBaseYear && (
+                <p style={{ margin: "0 0 8px", fontSize: 14, lineHeight: 1.5, color: "#44403c" }}>
+                  Stages measure change since {STAGE_BASE_YEAR}, so they start in 2010. For {STAGE_BASE_YEAR} the map shows
+                  only the first test: where vulnerable residents lived.
+                </p>
+              )}
+              <dl className="map-legend-defs">
+                {shown.map((s) => (
+                  <div key={s.key} className="map-legend-def">
+                    <dt>
+                      <Swatch color={s.fill} size={14} dashed={s.key === "unscored"} />
+                      <span>{s.label}</span>
+                      {counts && (
+                        <span style={{ color: "var(--muted)", fontWeight: 400 }}>
+                          {counts[s.key]} census tract{counts[s.key] === 1 ? "" : "s"}
+                        </span>
+                      )}
+                    </dt>
+                    <dd>{s.meaning}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p style={{ margin: "8px 0 0", fontSize: 13, lineHeight: 1.5, color: "var(--muted)" }}>
+                Showing the {stageSourceLabel(dataYear)}. The map changes at each census year
+                (2000, 2010, 2015, 2020, 2023), not in between.
+              </p>
+            </>
+          )}
         </div>
       )}
     </div>

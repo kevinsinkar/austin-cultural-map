@@ -3,7 +3,7 @@
 // the tract inside a City of Austin Neighborhood Planning Area. Tracts not
 // listed here are shown by census tract number. See the script for the rule.
 export const PLACE_NAMES = {
-  1: {"title":"Mckinney","basis":"named","areas":[["Mckinney",99]]},
+  1: {"title":"McKinney","basis":"named","areas":[["McKinney",99]]},
   2: {"title":"North Austin Civic Association","basis":"named","areas":[["North Austin Civic Association",84]]},
   3: {"title":"RMMA","basis":"named","areas":[["RMMA",94]]},
   13: {"title":"Gateway","basis":"named","areas":[["Gateway",80]]},
@@ -113,7 +113,7 @@ export const PLACE_NAMES = {
   258: {"title":"East Congress","basis":"named","areas":[["East Congress",99]]},
   259: {"title":"Garrison Park","basis":"named","areas":[["Garrison Park",81]]},
   260: {"title":"Garrison Park / South Manchaca area","basis":"split","areas":[["Garrison Park",75],["South Manchaca",25]]},
-  261: {"title":"Franklin Park / Mckinney area","basis":"split","areas":[["Franklin Park",72],["Mckinney",28]]},
+  261: {"title":"Franklin Park / McKinney area","basis":"split","areas":[["Franklin Park",72],["McKinney",28]]},
   262: {"title":"Franklin Park","basis":"named","areas":[["Franklin Park",93]]},
   263: {"title":"Franklin Park","basis":"named","areas":[["Franklin Park",100]]},
 };

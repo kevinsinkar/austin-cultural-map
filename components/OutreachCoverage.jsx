@@ -3,7 +3,8 @@ import { REGION_INDEX } from "../data";
 import { OUTREACH_EVENTS, ARENAS } from "../data/outreachEvents";
 import { COUNCIL_DISTRICTS_GEOJSON } from "../data/councilDistricts";
 import { findDistrict } from "../utils/geo";
-import { interpolateDvi, isRegionExcluded, getDviColor } from "../utils/math";
+import { STAGE_CLASSES, tractStageClass } from "../utils/stages";
+import { StageMix } from "./StageBlock";
 
 /**
  * OutreachCoverage — the strategic-plan measurement view.
@@ -17,16 +18,19 @@ import { interpolateDvi, isRegionExcluded, getDviColor } from "../utils/math";
  */
 
 const ACTIVE_STAGES = new Set(["contacted", "applied", "confirmed"]);
+// Displacement stages (vulnerable through continued loss), as opposed to
+// "no stage" and "not scored".
+const IN_DISPLACEMENT_STAGE = new Set(STAGE_CLASSES.map((c) => c.key));
 
-export default function OutreachCoverage({ plan, dviVersion }) {
-  // Tract → district assignment (centroid point-in-polygon); recompute
-  // only when the DVI weights change (dviVersion) for the DVI columns.
+export default function OutreachCoverage({ plan }) {
+  // Tract → district assignment (centroid point-in-polygon), with each
+  // tract's displacement stage from the latest census survey.
   const districtRows = useMemo(() => {
     const byDistrict = new Map();
     for (const f of COUNCIL_DISTRICTS_GEOJSON.features) {
       byDistrict.set(f.properties.district, {
         district: f.properties.district,
-        tracts: 0, highDvi: 0, dviSum: 0, dviN: 0,
+        tracts: 0, staged: 0, mix: {},
         opportunities: 0, open: 0, active: 0, tabled: 0,
         attendance: 0, signups: 0,
       });
@@ -38,11 +42,10 @@ export default function OutreachCoverage({ plan, dviVersion }) {
       const row = byDistrict.get(d);
       if (!row) continue;
       row.tracts++;
-      const dvi = interpolateDvi(r.region_id, 2023);
-      if (dvi > 0 && !isRegionExcluded(r.region_id, 2023)) {
-        row.dviSum += dvi;
-        row.dviN++;
-        if (dvi >= 35) row.highDvi++;
+      const key = tractStageClass(r.region_id, 2023).key;
+      if (IN_DISPLACEMENT_STAGE.has(key)) {
+        row.staged++;
+        row.mix[key] = (row.mix[key] || 0) + 1;
       }
     }
 
@@ -64,8 +67,7 @@ export default function OutreachCoverage({ plan, dviVersion }) {
     }
 
     return [...byDistrict.values()].sort((a, b) => a.district - b.district);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [plan, dviVersion]);
+  }, [plan]);
 
   // Arena rollup (plan measure: advocates activated by arena)
   const arenaRows = useMemo(() => {
@@ -91,7 +93,7 @@ export default function OutreachCoverage({ plan, dviVersion }) {
   }), { tabled: 0, attendance: 0, signups: 0, active: 0 });
 
   // Outreach desert: meaningful displacement need, nothing confirmed open.
-  const isDesert = (r) => r.highDvi >= 3 && r.open === 0;
+  const isDesert = (r) => r.staged >= 3 && r.open === 0;
 
   return (
     <div>
@@ -108,14 +110,13 @@ export default function OutreachCoverage({ plan, dviVersion }) {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: "#f5f0ea", textAlign: "left" }}>
-              {["District", "Tracts (high-DVI / total)", "Avg DVI '23", "Opportunities", "Open to nonprofits", "In pipeline", "Tabled", "Reach"].map((h) => (
+              {["District", "Tracts (in a stage / total)", "Stages, 2019–2023 survey", "Opportunities", "Open to nonprofits", "In pipeline", "Tabled", "Reach"].map((h) => (
                 <th key={h} style={{ padding: "8px 10px", fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {districtRows.map((r) => {
-              const avg = r.dviN ? r.dviSum / r.dviN : 0;
               const desert = isDesert(r);
               return (
                 <tr key={r.district} style={{ borderTop: "1px solid #edeae4", background: desert ? "#fff7ed" : undefined }}>
@@ -128,14 +129,11 @@ export default function OutreachCoverage({ plan, dviVersion }) {
                     )}
                   </td>
                   <td style={{ padding: "8px 10px" }}>
-                    <span style={{ fontWeight: 600, color: r.highDvi > 0 ? "#b91c1c" : "#64615b" }}>{r.highDvi}</span>
+                    <span style={{ fontWeight: 600, color: r.staged > 0 ? "#9a3412" : "#64615b" }}>{r.staged}</span>
                     <span style={{ color: "var(--muted)" }}> / {r.tracts}</span>
                   </td>
-                  <td style={{ padding: "8px 10px" }}>
-                    <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                      <span style={{ width: 10, height: 10, borderRadius: 2, background: getDviColor(avg), border: "1px solid rgba(0,0,0,.12)" }} aria-hidden="true" />
-                      {avg.toFixed(0)}
-                    </span>
+                  <td style={{ padding: "8px 10px", fontSize: 12 }}>
+                    <StageMix counts={r.mix} />
                   </td>
                   <td style={{ padding: "8px 10px" }}>{r.opportunities}</td>
                   <td style={{ padding: "8px 10px", fontWeight: 600, color: r.open ? "#15803d" : "#b91c1c" }}>{r.open}</td>
@@ -154,8 +152,8 @@ export default function OutreachCoverage({ plan, dviVersion }) {
       </div>
       <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 2px 16px", lineHeight: 1.5 }}>
         Tracts are assigned to districts by centroid; events by pin location (inferred district when unmapped).
-        "High-DVI" = DVI ≥ 35 (Active Displacement or worse) at 2023 under the current weight settings.
-        An <strong>outreach desert</strong> is a district with 3+ high-DVI tracts and no confirmed nonprofit-open opportunity — start by asking the "Unknown" organizers there.
+        "In a stage" means the tract is in one of the five displacement stages (vulnerable through continued loss) in the 2019–2023 census survey.
+        An <strong>outreach desert</strong> is a district with 3+ such tracts and no confirmed nonprofit-open opportunity — start by asking the "Unknown" organizers there.
       </p>
 
       {/* ── Arena rollup ── */}

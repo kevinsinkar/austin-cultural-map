@@ -47,24 +47,28 @@ export function interpolateDvi(regionId, yr) {
   return parseFloat((prior.dvi + t * (next.dvi - prior.dvi)).toFixed(1));
 }
 
-// ── DVI color system ──
-// Binned, colorblind-safe sequential ramp (ColorBrewer YlOrRd 4-class):
-// darkness alone carries the signal, so bands stay distinguishable under
-// deuteranopia/protanopia. No green anywhere in the displacement ramp.
-//   fill — polygon/tile swatch  ·  text — darker same-hue tone readable
-//   on light backgrounds  ·  on — number color readable ON the fill.
+// ── Pressure score bands (presenter tools only) ──
+// The 0–100 score describes present-day conditions: rent burden, renter
+// share, poverty, rent against income, home-value appreciation. It follows
+// poverty far more closely than measured displacement (checked November
+// 2026), so it is NOT what colors the map. The map's displacement stages
+// come from utils/stages.js. Here the score is cut into plain quarters, not
+// stages: the cut points are the quartiles of scored tracts pooled over
+// 2015, 2020 and 2023 under the default weights. A cool one-hue ramp keeps
+// it visually apart from the stage colors.
+//   fill — swatch  ·  text — darker tone readable on light backgrounds
+//   ·  on — number color readable ON the fill.
 export const DVI_BINS = [
-  { min: 0,  max: 20,       band: "Stable",                short: "Stable",          stage: "Stable",                range: "0–20",  fill: "#ffffb2", text: "#8c6d1f", on: "#1a1a1a" },
-  { min: 20, max: 35,       band: "Early Pressure",        short: "Early Pressure",  stage: "Early pressure",        range: "20–35", fill: "#fecc5c", text: "#b45309", on: "#1a1a1a" },
-  { min: 35, max: 55,       band: "Active Displacement",   short: "Active Displ.",   stage: "Active displacement",   range: "35–55", fill: "#fd8d3c", text: "#c2410c", on: "#1a1a1a" },
-  { min: 55, max: Infinity, band: "Historic Displacement", short: "Historic Displ.", stage: "Historic displacement", range: "55+",   fill: "#e31a1c", text: "#b91c1c", on: "#fffffe" },
+  { min: 0,    max: 37.4,     band: "Lowest quarter",       short: "Lowest",       stage: "Lowest quarter",       range: "under 37", fill: "#d5dde6", text: "#4a5a6b", on: "#1a1a1a" },
+  { min: 37.4, max: 46.2,     band: "Lower-middle quarter", short: "Lower-middle", stage: "Lower-middle quarter", range: "37–46",    fill: "#a9b9c9", text: "#44586c", on: "#1a1a1a" },
+  { min: 46.2, max: 56.2,     band: "Upper-middle quarter", short: "Upper-middle", stage: "Upper-middle quarter", range: "46–56",    fill: "#6f8aa3", text: "#3b566f", on: "#1a1a1a" },
+  { min: 56.2, max: Infinity, band: "Highest quarter",      short: "Highest",      stage: "Highest quarter",      range: "56+",      fill: "#3b5a78", text: "#2c4a66", on: "#fffffe" },
 ];
 
-// Capped "Exclusive / Appreciated" tracts (isExcluded) — a categorically
-// different phenomenon, not a low score. Blue matches TriageView's
-// "Affluent / Appreciated" so the map and Triage tell one story.
+// Affluent tracts whose score is capped (isExcluded): high income and
+// mostly owner-occupied. Blue matches TriageView's "Affluent / Appreciated".
 export const DVI_EXCLUDED = {
-  band: "Exclusive / Appreciated",
+  band: "Affluent, score capped",
   range: "DVI capped",
   fill: "#1565C0",
   text: "#1565C0",

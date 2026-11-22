@@ -200,7 +200,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
     if (rbIncrease > 5) {
       narrativeCallouts.push({
         type: "rent_burden",
-        text: `Rent burden increased from ${prev.rent_burden_pct.toFixed(1)}% to ${curr.rent_burden_pct.toFixed(1)}% between ${prev.year} and ${curr.year}, affecting housing affordability.`,
+        text: `The share of renters paying half or more of their income on rent rose from ${prev.rent_burden_pct.toFixed(1)}% to ${curr.rent_burden_pct.toFixed(1)}% between ${prev.year} and ${curr.year}.`,
       });
     }
   }
