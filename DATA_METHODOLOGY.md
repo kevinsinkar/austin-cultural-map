@@ -853,7 +853,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | City of Austin — Displacement Risk Areas 2022 | The City's own classification of the same 269 tracts, shown beside each stage and used as a check (§3.6) | 2022 model, retrieved Nov 2026 | data.austintexas.gov (dataset `t8nv-zcp9`) |
 | U.S. Census Bureau — 2000 SF3 and ACS 5-year tables for the five-county region | Inputs to the stage tests (§3.1): education, income brackets, median family income, child poverty, home value, rent, college enrollment, group quarters | 2000, 2006–2010, 2011–2015, 2016–2020, 2019–2023 | api.census.gov |
 | U.S. Census Bureau — tract relationship files | Carrying 2000 and 2010 tract figures onto 2020 tracts | 2010, 2020 | www2.census.gov/geo |
-| Texas Legislature Online | Bill text and history for the state-legislation timeline layer (26 bills, 2006–2025) | 2000–2025 | capitol.texas.gov |
+| Texas Legislature Online | Bill text and history for the state-legislation timeline layer (27 bills, 2006–2025) | 2000–2025 | capitol.texas.gov |
 
 ### AISD School Closures Layer
 
@@ -870,7 +870,7 @@ Key aggregate sources for this layer:
 - **Texas Comptroller, "Property Tax Cuts as Large as Texas" (Fiscal Notes, Dec 2023)** — official retrospective of the 2015–2023 relief packages
 - **Mercatus, "Framing Futures" (2025)** — aggregates the 89th Legislature's housing-supply package
 
-Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County district court in 2023, but the ruling was vacated on appeal in July 2025 and the law is currently in effect. SB 38 (eviction acceleration) passed in 2025 with a January 1, 2026 effective date. Bills that failed, city ordinances, and federal action are excluded; pre-2000 statutes (e.g., the rent-control ban, the 1997 homestead appraisal cap) are excluded as outside the window.
+Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County district court in 2023, but the ruling was vacated on appeal in July 2025 and the law is currently in effect. SB 38 (eviction acceleration) passed in 2025 with a January 1, 2026 effective date. SB 2835 (single-stair buildings) took effect September 1, 2025, after Austin had adopted its own single-stair amendment (Council vote April 10, 2025; effective July 10, 2025; up to five stories), so the entry no longer says Austin's adoption is pending. HB 9 (business inventory exemption, approved by voters as Proposition 9 on November 4, 2025) was added in November 2026; its "mixed" label rests on the Texas Tribune's statewide reporting that cities and counties must raise rates or trim budgets to make up the revenue, not on an Austin-specific analysis. Bills that failed, city ordinances, and federal action are excluded; pre-2000 statutes (e.g., the rent-control ban, the 1997 homestead appraisal cap) are excluded as outside the window.
 
 ### Community & Organizational Sources
 

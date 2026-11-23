@@ -221,7 +221,10 @@ export const TX_LEGISLATION = [
     title: "Single-stair apartment buildings",
     category: "housing-supply", direction: "lowers-costs",
     summary: "Authorized cities to permit single-staircase apartment buildings up to six stories (max four units per floor) meeting 14 safety conditions including sprinklers. Permissive — cities must opt in.",
-    austin_impact: "Sponsored by Austin Rep. James Talarico; single-stair design cuts per-unit construction costs and makes small infill lots buildable, but the Austin impact depends on the city adopting the framework.",
+    // Author and sponsors, effective date: capitol.texas.gov bill history and enrolled text for SB 2835.
+    // Austin's own amendment: Community Impact, Apr 16, 2025,
+    // communityimpact.com/austin/south-central-austin/government/2025/04/16/austin-legalizes-taller-single-stair-residential-buildings
+    austin_impact: "Authored by Sen. Nathan Johnson of Dallas and sponsored in the House by Austin Rep. James Talarico; effective September 1, 2025. Austin had already acted on its own: City Council amended the building code on April 10, 2025 to allow single-stair buildings up to five stories with four units per floor, effective July 10, 2025. The state law lets cities go to six stories. Single-stair design cuts per-unit construction costs and makes small infill lots buildable.",
     source: "https://nextcity.org/urbanist-news/the-weekly-wrap-texas-goes-big-on-single-staircase-reform",
   },
   {
@@ -231,6 +234,16 @@ export const TX_LEGISLATION = [
     summary: "Streamlined evictions statewide: summary judgment without trial in undisputed cases, 5-business-day service deadlines, 21-day limits on trials and appeals, and electronic notice delivery; effective January 1, 2026.",
     austin_impact: "Tenant advocates (Texas Housers, BASTA) warn the compressed timeline gives Austin renters — already facing record filings — less time to cure arrears or find housing, increasing eviction-driven displacement and homelessness risk.",
     source: "https://www.fox7austin.com/news/sb-38-how-new-property-rights-law-changes-game-texas-renters",
+  },
+  {
+    // Amounts and effective date: enrolled text of HB 9 (capitol.texas.gov). The "mixed" label rests on the
+    // Texas Tribune's statewide reporting of who makes up the lost revenue, not on an Austin-specific analysis.
+    bill: "HB 9", session: "89th (2025)", year: 2026,
+    title: "Business inventory and equipment exemption",
+    category: "property-tax", direction: "mixed",
+    summary: "Raised the property-tax exemption for business inventory and equipment from $2,500 to $125,000. It took a constitutional amendment (HJR 1, Proposition 9), which voters approved on November 4, 2025; effective January 1, 2026.",
+    austin_impact: "Lowers the tax bill of every Austin business that owns taxable inventory or equipment. The state covers the cost for school districts; the Texas Tribune reports that cities, counties and other taxing units must either adopt a higher tax rate than they otherwise would have or trim their budgets to make up the lost revenue.",
+    source: "https://www.texastribune.org/2025/11/04/texas-property-tax-vote-constitutional-amendment/",
   },
 ];
 
