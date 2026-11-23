@@ -22,8 +22,11 @@
 //   2015  population, race shares, owner share,
 //         rent burden                                ACS 2011-2015 (B03002, B25003, B25070)
 //   2005  the same fields, re-interpolated between 2000 and 2010
-// Nothing else in a row is touched. 2020 and 2023 already match the census
-// tables (checked) and are left alone.
+// Nothing else in a row is touched. The other census figures in the 2010 and
+// 2015 rows (income, home value, rent, poverty and the rest) are rebuilt by
+// scripts/rebuild_acs_history.mjs, which "npm run build:history" runs next.
+// 2020 and the latest survey already match the census tables (checked) and
+// are left alone. A run that changes nothing leaves every timestamp alone.
 //
 // Definitions:
 //   owner share   owner-occupied units / occupied units
@@ -117,6 +120,9 @@ const demo = JSON.parse(readFileSync(DEMO_PATH, "utf8"));
 const geoidOf = new Map(ROSETTA.map((r) => [r.region_id, r.geoid22]));
 const STALE_FLAGS = ["RACE_NOT_NH_ADJUSTED", "NH_ESTIMATED", "COMPUTED_FROM_PARENT_TRACT", "ALLOCATED_FROM_EARLIER_TRACTS", "NO_TENURE_SOURCE", "NO_SOURCE_TRACT"];
 const stamp = new Date().toISOString();
+const SURVEY_NOTE = "Survey figures: "; // the sentence rebuild_acs_history.mjs adds to a row's note
+/** Everything in a row except its timestamp, to tell whether a run changed it. */
+const fingerprint = (row) => JSON.stringify({ ...row, audit_timestamp: null });
 const report = {};
 const note = (year, key) => { report[year] ??= {}; report[year][key] = (report[year][key] || 0) + 1; };
 
@@ -127,6 +133,7 @@ for (const row of demo) {
   if (!geoid) continue;
   const people = spec.people(geoid);
   const homes = spec.homes(geoid);
+  const before = fingerprint(row);
   const flags = (row.audit_flags || []).filter((f) => !STALE_FLAGS.includes(f));
   const parts = [];
 
@@ -163,8 +170,9 @@ for (const row of demo) {
     row.pct_owner_occupied = ownerShare;
     parts.push("tenure");
     note(row.year, "owner share rebuilt");
-  } else if (row.year !== 2015 && row.pct_owner_occupied != null) {
+  } else if (row.year !== 2015 && (row.pct_owner_occupied != null || (row.audit_flags || []).includes("NO_TENURE_SOURCE"))) {
     // The old 2000/2010 figure came from the wrong table and cannot be confirmed.
+    // (A row an earlier run already emptied keeps its flag.)
     row.pct_owner_occupied = null;
     flags.push("NO_TENURE_SOURCE");
     note(row.year, "owner share removed (wrong table, no source to rebuild from)");
@@ -187,12 +195,16 @@ for (const row of demo) {
   const src = describe(people || homes);
   if (!src.direct) flags.push("ALLOCATED_FROM_EARLIER_TRACTS");
   row.audit_flags = flags;
-  row.audit_notes = `${parts.join(", ")}: ${spec.label}, `
+  // The row's other census figures belong to rebuild_acs_history.mjs, which
+  // adds its own sentence to the note; keep that sentence if it is there.
+  const surveyNote = String(row.audit_notes || "").split(" | ").filter((s) => s.startsWith(SURVEY_NOTE));
+  row.audit_notes = [`${parts.join(", ")}: ${spec.label}, `
     + (src.direct
       ? "same tract boundary as today."
-      : `allocated to today's tract boundary from ${src.count} earlier tract${src.count === 1 ? " (a part of it)" : "s"} with Census Bureau relationship files.`)
-    + " Other fields are as first compiled.";
-  row.audit_timestamp = stamp;
+      : `allocated to today's tract boundary from ${src.count} earlier tract${src.count === 1 ? " (a part of it)" : "s"} with Census Bureau relationship files.`),
+  ...surveyNote].join(" | ");
+  // A row that already says all this keeps its timestamp.
+  if (fingerprint(row) !== before) row.audit_timestamp = stamp;
   note(row.year, src.direct ? "same boundary" : "allocated from earlier tracts");
 }
 
@@ -210,12 +222,13 @@ for (const row of kept) {
     note(2005, "row removed (no 2000 figure to interpolate from)");
     continue;
   }
+  const before = fingerprint(row);
   for (const f of LERP_FIELDS) {
     const x = a[f], y = b[f];
     row[f] = x != null && y != null ? +((x + y) / 2).toFixed(2) : x ?? y ?? null;
   }
   row.total_population = row.total_population != null ? Math.round(row.total_population) : null;
-  row.audit_timestamp = stamp;
+  if (fingerprint(row) !== before) row.audit_timestamp = stamp;
   note(2005, "re-interpolated");
 }
 

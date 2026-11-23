@@ -96,8 +96,10 @@ npm run build:areas
 # add -- --report to print the checks against the City's map)
 npm run build:stages
 
-# Rebuild 2000/2010/2015 population, race, owner share and rent burden from
-# census tables (runs offline from data/_cache/census_history/)
+# Rebuild the 2000, 2010 and 2015 census figures from census tables: first
+# population, race, owner share and rent burden, then every other survey
+# figure in the 2010 and 2015 rows (runs offline from
+# data/_cache/census_history/; a second run changes nothing)
 npm run build:history
 
 # Move the site to a newer census survey: change LATEST_ACS in

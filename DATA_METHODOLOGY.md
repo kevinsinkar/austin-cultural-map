@@ -57,6 +57,30 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 Rows whose 2020 tract has the same boundary as the earlier tract are exact counts. Rows allocated from earlier tracts are flagged `ALLOCATED_FROM_EARLIER_TRACTS` and are estimates: a tract split from a larger one inherits the larger tract's shares and a part of its population.
 
+**Survey figures rebuilt November 2026 (`npm run build:history`, `scripts/rebuild_acs_history.mjs`):** every other census figure in the 2010 and 2015 rows is now taken from the survey's own tables (ACS 2006–2010 and ACS 2011–2015) and carried onto 2020 tract boundaries in the same way. That is median age, foreign-born, bachelor's or higher and 65 and over in the demographics file; home value, rent, homes and vacancy in the property file; household income, poverty, unemployment, the Gini index and SNAP in the socioeconomic file. The 2006–2010 survey does not publish the unemployment table (B23025), so 2010 has no unemployment figure. The 2020 rows, which the survey published on today's boundaries, were checked field by field against ACS 2016–2020 and changed only where they differed.
+
+Most of the first backfill's figures were right. A tract cut from one larger tract keeps that tract's shares and medians, which is what the backfill had given it: for income, home value, rent, poverty and vacancy, between 240 and 254 of the 257 rows in each year already held the survey's figure. What was wrong:
+
+| Fault | Effect | Rows corrected |
+|-------|--------|----------------|
+| A tract split after 2010 carried its parent tract's whole count of homes | Tract 24.47 showed 2,125 homes in 2010; its part of the parent, by land, is 427 | 105 tracts in 2010 and 104 in 2015 moved by more than 2% |
+| The 2015 eviction rate divided filings by those homes | Too low in split tracts: their median was 1.45 filings a year per 100 renter households, against 2.53 where the boundary had not changed | 87 tracts moved by more than a quarter of a point; 2 now have no rate |
+| Three tracts held another tract's figures | Tract 6.05 was cut from 2010 tract 6.03, a student area west of the university. The file gave it a 2010 household income of $116,007 and a poverty rate of 2%; the survey's figures for tract 6.03 are $6,737 and 84%. Tracts 19.22 and 19.23, both cut from tract 19.01, held two different sets of figures | Every survey field in 3 tracts, both years |
+| Five tracts drawn from more than one earlier tract held the figures of one of them, or a blend that was never rounded | Tract 22.19 is two 2010 tracts joined. It showed 688 homes in 2010; the two held 1,374 | Tracts 1.02, 20.03, 22.19, 24.51 and 357 |
+| Three values that are not census figures | A median home value of $938 (2010) and $1,383 (2015) in tract 454, and a monthly rent of $3 in tract 333 (2015). The survey reports no median in those places | 3 values removed |
+| SNAP participation missing or wrong | No figure in 96 tracts in 2010, 96 in 2015 and 27 in 2020. A figure more than a point from census table B22003 in 1, 2 and 7 tracts | 229 figures |
+| No survey figures in the 2010 demographics rows of 158 tracts; no share aged 65 and over in any 2010 row or in 98 of the 2015 rows | Those tracts' foreign-born and bachelor's figures began in 2015 | Filled from the tables |
+
+Two figures rest on the corrected ones and were recomputed. The yearly change in home value is the change in the median since the survey five years earlier, divided by five; it moved by more than a quarter of a point in 5 tracts in 2015 and 9 in 2020. The 2015 eviction rates are described below.
+
+**The 2020 rows passed.** Apart from SNAP and that yearly change, every figure in every 2020 row matched ACS 2016–2020.
+
+**How a median is carried.** A median cannot be allocated. A tract cut from one earlier tract keeps that tract's median. A tract drawn from several takes their average, weighted by what each contributes: residents for median age, owner homes for home value, renter homes for rent, households for household income and the Gini index (§12.4).
+
+**The 2015 eviction rate where the boundary changed.** BASTA's filings are on 2020 boundaries, but the 2011–2015 survey counted renter households on 2010 boundaries. For the 104 tracts whose boundary changed, renter households are estimated: the count of the earlier tract or tracts is shared among today's tracts cut from them, in proportion to the renter households each had in the 2016–2020 survey. The rate is the tract's own filings for 2014 and 2015, per year, divided by that estimate. Where the boundary did not change, the survey's own count is used. Two other ways were tried and fitted later years worse (§12.4).
+
+**Still estimates.** These rows are flagged `ALLOCATED_FROM_EARLIER_TRACTS` in all three files. In a tract cut from a larger one, the counts of residents and homes are its share of the larger tract by land area, and land is a rough guide to where people live (§10). Twelve tracts have no 2010 or 2015 row at all, and 2010 rent burden is still empty in 161 tracts; both are on the to-do list.
+
 **Latest survey replaced November 2026 (`npm run build:latest`, `scripts/build_latest_acs.mjs`):** the rows for the latest survey, until then ACS 2019–2023 (filed under 2023), were replaced with ACS 2020–2024 (filed under 2024), which the Census Bureau published on January 29, 2026. The site keeps one row per survey period and does not hold both: the two surveys share four of their five years of interviews, so they are not independent readings. The replaced rows remain in the repository's history.
 
 - Every census field uses the definition the earlier rows used. Before writing anything the script was run on the 2019–2023 release and compared with the rows already in the files: every field matched in every tract except SNAP participation, where 27 tracts had no figure and 10 held a figure that did not match census table B22003. The 2024 rows take SNAP from B22003 for every tract.
@@ -233,12 +257,12 @@ The closing dates for Vespaio and Little Mexico are the dates announced beforeha
 |-----------|----------------|----------|-------|
 | Demographics | 269 | 100% | All regions at 2020 (268 at 2024); 246 at 2000 and 2005, 256 at 2010/2015 |
 | Property | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. Permit counts for 1,000 rows. |
-| Socioeconomic | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. SNAP for 822 rows. |
+| Socioeconomic | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. SNAP for 1,041 rows. |
 | Displacement stage | 269 | 100% | Decided for every tract; 8 to 12 are not scored in a given year (§3.4) |
 | Pressure score (presenter tools) | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.8) |
 | Legacy Businesses | 43 | 16% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
-| Eviction Filings | 245 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
+| Eviction Filings | 244 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data. 2015 rates in the 104 tracts whose boundary changed rest on estimated renter households (§1.1) |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 
 ---
@@ -841,12 +865,12 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 
 - **Pre-2005 data** relies on Census decennial snapshots (1990, 2000) with linear interpolation for intermediate years. ACS annual estimates didn't begin until 2005.
 - **Nothing is projected.** The data files hold no figures after the latest survey (2020–2024, filed under 2024). Slider years after 2024 show that survey's figures.
-- **Tract boundary changes** between censuses make earlier figures estimates wherever a tract was split or merged (130 of 246 tracts at 2000; 104 of 256 at 2010 and 2015). Those rows are flagged `ALLOCATED_FROM_EARLIER_TRACTS` (§1.1). Only population, race, owner share and rent burden were rebuilt this way; the other 2010 and 2015 fields (income, home value, rent, poverty, foreign-born, education) still come from the first backfill, which copied a parent tract's value.
+- **Tract boundary changes** between censuses make earlier figures estimates wherever a tract was split or merged (130 of 246 tracts at 2000; 104 of 256 at 2010 and 2015). Those rows are flagged `ALLOCATED_FROM_EARLIER_TRACTS` (§1.1). Every census figure in the 2010 and 2015 rows has been rebuilt this way (§1.1). In a tract cut from a larger one, shares and medians are the larger tract's, and counts of residents and homes are its share by land area. That share is rough: in the 92 tracts cut cleanly from one earlier tract, the tract's share of the land and its share of the renter households counted in the next survey differ by a median of 18 points.
 
 ### Measurement Limitations
 
 - **Rent burden** is derived from Census/ACS self-reported housing costs — may undercount informal housing arrangements, doubled-up households, or cash rent payments. It counts only renters paying half or more of their income, a small group in a tract-sized sample, so it swings widely between surveys (median change of 8 points between the 2016–2020 and 2020–2024 surveys).
-- **Eviction filings** lag actual displacement by 3–6 months (legal process time) and only capture formal filings — informal "cash for keys" agreements and lease non-renewals are not included. The 2020 snap-year rate averages filings over 2016–2020, which includes the 2020 COVID eviction moratorium months — rates for that window are diluted relative to normal years. Renter-household denominators are estimated from ACS housing units × occupancy × renter share, so rates in small or fast-changing tracts carry extra uncertainty.
+- **Eviction filings** lag actual displacement by 3–6 months (legal process time) and only capture formal filings — informal "cash for keys" agreements and lease non-renewals are not included. The 2020 snap-year rate averages filings over 2016–2020, which includes the 2020 COVID eviction moratorium months — rates for that window are diluted relative to normal years. Renter-household denominators are estimated from ACS housing units × occupancy × renter share, so rates in small or fast-changing tracts carry extra uncertainty. For 2015, the 104 tracts whose boundary changed after 2010 use an estimate of their renter households (§1.1, §12.4).
 - **Foreign-born %** has ±2–3 percentage point margin of error in ACS 5-year estimates for small tracts (populations under 2,000).
 - **Business data** has selection bias toward historically significant areas in East Austin and downtown where Preservation Austin and community partners have conducted inventories. The tool explicitly notes this: "No Data" in the anchor density badge means no survey coverage, not no culture.
 - **Home values** are the census's median value of owner-occupied homes (ACS table B25077). That is what owners told the survey their home would sell for, not an appraisal and not a sale price.
@@ -942,11 +966,12 @@ Earlier versions of this section, and the site's footer, also named the Travis C
 | `build_latest_acs.mjs` | Replaces the latest-survey rows of the three census files with one ACS 5-year release (§1.1); `--check` rebuilds the rows already held and lists differences. Also computes that survey's eviction rates from the BASTA extract. |
 | `build_light_rail.mjs` | Builds the light rail overlay from Austin Transit Partnership's published route and station layers (§1.2); downloads are cached in `data/_cache/light_rail/`. |
 | `rebuild_census_history.mjs` | Rebuilds 2000, 2010 and 2015 population, race, owner share and rent burden from census tables (§1.1). Shares its census helpers with `build_stages.mjs` (`scripts/lib/census.mjs`). |
-| `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020) |
+| `rebuild_acs_history.mjs` | Rebuilds every other census figure in the 2010 and 2015 rows from the survey tables, checks the 2020 rows against theirs, and recomputes the 2015 eviction rates (§1.1). Runs second in `npm run build:history`; `--dry` reports without writing. Pulls are cached in `data/_cache/census_history/history_acs_*.json`. Running both rebuild scripts again on unchanged tables changes nothing, timestamps included. |
+| `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020). Superseded for the 2000, 2010 and 2015 rows by the two rebuild scripts; if it is ever re-run, run `npm run build:history` afterwards. |
 | `fill_demographic_history.py` | Chains crosswalks for deep history + interpolates 2005 from 2000/2010 |
 | `extract_permits.py` | Extracts new construction permits and commercial sqft from COA 1.5GB permit CSV |
 | `merge_permits_and_evictions.py` | Merges permit data and tract-level eviction rates into phase1_output JSONs |
-| `prepare_basta_evictions.py` | Converts BASTA filing counts to rates: filings averaged over ACS-aligned windows (2015←2014–15, 2020←2016–20) ÷ estimated renter households (occupied units × renter share) × 100. Tracts with <30 renter households excluded. The latest survey's rates (2024←2020–24) are computed the same way by `build_latest_acs.mjs`. |
+| `prepare_basta_evictions.py` | Converts BASTA filing counts to rates: filings averaged over ACS-aligned windows (2015←2014–15, 2020←2016–20) ÷ estimated renter households (occupied units × renter share) × 100. Tracts with <30 renter households excluded. The latest survey's rates (2024←2020–24) are computed the same way by `build_latest_acs.mjs`. The 2015 rates were recomputed in November 2026 by `rebuild_acs_history.mjs`, which estimates renter households where a tract's boundary changed (§1.1). |
 | `geocode_businesses_google.py` | Geocodes business locations to rooftop precision via Google Maps API |
 
 ---
@@ -1042,6 +1067,15 @@ How the Equity lens's counts (§6.3) move with the radius:
 
 The counts depend on the radius. The pattern does not: at every radius, listings lie near a far larger share of continued-loss tracts than of tracts where vulnerable residents live.
 
+**In the census files**
+
+| Choice | Why | Not tested, or the effect |
+|--------|-----|---------------------------|
+| A tract drawn from several earlier tracts takes the weighted average of their medians. This is applied to median age, household income and the Gini index as well as to the three medians the stage tests use (§1.1) | Appendix 3 carries its medians this way. The same arithmetic is used for the rest so that one rule covers every median in a row | An average of medians is not the median of the combined area, and the Gini index is not a median at all. It applies to 9 tracts |
+| 2015 eviction rate where a tract's boundary changed: renter households are estimated by sharing the earlier tract's count among today's tracts in proportion to their 2016–2020 renter households (§1.1) | The filings are on today's boundaries and the survey is not. The approach is target-density weighting (Schroeder 2007). Schroeder and Van Riper (2013) report that it is generally more accurate than sharing by area, and that it can give large errors in some settings | Tested on the 104 tracts against each tract's own later rate (2016–2019 filings over 2016–2020 renter households). Half of the estimates were within a factor of 1.54 of the later rate. Sharing the earlier count by land area scored 1.82, and the figures the file held scored 2.38. Giving every piece its parent's rate also scored 1.54, but it hides what the filings show: tract 450, with about 5 filings a year, would have shown 24 per 100 renter households, and its own filings give 1.4. Tracts whose boundary did not change scored 1.42, which is how far a rate moves between periods with nothing estimated. The method assumes renters were spread among the pieces in 2011–2015 as they were in 2016–2020 |
+| Where several earlier tracts and several of today's tracts overlap, the earlier counts are added and shared among all of today's tracts in the group | Target-density weighting is defined for one earlier area at a time, and a later count on today's boundary cannot be split between two earlier tracts | Applies to 18 of the 104 tracts |
+| A piece under 0.5% of an earlier tract is ignored; a piece under 2% is not counted as a source when a row is described as "same boundary" | To keep slivers left by redrawn lines from counting as boundary changes | Both are round numbers |
+
 **In the presenter tools**
 
 | Choice | Why | Not tested, or the effect |
@@ -1060,5 +1094,7 @@ The counts depend on the radius. The pattern does not: at every radius, listings
 - Freeman, Lance (2005). "Displacement or Succession? Residential Mobility in Gentrifying Neighborhoods." *Urban Affairs Review* 40(4): 463–491. Cited here as Bates's stated starting point; not read for this site.
 - Logan, John R., Zengwang Xu and Brian J. Stults (2014). "Interpolating U.S. Decennial Census Tract Data from as Early as 1970 to 2010: A Longitudinal Tract Database." *The Professional Geographer* 66(3): 412–420. The crosswalk the UT study used; not used by this site.
 - Preis, Benjamin, Aarthi Janakiraman, Alex Bob and Justin Steil (2021). "Mapping gentrification and displacement pressure: An exploration of four distinct methodologies." *Urban Studies* 58(2): 405–424. Figures quoted from the abstract.
+- Schroeder, Jonathan P. (2007). "Target-Density Weighting Interpolation and Uncertainty Evaluation for Temporal Analysis of Census Data." *Geographical Analysis* 39: 311–335. The method behind the 2015 renter-household estimate (§12.4). Cited from Schroeder and Van Riper (2013); not read for this site.
+- Schroeder, Jonathan P. and David C. Van Riper (2013). "Because Muncie's Densities Are Not Manhattan's: Using Geographical Weighting in the EM Algorithm for Areal Interpolation." *Geographical Analysis* 45(3): 216–237. Consulted as the author manuscript on PubMed Central (PMC3956703), November 2026, for its description of target-density weighting and its comparison with weighting by area.
 - U.S. Census Bureau. *Comparing ACS Data.* census.gov/programs-surveys/acs/guidance/comparing-acs-data.html. Read November 2026.
 - Way, Heather, Elizabeth Mueller and Jake Wegmann (2018). *Uprooted: Residential Displacement in Austin's Gentrifying Neighborhoods, and What Can Be Done About It.* University of Texas at Austin. Appendix 3, "Methodology for Mapping Gentrifying Neighborhoods in Austin" (pp. 133–148), and the project's Gentrification Mapping Methodology page, sites.utexas.edu/gentrificationproject.

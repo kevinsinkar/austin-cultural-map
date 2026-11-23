@@ -175,7 +175,7 @@ median on today's tract = Σ (median × weight) ÷ Σ weight
 |------|------|
 | Share of a 2000 tract | Census Bureau 2000–2010 relationship file: share of the 2000 tract's population (for counts of people) or housing units (for counts of homes) |
 | Share of a 2010 tract | Census Bureau 2010–2020 relationship file: share of the 2010 tract's land area |
-| Weight for a median | The families, owner homes or renter homes the earlier tract contributes |
+| Weight for a median | The families, owner homes or renter homes the earlier tract contributes. In the census files the same rule also carries median age (weighted by residents) and household income and the Gini index (weighted by households) |
 
 Shares are taken after the counts are carried.
 
@@ -250,7 +250,7 @@ change (rates)   = latest value − earliest value                              
 | Poverty rate | ACS B17001 |
 | Unemployment | ACS B23025 |
 | SNAP participation | ACS B22003 |
-| Eviction filing rate | BASTA Austin filings, Travis County, 2014–2025 |
+| Eviction filing rate | BASTA Austin filings, Travis County, 2014–2025: filings per year ÷ renter households × 100. For 2015, renter households are estimated where a tract's boundary has changed since 2010 (§1.1, §12.4) |
 
 Dollar figures are in dollars of each year; they are not adjusted for inflation. For a neighborhood, each figure is the average of its tracts weighted by residents, and a year is shown only when every tract has a value.
 

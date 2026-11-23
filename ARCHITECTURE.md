@@ -144,6 +144,7 @@ austin-cultural-map/
 │   ├── build_stages.mjs             # Generates data/stages.js (three-part stage test from census tables)
 │   ├── lib/census.mjs               # Shared: cached Census API pulls, tract relationship files, allocation
 │   ├── rebuild_census_history.mjs   # Rebuilds 2000/2010/2015 population, race, tenure, rent burden from census tables
+│   ├── rebuild_acs_history.mjs      # Rebuilds the other 2010/2015 survey figures, checks 2020, recomputes 2015 eviction rates
 │   ├── check_public_bundle.mjs      # Fails a build that contains private data or a presenter-only view
 │   └── _archive/                    # Archived automation scripts
 │
