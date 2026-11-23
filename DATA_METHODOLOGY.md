@@ -84,7 +84,7 @@ A newer release is a one-line change: `LATEST_ACS` in `scripts/lib/census.mjs`, 
 | Construction Permits | 191,099 new construction (44,266 commercial) | City of Austin Issued Construction Permits (dataset `3syk-w9eu`) | Mar 2026 |
 | Planned light rail (Phase 1) | 1 branched line (9.7 miles as drawn), 15 stations | Austin Transit Partnership's public map layers: "Light Rail Route" (edited Jul 2026) and "Light Rail Stations (Phase 1)" (edited Oct 2026) | Nov 2026 |
 
-**Business data coverage note:** The 106 tracked businesses (46 operating + 60 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. Approximately 230 of 269 regions have no tracked businesses. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
+**Business data coverage note:** The 106 tracked businesses (46 operating + 60 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. 228 of the 269 tracts have no tracked business. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
 
 **Records corrected November 2026.** A check of the hand-compiled layers against their sources found these errors; each fix cites the page it rests on.
 
@@ -126,6 +126,54 @@ Addresses were turned into coordinates with the Census Bureau's public geocoder.
 
 Not corrected, and still open: 24 of the 46 operating businesses have no report of closing but were not confirmed open, and several 2026 closures reported in the press (among them Lammes Candies, Wheatsville Co-op on Guadalupe, Hoover's Cooking and the Hideout Theatre) are on neither list.
 
+**Business locations and tracts checked November 2026.** A business counts toward the census tract named in its record (`region_id`). A check found that 50 of the 106 records named a tract their own map dot was not in, and that 37 records had no street address, only a street name or an area. Their dots were approximate, and in five places unrelated businesses shared one point.
+
+- **Records with a street address (69).** Each address was sent to the Census Bureau's public geocoder, which returns a point and the 2020 census tract for it. Where the record's tract and the dot disagreed (34 records), the geocoder's tract matched the dot every time, so the record was refiled under that tract. The dots did not move.
+- **Records without a street address (37).** An address was looked for in published sources. For 24 it was found on a page that names the business at that address (table below); the dot and the tract now come from that address. The Rainey Street cluster was refiled under the tract Rainey Street is in.
+- **Records still on a placeholder dot (13).** No address, or no trace of the business, was found for Evan's Barbershop, Erwin Center Barber Shop, Mrs. Johnson's Donuts, Tamale House East (original), Holly Neighborhood Assoc. HQ, Baby Acapulco's (S Lamar), Club 801 and Taqueria Chapala; three records are clusters, not single businesses (Kealing Jr. High area businesses, Rainey Street bungalow businesses, Fiesta Gardens area tiendas); and two records give an address that does not match what was found (Saigon Le Vendeur, Asia Market). Tamale House East and Club 801 are still filed under a tract their dot is not in. These records are listed in `TODO.md` for a decision on whether they stay.
+
+In all, 55 records changed tract and 24 dots moved. The largest changes: census tract 8.03 (Chestnut) went from 15 tracked businesses to 6, tract 9.01 from 9 to 6, and tract 8.04 from 1 to 5, because East 11th Street businesses had been filed one tract too far north. 41 of the 269 tracts now have a tracked business (39 before).
+
+| Business | Address now used | Page that states it |
+|----------|------------------|---------------------|
+| Downs Field | 2816 E 12th St | Wikipedia, "Downs Field" |
+| Mt. Olive Baptist Church | 1800 E 11th St | Texas Historical Commission Atlas, marker 5507015031 |
+| Weather Up | 1808 E Cesar Chavez St | Community Impact, Aug 25, 2019 |
+| Old Thousand (Burnet) | 4805 Burnet Rd | Community Impact, "Old Thousand restaurant to close on Burnet Road" |
+| Nubian Queen Lola's | 1815 Rosewood Ave | Austin Chronicle restaurant listing |
+| Gene's Po-Boys | 1209 E 11th St | Austin Chronicle review, Sep 22, 2000 |
+| El Gallo Restaurant | 2910 S Congress Ave | Austin Chronicle, "Austin Landmarks on the Menu" |
+| Jumpolin Piñata Store | 1401 E Cesar Chavez St | Austin Chronicle, "Sign of the Times" |
+| Las Cazuelas | 1701 E Cesar Chavez St | Austin Chronicle restaurant review |
+| Armadillo World Headquarters | 525½ Barton Springs Rd | Wikipedia, "Armadillo World Headquarters" |
+| Las Manitas Avenue Cafe | 211 Congress Ave | Austin Chronicle, Mar 7, 2008 |
+| Magnolia Cafe (Lake Austin) | 2304 Lake Austin Blvd | Community Impact, May 29, 2020 |
+| Star Seeds Cafe | 3101 N I-35 | Community Impact, Nov 19, 2019 |
+| Player's | 300 W Martin Luther King Jr Blvd | Community Impact, Nov 24, 2014 |
+| Vulcan Video | 4411 Russell Dr (its last store) | Community Impact, Jul 1, 2019 |
+| Ruby's BBQ | 512 W 29th St | Patch, "Ruby's BBQ Near UT Austin Set To Close" |
+| Holiday House | 2425 Exposition Blvd | Austin Chronicle, "Second Helpings" |
+| Fran's Hamburgers | 1822 S Congress Ave | Austin Chronicle, "Second Helpings" |
+| South Congress Books | 1608 S Congress Ave | Community Impact, "South Congress Books to move to Kerbey Lane" |
+| Trudy's Tex-Mex (North Star) | 8820 Burnet Rd | Community Impact, "Trudy's announces closure of North Austin location" |
+| Koriente | 621 E 7th St | CultureMap Austin, "Koriente closure 2025" |
+| DipDipDip Tatsu-Ya | 7301 Burnet Rd | Community Impact, Aug 15, 2025 |
+| Baby Acapulco (Barton Springs) | 1628 Barton Springs Rd | CultureMap Austin, "Baby Acapulco closed Barton Springs" |
+| Sunny's Backyard | 3526 E 7th St | Community Impact, Feb 13, 2024 |
+
+The geocoder does not match frontage-road addresses, so Star Seeds Cafe's point is OpenStreetMap's entry for 3101 North Interstate 35. Three dots moved to another part of town because the old placeholder was on the wrong street: El Gallo (it was on South Congress, not East Cesar Chavez), Fran's Hamburgers (drawn on Cameron Road; the record's 2013 closing is the South Congress store) and Koriente (downtown, not East Austin). The same search found closing years and other details in several closed-business records that contradict the sources; those are listed in `TODO.md` and have not been changed.
+
+**Closing years added November 2026.** Six closed businesses carried a closing date as text but no closing year, so the map never drew them as closed. Each date was checked against a published report before the year was added:
+
+| Business | Closed | Source | Also corrected |
+|----------|--------|--------|----------------|
+| Contigo, 2027 Anchor Ln | December 30, 2021 | Community Impact, Dec 20, 2021 | |
+| Weather Up, 1808 E Cesar Chavez St | June 2, 2019 | CultureMap Austin, Jun 4, 2019 (relaying social media reports); Community Impact, Aug 25, 2019 ("closed in early June") | |
+| Stay Gold, 1910 E Cesar Chavez St | By February 1, 2021 | Austin Chronicle, Feb 1, 2021 (owners confirm it has left the property) | Opened January 2015, not April (Community Impact, Feb 26, 2020: fifth anniversary on Jan. 21) |
+| Rosewood, 1209 Rosewood Ave | December 31, 2022 | Eater Austin, Jan 5, 2023 | |
+| Redbud Ice House, 2027 Anchor Ln | June 1, 2025 | Community Impact, May 29, 2025; Austin Chronicle, Jun 5, 2025 | The record said June 1, 2024, which was a year early. Opened March 2024 |
+| Old Thousand, 4805 Burnet Rd | December 2023 | Community Impact, Nov 29, 2023 (closing announced for Dec. 3) | |
+
 ### 1.3 Neighborhood Planning Areas
 
 | Dataset | Features | Source | Fetched |
@@ -143,7 +191,7 @@ Not corrected, and still open: 24 of the 46 operating businesses have no report 
 | Socioeconomic | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. SNAP for 822 rows. |
 | Displacement stage | 269 | 100% | Decided for every tract; 8 to 12 are not scored in a given year (§3.4) |
 | Pressure score (presenter tools) | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.8) |
-| Legacy Businesses | ~40 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
+| Legacy Businesses | 41 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 | Eviction Filings | 245 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
@@ -742,7 +790,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 ### Coverage Gaps
 
 - **60 regions** (22%) lack property and socioeconomic data — mostly rural, industrial, or ETJ tracts with sparse or no residential housing stock. DVI for these regions is computed from demographics only (Demographic Vulnerability sub-index), re-weighted to 100% of the DVI score. This makes their DVI less comprehensive but not zero.
-- **~230 regions** have no tracked legacy businesses. This reflects survey coverage concentrated in East Austin, South Lamar, and downtown — not the absence of culturally significant businesses elsewhere. The Triage lenses (§6) show the counts for reference and do not use them in any rule.
+- **228 tracts** have no tracked legacy business. This reflects survey coverage concentrated in East Austin, South Lamar, and downtown — not the absence of culturally significant businesses elsewhere. The Triage lenses (§6) show the counts for reference and do not use them in any rule.
 
 ### Temporal Caveats
 

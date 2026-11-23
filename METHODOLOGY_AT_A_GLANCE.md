@@ -264,14 +264,14 @@ nearby = √( (listing latitude − tract center latitude)² + (listing longitud
 
 | Term | Data |
 |------|------|
-| Listings | Preservation Austin's published grants, merit awards, Legacy Business Month listings and advocacy milestones, compiled in `data/preservationAustin.js` (156). Listings filed as citywide (18) are not counted as near any place |
+| Listings | Preservation Austin's published grants, merit awards, Legacy Business Month listings and advocacy milestones, compiled in `data/preservationAustin.js` (181). Listings filed as citywide (19), and one whose location is not published, are not counted as near any place |
 | Tract center | The center point of the tract's shape, `data/regionIndex.js` |
 
 0.012 degrees is about 1.3 km.
 
 ### 2.5 Legacy businesses
 
-A count of the businesses this site tracks inside the place, open and closed (`data/businesses.js`: 41 open, 52 closed). Most tracts have none tracked, which reflects where inventories were done (§1.2).
+A count of the businesses this site tracks inside the place, open and closed (`data/businesses.js`: 46 open, 60 closed). A business counts toward the census tract its street address is in, as the Census Bureau's geocoder assigns it; 13 records have no confirmed address and keep an approximate place. Most tracts have none tracked, which reflects where inventories were done (§1.2).
 
 <!-- presenter-tools -->
 
