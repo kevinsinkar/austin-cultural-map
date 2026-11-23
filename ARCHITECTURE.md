@@ -107,7 +107,7 @@ austin-cultural-map/
 │   ├── interim_demographics.js   # Enriches demos with derived pct/pop fields
 │   ├── interim_property.js       # Pass-through from normalised property rows
 │   ├── interim_socioeconomic.js  # Joins socio+property+demo via auditedData Maps
-│   ├── businesses.js       # Static legacy business data (46 operating, 66 closed)
+│   ├── businesses.js       # Static legacy business data (45 operating, 68 closed)
 │   ├── preservationAustin.js  # PA grants, merit awards, legacy businesses, advocacy (181 entries)
 │   ├── constants.js        # REGION_NAMES, SNAP_YEARS, PLAY_YEARS, DEMO_COLORS
 │   ├── final_updated_regions.js  # Canonical GeoJSON (269 regions, full-precision polygons). SOURCE ONLY —
@@ -560,7 +560,7 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 | **DVI / pressure score** | Presenter tools only (0–100); it no longer colors the map. Computed from 3 sub-indices: demographic vulnerability (35%), market pressure (35%), socioeconomic stress (30%). It sums up present-day conditions. Adjustable weights in the DVI Weights panel. |
 | **Pressure score bands** | Quarters of the scored tracts, not stages: under 37, 37–46, 46–56, 56 and over (`DVI_BINS` in `utils/math.js`). Affluent regions are capped at 20. |
 | **Anchor Density** | `surviving_businesses / (surviving + closed)`. Ratio 0–1. Badge: Strong (>70%), Eroding (40–70%), Critical (<40%). |
-| **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 46 operating + 66 closed. |
+| **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 45 operating + 68 closed. |
 | **Triage Lenses** | Trajectory (where change is moving now), Equity (where vulnerable residents live and where Preservation Austin's listings are), Matrix (vulnerability against the housing market). Each lens sorts every tract into a group by a stated rule; there is no score. See DATA_METHODOLOGY.md §6. |
 | **Preservation Austin** | Overlay layer showing 181 entries: grants ($284K+ since 2016), merit awards (2022–2026), Legacy Business Month participants (2023–2026), and advocacy milestones. |
 | **Census Data** | Real Census Bureau data fetched via API. Demographics from Decennial SF1 (2000, 2010, 2020) and ACS 5-Year (2010, 2015, 2020, 2024). Race variables use Not-Hispanic-by-Race tables (P004/P005) to avoid double-counting. |

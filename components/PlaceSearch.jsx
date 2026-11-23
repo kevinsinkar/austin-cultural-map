@@ -1,5 +1,5 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { LEGACY_OPERATING, LEGACY_CLOSED } from "../data";
+import { LEGACY_OPERATING, LEGACY_CLOSED, sinceText, closedPhrase } from "../data";
 import { placeSearchIndex } from "../utils/places";
 import { AREA_NAMES } from "../data/areaNames";
 
@@ -32,7 +32,7 @@ function anchorIndex() {
   const row = (b, closed) => ({
     key: `anchor:${b.id}`, kind: "anchor", id: b.id, business: b,
     label: b.name,
-    detail: (closed ? `Closed ${b.closed || ""}`.trim() : `Operating since ${b.est}`) + (b.unverified ? " · unverified" : ""),
+    detail: (closed ? closedPhrase(b) : `Operating since ${sinceText(b)}`) + (b.unverified ? " · unverified" : ""),
     haystack: `${b.name} ${b.address || ""}`.toLowerCase(),
   });
   return [

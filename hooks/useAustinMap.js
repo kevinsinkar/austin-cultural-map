@@ -5,7 +5,7 @@ import { REGION_INDEX } from "../data";
 import { regionLookupMap } from "../data/regionIndex";
 import { loadTractShapes, loadNeighborhoodShapes } from "../data/shapes";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
-import { LEGACY_OPERATING, LEGACY_CLOSED, UNVERIFIED_NOTE, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS } from "../data";
+import { LEGACY_OPERATING, LEGACY_CLOSED, UNVERIFIED_NOTE, sinceText, closedPhrase, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS } from "../data";
 
 /** Popup line for a business record no published source was found for. */
 const unverifiedLine = (b) => (b.unverified ? `<br/><em>${UNVERIFIED_NOTE}</em>` : "");
@@ -499,7 +499,7 @@ export default function useAustinMap({
           weight: 1,
           fillOpacity: 0.95,
         }).addTo(operatingLayer);
-        m.bindPopup(`<strong>${b.name}</strong><br/>Est. ${b.est}<br/>${b.address}${unverifiedLine(b)}`);
+        m.bindPopup(`<strong>${b.name}</strong><br/>Open since ${sinceText(b)}<br/>${b.address}${unverifiedLine(b)}`);
         bizMarkersRef.current.set(b.id, m);
       });
       LEGACY_CLOSED.forEach((b) => {
@@ -513,7 +513,7 @@ export default function useAustinMap({
           weight: 1,
           fillOpacity: 0.85,
         }).addTo(closedLayer);
-        m.bindPopup(`<strong>${b.name}</strong><br/>Closed ${b.closed}<br/>${b.relocated || ""}${unverifiedLine(b)}`);
+        m.bindPopup(`<strong>${b.name}</strong><br/>${closedPhrase(b)}<br/>${b.relocated || ""}${unverifiedLine(b)}`);
         bizMarkersRef.current.set(b.id, m);
       });
     }

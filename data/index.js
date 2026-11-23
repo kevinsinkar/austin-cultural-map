@@ -5,7 +5,7 @@ export { NAME_TO_ID, ID_TO_NAME, toId, toName, VISIBLE_REGIONS, MERGE_LOOKUP, to
 // REGION_SVGS was previously used for SVG overlays but has been
 // deprecated in favor of rendering REGIONS_GEOJSON with Leaflet's
 // native styling and event handling (see useAustinMap.js).
-export { LEGACY_OPERATING, LEGACY_CLOSED, UNVERIFIED_NOTE } from "./businesses";
+export { LEGACY_OPERATING, LEGACY_CLOSED, UNVERIFIED_NOTE, sinceText, closedText, closedPhrase } from "./businesses";
 export { DEMOGRAPHICS } from "./interim_demographics";
 export { SOCIOECONOMIC } from "./interim_socioeconomic";
 export { TIPPING_POINTS } from "./tippingPoints";

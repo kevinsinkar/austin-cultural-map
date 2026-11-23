@@ -271,7 +271,7 @@ nearby = √( (listing latitude − tract center latitude)² + (listing longitud
 
 ### 2.5 Legacy businesses
 
-A count of the businesses this site tracks inside the place, open and closed (`data/businesses.js`: 46 open, 66 closed). A business counts toward the census tract its street address is in, as the Census Bureau's geocoder assigns it; 13 records have no confirmed address and keep an approximate place. Most tracts have none tracked, which reflects where inventories were done (§1.2).
+A count of the businesses this site tracks inside the place, open and closed (`data/businesses.js`: 45 open, 68 closed). A business counts toward the census tract its street address is in, as the Census Bureau's geocoder assigns it; nine records have no confirmed address and keep an approximate place. Most tracts have none tracked, which reflects where inventories were done (§1.2).
 
 <!-- presenter-tools -->
 
