@@ -95,7 +95,6 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 
 - [ ] **S1. Light rail station names on hover.** The automated check did not see a tooltip. Check by hand.
 - [ ] **S2. Phone width after the slider change.** The slider now ends at 2026 and the last label reads 2024.
-- [ ] **S3. The live site after the next push.** Only the deploy job has been checked, never the published page.
 - [ ] **S4. Old links with `year=2023`.** They now show the 2016–2020 stage, the latest reading at or before 2023. Decide whether that is right or whether 2023 should open 2024.
 - [ ] **S5. A closed business has no dot before the year it closed.** The map now opens on 2026, where every closed business is drawn. Moving the slider back to 2024 hides the 15 that closed in 2025–26, although they were open then. Decide whether closed businesses should show as open until their closing year.
 - [ ] **S6. Other browsers and a screen reader.** Only Chrome has been used for checks.
@@ -125,4 +124,5 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 - [x] 2026-11-22. **D2. Which year the map opens on.** Decided: 2026. The stage colors there are the 2024 reading and the time bar names the survey. Links that carry a year are unaffected.
 - [x] 2026-11-22. **D7. Which 2026 closures belong on the lists.** Decided: locally owned, open at least 20 years in Austin, closing reported by a named news source. Added under it: Lammes Candies, Wheatsville Co-op (Guadalupe), Hoover's Cooking, Vespaio, Little Mexico, Hideout Theatre (Congress Ave). Left out: Vince Young Steakhouse (15 years), Marlow (about 3), the Feels So Good storefront. The file now holds 46 operating and 66 closed. Existing entries that fall short are in D11.
 - [x] 2026-11-22. **D10. Business records that cannot be traced.** Decided: keep them, marked unverified. Nine records carry the mark, shown in the map popup, the story card, search and the About text (R13).
-- [x] 2026-11-22. **D1. Push.** Decided: push once the answers above were applied.
+- [x] 2026-11-22. **D1. Push.** Decided: push once the answers above were applied. Pushed; the deploy job passed.
+- [x] 2026-11-22. **S3. The live site after a push.** Checked in a browser after the deploy: it opens on 2026 with 46 operating and 66 closed dots, shows the unverified notes and the new closures, has no page errors, and does not scroll sideways at phone width.
