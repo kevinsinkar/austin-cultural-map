@@ -1,9 +1,10 @@
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
 import { getDviBandColor, DVI_EXCLUDED } from "../utils/math";
+import { LATEST_YEAR } from "../data/constants";
 
 // Fixed domains so every sparkline in a list shares the same scale
 const X_MIN = 2000;
-const X_MAX = 2023;
+const X_MAX = LATEST_YEAR;
 const Y_MAX = 100;
 
 /**

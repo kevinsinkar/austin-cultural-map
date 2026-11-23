@@ -12,6 +12,7 @@
 import AUDITED_DEMO from "./phase1_output/audited_demographics_normalized.json";
 import AUDITED_PROP from "./phase1_output/audited_property_normalized.json";
 import AUDITED_SOCIO from "./phase1_output/audited_socioeconomic_normalized.json";
+import { CENSUS_YEARS, YEAR_MAX } from "./constants";
 
 // ── Field-name normalisation ────────────────────────────────────────────
 
@@ -259,9 +260,9 @@ export function priorRow(rows, targetYear, gapYears = 5) {
  * Uses the pre-normalized AUDITED_DEMO_BY_ID data — the same source
  * as interim_demographics.js — so the pct→fraction math is done once.
  */
-// Standard year range for all charts (1990–2025)
+// Standard year range for all charts: 1990 to the slider's last year.
 // Census data starts at 2000 for most tracts; gaps render as empty space
-const CHART_YEARS = [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023, 2025];
+const CHART_YEARS = [1990, 1995, ...CENSUS_YEARS, YEAR_MAX];
 
 export function toDemoChartData(regionId) {
   const rows = AUDITED_DEMO_BY_ID.get(regionId);

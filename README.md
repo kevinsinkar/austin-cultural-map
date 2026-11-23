@@ -1,6 +1,6 @@
 # Austin's Shifting Ground
 
-An interactive data visualization mapping four decades of cultural displacement across Austin, TX (1990–2025). Built for [Preservation Austin](https://www.preservationaustin.org/) to help identify neighborhoods at risk of losing their cultural anchors and prioritize grant intervention.
+An interactive data visualization mapping four decades of cultural displacement across Austin, TX (1990–2026). Built for [Preservation Austin](https://www.preservationaustin.org/) to help identify neighborhoods at risk of losing their cultural anchors and prioritize grant intervention.
 
 **Live demo:** _coming soon_
 
@@ -34,7 +34,7 @@ The opportunity data is generated from `private/preservation_austin_tabling_data
 
 ## Features
 
-- **Interactive Map** — Leaflet-based choropleth of 269 census tracts colored by displacement stage (vulnerable, early, dynamic, late, continued loss), decided by the three-part test of the UT "Uprooted" study and checked against the City of Austin's own map. It opens on 2023; the year slider runs from 1990 to 2025. The color key sits above the map and the year controls below it, so nothing covers the map. Works on phones and tablets.
+- **Interactive Map** — Leaflet-based choropleth of 269 census tracts colored by displacement stage (vulnerable, early, dynamic, late, continued loss), decided by the three-part test of the UT "Uprooted" study and checked against the City of Austin's own map. It opens on 2024, the latest census year; the year slider runs from 1990 to 2026. The color key sits above the map and the year controls below it, so nothing covers the map. Works on phones and tablets.
 - **Start here** — With nothing selected, the right-hand card states the five ideas the map is built around, each with one thing to do on the map. The numbers in it are computed from the data (`data/bigIdeas.js`).
 - **Search** — Find a neighborhood, a census tract number, a tracked cultural anchor or a street address. Everything except the address lookup runs in the browser; an address is sent to OpenStreetMap's Nominatim service only when the person chooses to look it up.
 - **Place panel and story card** — Selecting a census tract or a neighborhood opens the same summary panel, which leads to the same story card. Places are titled by neighborhood name where a City of Austin planning area supports one, with the census tract number second (`utils/places.js`).
@@ -99,6 +99,17 @@ npm run build:stages
 # Rebuild 2000/2010/2015 population, race, owner share and rent burden from
 # census tables (runs offline from data/_cache/census_history/)
 npm run build:history
+
+# Move the site to a newer census survey: change LATEST_ACS in
+# scripts/lib/census.mjs, then run these two (the first pull needs a Census
+# API key in CENSUS_API_KEY; add -- --check to build:latest to compare the
+# rows already held against their own release without writing anything)
+npm run build:latest
+npm run build:stages
+
+# Rebuild the light rail overlay from Austin Transit Partnership's published
+# layers (add -- --refresh to download them again)
+npm run build:rail
 ```
 
 The map polygons the site loads (`data/shapes/*.min.json`), the tract titles (`data/placeNames.js`), the area-name list (`data/areaNames.js`), the displacement stages (`data/stages.js`) and the Triage lens figures (`data/stageLenses.js`) are generated files that are checked in. The full-precision geometry in `data/final_updated_regions.js` and `data/neighborhoods_geojson.js` is the source and is no longer bundled, which took the first download from about 9.7 MB to about 3.4 MB (a 2.9 MB script plus 0.5 MB of tract shapes, before compression).
@@ -107,13 +118,13 @@ The map polygons the site loads (`data/shapes/*.min.json`), the tract titles (`d
 
 All data lives in `data/phase1_output/` as three audited, normalized JSON files covering 269 regions:
 
-- **Demographics** (1,542 rows; 2000–2023) — population, race/ethnicity, education, rent burden, age
-- **Property** (1,052 rows; 2010–2023) — home values, rent, commercial sqft, vacancy, permits
-- **Socioeconomic** (1,052 rows; 2010–2023) — income, poverty, unemployment, Gini coefficient, eviction, SNAP
+- **Demographics** (1,541 rows; 2000–2024) — population, race/ethnicity, education, rent burden, age
+- **Property** (1,052 rows; 2010–2024) — home values, rent, commercial sqft, vacancy, permits
+- **Socioeconomic** (1,052 rows; 2010–2024) — income, poverty, unemployment, Gini coefficient, eviction, SNAP
 
 Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the pressure score re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. A (region, year) must have at least 3 of the 8 input fields to get a DVI point at all — below that, re-weighting degenerates into echoing a single field (the 2000 rows carry only owner-occupancy, which scored every low-ownership tract a spurious 100), so those years show the nearest measured value with a confidence note instead. See `DATA_METHODOLOGY.md`.
 
-Business data tracks 49 operating and 58 closed cultural anchors with location, founding year, cultural community, and (for closures) cause and replacement.
+Business data tracks 46 operating and 60 closed cultural anchors with location, founding year, cultural community, and (for closures) cause and replacement.
 
 ## Project Structure
 

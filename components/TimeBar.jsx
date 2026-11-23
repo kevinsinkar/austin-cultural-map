@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import ConfidenceChip from "./ConfidenceChip";
-import { SNAP_YEARS, TIMELINE_EVENTS } from "../data/constants";
+import { SNAP_YEARS, TIMELINE_EVENTS, YEAR_MIN, YEAR_MAX } from "../data/constants";
 import { isViewAllowed } from "../appConfig";
 import { STAGE_BASE_YEAR, stageDataYear, stageSourceLabel } from "../utils/stages";
 
-const YEAR_MIN = 1990;
-const YEAR_MAX = 2025;
 const pctOf = (y) => ((Math.max(y, YEAR_MIN) - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * 100;
 
 /**

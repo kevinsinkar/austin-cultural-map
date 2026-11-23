@@ -4,7 +4,7 @@ import {
   AreaChart, Area, XAxis, YAxis, ResponsiveContainer,
 } from "recharts";
 import { DEMOGRAPHICS } from "../data";
-import { DEMO_COLORS } from "../data/constants";
+import { DEMO_COLORS, LATEST_YEAR } from "../data/constants";
 import { stageFor } from "../utils/stages";
 import { catColor } from "../utils/formatters";
 import { cultureColor, cultureSort, closeYear } from "./TimelineView";
@@ -130,7 +130,7 @@ function EraCard({
   const stageAnnotation = useMemo(() => {
     const ref = { kind: "tract", id: 84 };
     const a = stageFor(ref, era.years[0]);
-    const b = stageFor(ref, Math.min(era.years[1], 2023));
+    const b = stageFor(ref, Math.min(era.years[1], LATEST_YEAR));
     if (!a || !b) return null;
     const name = (s) => (s.isBaseYear && s.scored ? s.typeName : s.cls.label);
     return { start: name(a), end: name(b) };

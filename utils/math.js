@@ -3,6 +3,7 @@ import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi.js";
 import { AUDITED_SOCIO_BY_ID, AUDITED_PROP_BY_ID, AUDITED_DEMO_BY_ID } from "../data/auditedData.js";
 import { LEGACY_OPERATING, LEGACY_CLOSED, SOCIOECONOMIC } from "../data";
 import { NAME_TO_ID } from "../data/regionLookup";
+import { LATEST_YEAR, CENSUS_YEARS } from "../data/constants";
 
 // ── DVI interpolation ──
 
@@ -51,8 +52,10 @@ export function interpolateDvi(regionId, yr) {
 // 2026), so it is NOT what colors the map. The map's displacement stages
 // come from utils/stages.js. Here the score is cut into plain quarters, not
 // stages: the cut points are the quartiles of scored tracts pooled over
-// 2015, 2020 and 2023 under the default weights. A cool one-hue ramp keeps
-// it visually apart from the stage colors.
+// 2015, 2020 and the 2019-2023 survey under the default weights (set
+// November 2026, before the site moved to the 2020-2024 survey; not
+// recomputed). A cool one-hue ramp keeps it visually apart from the stage
+// colors.
 //   fill — swatch  ·  text — darker tone readable on light backgrounds
 //   ·  on — number color readable ON the fill.
 export const DVI_BINS = [
@@ -147,7 +150,7 @@ export function isRegionExcluded(regionId, year) {
 }
 
 export function getDviTimeSeries(regionId) {
-  return [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023].map((yr) => ({
+  return [1990, 1995, ...CENSUS_YEARS].map((yr) => ({
     year: yr,
     dvi: interpolateDvi(regionId, yr),
   }));
@@ -258,7 +261,7 @@ export function getAnchorBadge(density) {
 // a decade, and the policy events; the numbers are computed HERE from the
 // audited census data for the corridor's tracts, so a stat shown in the
 // panel can never drift from the data underneath it.
-const TIPPING_DATA_YEARS = [2000, 2005, 2010, 2015, 2020, 2023];
+const TIPPING_DATA_YEARS = CENSUS_YEARS;
 const MIN_GROUP_BASE = 100; // people; % change on smaller bases is noise
 
 function nearestTippingYear(y) {
@@ -347,7 +350,7 @@ export function computeTippingStats(tp) {
 // ── Direct displacement measures ──
 // Measured change, not modeled vulnerability: the shift in Black+Hispanic
 // population share and in renter share between the earliest reliable
-// census year (2000, else 2010) and the latest (2023, else 2020).
+// census year (2000, else 2010) and the latest (LATEST_YEAR, else 2020).
 // Shown beside the displacement stage on the panel, story card and Triage.
 export function calcDirectDisplacement(regionId) {
   const rows = AUDITED_DEMO_BY_ID.get(regionId);
@@ -357,7 +360,7 @@ export function calcDirectDisplacement(regionId) {
     ? r.pct_black_non_hispanic + r.pct_hispanic : null;
   const renter = (r) => (r?.pct_owner_occupied != null ? 100 - r.pct_owner_occupied : null);
 
-  const to = [2023, 2020].map(at).find((r) => bh(r) != null);
+  const to = [LATEST_YEAR, 2020].map(at).find((r) => bh(r) != null);
   const from = [2000, 2010].map(at).find((r) => bh(r) != null);
   if (!from || !to || from.year >= to.year) return null;
 
@@ -403,7 +406,7 @@ export function calcGroupDisplacement(regionIds) {
     }
     return pop > 0 ? sum / pop : null;
   };
-  const toYear = [2023, 2020].find(rowsAt);
+  const toYear = [LATEST_YEAR, 2020].find(rowsAt);
   const fromYear = [2000, 2010].find(rowsAt);
   if (!fromYear || !toYear || fromYear >= toYear) return null;
   const from = rowsAt(fromYear), to = rowsAt(toYear);

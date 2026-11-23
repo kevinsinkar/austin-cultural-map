@@ -17,7 +17,7 @@
 import { REGION_INDEX } from "../data/regionIndex";
 import { PA_ALL } from "../data/preservationAustin";
 import { LENS_FIELDS, LENS_REGION, TRACT_LENS_ROWS } from "../data/stageLenses";
-import { stageSeriesFor, STAGE_BASE_YEAR } from "./stages";
+import { stageSeriesFor, surveySpan, STAGE_BASE_YEAR, STAGE_YEARS } from "./stages";
 import { tractPlace, tractNumber } from "./places";
 import { calcDirectDisplacement } from "./math";
 import { paNearTracts, businessesIn, PA_PLACED } from "./placeData";
@@ -25,9 +25,13 @@ import { paNearTracts, businessesIn, PA_PLACED } from "./placeData";
 export { LENS_REGION };
 
 const LT = Object.fromEntries(LENS_FIELDS.map((f, i) => [f, i]));
-const LATEST = LENS_REGION.to;      // 2023: the 2019–2023 survey
-const EARLIER = LENS_REGION.from;   // 2015: the 2011–2015 survey
-const PATH_YEARS = [2010, 2015, 2020, 2023];
+const LATEST = LENS_REGION.to;      // the latest survey, by its end year (2024: the 2020–2024 survey)
+const EARLIER = LENS_REGION.from;   // the newest survey that shares no interview years with it (2015: 2011–2015)
+/** The two surveys as year spans, for labels: `${EARLIER_SURVEY}` and "2020–2024". */
+export const EARLIER_SURVEY = surveySpan(EARLIER);
+export const LATEST_SURVEY = surveySpan(LATEST);
+/** The census years a place's stage path is read on. */
+export const PATH_YEARS = STAGE_YEARS.filter((y) => y !== STAGE_BASE_YEAR);
 
 /** Stages in which vulnerable residents live (test 1 is met). */
 export const RESIDENTS_VULNERABLE = new Set(["vulnerable", "early", "dynamic", "late"]);
@@ -40,15 +44,15 @@ export const LENSES = [
     key: "trajectory",
     label: "Trajectory",
     question: "Where is change moving now?",
-    description: "Compares the two latest census surveys that share no interviews (2011–2015 and 2019–2023) and each place's stage in every survey year.",
+    description: `Compares the two latest census surveys that share no interviews (${EARLIER_SURVEY} and ${LATEST_SURVEY}) and each place's stage in every survey year.`,
     groups: [
       { key: "starting", label: "Starting to shift", rule: "Stage is Vulnerable, and the population shifted between the two surveys." },
       { key: "shifting", label: "Shifting now", rule: "Stage is Early, Dynamic or Late, and the population shifted between the two surveys." },
-      { key: "lossRecent", label: "Reached continued loss since 2015", rule: "Stage is Continued loss now and was something else in the 2011–2015 survey." },
+      { key: "lossRecent", label: `Reached continued loss since ${EARLIER}`, rule: `Stage is Continued loss now and was something else in the ${EARLIER_SURVEY} survey.` },
       { key: "activeQuiet", label: "In a stage, no recent shift", rule: "Stage is Early, Dynamic or Late, and no shift was measured between the two surveys." },
       { key: "holding", label: "Vulnerable, no shift measured", rule: "Stage is Vulnerable, and no shift was measured between the two surveys." },
-      { key: "lossEarlier", label: "Continued loss by 2015", rule: "Stage was already Continued loss in the 2011–2015 survey." },
-      { key: "none", label: "No stage", rule: "No stage in the 2019–2023 survey." },
+      { key: "lossEarlier", label: `Continued loss by ${EARLIER}`, rule: `Stage was already Continued loss in the ${EARLIER_SURVEY} survey.` },
+      { key: "none", label: "No stage", rule: `No stage in the ${LATEST_SURVEY} survey.` },
       { key: "unscored", label: "Not scored", rule: "Too few residents, or mostly students or group quarters." },
     ],
   },
@@ -62,7 +66,7 @@ export const LENSES = [
       { key: "riskReached", label: "Vulnerable residents, listing nearby", rule: "Stage is Vulnerable, Early, Dynamic or Late, and at least one listing lies within about 1.3 km." },
       { key: "lossGap", label: "Continued loss, no listing nearby", rule: "Stage is Continued loss, and no listing lies within about 1.3 km." },
       { key: "lossReached", label: "Continued loss, listing nearby", rule: "Stage is Continued loss, and at least one listing lies within about 1.3 km." },
-      { key: "none", label: "No stage", rule: "No stage in the 2019–2023 survey." },
+      { key: "none", label: "No stage", rule: `No stage in the ${LATEST_SURVEY} survey.` },
       { key: "unscored", label: "Not scored", rule: "Too few residents, or mostly students or group quarters." },
     ],
   },
@@ -105,6 +109,17 @@ export const LENSES = [
 export const LENS_BY_KEY = Object.fromEntries(LENSES.map((l) => [l.key, l]));
 
 /** How the Preservation Austin listings are placed: all, with a place, and area-only. */
+const listingYears = (type) => {
+  const years = PA_ALL.filter((i) => i.type === type).map((i) => i.year);
+  return `${Math.min(...years)}–${Math.max(...years)}`;
+};
+/** The years each kind of Preservation Austin listing in the file covers: "2016–2026". */
+export const PA_LISTING_YEARS = {
+  grant: listingYears("grant"),
+  merit_award: listingYears("merit_award"),
+  legacy_business: listingYears("legacy_business"),
+};
+
 export const PA_LISTING_COUNTS = {
   all: PA_ALL.length,
   placed: PA_PLACED.length,
@@ -224,8 +239,8 @@ export function lensSummary(lensKey, rows = lensRows()) {
     const moving = c.starting + c.shifting;
     const recentOnly = rows.filter((r) => ["starting", "shifting"].includes(r.groups.trajectory) && r.changed === false).length;
     return [
-      `${plural(moving, "tract", "tracts")} where vulnerable residents live show a population shift between the 2011–2015 and 2019–2023 surveys. In ${recentOnly} of them the longer test, since 2000, shows no change: the shift is recent.`,
-      `${plural(c.lossRecent, "tract has", "tracts have")} moved into continued loss since the 2011–2015 survey; ${c.lossEarlier} were already there.`,
+      `${plural(moving, "tract", "tracts")} where vulnerable residents live show a population shift between the ${EARLIER_SURVEY} and ${LATEST_SURVEY} surveys. In ${recentOnly} of them the longer test, since 2000, shows no change: the shift is recent.`,
+      `${plural(c.lossRecent, "tract has", "tracts have")} moved into continued loss since the ${EARLIER_SURVEY} survey; ${c.lossEarlier} were already there.`,
       `${plural(c.holding, "vulnerable tract shows", "vulnerable tracts show")} no shift between the two surveys.`,
     ];
   }

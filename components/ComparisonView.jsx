@@ -5,7 +5,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { SOCIOECONOMIC, DEMOGRAPHICS, LEGACY_CLOSED } from "../data";
-import { REGION_NAMES, DEMO_COLORS } from "../data/constants";
+import { REGION_NAMES, DEMO_COLORS, LATEST_YEAR, LATEST_SURVEY, CENSUS_YEARS } from "../data/constants";
 import { NAME_TO_ID } from "../data/regionLookup";
 import { interpolateDvi, calcAnchorDensity } from "../utils/math";
 import { AUDITED_DVI_LOOKUP } from "../data/auditedDvi";
@@ -57,7 +57,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
   }, [idA, idB, compA, compB, setCompA, setCompB]);
 
   const compDviChart = useMemo(
-    () => [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023].map((yr) => ({
+    () => [1990, 1995, ...CENSUS_YEARS].map((yr) => ({
       year: yr,
       a: idA != null ? interpolateDvi(idA, yr) : null,
       b: idB != null ? interpolateDvi(idB, yr) : null,
@@ -66,7 +66,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
   );
 
   const compHomeChart = useMemo(
-    () => [2000, 2010, 2020, 2023].map((yr) => {
+    () => [2000, 2010, 2020, LATEST_YEAR].map((yr) => {
       const a = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === yr);
       const b = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === yr);
       return { year: yr, a: a?.homeValue || null, b: b?.homeValue || null };
@@ -75,7 +75,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
   );
 
   const compIncomeChart = useMemo(
-    () => [2000, 2010, 2020, 2023].map((yr) => {
+    () => [2000, 2010, 2020, LATEST_YEAR].map((yr) => {
       const a = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === yr);
       const b = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === yr);
       return { year: yr, a: a?.incomeAdj || null, b: b?.incomeAdj || null };
@@ -84,7 +84,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
   );
 
   const compDemoChart = useMemo(
-    () => [1990, 2000, 2010, 2020, 2023].map((yr) => {
+    () => [1990, 2000, 2010, 2020, LATEST_YEAR].map((yr) => {
       const a = DEMOGRAPHICS.find((d) => d.region_id === idA && d.year === yr);
       const b = DEMOGRAPHICS.find((d) => d.region_id === idB && d.year === yr);
       return {
@@ -108,15 +108,15 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
     // --- Part 1: DVI and Home Value Analysis (Existing Logic) ---
     const dA = interpolateDvi(idA, 2020);
     const dB = interpolateDvi(idB, 2020);
-    const sA = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === 2023);
-    const sB = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === 2023);
+    const sA = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === LATEST_YEAR);
+    const sB = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === LATEST_YEAR);
     let t = "";
     if (idA == null || idB == null) return t;
 
     // Lead with the displacement stage (latest census survey); the pressure
     // score follows as a description of present-day conditions.
     const stageText = (id) => {
-      const s = stageFor({ kind: "tract", id }, 2023);
+      const s = stageFor({ kind: "tract", id }, LATEST_YEAR);
       if (!s || !s.scored) return "is not scored";
       return s.cls.key === "none" ? "is not in a displacement stage" : `is in the “${s.cls.label}” stage`;
     };
@@ -126,7 +126,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
       const d = Math.abs(sA.homeValue - sB.homeValue);
       if (d > 100000) {
         const m = sA.homeValue > sB.homeValue ? nameA : nameB;
-        t += `By 2023, median home values in ${m} were $${(Math.max(sA.homeValue, sB.homeValue) / 1000).toFixed(0)}k — notably higher. `;
+        t += `By ${LATEST_YEAR}, median home values in ${m} were $${(Math.max(sA.homeValue, sB.homeValue) / 1000).toFixed(0)}k — notably higher. `;
       }
     }
 
@@ -272,7 +272,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
 
         {/* Income */}
         <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px" }}>
-          <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Median Household Income (Adj. 2023$)</h3>
+          <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Median Household Income (dollars of each year)</h3>
           <div style={{ height: 200 }} role="img" aria-label={`Income comparison: ${nameA} vs ${nameB}`}>
             <ResponsiveContainer><LineChart data={compIncomeChart} margin={{ top: 4, right: 22, left: -4, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e8e5e0" />
@@ -368,7 +368,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
 
       {/* Comparison Table */}
       <div style={{ background: "#fffffe", borderRadius: 10, border: "1px solid #e8e5e0", padding: "16px 20px", marginTop: 16 }}>
-        <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Side-by-Side at 2023</h3>
+        <h3 style={{ fontSize: 12, fontWeight: 600, color: "#64615b", textTransform: "uppercase", letterSpacing: ".08em", margin: "0 0 12px" }}>Side-by-Side at {LATEST_YEAR}</h3>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }} role="table" aria-label="Region comparison table">
             <thead>
@@ -381,15 +381,15 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
             </thead>
             <tbody>
               {(() => {
-                const sA = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === 2023);
-                const sB = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === 2023);
-                const dA = DEMOGRAPHICS.find((d) => d.region_id === idA && d.year === 2023);
-                const dB = DEMOGRAPHICS.find((d) => d.region_id === idB && d.year === 2023);
+                const sA = SOCIOECONOMIC.find((s) => s.region_id === idA && s.year === LATEST_YEAR);
+                const sB = SOCIOECONOMIC.find((s) => s.region_id === idB && s.year === LATEST_YEAR);
+                const dA = DEMOGRAPHICS.find((d) => d.region_id === idA && d.year === LATEST_YEAR);
+                const dB = DEMOGRAPHICS.find((d) => d.region_id === idB && d.year === LATEST_YEAR);
                 if (!sA || !sB) {
                   return (
                     <tr>
                       <td colSpan={4} style={{ padding: "10px", color: "#44403c" }}>
-                        There are no 2023 figures for {!sA ? nameA : nameB}, so the side-by-side table is not available for this pair.
+                        There are no {LATEST_YEAR} figures for {!sA ? nameA : nameB}, so the side-by-side table is not available for this pair.
                       </td>
                     </tr>
                   );
@@ -398,11 +398,11 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
                 const ancB = calcAnchorDensity(idB);
                 const fmtAnc = (v) => v != null ? `${(v * 100).toFixed(0)}%` : "—";
                 const stageLabel = (id) => {
-                  const s = stageFor({ kind: "tract", id }, 2023);
+                  const s = stageFor({ kind: "tract", id }, LATEST_YEAR);
                   return !s ? "—" : s.cls.label;
                 };
                 return [
-                  { l: "Displacement stage (2019–2023 survey)", a: stageLabel(idA), b: stageLabel(idB), d: "—" },
+                  { l: `Displacement stage (${LATEST_SURVEY} survey)`, a: stageLabel(idA), b: stageLabel(idB), d: "—" },
                   { l: "Pressure score (2020)", a: interpolateDvi(idA, 2020).toFixed(1), b: interpolateDvi(idB, 2020).toFixed(1), d: (interpolateDvi(idA, 2020) - interpolateDvi(idB, 2020)).toFixed(1) },
                   { l: "Anchor Density", a: fmtAnc(ancA), b: fmtAnc(ancB), d: ancA != null && ancB != null ? `${((ancA - ancB) * 100).toFixed(0)}pp` : "—" },
                   { l: "Income", a: `$${(sA.incomeAdj / 1000).toFixed(0)}k`, b: `$${(sB.incomeAdj / 1000).toFixed(0)}k`, d: `$${((sA.incomeAdj - sB.incomeAdj) / 1000).toFixed(0)}k` },
@@ -438,7 +438,7 @@ export default function ComparisonView({ compA, setCompA, compB, setCompB }) {
       )}
 
       <div style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5, padding: "12px 4px" }}>
-        Charts use synchronized axes. DVI interpolated between measurement periods. Income in 2023-adjusted dollars.
+        Charts use synchronized axes. DVI interpolated between measurement periods. Income and home values are in the dollars of each survey year, not adjusted for inflation.
       </div>
     </section>
   );

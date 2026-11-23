@@ -6,6 +6,7 @@ import glanceRaw from "../METHODOLOGY_AT_A_GLANCE.md?raw";
 import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
 import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL } from "../data";
 import { STAGE_CLASSES, STAGE_CHECK } from "../utils/stages";
+import { LATEST_YEAR, YEAR_MIN, YEAR_MAX } from "../data/constants";
 
 // The at-a-glance page ends with the presenter-only tools; the public site
 // shows the part before that marker.
@@ -109,7 +110,7 @@ export default function AboutModal({ onClose }) {
             <p style={{ margin: "0 0 12px" }}>
               <strong>Austin's Shifting Ground</strong> maps four decades of cultural displacement
               across 269 census tracts in Austin, Texas. It combines U.S.
-              Census and ACS data (2000–2023), city permit records, eviction filings, and
+              Census and ACS data (2000–{LATEST_YEAR}), city permit records, eviction filings, and
               community-sourced business inventories to reveal where heritage communities are
               under pressure — and where intervention can still make a difference. This is an
               independent research tool built as a potential resource for organizations like
@@ -124,11 +125,11 @@ export default function AboutModal({ onClose }) {
             </h3>
             <p style={{ margin: "0 0 4px" }}>
               <strong>Map</strong> — Every census tract, colored by its displacement stage, with a
-              year slider from 1990 to 2025 (census figures start in 2000). Search for a neighborhood or address,
+              year slider from {YEAR_MIN} to {YEAR_MAX} (census figures start in 2000). Search for a neighborhood or address,
               select any area for a summary, and open its <strong>story card</strong> for the full
               profile on a printable page with its own link. The “Start here” card walks
               through the five ideas the map is built around. Layers add legacy businesses, music
-              venues, the 1935 redlining map, Project Connect transit lines and more.
+              venues, the 1935 redlining map, the planned light rail line and more.
             </p>
             {isViewAllowed("history") && (
             <p style={{ margin: "0 0 4px" }}>
@@ -161,7 +162,7 @@ export default function AboutModal({ onClose }) {
             </h3>
             <p style={{ margin: "0 0 4px" }}>
               Every census tract is put through three tests for each census year from 2010 on
-              (2010, 2015, 2020 and 2023):
+              (2010, 2015, 2020 and {LATEST_YEAR}):
             </p>
             <ul style={{ margin: "0 0 4px", paddingLeft: 20 }}>
               <li><strong>Vulnerable residents</strong> — five shares: renters, people of color, lower-income households, children in poverty, and adults without a bachelor's degree. A tract counts as vulnerable when at least three of the five are well above the five-county Austin region.</li>
@@ -235,11 +236,11 @@ export default function AboutModal({ onClose }) {
               Data Coverage &amp; Confidence
             </h3>
             <p style={{ margin: "0 0 4px" }}>
-              <strong>Demographics:</strong> 247–269 tracts, 2000–2023 (Census Decennial + ACS 5-year
+              <strong>Demographics:</strong> 246–269 tracts, 2000–{LATEST_YEAR} (Census Decennial + ACS 5-year
               estimates). Pre-2010 boundaries crosswalked via area-weighted proportional assignment.
             </p>
             <p style={{ margin: "0 0 4px" }}>
-              <strong>Property &amp; Socioeconomic:</strong> 257–269 tracts, 2010–2023 (ACS + City of
+              <strong>Property &amp; Socioeconomic:</strong> 257–269 tracts, 2010–{LATEST_YEAR} (ACS + City of
               Austin construction permits + BASTA Austin eviction records).
             </p>
             <p style={{ margin: "0 0 4px" }}>

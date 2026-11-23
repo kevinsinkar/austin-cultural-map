@@ -9,7 +9,7 @@
 
 import { REGION_INDEX } from "./regionIndex";
 import { LEGACY_OPERATING, LEGACY_CLOSED } from "./businesses";
-import { TIMELINE_EVENTS } from "./constants";
+import { TIMELINE_EVENTS, LATEST_YEAR, YEAR_MAX } from "./constants";
 import { calcDirectDisplacement } from "../utils/math";
 import { tractPlace } from "../utils/places";
 import { STAGE_CLASSES, stageCounts } from "../utils/stages";
@@ -34,12 +34,12 @@ const median = (values) => {
 
 let cache = null;
 
-/** Figures behind idea 2: tracts measured in both 2000 and 2023. */
+/** Figures behind idea 2: tracts measured in both 2000 and the latest survey. */
 function measuredChangeStats() {
   const rows = REGION_INDEX
     .filter((r) => !r.merge_into)
     .map((r) => ({ r, dd: calcDirectDisplacement(r.region_id) }))
-    .filter((x) => x.dd && x.dd.fromYear === 2000 && x.dd.toYear === 2023);
+    .filter((x) => x.dd && x.dd.fromYear === 2000 && x.dd.toYear === LATEST_YEAR);
   const fell = rows.filter((x) => x.dd.bhDelta <= -10);
   const rose = rows.filter((x) => x.dd.bhDelta >= 10);
   return {
@@ -68,7 +68,7 @@ export function buildBigIdeas() {
     : "";
 
   // Idea 3: how many tracts sit in each stage in the latest census survey.
-  const counts = stageCounts(2023);
+  const counts = stageCounts(LATEST_YEAR);
   const inStage = STAGE_CLASSES.reduce((a, c) => a + counts[c.key], 0);
   const scored = inStage + counts.none;
   const breakdown = STAGE_CLASSES.map((c) => `${counts[c.key]} ${c.label.toLowerCase()}`).join(", ");
@@ -87,7 +87,7 @@ export function buildBigIdeas() {
       id: "measured",
       title: "Displacement can be measured",
       body: [
-        `Between 2000 and 2023, the share of residents who are Black or Hispanic fell by 10 points or more in ${stats.fell} of the ${stats.measured} census tracts measured in both years. In ${stats.rose} tracts it rose by 10 points or more.${moved}`,
+        `Between 2000 and ${LATEST_YEAR}, the share of residents who are Black or Hispanic fell by 10 points or more in ${stats.fell} of the ${stats.measured} census tracts measured in both years. In ${stats.rose} tracts it rose by 10 points or more.${moved}`,
         example && exampleChange
           ? `One example: in the ${example.title}, it went from ${exampleChange.bhFrom.toFixed(0)}% to ${exampleChange.bhTo.toFixed(0)}%.`
           : "",
@@ -111,7 +111,7 @@ export function buildBigIdeas() {
         `The map tracks ${LEGACY_OPERATING.length} long-running businesses and gathering places that are still operating and ${LEGACY_CLOSED.length} that have closed.`,
         "Green dots are open. Gray dots are closed, and each one appears in the year it closed.",
       ],
-      action: { key: "anchors", label: "Show them in 2023" },
+      action: { key: "anchors", label: `Show them in ${YEAR_MAX}` },
     },
     {
       id: "places",

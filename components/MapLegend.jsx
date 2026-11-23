@@ -1,10 +1,11 @@
 import { useState } from "react";
 import {
-  STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED, STAGE_NO_DATA, STAGE_BASE_YEAR,
+  STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED, STAGE_NO_DATA, STAGE_BASE_YEAR, STAGE_YEARS,
   stageDataYear, stageSourceLabel, stageCounts,
 } from "../utils/stages";
 import { HOLC_GRADES, HOLC_ATTRIBUTION } from "../data/history/holc";
 import { PRESENTER_MODE } from "../appConfig";
+import { LIGHT_RAIL_SOURCE } from "../data/projectConnect";
 
 /**
  * MapLegend — the colour key, as a strip above the map.
@@ -108,7 +109,13 @@ export default function MapLegend({
         {showProjectConnect && (
           <Group title="Transit">
             <span style={itemStyle}>
-              <span aria-hidden="true" style={{ width: 16, borderTop: "2.5px dashed #2563eb" }} /> Project Connect line
+              <span aria-hidden="true" style={{ width: 16, borderTop: "2.5px dashed #2563eb" }} /> Planned light rail, Phase 1
+            </span>
+            <span style={itemStyle}>
+              <span aria-hidden="true" style={{ width: 9, height: 9, borderRadius: "50%", border: "2px solid #2563eb", background: "#fffffe", boxSizing: "border-box" }} /> Planned station
+            </span>
+            <span style={{ ...itemStyle, color: "var(--muted)" }}>
+              Not built: service is planned for 2033. Route: Austin Transit Partnership, {LIGHT_RAIL_SOURCE.route.edited.slice(0, 4)}.
             </span>
           </Group>
         )}
@@ -207,7 +214,7 @@ export default function MapLegend({
               </dl>
               <p style={{ margin: "8px 0 0", fontSize: 13, lineHeight: 1.5, color: "var(--muted)" }}>
                 Showing the {stageSourceLabel(dataYear)}. The map changes at each census year
-                (2000, 2010, 2015, 2020, 2023), not in between.
+                ({STAGE_YEARS.join(", ")}), not in between.
               </p>
             </>
           )}

@@ -1,4 +1,5 @@
 import { PRESENTER_MODE, isViewAllowed } from "../appConfig";
+import { YEAR_MIN, YEAR_MAX } from "../data/constants";
 
 // Tab roster follows the build mode (appConfig.js): a public build shows
 // only the views it is allowed to route to; presenter mode shows them all.
@@ -36,7 +37,7 @@ export default function Header({ viewMode, setViewMode, setShowAbout, onOpenAgen
       <h1 className="app-title">Austin's Shifting Ground</h1>
       <div className="app-header-row">
         <p className="app-subtitle">
-          Four decades of cultural displacement, 1990 to 2025
+          Four decades of cultural displacement, {YEAR_MIN} to {YEAR_MAX}
           {PRESENTER_MODE && (
             <span className="presenter-badge" title="This build includes the planning views and private outreach data. It runs on this computer only and must never be uploaded.">
               Presenter mode · this computer only

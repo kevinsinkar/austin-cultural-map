@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useMemo, useCallback, useReducer, lazy, Su
 import "./styles.css";
 
 // Data
-import { PLAY_YEARS } from "./data/constants";
+import { PLAY_YEARS, YEAR_MIN, YEAR_MAX, LATEST_SURVEY } from "./data/constants";
 
 // Utils
 import { DEFAULT_VIEW_STATE, parseViewState, serializeViewState } from "./utils/urlState";
@@ -307,7 +307,7 @@ export default function AustinCulturalMap() {
   // location, and enable the relevant overlay
   const handleShowEventOnMap = useCallback((ev) => {
     if (ev?.date_start_sort != null) {
-      setYear(Math.min(2025, Math.max(1990, Math.round(ev.date_start_sort))));
+      setYear(Math.min(YEAR_MAX, Math.max(YEAR_MIN, Math.round(ev.date_start_sort))));
     }
     const title = ev?.event_title || "";
     if (/holc|redlin/i.test(title) || ev?.event_id === "EV_1935_HOLC_MAP") setShowHolc(true);
@@ -526,8 +526,9 @@ export default function AustinCulturalMap() {
       {/* Footer: the data date, not the time the page happened to load */}
       <footer className="app-footer" role="contentinfo">
         <p>
-          Austin's Shifting Ground · Data compiled February 2026 · Sources: U.S. Census, ACS, TCAD,
-          City of Austin, UT “Uprooted,” community inventories
+          Austin's Shifting Ground · Census figures: {LATEST_SURVEY} survey · Other layers updated November 2026 ·
+          Sources: U.S. Census Bureau, City of Austin, Austin Transit Partnership, BASTA Austin, UT “Uprooted,”
+          community inventories
         </p>
       </footer>
     </div>

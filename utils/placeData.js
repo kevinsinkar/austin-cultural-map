@@ -18,6 +18,7 @@ import {
   closestRow,
 } from "../data/auditedData";
 import { getMergedIds } from "../data/regionLookup";
+import { LATEST_YEAR } from "../data/constants";
 import { calcDirectDisplacement, calcGroupDisplacement, computeTippingStats } from "./math";
 import { stageFor, stageSeriesFor, cityRiskFor } from "./stages";
 import { aggregateNeighborhood } from "./aggregation";
@@ -29,7 +30,6 @@ const NEAR_DEG = 0.012; // about 1.3 km — the radius used for "nearby" PA item
 const HAS_PLACE = (item) => !/^\s*(citywide|n\/a)/i.test(item.address || "");
 /** Preservation Austin listings that name a place (an address or an area). */
 export const PA_PLACED = PA_ALL.filter((i) => i.lat && i.lng && HAS_PLACE(i));
-const LATEST_YEAR = 2023;
 
 export const fmtMoney = (v) => (v >= 10000 ? `$${Math.round(v / 1000)}k` : `$${Math.round(v).toLocaleString()}`);
 export const fmtPct = (v) => `${v.toFixed(1)}%`;

@@ -14,6 +14,14 @@ export const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 export const CACHE = join(ROOT, "data", "_cache", "census_history");
 mkdirSync(CACHE, { recursive: true });
 
+// The latest American Community Survey 5-year release the site uses, named
+// by its end year as the Census API does (2024 = the 2020-2024 survey).
+// The one place to change when a newer release comes out; then run
+// "npm run build:latest" and "npm run build:stages".
+export const LATEST_ACS = 2024;
+/** "2020-2024" for 2024: the five years a release covers. */
+export const acsSpan = (endYear) => `${endYear - 4}-${endYear}`;
+
 const pause = (ms) => new Promise((done) => setTimeout(done, ms));
 const MAX_VARS = 45; // the API accepts 50 variables per call
 

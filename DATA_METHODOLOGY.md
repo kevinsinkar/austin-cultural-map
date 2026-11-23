@@ -38,13 +38,13 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 | File | Rows | Regions | Years | Primary Sources |
 |------|------|---------|-------|-----------------|
-| `audited_demographics_normalized.json` | 1,541 | 269 | 2000–2023 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2019–2023) |
-| `audited_property_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (home values, rent, housing units, vacancy), City of Austin Construction Permits (new permits, commercial sqft) |
-| `audited_socioeconomic_normalized.json` | 1,052 | 269 | 2010–2023 | Census/ACS (income, poverty, unemployment, Gini, SNAP participation), BASTA Austin (eviction filing rates, 2014-2025) |
+| `audited_demographics_normalized.json` | 1,541 | 269 | 2000–2024 | U.S. Census Decennial (2000, 2010, 2020), American Community Survey 5-year estimates (2006–2010, 2011–2015, 2016–2020, 2020–2024) |
+| `audited_property_normalized.json` | 1,052 | 269 | 2010–2024 | Census/ACS (home values, rent, housing units, vacancy), City of Austin Construction Permits (new permits, commercial sqft) |
+| `audited_socioeconomic_normalized.json` | 1,052 | 269 | 2010–2024 | Census/ACS (income, poverty, unemployment, Gini, SNAP participation), BASTA Austin (eviction filing rates, 2014-2025) |
 
 **Important:** All data comes from observed Census, ACS, and administrative records. Intermediate years (e.g., 2005) are linearly interpolated from adjacent anchor years and flagged with `INTERPOLATED` audit flag.
 
-**Historical coverage:** Pre-2020 data was first backfilled with `fill_census_gaps_v2.py` and `fill_demographic_history.py`. Current coverage: 246 regions at 2000 and 2005, 256 at 2010/2015, 269 at 2020/2023. The regions missing at 2000 are tracts with no 2000 tract to draw from.
+**Historical coverage:** Pre-2020 data was first backfilled with `fill_census_gaps_v2.py` and `fill_demographic_history.py`. Current coverage: 246 regions at 2000 and 2005, 256 at 2010/2015, 269 at 2020 and at 2024 (268 for demographics in 2024: the airport tract has no residents). The regions missing at 2000 are tracts with no 2000 tract to draw from.
 
 **Rebuilt November 2026 (`npm run build:history`, `scripts/rebuild_census_history.mjs`):** population, race shares and owner share for 2000, 2010 and 2015, and rent burden for 2010 and 2015, are now taken straight from the census tables and allocated onto 2020 tract boundaries; 2005 is re-interpolated from them. The rebuild corrected four faults in the earlier backfill:
 
@@ -57,6 +57,15 @@ Three audited JSON files in `data/phase1_output/` are the single source of truth
 
 Rows whose 2020 tract has the same boundary as the earlier tract are exact counts. Rows allocated from earlier tracts are flagged `ALLOCATED_FROM_EARLIER_TRACTS` and are estimates: a tract split from a larger one inherits the larger tract's shares and a part of its population.
 
+**Latest survey replaced November 2026 (`npm run build:latest`, `scripts/build_latest_acs.mjs`):** the rows for the latest survey, until then ACS 2019–2023 (filed under 2023), were replaced with ACS 2020–2024 (filed under 2024), which the Census Bureau published on January 29, 2026. The site keeps one row per survey period and does not hold both: the two surveys share four of their five years of interviews, so they are not independent readings. The replaced rows remain in the repository's history.
+
+- Every census field uses the definition the earlier rows used. Before writing anything the script was run on the 2019–2023 release and compared with the rows already in the files: every field matched in every tract except SNAP participation, where 27 tracts had no figure and 10 held a figure that did not match census table B22003. The 2024 rows take SNAP from B22003 for every tract.
+- `pct_home_value_change_yoy` is the change in median home value since the 2016–2020 survey divided by the four years between the two surveys' end years (a simple rate, not compounded), as before.
+- `eviction_filing_rate` uses BASTA filings for 2020–2024 (§11) and renter households estimated from this release.
+- `new_construction_permits` and `commercial_sqft` are not census figures. They are carried over unchanged from the replaced rows (City permits issued from 2023 to March 2026). No view on the site shows them.
+
+A newer release is a one-line change: `LATEST_ACS` in `scripts/lib/census.mjs`, then `npm run build:latest` and `npm run build:stages`. The app reads the latest year from the generated data (`LATEST_YEAR` in `data/constants.js`).
+
 **Geography:** 269 census tracts covering the Austin-Round Rock MSA, mapped to the 2020 Census tract boundaries. Earlier tracts are mapped with the Census Bureau's tract relationship files: 2000→2010 by the share of the 2000 tract's population (for people) or housing units (for homes), 2010→2020 by land area, the only measure that file carries. Business locations geocoded to building-level precision via Google Maps Geocoding API.
 
 **Definitions used in every year:** *owner share* is owner-occupied homes divided by occupied homes; renter share is the remainder. *Rent burden* is the share of renters paying **50% or more** of household income on rent (ACS table B25070). That is the federal "severe" burden line, not the more common 30% line.
@@ -65,17 +74,57 @@ Rows whose 2020 tract has the same boundary as the earlier tract are exact count
 
 | Dataset | Entries | Source | Last Updated |
 |---------|---------|--------|-------------|
-| Legacy Businesses (operating) | 41 | Preservation Austin community survey, public records, field verification | Feb 2026 |
-| Legacy Businesses (closed) | 52 | Same as above + closure records, news archives | Feb 2026 |
+| Legacy Businesses (operating) | 46 | Preservation Austin community survey, public records, field verification | Feb 2026; three records corrected Nov 2026 |
+| Legacy Businesses (closed) | 60 | Same as above + closure records, news archives | Feb 2026; two records added Nov 2026 |
 | Preservation Austin Grants | 72 | Preservation Austin annual reports (2016–2025) | Feb 2026 |
-| PA Merit Awards | 41 | Preservation Austin Heritage Awards (2022–2025) | Feb 2026 |
-| PA Legacy Business Month | 33 | Preservation Austin Legacy Business program (2023–2025) | Feb 2026 |
-| PA Advocacy Milestones | 10 | Preservation Austin public records | Feb 2026 |
+| PA Merit Awards | 53 | Preservation Austin's Preservation Merit Awards (2022–2026) | Nov 2026 |
+| PA Legacy Business Month | 43 | Preservation Austin's Legacy Business Month (2023–2026) | Nov 2026 |
+| PA Advocacy Milestones | 13 | Preservation Austin's published announcements | Nov 2026 |
 | Music/Nightlife Venues | 20 snapshots | Austin Music Census, SXSW venue data, Red River Cultural District records | Mar 2026 |
 | Construction Permits | 191,099 new construction (44,266 commercial) | City of Austin Issued Construction Permits (dataset `3syk-w9eu`) | Mar 2026 |
-| Project Connect Transit | 4 lines | Capital Metro Project Connect plans | Feb 2026 |
+| Planned light rail (Phase 1) | 1 branched line (9.7 miles as drawn), 15 stations | Austin Transit Partnership's public map layers: "Light Rail Route" (edited Jul 2026) and "Light Rail Stations (Phase 1)" (edited Oct 2026) | Nov 2026 |
 
-**Business data coverage note:** The 93 tracked businesses (41 operating + 52 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. Approximately 230 of 269 regions have no tracked businesses. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
+**Business data coverage note:** The 106 tracked businesses (46 operating + 60 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. Approximately 230 of 269 regions have no tracked businesses. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
+
+**Records corrected November 2026.** A check of the hand-compiled layers against their sources found these errors; each fix cites the page it rests on.
+
+| Record | Was | Now | Source |
+|--------|-----|-----|--------|
+| El Azteca, 2600 E 7th St | Listed as operating | Closed 2016 | CultureMap Austin, Aug 16, 2016 (updated: "will shutter on Thursday, September 29"), austin.culturemap.com/news/restaurants-bars/08-16-16-el-azteca-restaurant-east-seventh-closing |
+| Empire Control Room & Garage, 606 E 7th St | Listed as operating | Closed 2026 | Austin Chronicle, Jul 21, 2026 (operator evicted from the Garage; locked out of the Control Room since April for unpaid rent); KUT, Sep 8, 2026 ("permanently closed over the summer") |
+| South Congress Books | On both the operating and the closed list | Closed list only (closed January 2025) | Community Impact, Dec 16, 2024 |
+| Buford Tower (2025 merit award) | Pinned on the UT campus | 201 W Cesar Chavez St, downtown | Address and coordinates: Wikipedia "Buford Tower"; OpenStreetMap |
+| Paredes Middle School | Missing from the school closures layer | Added, closed 2026 | KUT, Jul 31, 2026 (7–2 board vote); Texas Tribune, Sep 24, 2026 (state approval in August) |
+| Oak Springs Elementary | "Possible future reopening after renovation" | Students at Blackshear until January 2028, then a new Oak Springs building; the Blackshear campus closes | Austin Chronicle, Apr 9, 2026 |
+| Light rail overlay | Four colored lines that matched neither the 2020 plan nor the current one | The Phase 1 route and stations as Austin Transit Partnership publishes them (`npm run build:rail`) | ATP map layers, above; schedule (construction 2027, first trains 2033): KUT, Jul 24, 2026 |
+| Two tipping-point entries | Named the 2020 plan's Orange Line on East Riverside and its Blue Line on North Lamar | Blue Line (Riverside), Orange Line (North Lamar), as the 2020 plan had them | Austin Chronicle, Sep 25, 2020 |
+
+**Preservation Austin's 2026 listings added November 2026.** Twenty-five entries, each from a page Preservation Austin published:
+
+- The twelve 2026 Preservation Merit Awards (preservationaustin.org/news/2026-pmas).
+- The ten 2026 Legacy Business Month businesses (preservationaustin.org/programs/legacy-business-month; street addresses from CultureMap Austin, Oct 5, 2026).
+- Three City landmark designations it announced: the Hill-Thompson House (Council, May 28, 2026), the Goins-Versea-Nitschke House and Bethany Cemetery (both Aug 27, 2026).
+
+Preservation Austin publishes no addresses for award sites, so each award's place comes from somewhere else, and the entry is only as exact as that source:
+
+| Award | Placed at | Source of the place |
+|-------|-----------|---------------------|
+| Spectre Offices | 701 E 6th St | Texas Department of Licensing and Regulation project record "Spectre Office" (the record names the building's owner and designer, not the award's recipient) |
+| Cosmic Saltillo | 1300 E 4th St | The operator's own site |
+| Haynes-Delashwah House | 1209 Rosewood Ave | Texas Historical Commission Atlas, National Register record |
+| McDermott Carriage House | 4801 La Crosse Ave | The Wildflower Center's own page; the pin is the Center's address, not the building's spot in the grounds |
+| Texas French Bread | 2900 Rio Grande St | The bakery's own site |
+| Pathways at Rosewood Courts | 1141 Chicon St | City of Austin Housing release, Nov 14, 2026. A state record files the same project at 2001 Rosewood Ave; the pin marks the complex |
+| Moore/Andersson Compound | 2102 Quarry Rd | The Charles Moore Foundation's own page |
+| Save the Good Stuff | 3908 Avenue B | The store's own site |
+| Swede Hill House (a private home) | A point on East 14th Street | Only the street is public (the name of Preservation Austin's own photo file). No address was looked up |
+| Starling House (a private home) | Not drawn | No public page names its location |
+| Cultural Currents (Red River Cultural District) | The middle of the district | An award to a district, not a building |
+| Emily Little, FAIA | Citywide (not counted toward any tract) | An award to a person |
+
+Addresses were turned into coordinates with the Census Bureau's public geocoder. It put two addresses on the wrong side of Congress Avenue (201 W Cesar Chavez St and 701 E 6th St); those two points come from OpenStreetMap. Paredes Middle School's point is also OpenStreetMap's, which was about 1 km from the geocoder's.
+
+Not corrected, and still open: 24 of the 46 operating businesses have no report of closing but were not confirmed open, and several 2026 closures reported in the press (among them Lammes Candies, Wheatsville Co-op on Guadalupe, Hoover's Cooking and the Hideout Theatre) are on neither list.
 
 ### 1.3 Neighborhood Planning Areas
 
@@ -89,14 +138,14 @@ Rows whose 2020 tract has the same boundary as the earlier tract are exact count
 
 | Data Type | Regions Covered | % of 269 | Notes |
 |-----------|----------------|----------|-------|
-| Demographics | 269 | 100% | All regions at 2020/2023; 247 at 2000, 246 at 2005, 256 at 2010/2015 |
-| Property | 269 | 100% | All regions at 2020/2023; 257 at 2010/2015. Permits + commercial sqft for 1,000 rows. |
-| Socioeconomic | 269 | 100% | All regions at 2020/2023; 257 at 2010/2015. SNAP for 479 rows. |
+| Demographics | 269 | 100% | All regions at 2020 (268 at 2024); 246 at 2000 and 2005, 256 at 2010/2015 |
+| Property | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. Permit counts for 1,000 rows. |
+| Socioeconomic | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. SNAP for 822 rows. |
 | Displacement stage | 269 | 100% | Decided for every tract; 8 to 12 are not scored in a given year (§3.4) |
 | Pressure score (presenter tools) | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.8) |
 | Legacy Businesses | ~40 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
-| Eviction Filings | 244 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
+| Eviction Filings | 245 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 
 ---
@@ -144,7 +193,7 @@ A stage describes an area as a whole. It is **not** a statement about any block 
 | Appreciated | not high | high | high | |
 | Adjacent | not high | any | not high | touches a tract whose value today or rise is high |
 
-For the 2019–2023 survey the lines were: people of color 59.8% (region 50.2%), renters 54.6% (41.1%), lower-income households 59.0% (49.7%), children in poverty 18.9% (11.5%), adults without a bachelor's 59.9% (50.1%); a 2000 home value of $134,660, a value today of $576,340 and a rise of 325%. The lines for every year are stored in `STAGE_REGION` in `data/stages.js`, and each story card prints the ones that applied to it.
+For the 2020–2024 survey the lines were: people of color 60.9% (region 51.3%), renters 55.2% (41.7%), lower-income households 59.5% (50.3%), children in poverty 18.5% (11.1%), adults without a bachelor's 58.7% (49.1%); a 2000 home value of $134,660, a value today of $626,040 and a rise of 374%. The lines for every year are stored in `STAGE_REGION` in `data/stages.js`, and each story card prints the ones that applied to it.
 
 ### 3.2 The stages
 
@@ -167,7 +216,7 @@ The six typed rows are Table 1 of Bates (2013), which the UT study follows, and 
 **Two rows are not in the UT table.**
 
 - *Vulnerable, no type.* The study gives no type to a vulnerable tract whose market shows none of its patterns. This site still shows it as Vulnerable, because the first test is met.
-- *Rapid loss.* The study has no row for a tract that was vulnerable in 2000, no longer is, shows demographic change, and whose home values are rising fast but are not yet high. Several East Austin tracts with the largest measured loss of residents of color fall there (tracts 21.07, 21.09, 21.10 and 21.11 in the 2019–2023 survey). The City's updates call such tracts "rapid loss" and group them with continued loss as "chronic displacement risk". This site does the same, using its own 2000 reading for "was vulnerable". The City's exact rule is not published, so this row is this site's rule, not the City's.
+- *Rapid loss.* The study has no row for a tract that was vulnerable in 2000, no longer is, shows demographic change, and whose home values are rising fast but are not yet high. Several East Austin tracts with the largest measured loss of residents of color fall there (tracts 21.07, 21.09 and 21.10 in the 2020–2024 survey). The City's updates call such tracts "rapid loss" and group them with continued loss as "chronic displacement risk". This site does the same, using its own 2000 reading for "was vulnerable". The City's exact rule is not published, so this row is this site's rule, not the City's.
 
 Tracts in each stage, by census year:
 
@@ -176,7 +225,11 @@ Tracts in each stage, by census year:
 | 2010 (2006–2010) | 54 | 23 | 6 | 2 | 8 | 165 | 11 |
 | 2015 (2011–2015) | 53 | 21 | 6 | 6 | 8 | 165 | 10 |
 | 2020 (2016–2020) | 42 | 21 | 5 | 5 | 19 | 167 | 10 |
-| 2023 (2019–2023) | 43 | 19 | 8 | 2 | 26 | 163 | 8 |
+| 2024 (2020–2024) | 38 | 22 | 4 | 0 | 29 | 168 | 8 |
+
+No tract reads as Late in the 2020–2024 survey. The two that did in the 2019–2023 survey now read as Continued loss.
+
+**What replacing the latest survey changed (November 2026).** Moving from the 2019–2023 survey to 2020–2024 changed the stage shown for 45 of the 269 tracts (17%); no multi-tract neighborhood changed. The two surveys share four of their five years of interviews, so much of that movement is sampling noise at the tests' fixed lines, not four years of change. For scale, 49 tracts differ between the 2016–2020 and 2019–2023 readings. A stage is a reading of one survey; a tract near a line can cross it and cross back.
 
 ### 3.3 Years
 
@@ -186,8 +239,8 @@ Tracts in each stage, by census year:
 | 2000–2009 | Test 1 only: vulnerable in 2000, or not | 2000 Census (SF1 and SF3) |
 | 2010–2014 | Stage | American Community Survey 2006–2010 |
 | 2015–2019 | Stage | American Community Survey 2011–2015 |
-| 2020–2022 | Stage | American Community Survey 2016–2020 |
-| 2023 on | Stage | American Community Survey 2019–2023 |
+| 2020–2023 | Stage | American Community Survey 2016–2020 |
+| 2024 on | Stage | American Community Survey 2020–2024 |
 
 Change is always measured from 2000, so 2000 itself has no stage: 78 tracts were vulnerable, 179 were not, 12 were not scored. A slider year shows the latest census year at or before it; the time bar names the survey.
 
@@ -197,7 +250,7 @@ Figures from before 2020 are carried onto today's (2020) tract boundaries with t
 
 A place is left out of the tests, and drawn in gray with a dashed edge, when in that year:
 
-- it has fewer than 500 residents (the airport, tract 9800; and tract 16.06 in West Austin, with 135 residents in the 2019–2023 survey), or
+- it has fewer than 500 residents (the airport, tract 9800; and tract 16.06 in West Austin, with 228 residents in the 2020–2024 survey), or
 - half or more of its residents are enrolled in college or graduate school (the University of Texas and West Campus tracts 6.01 and 6.05–6.08; the Pleasant Valley student-apartment tracts in the 2010 and 2015 surveys), or
 - half or more live in group quarters such as dormitories, barracks or a jail (tract 23.19), or
 - fewer than three of the five vulnerability measures can be computed.
@@ -210,32 +263,32 @@ A neighborhood of two or more tracts is put through the same three tests on its 
 
 ### 3.6 Check against the City of Austin's map
 
-The City's *Displacement Risk Areas 2022* (data.austintexas.gov, dataset `t8nv-zcp9`, retrieved November 2026) covers the same 269 tracts. Its 2022 result and this site's reading of the 2019–2023 survey agree as follows:
+The City's *Displacement Risk Areas 2022* (data.austintexas.gov, dataset `t8nv-zcp9`, retrieved November 2026) covers the same 269 tracts. Its 2022 result and this site's reading of the 2020–2024 survey agree as follows:
 
 | Compared | Agree | Of | Share |
 |----------|-------|----|-------|
-| Vulnerable, yes or no | 231 | 260 | 89% |
-| Demographic change, yes or no | 221 | 248 | 89% |
-| Housing market pattern | 196 | 259 | 76% |
-| Stage (the study's type, with "stable" as no stage) | 188 | 235 | 80% |
-| The City's three groups: vulnerable, active, chronic | 199 | 250 | 80% |
+| Vulnerable, yes or no | 223 | 260 | 86% |
+| Demographic change, yes or no | 225 | 248 | 91% |
+| Housing market pattern | 190 | 258 | 74% |
+| Stage (the study's type, with "stable" as no stage) | 174 | 235 | 74% |
+| The City's three groups: vulnerable, active, chronic | 187 | 250 | 75% |
 
-The two are not expected to match exactly: the City used earlier survey years, HUD data for low-income households, and it carries some tracts over from its earlier maps as "historical displacement" (15 tracts, left out of the stage comparison). The side panel and the story card print the City's category beside this site's stage so a reader can see both. The comparison is recomputed on every build (`STAGE_CHECK` in `data/stages.js`).
+Agreement on the stage was 80% when this site's latest survey was 2019–2023. It falls as this site moves to newer surveys while the City's file stays at 2022 (no newer edition was on the City's data portal in November 2026). The two are not expected to match exactly: the City used earlier survey years, HUD data for low-income households, and it carries some tracts over from its earlier maps as "historical displacement" (15 tracts, left out of the stage comparison). The side panel and the story card print the City's category beside this site's stage so a reader can see both. The comparison is recomputed on every build (`STAGE_CHECK` in `data/stages.js`).
 
-The stages also line up with change that can be measured directly. Mean change since 2000 among the tracts in each stage in the 2019–2023 survey:
+The stages also line up with change that can be measured directly. Mean change since 2000 among the tracts in each stage in the 2020–2024 survey (each measure averaged over the tracts that report it):
 
 | Stage | Tracts | White non-Hispanic share | Adults with a bachelor's | Median family income |
 |-------|--------|--------------------------|--------------------------|----------------------|
-| Vulnerable | 42 | −16.0 points | +7.6 points | +46% |
-| Early | 19 | −1.2 points | +18.2 points | +71% |
-| Dynamic | 8 | +12.4 points | +32.3 points | +140% |
-| Late | 2 | +22.9 points | +28.5 points | +325% |
-| Continued loss | 26 | +22.4 points | +41.1 points | +290% |
-| No stage | 160 | −13.2 points | +15.4 points | +115% |
+| Vulnerable | 38 | −16.5 points | +10.5 points | +80% |
+| Early | 22 | −3.4 points | +18.2 points | +82% |
+| Dynamic | 4 | +8.8 points | +36.7 points | +189% |
+| Late | 0 | | | |
+| Continued loss | 29 | +23.9 points | +42.4 points | +317% |
+| No stage | 164 | −13.8 points | +15.9 points | +123% |
 
-(Region: −10.9 points, +13.2 points, +106%. The second test uses these same measures, so the table shows the stages are ordered as intended; it is not an independent test of them.) Of the 78 tracts that were vulnerable in 2000, 24 are in continued loss, 2 late, 8 dynamic, 15 early, 17 still vulnerable with no change measured, and 12 have no stage. Of the 179 that were not vulnerable in 2000, 25 are vulnerable now; most are outer tracts.
+(Region: −12.0 points, +14.3 points, +114%. The second test uses these same measures, so the table shows the stages are ordered as intended; it is not an independent test of them.) Of the 78 tracts that were vulnerable in 2000, 29 are in continued loss, 3 dynamic, 18 early, 13 still vulnerable with no change measured, and 15 have no stage. Of the 179 that were not vulnerable in 2000, 25 are vulnerable now; most are outer tracts.
 
-For single places: The tracts with the largest fall in residents of color since 2000 read, across 2000, 2010, 2015, 2020 and 2023: Holly (tract 10) vulnerable, dynamic, late, continued loss, continued loss; Holly (9.02) vulnerable, dynamic, dynamic, late, continued loss; Chestnut (8.03) vulnerable, then continued loss in every later year; Rosewood (8.02) vulnerable, dynamic, dynamic, late, late.
+For single places: The tracts with the largest fall in residents of color since 2000 read, across 2000, 2010, 2015, 2020 and 2024: Holly (tract 10) vulnerable, dynamic, late, continued loss, continued loss; Holly (9.02) vulnerable, dynamic, dynamic, late, continued loss; Chestnut (8.03) vulnerable, then continued loss in every later year; Rosewood (8.02) vulnerable, dynamic, dynamic, late, continued loss.
 
 ### 3.7 Where this departs from the UT method
 
@@ -243,7 +296,7 @@ For single places: The tracts with the largest fall in residents of color since 
 |------------|-----------|-----|
 | Low-income households from HUD's CHAS tables (under 80% of area median family income, adjusted for household size) | Households under 80% of the region's median family income, counted from the census income brackets; the bracket the line falls in is split evenly | CHAS is not published for every survey year used here. The line is not adjusted for household size. |
 | "Appreciated" described with a 1990 home value | Uses the 2000 value | The site holds no 1990 figures. The appendix's own spreadsheet formula also tests the 2000 value. |
-| One reading, 2000 to 2012–2016 | A reading for 2010, 2015, 2020 and 2023, each against 2000 | The map has a year slider. |
+| One reading, 2000 to 2012–2016 | A reading for 2010, 2015, 2020 and 2024, each against 2000 | The map has a year slider. |
 | Tracts carried between boundaries with Brown University's Longitudinal Tract Database, to 2010 tracts | Census Bureau relationship files, to 2020 tracts (§3.3) | The site's tracts are 2020 tracts. |
 | Five tracts excluded by hand | A rule, applied each year (§3.4) | Student areas moved over the period. |
 | Home values in 2016 dollars | Dollars of each year | Rescaling every tract by the same factor does not change its rank. |
@@ -253,15 +306,15 @@ For single places: The tracts with the largest fall in residents of color since 
 
 ### 3.8 The pressure score (presenter tools only)
 
-The 0–100 composite score that colored the map before November 2026 is still computed (`data/auditedDvi.js`) and still feeds the presenter-only Compare view, where it is called the pressure score (the code and some labels keep the old abbreviation, DVI). It sums up **present-day conditions**: rent burden, renter share, poverty, rent against income, home-value appreciation. It is not a stage and is not shown in the public build. Its bands are plain quarters of the scored tracts pooled over 2015, 2020 and 2023 under the default weights: under 37, 37–46, 46–56, and 56 and over (`DVI_BINS` in `utils/math.js`), drawn in a blue-gray ramp so they are not mistaken for stages.
+The 0–100 composite score that colored the map before November 2026 is still computed (`data/auditedDvi.js`) and still feeds the presenter-only Compare view, where it is called the pressure score (the code and some labels keep the old abbreviation, DVI). It sums up **present-day conditions**: rent burden, renter share, poverty, rent against income, home-value appreciation. It is not a stage and is not shown in the public build. Its bands are plain quarters of the scored tracts pooled over 2015, 2020 and the 2019–2023 survey under the default weights (set in November 2026 and not recomputed when the latest survey became 2020–2024): under 37, 37–46, 46–56, and 56 and over (`DVI_BINS` in `utils/math.js`), drawn in a blue-gray ramp so they are not mistaken for stages.
 
 #### Sub-Index Composition
 
-The weights and ceilings below were set by judgment when the score was first built. The project's history records no source for them (§12.4). The last column checks each ceiling against this site's 2023 figures.
+The weights and ceilings below were set by judgment when the score was first built. The project's history records no source for them (§12.4). The last column checks each ceiling against the 2019–2023 survey figures the site held in November 2026; it has not been recomputed for 2020–2024.
 
 **Demographic Vulnerability (default weight: 35%)**
 
-| Component | Weight | Formula | Ceiling | Against the 2023 figures |
+| Component | Weight | Formula | Ceiling | Against the 2019–2023 figures |
 |-----------|--------|---------|---------|--------------------------|
 | Rent Burden | 50% | `rent_burden_pct / 55 * 100` | 55% of renters | `rent_burden_pct` is the share of renters paying 50% or more of income on rent (§1.1). The 95th percentile is 50; 9 of 266 tracts are at or over the ceiling. |
 | Renter Share | 30% | `(100 - pct_owner_occupied) / 75 * 100` | 75% renters | Well under the 95th percentile, which is 96. 57 of 267 tracts are at or over the ceiling, so this component does not separate the most heavily rented tracts. |
@@ -269,14 +322,14 @@ The weights and ceilings below were set by judgment when the score was first bui
 
 **Market Pressure (default weight: 35%)**
 
-| Component | Weight | Formula | Ceiling | Against the 2023 figures |
+| Component | Weight | Formula | Ceiling | Against the 2019–2023 figures |
 |-----------|--------|---------|---------|--------------------------|
 | Home Value Appreciation | 50% | `pct_home_value_change_yoy / 15 * 100` | 15% a year | The median tract is at 14.7 and 117 of 244 tracts are at or over the ceiling, so this component no longer separates tracts. |
 | Rent-to-Income Ratio | 50% | `(rent * 12 / income) / 0.50 * 100` | 50% of income on rent | The 95th percentile is 36; 4 of 256 tracts are at or over. |
 
 **Socioeconomic Stress (default weight: 30%)**
 
-| Component | Weight | Formula | Ceiling | Against the 2023 figures |
+| Component | Weight | Formula | Ceiling | Against the 2019–2023 figures |
 |-----------|--------|---------|---------|--------------------------|
 | Poverty Rate | 40% | `poverty_rate / 30 * 100` | 30% of residents | The 95th percentile is 31; 18 of 268 tracts are at or over. |
 | Unemployment | 30% | `unemployment_rate / 15 * 100` | 15% of the labor force | The 95th percentile is 11; 4 of 268 tracts are at or over. |
@@ -316,7 +369,7 @@ Some census tracts are administratively merged in this tool — a secondary trac
 - **Selecting a place** (a click on the map, a search result, or a suggestion in the "Start here" card) opens the **place panel** beside the map. The panel is the same for a census tract and for a neighborhood.
 - **Story card:** "Open the story card" in the place panel opens that place's full profile as its own page, with its own address (`#/card?tract=84` or `#/card?hood=montopolis`). It can be printed; a section is not split across sheets.
 - **Search:** neighborhoods, census tracts (by name or number) and tracked cultural anchors are matched in the browser. A street address is resolved by OpenStreetMap's Nominatim service, only when the person chooses "Look up … as a street address"; the address is then assigned to the census tract whose polygon contains it.
-- **Time slider:** moves from 1990 to 2025 in 1-year increments. The map opens on 2023, the latest measured year.
+- **Time slider:** moves from 1990 to 2026 in 1-year increments. The map opens on 2024, the latest census year. Past 2024 the stages stay as they are and only the dated layers change (business closures, school closures, Preservation Austin listings).
 
 ### Place Panel
 
@@ -326,8 +379,8 @@ Built by `buildPlaceSummary()` in `utils/placeData.js`.
 |------|--------|-------------|
 | Title and sub-line | `data/placeNames.js`, `data/regionIndex.js` | See §4.3. The sub-line gives the census tract number and the council district that contains the tract's center point. |
 | Displacement stage | `data/stages.js` via `utils/stages.js` | The stage at the latest census year at or before the slider year, with the study's exact type, one sentence on why, and the three tests as one line each (§3.1). Between 2000 and 2009 it shows only "vulnerable in 2000" or not. A neighborhood of several tracts is tested on its combined figures (§3.5). |
-| City of Austin's 2022 map | `CITY_RISK_2022` in `data/stages.js` | The City's own category for the same tract (vulnerable, active or chronic displacement risk, or none), shown beside the 2020 and 2023 readings (§3.6). For a neighborhood, the count of its tracts in each category. |
-| Measured change sentence | `audited_demographics_normalized.json` | Black + Hispanic share of residents, and renter share, at the earliest reliable census year (2000, else 2010) and the latest (2023, else 2020). For a neighborhood, population-weighted shares using only years in which every one of its tracts was measured. Renter share is derived as 100 minus owner-occupied share. |
+| City of Austin's 2022 map | `CITY_RISK_2022` in `data/stages.js` | The City's own category for the same tract (vulnerable, active or chronic displacement risk, or none), shown beside the 2020 and 2024 readings (§3.6). For a neighborhood, the count of its tracts in each category. |
+| Measured change sentence | `audited_demographics_normalized.json` | Black + Hispanic share of residents, and renter share, at the earliest reliable census year (2000, else 2010) and the latest (2024, else 2020). For a neighborhood, population-weighted shares using only years in which every one of its tracts was measured. Renter share is derived as 100 minus owner-occupied share. |
 | Median household income, median home value | `audited_socioeconomic_normalized.json`, `audited_property_normalized.json` | Value at the closest available year (§4.1), in nominal dollars, with that year shown. For a neighborhood, a population-weighted average of tract medians (§7). |
 | Cultural anchors tracked | `data/businesses.js` | Count of operating and closed anchors whose `region_id` is the tract (or any tract of the neighborhood). |
 | Preservation Austin records nearby | `data/preservationAustin.js` | Count of grants, awards and advocacy items within 0.012° of the tract's center (§4.2). |
@@ -335,11 +388,11 @@ Built by `buildPlaceSummary()` in `utils/placeData.js`.
 
 ### Story Card
 
-Built by `buildStoryCard()` in `utils/placeData.js`. It always describes the latest measured year (2023), whatever the slider shows.
+Built by `buildStoryCard()` in `utils/placeData.js`. It always describes the latest census year (2024), whatever the slider shows.
 
 | Section | Source | Calculation |
 |---------|--------|-------------|
-| What the data shows | `data/stages.js`, demographics | The stage in the 2019–2023 survey and one sentence on why; the measured-change sentence from the place panel; the City's 2022 category; the stage at each census year as a labeled strip. |
+| What the data shows | `data/stages.js`, demographics | The stage in the 2020–2024 survey and one sentence on why; the measured-change sentence from the place panel; the City's 2022 category; the stage at each census year as a labeled strip. |
 | How the stage was decided | `data/stages.js` | The three tests with their numbers: each measure here, the regional figure, and the line it had to pass (§3.1). Shown only for a scored place. |
 | Who lives here | `audited_demographics_normalized.json` | Stacked shares of White non-Hispanic, Black, Hispanic or Latino, Asian and other residents for the census years that have data. `other = 100 − the four groups`. |
 | The economics | Demographics, property and socioeconomic files | Eight measures (income, home value, rent, rent burden, poverty, unemployment, eviction filings, SNAP). Each shows its latest value and the change since its earliest measured year, with a small trend line over its own years. Dollars are nominal, not inflation-adjusted. For a neighborhood, values are population-weighted across tracts and a year is used only when every tract that carries the measure has a value that year. |
@@ -403,7 +456,7 @@ Choosing a name outlines the City boundary and opens a card listing the census t
 |---------|-----------|---------|
 | Business pins (green/gray) | `LEGACY_OPERATING`, `LEGACY_CLOSED` | Circle markers filtered by year. Green = operating, gray = closed. |
 | Preservation Austin dots | `PA_ALL` | Color-coded by type: grant = purple (#7c3aed), merit award = blue (#2563eb), legacy business = amber (#d97706), advocacy = green (#059669). Filtered by type sub-toggles and year slider. |
-| Project Connect lines | `PROJECT_CONNECT_LINES` | Dashed polylines for planned transit corridors. |
+| Planned light rail | `PROJECT_CONNECT_LINES`, `LIGHT_RAIL_STATIONS` in `data/projectConnect.js` | The Phase 1 route (dashed, because it is not built) and its 15 stations, from Austin Transit Partnership's published layers (§1.2). The layer's unfunded extensions are not drawn. |
 
 ### Anchor Density Badge
 
@@ -432,15 +485,15 @@ Side-by-side comparison of two regions (or two neighborhoods in Neighborhoods mo
 
 | Chart | X-Axis | Y-Axis | Data Source | Calculation |
 |-------|--------|--------|-------------|-------------|
-| Pressure score | Year (1990–2023) | Score, 0–100 | `AUDITED_DVI_LOOKUP` | `interpolateDvi(regionId, year)` at 8 snap years (1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023). The score describes present-day conditions (§3.8); it is not the stage. |
-| Median Home Values | Year (2000–2023) | $ | `SOCIOECONOMIC` array | `homeValue` field (joined from property data). Nominal dollars. |
-| Median Household Income | Year (2000–2023) | $ | `SOCIOECONOMIC` array | `incomeAdj` field. Nominal dollars. |
-| Demographic Composition | Year (1990–2023) | % | `DEMOGRAPHICS` array | `pctBlack`, `pctHispanic`, `pctWhite`, `pctAsian`, `pctOther` as 0–1 fractions. "All Groups" toggle shows all five; default "Focused" view shows Black and Hispanic only. |
+| Pressure score | Year (1990–2024) | Score, 0–100 | `AUDITED_DVI_LOOKUP` | `interpolateDvi(regionId, year)` at 8 snap years (1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024). The score describes present-day conditions (§3.8); it is not the stage. |
+| Median Home Values | Year (2000–2024) | $ | `SOCIOECONOMIC` array | `homeValue` field (joined from property data). Nominal dollars. |
+| Median Household Income | Year (2000–2024) | $ | `SOCIOECONOMIC` array | `incomeAdj` field. Nominal dollars. |
+| Demographic Composition | Year (1990–2024) | % | `DEMOGRAPHICS` array | `pctBlack`, `pctHispanic`, `pctWhite`, `pctAsian`, `pctOther` as 0–1 fractions. "All Groups" toggle shows all five; default "Focused" view shows Black and Hispanic only. |
 
 ### Comparison Narrative (auto-generated)
 
 The narrative text below the charts is computed from:
-1. **Stage and score:** Names each tract's displacement stage in the 2019–2023 survey (§3.2), then gives both pressure scores for 2020 (§3.8).
+1. **Stage and score:** Names each tract's displacement stage in the 2020–2024 survey (§3.2), then gives both pressure scores for 2020 (§3.8).
 2. **Home value gap:** If `|homeA - homeB| > $100,000`, notes which has higher values.
 3. **Business closures:** Counts `LEGACY_CLOSED` per region, identifies dominant cultural affiliation of losses (e.g., "predominantly African American" or "Mexican American").
 
@@ -465,20 +518,20 @@ Colors in this view are the stage colors of the map (§3.2). The lens's group is
 
 ### 6.1 Figures the lenses add
 
-The lenses use the stage and its three tests (§3.1) for the 2019–2023 survey, plus the figures below. They are computed by `scripts/build_stages.mjs` and written to `data/stageLenses.js`, which only the presenter build loads.
+The lenses use the stage and its three tests (§3.1) for the 2020–2024 survey, plus the figures below. They are computed by `scripts/build_stages.mjs` and written to `data/stageLenses.js`, which only the presenter build loads.
 
 | Figure | Formula | Data |
 |--------|---------|------|
-| Change since 2000 (index) | Mean of the four z-scores of test 2 (§3.1): owner share, white non-Hispanic share, bachelor's share, median family income | 2000 Census and ACS 2019–2023, as in §3.1 |
-| Shift since 2011–2015 (index) | The same mean, with change measured between the 2011–2015 and 2019–2023 surveys, compared with the region's change over that period and the spread of tracts around it | ACS 2011–2015 and 2019–2023: B25003, B03002, B15002, B19113 |
+| Change since 2000 (index) | Mean of the four z-scores of test 2 (§3.1): owner share, white non-Hispanic share, bachelor's share, median family income | 2000 Census and ACS 2020–2024, as in §3.1 |
+| Shift since 2011–2015 (index) | The same mean, with change measured between the 2011–2015 and 2020–2024 surveys, compared with the region's change over that period and the spread of tracts around it | ACS 2011–2015 and 2020–2024: B25003, B03002, B15002, B19113 |
 | Shifted, yes or no | Yes when at least 2 of the 4 z-scores are above 0.5 and the index is 0.5 or more (the rule of test 2) | |
-| Value rise since 2011–2015 | (value now − value then) ÷ value then × 100. "Fast" is above the 60th percentile of scored tracts: +127% for home values, +59% for rents | ACS B25077; B25064 where fewer than 50 homes are owned |
+| Value rise since 2011–2015 | (value now − value then) ÷ value then × 100. "Fast" is above the 60th percentile of scored tracts: +155% for home values, +67% for rents | ACS B25077; B25064 where fewer than 50 homes are owned |
 | Rank of the rise since 2000 | (number of scored tracts with a smaller rise) ÷ (scored tracts − 1) × 100. Above 60 is the "high" of test 3 | 2000 SF3 H085 / ACS B25077 (H063 / B25064 for rent) |
-| Preservation Austin listings nearby | Count of listings less than 0.012 degrees (about 1.3 km) from the tract's center point | `data/preservationAustin.js`: 156 published listings, of which 18 are filed as citywide and not counted |
-| Black + Hispanic share since 2000 | Share in 2023 − share in 2000, in percentage points (2010 where a tract has no 2000 figure) | `data/phase1_output/audited_demographics_normalized.json` (§1.1) |
+| Preservation Austin listings nearby | Count of listings less than 0.012 degrees (about 1.3 km) from the tract's center point | `data/preservationAustin.js`: 181 published listings, of which 19 are filed as citywide and one has no published location; those 20 are not counted |
+| Black + Hispanic share since 2000 | Share in 2024 − share in 2000, in percentage points (2010 where a tract has no 2000 figure) | `data/phase1_output/audited_demographics_normalized.json` (§1.1) |
 | Tracked businesses | Count of legacy businesses in the tract, open and closed | `data/businesses.js` (§1.2) |
 
-The two surveys compared for the recent shift, 2011–2015 and 2019–2023, share no interviews. The 2016–2020 survey overlaps the latest one by two years, so it is not used for that comparison; the Census Bureau's guidance is to compare 5-year surveys that do not overlap (§12.3). Applying the rule of test 2 to this pair of surveys is this site's own extension of the published method (§12.4). For the period, the region's change and the line a tract must pass were: owner share +0.9 points (line +7.3), white non-Hispanic share −3.8 (line +1.8), bachelor's share +8.2 (line +13.2), median family income +54.2% (line +76.9%).
+The two surveys compared for the recent shift, 2011–2015 and 2020–2024, share no interviews. The earlier one is chosen by rule: the newest survey on the site that shares no interview year with the latest. The 2016–2020 survey shares 2020 with the latest one, so it is not used for that comparison; the Census Bureau's guidance is to compare 5-year surveys that do not overlap (§12.3). Applying the rule of test 2 to this pair of surveys is this site's own extension of the published method (§12.4). For the period, the region's change and the line a tract must pass were: owner share +0.3 points (line +6.8), white non-Hispanic share −4.9 (line +1.0), bachelor's share +9.3 (line +14.7), median family income +60.2% (line +84.3%).
 
 ### 6.2 Trajectory lens
 
@@ -487,15 +540,15 @@ The two surveys compared for the recent shift, 2011–2015 and 2019–2023, shar
 | Group | Rule | Tracts |
 |-------|------|--------|
 | Starting to shift | Stage is Vulnerable, and the population shifted between the two surveys | 6 |
-| Shifting now | Stage is Early, Dynamic or Late, and the population shifted between the two surveys | 19 |
-| Reached continued loss since 2015 | Stage is Continued loss now and was something else in the 2011–2015 survey | 19 |
-| In a stage, no recent shift | Stage is Early, Dynamic or Late, and no shift was measured between the two surveys | 10 |
-| Vulnerable, no shift measured | Stage is Vulnerable, and no shift was measured | 37 |
-| Continued loss by 2015 | Stage was already Continued loss in the 2011–2015 survey | 7 |
-| No stage | No stage in the 2019–2023 survey | 163 |
+| Shifting now | Stage is Early, Dynamic or Late, and the population shifted between the two surveys | 14 |
+| Reached continued loss since 2015 | Stage is Continued loss now and was something else in the 2011–2015 survey | 25 |
+| In a stage, no recent shift | Stage is Early, Dynamic or Late, and no shift was measured between the two surveys | 12 |
+| Vulnerable, no shift measured | Stage is Vulnerable, and no shift was measured | 32 |
+| Continued loss by 2015 | Stage was already Continued loss in the 2011–2015 survey | 4 |
+| No stage | No stage in the 2020–2024 survey | 168 |
 | Not scored | §3.4 | 8 |
 
-Of the 25 tracts in the first two groups, 16 show no change on the longer test since 2000: the shift is recent. The table also shows each tract's stage in the 2010, 2015, 2020 and 2023 readings.
+Of the 20 tracts in the first two groups, 15 show no change on the longer test since 2000: the shift is recent. The table also shows each tract's stage in the 2010, 2015, 2020 and 2024 readings.
 
 **Chart:** x = change since 2000 (index), y = shift since 2011–2015 (index), with both lines at 0.5.
 
@@ -505,14 +558,14 @@ Of the 25 tracts in the first two groups, 16 show no change on the longer test s
 
 | Group | Rule | Tracts |
 |-------|------|--------|
-| Vulnerable residents, no listing nearby | Stage is Vulnerable, Early, Dynamic or Late, and no listing lies within about 1.3 km of the tract's center | 66 |
+| Vulnerable residents, no listing nearby | Stage is Vulnerable, Early, Dynamic or Late, and no listing lies within about 1.3 km of the tract's center | 58 |
 | Vulnerable residents, listing nearby | The same stages, with at least one listing within about 1.3 km | 6 |
-| Continued loss, no listing nearby | Stage is Continued loss, no listing within about 1.3 km | 15 |
-| Continued loss, listing nearby | Stage is Continued loss, at least one listing within about 1.3 km | 11 |
-| No stage | No stage in the 2019–2023 survey (36 of these have a listing nearby) | 163 |
+| Continued loss, no listing nearby | Stage is Continued loss, no listing within about 1.3 km | 13 |
+| Continued loss, listing nearby | Stage is Continued loss, at least one listing within about 1.3 km | 16 |
+| No stage | No stage in the 2020–2024 survey (39 of these have a listing nearby) | 168 |
 | Not scored | §3.4 | 8 |
 
-**Chart:** x = people of color as a share of residents in 2000, y = the same share in the 2019–2023 survey, with the diagonal marking no change. A filled dot has a listing nearby; a ring has none.
+**Chart:** x = people of color as a share of residents in 2000, y = the same share in the 2020–2024 survey, with the diagonal marking no change. A filled dot has a listing nearby; a ring has none.
 
 The earlier version of this lens scored a tract higher for lying east of I-35 and for having a heritage-tagged business. Both are gone. People of color as a share of residents, in 2000 and now, is measured for every tract and does the same job.
 
@@ -524,11 +577,11 @@ The two forces the stages are built on, as a grid. "Vulnerable" is test 1 (at le
 
 | Group | Rule | Tracts |
 |-------|------|--------|
-| Vulnerable residents, values rising fast | Vulnerable now; rise in the top two fifths | 29 |
-| Vulnerable residents, values not rising fast | Vulnerable now; rise not in the top two fifths | 43 |
-| Vulnerable in 2000, not now, values rising fast | Not vulnerable now, vulnerable in 2000; rise in the top two fifths | 31 |
-| Not vulnerable, values rising fast | Not vulnerable now or in 2000; rise in the top two fifths | 43 |
-| Not vulnerable, values not rising fast | Not vulnerable; rise not in the top two fifths, or not measured | 115 |
+| Vulnerable residents, values rising fast | Vulnerable now; rise in the top two fifths | 24 |
+| Vulnerable residents, values not rising fast | Vulnerable now; rise not in the top two fifths | 40 |
+| Vulnerable in 2000, not now, values rising fast | Not vulnerable now, vulnerable in 2000; rise in the top two fifths | 40 |
+| Not vulnerable, values rising fast | Not vulnerable now or in 2000; rise in the top two fifths | 37 |
+| Not vulnerable, values not rising fast | Not vulnerable; rise not in the top two fifths, or not measured | 120 |
 | Not scored | §3.4 | 8 |
 
 **Chart:** x = rank of the rise in value since 2000 (0–100, line at 60), y = number of vulnerability measures past the line (0–5, line between 2 and 3). Dots are offset slightly up or down so they do not cover each other.
@@ -539,7 +592,7 @@ The first three groups each carry a question for the committee, shown when the g
 
 - **The recent shift compares two samples.** A single tract's shift can be survey noise. The groups are lists to look into, not forecasts.
 - **Boundaries.** 143 of the 269 tracts had different boundaries in 2010. Their 2011–2015 figures are estimates carried from the earlier tracts (§3.3) and are marked ≈ in the table. A shift was found in 26% of those tracts and in 29% of the tracts with unchanged boundaries, so carrying does not appear to create shifts, but any one carried tract can be wrong.
-- **Listings are the published record.** They are not everything Preservation Austin has done. 18 of 156 are citywide and are not counted toward any tract; 42 more are placed at the center of a neighborhood or area, not at a street address. "Nearby" is measured from the tract's center, so a listing inside a large tract can fall outside the 1.3 km. The 1.3 km is not from research; §12.4 shows how the counts move with it.
+- **Listings are the published record.** They are not everything Preservation Austin has done. 20 of 181 are not counted toward any tract (19 are citywide and one has no published location); 43 more are placed at the center of a neighborhood or area, not at a street address. "Nearby" is measured from the tract's center, so a listing inside a large tract can fall outside the 1.3 km. The 1.3 km is not from research; §12.4 shows how the counts move with it.
 - **Tracked businesses** reflect where inventories were done (§1.2). No group rule uses them.
 - **Tracts only.** The lenses are not offered for neighborhoods.
 - **A group is not a stage.** Where a group's rule and the stage differ (31 tracts were vulnerable in 2000, are not now and have fast-rising values; 26 are in continued loss), the difference is the extra conditions of §3.2.
@@ -564,7 +617,7 @@ A census tract joins a named neighborhood **only when that City of Austin Neighb
 | Population | Sum of constituent tract populations | Absolute count — additive. |
 | Displacement stage | The three tests run on the neighborhood's combined figures (§3.5) | A stage is a category and cannot be averaged. |
 | Demographic percentages | Population-weighted average | A tract of 500 people and a tract of 5,000 shouldn't weight equally. |
-| Demographic composition chart | Population-weighted average per year (1990, 2000, 2010, 2020, 2023) | Combined populations produce a single stacked area chart for the neighborhood. |
+| Demographic composition chart | Population-weighted average per year (1990, 2000, 2010, 2020, 2024) | Combined populations produce a single stacked area chart for the neighborhood. |
 | Median home value | Population-weighted average | Approximation. True median would require household-level data (see §10). |
 | Median rent | Population-weighted average | Same approximation. |
 | Median income | Population-weighted average | Same approximation. |
@@ -621,8 +674,10 @@ Neighborhood boundaries: City of Austin Neighborhood Planning Areas, dataset `in
 ### Index
 
 CPI-U (All Items, All Urban Consumers):
-- **Primary:** Austin-Round Rock-Georgetown MSA (BLS Series CUURA320SA0), available 1998–2023
-- **Fallback:** U.S. City Average (BLS Series CUUR0000SA0), used for 1990–1997 when Austin-specific data is unavailable
+- **Primary:** a table labelled Austin-Round Rock-Georgetown MSA (BLS Series CUURA320SA0), 1998–2023
+- **Fallback:** U.S. City Average (BLS Series CUUR0000SA0), used for 1990–1997
+
+> **The primary table is unverified (checked November 2026).** The Bureau of Labor Statistics' public data service reports that series CUURA320SA0 does not exist, and BLS publishes no consumer price index for the Austin area. The table's values match none of the series checked: Dallas–Fort Worth, Houston, the South region, or the U.S. city average. The fallback table does match the U.S. city average. The function is not used by any view; it should not be used until the primary table is replaced with a verified series.
 
 ### Formula
 
@@ -692,16 +747,16 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 ### Temporal Caveats
 
 - **Pre-2005 data** relies on Census decennial snapshots (1990, 2000) with linear interpolation for intermediate years. ACS annual estimates didn't begin until 2005.
-- **2024–2025 values** are projected estimates, not observed Census/ACS data. They carry low audit confidence scores (0.2–0.4) and should be treated as directional indicators, not precise measurements.
+- **Nothing is projected.** The data files hold no figures after the latest survey (2020–2024, filed under 2024). Slider years after 2024 show that survey's figures.
 - **Tract boundary changes** between censuses make earlier figures estimates wherever a tract was split or merged (130 of 246 tracts at 2000; 104 of 256 at 2010 and 2015). Those rows are flagged `ALLOCATED_FROM_EARLIER_TRACTS` (§1.1). Only population, race, owner share and rent burden were rebuilt this way; the other 2010 and 2015 fields (income, home value, rent, poverty, foreign-born, education) still come from the first backfill, which copied a parent tract's value.
 
 ### Measurement Limitations
 
-- **Rent burden** is derived from Census/ACS self-reported housing costs — may undercount informal housing arrangements, doubled-up households, or cash rent payments. It counts only renters paying half or more of their income, a small group in a tract-sized sample, so it swings widely between surveys (median change of 6 points between the 2020 and 2023 releases).
+- **Rent burden** is derived from Census/ACS self-reported housing costs — may undercount informal housing arrangements, doubled-up households, or cash rent payments. It counts only renters paying half or more of their income, a small group in a tract-sized sample, so it swings widely between surveys (median change of 8 points between the 2016–2020 and 2020–2024 surveys).
 - **Eviction filings** lag actual displacement by 3–6 months (legal process time) and only capture formal filings — informal "cash for keys" agreements and lease non-renewals are not included. The 2020 snap-year rate averages filings over 2016–2020, which includes the 2020 COVID eviction moratorium months — rates for that window are diluted relative to normal years. Renter-household denominators are estimated from ACS housing units × occupancy × renter share, so rates in small or fast-changing tracts carry extra uncertainty.
 - **Foreign-born %** has ±2–3 percentage point margin of error in ACS 5-year estimates for small tracts (populations under 2,000).
 - **Business data** has selection bias toward historically significant areas in East Austin and downtown where Preservation Austin and community partners have conducted inventories. The tool explicitly notes this: "No Data" in the anchor density badge means no survey coverage, not no culture.
-- **Home value data** from TCAD reflects appraised values, not market transaction prices. In rapidly appreciating markets, appraisals may lag actual sales prices by 1–2 years.
+- **Home values** are the census's median value of owner-occupied homes (ACS table B25077). That is what owners told the survey their home would sell for, not an appraisal and not a sale price.
 
 ### Aggregation Caveats
 
@@ -715,7 +770,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 
 - **A stage describes an area, not people.** Vulnerable households live in tracts with no stage, and a tract in "continued loss" still has long-time residents.
 - **The tests are relative.** "Vulnerable" means well above the five-county region in that year, and "change" means more change than the region. A tract can cross a line because the region moved, not because the tract did.
-- **Survey error.** From 2010 on, every figure comes from the American Community Survey, a sample. Tract estimates carry margins of error that this site does not show, and the tests have hard lines. Of 776 year-to-year readings, 621 stay in the same stage, 102 move to a later stage and 53 move back to an earlier one. A single reversal is more likely noise than recovery.
+- **Survey error.** From 2010 on, every figure comes from the American Community Survey, a sample. Tract estimates carry margins of error that this site does not show, and the tests have hard lines. Of 776 year-to-year readings, 614 stay in the same stage, 105 move to a later stage and 57 move back to an earlier one. A single reversal is more likely noise than recovery.
 - **Change before 2000 is invisible.** Change is measured from 2000. A place whose vulnerable residents had already left by then reads as "no stage".
 - **Home values are self-reported** by owner-occupants, and say nothing about rental housing. Tracts with few owner homes use median rent instead.
 - **Boundaries.** Figures from before 2020 are estimates on today's tract boundaries (§3.3). Tracts on the edge of the mapped area are drawn clipped (§4.3) but tested on the whole tract.
@@ -727,7 +782,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 
 - The score (§3.8) describes present-day conditions and follows poverty closely. It is not evidence that displacement is happening and it is not used on the map.
 - The Affluence Gate is a binary threshold. Regions just below the income or ownership cutoff are scored in full.
-- Normalization ceilings compress variation at the extremes. A tract with 60% rent burden and one with 80% both score 100 on that component, and in 2023 about half of all tracts hit the home-value ceiling.
+- Normalization ceilings compress variation at the extremes. A tract with 60% rent burden and one with 80% both score 100 on that component, and in the 2019–2023 survey about half of all tracts hit the home-value ceiling.
 
 ---
 
@@ -738,9 +793,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 | Source | Data Used | Years | Access |
 |--------|-----------|-------|--------|
 | U.S. Census Bureau — Decennial Census | Population, race/ethnicity, housing tenure | 1990, 2000, 2010, 2020 | data.census.gov |
-| U.S. Census Bureau — American Community Survey | All demographic, economic, housing fields | 2005–2023 (5-year estimates) | data.census.gov |
-| Bureau of Labor Statistics | CPI-U inflation indices, unemployment rates | 1990–2023 | bls.gov |
-| Travis Central Appraisal District | Property values, tax assessments | 2000–2023 | traviscad.org |
+| U.S. Census Bureau — American Community Survey | All demographic, economic and housing fields, including home values, rents, unemployment and SNAP participation | 5-year surveys 2006–2010, 2011–2015, 2016–2020 and 2020–2024 | api.census.gov |
 | City of Austin — Neighborhood Planning Areas | NPA boundary polygons (95 areas) | Current as of Mar 2026 | data.austintexas.gov (dataset `inrm-c3ee`) |
 | City of Austin — Issued Construction Permits | New construction permit counts, commercial sqft | 2005–2025 | data.austintexas.gov (dataset `3syk-w9eu`) |
 | City of Austin — Equity-Based Preservation Plan | Policy framework, equity analysis | Adopted Nov 2024 | austintexas.gov |
@@ -756,7 +809,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 
 ### AISD School Closures Layer
 
-The map's "AISD Closures" overlay shows the 15 Austin ISD campuses closed or consolidated between 2012 and 2026: Allan (2012, charter handoff to IDEA), the 2019-vote "School Changes" round (Pease and Brooke in 2020; Metz and Sims in 2021), and the ten campuses approved for closure on November 21, 2025 (effective 2026–27). Coordinates were geocoded from published campus addresses; closure details and final enrollments come from AISD repurposing pages, the Austin Chronicle, KUT, and Community Impact — each entry carries its source URL in the map popup. Campuses that were proposed but not approved for closure (Maplewood, Palm, Bryker Woods) and programs without standalone buildings (International High School) are excluded. Markers respond to the time slider: solid once the slider passes the closure year, outlined before it.
+The map's "AISD Closures" overlay shows the 16 Austin ISD campuses closed or consolidated between 2012 and 2026: Allan (2012, charter handoff to IDEA), the 2019-vote "School Changes" round (Pease and Brooke in 2020; Metz and Sims in 2021), the ten campuses approved for closure on November 21, 2025 (effective 2026–27), and Paredes Middle School, closed by a 7–2 board vote on July 30, 2026, weeks before the school year began. Coordinates were geocoded from published campus addresses; closure details and final enrollments come from AISD repurposing pages, the Austin Chronicle, KUT, and Community Impact — each entry carries its source URL in the map popup. Campuses that were proposed but not approved for closure (Maplewood, Palm, Bryker Woods) and programs without standalone buildings (International High School) are excluded. Markers respond to the time slider: solid once the slider passes the closure year, outlined before it.
 
 ### State Legislation Timeline Layer
 
@@ -770,25 +823,19 @@ Key aggregate sources for this layer:
 - **Mercatus, "Framing Futures" (2025)** — aggregates the 89th Legislature's housing-supply package
 
 Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County district court in 2023, but the ruling was vacated on appeal in July 2025 and the law is currently in effect. SB 38 (eviction acceleration) passed in 2025 with a January 1, 2026 effective date. Bills that failed, city ordinances, and federal action are excluded; pre-2000 statutes (e.g., the rent-control ban, the 1997 homestead appraisal cap) are excluded as outside the window.
-| Eviction Lab (Princeton University) | Eviction filing rates by tract | 2010–2023 | evictionlab.org |
-| Texas Justice Court Training Center | Eviction filing data | 2015–2023 | tjctc.org |
-| Texas Health & Human Services Commission | SNAP participation rates | 2010–2023 | hhs.texas.gov (supplemented by ACS B22003 via Census API) |
 
 ### Community & Organizational Sources
 
 | Source | Data Used |
 |--------|-----------|
-| Preservation Austin | Grant awards ($284K+ since 2016), merit awards (2022–2025), Legacy Business Month participants (2023–2025), advocacy milestones |
+| Preservation Austin | Grant awards ($284K+ since 2016), merit awards (2022–2026), Legacy Business Month participants (2023–2026), advocacy milestones |
 | Six Square Austin African American Cultural Heritage District | Cultural plan, heritage site inventory, AACHD boundary |
 | Austin Legacy Business Closure Analysis | Business closure causes, replacement tenants, cultural affiliations |
 | Community business inventories | Field surveys, public records (compiled Feb 2026) |
 
-### Commercial/Estimated Sources
+### Sources listed in earlier versions that no figure rests on
 
-| Source | Data Used | Notes |
-|--------|-----------|-------|
-| Zillow Home Value Index | Home value estimates | Used to fill gaps in TCAD data, particularly for newer tracts |
-| MLS (Multiple Listing Service) | Rent estimates, sales data | Via licensed data partnerships; used where ACS rent data is unavailable or outdated |
+Earlier versions of this section, and the site's footer, also named the Travis Central Appraisal District, Zillow, the MLS, the Bureau of Labor Statistics, Eviction Lab, the Texas Justice Court Training Center and the Texas Health and Human Services Commission. A check in November 2026 found no figure in the current data files that comes from any of them: every row of the three files in §1.1 cites the Census Bureau; home values and rents are census medians (ACS B25077, B25064); unemployment is ACS B23025; SNAP participation is ACS B22003; eviction rates are BASTA's. They have been removed from the list. The one Bureau of Labor Statistics table in the code is unverified and unused (§8).
 
 ---
 
@@ -799,12 +846,14 @@ Notes: HB 2127 ("Death Star" preemption) was struck down by a Travis County dist
 | Script | Purpose |
 |--------|---------|
 | `build_stages.mjs` | Decides the displacement stage of every tract and neighborhood for each census year (§3) and writes `data/stages.js`. Pulls are cached in `data/_cache/census_history/stage_*.json`; `--report` prints the checks against the City's map. Also writes `data/stageLenses.js`, the figures for the Triage lenses (§6). |
+| `build_latest_acs.mjs` | Replaces the latest-survey rows of the three census files with one ACS 5-year release (§1.1); `--check` rebuilds the rows already held and lists differences. Also computes that survey's eviction rates from the BASTA extract. |
+| `build_light_rail.mjs` | Builds the light rail overlay from Austin Transit Partnership's published route and station layers (§1.2); downloads are cached in `data/_cache/light_rail/`. |
 | `rebuild_census_history.mjs` | Rebuilds 2000, 2010 and 2015 population, race, owner share and rent burden from census tables (§1.1). Shares its census helpers with `build_stages.mjs` (`scripts/lib/census.mjs`). |
 | `fill_census_gaps_v2.py` | Backfills historical Census/ACS data using tract crosswalking (2000→2010→2020) |
 | `fill_demographic_history.py` | Chains crosswalks for deep history + interpolates 2005 from 2000/2010 |
 | `extract_permits.py` | Extracts new construction permits and commercial sqft from COA 1.5GB permit CSV |
 | `merge_permits_and_evictions.py` | Merges permit data and tract-level eviction rates into phase1_output JSONs |
-| `prepare_basta_evictions.py` | Converts BASTA filing counts to rates: filings averaged over ACS-aligned windows (2015←2014–15, 2020←2016–20, 2023←2019–23) ÷ estimated renter households (occupied units × renter share) × 100. Tracts with <30 renter households excluded. |
+| `prepare_basta_evictions.py` | Converts BASTA filing counts to rates: filings averaged over ACS-aligned windows (2015←2014–15, 2020←2016–20) ÷ estimated renter households (occupied units × renter share) × 100. Tracts with <30 renter households excluded. The latest survey's rates (2024←2020–24) are computed the same way by `build_latest_acs.mjs`. |
 | `geocode_businesses_google.py` | Geocodes business locations to rooftop precision via Google Maps API |
 
 ---
@@ -856,7 +905,7 @@ The three tests and the stage table (§3) were not designed for this site. They 
 
 | Choice | Source |
 |--------|--------|
-| The Triage "recent shift" compares the 2011–2015 and 2019–2023 surveys, which share no interviews (§6.1) | U.S. Census Bureau, *Comparing ACS Data*: compare non-overlapping 5-year estimates; do not compare overlapping ones |
+| The Triage "recent shift" compares the 2011–2015 and 2020–2024 surveys, which share no interviews (§6.1). The site also keeps one row per survey period and does not hold two overlapping surveys side by side (§1.1) | U.S. Census Bureau, *Comparing ACS Data*: compare non-overlapping 5-year estimates; do not compare overlapping ones |
 | Rent burden counts renters paying 50% or more of income (§1.1) | The highest band the Census Bureau publishes in table B25070. Housing agencies commonly call it severe cost burden |
 | The 60th percentile is found by straight-line interpolation between ranked values | The spreadsheet function `PERCENTILE.INC`, named in Appendix 3, Housing Market Change, step 6 |
 
@@ -868,8 +917,8 @@ None of these comes from research. Each was a judgment made while building the s
 
 | Choice | Why | Not tested, or the effect |
 |--------|-----|---------------------------|
-| Lower-income households counted from the 16 census income brackets, splitting the bracket the line falls in evenly (§3.7) | HUD's tables, which both studies use, are not published for every survey year shown here | Assumes incomes are spread evenly inside a bracket, and does not adjust for household size as HUD does. Agreement with the City on "vulnerable" is 89% (§3.6) |
-| A reading for each of four surveys, each against 2000 (§3.3) | The map has a year slider | Readings from sample surveys can reverse: 53 of 776 do (§10) |
+| Lower-income households counted from the 16 census income brackets, splitting the bracket the line falls in evenly (§3.7) | HUD's tables, which both studies use, are not published for every survey year shown here | Assumes incomes are spread evenly inside a bracket, and does not adjust for household size as HUD does. Agreement with the City on "vulnerable" is 86% (§3.6) |
+| A reading for each of four surveys, each against 2000 (§3.3) | The map has a year slider | Readings from sample surveys can reverse: 57 of 776 do (§10) |
 | "Appreciated" tests the 2000 value, not the 1990 value | The site holds no 1990 figures. Appendix 3's own spreadsheet formula also tests 2000 | Places that appreciated in the 1990s can be missed |
 | Census Bureau relationship files in place of the Longitudinal Tract Database; 2010 to 2020 by land area (§3.3) | The site's tracts are 2020 tracts, and land area is the only measure that file carries | Land area is a poor guide where people are unevenly spread within a tract |
 | Not scored: under 500 residents, half or more students, half or more in group quarters, or fewer than 3 measures (§3.4) | The UT study left out five tracts by hand; a rule can be applied to every year | The 500 and the one-half are round numbers. The rule leaves out the airport, the UT campus and the West Campus tracts, as the study did, plus two more small or group-quarters tracts and, in some years, student-apartment tracts. Camp Mabry is not singled out |
@@ -889,14 +938,14 @@ None of these comes from research. Each was a judgment made while building the s
 
 How the Equity lens's counts (§6.3) move with the radius:
 
-| Radius | Vulnerable residents (72 tracts) with a listing nearby | Continued loss (26) | No stage (163) |
+| Radius | Vulnerable residents (64 tracts) with a listing nearby | Continued loss (29) | No stage (168) |
 |--------|--------------------------------------------------------|---------------------|----------------|
-| 0.7 km | 3 | 11 | 18 |
-| 1.0 km | 3 | 11 | 25 |
-| **1.3 km** | **6** | **11** | **36** |
-| 1.7 km | 7 | 14 | 40 |
-| 2.0 km | 12 | 18 | 43 |
-| 2.7 km | 19 | 22 | 51 |
+| 0.7 km | 4 | 12 | 20 |
+| 1.0 km | 5 | 13 | 27 |
+| **1.3 km** | **6** | **16** | **39** |
+| 1.7 km | 9 | 18 | 47 |
+| 2.0 km | 12 | 21 | 55 |
+| 2.7 km | 23 | 25 | 64 |
 
 The counts depend on the radius. The pattern does not: at every radius, listings lie near a far larger share of continued-loss tracts than of tracts where vulnerable residents live.
 

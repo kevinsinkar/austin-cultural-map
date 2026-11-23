@@ -1,4 +1,5 @@
 import { REGION_INDEX } from "./regionIndex";
+import { STAGE_YEARS, STAGE_REGION } from "./stages";
 
 export const REGION_NAMES = REGION_INDEX
   .filter(r => !r.merge_into)
@@ -75,8 +76,28 @@ export const TIMELINE_EVENTS = [
   },
 ];
 
-export const SNAP_YEARS = [1990, 2000, 2010, 2020, 2023];
-export const PLAY_YEARS = [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2023, 2025];
+// ── Years ──
+// The latest census year is read from the generated stage data, so moving
+// the site to a newer survey release (npm run build:latest, then
+// build:stages) moves every default, label and chart with it.
+/** The latest census year on the site: the end year of the latest ACS 5-year survey. */
+export const LATEST_YEAR = STAGE_YEARS[STAGE_YEARS.length - 1];
+const latestSpan = (STAGE_REGION[LATEST_YEAR]?.source || "").match(/(\d{4})-(\d{4})/);
+/** The years that survey covers, for display: "2020–2024". */
+export const LATEST_SURVEY = latestSpan ? `${latestSpan[1]}–${latestSpan[2]}` : String(LATEST_YEAR);
+/** The census years charts and trends are drawn on (2005 is interpolated). */
+export const CENSUS_YEARS = [2000, 2005, 2010, 2015, 2020, LATEST_YEAR];
+
+export const YEAR_MIN = 1990;
+/**
+ * The slider's last year. Closures, listings and school changes are dated to
+ * the calendar year, so the slider runs past the latest census year; census
+ * figures stay at LATEST_YEAR from there on.
+ */
+export const YEAR_MAX = 2026;
+
+export const SNAP_YEARS = [1990, 2000, 2010, 2020, LATEST_YEAR];
+export const PLAY_YEARS = [1990, 1995, ...CENSUS_YEARS, YEAR_MAX];
 
 export const DEMO_COLORS = {
   White: "#94a3b8",

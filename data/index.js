@@ -12,7 +12,7 @@ export { TIPPING_POINTS } from "./tippingPoints";
 export { AUDITED_DVI_LOOKUP } from "./auditedDvi";
 export { MUSIC_NIGHTLIFE } from "./musicNightlife";
 export { PROPERTY_DATA } from "./interim_property";
-export { PROJECT_CONNECT_LINES, PC_PROXIMITY_REGIONS } from "./projectConnect";
+export { PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS, LIGHT_RAIL_SOURCE } from "./projectConnect";
 export { TIMELINE_INFRA } from "./timelineInfra";
 export {
   REGION_NAMES,

@@ -70,9 +70,9 @@ export const AISD_CLOSED_SCHOOLS = [
   },
   {
     name: "Oak Springs Elementary", lat: 30.271347, lng: -97.705419, year_closed: 2026, level: "elementary",
-    fate: "Closed ahead of 2026-27 (multi-F turnaround campus); students consolidated into Blackshear Elementary; possible future reopening after an estimated $47.6M renovation.",
+    fate: "Closed ahead of 2026-27 (multi-F turnaround campus); students attend Blackshear Elementary until January 2028, when the combined school is due to move into a new Oak Springs building and the historic Blackshear campus closes as a school.",
     enrollment_at_closure: 213,
-    source: "https://www.austinchronicle.com/news/aisd-board-approves-school-closures-and-turnaround-plans/",
+    source: "https://www.austinchronicle.com/news/aisd-to-close-historic-school-campus-in-2028/",
   },
   {
     name: "Ridgetop Elementary", lat: 30.311481, lng: -97.716966, year_closed: 2026, level: "elementary",
@@ -100,7 +100,7 @@ export const AISD_CLOSED_SCHOOLS = [
   },
   {
     name: "Bedichek Middle School", lat: 30.195202, lng: -97.785391, year_closed: 2026, level: "middle",
-    fate: "Closed ahead of 2026-27 (multi-F turnaround campus); students reassigned to Covington, Paredes, and Mendez middle schools.",
+    fate: "Closed ahead of 2026-27 (multi-F turnaround campus); students reassigned to Covington, Paredes, and Mendez middle schools (Paredes itself closed in July 2026).",
     enrollment_at_closure: 607,
     source: "https://www.austinchronicle.com/news/aisd-board-approves-school-closures-and-turnaround-plans/",
   },
@@ -109,6 +109,12 @@ export const AISD_CLOSED_SCHOOLS = [
     fate: "Closed ahead of 2026-27 (multi-F turnaround campus); students reassigned to Kealing, Lively, and Marshall middle schools.",
     enrollment_at_closure: 308,
     source: "https://www.austinchronicle.com/news/aisd-board-approves-school-closures-and-turnaround-plans/",
+  },
+  {
+    name: "Paredes Middle School", lat: 30.165782, lng: -97.8118, year_closed: 2026, level: "middle",
+    fate: "Closed weeks before the 2026-27 school year: trustees voted 7-2 on July 30, 2026, and the state approved the closure in August. The district cited a likely fourth failing rating. Students were reassigned to Bailey and Mendez middle schools.",
+    enrollment_at_closure: null,
+    source: "https://www.kut.org/education/2026-07-31/austin-isd-trustees-vote-to-close-paredes-middle-school-just-weeks-before-school-starts",
   },
 ];
 

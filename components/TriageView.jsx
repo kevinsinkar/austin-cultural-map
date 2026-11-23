@@ -3,10 +3,18 @@ import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
-import { STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED } from "../utils/stages";
+import { STAGE_CLASSES, STAGE_NONE, STAGE_UNSCORED, surveySpan } from "../utils/stages";
 import {
-  LENSES, LENS_BY_KEY, LENS_REGION, PA_LISTING_COUNTS, lensRows, groupCounts, lensSummary, carriedCount,
+  LENSES, LENS_BY_KEY, LENS_REGION, PA_LISTING_COUNTS, PA_LISTING_YEARS, EARLIER_SURVEY, LATEST_SURVEY, PATH_YEARS,
+  lensRows, groupCounts, lensSummary, carriedCount,
 } from "../utils/lenses";
+
+// Years and surveys named in labels come from the generated data, so a newer
+// survey release changes them without editing this file.
+const LATEST_YEAR = LENS_REGION.to;
+const listOf = (items) => `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
+const PATH_YEARS_TEXT = listOf(PATH_YEARS);                    // "2010, 2015, 2020 and 2024"
+const PATH_SURVEYS_TEXT = listOf(PATH_YEARS.map(surveySpan));  // `2006–2010, ${EARLIER_SURVEY}, 2016–2020 and 2020–2024`
 
 /**
  * Triage (presenter mode only): three questions asked of the map's
@@ -36,15 +44,15 @@ const jitter = (id) => (((id * 37) % 21) - 10) / 10 * 0.22;
 // ── What each lens plots ──
 const PLOTS = {
   trajectory: {
-    title: "Change since 2000 against the shift since the 2011–2015 survey",
+    title: `Change since 2000 against the shift since the ${EARLIER_SURVEY} survey`,
     x: { label: "Change since 2000 (index)", get: (r) => r.dIndex, fmt: (v) => signed(v) },
-    y: { label: "Shift since 2011–2015 (index)", get: (r) => r.rIndex, fmt: (v) => signed(v) },
+    y: { label: `Shift since ${EARLIER_SURVEY} (index)`, get: (r) => r.rIndex, fmt: (v) => signed(v) },
     caption: "Each dot is a census tract, colored by its stage. Dots above the horizontal line shifted more than the region between the two latest surveys; dots right of the vertical line changed more than the region since 2000. Both lines are at 0.5, the line the stage tests use.",
   },
   equity: {
     title: "People of color as a share of residents, 2000 against today",
     x: { label: "People of color in 2000 (%)", get: (r) => r.pocThen, fmt: (v) => pct(v, 1) },
-    y: { label: "People of color, 2019–2023 (%)", get: (r) => r.pocNow, fmt: (v) => pct(v, 1) },
+    y: { label: `People of color, ${LATEST_SURVEY} (%)`, get: (r) => r.pocNow, fmt: (v) => pct(v, 1) },
     caption: "Each dot is a census tract, colored by its stage. A filled dot has a Preservation Austin listing nearby; a ring has none. Dots below the diagonal have a smaller share of residents of color than in 2000.",
   },
   matrix: {
@@ -59,22 +67,22 @@ const PLOTS = {
 const stageSort = (r) => ["unscored", "none", "vulnerable", "early", "dynamic", "late", "loss"].indexOf(r.cls);
 const COLUMNS = {
   trajectory: [
-    { key: "rIndex", label: "Shift since 2011–2015", hint: "Average of four z-scores for change between the 2011–2015 and 2019–2023 surveys. 0.5 or more, with two measures past the line, counts as a shift. ≈ marks 2011–2015 figures estimated from earlier tract boundaries.", value: (r) => r.rIndex, text: (r) => `${signed(r.rIndex)}${r.rIndex != null && r.carried ? " ≈" : ""}`, flag: (r) => r.recent === true },
-    { key: "dIndex", label: "Change since 2000", hint: "Average of the same four z-scores for change between the 2000 Census and the 2019–2023 survey.", value: (r) => r.dIndex, text: (r) => signed(r.dIndex), flag: (r) => r.changed === true },
-    { key: "recentRise", label: "Value rise since 2011–2015", hint: "Percent change in median home value (median rent where few homes are owned) between the two surveys. Bold when in the top two fifths.", value: (r) => r.recentRise, text: (r) => (r.recentRise == null ? DASH : `${r.recentRise > 0 ? "+" : ""}${r.recentRise}%`), flag: (r) => r.recentHigh === true },
-    { key: "bhDelta", label: "Black + Hispanic share since 2000", hint: "Change in the Black and Hispanic share of residents, in percentage points, from 2000 (2010 where 2000 is missing) to 2023.", value: (r) => r.bhDelta, text: (r) => (r.bhDelta == null ? DASH : `${signed(r.bhDelta, 1)} pts`) },
+    { key: "rIndex", label: `Shift since ${EARLIER_SURVEY}`, hint: `Average of four z-scores for change between the ${EARLIER_SURVEY} and ${LATEST_SURVEY} surveys. 0.5 or more, with two measures past the line, counts as a shift. ≈ marks ${EARLIER_SURVEY} figures estimated from earlier tract boundaries.`, value: (r) => r.rIndex, text: (r) => `${signed(r.rIndex)}${r.rIndex != null && r.carried ? " ≈" : ""}`, flag: (r) => r.recent === true },
+    { key: "dIndex", label: "Change since 2000", hint: `Average of the same four z-scores for change between the 2000 Census and the ${LATEST_SURVEY} survey.`, value: (r) => r.dIndex, text: (r) => signed(r.dIndex), flag: (r) => r.changed === true },
+    { key: "recentRise", label: `Value rise since ${EARLIER_SURVEY}`, hint: "Percent change in median home value (median rent where few homes are owned) between the two surveys. Bold when in the top two fifths.", value: (r) => r.recentRise, text: (r) => (r.recentRise == null ? DASH : `${r.recentRise > 0 ? "+" : ""}${r.recentRise}%`), flag: (r) => r.recentHigh === true },
+    { key: "bhDelta", label: "Black + Hispanic share since 2000", hint: `Change in the Black and Hispanic share of residents, in percentage points, from 2000 (2010 where 2000 is missing) to ${LATEST_YEAR}.`, value: (r) => r.bhDelta, text: (r) => (r.bhDelta == null ? DASH : `${signed(r.bhDelta, 1)} pts`) },
   ],
   equity: [
     { key: "vCount", label: "Measures past the line", hint: "How many of the five vulnerability measures are well above the region. Three or more counts as vulnerable.", value: (r) => r.vCount, text: (r) => (r.vCount == null ? DASH : `${r.vCount} of 5`), flag: (r) => r.vulnerableNow === true },
     { key: "pocThen", label: "People of color, 2000", hint: "Residents who are not white non-Hispanic, as a share of all residents, 2000 Census.", value: (r) => r.pocThen, text: (r) => pct(r.pocThen) },
-    { key: "pocNow", label: "People of color, now", hint: "The same share in the 2019–2023 survey.", value: (r) => r.pocNow, text: (r) => pct(r.pocNow) },
-    { key: "bhDelta", label: "Black + Hispanic share since 2000", hint: "Change in the Black and Hispanic share of residents, in percentage points, from 2000 (2010 where 2000 is missing) to 2023.", value: (r) => r.bhDelta, text: (r) => (r.bhDelta == null ? DASH : `${signed(r.bhDelta, 1)} pts`) },
+    { key: "pocNow", label: "People of color, now", hint: `The same share in the ${LATEST_SURVEY} survey.`, value: (r) => r.pocNow, text: (r) => pct(r.pocNow) },
+    { key: "bhDelta", label: "Black + Hispanic share since 2000", hint: `Change in the Black and Hispanic share of residents, in percentage points, from 2000 (2010 where 2000 is missing) to ${LATEST_YEAR}.`, value: (r) => r.bhDelta, text: (r) => (r.bhDelta == null ? DASH : `${signed(r.bhDelta, 1)} pts`) },
     { key: "paNear", label: "PA listings nearby", hint: "Preservation Austin grants, awards, Legacy Business Month listings and advocacy within about 1.3 km of the tract's center. Citywide listings are not counted.", value: (r) => r.paNear, text: (r) => count(r.paNear), flag: (r) => r.paNear > 0 },
     { key: "biz", label: "Tracked businesses", hint: "Legacy businesses this site tracks in the tract: open / closed. Most tracts have none tracked, which reflects where surveys were done.", value: (r) => r.bizOpen + r.bizClosed, text: (r) => (r.bizOpen + r.bizClosed ? `${r.bizOpen} open / ${r.bizClosed} closed` : DASH) },
   ],
   matrix: [
     { key: "vCount", label: "Measures past the line", hint: "How many of the five vulnerability measures are well above the region. Three or more counts as vulnerable.", value: (r) => r.vCount, text: (r) => (r.vCount == null ? DASH : `${r.vCount} of 5`), flag: (r) => r.vulnerableNow === true },
-    { key: "valueNow", label: "Value now", hint: "Median home value in the 2019–2023 survey. Tracts with few owner homes show median monthly rent instead.", value: (r) => r.housing?.now ?? null, text: (r) => (r.housing ? `${money(r.housing.now)}${r.housing.isRent ? " rent" : ""}` : DASH) },
+    { key: "valueNow", label: "Value now", hint: `Median home value in the ${LATEST_SURVEY} survey. Tracts with few owner homes show median monthly rent instead.`, value: (r) => r.housing?.now ?? null, text: (r) => (r.housing ? `${money(r.housing.now)}${r.housing.isRent ? " rent" : ""}` : DASH) },
     { key: "rise", label: "Rise since 2000", hint: "Percent change in that value since the 2000 Census, in dollars of each year.", value: (r) => r.housing?.rise ?? null, text: (r) => (r.housing ? `+${Math.round(r.housing.rise).toLocaleString()}%` : DASH), flag: (r) => r.riseHigh === true },
     { key: "risePct", label: "Rank of the rise", hint: "Where the rise sits among the scored tracts on this map, 0 (smallest) to 100 (largest). Above 60 is the top two fifths.", value: (r) => r.risePct, text: (r) => (r.risePct == null ? DASH : r.risePct.toFixed(0)) },
     { key: "pattern", label: "Market pattern", hint: "The housing pattern the stage test found: accelerating, appreciated, adjacent, or none.", value: (r) => r.housing?.name || "", text: (r) => r.housing?.name || DASH, align: "left" },
@@ -93,11 +101,11 @@ const regionLine = (k, unit) => `${signed(LENS_REGION.d[k][0], 1)}${unit}, line 
 const FORMULAS = {
   trajectory: [
     {
-      figure: "Shift since 2011–2015 (index)",
+      figure: `Shift since ${EARLIER_SURVEY} (index)`,
       source: "This site's own. The four measures and the z-score are the UT study's test for change since 2000, used here on a later pair of surveys.",
       formula: "index = (z_owners + z_white + z_bachelor's + z_income) ÷ 4, where z = (change in the tract − change in the region) ÷ spread",
       data: [
-        ["Change", "2019–2023 survey minus 2011–2015 survey, on today's tract boundaries. Shares in percentage points; income in percent."],
+        ["Change", `${LATEST_SURVEY} survey minus ${EARLIER_SURVEY} survey, on today's tract boundaries. Shares in percentage points; income in percent.`],
         ["Owners", `Owner-occupied ÷ occupied homes, ACS table B25003. Region ${regionLine("owner", " pts")}.`],
         ["White", `White non-Hispanic ÷ all residents, ACS B03002. Region ${regionLine("white", " pts")}.`],
         ["Bachelor's", `Adults 25+ with a four-year degree ÷ adults 25+, ACS B15002. Region ${regionLine("ba", " pts")}.`],
@@ -115,11 +123,11 @@ const FORMULAS = {
     {
       figure: "Change since 2000 (index)",
       source: "Published: the average z-score of Uprooted, Appendix 3, Demographic Change, step 8.",
-      formula: "the same index, with change measured from the 2000 Census to the 2019–2023 survey",
+      formula: `the same index, with change measured from the 2000 Census to the ${LATEST_SURVEY} survey`,
       data: [["2000 figures", "Census 2000 tables H004 (owners), P004 (white non-Hispanic), SF3 P037 (bachelor's) and P077 (median family income), carried onto today's tract boundaries."]],
     },
     {
-      figure: "Value rise since 2011–2015",
+      figure: `Value rise since ${EARLIER_SURVEY}`,
       source: "This site's own, with the published \"top two fifths\" line.",
       formula: "rise = (value now − value then) ÷ value then × 100",
       data: [["Value", `Median home value, ACS B25077; median gross rent, B25064, where fewer than 50 homes are owned. "Fast" is above the 60th percentile of scored tracts: +${LENS_REGION.recentRiseLine.value}% for home values, +${LENS_REGION.recentRiseLine.rent}% for rents.`]],
@@ -127,8 +135,8 @@ const FORMULAS = {
     {
       figure: "Stage in each survey year",
       source: "The stage method is published (Bates 2013; Uprooted 2018). A reading for each survey year is this site's own.",
-      formula: "the map's stage for 2010, 2015, 2020 and 2023",
-      data: [["Stage", "The three-part test of DATA_METHODOLOGY.md §3, run on the 2006–2010, 2011–2015, 2016–2020 and 2019–2023 surveys."]],
+      formula: `the map's stage for ${PATH_YEARS_TEXT}`,
+      data: [["Stage", `The three-part test of DATA_METHODOLOGY.md §3, run on the ${PATH_SURVEYS_TEXT} surveys.`]],
     },
   ],
   equity: [
@@ -138,19 +146,19 @@ const FORMULAS = {
       formula: "share = (all residents − white non-Hispanic residents) ÷ all residents × 100",
       data: [
         ["2000", "Census 2000 tables P001 and P004, carried onto today's tract boundaries."],
-        ["Now", "ACS 2019–2023 table B03002."],
+        ["Now", `ACS ${LATEST_SURVEY} table B03002.`],
       ],
     },
     {
       figure: "Measures past the line",
       source: "Published: Uprooted, Appendix 3, Vulnerability, steps 3 and 4.",
       formula: "count of the five vulnerability shares whose z is above 0.5, where z = (share in the tract − share in the region) ÷ spread",
-      data: [["Shares", "People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS 2019–2023."]],
+      data: [["Shares", `People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS ${LATEST_SURVEY}.`]],
     },
     {
       figure: "Black + Hispanic share (change)",
       source: "This site's own: a plain difference between two census shares.",
-      formula: "change = share in 2023 − share in 2000, in percentage points",
+      formula: `change = share in ${LATEST_YEAR} − share in 2000, in percentage points`,
       data: [["Shares", "Black non-Hispanic plus Hispanic residents ÷ all residents, from the site's census file (data/phase1_output). 2010 is used where a tract has no 2000 figure."]],
     },
     {
@@ -158,7 +166,7 @@ const FORMULAS = {
       source: "This site's own. The 1.3 km is not from research; the methodology (section 12.4) shows how the counts move with it.",
       formula: "count of listings where distance(listing, tract center) < 0.012 degrees (about 1.3 km)",
       data: [
-        ["Listings", "Preservation Austin's published grants (2016–2025), merit awards (2022–2025), Legacy Business Month listings (2023–2025) and advocacy milestones, as compiled in data/preservationAustin.js. Listings filed as citywide have no place and are not counted."],
+        ["Listings", `Preservation Austin's published grants (${PA_LISTING_YEARS.grant}), merit awards (${PA_LISTING_YEARS.merit_award}), Legacy Business Month listings (${PA_LISTING_YEARS.legacy_business}) and advocacy milestones, as compiled in data/preservationAustin.js. Listings filed as citywide have no place and are not counted.`],
         ["Tract center", "The center point of the tract's shape (data/regionIndex.js)."],
       ],
     },
@@ -168,19 +176,19 @@ const FORMULAS = {
       figure: "Measures past the line",
       source: "Published: Uprooted, Appendix 3, Vulnerability, steps 3 and 4.",
       formula: "count of the five vulnerability shares whose z is above 0.5; 3 or more = vulnerable",
-      data: [["Shares", "People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS 2019–2023; the 2000 reading uses Census 2000 tables P004, H004 and SF3 P052, P087, P037."]],
+      data: [["Shares", `People of color (B03002), renters (B25003), households under 80% of the region's median family income (B19001, B19113), children in poverty (B17001), adults without a bachelor's degree (B15002). ACS ${LATEST_SURVEY}; the 2000 reading uses Census 2000 tables P004, H004 and SF3 P052, P087, P037.`]],
     },
     {
       figure: "Rise since 2000",
       source: "Published: Uprooted, Appendix 3, Housing Market Change, step 5.",
       formula: "rise = (value now − value in 2000) ÷ value in 2000 × 100",
-      data: [["Value", "Median home value: Census 2000 SF3 table H085 and ACS 2019–2023 table B25077. Median gross rent (H063, B25064) where fewer than 50 homes are owned in either year. Dollars of each year."]],
+      data: [["Value", `Median home value: Census 2000 SF3 table H085 and ACS ${LATEST_SURVEY} table B25077. Median gross rent (H063, B25064) where fewer than 50 homes are owned in either year. Dollars of each year.`]],
     },
     {
       figure: "Rank of the rise",
       source: "This site's own way of drawing the published \"top two fifths\" line.",
       formula: "rank = (number of scored tracts with a smaller rise) ÷ (scored tracts − 1) × 100; above 60 = rising fast",
-      data: [["Scored tracts", "The tracts on this map that are scored in the 2019–2023 survey, ranked separately for home values and for rents."]],
+      data: [["Scored tracts", `The tracts on this map that are scored in the ${LATEST_SURVEY} survey, ranked separately for home values and for rents.`]],
     },
   ],
 };
@@ -371,7 +379,7 @@ export default function TriageView({ onLocateOnMap, lens: lensProp, setLens: set
       {lensKey === "trajectory" && (
         <p className="triage-note">
           Both surveys are samples, so a single tract's shift can be noise; read the groups as a list to look into, not a
-          forecast. {carried} of the {rows.length} tracts had different boundaries in 2010; their 2011–2015 figures are
+          forecast. {carried} of the {rows.length} tracts had different boundaries in 2010; their {EARLIER_SURVEY} figures are
           estimates carried from the earlier tracts and are marked ≈.
         </p>
       )}
@@ -500,7 +508,7 @@ export default function TriageView({ onLocateOnMap, lens: lensProp, setLens: set
                     <button type="button" onClick={() => toggleSort("stage")}>Stage{sortMark("stage")}</button>
                   </th>
                   {lensKey === "trajectory" && (
-                    <th scope="col" className="is-left" title="The stage in the 2010, 2015, 2020 and 2023 readings">2010 to 2023</th>
+                    <th scope="col" className="is-left" title={`The stage in the ${PATH_YEARS_TEXT} readings`}>{PATH_YEARS[0]} to {LATEST_YEAR}</th>
                   )}
                   {columns.map((c) => (
                     <th key={c.key} scope="col" aria-sort={ariaSort(c.key)} className={c.align === "left" ? "is-left" : undefined} title={c.hint}>
@@ -578,7 +586,7 @@ export default function TriageView({ onLocateOnMap, lens: lensProp, setLens: set
       </details>
 
       <p className="triage-foot">
-        Stages and figures: 2000 Census and American Community Survey 2011–2015 and 2019–2023, five-county Austin region.
+        Stages and figures: 2000 Census and American Community Survey {EARLIER_SURVEY} and {LATEST_SURVEY}, five-county Austin region.
         Listings: Preservation Austin's published records as compiled for this site. {STAGE_UNSCORED.label}: {counts.unscored} tracts.
         Full method: About, then Methodology (section 6).
       </p>

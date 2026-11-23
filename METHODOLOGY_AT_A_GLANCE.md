@@ -11,8 +11,8 @@ Under each heading a **Source** note says whether the formula is **published** (
 | Tract | One of the 269 census tracts on the map, on 2020 boundaries |
 | Region | Bastrop, Caldwell, Hays, Travis and Williamson counties together (503 tracts) |
 | 2000 | The 2000 Census (tables from Summary File 1 and Summary File 3) |
-| Now | The American Community Survey (ACS) 5-year survey for the year shown: 2006–2010, 2011–2015, 2016–2020 or 2019–2023 |
-| Example figures | Where a figure is given as an example it is for the 2019–2023 survey |
+| Now | The American Community Survey (ACS) 5-year survey for the year shown: 2006–2010, 2011–2015, 2016–2020 or 2020–2024 |
+| Example figures | Where a figure is given as an example it is for the 2020–2024 survey |
 
 ---
 
@@ -50,7 +50,7 @@ households under = every income bracket wholly under the line
 
 | Term | Data |
 |------|------|
-| Region's median family income | ACS B19113 for the Austin metropolitan area: $71,602 (2006–2010), $78,997 (2011–2015), $100,215 (2016–2020), $121,845 (2019–2023). For 2000, the five counties' medians (SF3 P077) weighted by their number of families (P076): $59,196 |
+| Region's median family income | ACS B19113 for the Austin metropolitan area: $71,602 (2006–2010), $78,997 (2011–2015), $100,215 (2016–2020), $126,591 (2020–2024). For 2000, the five counties' medians (SF3 P077) weighted by their number of families (P076): $59,196 |
 | Income brackets | Households by income, 16 brackets: SF3 P052, ACS B19001 |
 
 ### 1.3 Comparing a tract with the region
@@ -80,11 +80,11 @@ vulnerable = (number of the five shares with z above 0.5) is 3 or more
 
 | Share | Region | Line a tract must pass |
 |-------|--------|------------------------|
-| People of color | 50.2% | 59.8% |
-| Households that rent | 41.1% | 54.6% |
-| Lower-income households | 49.7% | 59.0% |
-| Children in poverty | 11.5% | 18.9% |
-| Adults without a bachelor's degree | 50.1% | 59.9% |
+| People of color | 51.3% | 60.9% |
+| Households that rent | 41.7% | 55.2% |
+| Lower-income households | 50.3% | 59.5% |
+| Children in poverty | 11.1% | 18.5% |
+| Adults without a bachelor's degree | 49.1% | 58.7% |
 
 ### 1.5 Test 2: demographic change since 2000
 
@@ -99,10 +99,10 @@ changed         = at least 2 of the 4 z are above 0.5, and the 4 z average 0.5 o
 
 | Measure | 2000 table | ACS table | Region's change | Line a tract must pass |
 |---------|------------|-----------|-----------------|------------------------|
-| Households that own | SF1 H004 | B25003 | +0.7 points | +10.4 points |
-| White, non-Hispanic residents | SF1 P004 | B03002 | −10.9 points | −2.5 points |
-| Adults with a bachelor's degree | SF3 P037 | B15002 | +13.2 points | +20.0 points |
-| Median family income | SF3 P077 | B19113 | +106% | +140% |
+| Households that own | SF1 H004 | B25003 | 0.0 points | +10.0 points |
+| White, non-Hispanic residents | SF1 P004 | B03002 | −12.0 points | −3.4 points |
+| Adults with a bachelor's degree | SF3 P037 | B15002 | +14.3 points | +21.3 points |
+| Median family income | SF3 P077 | B19113 | +114% | +150% |
 
 Income is in dollars of each year. The spread is weighted as in 1.3.
 
@@ -118,9 +118,9 @@ high = above the 60th percentile of the scored tracts on this map
 | Term | Data | 60th percentile |
 |------|------|-----------------|
 | Value in 2000 | Median home value, SF3 H085 | $134,660 |
-| Value now | Median home value, ACS B25077 | $576,340 |
-| Rise | From the two values | +325% |
-| Fallback | Median gross rent (SF3 H063, ACS B25064) where a tract has fewer than 50 owner homes in either year | $809, $1,760, +123% |
+| Value now | Median home value, ACS B25077 | $626,040 |
+| Rise | From the two values | +374% |
+| Fallback | Median gross rent (SF3 H063, ACS B25064) where a tract has fewer than 50 owner homes in either year | $809, $1,831, +134% |
 
 | Pattern | Value in 2000 | Value now | Rise | And |
 |---------|---------------|-----------|------|-----|
@@ -198,10 +198,10 @@ agreement = tracts where this site and the City agree ÷ tracts both have a read
 
 | Compared | Result |
 |----------|--------|
-| Vulnerable, yes or no | 231 of 260 (89%) |
-| Stage | 188 of 235 (80%) |
+| Vulnerable, yes or no | 223 of 260 (86%) |
+| Stage | 174 of 235 (74%) |
 
-Data: City of Austin, *Displacement Risk Areas 2022* (data.austintexas.gov, dataset `t8nv-zcp9`), set against this site's 2019–2023 reading. §3.6.
+Data: City of Austin, *Displacement Risk Areas 2022* (data.austintexas.gov, dataset `t8nv-zcp9`), set against this site's 2020–2024 reading. §3.6.
 
 ---
 
@@ -218,7 +218,7 @@ change = (Black + Hispanic share in the later year) − (Black + Hispanic share 
 | Term | Data |
 |------|------|
 | Shares | Black non-Hispanic and Hispanic residents ÷ all residents, from the 2000 and 2010 Census counts and ACS table B03002, as stored in `data/phase1_output/audited_demographics_normalized.json` (§1.1) |
-| Years | Earlier: 2000, or 2010 where a tract has no 2000 figure. Later: 2023, or 2020 |
+| Years | Earlier: 2000, or 2010 where a tract has no 2000 figure. Later: 2024, or 2020 |
 
 ### 2.2 Renters and rent burden
 
@@ -289,7 +289,7 @@ Each lens puts every tract in a group by a rule. There is no composite score. Co
 
 ```
 shift index   = (z owners + z white + z bachelor's + z income) ÷ 4
-                each z as in 1.5, with change measured from the 2011–2015 survey to the 2019–2023 survey
+                each z as in 1.5, with change measured from the 2011–2015 survey to the 2020–2024 survey
 shifted       = at least 2 of the 4 z are above 0.5, and the index is 0.5 or more
 change index  = the same average, with change measured from 2000 (the z of 1.5)
 recent rise   = (value now − value in 2011–2015) ÷ value in 2011–2015 × 100
@@ -298,8 +298,8 @@ rank of rise  = (scored tracts with a smaller rise since 2000) ÷ (scored tracts
 
 | Term | Data | Example figures |
 |------|------|-----------------|
-| Owners, white, bachelor's, income | ACS B25003, B03002, B15002, B19113, 2011–2015 and 2019–2023 | Region: +0.9, −3.8, +8.2 points and +54%. Lines: +7.3, +1.8, +13.2 points and +77% |
-| Value | ACS B25077; B25064 where fewer than 50 homes are owned | "Fast" recent rise: above +127% (home values) or +59% (rents) |
+| Owners, white, bachelor's, income | ACS B25003, B03002, B15002, B19113, 2011–2015 and 2020–2024 | Region: +0.3, −4.9, +9.3 points and +60%. Lines: +6.8, +1.0, +14.7 points and +84% |
+| Value | ACS B25077; B25064 where fewer than 50 homes are owned | "Fast" recent rise: above +155% (home values) or +67% (rents) |
 | Rank of rise | The rise of 1.6 | Above 60 is "high" |
 
 | Lens | Group rule uses |

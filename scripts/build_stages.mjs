@@ -62,8 +62,9 @@
 //   * Tracts are left unscored by rule rather than by a hand-picked list:
 //     fewer than MIN_POP residents, or half or more of residents enrolled in
 //     college or living in group quarters (dormitories, jails, barracks).
-//   * The test is run for every census year on the site (2010, 2015, 2020,
-//     2023), each time against 2000. For 2000 itself only step 1 exists.
+//   * The test is run for every census year on the site (2010, 2015, 2020
+//     and the latest release, LATEST_ACS in scripts/lib/census.mjs), each
+//     time against 2000. For 2000 itself only step 1 exists.
 //
 // Output: data/stages.js (generated; do not edit).
 //
@@ -74,7 +75,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import {
-  ROOT, loadTractTable, loadGeoValues, loadRelationship, readCache, writeCache, readExport,
+  ROOT, LATEST_ACS, acsSpan, loadTractTable, loadGeoValues, loadRelationship, readCache, writeCache, readExport,
   REL_2000_2010_URL, REL_2010_2020_URL, parseRel2000, parseRel2010,
   forwardWeights, sourcesOf, allocate, weightedMedian,
 } from "./lib/census.mjs";
@@ -85,8 +86,10 @@ const DRY = process.argv.includes("--dry");
 const MSA = ["021", "055", "209", "453", "491"]; // Bastrop, Caldwell, Hays, Travis, Williamson
 const IN_MSA = (geoid) => geoid.startsWith("48") && MSA.includes(geoid.slice(2, 5));
 const BASE = 2000;
-const YEARS = [2000, 2010, 2015, 2020, 2023];
-const ACS_LABEL = { 2010: "2006-2010", 2015: "2011-2015", 2020: "2016-2020", 2023: "2019-2023" };
+const LATEST = LATEST_ACS;                    // the latest survey, by its end year
+const ACS_YEARS = [2010, 2015, 2020, LATEST]; // American Community Survey 5-year releases
+const YEARS = [BASE, ...ACS_YEARS];
+const ACS_LABEL = Object.fromEntries(ACS_YEARS.map((y) => [y, acsSpan(y)]));
 
 const Z_LINE = 0.5;        // "well above the region": half a standard deviation
 const MIN_UNIVERSE = 50;   // a share is not computed on fewer people or homes than this
@@ -119,18 +122,15 @@ const ACS_VARS = [
   "B14001_008E", "B14001_009E", "B26001_001E",
 ];
 
-const [sf1, sf3, acs2010, acs2015, acs2020, acs2023, counties2000, rel0010, rel1020] = await Promise.all([
+const [sf1, sf3, counties2000, rel0010, rel1020, ...acsTables] = await Promise.all([
   loadTractTable("stage_sf1_2000", "2000/dec/sf1", SF1_VARS, MSA),
   loadTractTable("stage_sf3_2000", "2000/dec/sf3", SF3_VARS, MSA),
-  loadTractTable("stage_acs_2010", "2010/acs/acs5", ACS_VARS, MSA),
-  loadTractTable("stage_acs_2015", "2015/acs/acs5", ACS_VARS, MSA),
-  loadTractTable("stage_acs_2020", "2020/acs/acs5", ACS_VARS, MSA),
-  loadTractTable("stage_acs_2023", "2023/acs/acs5", ACS_VARS, MSA),
   loadGeoValues("stage_counties_2000", "2000/dec/sf3", ["P077001", "P076001"], `county:${MSA.join(",")}&in=state:48`),
   loadRelationship("stage_rel_2000_2010", REL_2000_2010_URL, parseRel2000(IN_MSA)),
   loadRelationship("stage_rel_2010_2020", REL_2010_2020_URL, parseRel2010(IN_MSA)),
+  ...ACS_YEARS.map((y) => loadTractTable(`stage_acs_${y}`, `${y}/acs/acs5`, ACS_VARS, MSA)),
 ]);
-const ACS = { 2010: acs2010, 2015: acs2015, 2020: acs2020, 2023: acs2023 };
+const ACS = Object.fromEntries(ACS_YEARS.map((y, i) => [y, acsTables[i]]));
 
 // The region's median family income. The 2000 API has no figure for the
 // metropolitan area, so 2000 is the five counties' medians weighted by their
@@ -138,7 +138,7 @@ const ACS = { 2010: acs2010, 2015: acs2015, 2020: acs2020, 2023: acs2023 };
 const regionMfi = {
   2000: Math.round(counties2000.reduce((a, c) => a + c.P077001 * c.P076001, 0) / counties2000.reduce((a, c) => a + c.P076001, 0)),
 };
-for (const y of [2010, 2015, 2020, 2023]) {
+for (const y of ACS_YEARS) {
   const rows = await loadGeoValues(`stage_msa_${y}`, `${y}/acs/acs5`, ["B19113_001E"], "metropolitan%20statistical%20area/micropolitan%20statistical%20area:12420");
   regionMfi[y] = rows[0].B19113_001E;
 }
@@ -200,7 +200,7 @@ function recordAcs(r, line) {
 const lowIncomeLine = Object.fromEntries(YEARS.map((y) => [y, 0.8 * regionMfi[y]]));
 const native = { 2000: {} };
 for (const geoid of Object.keys(sf1)) native[2000][geoid] = record2000(sf1[geoid], sf3[geoid], lowIncomeLine[2000]);
-for (const y of [2010, 2015, 2020, 2023]) {
+for (const y of ACS_YEARS) {
   native[y] = {};
   for (const [geoid, row] of Object.entries(ACS[y])) native[y][geoid] = recordAcs(row, lowIncomeLine[y]);
 }
@@ -227,7 +227,7 @@ function carry(year, geoid) {
   return out;
 }
 
-const TRACTS_2020 = Object.keys(native[2023]).sort();
+const TRACTS_2020 = Object.keys(native[LATEST]).sort();
 const recs = {}; // geoid -> { year -> record }
 for (const geoid of TRACTS_2020) {
   recs[geoid] = {};
@@ -501,12 +501,12 @@ for (const y of YEARS) {
 }
 
 // ── Lens figures (presenter-only Triage view) ───────────────────────────
-// The Triage lenses ask where change is moving now. They compare the two
-// latest surveys that share no interviews: 2011-2015 and 2019-2023 (the
-// 2016-2020 survey overlaps the latest one by two years). Same four
-// measures and same rule as test 2, with the region's change and the spread
-// of tracts taken over that period.
-const RECENT = { from: 2015, to: 2023 };
+// The Triage lenses ask where change is moving now. They compare the latest
+// survey with the newest one on the site that shares no interview years with
+// it. For 2020-2024 that is 2011-2015: the 2016-2020 survey shares 2020.
+// Same four measures and same rule as test 2, with the region's change and
+// the spread of tracts taken over that period.
+const RECENT = { from: Math.max(...ACS_YEARS.filter((y) => y <= LATEST - 5)), to: LATEST };
 const recentRegion = {};
 {
   const regionChange = changeOf(region[RECENT.to].ind, region[RECENT.from].ind);
@@ -567,8 +567,10 @@ const recentRiseLine = {};
   }
 }
 // A tract whose 2010 boundary differs from today's carries 2011-2015 figures
-// allocated from the earlier tract(s): estimates, not counts.
+// allocated from the earlier tract(s): estimates, not counts. A survey on
+// 2020 boundaries (2016-2020 onwards) needs no carrying.
 const carried2015 = (geoid) => {
+  if (!SOURCES[RECENT.from]) return false;
   const src = SOURCES[RECENT.from].people.get(geoid);
   return !src || [...src.values()].some((w) => w < 0.99);
 };
@@ -630,9 +632,9 @@ const city = new Map((await cityRisk()).map((r) => [r.geoid, r]));
 const CITY_TYPE = { Susceptible: "SUS", "Early: Type 1": "E1", "Early: Type 2": "E2", Dynamic: "DYN", Late: "LATE", "Continued Loss": "CL", "Rapid Loss": "RL", Stable: "none" };
 const CITY_HOUSING = { Accelerating: "ACC", Appreciated: "APP", Adjacent: "ADJ", Stable: "NO" };
 
-const check = { year: 2023 };
+const check = { year: LATEST };
 {
-  const y = 2023;
+  const y = LATEST;
   let vBoth = 0, vAgree = 0, dBoth = 0, dAgree = 0, hBoth = 0, hAgree = 0, sBoth = 0, sAgree = 0, gBoth = 0, gAgree = 0;
   const cross = new Map();
   const group = (s) => (s === "SUS" || s === "VUL" ? "Vulnerable" : ["E1", "E2", "DYN", "LATE"].includes(s) ? "Active" : s === "CL" || s === "RL" ? "Chronic" : "None");
@@ -664,7 +666,7 @@ const check = { year: 2023 };
   console.log(`  stage                    ${sAgree} of ${sBoth} agree (${Math.round(sAgree / sBoth * 100)}%)`);
   console.log(`  vulnerable/active/chronic ${gAgree} of ${gBoth} agree (${Math.round(gAgree / gBoth * 100)}%)`);
   if (REPORT) {
-    console.log("\n  City type                -> this build (2023)");
+    console.log(`\n  City type                -> this build (${LATEST})`);
     for (const [k, n] of [...cross].sort()) console.log(`    ${k}: ${n}`);
   }
 }
@@ -695,16 +697,16 @@ if (REPORT) {
     const why = YEARS.map((y) => r[y].reason || "-");
     const c = city.get(geoidOf.get(u.id));
     if (why.some((w) => w !== "-") || c?.type === "N/A") {
-      const i = r[2023].ind;
+      const i = r[LATEST].ind;
       console.log(`  ${u.label.padEnd(46)} ${why.join(" ").padEnd(40)} pop ${String(i?.pop ?? "").padStart(6)} students ${f1(i?.students)} quarters ${f1(i?.gq)} | City: ${c?.type}`);
     }
   }
-  console.log("\n== Largest student shares among scored tracts (2023) ==");
-  tractUnits.map((u) => ({ u, i: results.get(keyOf(u))[2023] })).filter((x) => !x.i.reason)
+  console.log(`\n== Largest student shares among scored tracts (${LATEST}) ==`);
+  tractUnits.map((u) => ({ u, i: results.get(keyOf(u))[LATEST] })).filter((x) => !x.i.reason)
     .sort((a, b) => (b.i.ind.students ?? 0) - (a.i.ind.students ?? 0)).slice(0, 12)
     .forEach((x) => console.log(`  ${x.u.label.padEnd(46)} students ${f1(x.i.ind.students)} quarters ${f1(x.i.ind.gq)} stage ${x.i.stage}`));
   console.log("\n== Stage by year, tracts with the largest fall in people-of-color share since 2000 ==");
-  tractUnits.map((u) => { const r = results.get(keyOf(u)); return { u, r, d: r[2023].ind?.poc != null && r[2000].ind?.poc != null ? r[2023].ind.poc - r[2000].ind.poc : null }; })
+  tractUnits.map((u) => { const r = results.get(keyOf(u)); return { u, r, d: r[LATEST].ind?.poc != null && r[2000].ind?.poc != null ? r[LATEST].ind.poc - r[2000].ind.poc : null }; })
     .filter((x) => x.d != null).sort((a, b) => a.d - b.d).slice(0, 25)
     .forEach((x) => console.log(`  ${x.u.label.padEnd(46)} ${f1(x.d)} pts | ${YEARS.map((y) => x.r[y].stage.padEnd(5)).join(" ")} | City: ${city.get(geoidOf.get(x.u.id))?.type}`));
   const explain = (u, y) => {
@@ -714,13 +716,13 @@ if (REPORT) {
       + ` D ${o.changed == null ? "n/a" : o.changed ? "yes" : "no "} [${(o.dz || []).map((z) => (z == null ? " n/a" : z.toFixed(1).padStart(4))).join(" ")}] avg ${o.dAvg == null ? " n/a" : o.dAvg.toFixed(2)}`
       + ` H ${h ? `${h.type} ${h.track} $${Math.round(h.base)}->$${Math.round(h.now)} +${Math.round(h.rise)}% ${h.baseLow ? "baseLow" : "baseHigh"} ${h.nowHigh ? "nowHigh" : "nowLow"} ${h.riseHigh ? "riseHigh" : "riseLow"}` : "n/a"}`;
   };
-  console.log("\n== Vulnerable in 2000, no stage in 2023 ==   z order: V [poc renter lowInc childPov noBA]  D [owner white ba mfi]");
+  console.log(`\n== Vulnerable in 2000, no stage in ${LATEST} ==   z order: V [poc renter lowInc childPov noBA]  D [owner white ba mfi]`);
   for (const u of tractUnits) {
     const r = results.get(keyOf(u));
-    if (r[2000].stage === "V0" && r[2023].stage === "NONE") console.log("  " + explain(u, 2023));
+    if (r[2000].stage === "V0" && r[LATEST].stage === "NONE") console.log("  " + explain(u, LATEST));
   }
-  console.log("\n== Vulnerable, none of the published combinations (2023) ==");
-  for (const u of tractUnits) if (results.get(keyOf(u))[2023].stage === "VUL") console.log("  " + explain(u, 2023));
+  console.log(`\n== Vulnerable, none of the published combinations (${LATEST}) ==`);
+  for (const u of tractUnits) if (results.get(keyOf(u))[LATEST].stage === "VUL") console.log("  " + explain(u, LATEST));
   console.log("\n== Selected tracts, every year ==");
   for (const name of ["8.03", "9.01", "8.04", "21.09", "10.0", "23.2", "18.06", "2.03"]) {
     const u = tractUnits.find((x) => x.label.endsWith(`(tract ${name})`));
@@ -738,7 +740,7 @@ if (REPORT) {
   console.log("\n== Neighborhoods ==");
   for (const u of units.filter((x) => x.kind === "neighborhood")) {
     const r = results.get(keyOf(u));
-    console.log(`  ${u.label.padEnd(34)} ${YEARS.map((y) => r[y].stage.padEnd(5)).join(" ")} | tracts: ${u.members.map((t) => results.get(`tract:${t}`)[2023].stage).join(", ")}`);
+    console.log(`  ${u.label.padEnd(34)} ${YEARS.map((y) => r[y].stage.padEnd(5)).join(" ")} | tracts: ${u.members.map((t) => results.get(`tract:${t}`)[LATEST].stage).join(", ")}`);
   }
 }
 

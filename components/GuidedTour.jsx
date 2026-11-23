@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { LATEST_YEAR } from "../data/constants";
 
 /**
  * A ~3-minute guided tour of what the tool was built for and how to use it.
@@ -15,7 +16,7 @@ const STEPS = [
   {
     title: "Austin's Shifting Ground",
     body: "This map tells the story of who has lived in Austin — and who has been pushed out. It was built as an education and conversation tool: the city's history first, then thirty-five years of measured change, and finally a starting point for deciding where outreach and advocacy matter most. The next two and a half minutes walk through all three.",
-    apply: (c) => { c.setIsPlaying(false); c.setViewMode("map"); c.setYear(2023); },
+    apply: (c) => { c.setIsPlaying(false); c.setViewMode("map"); c.setYear(LATEST_YEAR); },
   },
   {
     title: "Start with the history",
@@ -35,7 +36,7 @@ const STEPS = [
   {
     title: "One neighborhood's story",
     body: "Select any place and the panel beside the map sums it up. This is Central East Austin — the East 11th/12th corridor. “Open the story card” gives the full profile on a printable page: who left, who arrived, what home values did, and the turning point behind it. Every card has its own link.",
-    apply: (c) => { c.setIsPlaying(false); c.setYear(2023); c.locate(85); },
+    apply: (c) => { c.setIsPlaying(false); c.setYear(LATEST_YEAR); c.locate(85); },
   },
   {
     title: "Two neighborhoods, two paths",

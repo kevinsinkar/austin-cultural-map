@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { REGION_INDEX, PA_ALL, PA_LABELS } from "../data";
+import { LATEST_YEAR, LATEST_SURVEY } from "../data/constants";
 import { PA_EXTRA_DATASETS, EXTRA_TYPE_LABELS } from "../data/equityAudit";
 import { COUNCIL_DISTRICTS_GEOJSON } from "../data/councilDistricts";
 import { findDistrict } from "../utils/geo";
@@ -17,7 +18,7 @@ const IN_DISPLACEMENT_STAGE = new Set(STAGE_CLASSES.map((c) => c.key));
  * representing the city" (the committee's framing for the Equity Audit).
  *
  * How Austin is changing: per district, tract DVI and the measured shift
- * in Black+Hispanic population share (2000→2023 direct displacement).
+ * in Black+Hispanic population share (2000 to the latest survey: direct displacement).
  * How PA is serving: every grant, merit award, legacy business, and
  * advocacy action in the PA activity dataset, plus any extra datasets
  * added to data/equityAudit.js (Homes Tour addresses, Equity Audit rows).
@@ -52,7 +53,7 @@ export default function OutreachEquityAudit() {
       if (r.merge_into || r.lat == null) continue;
       const s = out[side(r.lng)];
       s.tracts++;
-      if (IN_DISPLACEMENT_STAGE.has(tractStageClass(r.region_id, 2023).key)) s.stagedTracts++;
+      if (IN_DISPLACEMENT_STAGE.has(tractStageClass(r.region_id, LATEST_YEAR).key)) s.stagedTracts++;
     }
     return out;
   }, [paItems]);
@@ -73,7 +74,7 @@ export default function OutreachEquityAudit() {
       const row = byDistrict.get(findDistrict(r.lat, r.lng, COUNCIL_DISTRICTS_GEOJSON));
       if (!row) continue;
       row.tracts++;
-      const key = tractStageClass(r.region_id, 2023).key;
+      const key = tractStageClass(r.region_id, LATEST_YEAR).key;
       if (IN_DISPLACEMENT_STAGE.has(key)) {
         row.staged++;
         row.mix[key] = (row.mix[key] || 0) + 1;
@@ -142,7 +143,7 @@ export default function OutreachEquityAudit() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: "#f5f0ea", textAlign: "left" }}>
-              {["District", "Stages, 2019–2023 survey", "Tracts in a stage", "Δ Black+Hispanic share", "PA items", "Grant $", "Activity mix"].map((h) => (
+              {["District", `Stages, ${LATEST_SURVEY} survey`, "Tracts in a stage", "Δ Black+Hispanic share", "PA items", "Grant $", "Activity mix"].map((h) => (
                 <th key={h} style={{ padding: "8px 10px", fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
               ))}
             </tr>
@@ -183,10 +184,10 @@ export default function OutreachEquityAudit() {
       </div>
       <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 2px 14px", lineHeight: 1.5 }}>
         "Δ Black+Hispanic share" is the tract-average change in combined Black + Hispanic population share
-        from the earliest reliable census year (2000, else 2010) to the latest (2023) — measured change, not modeled risk.
+        from the earliest reliable census year (2000, else 2010) to the latest ({LATEST_YEAR}) — measured change, not modeled risk.
         Tracts and PA items are assigned to districts by centroid / pin location (see the Coverage view caveat).
         <strong> Under-served</strong> = 3+ tracts in a displacement stage with fewer than one PA activity item per two such tracts.
-        Stages are from the 2019–2023 census survey (vulnerable through continued loss).
+        Stages are from the {LATEST_SURVEY} census survey (vulnerable through continued loss).
       </p>
 
       {/* ── Pending-data note ── */}

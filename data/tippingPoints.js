@@ -88,7 +88,7 @@ export const TIPPING_POINTS = [
     context: "Gentrification spreading east across Riverside and Montopolis.",
     impact: "Mexican American/Latino",
     magnitude: "Severe",
-    event: "Riverside redevelopment; Oracle HQ; Project Connect Orange Line",
+    event: "Riverside redevelopment; Oracle HQ; Project Connect Blue Line planning",
     eventYear: "2018–2020",
   },
   {
@@ -98,7 +98,7 @@ export const TIPPING_POINTS = [
     context: "Immigrant businesses under rent pressure along the North Lamar corridor.",
     impact: "Immigrant communities",
     magnitude: "Moderate",
-    event: "Project Connect Blue Line; North Lamar corridor planning",
+    event: "Project Connect Orange Line planning; North Lamar corridor planning",
     eventYear: "2018–2020",
   },
   {

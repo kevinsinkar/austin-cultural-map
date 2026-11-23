@@ -27,9 +27,10 @@ import {
 } from "../data";
 import { ID_TO_NAME } from "../data/regionLookup";
 import { interpolateDvi } from "./math";
+import { LATEST_YEAR } from "../data/constants";
 
 // Chart years matching toDemoChartData() output
-const CHART_YEARS = [1990, 2000, 2010, 2020, 2023];
+const CHART_YEARS = [1990, 2000, 2010, 2020, LATEST_YEAR];
 
 // ── Helpers ──
 
@@ -151,7 +152,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
     }
   }
 
-  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, 2023]]) {
+  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, LATEST_YEAR]]) {
     const hvA = popWeightedAvg(tract_ids, yrA, getClosestProp, "median_home_value");
     const hvB = popWeightedAvg(tract_ids, yrB, getClosestProp, "median_home_value");
     if (hvA > 0 && hvB > 0) {
@@ -166,7 +167,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
   }
 
   // Poverty rate increases (>5%)
-  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, 2023]]) {
+  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, LATEST_YEAR]]) {
     const povA = popWeightedAvg(tract_ids, yrA, getClosestSocio, "poverty_rate");
     const povB = popWeightedAvg(tract_ids, yrB, getClosestSocio, "poverty_rate");
     if (povA != null && povB != null && povB - povA > 5) {
@@ -178,7 +179,7 @@ export function aggregateNeighborhood(neighborhoodId, year) {
   }
 
   // Income decline (>10%)
-  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, 2023]]) {
+  for (const [yrA, yrB] of [[2000, 2010], [2010, 2020], [2020, LATEST_YEAR]]) {
     const incA = popWeightedAvg(tract_ids, yrA, getClosestSocio, "median_household_income");
     const incB = popWeightedAvg(tract_ids, yrB, getClosestSocio, "median_household_income");
     if (incA > 0 && incB > 0) {

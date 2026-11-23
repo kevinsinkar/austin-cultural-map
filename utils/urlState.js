@@ -5,6 +5,7 @@
 // GitHub Pages has no server routing, but "#/map?year=2005" always works.
 
 import { REGION_INDEX } from "../data";
+import { LATEST_YEAR, YEAR_MIN, YEAR_MAX } from "../data/constants";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { NAME_TO_ID } from "../data/regionLookup";
 import { ALLOWED_VIEWS, PRESENTER_MODE } from "../appConfig";
@@ -33,7 +34,7 @@ export const DEFAULT_VIEW_STATE = {
   viewMode: "map",
   // Open on the latest measured year: the present is the way in, and the
   // slider then walks back through how it got here.
-  year: 2023,
+  year: LATEST_YEAR,
   boundaryMode: "tracts",
   layers: {
     pins: true,
@@ -101,7 +102,7 @@ export function parseViewState(hash) {
 
   if (p.has("year")) {
     const y = parseInt(p.get("year"), 10);
-    if (!Number.isNaN(y)) out.year = Math.min(2025, Math.max(1990, y));
+    if (!Number.isNaN(y)) out.year = Math.min(YEAR_MAX, Math.max(YEAR_MIN, y));
   }
 
   if (p.get("bm") === "neighborhoods") out.boundaryMode = "neighborhoods";

@@ -5,7 +5,7 @@ import { REGION_INDEX } from "../data";
 import { regionLookupMap } from "../data/regionIndex";
 import { loadTractShapes, loadNeighborhoodShapes } from "../data/shapes";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
-import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES } from "../data";
+import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS } from "../data";
 import { AUDITED_PROP_BY_ID } from "../data/auditedData";
 import { tractStageClass, placeStageClass, stageFor } from "../utils/stages";
 import { getDevPressureColor } from "../utils/mapHelpers";
@@ -543,13 +543,26 @@ export default function useAustinMap({
       });
     }
 
-    // Project Connect lines
+    // Planned light rail (Phase 1): Austin Transit Partnership's published
+    // route and stations. Dashed because it is planned, not built.
     if (showProjectConnect && pcLayer) {
       PROJECT_CONNECT_LINES.forEach((l) => {
         const latlngs = l.coords.map((c) => [c[1], c[0]]);
-        L.polyline(latlngs, { color: l.color, weight: 3, dashArray: "8 4", opacity: 0.8 }).addTo(
+        L.polyline(latlngs, { color: l.color, weight: 3, dashArray: "8 4", opacity: 0.85, interactive: false }).addTo(
           pcLayer
         );
+      });
+      LIGHT_RAIL_STATIONS.forEach((s) => {
+        L.circleMarker([s.lat, s.lng], {
+          pane: "pinsPane",
+          radius: 4,
+          fillColor: "#fffffe",
+          color: "#2563eb",
+          weight: 2,
+          fillOpacity: 1,
+        })
+          .bindTooltip(`${s.name} station (planned)`, { direction: "top" })
+          .addTo(pcLayer);
       });
     }
 

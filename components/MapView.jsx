@@ -14,6 +14,7 @@ import DviWeightsPanel from "./DviWeightsPanel";
 import { OUTREACH_STATUS } from "../data/outreachEvents";
 import { tractPlace } from "../utils/places";
 import { PRESENTER_MODE } from "../appConfig";
+import { LATEST_YEAR, YEAR_MAX } from "../data/constants";
 
 /**
  * MapView — the map page.
@@ -149,8 +150,8 @@ export default function MapView({
   const handleAnchor = (business) => {
     setShowPins(true);
     // A closed anchor only has a dot from the year it closed onward.
-    if (business.closed && year < business.closed) setYear(Math.min(2025, business.closed));
-    if (!business.closed && business.est > year) setYear(2023);
+    if (business.closed && year < business.closed) setYear(Math.min(YEAR_MAX, business.closed));
+    if (!business.closed && business.est > year) setYear(LATEST_YEAR);
     if (business.region_id != null) onSelectTract(business.region_id);
     onFlyTo({ lat: business.lat, lng: business.lng, zoom: 16, label: business.name });
   };
@@ -174,12 +175,12 @@ export default function MapView({
       onSelectTract(action.tractId);
     } else if (action.key === "legend") {
       setShowRegions(true);
-      if (year < STAGE_BASE_YEAR) setYear(2023);
+      if (year < STAGE_BASE_YEAR) setYear(LATEST_YEAR);
       setLegendOpen(true);
     } else if (action.key === "anchors") {
       setShowPins(true);
       setIsPlaying(false);
-      setYear(2023);
+      setYear(YEAR_MAX);
     }
   };
 
@@ -212,7 +213,7 @@ export default function MapView({
     {
       title: "Pressure",
       items: [
-        { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Project Connect transit", icon: <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden="true"><path d="M1 9L6 1L11 9" stroke="#2563eb" strokeWidth="1.5" fill="none" /></svg> },
+        { on: showProjectConnect, toggle: () => setShowProjectConnect(!showProjectConnect), label: "Planned light rail", icon: <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden="true"><path d="M1 9L6 1L11 9" stroke="#2563eb" strokeWidth="1.5" fill="none" /></svg> },
         { on: showDevPressure, toggle: () => setShowDevPressure(!showDevPressure), label: "Development pressure", icon: <span style={{ width: 9, height: 9, borderRadius: 2, border: "2px solid #fb923c" }} aria-hidden="true" /> },
       ],
     },

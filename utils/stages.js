@@ -104,11 +104,15 @@ export function stageDataYear(year) {
   return best;
 }
 
-/** "2019-2023 survey" style label for the source of a census year. */
+/** The years the survey behind a census year covers: "2020–2024". The base year is a single census: "2000". */
+export function surveySpan(dataYear) {
+  const m = (STAGE_REGION[dataYear]?.source || "").match(/(\d{4})-(\d{4})/);
+  return m ? `${m[1]}–${m[2]}` : String(STAGE_BASE_YEAR);
+}
+
+/** "2020–2024 census survey" style label for the source of a census year. */
 export function stageSourceLabel(dataYear) {
-  const src = STAGE_REGION[dataYear]?.source || "";
-  const m = src.match(/(\d{4})-(\d{4})/);
-  return m ? `${m[1]}–${m[2]} census survey` : "2000 Census";
+  return dataYear === STAGE_BASE_YEAR || !STAGE_REGION[dataYear] ? "2000 Census" : `${surveySpan(dataYear)} census survey`;
 }
 
 function rowsFor(ref) {

@@ -1,3 +1,9 @@
+// UNVERIFIED TABLE (checked November 2026): the "Austin MSA" figures below are
+// labelled BLS series CUURA320SA0, which the Bureau of Labor Statistics'
+// public data service says does not exist, and they match no series checked
+// (Dallas-Fort Worth, Houston, the South, the U.S. city average). Nothing on
+// the site calls adjustForInflation. Replace the table with a verified series
+// before using it. DATA_METHODOLOGY.md, section 8.
 /**
  * utils/cpi.js
  * ------------

@@ -1200,7 +1200,7 @@ button, input, select, textarea {
   /* 16px stops phones zooming the page when the box is tapped */
   .place-search-box input { font-size: 16px; }
   .time-bar { padding: 10px 12px 8px; }
-  /* 2020 and 2023 collide on a narrow bar; 2023 is the one that matters */
+  /* 2020 and the latest census year collide on a narrow bar; the latest is the one that matters */
   .time-bar-year[data-year="2020"] { display: none; }
   .map-legend-toggle { margin-left: 0; }
   .side-card { padding: 16px; }

@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { REGION_INDEX } from "../data";
+import { LATEST_YEAR, LATEST_SURVEY } from "../data/constants";
 import { OUTREACH_EVENTS, ARENAS } from "../data/outreachEvents";
 import { COUNCIL_DISTRICTS_GEOJSON } from "../data/councilDistricts";
 import { findDistrict } from "../utils/geo";
@@ -42,7 +43,7 @@ export default function OutreachCoverage({ plan }) {
       const row = byDistrict.get(d);
       if (!row) continue;
       row.tracts++;
-      const key = tractStageClass(r.region_id, 2023).key;
+      const key = tractStageClass(r.region_id, LATEST_YEAR).key;
       if (IN_DISPLACEMENT_STAGE.has(key)) {
         row.staged++;
         row.mix[key] = (row.mix[key] || 0) + 1;
@@ -110,7 +111,7 @@ export default function OutreachCoverage({ plan }) {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: "#f5f0ea", textAlign: "left" }}>
-              {["District", "Tracts (in a stage / total)", "Stages, 2019–2023 survey", "Opportunities", "Open to nonprofits", "In pipeline", "Tabled", "Reach"].map((h) => (
+              {["District", "Tracts (in a stage / total)", `Stages, ${LATEST_SURVEY} survey`, "Opportunities", "Open to nonprofits", "In pipeline", "Tabled", "Reach"].map((h) => (
                 <th key={h} style={{ padding: "8px 10px", fontSize: 12, fontWeight: 700, color: "#64615b", textTransform: "uppercase", letterSpacing: ".05em" }}>{h}</th>
               ))}
             </tr>
@@ -152,7 +153,7 @@ export default function OutreachCoverage({ plan }) {
       </div>
       <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 2px 16px", lineHeight: 1.5 }}>
         Tracts are assigned to districts by centroid; events by pin location (inferred district when unmapped).
-        "In a stage" means the tract is in one of the five displacement stages (vulnerable through continued loss) in the 2019–2023 census survey.
+        "In a stage" means the tract is in one of the five displacement stages (vulnerable through continued loss) in the {LATEST_SURVEY} census survey.
         An <strong>outreach desert</strong> is a district with 3+ such tracts and no confirmed nonprofit-open opportunity — start by asking the "Unknown" organizers there.
       </p>
 

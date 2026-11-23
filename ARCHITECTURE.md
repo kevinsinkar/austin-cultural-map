@@ -95,9 +95,9 @@ austin-cultural-map/
 │   │   ├── keyMoments.js        # Ordered ids for the History view's starting path (editorial selection)
 │   │   └── index.js             # Barrel: sorted events, geo partitions, era order, time-warp fn, vocab labels
 │   ├── phase1_output/      # Source-of-truth: 3 audited normalized JSONs
-│   │   ├── audited_demographics_normalized.json   (873 rows, 269 regions, years: 2000–2023)
-│   │   ├── audited_property_normalized.json       (736 rows, 269 regions, years: 2010–2023)
-│   │   └── audited_socioeconomic_normalized.json  (733 rows, 269 regions, years: 2010–2023)
+│   │   ├── audited_demographics_normalized.json   (1,541 rows, 269 regions, years: 2000–2024)
+│   │   ├── audited_property_normalized.json       (1,052 rows, 269 regions, years: 2010–2024)
+│   │   └── audited_socioeconomic_normalized.json  (1,052 rows, 269 regions, years: 2010–2024)
 │   ├── auditedData.js      # Central normaliser: imports phase1 JSONs once,
 │   │                        #   exports Maps + flat arrays + (regionId,year) lookups
 │   │                        #   Also defines CHART_YEARS and toDemoChartData()
@@ -107,8 +107,8 @@ austin-cultural-map/
 │   ├── interim_demographics.js   # Enriches demos with derived pct/pop fields
 │   ├── interim_property.js       # Pass-through from normalised property rows
 │   ├── interim_socioeconomic.js  # Joins socio+property+demo via auditedData Maps
-│   ├── businesses.js       # Static legacy business data (49 operating, 58 closed)
-│   ├── preservationAustin.js  # PA grants, merit awards, legacy businesses, advocacy (156 entries)
+│   ├── businesses.js       # Static legacy business data (46 operating, 60 closed)
+│   ├── preservationAustin.js  # PA grants, merit awards, legacy businesses, advocacy (181 entries)
 │   ├── constants.js        # REGION_NAMES, SNAP_YEARS, PLAY_YEARS, DEMO_COLORS
 │   ├── final_updated_regions.js  # Canonical GeoJSON (269 regions, full-precision polygons). SOURCE ONLY —
 │   │                        #   not imported by the app; scripts/build_map_shapes.mjs reads it
@@ -126,7 +126,7 @@ austin-cultural-map/
 │   ├── regionLookup.js     # Name↔ID maps, MERGE_LOOKUP, VISIBLE_REGIONS
 │   ├── region_tract_rosetta.json  # region_id ↔ Census tract code ↔ GEOID mapping (269 entries)
 │   ├── musicNightlife.js   # Music/nightlife venue counts per region/year
-│   ├── projectConnect.js   # Transit line polylines + proximity regions
+│   ├── projectConnect.js   # Planned light rail, Phase 1: route + 15 stations (generated: npm run build:rail)
 │   ├── timelineInfra.js    # Infrastructure/policy timeline events
 │   ├── tippingPoints.js    # Tipping-point narratives per region
 │   ├── _cached_npa_boundaries.geojson  # Cached City of Austin NPA boundaries
@@ -177,9 +177,9 @@ austin-cultural-map/
 
 ```
 data/phase1_output/*.json          (3 audited, normalized JSON files — source of truth)
-│                                    Demographics: 2000, 2005, 2010, 2015, 2020, 2023
-│                                    Property: 2010, 2015, 2020, 2023
-│                                    Socioeconomic: 2010, 2015, 2020, 2023
+│                                    Demographics: 2000, 2005, 2010, 2015, 2020, 2024
+│                                    Property: 2010, 2015, 2020, 2024
+│                                    Socioeconomic: 2010, 2015, 2020, 2024
 │
 └──► data/auditedData.js           ★ SINGLE ENTRY POINT — imports 3 JSONs once, normalises
        │                             field names, then exports:
@@ -232,7 +232,7 @@ data/preservationAustin.js         ★ STANDALONE — no dependencies on phase1 
 - **Rows**: 873 | **Regions**: 269 unique region_ids
 - **Years**: 2000 (70 tracts), 2005 (70, interpolated), 2010 (98), 2015 (98), 2020 (269), 2023 (268)
 - **Fields**: `year`, `total_population`, `median_age`, `pct_hispanic`, `pct_white_non_hispanic`, `pct_black_non_hispanic`, `pct_asian`, `pct_foreign_born`, `pct_owner_occupied`, `rent_burden_pct`, `pct_65_and_over`, `pct_bachelors_degree_or_higher`, `region`, `region_id`, `audit_source`, `audit_confidence`, `audit_flags`, `audit_timestamp`
-- **Sources**: Decennial Census 2000 SF1, Decennial 2010 SF1 + ACS 2006-2010, ACS 2011-2015, Decennial Census 2020 PL + ACS 2016-2020, ACS 2019-2023
+- **Sources**: Decennial Census 2000 SF1, Decennial 2010 SF1 + ACS 2006-2010, ACS 2011-2015, Decennial Census 2020 PL + ACS 2016-2020, ACS 2020-2024 (the latest survey; replaced by `npm run build:latest`)
 
 ### audited_property_normalized.json
 - **Rows**: 736 | **Regions**: 269 unique region_ids
@@ -254,7 +254,7 @@ data/preservationAustin.js         ★ STANDALONE — no dependencies on phase1 
 - 2005 data is linearly interpolated from 2000 and 2010
 
 ### preservationAustin.js (Preservation Austin Overlay)
-- **Entries**: 156 total across 4 categories
+- **Entries**: 181 total across 4 categories
 - **Grants** (72): `id`, `name`, `lat`, `lng`, `type:"grant"`, `year`, `category`, `amount`, `recipient`, `description`, `address`
 - **Merit Awards** (41): same shape, `type:"merit_award"`, no `amount`
 - **Legacy Businesses** (33): same shape, `type:"legacy_business"`, no `amount`
@@ -370,7 +370,7 @@ index.html
 | `LENSES, LENS_BY_KEY, LENS_REGION, PA_LISTING_COUNTS, lensRows, groupCounts, lensSummary, carriedCount` | ../utils/lenses |
 
 **Three lenses on the displacement stages** (rules in `utils/lenses.js`, method in DATA_METHODOLOGY.md §6):
-- **Trajectory**: Where is change moving now? (change since 2000 vs shift between the 2011–2015 and 2019–2023 surveys)
+- **Trajectory**: Where is change moving now? (change since 2000 vs shift between the 2011–2015 and 2020–2024 surveys)
 - **Equity**: Where do vulnerable residents live, and where has Preservation Austin's recorded work been? (people of color in 2000 vs now; listings nearby)
 - **Matrix**: Who lives here, and what is the housing market doing? (vulnerability measures met vs rank of the rise in value)
 
@@ -502,7 +502,7 @@ index.html
 | `AUDITED_DVI_LOOKUP` | ./auditedDvi |
 | `MUSIC_NIGHTLIFE` | ./musicNightlife |
 | `PROPERTY_DATA` | ./interim_property |
-| `PROJECT_CONNECT_LINES, PC_PROXIMITY_REGIONS` | ./projectConnect |
+| `PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS, LIGHT_RAIL_SOURCE` | ./projectConnect |
 | `TIMELINE_INFRA` | ./timelineInfra |
 | `REGION_NAMES, TIMELINE_EVENTS, SNAP_YEARS, PLAY_YEARS, DEMO_COLORS` | ./constants |
 | `PA_ALL, PA_COLORS, PA_LABELS` | ./preservationAustin |
@@ -516,7 +516,7 @@ index.html
 - `neighborhoods_geojson.js` → `NEIGHBORHOODS_GEOJSON` (only used by useAustinMap.js)
 - `regionIndex.js` → `REGION_INDEX` (61 KB lightweight metadata, no geometry), `regionLookupMap`
 - `musicNightlife.js` → `MUSIC_NIGHTLIFE`
-- `projectConnect.js` → `PROJECT_CONNECT_LINES`, `PC_PROXIMITY_REGIONS`
+- `projectConnect.js` → `PROJECT_CONNECT_LINES`, `LIGHT_RAIL_STATIONS`, `LIGHT_RAIL_SOURCE`
 - `timelineInfra.js` → `TIMELINE_INFRA`
 - `tippingPoints.js` → `TIPPING_POINTS`
 - `preservationAustin.js` → `PA_GRANTS`, `PA_MERIT_AWARDS`, `PA_LEGACY_BUSINESSES`, `PA_ADVOCACY`, `PA_ALL`, `PA_COLORS`, `PA_LABELS`
@@ -560,10 +560,10 @@ The root component (`index.jsx`) renders one of four views based on `viewMode` s
 | **DVI / pressure score** | Presenter tools only (0–100); it no longer colors the map. Computed from 3 sub-indices: demographic vulnerability (35%), market pressure (35%), socioeconomic stress (30%). It sums up present-day conditions. Adjustable weights in the DVI Weights panel. |
 | **Pressure score bands** | Quarters of the scored tracts, not stages: under 37, 37–46, 46–56, 56 and over (`DVI_BINS` in `utils/math.js`). Affluent regions are capped at 20. |
 | **Anchor Density** | `surviving_businesses / (surviving + closed)`. Ratio 0–1. Badge: Strong (>70%), Eroding (40–70%), Critical (<40%). |
-| **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 49 operating + 58 closed. |
+| **Legacy Business** | Culturally significant business with `culture`, `type`, `est`, `lat/lng`. 46 operating + 60 closed. |
 | **Triage Lenses** | Trajectory (where change is moving now), Equity (where vulnerable residents live and where Preservation Austin's listings are), Matrix (vulnerability against the housing market). Each lens sorts every tract into a group by a stated rule; there is no score. See DATA_METHODOLOGY.md §6. |
-| **Preservation Austin** | Overlay layer showing 156 geocoded entries: grants ($284K+ since 2016), merit awards (2022–2025), Legacy Business Month participants (2023–2025), and advocacy milestones. |
-| **Census Data** | Real Census Bureau data fetched via API. Demographics from Decennial SF1 (2000, 2010, 2020) and ACS 5-Year (2010, 2015, 2020, 2023). Race variables use Not-Hispanic-by-Race tables (P004/P005) to avoid double-counting. |
+| **Preservation Austin** | Overlay layer showing 181 entries: grants ($284K+ since 2016), merit awards (2022–2026), Legacy Business Month participants (2023–2026), and advocacy milestones. |
+| **Census Data** | Real Census Bureau data fetched via API. Demographics from Decennial SF1 (2000, 2010, 2020) and ACS 5-Year (2010, 2015, 2020, 2024). Race variables use Not-Hispanic-by-Race tables (P004/P005) to avoid double-counting. |
 | **Tract Rosetta** | `region_tract_rosetta.json` maps region_id ↔ Census tract code (tractce22) ↔ full GEOID. Essential for Census API queries. |
 
 ---

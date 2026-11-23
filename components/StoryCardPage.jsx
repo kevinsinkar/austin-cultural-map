@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, Tooltip,
 } from "recharts";
 import { PA_LABELS } from "../data";
-import { DEMO_COLORS } from "../data/constants";
+import { DEMO_COLORS, LATEST_SURVEY } from "../data/constants";
 import { StageHeadline, StageTests, StageTimeline, CityRiskLine } from "./StageBlock";
 import { buildStoryCard, changeSentence } from "../utils/placeData";
 import { districtText } from "../utils/places";
@@ -279,7 +279,7 @@ export default function StoryCardPage({ placeRef, onBack }) {
         <footer className="story-card-foot">
           <p>{place.note}</p>
           <p>
-            Sources: U.S. Census and American Community Survey, audited to 2023; City of Austin;
+            Sources: U.S. Census and American Community Survey, through the {LATEST_SURVEY} survey; City of Austin;
             Preservation Austin's published grant, award and advocacy listings; community business
             inventories. Stages follow the three-part test in the University of Texas study
             “Uprooted” (2018), worked out here from census tables; the City of Austin publishes its
