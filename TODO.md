@@ -23,20 +23,17 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 
 ## D. Decisions waiting on the maintainer
 
-- [ ] **D1. Push `test`.** The 22 November work is committed on `test` and not pushed. Pushing publishes the site.
-- [ ] **D2. Which year the map opens on.** It opens on 2024, the latest census year, so closures and listings dated 2025–26 appear only when the slider reaches 2026. Opening on 2026 shows them at once, but the year shown would not be a census year.
 - [ ] **D3. Preservation Austin grant list: on hold.** The maintainer is documenting where the list came from. Nothing in `PA_GRANTS` changes until then.
 - [ ] **D4. "Built for Preservation Austin" in [README.md](README.md).** Check that this is wording Preservation Austin has agreed to. Reword if not.
 - [ ] **D5. The City's 2022 category on public story cards.** Open from an earlier session: the City's file carries unusual licence metadata. Decide whether to keep showing the City's category.
 - [ ] **D6. The questions shown for each Matrix group in Triage.** They were written for this tool ([utils/lenses.js](utils/lenses.js), the `prompt` lines). Approve or rewrite them.
-- [ ] **D7. Which 2026 closures belong on the business lists.** Reported in the press and on neither list: Lammes Candies, Wheatsville Co-op (Guadalupe), Hoover's Cooking, Vespaio, Little Mexico, Vince Young Steakhouse, Hideout Theatre, Marlow, Feels So Good. The lists have no written rule for what counts as a legacy business; one is needed before adding any.
-- [ ] **D8. The `main` branch.** It is 12 commits ahead of `origin/main` and 4 behind `test`. The site publishes from `test`. Decide whether `main` is brought level or retired.
+- [ ] **D8. The `main` branch.** It is 12 commits ahead of `origin/main` and well behind `test`. The site publishes from `test`. Decide whether `main` is brought level or retired.
 - [ ] **D9. The August lists.** [agent-todo-list.md](agent-todo-list.md), [docs/agent-todo-list.md](docs/agent-todo-list.md), [docs/ISSUES.md](docs/ISSUES.md) and [docs/nextTask.md](docs/nextTask.md) predate the move from the old score to displacement stages. Decide which of their ideas are still wanted (institutional anchors, a timeline redesign, 2010 boundaries, uninsured population) and move those here.
-- [ ] **D10. Business records that cannot be traced** (found 2026-11-22). A search of published sources found no trace of six records, and three more are clusters with no source, not single businesses. Decide: remove them, or keep them marked as unverified.
-  - No trace found: Evan's Barbershop (listed as operating), Erwin Center Barber Shop, Mrs. Johnson's Donuts (the known Mrs. Johnson's Bakery is on Airport Blvd and open), Holly Neighborhood Assoc. HQ, Baby Acapulco's (S Lamar), Club 801 (801 Red River was the One Knite, then Stubb's).
-  - Clusters: Kealing Jr. High area businesses, Rainey Street bungalow businesses, Fiesta Gardens area tiendas.
-  - Why it matters: the story card for census tract 8.03 (Chestnut), the site's main example, now lists three lost businesses, and all three are on this list. Evan's Barbershop is one of its three operating ones.
-  - These records keep an approximate dot. Club 801 and Tamale House East (E11) are still filed under a tract their dot is not in.
+- [ ] **D11. Entries that fall short of the 20-year rule** (listed 2026-11-22; nothing was removed). The rule for adding a closed business is: locally owned, open at least 20 years in Austin, closing reported by a named news source. Decide whether it also applies to what was already listed, and whether the operating list needs its own rule.
+  - Closed, open under 20 years by the file's dates: Contigo (2011–2021), Weather Up (2012–2019), Stay Gold (2015–2021), Rosewood (2018–2022), Redbud Ice House (2024–2025), Old Thousand (Burnet) (2020–2023), Nubian Queen Lola's (2000–2014), Gene's Po-Boys (2001–2020), Beerland (2002–2018), Skylark Lounge (2013–2025), Armadillo World Headquarters (1970–1980), South Congress Books (2011–2025), DipDipDip Tatsu-Ya (2019–2025), Sunny's Backyard (2010–2025), Empire Control Room & Garage (2014–2026). Some of these dates are themselves in doubt (E11).
+  - Operating, founded after 2006: The Liberty, Yellow Jacket Social Club, The Grackle, Hillside Farmacy, Fresa's, Sawyer & Co, Launderette, Juniper, Suerte, Paperboy, Licha's Cantina, Nixta Taqueria, Pueblo Viejo, Lustre Pearl, Cheer Up Charlies, Dai Due.
+  - Not locally owned businesses: Stubb's BBQ (corporate owner); Downs Field, Rosewood Park and Barton Springs Pool (City of Austin); Huston-Tillotson University.
+
 ## E. Errors found, not yet fixed
 
 - [ ] **E3. Three "closed" businesses are operating somewhere else.** Yard Dog (the file says "Closed permanently"; reported at 916 Springdale Rd), Uncommon Objects (1602 Fortview Rd), I Luv Video (its collection reopened as We Luv Video).
@@ -45,7 +42,7 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
   - Saigon Le Vendeur: the record does not describe the real business. The Austin Chronicle places it at 2601 E 7th St, a food truck for about a decade that opened a restaurant in November 2023. The record says North Austin, founded 1990. Its dot is in North Austin.
   - Victory Grill: rebranded Victory East in 2024; current status not confirmed.
   - Taqueria Chapala: no William Cannon or Dove Springs site found. The long-running one was at 2101 E Cesar Chavez St (opened 1 July 1997); it closed there in 2026 and reopened at 2448 S 1st St. Its dot is approximate.
-  - Evan's Barbershop: no trace found (D10). Pueblo Viejo: could not be traced.
+  - Evan's Barbershop: no trace found; marked unverified (R13). Pueblo Viejo: could not be traced, and is not marked.
   - Ownership fields: Cheer Up Charlies (sold October 2025) and Breed & Co. (sold 2024) are still marked independent and family-owned.
 - [ ] **E8. The inflation table is unverified.** [utils/cpi.js](utils/cpi.js) is labelled with a Bureau of Labor Statistics series that does not exist, and its values match no series checked. Nothing uses it. Replace it with a verified series or delete it.
 - [ ] **E9. SNAP participation in the 2010, 2015 and 2020 rows is unchecked.** The 2019–2023 rows had no figure in 27 tracts and a wrong figure in 10. Compare the earlier years with census table B22003.
@@ -76,6 +73,8 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 - [ ] **R10. Council district outlines.** The count matches the City's (10). The outlines were not compared.
 - [ ] **R11. "Will Klemm" or "Will Klemt"** (2025 merit award, East 9th Street). Preservation Austin spells the name both ways: "Klemm" in its announcement of 16 September 2025 and its photo post, "Klemt" on its past-winners page. The file follows the announcement. Ask Preservation Austin which is right.
 - [ ] **R12. The "Holly / Rainey Street" turning point is attached to census tract 10 only** ([data/tippingPoints.js](data/tippingPoints.js)). Rainey Street is in tract 11.03, so that tract's story card does not show it (found 2026-11-22).
+- [ ] **R13. Nine records marked unverified** (2026-11-22). No published source was found for them, and the map, story card and search now say so. Find a source, or remove them later. Six businesses: Evan's Barbershop, Erwin Center Barber Shop, Mrs. Johnson's Donuts (the known Mrs. Johnson's Bakery is on Airport Blvd and open), Holly Neighborhood Assoc. HQ, Baby Acapulco's (S Lamar), Club 801 (801 Red River was the One Knite, then Stubb's). Three clusters that are not single businesses: Kealing Jr. High area businesses, Rainey Street bungalow businesses, Fiesta Gardens area tiendas. They keep an approximate dot; Club 801 and Tamale House East (E11) are filed under a tract their dot is not in. On the tract 8.03 story card, all three lost businesses and one of the three operating ones are on this list.
+- [ ] **R14. Closing dates taken from the announcement** (2026-11-22). Vespaio and Little Mexico were added with the closing date announced beforehand (28 February 2026). No later report was opened to confirm the last day.
 
 ## F. Figures and documents to refresh
 
@@ -89,7 +88,7 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 - [ ] **W2. Late January 2027 (expected, no date announced).** The 2021–2025 census survey. Updating is one number (`LATEST_ACS`) and two commands; see [README.md](README.md). The Triage comparison then moves from 2011–2015 to 2016–2020 by itself: check its labels and tables after the update.
 - [ ] **W3. The City's next Displacement Risk Areas edition.** The file on the City's portal is still the 2022 edition. When a new one appears, load it and rerun the comparison.
 - [ ] **W4. Eviction filings after 2025.** BASTA releases raw data by request form only. The City's 2026 "Levers of Economic Mobility" dataset holds a tract eviction rate built on 2024 filings.
-- [ ] **W5. Venues with an announced change.** Emo's (last shows December 2026), Valhalla (closing announced, not confirmed), the building housing Elysium (for sale), Katz's (renovation to March 2027).
+- [ ] **W5. Venues with an announced change.** Emo's (last shows December 2026), Valhalla (closing announced, not confirmed), the building housing Elysium (for sale), Katz's (renovation to March 2027), the Hideout Theatre (left 617 Congress Ave in March 2026; shows at its North Lamar annex while it looks for a new home).
 - [ ] **W6. Light rail.** Austin Transit Partnership edits its map layers; `npm run build:rail -- --refresh` redraws from them. Construction is scheduled for 2027.
 
 ## S. Site behaviour to check
@@ -98,8 +97,9 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 - [ ] **S2. Phone width after the slider change.** The slider now ends at 2026 and the last label reads 2024.
 - [ ] **S3. The live site after the next push.** Only the deploy job has been checked, never the published page.
 - [ ] **S4. Old links with `year=2023`.** They now show the 2016–2020 stage, the latest reading at or before 2023. Decide whether that is right or whether 2023 should open 2024.
-- [ ] **S5. A closed business has no dot before the year it closed.** Empire Control Room shows nothing on the default map (2024), although it was open then. Decide whether closed businesses should show as open until their closing year.
+- [ ] **S5. A closed business has no dot before the year it closed.** The map now opens on 2026, where every closed business is drawn. Moving the slider back to 2024 hides the 15 that closed in 2025–26, although they were open then. Decide whether closed businesses should show as open until their closing year.
 - [ ] **S6. Other browsers and a screen reader.** Only Chrome has been used for checks.
+- [ ] **S7. The search pin covers the dot** (found 2026-11-22). Picking a business from search drops a pin on its dot. The pin's popup shows only the name (and the unverified note), and the dot's own popup, with the year and address, cannot be opened while the pin is there.
 
 ## H. Housekeeping
 
@@ -116,9 +116,13 @@ Open questions, known errors and things to check on *Austin's Shifting Ground*. 
 - [x] 2026-11-22. Preservation Austin's 2026 merit awards, Legacy Business Month businesses and three landmark designations added.
 - [x] 2026-11-22. Sources that no figure rests on removed from the footer and methodology; Compare view no longer labels income as inflation-adjusted.
 - [x] 2026-11-22. D1, first half. The update above is committed on `test`. The push is still open (D1).
-- [x] 2026-11-22. **E1. Businesses filed under the wrong census tract.** 50 of 106 records named a tract their dot was not in. 55 records were refiled and 24 dots moved to an address confirmed on a published page; every area name in the file now matches the name the site shows. Tract 8.03 went from 15 tracked businesses to 6. Two records are still mismatched because they cannot be traced (D10, E11). Method and sources: [DATA_METHODOLOGY.md](DATA_METHODOLOGY.md) §1.2.
+- [x] 2026-11-22. **E1. Businesses filed under the wrong census tract.** 50 of 106 records named a tract their dot was not in. 55 records were refiled and 24 dots moved to an address confirmed on a published page; every area name in the file now matches the name the site shows. Tract 8.03 went from 15 tracked businesses to 6. Two records are still mismatched because they cannot be traced (R13, E11). Method and sources: [DATA_METHODOLOGY.md](DATA_METHODOLOGY.md) §1.2.
 - [x] 2026-11-22. **E2. Six closed businesses never appeared on the map.** Their closing dates were stored as text only. Each date was checked and the year added: Contigo 2021, Weather Up 2019, Stay Gold 2021, Rosewood 2022, Redbud Ice House 2025, Old Thousand (Burnet) 2023. Redbud's date was a year early in the file (it said 2024), and Stay Gold opened in January 2015, not April.
 - [x] 2026-11-22. **E5. "Will Klemm".** Checked, no change: the file matches Preservation Austin's announcement. Its past-winners page differs, so the question went to R11.
 - [x] 2026-11-22. **E6. Becker Elementary.** Checked, no change. KUT's story of 18 August 2026 describes former Becker families who moved to Travis Heights; it does not say the zone was assigned there. Austin ISD's letter to families, as quoted by the lookup, says Galindo or Zilker by address and the dual-language program to Sánchez, which is what the file says. The PDF itself could not be opened during the check.
 - [x] 2026-11-22. **E7. Legislation track.** SB 2835 no longer says Austin's adoption is pending: Council adopted its own single-stair amendment on 10 April 2025, effective 10 July 2025, before the state law took effect on 1 September 2025. HB 9 (the $125,000 business inventory exemption, approved 4 November 2025, effective 1 January 2026) added as the 27th entry.
 - [x] 2026-11-22. Two stale counts in [METHODOLOGY_AT_A_GLANCE.md](METHODOLOGY_AT_A_GLANCE.md) corrected (181 listings; 46 open and 60 closed businesses).
+- [x] 2026-11-22. **D2. Which year the map opens on.** Decided: 2026. The stage colors there are the 2024 reading and the time bar names the survey. Links that carry a year are unaffected.
+- [x] 2026-11-22. **D7. Which 2026 closures belong on the lists.** Decided: locally owned, open at least 20 years in Austin, closing reported by a named news source. Added under it: Lammes Candies, Wheatsville Co-op (Guadalupe), Hoover's Cooking, Vespaio, Little Mexico, Hideout Theatre (Congress Ave). Left out: Vince Young Steakhouse (15 years), Marlow (about 3), the Feels So Good storefront. The file now holds 46 operating and 66 closed. Existing entries that fall short are in D11.
+- [x] 2026-11-22. **D10. Business records that cannot be traced.** Decided: keep them, marked unverified. Nine records carry the mark, shown in the map popup, the story card, search and the About text (R13).
+- [x] 2026-11-22. **D1. Push.** Decided: push once the answers above were applied.
