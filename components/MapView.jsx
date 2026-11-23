@@ -14,7 +14,8 @@ import DviWeightsPanel from "./DviWeightsPanel";
 import { OUTREACH_STATUS } from "../data/outreachEvents";
 import { tractPlace } from "../utils/places";
 import { PRESENTER_MODE } from "../appConfig";
-import { LATEST_YEAR, YEAR_MAX } from "../data/constants";
+import { DEFAULT_YEAR, YEAR_MAX } from "../data/constants";
+import { UNVERIFIED_NOTE } from "../data/businesses";
 
 /**
  * MapView — the map page.
@@ -151,9 +152,9 @@ export default function MapView({
     setShowPins(true);
     // A closed anchor only has a dot from the year it closed onward.
     if (business.closed && year < business.closed) setYear(Math.min(YEAR_MAX, business.closed));
-    if (!business.closed && business.est > year) setYear(LATEST_YEAR);
+    if (!business.closed && business.est > year) setYear(DEFAULT_YEAR);
     if (business.region_id != null) onSelectTract(business.region_id);
-    onFlyTo({ lat: business.lat, lng: business.lng, zoom: 16, label: business.name });
+    onFlyTo({ lat: business.lat, lng: business.lng, zoom: 16, label: business.name, note: business.unverified ? UNVERIFIED_NOTE : null });
   };
 
   // An address resolves to the tract that contains it. Returns the place
@@ -175,7 +176,7 @@ export default function MapView({
       onSelectTract(action.tractId);
     } else if (action.key === "legend") {
       setShowRegions(true);
-      if (year < STAGE_BASE_YEAR) setYear(LATEST_YEAR);
+      if (year < STAGE_BASE_YEAR) setYear(DEFAULT_YEAR);
       setLegendOpen(true);
     } else if (action.key === "anchors") {
       setShowPins(true);

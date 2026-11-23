@@ -95,6 +95,12 @@ export const YEAR_MIN = 1990;
  * figures stay at LATEST_YEAR from there on.
  */
 export const YEAR_MAX = 2026;
+/**
+ * The year the map opens on: the present, where every dated layer (closures,
+ * listings, schools) is complete. Stage colors at that year are the
+ * LATEST_YEAR reading, and the time bar names the survey.
+ */
+export const DEFAULT_YEAR = YEAR_MAX;
 
 export const SNAP_YEARS = [1990, 2000, 2010, 2020, LATEST_YEAR];
 export const PLAY_YEARS = [1990, 1995, ...CENSUS_YEARS, YEAR_MAX];

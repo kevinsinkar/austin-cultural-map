@@ -5,7 +5,10 @@ import { REGION_INDEX } from "../data";
 import { regionLookupMap } from "../data/regionIndex";
 import { loadTractShapes, loadNeighborhoodShapes } from "../data/shapes";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
-import { LEGACY_OPERATING, LEGACY_CLOSED, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS } from "../data";
+import { LEGACY_OPERATING, LEGACY_CLOSED, UNVERIFIED_NOTE, MUSIC_NIGHTLIFE, PROJECT_CONNECT_LINES, LIGHT_RAIL_STATIONS } from "../data";
+
+/** Popup line for a business record no published source was found for. */
+const unverifiedLine = (b) => (b.unverified ? `<br/><em>${UNVERIFIED_NOTE}</em>` : "");
 import { AUDITED_PROP_BY_ID } from "../data/auditedData";
 import { tractStageClass, placeStageClass, stageFor } from "../utils/stages";
 import { getDevPressureColor } from "../utils/mapHelpers";
@@ -496,7 +499,7 @@ export default function useAustinMap({
           weight: 1,
           fillOpacity: 0.95,
         }).addTo(operatingLayer);
-        m.bindPopup(`<strong>${b.name}</strong><br/>Est. ${b.est}<br/>${b.address}`);
+        m.bindPopup(`<strong>${b.name}</strong><br/>Est. ${b.est}<br/>${b.address}${unverifiedLine(b)}`);
         bizMarkersRef.current.set(b.id, m);
       });
       LEGACY_CLOSED.forEach((b) => {
@@ -510,7 +513,7 @@ export default function useAustinMap({
           weight: 1,
           fillOpacity: 0.85,
         }).addTo(closedLayer);
-        m.bindPopup(`<strong>${b.name}</strong><br/>Closed ${b.closed}<br/>${b.relocated || ""}`);
+        m.bindPopup(`<strong>${b.name}</strong><br/>Closed ${b.closed}<br/>${b.relocated || ""}${unverifiedLine(b)}`);
         bizMarkersRef.current.set(b.id, m);
       });
     }
@@ -872,8 +875,9 @@ export default function useAustinMap({
         popupAnchor: [0, -36],
       });
       const m = L.marker([flyToTarget.lat, flyToTarget.lng], { icon, zIndexOffset: 2000, keyboard: false }).addTo(map);
-      const safe = String(flyToTarget.label).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-      m.bindPopup(`<strong>${safe}</strong>`, { maxWidth: 240 });
+      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+      const note = flyToTarget.note ? `<br/><em>${esc(flyToTarget.note)}</em>` : "";
+      m.bindPopup(`<strong>${esc(flyToTarget.label)}</strong>${note}`, { maxWidth: 240 });
       highlightMarkerRef.current = m;
       setTimeout(() => { if (highlightMarkerRef.current === m) m.openPopup(); }, 950);
     }

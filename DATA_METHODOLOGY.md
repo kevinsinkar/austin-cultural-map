@@ -75,7 +75,7 @@ A newer release is a one-line change: `LATEST_ACS` in `scripts/lib/census.mjs`, 
 | Dataset | Entries | Source | Last Updated |
 |---------|---------|--------|-------------|
 | Legacy Businesses (operating) | 46 | Preservation Austin community survey, public records, field verification | Feb 2026; three records corrected Nov 2026 |
-| Legacy Businesses (closed) | 60 | Same as above + closure records, news archives | Feb 2026; two records added Nov 2026 |
+| Legacy Businesses (closed) | 66 | Same as above + closure records, news archives | Feb 2026; eight records added Nov 2026 |
 | Preservation Austin Grants | 72 | Preservation Austin annual reports (2016–2025) | Feb 2026 |
 | PA Merit Awards | 53 | Preservation Austin's Preservation Merit Awards (2022–2026) | Nov 2026 |
 | PA Legacy Business Month | 43 | Preservation Austin's Legacy Business Month (2023–2026) | Nov 2026 |
@@ -84,7 +84,7 @@ A newer release is a one-line change: `LATEST_ACS` in `scripts/lib/census.mjs`, 
 | Construction Permits | 191,099 new construction (44,266 commercial) | City of Austin Issued Construction Permits (dataset `3syk-w9eu`) | Mar 2026 |
 | Planned light rail (Phase 1) | 1 branched line (9.7 miles as drawn), 15 stations | Austin Transit Partnership's public map layers: "Light Rail Route" (edited Jul 2026) and "Light Rail Stations (Phase 1)" (edited Oct 2026) | Nov 2026 |
 
-**Business data coverage note:** The 106 tracked businesses (46 operating + 60 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. 228 of the 269 tracts have no tracked business. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
+**Business data coverage note:** The 112 tracked businesses (46 operating + 66 closed) are concentrated in East Austin, South Lamar, and downtown — areas where Preservation Austin and community partners have conducted inventories. 226 of the 269 tracts have no tracked business. This reflects survey coverage, not an absence of culturally significant businesses. The Triage view (§6) shows tracked-business counts for reference; none of its group rules depends on them.
 
 **Records corrected November 2026.** A check of the hand-compiled layers against their sources found these errors; each fix cites the page it rests on.
 
@@ -124,15 +124,15 @@ Preservation Austin publishes no addresses for award sites, so each award's plac
 
 Addresses were turned into coordinates with the Census Bureau's public geocoder. It put two addresses on the wrong side of Congress Avenue (201 W Cesar Chavez St and 701 E 6th St); those two points come from OpenStreetMap. Paredes Middle School's point is also OpenStreetMap's, which was about 1 km from the geocoder's.
 
-Not corrected, and still open: 24 of the 46 operating businesses have no report of closing but were not confirmed open, and several 2026 closures reported in the press (among them Lammes Candies, Wheatsville Co-op on Guadalupe, Hoover's Cooking and the Hideout Theatre) are on neither list.
+Not corrected, and still open: 24 of the 46 operating businesses have no report of closing but were not confirmed open.
 
-**Business locations and tracts checked November 2026.** A business counts toward the census tract named in its record (`region_id`). A check found that 50 of the 106 records named a tract their own map dot was not in, and that 37 records had no street address, only a street name or an area. Their dots were approximate, and in five places unrelated businesses shared one point.
+**Business locations and tracts checked November 2026.** A business counts toward the census tract named in its record (`region_id`). A check found that 50 of the 106 records then in the file named a tract their own map dot was not in, and that 37 records had no street address, only a street name or an area. Their dots were approximate, and in five places unrelated businesses shared one point.
 
 - **Records with a street address (69).** Each address was sent to the Census Bureau's public geocoder, which returns a point and the 2020 census tract for it. Where the record's tract and the dot disagreed (34 records), the geocoder's tract matched the dot every time, so the record was refiled under that tract. The dots did not move.
 - **Records without a street address (37).** An address was looked for in published sources. For 24 it was found on a page that names the business at that address (table below); the dot and the tract now come from that address. The Rainey Street cluster was refiled under the tract Rainey Street is in.
-- **Records still on a placeholder dot (13).** No address, or no trace of the business, was found for Evan's Barbershop, Erwin Center Barber Shop, Mrs. Johnson's Donuts, Tamale House East (original), Holly Neighborhood Assoc. HQ, Baby Acapulco's (S Lamar), Club 801 and Taqueria Chapala; three records are clusters, not single businesses (Kealing Jr. High area businesses, Rainey Street bungalow businesses, Fiesta Gardens area tiendas); and two records give an address that does not match what was found (Saigon Le Vendeur, Asia Market). Tamale House East and Club 801 are still filed under a tract their dot is not in. These records are listed in `TODO.md` for a decision on whether they stay.
+- **Records still on a placeholder dot (13).** No address, or no trace of the business, was found for Evan's Barbershop, Erwin Center Barber Shop, Mrs. Johnson's Donuts, Tamale House East (original), Holly Neighborhood Assoc. HQ, Baby Acapulco's (S Lamar), Club 801 and Taqueria Chapala; three records are clusters, not single businesses (Kealing Jr. High area businesses, Rainey Street bungalow businesses, Fiesta Gardens area tiendas); and two records give an address that does not match what was found (Saigon Le Vendeur, Asia Market). Tamale House East and Club 801 are still filed under a tract their dot is not in. Nine of them (the first six businesses named and the three clusters) are kept and marked `unverified: true`: the map popup, the story card and search say that no published source was found for the record.
 
-In all, 55 records changed tract and 24 dots moved. The largest changes: census tract 8.03 (Chestnut) went from 15 tracked businesses to 6, tract 9.01 from 9 to 6, and tract 8.04 from 1 to 5, because East 11th Street businesses had been filed one tract too far north. 41 of the 269 tracts now have a tracked business (39 before).
+In all, 55 records changed tract and 24 dots moved. The largest changes: census tract 8.03 (Chestnut) went from 15 tracked businesses to 6, tract 9.01 from 9 to 6, and tract 8.04 from 1 to 5, because East 11th Street businesses had been filed one tract too far north. 41 of the 269 tracts then had a tracked business (39 before).
 
 | Business | Address now used | Page that states it |
 |----------|------------------|---------------------|
@@ -163,6 +163,21 @@ In all, 55 records changed tract and 24 dots moved. The largest changes: census 
 
 The geocoder does not match frontage-road addresses, so Star Seeds Cafe's point is OpenStreetMap's entry for 3101 North Interstate 35. Three dots moved to another part of town because the old placeholder was on the wrong street: El Gallo (it was on South Congress, not East Cesar Chavez), Fran's Hamburgers (drawn on Cameron Road; the record's 2013 closing is the South Congress store) and Koriente (downtown, not East Austin). The same search found closing years and other details in several closed-business records that contradict the sources; those are listed in `TODO.md` and have not been changed.
 
+**Rule for adding a closed business (adopted November 2026).** A closed business is added when it was locally owned, had been open at least 20 years in Austin, and its closing was reported by a named news source. A long-running location that closes while the business carries on elsewhere counts, and the record says where it went. The lists were compiled before there was a rule, so they also hold places that were open only a few years; those entries were not removed and are listed in `TODO.md` for review.
+
+Six 2026 closures were added under the rule. Three others reported in the press were left out because they fall short of 20 years: Vince Young Steakhouse (15 years), Marlow (about 3) and the Feels So Good storefront.
+
+| Business | Open | Closed | Source |
+|----------|------|--------|--------|
+| Lammes Candies, 5330 Airport Blvd | Family-owned since 1885 | Final days July 30 and 31, 2026 | CultureMap Austin, Apr 27 and Jul 30, 2026 |
+| Wheatsville Co-op, 3101 Guadalupe St | 45 years on Guadalupe | October 25, 2026; the South Lamar store stays open | KUT, Oct 27, 2026; CultureMap Austin, Oct 12, 2026; address: Austin Chronicle |
+| Hoover's Cooking, 2002 Manor Rd | 1998 | May 31, 2026; the owner retired | CultureMap Austin, Mar 2026 (announcement) and Jun 11, 2026 ("closed as planned May 31") |
+| Vespaio, 1610 S Congress Ave | 1998 | February 28, 2026 | Spectrum News, Jan 6, 2026; CultureMap Austin (address) |
+| Little Mexico, 2304 S 1st St | 1986 in North Austin; this site since 1994 | Last day February 28, 2026; the owner retired | Austin American-Statesman, Feb 3, 2026 |
+| Hideout Theatre, 617 Congress Ave | Founded 1999 | Left downtown the weekend of March 20, 2026; shows continue at its North Lamar annex | CultureMap Austin, Mar 2026; KUT, Oct 12, 2026; Austin Chronicle (founding) |
+
+The closing dates for Vespaio and Little Mexico are the dates announced beforehand; no later report was opened to confirm the last day.
+
 **Closing years added November 2026.** Six closed businesses carried a closing date as text but no closing year, so the map never drew them as closed. Each date was checked against a published report before the year was added:
 
 | Business | Closed | Source | Also corrected |
@@ -191,7 +206,7 @@ The geocoder does not match frontage-road addresses, so Star Seeds Cafe's point 
 | Socioeconomic | 269 | 100% | All regions at 2020/2024; 257 at 2010/2015. SNAP for 822 rows. |
 | Displacement stage | 269 | 100% | Decided for every tract; 8 to 12 are not scored in a given year (§3.4) |
 | Pressure score (presenter tools) | 269 | 100% | Computed from available sub-indices; re-weighted when data missing (see §3.8) |
-| Legacy Businesses | 41 | 15% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
+| Legacy Businesses | 43 | 16% | Concentrated in East Austin, South Lamar, downtown. Reflects survey coverage, not absence of cultural assets. |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
 | Eviction Filings | 245 | 91% | BASTA Austin filings 2014–2025 (2020 tract boundaries); Travis County only — 22 non-Travis tracts and 2010 rows have no data |
 | Preservation Austin | ~30–40 | 11–15% | Grant/award recipients only |
@@ -417,7 +432,7 @@ Some census tracts are administratively merged in this tool — a secondary trac
 - **Selecting a place** (a click on the map, a search result, or a suggestion in the "Start here" card) opens the **place panel** beside the map. The panel is the same for a census tract and for a neighborhood.
 - **Story card:** "Open the story card" in the place panel opens that place's full profile as its own page, with its own address (`#/card?tract=84` or `#/card?hood=montopolis`). It can be printed; a section is not split across sheets.
 - **Search:** neighborhoods, census tracts (by name or number) and tracked cultural anchors are matched in the browser. A street address is resolved by OpenStreetMap's Nominatim service, only when the person chooses "Look up … as a street address"; the address is then assigned to the census tract whose polygon contains it.
-- **Time slider:** moves from 1990 to 2026 in 1-year increments. The map opens on 2024, the latest census year. Past 2024 the stages stay as they are and only the dated layers change (business closures, school closures, Preservation Austin listings).
+- **Time slider:** moves from 1990 to 2026 in 1-year increments. The map opens on 2026, the present, where every dated layer is complete; the stage colors there are the 2024 reading, and the time bar names the survey beside the year. Past 2024 the stages stay as they are and only the dated layers change (business closures, school closures, Preservation Austin listings).
 
 ### Place Panel
 
@@ -790,7 +805,7 @@ After normalization, data is stored in pre-indexed Maps for constant-time access
 ### Coverage Gaps
 
 - **60 regions** (22%) lack property and socioeconomic data — mostly rural, industrial, or ETJ tracts with sparse or no residential housing stock. DVI for these regions is computed from demographics only (Demographic Vulnerability sub-index), re-weighted to 100% of the DVI score. This makes their DVI less comprehensive but not zero.
-- **228 tracts** have no tracked legacy business. This reflects survey coverage concentrated in East Austin, South Lamar, and downtown — not the absence of culturally significant businesses elsewhere. The Triage lenses (§6) show the counts for reference and do not use them in any rule.
+- **226 tracts** have no tracked legacy business. This reflects survey coverage concentrated in East Austin, South Lamar, and downtown — not the absence of culturally significant businesses elsewhere. The Triage lenses (§6) show the counts for reference and do not use them in any rule.
 
 ### Temporal Caveats
 

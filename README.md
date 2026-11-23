@@ -124,7 +124,7 @@ All data lives in `data/phase1_output/` as three audited, normalized JSON files 
 
 Field coverage is uneven across years (e.g., 2010 has no home-value-appreciation, unemployment, or eviction values): the pressure score re-weights across the fields present rather than zero-filling, and cross-year comparisons use only fields measured in both years. A (region, year) must have at least 3 of the 8 input fields to get a DVI point at all — below that, re-weighting degenerates into echoing a single field (the 2000 rows carry only owner-occupancy, which scored every low-ownership tract a spurious 100), so those years show the nearest measured value with a confidence note instead. See `DATA_METHODOLOGY.md`.
 
-Business data tracks 46 operating and 60 closed cultural anchors with location, founding year, cultural community, and (for closures) cause and replacement.
+Business data tracks 46 operating and 66 closed cultural anchors with location, founding year, cultural community, and (for closures) cause and replacement.
 
 ## Project Structure
 

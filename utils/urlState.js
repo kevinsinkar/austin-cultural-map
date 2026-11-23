@@ -5,7 +5,7 @@
 // GitHub Pages has no server routing, but "#/map?year=2005" always works.
 
 import { REGION_INDEX } from "../data";
-import { LATEST_YEAR, YEAR_MIN, YEAR_MAX } from "../data/constants";
+import { DEFAULT_YEAR, YEAR_MIN, YEAR_MAX } from "../data/constants";
 import { NEIGHBORHOOD_BY_ID } from "../data/neighborhoods";
 import { NAME_TO_ID } from "../data/regionLookup";
 import { ALLOWED_VIEWS, PRESENTER_MODE } from "../appConfig";
@@ -32,9 +32,9 @@ const LAYER_CODES = [
 
 export const DEFAULT_VIEW_STATE = {
   viewMode: "map",
-  // Open on the latest measured year: the present is the way in, and the
+  // Open on the present: every dated layer is complete there, and the
   // slider then walks back through how it got here.
-  year: LATEST_YEAR,
+  year: DEFAULT_YEAR,
   boundaryMode: "tracts",
   layers: {
     pins: true,

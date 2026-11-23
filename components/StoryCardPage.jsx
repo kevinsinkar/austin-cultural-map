@@ -236,7 +236,7 @@ export default function StoryCardPage({ placeRef, onBack }) {
             <ul className="story-card-list" style={{ columns: open.length > 6 ? 2 : 1 }}>
               {open.slice(0, 12).map((b) => (
                 <li key={b.id}>
-                  <strong>{b.name}</strong> (since {b.est})
+                  <strong>{b.name}</strong> (since {b.est}{b.unverified ? ", unverified" : ""})
                 </li>
               ))}
             </ul>
@@ -251,10 +251,14 @@ export default function StoryCardPage({ placeRef, onBack }) {
         {closed.length > 0 && (
           <Section title={`What has been lost (${closed.length})`}>
             <p className="story-card-text">
-              {closed.slice(0, 10).map((b) => (b.closed ? `${b.name} (${b.closed})` : b.name)).join(" · ")}
+              {closed.slice(0, 10).map((b) => `${b.name} (${[b.closed, b.unverified && "unverified"].filter(Boolean).join(", ") || "year not recorded"})`).join(" · ")}
               {closed.length > 10 ? ` · and ${closed.length - 10} more` : ""}
             </p>
           </Section>
+        )}
+
+        {[...open, ...closed].some((b) => b.unverified) && (
+          <p className="story-card-caption">“Unverified” marks a record for which no published source was found.</p>
         )}
 
         <Section title={`Preservation Austin grants, awards and advocacy nearby (${paNear.length})`}>

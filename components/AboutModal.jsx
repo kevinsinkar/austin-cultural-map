@@ -8,6 +8,9 @@ import { LEGACY_OPERATING, LEGACY_CLOSED, PA_ALL } from "../data";
 import { STAGE_CLASSES, STAGE_CHECK } from "../utils/stages";
 import { LATEST_YEAR, YEAR_MIN, YEAR_MAX } from "../data/constants";
 
+// Business records for which no published source was found (marked on the map and cards).
+const UNVERIFIED_COUNT = [...LEGACY_OPERATING, ...LEGACY_CLOSED].filter((b) => b.unverified).length;
+
 // The at-a-glance page ends with the presenter-only tools; the public site
 // shows the part before that marker.
 const GLANCE_MARKER = "<!-- presenter-tools -->";
@@ -202,7 +205,9 @@ export default function AboutModal({ onClose }) {
             </h3>
             <p style={{ margin: "0 0 12px" }}>
               The map tracks {LEGACY_OPERATING.length} operating and {LEGACY_CLOSED.length} closed
-              heritage businesses, geocoded to building-level precision. Preservation Austin's
+              heritage businesses. Each is placed at its street address where one could be
+              confirmed; {UNVERIFIED_COUNT} records for which no published source was found are
+              marked unverified. Preservation Austin's
               published grant, award, and advocacy listings ({PA_ALL.length} entries) are linked to
               the places they are near. Music and
               nightlife venue counts draw on the Austin Music Census, SXSW, and Red River
